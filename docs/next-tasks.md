@@ -70,9 +70,22 @@ AI調査で生成したデータなので機械検証を入れる。`scripts/val
 4. 本番DBに対して `db:push` → `db:seed` → `db:import`(P0と同じ手順)
 5. `npm run deploy` でCloudflare Workersへデプロイ(READMEの「Cloudflareへのデプロイ」参照)
 
-## P5: フェーズ2(公開後に着手判断)
+## P5: 公開後の運用タスク (2026-07-07 更新)
 
-DESIGN.md 付録A参照。優先順: Clerk認証 → ハシリタイ実動化 → 走リ活投稿。公開して反応を見てから。
+完了済み:
+
+- Google Search Console: https://dokorun.com/ をURLプレフィックスで登録・所有権確認済み(layout.tsxのmetaタグ + public/googlebc7bc599f52dfc4c.html)。sitemap.xml送信済み(送信直後は「取得できませんでした」表示。数日後にステータス確認)
+- Cloudflare Web Analyticsビーコン: layout.tsxに実装済み。`CF_BEACON_TOKEN` が空のため未計測
+
+残り(人間の作業):
+
+1. **Web Analyticsトークン取得(2分)**: Cloudflareダッシュボード → Analytics & Logs → Web Analytics → dokorun.com のサイトを追加 → スニペット内の `"token"` の値を wrangler.jsonc の `CF_BEACON_TOKEN` に貼る → `npm run deploy`
+2. **外形監視**: UptimeRobot等で https://dokorun.com/ と /spots/kokyo (DB経由)を5分間隔で監視
+3. GPX進捗表の review 24件 + skip 3件を gpx.studio で手直し(docs/gpx-course-task.md)
+
+## P6: フェーズ2(反応を見て着手判断)
+
+DESIGN.md 付録A参照。優先順: Clerk認証 → ハシリタイ実動化 → 走リ活投稿。Web Analyticsの数字を見てから。
 
 ---
 
