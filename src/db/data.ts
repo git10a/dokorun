@@ -84,6 +84,17 @@ export async function getNewestSpots(limit = 8) {
   return addRelations(rows);
 }
 
+const popularSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"] as const;
+
+export async function getPopularSpots() {
+  const rows = await getDb().select(summarySelection).from(spots)
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(spots.isPublished, true), inArray(spots.slug, popularSpotSlugs)));
+  const decorated = await addRelations(rows);
+  const order = new Map<string, number>(popularSpotSlugs.map((slug, index) => [slug, index]));
+  return decorated.sort((a, b) => (order.get(a.slug) ?? Infinity) - (order.get(b.slug) ?? Infinity));
+}
+
 export async function getPrefectureCounts() {
   return getDb().select({ prefecture: spots.prefecture, count: count() }).from(spots)
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
