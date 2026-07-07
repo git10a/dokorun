@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NearMeButton } from "@/components/near-me-button";
 import { SearchFilters } from "@/components/search-filters";
 import { SortSelect } from "@/components/sort-select";
 import { SpotCard } from "@/components/spot-card";
@@ -38,7 +39,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
       <div className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(340px,2fr)]">
         <div className="min-w-0 space-y-6">
           <SearchFilters tags={allTags} params={params} />
-          <div className="flex items-center justify-between gap-4"><p className="font-bold"><span className="text-2xl">{result.total}</span>件のスポット</p><SortSelect /></div>
+          <div className="flex flex-wrap items-center justify-between gap-3"><p className="font-bold"><span className="text-2xl">{result.total}</span>件のスポット</p><div className="flex flex-wrap items-center gap-2"><NearMeButton /><SortSelect /></div></div>
           {result.spots.length ? <div className="space-y-4">{result.spots.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <div className="rounded-xl border border-line bg-cream px-5 py-16 text-center"><p className="font-bold">条件に合うスポットが見つかりませんでした</p><Link href="/spots" className="mt-5 inline-block rounded-lg bg-brand px-5 py-2.5 font-bold">条件をクリア</Link></div>}
           {pages > 1 && <nav aria-label="ページネーション" className="flex justify-center gap-2 pt-4">{Array.from({ length: pages }, (_, index) => index + 1).map((value) => <Link key={value} href={pageHref(value)} aria-current={page === value ? "page" : undefined} className={`grid size-10 place-items-center rounded-lg border font-bold ${page === value ? "border-brand bg-brand" : "border-line bg-paper"}`}>{value}</Link>)}</nav>}
         </div>
