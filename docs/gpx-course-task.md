@@ -124,7 +124,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 | review | 生成1.4〜1.6kmで公式2kmに届かず。園内ルートの手動指定要 |
 | 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 | skip | 松林クロカンコースはOSM未収録で生成不能 |
 | 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 | done | BRouter生成 2594m |
-| 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 | done | BRouter生成 3589m |
+| 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 | done | Stravaセグメント Kiba Park 3.5K - 1 lap(22211354) 3466m |
 | 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 | done | BRouter生成 1189m |
 | 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 | review | 550mトラック状コースはOSM未収録。生成791mは別経路 |
 | 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | review | 生成が2.9〜4.4kmと過大。園内1.1km周回の経路特定要 |
