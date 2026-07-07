@@ -18,9 +18,13 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
   const distMin = distance?.[0] ? Number(distance[0]) * 1000 : undefined;
   const distMax = distance?.[1] ? Number(distance[1]) * 1000 : undefined;
   const page = Math.max(1, Number(params.page) || 1);
+  const lat = Number(params.lat);
+  const lng = Number(params.lng);
+  const validGeo = Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180;
   const filters = {
     pref: params.pref, tags: params.tags?.split(",").filter(Boolean), type: params.type, distMin, distMax, q: params.q,
     toilet: params.toilet === "1", locker: params.locker === "1", sento: params.sento === "1", sort: params.sort, page,
+    lat: validGeo ? lat : undefined, lng: validGeo ? lng : undefined,
   };
   const [allTags, result] = await Promise.all([getTags(), searchSpots(filters)]);
   const pages = Math.ceil(result.total / 20);

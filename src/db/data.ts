@@ -15,6 +15,8 @@ type SearchFilters = {
   locker?: boolean;
   sento?: boolean;
   sort?: string;
+  lat?: number;
+  lng?: number;
   page?: number;
   limit?: number;
 };
@@ -95,15 +97,29 @@ export async function getNewestSpots(limit = 8) {
   return addRelations(rows);
 }
 
-const popularSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"] as const;
+// ハシリタイが集まるまでの初期表示用リスト
+const popularSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
 
 export async function getPopularSpots() {
-  const rows = await getDb().select(summarySelection).from(spots)
+  const db = getDb();
+  const counted = await db.select({ spotId: hashiritai.spotId, likes: count() }).from(hashiritai)
+    .innerJoin(spots, eq(spots.id, hashiritai.spotId))
+    .where(eq(spots.isPublished, true))
+    .groupBy(hashiritai.spotId).orderBy(desc(count())).limit(5);
+  const likedIds = counted.map((row) => row.spotId);
+  const condition = likedIds.length
+    ? or(inArray(spots.id, likedIds), inArray(spots.slug, popularSpotSlugs))!
+    : inArray(spots.slug, popularSpotSlugs);
+  const rows = await db.select(summarySelection).from(spots)
     .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
-    .where(and(eq(spots.isPublished, true), inArray(spots.slug, popularSpotSlugs)));
+    .where(and(eq(spots.isPublished, true), condition));
   const decorated = await addRelations(rows);
-  const order = new Map<string, number>(popularSpotSlugs.map((slug, index) => [slug, index]));
-  return decorated.sort((a, b) => (order.get(a.slug) ?? Infinity) - (order.get(b.slug) ?? Infinity));
+  // ハシリタイ数の多い順を優先し、残り枠を初期リスト順で埋める
+  const likeRank = new Map(likedIds.map((id, index) => [id, index]));
+  const curatedRank = new Map(popularSpotSlugs.map((slug, index) => [slug, index]));
+  const rank = (spot: { id: string; slug: string }) =>
+    likeRank.get(spot.id) ?? likeRank.size + (curatedRank.get(spot.slug) ?? popularSpotSlugs.length);
+  return decorated.sort((a, b) => rank(a) - rank(b)).slice(0, 5);
 }
 
 export async function getPrefectureCounts() {
@@ -132,12 +148,19 @@ function searchConditions(filters: SearchFilters) {
   return conditions;
 }
 
+// 現在地からの近似距離(緯度経度の平面近似)。数百km程度の並び替え用途には十分な精度
+function nearOrderExpr(filters: SearchFilters) {
+  if (filters.sort !== "near" || filters.lat === undefined || filters.lng === undefined) return null;
+  const cosLat = Math.cos((filters.lat * Math.PI) / 180);
+  return asc(sql`power(${spots.lat} - ${filters.lat}, 2) + power((${spots.lng} - ${filters.lng}) * ${cosLat}, 2)`);
+}
+
 export async function searchSpots(filters: SearchFilters) {
   const db = getDb();
   const conditions = searchConditions(filters);
   const limit = filters.limit ?? 20;
   const page = Math.max(1, filters.page ?? 1);
-  const order = filters.sort === "distance_asc" ? asc(courses.distanceM) : filters.sort === "distance_desc" ? desc(courses.distanceM) : desc(spots.createdAt);
+  const order = nearOrderExpr(filters) ?? (filters.sort === "distance_asc" ? asc(courses.distanceM) : filters.sort === "distance_desc" ? desc(courses.distanceM) : desc(spots.createdAt));
   const [rows, totalRows] = await Promise.all([
     db.select(summarySelection).from(spots)
       .innerJoin(courses, eq(courses.spotId, spots.id))

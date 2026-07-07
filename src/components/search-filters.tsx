@@ -28,7 +28,7 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
           <div className="flex items-center justify-between"><button className="rounded-lg bg-brand px-5 py-2.5 font-bold">この条件でさがす</button>{active.length > 0 && <Link href="/spots" className="flex items-center gap-1 text-sm text-sub underline"><X size={14} />条件をクリア</Link>}</div>
         </div>
       </details>
-      <script dangerouslySetInnerHTML={{ __html: `document.currentScript.closest('form').addEventListener('submit',function(){var v=[...this.querySelectorAll('input[name=tag]:checked')].map(x=>x.value).join(',');this.querySelector('input[name=tags]').value=v;this.querySelectorAll('input[name=tag]').forEach(x=>x.disabled=true)})` }} />
+      <script dangerouslySetInnerHTML={{ __html: `document.currentScript.closest('form').addEventListener('submit',function(){var v=[...this.querySelectorAll('input[name=tag]:checked')].map(x=>x.value).join(',');this.querySelector('input[name=tags]').value=v;this.querySelectorAll('input[name=tag]').forEach(x=>x.disabled=true);try{var f=new FormData(this);navigator.sendBeacon&&navigator.sendBeacon('/api/track',new Blob([JSON.stringify({name:'search',path:'/spots',meta:{q:f.get('q')||undefined,pref:f.get('pref')||undefined,tags:v||undefined}})],{type:'application/json'}))}catch(e){}})` }} />
     </form>
   );
 }

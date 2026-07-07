@@ -97,8 +97,25 @@ export const runs = pgTable("runs", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 }, (t) => [index("runs_spot_idx").on(t.spotId)]);
 
+// ログイン不要のハシリタイ。clientId はブラウザごとに localStorage で発行する匿名ID
 export const hashiritai = pgTable("hashiritai", {
-  userId: uuid("user_id").notNull().references(() => users.id),
-  spotId: uuid("spot_id").notNull().references(() => spots.id),
+  clientId: text("client_id").notNull(),
+  spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-}, (t) => [uniqueIndex("hashiritai_pk").on(t.userId, t.spotId)]);
+}, (t) => [uniqueIndex("hashiritai_pk").on(t.clientId, t.spotId), index("hashiritai_spot_idx").on(t.spotId)]);
+
+export const feedback = pgTable("feedback", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  category: text("category").notNull(), // "spot_request" | "contact"
+  message: text("message").notNull(),
+  contact: text("contact"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const events = pgTable("events", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  path: text("path"),
+  meta: jsonb("meta").$type<Record<string, unknown> | null>(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+}, (t) => [index("events_name_idx").on(t.name, t.createdAt)]);
