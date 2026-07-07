@@ -15,9 +15,12 @@ function squaredDistanceToSegment(point: Coordinate, start: Coordinate, end: Coo
       x += dx * t;
       y += dy * t;
     }
-    dx = point[0] - x;
-    dy = point[1] - y;
   }
+
+  // 零長セグメント(閉ループの始点==終点)でも点までの距離を返す。
+  // if内に置くと零長時に常に0となり、閉ループ全体が始点・終点の2点に潰れる
+  dx = point[0] - x;
+  dy = point[1] - y;
 
   return dx * dx + dy * dy;
 }

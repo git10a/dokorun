@@ -13,6 +13,18 @@ describe("simplifyLine", () => {
     expect(result.length).toBeLessThan(coords.length);
   });
 
+  it("keeps the shape of a closed loop whose start and end are identical", () => {
+    // 始点==終点の閉ループ(BRouter生成コース)。零長セグメントへの距離が0扱いだと2点に潰れる
+    const coords: Coordinate[] = Array.from({ length: 61 }, (_, index) => [
+      135.49 + Math.cos((index / 60) * 2 * Math.PI) * 0.005,
+      34.79 + Math.sin((index / 60) * 2 * Math.PI) * 0.005,
+    ]);
+    coords[60] = [...coords[0]];
+    const result = simplifyLine(coords, 0.00005);
+    expect(result.length).toBeGreaterThan(10);
+    expect(simplifyLineToLimit(coords, 30).length).toBeGreaterThan(10);
+  });
+
   it("limits long course shapes to 60 coordinates", () => {
     const coords: Coordinate[] = Array.from({ length: 3708 }, (_, index) => [
       138.85 + Math.cos(index / 30) * 0.02,

@@ -84,7 +84,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 
 ## 進捗表
 
-> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み → 現在非掲載25件・掲載93件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化 → 現在非掲載26件・掲載92件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
 
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
@@ -201,7 +201,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 111 | senshu-park | 千秋公園 | 秋田県秋田市 | 1000 | review | 生成1626m(期待1000m)。お堀周回の特定要 |
 | 112 | kajo-park | 霞城公園 | 山形県山形市 | 1800 | review | 生成2326m(期待1800m) |
 | 113 | kaiseizan-park | 開成山公園 | 福島県郡山市 | 2000 | done | Stravaセグメント あおぞらマラソンコース　2km.ver(26644709) |
-| 114 | hakusan-park-yasuragitei | 白山公園・信濃川やすらぎ堤 | 新潟県新潟市中央区 | 4000 | done | Stravaセグメント 5000(30329780) |
+| 114 | hakusan-park-yasuragitei | 白山公園・信濃川やすらぎ堤 | 新潟県新潟市中央区 | 4000 | review | Stravaセグメント 5000(30329780)由来のGPXが破損(160m×77mに1095点密集、距離表記5.0km)。2026-07-08に非掲載化。セグメント再取得か実走GPXで整備後に復帰 |
 | 115 | kanazawa-castle-loop | 金沢城公園外周 | 石川県金沢市 | 2100 | done | Stravaセグメント 金沢城(7363932) |
 | 116 | sunpu-castle-park | 駿府城公園 | 静岡県静岡市葵区 | 1700 | done | Stravaセグメント Shizuoka Sunpu Castle southeast split(28451782) |
 | 117 | wakayama-castle-park | 和歌山城公園 | 和歌山県和歌山市 | 2000 | done | Stravaセグメント 和歌山城 時計回り・六番町起点(16251506) |
