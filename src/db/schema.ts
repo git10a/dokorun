@@ -11,6 +11,7 @@ import {
   uniqueIndex,
   uuid,
 } from "drizzle-orm/pg-core";
+import type { LineString } from "@/lib/types";
 
 export const courseTypeEnum = pgEnum("course_type", ["loop", "out_and_back", "one_way", "track"]);
 export const surfaceEnum = pgEnum("surface", ["asphalt", "dirt", "track", "trail", "mixed"]);
@@ -47,7 +48,7 @@ export const courses = pgTable("courses", {
   spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
   name: text("name").notNull().default("代表コース"),
   isPrimary: boolean("is_primary").notNull().default(true),
-  geojson: jsonb("geojson"),
+  geojson: jsonb("geojson").$type<LineString | null>(),
   distanceM: integer("distance_m").notNull(),
   elevationGainM: integer("elevation_gain_m"),
   courseType: courseTypeEnum("course_type").notNull(),

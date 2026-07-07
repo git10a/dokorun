@@ -39,6 +39,7 @@ async function addRelations<T extends {
   signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
+  geojson: LineString | null;
 }>(rows: T[]): Promise<(SpotSummary & T)[]> {
   if (!rows.length) return [];
   const db = getDb();
@@ -75,6 +76,7 @@ const summarySelection = {
   signalsCount: courses.signalsCount,
   courseType: courses.courseType,
   surface: courses.surface,
+  geojson: courses.geojson,
 };
 
 export async function getTags() {

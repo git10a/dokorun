@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { FacilityIcons } from "./facility-icons";
-import { SpotVisual } from "./spot-visual";
+import { CourseMapThumbnail } from "./map/course-map-thumbnail";
 import { courseTypeLabels, surfaceLabels, type SpotSummary } from "@/lib/types";
 
 export function SpotCard({ spot }: { spot: SpotSummary }) {
@@ -10,7 +10,7 @@ export function SpotCard({ spot }: { spot: SpotSummary }) {
   return (
     <Link href={`/spots/${spot.slug}`} className="group flex overflow-hidden rounded-xl border border-line bg-paper transition-all hover:-translate-y-0.5 hover:shadow-md">
       <div className="w-32 shrink-0 self-stretch overflow-hidden bg-brand/25 sm:w-56">
-        {spot.photoUrl ? <img src={spot.photoUrl} alt={`${spot.name}の写真`} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" /> : <SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full transition-transform duration-300 group-hover:scale-[1.02]" />}
+        {spot.photoUrl ? <img src={spot.photoUrl} alt={`${spot.name}の写真`} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" /> : <CourseMapThumbnail lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} />}
       </div>
       <div className="min-w-0 flex-1 space-y-1.5 p-3 sm:space-y-2 sm:p-4">
         <p className="text-xs text-sub">{spot.prefecture} {spot.city}</p>
