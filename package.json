@@ -1,0 +1,51 @@
+{
+  "name": "dokorun",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:import": "tsx src/db/import.ts",
+    "db:exclusions": "tsx src/db/exclusions.ts",
+    "validate:spots": "tsx scripts/validate-spots.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "@opennextjs/cloudflare": "^1.20.1",
+    "drizzle-orm": "^0.45.2",
+    "fast-xml-parser": "latest",
+    "lucide-react": "latest",
+    "maplibre-gl": "^5.24.0",
+    "next": "16.2.10",
+    "postgres": "latest",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "ws": "^8.21.0",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/ws": "^8.18.1",
+    "dotenv": "latest",
+    "drizzle-kit": "latest",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4.3.2",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "wrangler": "^4.86.0"
+  },
+  "packageManager": "pnpm@11.5.3"
+}

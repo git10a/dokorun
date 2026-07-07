@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dokorun",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "r2_buckets": [
+    {
+      "binding": "IMAGE_BUCKET",
+      "bucket_name": "dokorun-images"
+    }
+  ],
+  // 画像アップロードを有効にする場合は vars に R2_PUBLIC_URL を追加する
+  // (公開バケットのベースURL。例: https://images.example.com や r2.dev のURL)。
+  // 未設定なら管理画面の画像アップロードが無効になり、URL直接入力のみになる。
+  "vars": {}
+  // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET は `wrangler secret put <NAME>` で設定する
+}
