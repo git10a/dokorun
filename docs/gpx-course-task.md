@@ -92,7 +92,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 4 | arakawa | 荒川河川敷（赤羽） | 東京都北区 | 10000 | done | BRouter生成 11459m |
 | 5 | senbako | 千波湖 | 茨城県水戸市 | 3000 | done | Stravaセグメント 千波湖一周(38335565) 3006m |
 | 6 | oohori | 大濠公園 | 福岡県福岡市中央区 | 2000 | done | Stravaセグメント 大濠公園ジョギングコース(3321997) 1968m |
-| 7 | osakajo | 大阪城公園 | 大阪府大阪市中央区 | 3500 | done | BRouter生成 3906m |
+| 7 | osakajo | 大阪城公園 | 大阪府大阪市中央区 | 3500 | done | Stravaセグメント Osaka Castle Loop SW start(4557499) 3434m |
 | 8 | meijo | 名城公園 | 愛知県名古屋市北区 | 1300 | done | BRouter生成 1121m |
 | 9 | makomanai-park | 真駒内公園 | 北海道札幌市南区 | 3000 | done | BRouter生成 3098m |
 | 10 | iwate-undou-park | 岩手県営運動公園 | 岩手県盛岡市 | 1500 | done | BRouter生成 1642m |
