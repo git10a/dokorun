@@ -125,7 +125,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 |  |  |
 | 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 | done | BRouter生成 2594m |
 | 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 | done | BRouter生成 3589m |
-| 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 |  |  |
+| 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 | done | BRouter生成 1189m |
 | 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 |  |  |
 | 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 |  |  |
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 |  |  |
