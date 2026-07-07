@@ -87,7 +87,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
 | 1 | kokyo | 皇居 | 東京都千代田区 | 5011 | done | Strava実走GPX(data/gpx/kokyo.gpx) |
-| 2 | komazawa | 駒沢オリンピック公園 | 東京都世田谷区 | 2140 | done | BRouter生成。公式ジョギングコースに並走する園路を反時計回り（2.04km） |
+| 2 | komazawa | 駒沢オリンピック公園 | 東京都世田谷区 | 2140 | done | Stravaセグメント Komazawa Park Loop(3939004) 2136m |
 | 3 | yoyogi | 代々木公園 | 東京都渋谷区 | 1907 | done | 実走ログ10周から1周切り出し(data/gpx/yoyogi.gpx) |
 | 4 | arakawa | 荒川河川敷（赤羽） | 東京都北区 | 10000 | done | BRouter生成 11459m |
 | 5 | senbako | 千波湖 | 茨城県水戸市 | 3000 | done | Stravaセグメント 千波湖一周(38335565) 3006m |
