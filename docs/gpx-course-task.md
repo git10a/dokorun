@@ -182,7 +182,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 94 | nakajima-park | 中島公園 | 北海道札幌市中央区 | 1000 | done | Stravaセグメント 中島コース(21936660) |
 | 95 | moerenuma-park | モエレ沼公園 | 北海道札幌市東区 | 3700 | done | Stravaセグメント モレヌマループコース(27480588) |
 | 96 | hirosegawa-yodobashi-ushigoe | 広瀬川河川敷(澱橋〜牛越橋) | 宮城県仙台市青葉区 | 2000 | done | Stravaセグメント Ushigoe Bridge Sprint(12901962) |
-| 97 | tsutsujigaoka-park | 榴岡公園 | 宮城県仙台市宮城野区 | 1100 |  |  |
+| 97 | tsutsujigaoka-park | 榴岡公園 | 宮城県仙台市宮城野区 | 1100 | done | BRouter生成 1192m |
 | 98 | tsurumai-park | 鶴舞公園 | 愛知県名古屋市昭和区 | 2200 | done | Stravaセグメント Tsuruma Koen Loop(38588225) |
 | 99 | shonai-ryokuchi | 庄内緑地 | 愛知県名古屋市西区 | 2300 | done | Stravaセグメント Shonai 2.3km(12149281) |
 | 100 | yamazaki-river-kawanabashi-ishikawabashi | 山崎川四季の道(可和名橋〜石川橋) | 愛知県名古屋市瑞穂区 | 2800 |  |  |
