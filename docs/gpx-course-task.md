@@ -100,7 +100,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 12 | akita-chuo-park | 秋田県立中央公園 | 秋田県秋田市 | 4000 | review | 生成5473mで期待4000mと乖離。紹介文でも距離が一次情報未確認とされている |
 | 13 | yamagata-sogo-undokoen | 山形県総合運動公園 | 山形県天童市 | 2000 | review | 生成2747〜2903mで期待2000mと乖離。園内2kmコースの経路特定要 |
 | 14 | azuma-sports-park | あづま総合運動公園 | 福島県福島市 | 3000 | done | Stravaセグメント あづま3kコース(37156072) 3004m |
-| 15 | doho-park | 洞峰公園 | 茨城県つくば市 | 1630 | review | 生成1345m(期待1630m)。園路がOSM上で分断されておりtarget islandエラーも発生 |
+| 15 | doho-park | 洞峰公園 | 茨城県つくば市 | 1630 | done | Stravaセグメント 洞峰公園C(8475865) 1606m |
 | 16 | shikishima-park | 敷島公園 | 群馬県前橋市 | 700 | review | 生成918m(期待700m)。スタジアム外周700mの正確な経路はOSMで特定できず |
 | 17 | saiko-doman-green-park | 彩湖・道満グリーンパーク | 埼玉県戸田市 | 4200 | review | 彩湖周回4.2kmに対し2.1km/13.6kmと不安定。湖岸経由点の手動調整要 |
 | 18 | kashiwanoha-park | 柏の葉公園 | 千葉県柏市 | 2000 | done | BRouter生成 2034m |
