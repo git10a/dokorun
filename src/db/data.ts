@@ -2,7 +2,7 @@ import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "dr
 import { getDb } from ".";
 import { courses, hashiritai, photos, runs, spots, spotTags, tags } from "./schema";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
-import { simplifyLine, simplifyLineToLimit } from "@/lib/simplify";
+import { simplifyLine } from "@/lib/simplify";
 
 type SearchFilters = {
   pref?: string;
@@ -53,7 +53,7 @@ async function addRelations<T extends {
     const { courseGeojson, ...summary } = row;
     return {
       ...summary,
-      shapeCoords: simplifyLineToLimit(courseGeojson?.coordinates ?? []),
+      hasCourse: Boolean(courseGeojson?.coordinates?.length),
       photoUrl: photoRows.find((photo) => photo.spotId === row.id)?.url ?? null,
       tags: tagRows.filter((tag) => tag.spotId === row.id).map(({ slug, name }) => ({ slug, name })),
     } as SpotSummary & Omit<T, "courseGeojson">;

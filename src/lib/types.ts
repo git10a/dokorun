@@ -24,7 +24,7 @@ export type SpotSummary = {
   signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
-  shapeCoords: [number, number][];
+  hasCourse: boolean;
   photoUrl: string | null;
   tags: { slug: string; name: string }[];
 };
