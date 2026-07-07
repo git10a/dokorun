@@ -144,7 +144,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 56 | musashinomori-park | 武蔵野の森公園 | 東京都府中市 | 1100 | done | Stravaセグメント むさもり北1km(18005785) |
 | 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | BRouter生成 1268m |
 | 58 | showa-kinen-park | 国営昭和記念公園 | 東京都立川市 | 5000 | done | Stravaセグメント Showa Kinen Park(19683557) |
-| 59 | rinko-park | 臨港パーク | 神奈川県横浜市西区 | 980 |  |  |
+| 59 | rinko-park | 臨港パーク | 神奈川県横浜市西区 | 980 | done | BRouter生成 964m |
 | 60 | nogeyama-park | 野毛山公園 | 神奈川県横浜市西区 | 740 |  |  |
 | 61 | negishi-forest-park | 根岸森林公園 | 神奈川県横浜市中区 | 1300 | done | Stravaセグメント Negishi Part 1 Lap Anti-Clockwise(8626212) |
 | 62 | shin-yokohama-park | 新横浜公園 | 神奈川県横浜市港北区 | 1750 | done | Stravaセグメント Shinyokohama Park Loop(7181571) |
