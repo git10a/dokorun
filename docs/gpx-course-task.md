@@ -169,7 +169,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 81 | fukui-undokoen | 福井運動公園 | 福井県福井市 | 2000 |  |  |
 | 82 | gifu-memorial-center | 岐阜メモリアルセンター | 岐阜県岐阜市 | 1500 | done | Stravaセグメント メモリアル右回り1.5km(40576370) |
 | 83 | sports-garden-suzuka | 三重交通G スポーツの杜 鈴鹿 | 三重県鈴鹿市 | 3000 | done | BRouter生成 2912m |
-| 84 | heijo-palace-park | 平城宮跡歴史公園 | 奈良県奈良市 | 3800 |  |  |
+| 84 | heijo-palace-park | 平城宮跡歴史公園 | 奈良県奈良市 | 3800 | done | BRouter生成 3809m |
 | 85 | shinji-lake-north-shore | 宍道湖岸(県立美術館〜松江しんじ湖温泉駅) | 島根県松江市 | 2000 | done | Stravaセグメント 宍道湖畔2km周回(19587711) |
 | 86 | hiroshima-castle-loop | 広島城外周 | 広島県広島市中区 | 1500 | done | Stravaセグメント Hiroshima Castle loop clockwise(10535360) |
 | 87 | tokushima-central-park | 徳島中央公園 | 徳島県徳島市 | 1700 | done | Stravaセグメント 徳島城公園周回TT（右回り）(19124541) |
