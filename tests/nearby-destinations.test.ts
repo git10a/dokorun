@@ -22,6 +22,17 @@ describe("nearby destinations", () => {
     expect(getNearbyDestinations("shikishima-park")).toHaveLength(2);
   });
 
+  it("loads partial fifth and sixth batches", () => {
+    expect(getNearbyDestinations("ukima-park")).toHaveLength(4);
+    expect(getNearbyDestinations("rinshi-no-mori-park")).toHaveLength(3);
+    expect(getNearbyDestinations("showa-kinen-park")).toHaveLength(1);
+  });
+
+  it("corrects the Showa Kinen Park place that was nested under Rinshi-no-mori", () => {
+    expect(getNearbyDestinations("showa-kinen-park")[0].name).toBe("レインボウスパイス");
+    expect(getNearbyDestinations("rinshi-no-mori-park").map((place) => place.name)).not.toContain("レインボウスパイス");
+  });
+
   it("preserves unknown distances instead of inventing them", () => {
     const [place] = getNearbyDestinations("moerenuma-park");
 
