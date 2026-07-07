@@ -84,7 +84,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 
 ## 進捗表
 
-> **2026-07-07決定:** review 24件 + skip 3件(計27件)は本番DBで `is_published = false` にして**非掲載化済み**(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み → 現在非掲載25件・掲載93件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
 
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
@@ -104,7 +104,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 14 | azuma-sports-park | あづま総合運動公園 | 福島県福島市 | 3000 | done | Stravaセグメント あづま3kコース(37156072) 3004m |
 | 15 | doho-park | 洞峰公園 | 茨城県つくば市 | 1630 | done | Stravaセグメント 洞峰公園C(8475865) 1606m |
 | 16 | shikishima-park | 敷島公園 | 群馬県前橋市 | 700 | done | Stravaセグメント 正田醤油スタジアム800m(25308004) 812m |
-| 17 | saiko-doman-green-park | 彩湖・道満グリーンパーク | 埼玉県戸田市 | 4200 | review | 彩湖周回4.2kmに対し2.1km/13.6kmと不安定。湖岸経由点の手動調整要 |
+| 17 | saiko-doman-green-park | 彩湖・道満グリーンパーク | 埼玉県戸田市 | 4200 | done | ユーザー実走GPX 4980m(2026-07-07、data/gpx/saiko-doman-green-park.gpx)。distance_mも4980に更新済み |
 | 18 | kashiwanoha-park | 柏の葉公園 | 千葉県柏市 | 2000 | done | BRouter生成 2034m |
 | 19 | niigata-sports-park | 新潟県スポーツ公園 | 新潟県新潟市中央区 | 5000 | done | Stravaセグメント 5000ｍ(30440499) 5035m |
 | 20 | kansui-park | 富岩運河環水公園 | 富山県富山市 | 5000 | done | Stravaセグメント 冠水公園中島閘門(12945188) 4909m |
@@ -142,7 +142,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 52 | ueno-onshi-park | 上野恩賜公園 | 東京都台東区 | 1800 | done | Stravaセグメント Tokyo National Museum 1.5km Loop(13657810) 1591m |
 | 53 | oshima-komatsugawa-park | 大島小松川公園 | 東京都江東区 | 800 | done | Stravaセグメント 大島小松川公園1周(10010862) |
 | 54 | koganei-park | 小金井公園 | 東京都小金井市 | 3200 | done | BRouter生成 2825m |
-| 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 | review | 生成722m(期待1500m)。池周回の園路が分断 |
+| 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 | done | ユーザー実走6周ログから中央値の1周を切り出し 1557m(data/gpx/inokashira-park.gpx) |
 | 56 | musashinomori-park | 武蔵野の森公園 | 東京都府中市 | 1100 | done | Stravaセグメント むさもり北1km(18005785) |
 | 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | BRouter生成 1268m |
 | 58 | showa-kinen-park | 国営昭和記念公園 | 東京都立川市 | 5000 | done | Stravaセグメント Showa Kinen Park(19683557) |
