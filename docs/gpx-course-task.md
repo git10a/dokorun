@@ -108,7 +108,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 20 | kansui-park | 富岩運河環水公園 | 富山県富山市 | 5000 | done | Stravaセグメント 冠水公園中島閘門(12945188) 4909m |
 | 21 | kibagata-park | 木場潟公園 | 石川県小松市 | 6400 | done | Stravaセグメント 木場潟 左周り（北園地起点6.4km）(18784482) 6407m |
 | 22 | lake-yamanaka-loop | 山中湖 | 山梨県山中湖村 | 13600 | done | Stravaセグメント Yamanakako 一周(17743428) 13407m |
-| 23 | shinshu-sky-park | 信州スカイパーク | 長野県松本市 | 10000 | done | BRouter生成 10326m |
+| 23 | shinshu-sky-park | 信州スカイパーク | 長野県松本市 | 10000 | done | Stravaセグメント スカイパーク(2882863) 10030m |
 | 24 | sanaruko-park | 佐鳴湖公園 | 静岡県浜松市中央区 | 5941 | done | BRouter生成 5534m |
 | 25 | odaka-ryokuchi | 大高緑地 | 愛知県名古屋市緑区 | 2500 | done | BRouter生成 2442m |
 | 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 | done | BRouter生成 4410m(近江大橋〜大津港の湖岸ワンウェイ) |
