@@ -151,7 +151,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 63 | mitsuike-park | 三ツ池公園 | 神奈川県横浜市鶴見区 | 1400 | done | Stravaセグメント 三ツ池公園一周(6747921) |
 | 64 | mitsuzawa-park | 三ツ沢公園 | 神奈川県横浜市神奈川区 | 1350 | done | Stravaセグメント Mitsuzawa Trim1 Loop -1300m(12334048) |
 | 65 | kodomo-no-kuni | こどもの国 | 神奈川県横浜市青葉区 | 4100 | done | Stravaセグメント 子供の国一周(21640795) |
-| 66 | tsuzuki-central-park | 都筑中央公園 | 神奈川県横浜市都筑区 | 1700 |  |  |
+| 66 | tsuzuki-central-park | 都筑中央公園 | 神奈川県横浜市都筑区 | 1700 | done | BRouter生成 1941m |
 | 67 | tamagawa-marukobashi-furuichiba | 多摩川河川敷 丸子橋〜古市場 | 神奈川県川崎市中原区 | 7000 |  |  |
 | 68 | asamizo-park-cross-country | 相模原麻溝公園クロカンコース | 神奈川県相模原市南区 | 1790 |  |  |
 | 69 | ageo-undou-park | 上尾運動公園 | 埼玉県上尾市 | 800 |  |  |
