@@ -20,10 +20,14 @@ const categoryLabels: Record<NearbyDestinationCategory, string> = {
   market: "複合施設",
 };
 
-function formatDistance(distanceM: number) {
-  return distanceM >= 1000
-    ? `${(distanceM / 1000).toFixed(1)}km`
-    : `${distanceM}m`;
+function formatDistance(distanceM: number | null, walkingMinutes: number | null) {
+  const distance = distanceM === null
+    ? null
+    : distanceM >= 1000
+      ? `${(distanceM / 1000).toFixed(1)}km`
+      : `${distanceM}m`;
+  const walking = walkingMinutes === null ? null : `徒歩${walkingMinutes}分`;
+  return [distance, walking].filter(Boolean).join("・") || "距離未確認";
 }
 
 export function NearbyDestinations({ places }: { places: NearbyDestination[] }) {
@@ -46,7 +50,7 @@ export function NearbyDestinations({ places }: { places: NearbyDestination[] }) 
                 </span>
                 <span className="flex items-center gap-1 text-xs font-bold text-accent">
                   <MapPin size={14} aria-hidden="true" />
-                  {formatDistance(place.distanceFromSpotM)}・徒歩{place.walkingMinutes}分
+                  {formatDistance(place.distanceFromSpotM, place.walkingMinutes)}
                 </span>
               </div>
               <h3 className="text-lg font-bold leading-snug">

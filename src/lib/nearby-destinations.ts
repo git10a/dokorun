@@ -1,4 +1,6 @@
-import researchData from "../../data/nearby-destinations-batch-02-2026-07-08.json";
+import batch01 from "../../data/nearby-destinations-batch-01-2026-07-08.json";
+import batch02 from "../../data/nearby-destinations-batch-02-2026-07-08.json";
+import batch03 from "../../data/nearby-destinations-batch-03-2026-07-08.json";
 
 export type NearbyDestinationCategory =
   | "bakery"
@@ -20,10 +22,10 @@ export type NearbyDestination = {
   name: string;
   category: NearbyDestinationCategory;
   address: string;
-  lat: number;
-  lng: number;
-  distanceFromSpotM: number;
-  walkingMinutes: number;
+  lat: number | null;
+  lng: number | null;
+  distanceFromSpotM: number | null;
+  walkingMinutes: number | null;
   visitCondition: "direct_after_run" | "after_cleanup";
   recommendedTiming: string;
   whyWorthGoing: string;
@@ -36,7 +38,7 @@ type NearbyDestinationResearch = {
 };
 
 const destinationsBySpot = new Map(
-  (researchData as NearbyDestinationResearch[]).map((entry) => [
+  ([...batch01, ...batch02, ...batch03] as NearbyDestinationResearch[]).map((entry) => [
     entry.spotSlug,
     [...entry.places].sort((a, b) => a.rank - b.rank),
   ]),

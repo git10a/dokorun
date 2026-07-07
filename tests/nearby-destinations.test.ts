@@ -16,6 +16,19 @@ describe("nearby destinations", () => {
     expect(getNearbyDestinations("saiko-doman-green-park")).toEqual([]);
   });
 
+  it("merges the first three research batches", () => {
+    expect(getNearbyDestinations("nakajima-park")).toHaveLength(1);
+    expect(getNearbyDestinations("mizumoto-park")).toHaveLength(2);
+    expect(getNearbyDestinations("shikishima-park")).toHaveLength(2);
+  });
+
+  it("preserves unknown distances instead of inventing them", () => {
+    const [place] = getNearbyDestinations("moerenuma-park");
+
+    expect(place.distanceFromSpotM).toBeNull();
+    expect(place.walkingMinutes).toBeNull();
+  });
+
   it("builds a Google Maps search link from the official name and address", () => {
     const [place] = getNearbyDestinations("edogawa-kasenjiki-shibamata");
     const url = new URL(googleMapsPlaceUrl(place));
