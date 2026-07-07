@@ -130,7 +130,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | review | 生成が2.9〜4.4kmと過大。園内1.1km周回の経路特定要 |
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 | done | BRouter生成 2979m |
 | 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | BRouter生成 1006m |
-| 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 |  |  |
+| 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 | done | BRouter生成 4586m |
 | 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 |  |  |
 | 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 |  |  |
 | 48 | shinjuku-central-park | 新宿中央公園 | 東京都新宿区 | 1100 |  |  |
