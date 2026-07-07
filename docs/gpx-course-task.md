@@ -142,7 +142,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 54 | koganei-park | 小金井公園 | 東京都小金井市 | 3200 | done | BRouter生成 2825m |
 | 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 |  |  |
 | 56 | musashinomori-park | 武蔵野の森公園 | 東京都府中市 | 1100 | done | Stravaセグメント むさもり北1km(18005785) |
-| 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 |  |  |
+| 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | BRouter生成 1268m |
 | 58 | showa-kinen-park | 国営昭和記念公園 | 東京都立川市 | 5000 | done | Stravaセグメント Showa Kinen Park(19683557) |
 | 59 | rinko-park | 臨港パーク | 神奈川県横浜市西区 | 980 |  |  |
 | 60 | nogeyama-park | 野毛山公園 | 神奈川県横浜市西区 | 740 |  |  |
