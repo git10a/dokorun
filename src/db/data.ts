@@ -2,6 +2,7 @@ import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "dr
 import { getDb } from ".";
 import { courses, hashiritai, photos, runs, spots, spotTags, tags } from "./schema";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
+import { simplifyLine, simplifyLineToLimit } from "@/lib/simplify";
 
 type SearchFilters = {
   pref?: string;
@@ -39,8 +40,8 @@ async function addRelations<T extends {
   signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
-  geojson: LineString | null;
-}>(rows: T[]): Promise<(SpotSummary & T)[]> {
+  courseGeojson: LineString | null;
+}>(rows: T[]): Promise<(SpotSummary & Omit<T, "courseGeojson">)[]> {
   if (!rows.length) return [];
   const db = getDb();
   const ids = rows.map((row) => row.id);
@@ -48,11 +49,15 @@ async function addRelations<T extends {
     db.select({ spotId: photos.spotId, url: photos.url, sortOrder: photos.sortOrder }).from(photos).where(inArray(photos.spotId, ids)).orderBy(photos.sortOrder),
     db.select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name }).from(spotTags).innerJoin(tags, eq(spotTags.tagId, tags.id)).where(inArray(spotTags.spotId, ids)).orderBy(tags.sortOrder),
   ]);
-  return rows.map((row) => ({
-    ...row,
-    photoUrl: photoRows.find((photo) => photo.spotId === row.id)?.url ?? null,
-    tags: tagRows.filter((tag) => tag.spotId === row.id).map(({ slug, name }) => ({ slug, name })),
-  }));
+  return rows.map((row) => {
+    const { courseGeojson, ...summary } = row;
+    return {
+      ...summary,
+      shapeCoords: simplifyLineToLimit(courseGeojson?.coordinates ?? []),
+      photoUrl: photoRows.find((photo) => photo.spotId === row.id)?.url ?? null,
+      tags: tagRows.filter((tag) => tag.spotId === row.id).map(({ slug, name }) => ({ slug, name })),
+    } as SpotSummary & Omit<T, "courseGeojson">;
+  });
 }
 
 const summarySelection = {
@@ -76,7 +81,7 @@ const summarySelection = {
   signalsCount: courses.signalsCount,
   courseType: courses.courseType,
   surface: courses.surface,
-  geojson: courses.geojson,
+  courseGeojson: courses.geojson,
 };
 
 export async function getTags() {
@@ -149,7 +154,8 @@ export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot
     lat: spots.lat,
     lng: spots.lng,
     distanceM: courses.distanceM,
-  }).from(spots).innerJoin(courses, eq(courses.spotId, spots.id)).where(and(...searchConditions(filters)));
+  }).from(spots).innerJoin(courses, eq(courses.spotId, spots.id)).where(and(...searchConditions(filters)))
+    .limit(300);
 }
 
 export async function getSitemapSpots() {
@@ -173,7 +179,7 @@ export async function getSpotBySlug(slug: string) {
   const row = rows[0];
   if (!row) return null;
   const [decorated, allPhotos, hashiritaiCount, runsCount] = await Promise.all([
-    addRelations([row]),
+    addRelations([{ ...row, courseGeojson: row.geojson }]),
     db.select().from(photos).where(eq(photos.spotId, row.id)).orderBy(photos.sortOrder),
     db.select({ count: count() }).from(hashiritai).where(eq(hashiritai.spotId, row.id)),
     db.select({ count: count() }).from(runs).where(eq(runs.spotId, row.id)),
@@ -181,7 +187,7 @@ export async function getSpotBySlug(slug: string) {
   return {
     ...decorated[0],
     nightLighting: row.nightLighting as Lighting,
-    geojson: row.geojson as LineString | null,
+    geojson: row.geojson ? { ...row.geojson, coordinates: simplifyLine(row.geojson.coordinates, 0.00005) } as LineString : null,
     photos: allPhotos,
     hashiritaiCount: hashiritaiCount[0]?.count ?? 0,
     runsCount: runsCount[0]?.count ?? 0,

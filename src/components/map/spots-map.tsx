@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import "maplibre-gl/dist/maplibre-gl.css";
+import "./map.css";
 import type { MapSpot } from "@/lib/types";
 
 export function SpotsMap({ spots }: { spots: MapSpot[] }) {

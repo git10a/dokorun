@@ -24,7 +24,7 @@ export type SpotSummary = {
   signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
-  geojson: LineString | null;
+  shapeCoords: [number, number][];
   photoUrl: string | null;
   tags: { slug: string; name: string }[];
 };

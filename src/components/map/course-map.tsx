@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import "maplibre-gl/dist/maplibre-gl.css";
+import "./map.css";
+import { CourseShape } from "@/components/course-shape";
 import type { LineString } from "@/lib/types";
 
-export function CourseMap({ lat, lng, geojson }: { lat: number; lng: number; geojson: LineString | null }) {
+export function CourseMap({ lat, lng, geojson, name = "コース" }: { lat: number; lng: number; geojson: LineString | null; name?: string }) {
+  const [active, setActive] = useState(false);
   const container = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (!container.current) return;
+    if (!active || !container.current) return;
     let map: import("maplibre-gl").Map | undefined;
     let disposed = false;
     void import("maplibre-gl").then((maplibregl) => {
@@ -28,6 +32,14 @@ export function CourseMap({ lat, lng, geojson }: { lat: number; lng: number; geo
       });
     });
     return () => { disposed = true; map?.remove(); };
-  }, [geojson, lat, lng]);
+  }, [active, geojson, lat, lng]);
+  if (!active) {
+    return (
+      <div className="relative h-[340px] w-full overflow-hidden rounded-2xl border border-line bg-cream">
+        <CourseShape coords={geojson?.coordinates ?? []} name={name} className="h-full w-full" />
+        <button type="button" onClick={() => setActive(true)} className="absolute inset-x-0 bottom-5 mx-auto w-fit rounded-full bg-ink px-5 py-3 font-bold text-white shadow-lg">地図を操作する</button>
+      </div>
+    );
+  }
   return <div ref={container} className="h-[340px] w-full overflow-hidden rounded-2xl border border-line" aria-label="コース地図" />;
 }

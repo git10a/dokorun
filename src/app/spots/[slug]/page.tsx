@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getNearbySpots, getSpotBySlug } from "@/db/data";
@@ -9,6 +8,7 @@ import { FacilityIcons } from "@/components/facility-icons";
 import { HashiritaiButton } from "@/components/hashiritai-button";
 import { SpecPanel } from "@/components/spec-panel";
 import { SpotCard } from "@/components/spot-card";
+import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const description = `1周${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${spot.description.slice(0, 90)}`;
   const title = `${spot.name}のランニングコース - ドコラン`;
-  return { title: { absolute: title }, description, openGraph: { title, description, images: spot.photos[0]?.url ? [spot.photos[0].url] : ["/opengraph-image"] } };
+  return { title: { absolute: title }, description, openGraph: { title, description, images: spot.photos[0]?.url ? [imageTransformUrl(spot.photos[0].url, 1200)] : ["/opengraph-image"] } };
 }
 
 export default async function SpotDetailPage({ params }: { params: Params }) {
@@ -51,8 +51,8 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <header><p className="text-sm text-sub">{spot.prefecture} {spot.city}</p><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
       <div className="flex flex-wrap items-center gap-3"><HashiritaiButton count={spot.hashiritaiCount} /><div className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">走リ活 {spot.runsCount}</div></div>
-      <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.length ? spot.photos.map((photo) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><img src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>) : <div className="aspect-video w-full overflow-hidden rounded-2xl bg-brand/20"><SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" /></div>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} /><a href={`https://www.google.com/maps/dir/?api=1&destination=${spot.lat},${spot.lng}`} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-sm text-sub underline underline-offset-2 hover:text-ink"><MapPin size={14} />{spot.name}までの行き方をGoogleマップで調べる</a></section>
+      <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.length ? spot.photos.map((photo, index) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><SpotImage src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} width={1280} height={720} sizes="(min-width: 640px) 60vw, 85vw" priority={index === 0} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>) : <div className="aspect-video w-full overflow-hidden rounded-2xl bg-brand/20"><SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" /></div>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><a href={`https://www.google.com/maps/dir/?api=1&destination=${spot.lat},${spot.lng}`} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-sm text-sub underline underline-offset-2 hover:text-ink"><MapPin size={14} />{spot.name}までの行き方をGoogleマップで調べる</a></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コーススペック</h2><SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備</h2><FacilityIcons spot={spot} /></section>
       <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
