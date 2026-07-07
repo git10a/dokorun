@@ -137,7 +137,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 49 | hanegi-park | 羽根木公園 | 東京都世田谷区 | 630 |  |  |
 | 50 | heiwa-no-mori-nakano | 平和の森公園 | 東京都中野区 | 440 |  |  |
 | 51 | tetsugakudo-park | 哲学堂公園 | 東京都中野区 | 1100 | done | BRouter生成 1168m |
-| 52 | ueno-onshi-park | 上野恩賜公園 | 東京都台東区 | 1800 |  |  |
+| 52 | ueno-onshi-park | 上野恩賜公園 | 東京都台東区 | 1800 | done | BRouter生成 1925m |
 | 53 | oshima-komatsugawa-park | 大島小松川公園 | 東京都江東区 | 800 |  |  |
 | 54 | koganei-park | 小金井公園 | 東京都小金井市 | 3200 |  |  |
 | 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 |  |  |
