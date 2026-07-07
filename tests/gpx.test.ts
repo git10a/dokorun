@@ -11,8 +11,13 @@ describe("parseGpx", () => {
   });
 
   it("detects a loop", () => {
-    const result = parseGpx(wrap('<trkpt lat="35" lon="139"><ele>0</ele></trkpt><trkpt lat="35.01" lon="139.01"><ele>5</ele></trkpt><trkpt lat="35.0001" lon="139.0001"><ele>0</ele></trkpt>'));
+    const result = parseGpx(wrap('<trkpt lat="35" lon="139"><ele>0</ele></trkpt><trkpt lat="35" lon="139.01"><ele>2</ele></trkpt><trkpt lat="35.01" lon="139.01"><ele>5</ele></trkpt><trkpt lat="35.01" lon="139"><ele>2</ele></trkpt><trkpt lat="35" lon="139"><ele>0</ele></trkpt>'));
     expect(result.suggestedCourseType).toBe("loop");
+  });
+
+  it("detects an out-and-back route that returns to its start", () => {
+    const result = parseGpx(wrap('<trkpt lat="35" lon="139"><ele>0</ele></trkpt><trkpt lat="35.005" lon="139.005"><ele>2</ele></trkpt><trkpt lat="35.01" lon="139.01"><ele>5</ele></trkpt><trkpt lat="35.005" lon="139.005"><ele>2</ele></trkpt><trkpt lat="35" lon="139"><ele>0</ele></trkpt>'));
+    expect(result.suggestedCourseType).toBe("out_and_back");
   });
 
   it("returns null elevation when any elevation is missing", () => {

@@ -67,6 +67,34 @@ function elevationGain(points: Point[]) {
   return Math.round(smoothed.slice(1).reduce((sum, value, index) => sum + Math.max(0, value - smoothed[index]), 0));
 }
 
+function pointAtDistance(points: Point[], cumulative: number[], distance: number): Point {
+  const clamped = Math.max(0, Math.min(distance, cumulative[cumulative.length - 1]));
+  let index = 1;
+  while (index < cumulative.length && cumulative[index] < clamped) index += 1;
+  if (index >= points.length) return points[points.length - 1];
+  const segmentLength = cumulative[index] - cumulative[index - 1];
+  const ratio = segmentLength === 0 ? 0 : (clamped - cumulative[index - 1]) / segmentLength;
+  return {
+    lat: points[index - 1].lat + (points[index].lat - points[index - 1].lat) * ratio,
+    lng: points[index - 1].lng + (points[index].lng - points[index - 1].lng) * ratio,
+    ele: null,
+  };
+}
+
+function isOutAndBack(points: Point[]) {
+  const cumulative = [0];
+  for (let index = 1; index < points.length; index += 1) {
+    cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  }
+  const total = cumulative[cumulative.length - 1];
+  if (total < 300) return false;
+  const distances = Array.from({ length: 19 }, (_, index) => ((index + 1) / 20) * (total / 2));
+  const gaps = distances.map((distance) =>
+    haversine(pointAtDistance(points, cumulative, distance), pointAtDistance(points, cumulative, total - distance)),
+  );
+  return gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length <= 40 && Math.max(...gaps) <= 120;
+}
+
 export function parseGpx(xml: string): GpxResult {
   let parsed: XmlNode;
   try {
@@ -97,7 +125,7 @@ export function parseGpx(xml: string): GpxResult {
     geojson: { type: "LineString", coordinates: simplified.map((point) => [point.lng, point.lat]) },
     distanceM,
     elevationGainM: elevationGain(points),
-    suggestedCourseType: closed ? "loop" : "out_and_back",
+    suggestedCourseType: closed && !isOutAndBack(points) ? "loop" : "out_and_back",
     startPoint: { lat: points[0].lat, lng: points[0].lng },
   };
 }
