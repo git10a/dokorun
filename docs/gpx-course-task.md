@@ -118,16 +118,16 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 | review | 生成が2.6〜5.2kmと不安定。園内周回2kmの経路特定要 |
 | 31 | koyamaike-park | 湖山池公園 | 鳥取県鳥取市 | 18000 | done | BRouter生成 18270m |
 | 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | BRouter生成 2483m |
-| 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 |  |  |
-| 34 | haruno-sogo-undokoen | 春野総合運動公園 | 高知県高知市 | 3200 |  |  |
+| 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 | review | 円周経由点が園内で経路化できず(0〜24m)。園路のOSM収録が薄い |
+| 34 | haruno-sogo-undokoen | 春野総合運動公園 | 高知県高知市 | 3200 | skip | クロカンコースはOSM未収録で生成不能 |
 | 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | BRouter生成 4150m |
-| 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 |  |  |
-| 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 |  |  |
+| 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 | review | 生成1.4〜1.6kmで公式2kmに届かず。園内ルートの手動指定要 |
+| 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 | skip | 松林クロカンコースはOSM未収録で生成不能 |
 | 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 | done | BRouter生成 2594m |
 | 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 | done | BRouter生成 3589m |
 | 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 | done | BRouter生成 1189m |
-| 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 |  |  |
-| 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 |  |  |
+| 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 | review | 550mトラック状コースはOSM未収録。生成791mは別経路 |
+| 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | review | 生成が2.9〜4.4kmと過大。園内1.1km周回の経路特定要 |
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 |  |  |
 | 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 |  |  |
 | 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 |  |  |
