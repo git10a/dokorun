@@ -8,15 +8,22 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "r2_buckets": [
-    {
-      "binding": "IMAGE_BUCKET",
-      "bucket_name": "dokorun-images"
-    }
+  // R2はアカウントで未有効化のため一時的にバインディングを外している。
+  // 画像アップロードを有効にする場合: ダッシュボードでR2を有効化 →
+  // `npx wrangler r2 bucket create dokorun-images` → 以下を復活させ、
+  // vars に R2_PUBLIC_URL(公開バケットのベースURL)を追加して再デプロイ。
+  // "r2_buckets": [
+  //   {
+  //     "binding": "IMAGE_BUCKET",
+  //     "bucket_name": "dokorun-images"
+  //   }
+  // ],
+  "routes": [
+    { "pattern": "dokorun.com", "custom_domain": true },
+    { "pattern": "www.dokorun.com", "custom_domain": true }
   ],
-  // 画像アップロードを有効にする場合は vars に R2_PUBLIC_URL を追加する
-  // (公開バケットのベースURL。例: https://images.example.com や r2.dev のURL)。
-  // 未設定なら管理画面の画像アップロードが無効になり、URL直接入力のみになる。
-  "vars": {}
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://dokorun.com"
+  }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET は `wrangler secret put <NAME>` で設定する
 }
