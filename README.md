@@ -6,23 +6,12 @@
 
 必要なもの:
 
-- Node.js 20.9以上
-- pnpm 11
+- Node.js 20.9以上(22または24を推奨)
+- npm
 - Neon PostgresなどのPostgreSQLデータベース
-
-Node.js 22または24を推奨します。このMacのNode.js 20.20環境では、Corepack経由のpnpm 11がクラッシュする場合があります。その場合は下記のnpm手順を使用してください。
 
 ```bash
 cp .env.example .env.local
-pnpm install
-pnpm db:push
-pnpm db:seed
-pnpm dev
-```
-
-pnpmが起動しない場合:
-
-```bash
 npm install
 npm run db:push
 npm run db:seed
@@ -44,19 +33,17 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ## コマンド
 
 ```bash
-pnpm dev       # 開発サーバー
-pnpm build     # 本番ビルド
+npm run dev       # 開発サーバー
+npm run build     # 本番ビルド(next build)
 npm run preview   # Workers実行環境(workerd)でローカル確認
 npm run deploy    # Cloudflare Workersへデプロイ
-pnpm lint      # 静的チェック
-pnpm test      # GPX解析の単体テスト
-pnpm db:push   # DrizzleスキーマをDBへ反映
-pnpm db:seed   # タグ16件・スポット8件を投入
-pnpm db:import -- data/spots.json [--dry-run]  # スポットの一括インポート
-npm run validate:spots -- data/spots.json      # 調査データの品質検証
+npm run lint      # 静的チェック
+npm test          # GPX解析の単体テスト
+npm run db:push   # DrizzleスキーマをDBへ反映
+npm run db:seed   # タグ16件・スポット8件を投入
+npm run db:import -- data/spots.json [--dry-run]  # スポットの一括インポート
+npm run validate:spots -- data/spots.json         # 調査データの品質検証
 ```
-
-各コマンドは `npm run dev`、`npm run build`、`npm run lint`、`npm test`、`npm run db:push`、`npm run db:seed`、`npm run db:import` でも実行できます。
 
 ## スポットの一括インポート
 
