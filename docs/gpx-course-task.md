@@ -90,7 +90,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 2 | komazawa | 駒沢オリンピック公園 | 東京都世田谷区 | 2140 | done | BRouter生成。公式ジョギングコースに並走する園路を反時計回り（2.04km） |
 | 3 | yoyogi | 代々木公園 | 東京都渋谷区 | 1907 | done | 実走ログ10周から1周切り出し(data/gpx/yoyogi.gpx) |
 | 4 | arakawa | 荒川河川敷（赤羽） | 東京都北区 | 10000 | done | BRouter生成 11459m |
-| 5 | senbako | 千波湖 | 茨城県水戸市 | 3000 | review | 円周・湖岸手動とも距離不安定(1.6〜3.6km)。湖岸経由点の手動調整要 |
+| 5 | senbako | 千波湖 | 茨城県水戸市 | 3000 | done | Stravaセグメント 千波湖一周(38335565) 3006m |
 | 6 | oohori | 大濠公園 | 福岡県福岡市中央区 | 2000 | done | Stravaセグメント 大濠公園ジョギングコース(3321997) 1968m |
 | 7 | osakajo | 大阪城公園 | 大阪府大阪市中央区 | 3500 | done | BRouter生成 3906m |
 | 8 | meijo | 名城公園 | 愛知県名古屋市北区 | 1300 | done | BRouter生成 1121m |
