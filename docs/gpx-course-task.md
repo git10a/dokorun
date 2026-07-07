@@ -114,7 +114,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 |  |  |
 | 27 | takaragaike-park | 宝が池公園 | 京都府京都市左京区 | 1500 | done | BRouter生成 1535m |
 | 28 | nagai-park | 長居公園 | 大阪府大阪市東住吉区 | 2800 |  |  |
-| 29 | akashi-park | 明石公園 | 兵庫県明石市 | 2000 |  |  |
+| 29 | akashi-park | 明石公園 | 兵庫県明石市 | 2000 | done | BRouter生成 2180m |
 | 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 |  |  |
 | 31 | koyamaike-park | 湖山池公園 | 鳥取県鳥取市 | 18000 |  |  |
 | 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 |  |  |
