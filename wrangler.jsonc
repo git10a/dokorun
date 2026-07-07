@@ -24,9 +24,10 @@
   ],
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
-    // Cloudflare Web Analyticsのビーコントークン。ダッシュボード
-    // (Analytics & Logs > Web Analytics)でdokorun.comのサイトを追加し、
-    // スニペット内の "token" の値をここに貼って再デプロイすると計測が始まる。
+    // Cloudflare Web Analyticsの手動ビーコン用トークン。現在はダッシュボードの
+    // Automatic setup(自動注入)で計測中のため**空のままにする**。設定すると二重計測になる。
+    // 手動方式に切り替える場合のみ、ダッシュボードでRUMを
+    // 「Enable with JS Snippet installation」に変更してからトークンを貼る。
     "CF_BEACON_TOKEN": ""
   }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET は `wrangler secret put <NAME>` で設定する
