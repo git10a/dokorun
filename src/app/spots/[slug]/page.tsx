@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getNearbySpots, getSpotBySlug } from "@/db/data";
 import { SpotVisual } from "@/components/spot-visual";
+import { MapPin } from "lucide-react";
 import { CourseMap } from "@/components/map/course-map";
-import { LocationMap } from "@/components/map/location-map";
 import { FacilityIcons } from "@/components/facility-icons";
 import { HashiritaiButton } from "@/components/hashiritai-button";
 import { SpecPanel } from "@/components/spec-panel";
@@ -52,10 +52,10 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
       <header><p className="text-sm text-sub">{spot.prefecture} {spot.city}</p><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
       <div className="flex flex-wrap items-center gap-3"><HashiritaiButton count={spot.hashiritaiCount} /><div className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">走リ活 {spot.runsCount}</div></div>
       <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.length ? spot.photos.map((photo) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><img src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>) : <div className="aspect-video w-full overflow-hidden rounded-2xl bg-brand/20"><SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" /></div>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} /></section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} /><a href={`https://www.google.com/maps/dir/?api=1&destination=${spot.lat},${spot.lng}`} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-sm text-sub underline underline-offset-2 hover:text-ink"><MapPin size={14} />{spot.name}までの行き方をGoogleマップで調べる</a></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コーススペック</h2><SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備</h2><FacilityIcons spot={spot} /></section>
-      <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div><div><h3 className="mb-3 font-bold">場所・アクセス</h3><LocationMap lat={spot.lat} lng={spot.lng} name={spot.name} embedUrl={spot.slug === "kokyo" ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.335730419237!2d139.7502245760655!3d35.685179329756565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0d02d8064d%3A0xd11a5f0b379e6db7!2z55qH5bGF!5e0!3m2!1sja!2sjp!4v1783411307461!5m2!1sja!2sjp" : undefined} />{spot.access && <p className="mt-3 leading-7 text-sub">{spot.access}</p>}</div></section>
+      <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
       <section className="rounded-2xl bg-cream px-5 py-9"><h2 className="mb-4 text-xl font-bold">走リ活</h2><p className="text-sub">まだ走リ活はありません。投稿機能は準備中です 🏃</p></section>
       {nearby.length > 0 && <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くのスポット</h2><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
     </div>
