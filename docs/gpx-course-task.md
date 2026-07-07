@@ -89,7 +89,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 1 | kokyo | 皇居 | 東京都千代田区 | 5011 | done | Strava実走GPX(data/gpx/kokyo.gpx) |
 | 2 | komazawa | 駒沢オリンピック公園 | 東京都世田谷区 | 2140 | done | BRouter生成。公式ジョギングコースに並走する園路を反時計回り（2.04km） |
 | 3 | yoyogi | 代々木公園 | 東京都渋谷区 | 1907 | done | 実走ログ10周から1周切り出し(data/gpx/yoyogi.gpx) |
-| 4 | arakawa | 荒川河川敷（赤羽） | 東京都北区 | 10000 |  |  |
+| 4 | arakawa | 荒川河川敷（赤羽） | 東京都北区 | 10000 | done | BRouter生成 11459m |
 | 5 | senbako | 千波湖 | 茨城県水戸市 | 3000 |  |  |
 | 6 | oohori | 大濠公園 | 福岡県福岡市中央区 | 2000 |  |  |
 | 7 | osakajo | 大阪城公園 | 大阪府大阪市中央区 | 3500 |  |  |
