@@ -2,7 +2,7 @@ import { Bath, Coffee, GlassWater, Lock, ShowerHead, SquareParking, Store, Toile
 
 const facilities = [
   ["hasToilet", "トイレ", Toilet], ["hasWaterFountain", "水飲み場", GlassWater], ["hasVendingMachine", "自販機", Coffee],
-  ["hasLocker", "ロッカー", Lock], ["hasShower", "シャワー", ShowerHead], ["hasSentoNearby", "銭湯・サウナ", Bath],
+  ["hasLocker", "ロッカー", Lock], ["hasShower", "ランステ", ShowerHead], ["hasSentoNearby", "銭湯・サウナ", Bath],
   ["hasParking", "駐車場", SquareParking], ["hasConvenienceStore", "コンビニ", Store],
 ] as const;
 

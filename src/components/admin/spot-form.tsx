@@ -23,7 +23,7 @@ export function SpotForm({ mode, tags, initial = {}, uploadEnabled }: { mode: "c
   const [state, action, pending] = useActionState(mode === "edit" ? updateSpot : createSpot, initialState);
   const [photoUrls, setPhotoUrls] = useState(initial.photos?.map((photo) => photo.url).join("\n") ?? "");
   const error = (name: string) => state.errors?.[name]?.[0];
-  const facilityFields = [["hasToilet", "トイレ"], ["hasWaterFountain", "水飲み場"], ["hasVendingMachine", "自販機"], ["hasLocker", "ロッカー"], ["hasShower", "シャワー"], ["hasSentoNearby", "銭湯・サウナ近く"], ["hasParking", "駐車場"], ["hasConvenienceStore", "コンビニ"]] as const;
+  const facilityFields = [["hasToilet", "トイレ"], ["hasWaterFountain", "水飲み場"], ["hasVendingMachine", "自販機"], ["hasLocker", "ロッカー"], ["hasShower", "ランステ"], ["hasSentoNearby", "銭湯・サウナ近く"], ["hasParking", "駐車場"], ["hasConvenienceStore", "コンビニ"]] as const;
   return (
     <form action={action} className="space-y-10">
       {initial.id && <input type="hidden" name="id" value={initial.id} />}

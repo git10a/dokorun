@@ -47,7 +47,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
       { "@type": "LocationFeatureSpecification", name: "コース距離", value: `${(spot.distanceM / 1000).toFixed(1)}km` },
       { "@type": "LocationFeatureSpecification", name: "トイレ", value: spot.hasToilet },
       { "@type": "LocationFeatureSpecification", name: "ロッカー", value: spot.hasLocker },
-      { "@type": "LocationFeatureSpecification", name: "シャワー", value: spot.hasShower },
+      { "@type": "LocationFeatureSpecification", name: "ランステ", value: spot.hasShower},
     ],
   };
   return (
