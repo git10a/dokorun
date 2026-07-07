@@ -127,7 +127,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 | done | Stravaセグメント Kiba Park 3.5K - 1 lap(22211354) 3466m |
 | 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 | done | Stravaセグメント 猿江恩賜公園(8702273) 1025m |
 | 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 | review | 550mトラック状コースはOSM未収録。生成791mは別経路 |
-| 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | review | 生成が2.9〜4.4kmと過大。園内1.1km周回の経路特定要 |
+| 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | done | Stravaセグメント 夢の島緑道公園(20983143) 1163m |
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 | done | BRouter生成 2979m |
 | 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | BRouter生成 1006m |
 | 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 | done | BRouter生成 4512m(目視で内陸往復を検出→隅田川沿いに修正) |
