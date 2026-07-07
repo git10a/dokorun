@@ -176,7 +176,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 88 | sunport-takamatsu-setoshirube | サンポート高松・せとしるべ | 香川県高松市 | 4000 |  |  |
 | 89 | shiroyama-park-horinouchi | 城山公園(堀之内)〜松山城周回 | 愛媛県松山市 | 5600 | done | BRouter生成 5688m |
 | 90 | saga-sunrise-park | SAGAサンライズパーク | 佐賀県佐賀市 | 1530 | done | Stravaセグメント SAGAサンライズパーク いちごさんコース(34688997) |
-| 91 | oita-sports-park-happy-road | 大分スポーツ公園 ハッピーロード | 大分県大分市 | 5000 |  |  |
+| 91 | oita-sports-park-happy-road | 大分スポーツ公園 ハッピーロード | 大分県大分市 | 5000 | done | BRouter生成 5237m |
 | 92 | kotsuki-river-shinyashiki-takamibashi | 甲突川河畔(新屋敷〜高見橋) | 鹿児島県鹿児島市 | 3100 |  |  |
 | 93 | toyohira-river-kikusui-kanjokita | 豊平川河川敷(菊水〜環状北大橋) | 北海道札幌市白石区 | 4200 |  |  |
 | 94 | nakajima-park | 中島公園 | 北海道札幌市中央区 | 1000 | done | Stravaセグメント 中島コース(21936660) |
