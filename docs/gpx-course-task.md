@@ -62,6 +62,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 ```
 
 - 出力の `previousDistanceM` と `distanceM` を見比べて妥当性を最終確認
+- 既存コース行の `courseType`(track等のキュレーション済み値)は上書きされない(gpx:applyが保持する)
 - 代表点(スポットのlat/lng)もGPXのスタート地点で上書きされる。既存の代表点(駅近くの入口など)を維持したい場合は `--keep-latlng` を付ける
 - GPXファイルは `data/gpx/<slug>.gpx` に**必ず残す**(原本保全。将来のGPXダウンロード機能の素材になる)
 

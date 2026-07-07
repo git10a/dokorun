@@ -43,7 +43,11 @@ npm run db:push   # DrizzleスキーマをDBへ反映
 npm run db:seed   # タグ16件・スポット8件を投入
 npm run db:import -- data/spots.json [--dry-run]  # スポットの一括インポート
 npm run validate:spots -- data/spots.json         # 調査データの品質検証
+npm run gpx:check -- data/gpx/kokyo.gpx           # GPXを登録せずに解析結果を表示
+npm run gpx:apply -- kokyo data/gpx/kokyo.gpx     # GPXをスポットの代表コースとして登録
 ```
+
+代表コースのGPX整備は [docs/gpx-course-task.md](docs/gpx-course-task.md) の手順・進捗表を参照してください。GPX原本は `data/gpx/<slug>.gpx` に保存します。
 
 ## スポットの一括インポート
 
