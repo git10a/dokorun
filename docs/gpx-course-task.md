@@ -134,8 +134,8 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 | done | BRouter生成 1789m |
 | 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 | done | BRouter生成 3037m |
 | 48 | shinjuku-central-park | 新宿中央公園 | 東京都新宿区 | 1100 | done | BRouter生成 1147m |
-| 49 | hanegi-park | 羽根木公園 | 東京都世田谷区 | 630 |  |  |
-| 50 | heiwa-no-mori-nakano | 平和の森公園 | 東京都中野区 | 440 |  |  |
+| 49 | hanegi-park | 羽根木公園 | 東京都世田谷区 | 630 | review | わくわく園路630mはOSM未収録。生成852mは別経路 |
+| 50 | heiwa-no-mori-nakano | 平和の森公園 | 東京都中野区 | 440 | skip | 440m周回はOSM未収録で生成不能 |
 | 51 | tetsugakudo-park | 哲学堂公園 | 東京都中野区 | 1100 | done | BRouter生成 1168m |
 | 52 | ueno-onshi-park | 上野恩賜公園 | 東京都台東区 | 1800 | done | BRouter生成 1925m |
 | 53 | oshima-komatsugawa-park | 大島小松川公園 | 東京都江東区 | 800 |  |  |
