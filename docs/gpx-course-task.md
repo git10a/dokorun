@@ -109,7 +109,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 21 | kibagata-park | 木場潟公園 | 石川県小松市 | 6400 | done | BRouter生成 5964m |
 | 22 | lake-yamanaka-loop | 山中湖 | 山梨県山中湖村 | 13600 | done | BRouter生成 13627m |
 | 23 | shinshu-sky-park | 信州スカイパーク | 長野県松本市 | 10000 | done | BRouter生成 10326m |
-| 24 | sanaruko-park | 佐鳴湖公園 | 静岡県浜松市中央区 | 5941 |  |  |
+| 24 | sanaruko-park | 佐鳴湖公園 | 静岡県浜松市中央区 | 5941 | done | BRouter生成 5534m |
 | 25 | odaka-ryokuchi | 大高緑地 | 愛知県名古屋市緑区 | 2500 |  |  |
 | 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 |  |  |
 | 27 | takaragaike-park | 宝が池公園 | 京都府京都市左京区 | 1500 |  |  |
