@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FacilityIcons } from "./facility-icons";
-import { CourseShape } from "./course-shape";
+import { StaticCourseMap } from "./static-course-map";
 import { SpotImage } from "./spot-image";
 import { SpotVisual } from "./spot-visual";
 import { courseTypeLabels, surfaceLabels, type SpotSummary } from "@/lib/types";
@@ -11,7 +11,7 @@ export function SpotCard({ spot }: { spot: SpotSummary }) {
   return (
     <Link href={`/spots/${spot.slug}`} className="group flex overflow-hidden rounded-xl border border-line bg-paper transition-all hover:-translate-y-0.5 hover:shadow-md">
       <div className="w-32 shrink-0 self-stretch overflow-hidden bg-brand/25 sm:w-56">
-        {spot.photoUrl ? <SpotImage src={spot.photoUrl} alt={`${spot.name}の写真`} width={640} height={360} sizes="(min-width: 640px) 224px, 128px" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" /> : spot.shapeCoords.length ? <CourseShape coords={spot.shapeCoords} name={spot.name} className="h-full w-full" /> : <SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" />}
+        {spot.photoUrl ? <SpotImage src={spot.photoUrl} alt={`${spot.name}の写真`} width={640} height={360} sizes="(min-width: 640px) 224px, 128px" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" /> : spot.shapeCoords.length ? <StaticCourseMap coords={spot.shapeCoords} lat={spot.lat} lng={spot.lng} name={spot.name} className="h-full w-full" /> :<SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" />}
       </div>
       <div className="min-w-0 flex-1 space-y-1.5 p-3 sm:space-y-2 sm:p-4">
         <p className="text-xs text-sub">{spot.prefecture} {spot.city}</p>
