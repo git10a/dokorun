@@ -163,7 +163,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 75 | hanashima-park | 花島公園 | 千葉県千葉市花見川区 | 750 |  |  |
 | 76 | 21st-century-forest-park | 21世紀の森と広場 | 千葉県松戸市 | 2600 | done | BRouter生成 2403m |
 | 77 | makuhari-inage-seaside | 幕張稲毛シーサイドランニングコース | 千葉県千葉市美浜区 | 13000 |  |  |
-| 78 | aoba-no-mori-park | 青葉の森公園 | 千葉県千葉市中央区 | 2000 |  |  |
+| 78 | aoba-no-mori-park | 青葉の森公園 | 千葉県千葉市中央区 | 2000 | done | BRouter生成 1736m |
 | 79 | gappo-park | 合浦公園 | 青森県青森市 | 1600 |  |  |
 | 80 | tochigi-prefectural-sports-park | 栃木県総合運動公園 | 栃木県宇都宮市 | 3000 |  |  |
 | 81 | fukui-undokoen | 福井運動公園 | 福井県福井市 | 2000 |  |  |
