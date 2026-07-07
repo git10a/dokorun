@@ -38,6 +38,18 @@ describe("nearby destinations", () => {
     expect(getNearbyDestinations("hattori-ryokuchi")).toHaveLength(2);
   });
 
+  it("loads the tenth through twelfth batches", () => {
+    expect(getNearbyDestinations("shinjuku-central-park")).toHaveLength(2);
+    expect(getNearbyDestinations("kokyo")).toHaveLength(2);
+    expect(getNearbyDestinations("oohori")).toHaveLength(3);
+    expect(getNearbyDestinations("osakajo")).toHaveLength(1);
+    expect(getNearbyDestinations("meijo")).toHaveLength(3);
+  });
+
+  it("drops the far-flung Hita spa mis-linked to the Oita sports park", () => {
+    expect(getNearbyDestinations("oita-sports-park-happy-road")).toEqual([]);
+  });
+
   it("preserves unknown distances instead of inventing them", () => {
     const [place] = getNearbyDestinations("moerenuma-park");
 
