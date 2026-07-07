@@ -187,7 +187,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 99 | shonai-ryokuchi | 庄内緑地 | 愛知県名古屋市西区 | 2300 | done | Stravaセグメント Shonai 2.3km(12149281) |
 | 100 | yamazaki-river-kawanabashi-ishikawabashi | 山崎川四季の道(可和名橋〜石川橋) | 愛知県名古屋市瑞穂区 | 2800 |  |  |
 | 101 | kamogawa-sanjo-demachiyanagi | 鴨川河川敷(三条大橋〜出町柳) | 京都府京都市中京区 | 4600 | done | BRouter生成 4881m |
-| 102 | kyoto-gyoen | 京都御苑 | 京都府京都市上京区 | 4000 |  |  |
+| 102 | kyoto-gyoen | 京都御苑 | 京都府京都市上京区 | 4000 | done | BRouter生成 4075m |
 | 103 | yodogawa-nishinakajima | 淀川河川公園西中島地区(下流5km折返し) | 大阪府大阪市淀川区 | 10000 |  |  |
 | 104 | hattori-ryokuchi | 服部緑地 | 大阪府豊中市 | 5000 |  |  |
 | 105 | minato-no-mori-park | みなとのもり公園 | 兵庫県神戸市中央区 | 460 | done | Stravaセグメント みなとのもり公園(16383640) |
