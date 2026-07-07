@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const description = `1周${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${spot.description.slice(0, 90)}`;
   const title = `${spot.name}のランニングコース - ドコラン`;
-  return { title: { absolute: title }, description, openGraph: { title, description, images: spot.photos[0]?.url ? [imageTransformUrl(spot.photos[0].url, 1200)] : ["/opengraph-image"] } };
+  return { title: { absolute: title }, description, openGraph: { title, description, images: spot.photos[0]?.url ? [imageTransformUrl(spot.photos[0].url, 1200)] : ["/og.png"] } };
 }
 
 export default async function SpotDetailPage({ params }: { params: Params }) {
