@@ -165,7 +165,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 77 | makuhari-inage-seaside | 幕張稲毛シーサイドランニングコース | 千葉県千葉市美浜区 | 13000 |  |  |
 | 78 | aoba-no-mori-park | 青葉の森公園 | 千葉県千葉市中央区 | 2000 | done | BRouter生成 1736m |
 | 79 | gappo-park | 合浦公園 | 青森県青森市 | 1600 |  |  |
-| 80 | tochigi-prefectural-sports-park | 栃木県総合運動公園 | 栃木県宇都宮市 | 3000 |  |  |
+| 80 | tochigi-prefectural-sports-park | 栃木県総合運動公園 | 栃木県宇都宮市 | 3000 | done | BRouter生成 2687m |
 | 81 | fukui-undokoen | 福井運動公園 | 福井県福井市 | 2000 |  |  |
 | 82 | gifu-memorial-center | 岐阜メモリアルセンター | 岐阜県岐阜市 | 1500 | done | Stravaセグメント メモリアル右回り1.5km(40576370) |
 | 83 | sports-garden-suzuka | 三重交通G スポーツの杜 鈴鹿 | 三重県鈴鹿市 | 3000 |  |  |
