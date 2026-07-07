@@ -35,6 +35,8 @@ async function addRelations<T extends {
   hasParking: boolean;
   hasConvenienceStore: boolean;
   distanceM: number;
+  elevationGainM: number | null;
+  signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
 }>(rows: T[]): Promise<(SpotSummary & T)[]> {
@@ -69,6 +71,8 @@ const summarySelection = {
   hasParking: spots.hasParking,
   hasConvenienceStore: spots.hasConvenienceStore,
   distanceM: courses.distanceM,
+  elevationGainM: courses.elevationGainM,
+  signalsCount: courses.signalsCount,
   courseType: courses.courseType,
   surface: courses.surface,
 };

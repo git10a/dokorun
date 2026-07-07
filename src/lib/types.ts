@@ -20,6 +20,8 @@ export type SpotSummary = {
   hasParking: boolean;
   hasConvenienceStore: boolean;
   distanceM: number;
+  elevationGainM: number | null;
+  signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
   photoUrl: string | null;
