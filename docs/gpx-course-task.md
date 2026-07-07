@@ -84,6 +84,8 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 
 ## 進捗表
 
+> **2026-07-07決定:** review 24件 + skip 3件(計27件)は本番DBで `is_published = false` にして**非掲載化済み**(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
 | 1 | kokyo | 皇居 | 東京都千代田区 | 5011 | done | Strava実走GPX(data/gpx/kokyo.gpx) |

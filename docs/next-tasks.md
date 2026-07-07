@@ -77,10 +77,15 @@ AI調査で生成したデータなので機械検証を入れる。`scripts/val
 - Google Search Console: https://dokorun.com/ をURLプレフィックスで登録・所有権確認済み(layout.tsxのmetaタグ + public/googlebc7bc599f52dfc4c.html)。sitemap.xml送信済み(送信直後は「取得できませんでした」表示。数日後にステータス確認)
 - Cloudflare Web Analytics: **計測稼働中(2026-07-07)**。ダッシュボードでdokorun.comのサイトをAutomatic setup(RUM: Enable)で作成済みで、エッジがJSスニペットを自動注入している。**wrangler.jsonc の `CF_BEACON_TOKEN` は空のままにすること**(トークンを設定するとlayout.tsxの手動ビーコンと自動注入で二重計測になる。手動方式に切り替えるならダッシュボードで「Enable with JS Snippet installation」に変更してから)
 
+- GPX review/skip 27件: **本番で非掲載化済み(2026-07-07)**。`is_published = false`(NeonのSQL Editorで実行)。掲載数は118→91件。詳細と復帰手順は docs/gpx-course-task.md の進捗表冒頭の注記を参照
+
 残り(人間の作業):
 
 1. **外形監視**: UptimeRobot等で https://dokorun.com/ と /spots/kokyo (DB経由)を5分間隔で監視
-2. GPX進捗表の review 24件 + skip 3件を gpx.studio で手直し(docs/gpx-course-task.md)
+
+任意(急ぎではない):
+
+- 非掲載27件の復帰: Stravaセグメント再探索(APIトークン再発行が必要) or gpx.studio手動トレースでコースを整備できたものから `is_published = true` に戻す
 
 ## P6: フェーズ2(反応を見て着手判断)
 
