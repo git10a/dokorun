@@ -120,7 +120,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | Stravaセグメント 総合グランド外周(7220843) 2461m |
 | 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 | review | 円周経由点が園内で経路化できず(0〜24m)。園路のOSM収録が薄い |
 | 34 | haruno-sogo-undokoen | 春野総合運動公園 | 高知県高知市 | 3200 | skip | クロカンコースはOSM未収録で生成不能 |
-| 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | BRouter生成 4150m |
+| 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | Stravaセグメント 下江津湖 circle course(25347757) 3882m |
 | 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 | review | 生成1.4〜1.6kmで公式2kmに届かず。園内ルートの手動指定要 |
 | 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 | skip | 松林クロカンコースはOSM未収録で生成不能 |
 | 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 | done | BRouter生成 2594m |
