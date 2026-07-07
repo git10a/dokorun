@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: { default: "ドコラン - 日本全国のランニングスポット", template: "%s | ドコラン" },
   description: "「今日、どこ走る？」に答える、日本全国のランニングスポット検索サイト。距離、信号、路面、設備から走りたい場所を探せます。",
   openGraph: { siteName: "ドコラン" },
+  verification: { google: "J_vRwsGfizZ2o3YgX7tYByh-hvw8jthPcr67XKhLHVc" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
