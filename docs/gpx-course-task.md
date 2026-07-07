@@ -140,12 +140,12 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 52 | ueno-onshi-park | 上野恩賜公園 | 東京都台東区 | 1800 | done | BRouter生成 1925m |
 | 53 | oshima-komatsugawa-park | 大島小松川公園 | 東京都江東区 | 800 | done | Stravaセグメント 大島小松川公園1周(10010862) |
 | 54 | koganei-park | 小金井公園 | 東京都小金井市 | 3200 | done | BRouter生成 2825m |
-| 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 |  |  |
+| 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 | review | 生成722m(期待1500m)。池周回の園路が分断 |
 | 56 | musashinomori-park | 武蔵野の森公園 | 東京都府中市 | 1100 | done | Stravaセグメント むさもり北1km(18005785) |
 | 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | BRouter生成 1268m |
 | 58 | showa-kinen-park | 国営昭和記念公園 | 東京都立川市 | 5000 | done | Stravaセグメント Showa Kinen Park(19683557) |
 | 59 | rinko-park | 臨港パーク | 神奈川県横浜市西区 | 980 | done | BRouter生成 964m |
-| 60 | nogeyama-park | 野毛山公園 | 神奈川県横浜市西区 | 740 |  |  |
+| 60 | nogeyama-park | 野毛山公園 | 神奈川県横浜市西区 | 740 | review | 生成1325m(期待740m)。動物園周りで大回り |
 | 61 | negishi-forest-park | 根岸森林公園 | 神奈川県横浜市中区 | 1300 | done | Stravaセグメント Negishi Part 1 Lap Anti-Clockwise(8626212) |
 | 62 | shin-yokohama-park | 新横浜公園 | 神奈川県横浜市港北区 | 1750 | done | Stravaセグメント Shinyokohama Park Loop(7181571) |
 | 63 | mitsuike-park | 三ツ池公園 | 神奈川県横浜市鶴見区 | 1400 | done | Stravaセグメント 三ツ池公園一周(6747921) |
@@ -153,32 +153,32 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 65 | kodomo-no-kuni | こどもの国 | 神奈川県横浜市青葉区 | 4100 | done | Stravaセグメント 子供の国一周(21640795) |
 | 66 | tsuzuki-central-park | 都筑中央公園 | 神奈川県横浜市都筑区 | 1700 | done | BRouter生成 1941m |
 | 67 | tamagawa-marukobashi-furuichiba | 多摩川河川敷 丸子橋〜古市場 | 神奈川県川崎市中原区 | 7000 | done | BRouter生成 7379m |
-| 68 | asamizo-park-cross-country | 相模原麻溝公園クロカンコース | 神奈川県相模原市南区 | 1790 |  |  |
-| 69 | ageo-undou-park | 上尾運動公園 | 埼玉県上尾市 | 800 |  |  |
+| 68 | asamizo-park-cross-country | 相模原麻溝公園クロカンコース | 神奈川県相模原市南区 | 1790 | review | クロカンコースはOSM未収録。隣接の沈殿池一周セグメントは別コースのため不採用 |
+| 69 | ageo-undou-park | 上尾運動公園 | 埼玉県上尾市 | 800 | review | 生成1501m(期待800m)。園内周回の特定要 |
 | 70 | saitama-stadium-park | 埼玉スタジアム2002公園 | 埼玉県さいたま市緑区 | 1800 | done | Stravaセグメント 埼玉スタジアムジョギングコースB(1844m)(16335946) |
-| 71 | soka-park | そうか公園 | 埼玉県草加市 | 1470 |  |  |
+| 71 | soka-park | そうか公園 | 埼玉県草加市 | 1470 | review | 生成1719m(期待1470m、+17%惜しい)。経由点微調整で通りそう |
 | 72 | sainomori-iruma-park | 彩の森入間公園 | 埼玉県入間市 | 1500 | done | Stravaセグメント 彩の森大回り1周(10613518) |
 | 73 | misato-park | みさと公園 | 埼玉県三郷市 | 1550 | done | BRouter生成 1640m |
 | 74 | chiba-park | 千葉公園 | 千葉県千葉市中央区 | 600 | done | Stravaセグメント 千葉公園　綿打池ぐるぐる(27349166) |
-| 75 | hanashima-park | 花島公園 | 千葉県千葉市花見川区 | 750 |  |  |
+| 75 | hanashima-park | 花島公園 | 千葉県千葉市花見川区 | 750 | review | 円周経由点が経路化できず(35m) |
 | 76 | 21st-century-forest-park | 21世紀の森と広場 | 千葉県松戸市 | 2600 | done | BRouter生成 2403m |
-| 77 | makuhari-inage-seaside | 幕張稲毛シーサイドランニングコース | 千葉県千葉市美浜区 | 13000 |  |  |
+| 77 | makuhari-inage-seaside | 幕張稲毛シーサイドランニングコース | 千葉県千葉市美浜区 | 13000 | review | 生成7.9km(期待13km)。海浜3公園をつなぐ経路の手動指定要 |
 | 78 | aoba-no-mori-park | 青葉の森公園 | 千葉県千葉市中央区 | 2000 | done | BRouter生成 1736m |
-| 79 | gappo-park | 合浦公園 | 青森県青森市 | 1600 |  |  |
+| 79 | gappo-park | 合浦公園 | 青森県青森市 | 1600 | review | 生成2315m(期待1600m) |
 | 80 | tochigi-prefectural-sports-park | 栃木県総合運動公園 | 栃木県宇都宮市 | 3000 | done | BRouter生成 2687m |
-| 81 | fukui-undokoen | 福井運動公園 | 福井県福井市 | 2000 |  |  |
+| 81 | fukui-undokoen | 福井運動公園 | 福井県福井市 | 2000 | review | 円周経由点が経路化できず(40m) |
 | 82 | gifu-memorial-center | 岐阜メモリアルセンター | 岐阜県岐阜市 | 1500 | done | Stravaセグメント メモリアル右回り1.5km(40576370) |
 | 83 | sports-garden-suzuka | 三重交通G スポーツの杜 鈴鹿 | 三重県鈴鹿市 | 3000 | done | BRouter生成 2912m |
 | 84 | heijo-palace-park | 平城宮跡歴史公園 | 奈良県奈良市 | 3800 | done | BRouter生成 3809m |
 | 85 | shinji-lake-north-shore | 宍道湖岸(県立美術館〜松江しんじ湖温泉駅) | 島根県松江市 | 2000 | done | Stravaセグメント 宍道湖畔2km周回(19587711) |
 | 86 | hiroshima-castle-loop | 広島城外周 | 広島県広島市中区 | 1500 | done | Stravaセグメント Hiroshima Castle loop clockwise(10535360) |
 | 87 | tokushima-central-park | 徳島中央公園 | 徳島県徳島市 | 1700 | done | Stravaセグメント 徳島城公園周回TT（右回り）(19124541) |
-| 88 | sunport-takamatsu-setoshirube | サンポート高松・せとしるべ | 香川県高松市 | 4000 |  |  |
+| 88 | sunport-takamatsu-setoshirube | サンポート高松・せとしるべ | 香川県高松市 | 4000 | review | セグメントは1.66kmで公式4kmと不一致。海沿い往復の手動指定要 |
 | 89 | shiroyama-park-horinouchi | 城山公園(堀之内)〜松山城周回 | 愛媛県松山市 | 5600 | done | BRouter生成 5688m |
 | 90 | saga-sunrise-park | SAGAサンライズパーク | 佐賀県佐賀市 | 1530 | done | Stravaセグメント SAGAサンライズパーク いちごさんコース(34688997) |
 | 91 | oita-sports-park-happy-road | 大分スポーツ公園 ハッピーロード | 大分県大分市 | 5000 | done | BRouter生成 5237m |
-| 92 | kotsuki-river-shinyashiki-takamibashi | 甲突川河畔(新屋敷〜高見橋) | 鹿児島県鹿児島市 | 3100 |  |  |
-| 93 | toyohira-river-kikusui-kanjokita | 豊平川河川敷(菊水〜環状北大橋) | 北海道札幌市白石区 | 4200 |  |  |
+| 92 | kotsuki-river-shinyashiki-takamibashi | 甲突川河畔(新屋敷〜高見橋) | 鹿児島県鹿児島市 | 3100 | review | 生成4.6km(期待3.1km)。橋の座標調整要 |
+| 93 | toyohira-river-kikusui-kanjokita | 豊平川河川敷(菊水〜環状北大橋) | 北海道札幌市白石区 | 4200 | review | 生成9.1km(期待4.2km)。橋の座標調整要 |
 | 94 | nakajima-park | 中島公園 | 北海道札幌市中央区 | 1000 | done | Stravaセグメント 中島コース(21936660) |
 | 95 | moerenuma-park | モエレ沼公園 | 北海道札幌市東区 | 3700 | done | Stravaセグメント モレヌマループコース(27480588) |
 | 96 | hirosegawa-yodobashi-ushigoe | 広瀬川河川敷(澱橋〜牛越橋) | 宮城県仙台市青葉区 | 2000 | done | Stravaセグメント Ushigoe Bridge Sprint(12901962) |
@@ -192,15 +192,15 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 104 | hattori-ryokuchi | 服部緑地 | 大阪府豊中市 | 5000 | done | BRouter生成 4847m |
 | 105 | minato-no-mori-park | みなとのもり公園 | 兵庫県神戸市中央区 | 460 | done | Stravaセグメント みなとのもり公園(16383640) |
 | 106 | hat-kobe-nagisa-park | HAT神戸なぎさ公園 | 兵庫県神戸市中央区 | 2500 | done | Stravaセグメント チャレンジラン 1周（2022秋）(33174666) |
-| 107 | otagawa-hosuiro-mitaki-asahibashi | 太田川放水路河川敷(三滝駅〜旭橋) | 広島県広島市西区 | 7200 |  |  |
+| 107 | otagawa-hosuiro-mitaki-asahibashi | 太田川放水路河川敷(三滝駅〜旭橋) | 広島県広島市西区 | 7200 | review | 生成11.6km(期待7.2km)。橋の座標調整要 |
 | 108 | seaside-momochi | シーサイドももち海浜公園 | 福岡県福岡市早良区 | 4000 | done | Stravaセグメント シーサイドももち-愛宕浜海浜公園(39727471) |
-| 109 | island-city-central-park | アイランドシティ中央公園 | 福岡県福岡市東区 | 700 |  |  |
+| 109 | island-city-central-park | アイランドシティ中央公園 | 福岡県福岡市東区 | 700 | review | 生成1121m(期待700m) |
 | 110 | katsuyama-park-murasaki-river | 勝山公園・紫川河畔 | 福岡県北九州市小倉北区 | 1900 | done | BRouter生成 2064m |
-| 111 | senshu-park | 千秋公園 | 秋田県秋田市 | 1000 |  |  |
-| 112 | kajo-park | 霞城公園 | 山形県山形市 | 1800 |  |  |
+| 111 | senshu-park | 千秋公園 | 秋田県秋田市 | 1000 | review | 生成1626m(期待1000m)。お堀周回の特定要 |
+| 112 | kajo-park | 霞城公園 | 山形県山形市 | 1800 | review | 生成2326m(期待1800m) |
 | 113 | kaiseizan-park | 開成山公園 | 福島県郡山市 | 2000 | done | Stravaセグメント あおぞらマラソンコース　2km.ver(26644709) |
 | 114 | hakusan-park-yasuragitei | 白山公園・信濃川やすらぎ堤 | 新潟県新潟市中央区 | 4000 | done | Stravaセグメント 5000(30329780) |
 | 115 | kanazawa-castle-loop | 金沢城公園外周 | 石川県金沢市 | 2100 | done | Stravaセグメント 金沢城(7363932) |
 | 116 | sunpu-castle-park | 駿府城公園 | 静岡県静岡市葵区 | 1700 | done | Stravaセグメント Shizuoka Sunpu Castle southeast split(28451782) |
 | 117 | wakayama-castle-park | 和歌山城公園 | 和歌山県和歌山市 | 2000 | done | Stravaセグメント 和歌山城 時計回り・六番町起点(16251506) |
-| 118 | nagasaki-mizube-no-mori | 長崎水辺の森公園 | 長崎県長崎市 | 700 |  |  |
+| 118 | nagasaki-mizube-no-mori | 長崎水辺の森公園 | 長崎県長崎市 | 700 | review | 生成929m(期待700m) |
