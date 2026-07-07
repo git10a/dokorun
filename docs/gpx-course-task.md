@@ -123,7 +123,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | BRouter生成 4150m |
 | 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 |  |  |
 | 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 |  |  |
-| 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 |  |  |
+| 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 | done | BRouter生成 2594m |
 | 39 | kiba-park | 木場公園 | 東京都江東区 | 3500 |  |  |
 | 40 | sarue-onshi-park | 猿江恩賜公園 | 東京都江東区 | 1090 |  |  |
 | 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 |  |  |
