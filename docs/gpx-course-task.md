@@ -96,7 +96,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 8 | meijo | 名城公園 | 愛知県名古屋市北区 | 1300 | done | BRouter生成 1121m |
 | 9 | makomanai-park | 真駒内公園 | 北海道札幌市南区 | 3000 | done | BRouter生成 3098m |
 | 10 | iwate-undou-park | 岩手県営運動公園 | 岩手県盛岡市 | 1500 | done | BRouter生成 1642m |
-| 11 | nanakita-park | 七北田公園 | 宮城県仙台市泉区 | 3200 |  |  |
+| 11 | nanakita-park | 七北田公園 | 宮城県仙台市泉区 | 3200 | done | BRouter生成 3252m |
 | 12 | akita-chuo-park | 秋田県立中央公園 | 秋田県秋田市 | 4000 |  |  |
 | 13 | yamagata-sogo-undokoen | 山形県総合運動公園 | 山形県天童市 | 2000 |  |  |
 | 14 | azuma-sports-park | あづま総合運動公園 | 福島県福島市 | 3000 |  |  |
