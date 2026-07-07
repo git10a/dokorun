@@ -131,7 +131,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 | done | BRouter生成 2979m |
 | 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | Stravaセグメント 大井埠頭海浜公園ランニングコース (1km)(7924565) 1013m |
 | 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 | done | Stravaセグメント SHIOIRI park jogging trail (11505360) 4477m |
-| 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 | done | BRouter生成 1789m |
+| 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 | done | Stravaセグメント 舎人公園ランニングコース1周2.0km(35458388) 2026m |
 | 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 | done | BRouter生成 2934m(目視で団地周回を検出→公園中心に修正) |
 | 48 | shinjuku-central-park | 新宿中央公園 | 東京都新宿区 | 1100 | done | BRouter生成 1147m |
 | 49 | hanegi-park | 羽根木公園 | 東京都世田谷区 | 630 | review | わくわく園路630mはOSM未収録。生成852mは別経路 |
