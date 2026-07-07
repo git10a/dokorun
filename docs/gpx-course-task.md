@@ -117,7 +117,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 29 | akashi-park | 明石公園 | 兵庫県明石市 | 2000 | done | Stravaセグメント akashi-park(14330603) 2137m |
 | 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 | review | 生成が2.6〜5.2kmと不安定。園内周回2kmの経路特定要 |
 | 31 | koyamaike-park | 湖山池公園 | 鳥取県鳥取市 | 18000 | done | BRouter生成 18270m |
-| 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | BRouter生成 2483m |
+| 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | Stravaセグメント 総合グランド外周(7220843) 2461m |
 | 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 | review | 円周経由点が園内で経路化できず(0〜24m)。園路のOSM収録が薄い |
 | 34 | haruno-sogo-undokoen | 春野総合運動公園 | 高知県高知市 | 3200 | skip | クロカンコースはOSM未収録で生成不能 |
 | 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | BRouter生成 4150m |
