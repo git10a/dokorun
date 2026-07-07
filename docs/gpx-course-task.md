@@ -84,7 +84,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 
 ## 進捗表
 
-> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化 → 現在非掲載26件・掲載92件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化。同日、東京都内の新規15件を追加投入し14件掲載・#122 toyosu-gururi-parkをreview非掲載化 → 現在非掲載27件・掲載106件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
 
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
@@ -206,3 +206,18 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 116 | sunpu-castle-park | 駿府城公園 | 静岡県静岡市葵区 | 1700 | done | Stravaセグメント Shizuoka Sunpu Castle southeast split(28451782) |
 | 117 | wakayama-castle-park | 和歌山城公園 | 和歌山県和歌山市 | 2000 | done | Stravaセグメント 和歌山城 時計回り・六番町起点(16251506) |
 | 118 | nagasaki-mizube-no-mori | 長崎水辺の森公園 | 長崎県長崎市 | 700 | review | 生成929m(期待700m) |
+| 119 | heiwa-no-mori-omori-hamabe | 平和の森公園・大森ふるさとの浜辺公園 | 東京都大田区 | 3198 | done | Stravaセグメント heiwa-no-mori(8784522)+furusato-no-hamabe(8784518)を連結 3198m |
+| 120 | tamagawa-ryokuchi-marathon | 多摩川緑地マラソンコース | 東京都大田区 | 2460 | done | Stravaセグメント 多摩川緑地周回(24484492) 2460m |
+| 121 | odaiba-kaihin-park | お台場海浜公園 | 東京都港区 | 3154 | done | Stravaセグメント Daiba Beach North Segment(11035687)を往復化 3154m |
+| 122 | toyosu-gururi-park | 豊洲ぐるり公園 | 東京都江東区 | 4621 | review | 一周セグメントなし。BRouter生成は水際園路(OSM未収録)を通らず幹線道路寄り。2026-07-08非掲載化。実走GPXで整備後に復帰 |
+| 123 | sumidagawa-terrace-sumida | 隅田川テラス(言問橋〜白鬚橋) | 東京都墨田区 | 3406 | done | Stravaセグメント 白鬚橋〜言問橋(11518701)を言問橋起点に往復化 3406m |
+| 124 | kyu-nakagawa-riverside | 旧中川沿い | 東京都墨田区 | 5270 | done | Stravaセグメント 旧中川往復(5k)(23562569) 5270m |
+| 125 | mizumoto-park | 水元公園 | 東京都葛飾区 | 1479 | done | Stravaセグメント 水元公園周回コース1周_左回り(39669364) 1479m |
+| 126 | nakagawa-joryu-katsushika | 中川上流コース | 東京都葛飾区 | 2814 | done | Stravaセグメント 中川周回コース(右回り)(29742227) 2814m |
+| 127 | edogawa-kasenjiki-shibamata | 江戸川河川敷(柴又) | 東京都葛飾区 | 5023 | done | Stravaセグメント 柴又公園花壇parkrun(40663562) 5023m |
+| 128 | oyokogawa-shinsui-park | 大横川親水公園 | 東京都墨田区 | 1893 | done | Stravaセグメント 大横川親水公園 横川橋→江東橋(10957017)を往復化 1893m |
+| 129 | rinshi-no-mori-park | 林試の森公園 | 東京都目黒区 | 2225 | done | Stravaセグメント 林試の森公園外周(13068985) 2225m |
+| 130 | johoku-chuo-park | 城北中央公園 | 東京都板橋区 | 1482 | done | Stravaセグメント 城北中央公園 Jogging course(8430072) 1482m |
+| 131 | ukima-park | 浮間公園 | 東京都板橋区 | 1220 | done | Stravaセグメント 浮間公園(18041696) 1220m |
+| 132 | fuchu-tamagawa-kazenomichi | 府中多摩川かぜのみち | 東京都府中市 | 8414 | done | Stravaセグメント 是政〜川原橋 1周(11134685) 8414m。是政橋〜多摩川原橋の両岸周回 |
+| 133 | nogawa-park | 野川公園 | 東京都調布市 | 2655 | done | Stravaセグメント 野川公園ランニング(26948422) 2655m |
