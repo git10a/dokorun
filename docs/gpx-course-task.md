@@ -111,11 +111,11 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 23 | shinshu-sky-park | 信州スカイパーク | 長野県松本市 | 10000 | done | BRouter生成 10326m |
 | 24 | sanaruko-park | 佐鳴湖公園 | 静岡県浜松市中央区 | 5941 | done | BRouter生成 5534m |
 | 25 | odaka-ryokuchi | 大高緑地 | 愛知県名古屋市緑区 | 2500 | done | BRouter生成 2442m |
-| 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 |  |  |
+| 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 | done | BRouter生成 4410m(近江大橋〜大津港の湖岸ワンウェイ) |
 | 27 | takaragaike-park | 宝が池公園 | 京都府京都市左京区 | 1500 | done | BRouter生成 1535m |
-| 28 | nagai-park | 長居公園 | 大阪府大阪市東住吉区 | 2800 |  |  |
+| 28 | nagai-park | 長居公園 | 大阪府大阪市東住吉区 | 2800 | review | 生成3.7kmで公式周回2.8kmと乖離。外周走路の経路特定要 |
 | 29 | akashi-park | 明石公園 | 兵庫県明石市 | 2000 | done | BRouter生成 2180m |
-| 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 |  |  |
+| 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 | review | 生成が2.6〜5.2kmと不安定。園内周回2kmの経路特定要 |
 | 31 | koyamaike-park | 湖山池公園 | 鳥取県鳥取市 | 18000 | done | BRouter生成 18270m |
 | 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | BRouter生成 2483m |
 | 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 |  |  |
