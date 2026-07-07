@@ -129,7 +129,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 41 | mizube-sports-garden | 水辺のスポーツガーデン | 東京都江戸川区 | 550 | review | 550mトラック状コースはOSM未収録。生成791mは別経路 |
 | 42 | yumenoshima-park | 夢の島公園 | 東京都江東区 | 1100 | done | Stravaセグメント 夢の島緑道公園(20983143) 1163m |
 | 43 | keihin-unga-ryokudo | 京浜運河緑道公園 | 東京都品川区 | 2900 | done | BRouter生成 2979m |
-| 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | BRouter生成 1006m |
+| 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | Stravaセグメント 大井埠頭海浜公園ランニングコース (1km)(7924565) 1013m |
 | 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 | done | BRouter生成 4512m(目視で内陸往復を検出→隅田川沿いに修正) |
 | 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 | done | BRouter生成 1789m |
 | 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 | done | BRouter生成 2934m(目視で団地周回を検出→公園中心に修正) |
