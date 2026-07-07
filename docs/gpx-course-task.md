@@ -132,7 +132,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 44 | oi-futo-chuo-kaihin-park | 大井ふ頭中央海浜公園 | 東京都品川区 | 1000 | done | BRouter生成 1006m |
 | 45 | shioiri-park | 汐入公園 | 東京都荒川区 | 4600 | done | BRouter生成 4586m |
 | 46 | toneri-park | 舎人公園 | 東京都足立区 | 1950 | done | BRouter生成 1789m |
-| 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 |  |  |
+| 47 | hikarigaoka-park | 光が丘公園 | 東京都練馬区 | 3100 | done | BRouter生成 3037m |
 | 48 | shinjuku-central-park | 新宿中央公園 | 東京都新宿区 | 1100 |  |  |
 | 49 | hanegi-park | 羽根木公園 | 東京都世田谷区 | 630 |  |  |
 | 50 | heiwa-no-mori-nakano | 平和の森公園 | 東京都中野区 | 440 |  |  |
