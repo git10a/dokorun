@@ -174,7 +174,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 86 | hiroshima-castle-loop | 広島城外周 | 広島県広島市中区 | 1500 | done | Stravaセグメント Hiroshima Castle loop clockwise(10535360) |
 | 87 | tokushima-central-park | 徳島中央公園 | 徳島県徳島市 | 1700 | done | Stravaセグメント 徳島城公園周回TT（右回り）(19124541) |
 | 88 | sunport-takamatsu-setoshirube | サンポート高松・せとしるべ | 香川県高松市 | 4000 |  |  |
-| 89 | shiroyama-park-horinouchi | 城山公園(堀之内)〜松山城周回 | 愛媛県松山市 | 5600 |  |  |
+| 89 | shiroyama-park-horinouchi | 城山公園(堀之内)〜松山城周回 | 愛媛県松山市 | 5600 | done | BRouter生成 5688m |
 | 90 | saga-sunrise-park | SAGAサンライズパーク | 佐賀県佐賀市 | 1530 | done | Stravaセグメント SAGAサンライズパーク いちごさんコース(34688997) |
 | 91 | oita-sports-park-happy-road | 大分スポーツ公園 ハッピーロード | 大分県大分市 | 5000 |  |  |
 | 92 | kotsuki-river-shinyashiki-takamibashi | 甲突川河畔(新屋敷〜高見橋) | 鹿児島県鹿児島市 | 3100 |  |  |
