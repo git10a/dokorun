@@ -84,7 +84,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 
 ## 進捗表
 
-> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化。同日、東京都内の新規15件を追加投入し14件掲載・#122 toyosu-gururi-parkをreview非掲載化 → 現在非掲載27件・掲載106件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+> **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化。同日、東京都内の新規15件を追加投入し14件掲載・#122 toyosu-gururi-parkをreview非掲載化→同日ユーザー作成Stravaルートで整備し復帰 → 現在非掲載26件・掲載107件)(雑なコースや未検証データを載せないため)。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
 
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
@@ -209,7 +209,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 119 | heiwa-no-mori-omori-hamabe | 平和の森公園・大森ふるさとの浜辺公園 | 東京都大田区 | 3198 | done | Stravaセグメント heiwa-no-mori(8784522)+furusato-no-hamabe(8784518)を連結 3198m |
 | 120 | tamagawa-ryokuchi-marathon | 多摩川緑地マラソンコース | 東京都大田区 | 2460 | done | Stravaセグメント 多摩川緑地周回(24484492) 2460m |
 | 121 | odaiba-kaihin-park | お台場海浜公園 | 東京都港区 | 3154 | done | Stravaセグメント Daiba Beach North Segment(11035687)を往復化 3154m |
-| 122 | toyosu-gururi-park | 豊洲ぐるり公園 | 東京都江東区 | 4621 | review | 一周セグメントなし。BRouter生成は水際園路(OSM未収録)を通らず幹線道路寄り。2026-07-08非掲載化。実走GPXで整備後に復帰 |
+| 122 | toyosu-gururi-park | 豊洲ぐるり公園 | 東京都江東区 | 4778 | done | ユーザー作成Stravaルート(3509661238166583110)のexport_gpx。ふ頭外周一周4778m。2026-07-08掲載復帰 |
 | 123 | sumidagawa-terrace-sumida | 隅田川テラス(言問橋〜白鬚橋) | 東京都墨田区 | 3406 | done | Stravaセグメント 白鬚橋〜言問橋(11518701)を言問橋起点に往復化 3406m |
 | 124 | kyu-nakagawa-riverside | 旧中川沿い | 東京都墨田区 | 5270 | done | Stravaセグメント 旧中川往復(5k)(23562569) 5270m |
 | 125 | mizumoto-park | 水元公園 | 東京都葛飾区 | 1479 | done | Stravaセグメント 水元公園周回コース1周_左回り(39669364) 1479m |
