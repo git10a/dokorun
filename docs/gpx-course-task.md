@@ -195,7 +195,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 107 | otagawa-hosuiro-mitaki-asahibashi | 太田川放水路河川敷(三滝駅〜旭橋) | 広島県広島市西区 | 7200 |  |  |
 | 108 | seaside-momochi | シーサイドももち海浜公園 | 福岡県福岡市早良区 | 4000 | done | Stravaセグメント シーサイドももち-愛宕浜海浜公園(39727471) |
 | 109 | island-city-central-park | アイランドシティ中央公園 | 福岡県福岡市東区 | 700 |  |  |
-| 110 | katsuyama-park-murasaki-river | 勝山公園・紫川河畔 | 福岡県北九州市小倉北区 | 1900 |  |  |
+| 110 | katsuyama-park-murasaki-river | 勝山公園・紫川河畔 | 福岡県北九州市小倉北区 | 1900 | done | BRouter生成 2064m |
 | 111 | senshu-park | 千秋公園 | 秋田県秋田市 | 1000 |  |  |
 | 112 | kajo-park | 霞城公園 | 山形県山形市 | 1800 |  |  |
 | 113 | kaiseizan-park | 開成山公園 | 福島県郡山市 | 2000 | done | Stravaセグメント あおぞらマラソンコース　2km.ver(26644709) |
