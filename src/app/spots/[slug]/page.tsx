@@ -10,6 +10,8 @@ import { ShareButtons } from "@/components/share-buttons";
 import { SpecPanel } from "@/components/spec-panel";
 import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
+import { NearbyDestinations } from "@/components/nearby-destinations";
+import { getNearbyDestinations } from "@/lib/nearby-destinations";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +32,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
   const spot = await getSpotBySlug(slug);
   if (!spot) notFound();
   const nearby = await getNearbySpots(spot.prefecture, spot.id);
+  const destinations = getNearbyDestinations(spot.slug);
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   const structuredData = {
     "@context": "https://schema.org",
@@ -58,6 +61,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コーススペック</h2><SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備</h2><FacilityIcons spot={spot} /></section>
       <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
+      <NearbyDestinations places={destinations} />
       <section className="rounded-2xl bg-cream px-5 py-9"><h2 className="mb-4 text-xl font-bold">走リ活</h2><p className="text-sub">まだ走リ活はありません。投稿機能は準備中です 🏃</p></section>
       {nearby.length > 0 && <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くのスポット</h2><div className="grid gap-5 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
     </div>
