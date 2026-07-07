@@ -105,7 +105,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 17 | saiko-doman-green-park | 彩湖・道満グリーンパーク | 埼玉県戸田市 | 4200 |  |  |
 | 18 | kashiwanoha-park | 柏の葉公園 | 千葉県柏市 | 2000 | done | BRouter生成 2034m |
 | 19 | niigata-sports-park | 新潟県スポーツ公園 | 新潟県新潟市中央区 | 5000 | done | BRouter生成 5553m |
-| 20 | kansui-park | 富岩運河環水公園 | 富山県富山市 | 5000 |  |  |
+| 20 | kansui-park | 富岩運河環水公園 | 富山県富山市 | 5000 | done | BRouter生成 5103m |
 | 21 | kibagata-park | 木場潟公園 | 石川県小松市 | 6400 |  |  |
 | 22 | lake-yamanaka-loop | 山中湖 | 山梨県山中湖村 | 13600 |  |  |
 | 23 | shinshu-sky-park | 信州スカイパーク | 長野県松本市 | 10000 |  |  |
