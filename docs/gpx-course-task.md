@@ -112,7 +112,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 24 | sanaruko-park | 佐鳴湖公園 | 静岡県浜松市中央区 | 5941 | done | BRouter生成 5534m |
 | 25 | odaka-ryokuchi | 大高緑地 | 愛知県名古屋市緑区 | 2500 | done | BRouter生成 2442m |
 | 26 | otsu-kogan-nagisa-park | 大津湖岸なぎさ公園 | 滋賀県大津市 | 5000 |  |  |
-| 27 | takaragaike-park | 宝が池公園 | 京都府京都市左京区 | 1500 |  |  |
+| 27 | takaragaike-park | 宝が池公園 | 京都府京都市左京区 | 1500 | done | BRouter生成 1535m |
 | 28 | nagai-park | 長居公園 | 大阪府大阪市東住吉区 | 2800 |  |  |
 | 29 | akashi-park | 明石公園 | 兵庫県明石市 | 2000 |  |  |
 | 30 | kimiidera-park | 紀三井寺公園 | 和歌山県和歌山市 | 2000 |  |  |
