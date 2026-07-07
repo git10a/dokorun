@@ -23,7 +23,11 @@
     { "pattern": "www.dokorun.com", "custom_domain": true }
   ],
   "vars": {
-    "NEXT_PUBLIC_SITE_URL": "https://dokorun.com"
+    "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
+    // Cloudflare Web Analyticsのビーコントークン。ダッシュボード
+    // (Analytics & Logs > Web Analytics)でdokorun.comのサイトを追加し、
+    // スニペット内の "token" の値をここに貼って再デプロイすると計測が始まる。
+    "CF_BEACON_TOKEN": ""
   }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET は `wrangler secret put <NAME>` で設定する
 }

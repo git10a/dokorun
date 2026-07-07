@@ -15,5 +15,22 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ja"><body className={`${notoSansJp.variable} min-h-screen antialiased`}><Header /><main>{children}</main><Footer /></body></html>;
+  // Cloudflare Web Analytics。トークン未設定の環境(ローカル等)では何も出力しない
+  const beaconToken = process.env.CF_BEACON_TOKEN;
+  return (
+    <html lang="ja">
+      <body className={`${notoSansJp.variable} min-h-screen antialiased`}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        {beaconToken && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: beaconToken })}
+          />
+        )}
+      </body>
+    </html>
+  );
 }
