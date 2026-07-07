@@ -161,7 +161,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 73 | misato-park | みさと公園 | 埼玉県三郷市 | 1550 | done | BRouter生成 1640m |
 | 74 | chiba-park | 千葉公園 | 千葉県千葉市中央区 | 600 | done | Stravaセグメント 千葉公園　綿打池ぐるぐる(27349166) |
 | 75 | hanashima-park | 花島公園 | 千葉県千葉市花見川区 | 750 |  |  |
-| 76 | 21st-century-forest-park | 21世紀の森と広場 | 千葉県松戸市 | 2600 |  |  |
+| 76 | 21st-century-forest-park | 21世紀の森と広場 | 千葉県松戸市 | 2600 | done | BRouter生成 2403m |
 | 77 | makuhari-inage-seaside | 幕張稲毛シーサイドランニングコース | 千葉県千葉市美浜区 | 13000 |  |  |
 | 78 | aoba-no-mori-park | 青葉の森公園 | 千葉県千葉市中央区 | 2000 |  |  |
 | 79 | gappo-park | 合浦公園 | 青森県青森市 | 1600 |  |  |
