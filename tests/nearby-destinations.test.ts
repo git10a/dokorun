@@ -33,6 +33,11 @@ describe("nearby destinations", () => {
     expect(getNearbyDestinations("rinshi-no-mori-park").map((place) => place.name)).not.toContain("レインボウスパイス");
   });
 
+  it("loads the partial ninth batch", () => {
+    expect(getNearbyDestinations("yodogawa-nishinakajima")).toHaveLength(2);
+    expect(getNearbyDestinations("hattori-ryokuchi")).toHaveLength(2);
+  });
+
   it("preserves unknown distances instead of inventing them", () => {
     const [place] = getNearbyDestinations("moerenuma-park");
 
