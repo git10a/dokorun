@@ -185,7 +185,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 97 | tsutsujigaoka-park | 榴岡公園 | 宮城県仙台市宮城野区 | 1100 | done | BRouter生成 1192m |
 | 98 | tsurumai-park | 鶴舞公園 | 愛知県名古屋市昭和区 | 2200 | done | Stravaセグメント Tsuruma Koen Loop(38588225) |
 | 99 | shonai-ryokuchi | 庄内緑地 | 愛知県名古屋市西区 | 2300 | done | Stravaセグメント Shonai 2.3km(12149281) |
-| 100 | yamazaki-river-kawanabashi-ishikawabashi | 山崎川四季の道(可和名橋〜石川橋) | 愛知県名古屋市瑞穂区 | 2800 |  |  |
+| 100 | yamazaki-river-kawanabashi-ishikawabashi | 山崎川四季の道(可和名橋〜石川橋) | 愛知県名古屋市瑞穂区 | 2800 | done | Stravaセグメント ishikawa-yamashita bridge(23452436) 2631m |
 | 101 | kamogawa-sanjo-demachiyanagi | 鴨川河川敷(三条大橋〜出町柳) | 京都府京都市中京区 | 4600 | done | BRouter生成 4881m |
 | 102 | kyoto-gyoen | 京都御苑 | 京都府京都市上京区 | 4000 | done | BRouter生成 4075m |
 | 103 | yodogawa-nishinakajima | 淀川河川公園西中島地区(下流5km折返し) | 大阪府大阪市淀川区 | 10000 | done | BRouter生成 9349m |
