@@ -120,7 +120,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 32 | okayama-sogo-ground | 岡山県総合グラウンド | 岡山県岡山市北区 | 2500 | done | BRouter生成 2483m |
 | 33 | ishin-hyakunen-kinen-park | 維新百年記念公園 | 山口県山口市 | 3000 |  |  |
 | 34 | haruno-sogo-undokoen | 春野総合運動公園 | 高知県高知市 | 3200 |  |  |
-| 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 |  |  |
+| 35 | suizenji-ezuko-park | 水前寺江津湖公園 | 熊本県熊本市東区 | 3800 | done | BRouter生成 4150m |
 | 36 | nagasaki-athletic-park | 長崎県立総合運動公園 | 長崎県諫早市 | 2000 |  |  |
 | 37 | hinata-miyazaki-sports-park | ひなた宮崎県総合運動公園 | 宮崎県宮崎市 | 2000 |  |  |
 | 38 | okinawa-athletic-park | 沖縄県総合運動公園 | 沖縄県沖縄市 | 3000 |  |  |
