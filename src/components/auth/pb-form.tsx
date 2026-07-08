@@ -12,7 +12,7 @@ function parts(total?: number) {
   return { h: Math.floor(total / 3600) || "", m: Math.floor((total % 3600) / 60), s: total % 60 };
 }
 
-export function PbForm({ pbs }: { pbs: { event: string; timeS: number; competitionName: string | null }[] }) {
+export function PbForm({ pbs }: { pbs: { event: string; timeS: number; competitionName?: string | null }[] }) {
   const [state, action, pending] = useActionState<PbState, FormData>(updatePbs, {});
   const map = new Map(pbs.map((pb) => [pb.event, pb]));
   return (

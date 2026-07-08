@@ -289,7 +289,7 @@ export async function getProfileUser(handle: string) {
 }
 
 export async function getUserPbs(userId: string) {
-  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS, competitionName: userPbs.competitionName }).from(userPbs)
+  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS }).from(userPbs)
     .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);
 }
 

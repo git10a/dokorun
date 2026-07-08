@@ -135,8 +135,8 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
     if (update.timeS === null) {
       await db.delete(userPbs).where(and(eq(userPbs.userId, user.id), eq(userPbs.event, update.event)));
     } else {
-      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS, competitionName: update.competitionName })
-        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, competitionName: update.competitionName, updatedAt: new Date() } });
+      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS })
+        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, updatedAt: new Date() } });
     }
   }
   revalidatePath("/me");
