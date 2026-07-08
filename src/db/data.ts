@@ -84,6 +84,14 @@ const summarySelection = {
   hasCourse: sql<boolean>`coalesce(jsonb_array_length(${courses.geojson}->'coordinates') > 0, false)`,
 };
 
+let pbCompetitionNameColumnEnsured = false;
+
+export async function ensurePbCompetitionNameColumn() {
+  if (pbCompetitionNameColumnEnsured) return;
+  await getDb().execute(sql`alter table user_pbs add column if not exists competition_name text`);
+  pbCompetitionNameColumnEnsured = true;
+}
+
 export async function getTags() {
   return getDb().select().from(tags).orderBy(tags.category, tags.sortOrder);
 }
@@ -289,7 +297,8 @@ export async function getProfileUser(handle: string) {
 }
 
 export async function getUserPbs(userId: string) {
-  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS }).from(userPbs)
+  await ensurePbCompetitionNameColumn();
+  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS, competitionName: userPbs.competitionName }).from(userPbs)
     .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);
 }
 

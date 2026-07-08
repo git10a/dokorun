@@ -32,7 +32,7 @@ function runnerYears(year: number | null, month: number | null) {
   return Math.floor(Math.max(months, 0) / 12) + 1;
 }
 
-function PbTable({ pbs }: { pbs: { event: string; timeS: number; competitionName?: string | null }[] }) {
+function PbTable({ pbs }: { pbs: { event: string; timeS: number; competitionName: string | null }[] }) {
   const map = new Map(pbs.map((pb) => [pb.event, pb]));
   const rows = PB_EVENTS.map((event) => ({ ...event, pb: map.get(event.key) })).filter((event) => event.pb);
   if (!rows.length) return <p className="text-sub">自己ベストはまだ登録されていません</p>;

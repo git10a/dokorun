@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { favoriteSpots, spots, userAvatars, userPbs, users } from "@/db/schema";
+import { ensurePbCompetitionNameColumn } from "@/db/data";
 import { jstYear } from "@/lib/jst";
 import { PB_EVENTS, secondsFromParts, validatePbTime } from "@/lib/pb";
 import { normalizeInstagram, normalizeStrava, normalizeXHandle } from "@/lib/social";
@@ -101,6 +102,7 @@ export async function deleteAvatar(): Promise<AvatarState> {
 export async function updatePbs(_: PbState, formData: FormData): Promise<PbState> {
   const user = await requireUser("/me");
   const db = getDb();
+  await ensurePbCompetitionNameColumn();
   const errors: Record<string, string[]> = {};
   const updates: { event: string; timeS: number | null; competitionName: string | null }[] = [];
   for (const event of PB_EVENTS) {
@@ -135,8 +137,8 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
     if (update.timeS === null) {
       await db.delete(userPbs).where(and(eq(userPbs.userId, user.id), eq(userPbs.event, update.event)));
     } else {
-      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS })
-        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, updatedAt: new Date() } });
+      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS, competitionName: update.competitionName })
+        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, competitionName: update.competitionName, updatedAt: new Date() } });
     }
   }
   revalidatePath("/me");

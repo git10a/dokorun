@@ -17,7 +17,7 @@ type ProfileEditPanelProps = {
     runningSinceYear: number | null;
     runningSinceMonth: number | null;
   };
-  pbs: { event: string; timeS: number; competitionName?: string | null }[];
+  pbs: { event: string; timeS: number; competitionName: string | null }[];
 };
 
 export function ProfileEditPanel({ avatarUser, profileUser, pbs }: ProfileEditPanelProps) {
