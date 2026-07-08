@@ -5,6 +5,19 @@ import { LoaderCircle, LocateFixed, X } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { track } from "@/lib/track";
 
+// トップページはISRで静的化しているため、useSearchParams()を使うNearMeButton(hero)は
+// Suspense境界が必須。見た目が同一の非インタラクティブ版を静的シェルとして先に出す
+export function NearMeButtonHeroFallback() {
+  return (
+    <div className="text-center">
+      <button type="button" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 font-bold text-white shadow-lg transition-colors hover:bg-ink/85 disabled:opacity-70 sm:w-auto">
+        <LocateFixed size={20} />
+        現在地から近い順でさがす
+      </button>
+    </div>
+  );
+}
+
 // 「現在地から近い順」への入口。hero=トップページの大ボタン、list=一覧ページのピル
 export function NearMeButton({ variant = "list" }: { variant?: "hero" | "list" }) {
   const router = useRouter();

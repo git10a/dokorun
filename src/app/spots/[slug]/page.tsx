@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNearbySpots, getPublicRuns, getSpotBySlug, getTodayRunId, isFavoriteForUser, isHashiritaiForUser } from "@/db/data";
+import { getPublicRuns, getSpotDetailWithNearby, getUserSpotState } from "@/db/data";
 import { CourseMap } from "@/components/map/course-map";
 import { CheckInButton } from "@/components/checkin-button";
 import { DirectionsLink } from "@/components/directions-link";
@@ -23,9 +24,12 @@ export const dynamic = "force-dynamic";
 
 type Params = Promise<{ slug: string }>;
 
+// generateMetadataと本体は同一リクエスト内で実行されるため、cache()で1回のフェッチを共有する
+const getSpotDetail = cache(getSpotDetailWithNearby);
+
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
-  const spot = await getSpotBySlug(slug);
+  const spot = (await getSpotDetail(slug))?.spot;
   if (!spot) return { title: "スポットが見つかりません" };
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const description = `1周${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${spot.description.slice(0, 90)}`;
@@ -38,16 +42,17 @@ const uuidPattern = /^[0-9a-f-]{36}$/i;
 
 export default async function SpotDetailPage({ params, searchParams }: { params: Params; searchParams: Promise<{ logs?: string; posted?: string; run?: string }> }) {
   const [{ slug }, query, user] = await Promise.all([params, searchParams, getUser()]);
-  const spot = await getSpotBySlug(slug);
-  if (!spot) notFound();
+  const detail = await getSpotDetail(slug);
+  if (!detail) notFound();
+  const { spot, nearby } = detail;
   const safeRunId = query.run && uuidPattern.test(query.run) ? query.run : null;
-  const [nearby, publicRuns, initialLiked, initialFavorite, todayRunId] = await Promise.all([
-    getNearbySpots(spot.prefecture, spot.id),
+  const [publicRuns, userState] = await Promise.all([
     getPublicRuns(spot.id, query.logs === "all" ? 100 : 10),
-    user ? isHashiritaiForUser(spot.id, user.id) : false,
-    user ? isFavoriteForUser(spot.id, user.id) : false,
-    user ? getTodayRunId(spot.id, user.id) : null,
+    user ? getUserSpotState(spot.id, user.id) : null,
   ]);
+  const initialLiked = userState?.isHashiritai ?? false;
+  const initialFavorite = userState?.isFavorite ?? false;
+  const todayRunId = userState?.todayRunId ?? null;
   const destinations = getNearbyDestinations(spot.slug);
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   const structuredData = {

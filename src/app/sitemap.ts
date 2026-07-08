@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getSitemapSpots } from "@/db/data";
 
-export const dynamic = "force-dynamic";
+// クローラーアクセスのたびのNeonクエリを1日1回に抑える。新スポットの反映は最大1日遅れる
+export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");

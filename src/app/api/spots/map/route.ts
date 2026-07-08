@@ -15,5 +15,5 @@ export async function GET(request: Request) {
     locker: params.get("locker") === "1",
     sento: params.get("sento") === "1",
   });
-  return NextResponse.json(spots);
+  return NextResponse.json(spots, { headers: { "Cache-Control": "public, max-age=300" } });
 }

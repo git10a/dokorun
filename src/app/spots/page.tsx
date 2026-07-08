@@ -5,7 +5,7 @@ import { SearchFilters } from "@/components/search-filters";
 import { SortSelect } from "@/components/sort-select";
 import { SpotCard } from "@/components/spot-card";
 import { SpotsMapShell } from "@/components/map/spots-map-shell";
-import { getTags, searchSpots } from "@/db/data";
+import { getSearchTags, searchSpots } from "@/db/data";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "ランニングスポットをさがす", description: "都道府県、距離、コース形状、タグ、設備から日本全国のランニングスポットを検索できます。" };
@@ -27,7 +27,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
     toilet: params.toilet === "1", locker: params.locker === "1", sento: params.sento === "1", sort: params.sort, page,
     lat: validGeo ? lat : undefined, lng: validGeo ? lng : undefined,
   };
-  const [allTags, result] = await Promise.all([getTags(), searchSpots(filters)]);
+  const [allTags, result] = await Promise.all([getSearchTags(), searchSpots(filters)]);
   const pages = Math.ceil(result.total / 20);
   const pageHref = (target: number) => { const next = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1]))); next.set("page", String(target)); return `/spots?${next}`; };
   const mapParams = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1])));

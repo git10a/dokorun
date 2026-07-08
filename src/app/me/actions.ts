@@ -6,7 +6,6 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { favoriteSpots, spots, userAvatars, userPbs, users } from "@/db/schema";
-import { ensurePbCompetitionNameColumn } from "@/db/data";
 import { jstYear } from "@/lib/jst";
 import { PB_EVENTS, secondsFromParts, validatePbTime } from "@/lib/pb";
 import { normalizeInstagram, normalizeStrava, normalizeXHandle } from "@/lib/social";
@@ -102,7 +101,6 @@ export async function deleteAvatar(): Promise<AvatarState> {
 export async function updatePbs(_: PbState, formData: FormData): Promise<PbState> {
   const user = await requireUser("/me");
   const db = getDb();
-  await ensurePbCompetitionNameColumn();
   const errors: Record<string, string[]> = {};
   const updates: { event: string; timeS: number | null; competitionName: string | null }[] = [];
   for (const event of PB_EVENTS) {

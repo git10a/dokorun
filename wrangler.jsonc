@@ -13,6 +13,10 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  // ISR/SSGのincremental cache受け皿。無料プランのKV write上限(1,000/日)に注意
+  "kv_namespaces": [
+    { "binding": "NEXT_INC_CACHE_KV", "id": "b9e9e322ead943ed94dd740aa36def2c" }
+  ],
   // R2はアカウントで未有効化のため一時的にバインディングを外している。
   // 画像アップロードを有効にする場合: ダッシュボードでR2を有効化 →
   // `npx wrangler r2 bucket create dokorun-images` → 以下を復活させ、
