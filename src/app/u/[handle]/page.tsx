@@ -46,13 +46,21 @@ function PbSummary({ pbs }: { pbs: { event: string; timeS: number; competitionNa
     <div className="mt-4 rounded-xl bg-cream px-4 py-3 text-sm">
       <p className="font-bold">自己ベスト</p>
       <div className="mt-2 flex flex-wrap gap-2">
-        {rows.map((row) => (
-          <span key={row.key} className="rounded-full border border-line bg-paper px-3 py-1">
-            <span className="font-bold">{row.label}</span>
-            <span className="ml-2">{formatDuration(row.pb!.timeS)}</span>
-            <span className="ml-1 text-xs text-sub">{formatPace(row.pb!.timeS, row.meters)}</span>
-          </span>
-        ))}
+        {rows.map((row) => {
+          const pb = row.pb!;
+          return (
+            <span key={row.key} className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-paper px-3 py-1">
+              <span className="shrink-0 font-bold">{row.label}</span>
+              <span className="shrink-0">{formatDuration(pb.timeS)}</span>
+              <span className="shrink-0 text-xs text-sub">{formatPace(pb.timeS, row.meters)}</span>
+              {pb.competitionName && (
+                <span className="min-w-0 truncate border-l border-line pl-2 text-xs text-sub" title={pb.competitionName}>
+                  {pb.competitionName}
+                </span>
+              )}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
