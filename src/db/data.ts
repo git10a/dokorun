@@ -1,6 +1,6 @@
 import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
-import { courses, hashiritai, photos, runs, spots, spotTags, tags, users } from "./schema";
+import { courses, favoriteSpots, hashiritai, photos, runDays, runs, spots, spotTags, tags, userPbs, users } from "./schema";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
 
@@ -126,12 +126,27 @@ export async function isHashiritaiForUser(spotId: string, userId: string) {
   return Boolean(row[0]);
 }
 
+export async function isFavoriteForUser(spotId: string, userId: string) {
+  const row = await getDb().select({ spotId: favoriteSpots.spotId }).from(favoriteSpots)
+    .where(and(eq(favoriteSpots.spotId, spotId), eq(favoriteSpots.userId, userId))).limit(1);
+  return Boolean(row[0]);
+}
+
 export async function getUserHashiritai(userId: string) {
   const rows = await getDb().select(summarySelection).from(hashiritai)
     .innerJoin(spots, eq(spots.id, hashiritai.spotId))
     .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
     .where(and(eq(hashiritai.userId, userId), eq(spots.isPublished, true)))
     .orderBy(desc(hashiritai.createdAt));
+  return addRelations(rows);
+}
+
+export async function getUserFavorites(userId: string) {
+  const rows = await getDb().select(summarySelection).from(favoriteSpots)
+    .innerJoin(spots, eq(spots.id, favoriteSpots.spotId))
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(favoriteSpots.userId, userId), eq(spots.isPublished, true)))
+    .orderBy(desc(favoriteSpots.createdAt));
   return addRelations(rows);
 }
 
@@ -251,9 +266,75 @@ export async function getSpotCourses(spotId: string) {
 export async function getPublicRuns(spotId: string, limit = 10) {
   return getDb().select({
     id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
-    userName: users.name, userImage: users.image, courseName: courses.name,
+    userName: users.name, userHandle: users.handle, userImage: users.image, userAvatarKey: users.avatarKey, courseName: courses.name,
   }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
     .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
+}
+
+export async function getProfileUser(handle: string) {
+  const rows = await getDb().select({
+    id: users.id,
+    name: users.name,
+    handle: users.handle,
+    bio: users.bio,
+    image: users.image,
+    avatarKey: users.avatarKey,
+    instagram: users.instagram,
+    xHandle: users.xHandle,
+    strava: users.strava,
+    runningSinceYear: users.runningSinceYear,
+  }).from(users).where(eq(users.handle, handle)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function getUserPbs(userId: string) {
+  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS }).from(userPbs)
+    .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);
+}
+
+export type RunActivityDay = { day: string; count: number; source: "run" | "checkin" | "both" };
+
+export async function getRunActivity(userId: string, days = 400): Promise<RunActivityDay[]> {
+  const db = getDb();
+  const runDay = sql<string>`to_char(${runs.ranAt} at time zone 'Asia/Tokyo', 'YYYY-MM-DD')`;
+  const minDay = sql`((now() at time zone 'Asia/Tokyo')::date - ${days}::int)`;
+  const [runRows, checkinRows] = await Promise.all([
+    db.select({ day: runDay, count: count() }).from(runs)
+      .where(and(eq(runs.userId, userId), sql`${runs.ranAt} > now() - (${days} || ' days')::interval`))
+      .groupBy(runDay),
+    db.select({ day: sql<string>`to_char(${runDays.day}, 'YYYY-MM-DD')` }).from(runDays)
+      .where(and(eq(runDays.userId, userId), sql`${runDays.day} > ${minDay}`)),
+  ]);
+  const map = new Map<string, RunActivityDay>();
+  for (const row of runRows) map.set(row.day, { day: row.day, count: Number(row.count), source: "run" });
+  for (const row of checkinRows) {
+    const current = map.get(row.day);
+    if (current) {
+      current.count = Math.max(current.count, 1);
+      current.source = "both";
+    } else {
+      map.set(row.day, { day: row.day, count: 1, source: "checkin" });
+    }
+  }
+  return [...map.values()].sort((a, b) => a.day.localeCompare(b.day));
+}
+
+export async function getPublicRunsByUser(userId: string, limit = 10) {
+  return getDb().select({
+    id: runs.id,
+    ranAt: runs.ranAt,
+    distanceM: runs.distanceM,
+    durationS: runs.durationS,
+    comment: runs.comment,
+    spotName: spots.name,
+    spotSlug: spots.slug,
+    courseName: courses.name,
+  }).from(runs)
+    .innerJoin(spots, eq(spots.id, runs.spotId))
+    .leftJoin(courses, eq(courses.id, runs.courseId))
+    .where(and(eq(runs.userId, userId), eq(runs.visibility, "public"), eq(spots.isPublished, true)))
+    .orderBy(desc(runs.ranAt), desc(runs.createdAt))
+    .limit(limit);
 }
 
 export async function getUserRuns(userId: string) {

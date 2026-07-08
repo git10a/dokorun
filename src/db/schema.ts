@@ -1,5 +1,6 @@
 import {
   boolean,
+  date,
   doublePrecision,
   index,
   integer,
@@ -89,9 +90,39 @@ export const users = pgTable("users", {
   image: text("image"),
   handle: text("handle").notNull().unique(),
   bio: text("bio"),
+  avatarKey: text("avatar_key"),
+  instagram: text("instagram"),
+  xHandle: text("x_handle"),
+  strava: text("strava"),
+  runningSinceYear: integer("running_since_year"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
+
+export const userPbs = pgTable("user_pbs", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  event: text("event").notNull(),
+  timeS: integer("time_s").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+}, (t) => [uniqueIndex("user_pbs_user_event_unique").on(t.userId, t.event)]);
+
+export const favoriteSpots = pgTable("favorite_spots", {
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+}, (t) => [
+  uniqueIndex("favorite_spots_pk").on(t.userId, t.spotId),
+  index("favorite_spots_spot_idx").on(t.spotId),
+]);
+
+export const runDays = pgTable("run_days", {
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  day: date("day").notNull(),
+  source: text("source").notNull().default("checkin"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+}, (t) => [uniqueIndex("run_days_pk").on(t.userId, t.day)]);
 
 export const sessions = pgTable("sessions", {
   id: uuid("id").primaryKey().defaultRandom(),

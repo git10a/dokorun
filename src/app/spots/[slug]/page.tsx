@@ -2,18 +2,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNearbySpots, getPublicRuns, getSpotBySlug, isHashiritaiForUser } from "@/db/data";
+import { getNearbySpots, getPublicRuns, getSpotBySlug, isFavoriteForUser, isHashiritaiForUser } from "@/db/data";
 import { CourseMap } from "@/components/map/course-map";
 import { DirectionsLink } from "@/components/directions-link";
 import { FacilityIcons } from "@/components/facility-icons";
 import { TrackView } from "@/components/track-view";
 import { HashiritaiButton } from "@/components/hashiritai-button";
+import { FavoriteButton } from "@/components/favorite-button";
 import { ShareButtons } from "@/components/share-buttons";
 import { SpecPanel } from "@/components/spec-panel";
 import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
+import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
 
 export const dynamic = "force-dynamic";
@@ -36,10 +38,11 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   const [{ slug }, query, user] = await Promise.all([params, searchParams, getUser()]);
   const spot = await getSpotBySlug(slug);
   if (!spot) notFound();
-  const [nearby, publicRuns, initialLiked] = await Promise.all([
+  const [nearby, publicRuns, initialLiked, initialFavorite] = await Promise.all([
     getNearbySpots(spot.prefecture, spot.id),
     getPublicRuns(spot.id, query.logs === "all" ? 100 : 10),
     user ? isHashiritaiForUser(spot.id, user.id) : false,
+    user ? isFavoriteForUser(spot.id, user.id) : false,
   ]);
   const destinations = getNearbyDestinations(spot.slug);
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -64,7 +67,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <TrackView name="spot_view" meta={{ slug: spot.slug }} />
       <header><p className="text-sm text-sub">{spot.prefecture} {spot.city}</p><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
-      <div className="flex flex-wrap items-center gap-3"><HashiritaiButton slug={spot.slug} count={spot.hashiritaiCount} loggedIn={Boolean(user)} initialLiked={initialLiked} /><div className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">ドコログ {spot.runsCount}</div><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - ドコラン`} /></div>
+      <div className="flex flex-wrap items-center gap-3"><HashiritaiButton slug={spot.slug} count={spot.hashiritaiCount} loggedIn={Boolean(user)} initialLiked={initialLiked} /><FavoriteButton spotId={spot.id} slug={spot.slug} loggedIn={Boolean(user)} initialFavorite={initialFavorite} /><div className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">ドコログ {spot.runsCount}</div><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - ドコラン`} /></div>
       {spot.photos.length > 0 && <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.map((photo, index) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><SpotImage src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} width={1280} height={720} sizes="(min-width: 640px) 60vw, 85vw" priority={index === 0} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>)}</section>}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><DirectionsLink lat={spot.lat} lng={spot.lng} name={spot.name} slug={spot.slug} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コーススペック</h2><SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} /></section>
@@ -76,7 +79,8 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
         {query.posted === "1" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ドコログを投稿しました</p>}
         <div className="mt-6 space-y-4">{publicRuns.map((run) => {
           const pace = run.distanceM && run.durationS ? run.durationS / 60 / (run.distanceM / 1000) : null;
-          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex items-center gap-3">{run.userImage ? <img src={run.userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><p className="font-bold">{run.userName}</p><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}{run.courseName ? ` ・ ${run.courseName}` : ""}</p></div></div><p className="mt-3 text-sm font-bold">{run.distanceM ? `${(run.distanceM / 1000).toFixed(2)}km` : ""}{run.durationS ? ` ・ ${Math.round(run.durationS / 60)}分` : ""}{pace ? ` ・ ${Math.floor(pace)}:${String(Math.round((pace % 1) * 60)).padStart(2, "0")}/km` : ""}</p>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>;
+          const userImage = avatarUrl({ image: run.userImage, avatarKey: run.userAvatarKey });
+          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}{run.courseName ? ` ・ ${run.courseName}` : ""}</p></div></div><p className="mt-3 text-sm font-bold">{run.distanceM ? `${(run.distanceM / 1000).toFixed(2)}km` : ""}{run.durationS ? ` ・ ${Math.round(run.durationS / 60)}分` : ""}{pace ? ` ・ ${Math.floor(pace)}:${String(Math.round((pace % 1) * 60)).padStart(2, "0")}/km` : ""}</p>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>;
         })}</div>
         {!publicRuns.length && <p className="mt-6 text-sub">まだドコログはありません。最初の記録を残してみませんか 🏃</p>}
         {query.logs !== "all" && spot.runsCount > 10 && <Link href={`/spots/${spot.slug}?logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}
