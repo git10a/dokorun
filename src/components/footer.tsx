@@ -8,6 +8,7 @@ export function Footer() {
         <div className="flex items-center gap-2 font-bold text-ink"><span className="grid size-8 place-items-center rounded-lg bg-brand"><Footprints size={18} /></span>ドコラン<img src="/characters/ran-happy.png" alt="" className="ml-2 h-8 w-auto -scale-x-100" /><img src="/characters/hashiro-smile.png" alt="" className="h-8 w-auto -scale-x-100" /></div>
         <p>© {new Date().getFullYear()} ドコラン</p>
         <div className="flex items-center gap-4">
+          <Link href="/about" className="underline underline-offset-4">このサイトについて</Link>
           <Link href="/terms" className="text-xs underline underline-offset-4">利用規約</Link>
           <Link href="/privacy" className="text-xs underline underline-offset-4">プライバシー</Link>
           <Link href="/contact" className="underline underline-offset-4">リクエスト・お問い合わせ</Link>
