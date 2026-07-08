@@ -4,6 +4,8 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
+  // 無料プランのWorkerサイズ上限(gzip後3MiB)対策。better-auth追加で超過したため必須
+  "minify": true,
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
@@ -24,11 +26,15 @@
   ],
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
+    "BETTER_AUTH_URL": "https://dokorun.com",
+    // Google OAuthのクライアントID(公開値。SECRETはwrangler secretで管理)
+    "GOOGLE_CLIENT_ID": "848225370732-m6j4ipj6569scq521koqgnhd4i23pj6r.apps.googleusercontent.com",
     // Cloudflare Web Analyticsの手動ビーコン用トークン。現在はダッシュボードの
     // Automatic setup(自動注入)で計測中のため**空のままにする**。設定すると二重計測になる。
     // 手動方式に切り替える場合のみ、ダッシュボードでRUMを
     // 「Enable with JS Snippet installation」に変更してからトークンを貼る。
     "CF_BEACON_TOKEN": ""
   }
-  // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET は `wrangler secret put <NAME>` で設定する
+  // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET / BETTER_AUTH_SECRET /
+  // GOOGLE_CLIENT_SECRET は `wrangler secret put <NAME>` で設定する
 }

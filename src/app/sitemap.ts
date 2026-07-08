@@ -10,6 +10,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/spots`, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${baseUrl}/terms`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${baseUrl}/privacy`, changeFrequency: "yearly", priority: 0.2 },
   ];
   const spotPages: MetadataRoute.Sitemap = (await getSitemapSpots()).map((spot) => ({
     url: `${baseUrl}/spots/${spot.slug}`,

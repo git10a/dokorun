@@ -31,8 +31,14 @@ function isNeon(url: string) {
 // - NodeからのNeon(CLIスクリプト): WebSocketドライバ(wsで代替)。transaction可。
 // - それ以外(ローカルDocker Postgres等): postgres-js。
 export function getDb() {
+  const url = requireUrl();
+  // preview(workerd)からローカルPostgresへ接続する場合も、I/Oをリクエスト間で
+  // 共有できない。短いアイドルタイムの接続をリクエスト内で作り直す。
+  if (isWorkers && !isNeon(url)) {
+    const client = postgres(url, { prepare: false, max: 1, idle_timeout: 1 });
+    return drizzlePostgres(client, { schema }) as unknown as Database;
+  }
   if (!database) {
-    const url = requireUrl();
     if (isNeon(url)) {
       if (isWorkers) {
         database = drizzleNeonHttp(neon(url), { schema }) as unknown as Database;
@@ -61,6 +67,15 @@ export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> 
       return await fn(drizzleNeon(pool, { schema }));
     } finally {
       await pool.end();
+    }
+  }
+  if (isWorkers) {
+    const client = postgres(url, { prepare: false, max: 1 });
+    try {
+      const db = drizzlePostgres(client, { schema }) as unknown as Database;
+      return await fn(db);
+    } finally {
+      await client.end();
     }
   }
   return fn(getDb());

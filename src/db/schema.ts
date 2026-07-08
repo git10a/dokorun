@@ -11,12 +11,14 @@ import {
   uniqueIndex,
   uuid,
 } from "drizzle-orm/pg-core";
+import { sql } from "drizzle-orm";
 import type { LineString } from "@/lib/types";
 
 export const courseTypeEnum = pgEnum("course_type", ["loop", "out_and_back", "one_way", "track"]);
 export const surfaceEnum = pgEnum("surface", ["asphalt", "dirt", "track", "trail", "mixed"]);
 export const lightingEnum = pgEnum("lighting", ["bright", "partial", "dark"]);
 export const tagCategoryEnum = pgEnum("tag_category", ["terrain", "environment", "scenery"]);
+export const runVisibilityEnum = pgEnum("run_visibility", ["public", "private"]);
 
 export const spots = pgTable("spots", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -80,29 +82,82 @@ export const photos = pgTable("photos", {
 
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  email: text("email").notNull().unique(),
+  emailVerified: boolean("email_verified").notNull().default(false),
+  image: text("image"),
   handle: text("handle").notNull().unique(),
-  displayName: text("display_name").notNull(),
-  avatarUrl: text("avatar_url"),
+  bio: text("bio"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
+
+export const sessions = pgTable("sessions", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  expiresAt: timestamp("expires_at").notNull(),
+  token: text("token").notNull().unique(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  ipAddress: text("ip_address"),
+  userAgent: text("user_agent"),
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+}, (t) => [index("sessions_user_idx").on(t.userId)]);
+
+export const accounts = pgTable("accounts", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  accountId: text("account_id").notNull(),
+  providerId: text("provider_id").notNull(),
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  accessToken: text("access_token"),
+  refreshToken: text("refresh_token"),
+  idToken: text("id_token"),
+  accessTokenExpiresAt: timestamp("access_token_expires_at"),
+  refreshTokenExpiresAt: timestamp("refresh_token_expires_at"),
+  scope: text("scope"),
+  password: text("password"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+}, (t) => [index("accounts_user_idx").on(t.userId)]);
+
+export const verifications = pgTable("verifications", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  identifier: text("identifier").notNull(),
+  value: text("value").notNull(),
+  expiresAt: timestamp("expires_at").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+}, (t) => [index("verifications_identifier_idx").on(t.identifier)]);
 
 export const runs = pgTable("runs", {
   id: uuid("id").primaryKey().defaultRandom(),
-  userId: uuid("user_id").notNull().references(() => users.id),
-  spotId: uuid("spot_id").notNull().references(() => spots.id),
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
+  courseId: uuid("course_id").references(() => courses.id, { onDelete: "set null" }),
   ranAt: timestamp("ran_at").notNull(),
   distanceM: integer("distance_m"),
   durationS: integer("duration_s"),
   comment: text("comment"),
+  visibility: runVisibilityEnum("visibility").notNull().default("public"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-}, (t) => [index("runs_spot_idx").on(t.spotId)]);
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+}, (t) => [
+  index("runs_spot_idx").on(t.spotId),
+  index("runs_user_idx").on(t.userId),
+  index("runs_ran_at_idx").on(t.ranAt.desc()),
+]);
 
 // ログイン不要のハシリタイ。clientId はブラウザごとに localStorage で発行する匿名ID
 export const hashiritai = pgTable("hashiritai", {
   clientId: text("client_id").notNull(),
+  userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }),
   spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-}, (t) => [uniqueIndex("hashiritai_pk").on(t.clientId, t.spotId), index("hashiritai_spot_idx").on(t.spotId)]);
+}, (t) => [
+  uniqueIndex("hashiritai_pk").on(t.clientId, t.spotId),
+  uniqueIndex("hashiritai_user_spot_unique").on(t.userId, t.spotId).where(sql`${t.userId} is not null`),
+  index("hashiritai_spot_idx").on(t.spotId),
+  index("hashiritai_user_idx").on(t.userId),
+]);
 
 export const feedback = pgTable("feedback", {
   id: uuid("id").primaryKey().defaultRandom(),

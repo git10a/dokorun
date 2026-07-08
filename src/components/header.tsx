@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footprints } from "lucide-react";
+import { UserMenu } from "@/components/auth/user-menu";
 
 export function Header() {
   return (
@@ -9,9 +10,10 @@ export function Header() {
           <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-brand sm:size-9"><Footprints size={20} /></span>
           <span className="whitespace-nowrap text-[11px] sm:text-lg">ドコラン</span>
         </Link>
-        <nav aria-label="メインナビゲーション" className="flex shrink-0 items-center gap-2 text-[10px] font-bold sm:gap-6 sm:text-sm">
+        <nav aria-label="メインナビゲーション" className="flex shrink-0 items-center gap-2 text-[10px] font-bold sm:gap-5 sm:text-sm">
           <Link href="/spots" className="transition-colors hover:text-accent">スポットをさがす</Link>
-          <Link href="/about" className="transition-colors hover:text-accent">このサイトについて</Link>
+          <Link href="/about" className="hidden transition-colors hover:text-accent sm:inline">このサイトについて</Link>
+          <UserMenu />
         </nav>
       </div>
     </header>

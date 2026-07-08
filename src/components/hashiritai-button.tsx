@@ -17,7 +17,7 @@ function getClientId() {
   return id;
 }
 
-export function HashiritaiButton({ slug, count: initialCount }: { slug: string; count: number }) {
+export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, initialLiked = false }: { slug: string; count: number; loggedIn?: boolean; initialLiked?: boolean }) {
   const [count, setCount] = useState(initialCount);
   const [override, setOverride] = useState<boolean | null>(null);
   const [pending, setPending] = useState(false);
@@ -29,7 +29,7 @@ export function HashiritaiButton({ slug, count: initialCount }: { slug: string; 
       return false;
     }
   }, () => false);
-  const liked = override ?? stored;
+  const liked = override ?? (loggedIn ? initialLiked : stored);
 
   const toggle = async () => {
     if (pending) return;

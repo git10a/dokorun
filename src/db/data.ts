@@ -1,6 +1,6 @@
 import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
-import { courses, hashiritai, photos, runs, spots, spotTags, tags } from "./schema";
+import { courses, hashiritai, photos, runs, spots, spotTags, tags, users } from "./schema";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
 
@@ -122,6 +122,21 @@ export async function getPopularSpots() {
   return decorated.sort((a, b) => rank(a) - rank(b)).slice(0, 5);
 }
 
+export async function isHashiritaiForUser(spotId: string, userId: string) {
+  const row = await getDb().select({ spotId: hashiritai.spotId }).from(hashiritai)
+    .where(and(eq(hashiritai.spotId, spotId), eq(hashiritai.userId, userId))).limit(1);
+  return Boolean(row[0]);
+}
+
+export async function getUserHashiritai(userId: string) {
+  const rows = await getDb().select(summarySelection).from(hashiritai)
+    .innerJoin(spots, eq(spots.id, hashiritai.spotId))
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(hashiritai.userId, userId), eq(spots.isPublished, true)))
+    .orderBy(desc(hashiritai.createdAt));
+  return addRelations(rows);
+}
+
 export async function getPrefectureCounts() {
   return getDb().select({ prefecture: spots.prefecture, count: count() }).from(spots)
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
@@ -205,7 +220,7 @@ export async function getSpotBySlug(slug: string) {
     addRelations([{ ...row, courseGeojson: row.geojson }]),
     db.select().from(photos).where(eq(photos.spotId, row.id)).orderBy(photos.sortOrder),
     db.select({ count: count() }).from(hashiritai).where(eq(hashiritai.spotId, row.id)),
-    db.select({ count: count() }).from(runs).where(eq(runs.spotId, row.id)),
+    db.select({ count: count() }).from(runs).where(and(eq(runs.spotId, row.id), eq(runs.visibility, "public"))),
   ]);
   return {
     ...decorated[0],
@@ -223,6 +238,44 @@ export async function getNearbySpots(prefecture: string, excludeId: string) {
     .where(and(eq(spots.isPublished, true), eq(spots.prefecture, prefecture), sql`${spots.id} <> ${excludeId}`))
     .limit(4);
   return addRelations(rows);
+}
+
+export async function getSpotCourses(spotId: string) {
+  return getDb().select({ id: courses.id, name: courses.name, distanceM: courses.distanceM }).from(courses)
+    .where(eq(courses.spotId, spotId)).orderBy(desc(courses.isPrimary), courses.createdAt);
+}
+
+export async function getPublicRuns(spotId: string, limit = 10) {
+  return getDb().select({
+    id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
+    userName: users.name, userImage: users.image, courseName: courses.name,
+  }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
+    .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
+}
+
+export async function getUserRuns(userId: string) {
+  return getDb().select({
+    id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
+    visibility: runs.visibility, spotName: spots.name, spotSlug: spots.slug, courseName: courses.name,
+  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).leftJoin(courses, eq(courses.id, runs.courseId))
+    .where(eq(runs.userId, userId)).orderBy(desc(runs.ranAt), desc(runs.createdAt));
+}
+
+export async function getUserRun(id: string, userId: string) {
+  const rows = await getDb().select({
+    id: runs.id, userId: runs.userId, spotId: runs.spotId, courseId: runs.courseId, ranAt: runs.ranAt,
+    distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment, visibility: runs.visibility,
+    spotName: spots.name, spotSlug: spots.slug,
+  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).where(and(eq(runs.id, id), eq(runs.userId, userId))).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function getAdminRuns() {
+  return getDb().select({
+    id: runs.id, ranAt: runs.ranAt, createdAt: runs.createdAt, distanceM: runs.distanceM, comment: runs.comment,
+    visibility: runs.visibility, userName: users.name, userEmail: users.email, spotName: spots.name, spotSlug: spots.slug,
+  }).from(runs).innerJoin(users, eq(users.id, runs.userId)).innerJoin(spots, eq(spots.id, runs.spotId))
+    .orderBy(desc(runs.createdAt)).limit(200);
 }
 
 export async function getAdminSpots() {

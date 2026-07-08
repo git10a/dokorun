@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
 import { getDb, withTxDb } from "@/db";
-import { courses, photos, spots, spotTags, tags } from "@/db/schema";
+import { courses, photos, runs, spots, spotTags, tags } from "@/db/schema";
 import { createSessionToken, isAdmin, sessionCookieName } from "@/lib/auth";
 import type { LineString } from "@/lib/types";
 
@@ -103,4 +103,18 @@ export async function deleteSpot(formData: FormData) {
   const id = String(formData.get("id") ?? "");
   if (z.string().uuid().safeParse(id).success) await getDb().delete(spots).where(eq(spots.id, id));
   revalidatePath("/"); revalidatePath("/spots"); redirect("/admin?success=deleted");
+}
+
+export async function deleteRunAsAdmin(formData: FormData) {
+  await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  if (!z.string().uuid().safeParse(id).success) return;
+  const db = getDb();
+  const target = await db.select({ spotId: runs.spotId }).from(runs).where(eq(runs.id, id)).limit(1);
+  await db.delete(runs).where(eq(runs.id, id));
+  revalidatePath("/admin/logs");
+  if (target[0]) {
+    const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, target[0].spotId)).limit(1);
+    if (spot[0]) revalidatePath(`/spots/${spot[0].slug}`);
+  }
 }
