@@ -228,10 +228,10 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 138 | yamanote-loop | 山手線一周コース | 東京都千代田区ほか | 40400 | done | BRouter生成 36103m(東京駅起点・主要駅経由の周回) |
 | 139 | tamagawa-josui-ryokudo | 玉川上水緑道コース | 東京都新宿区〜武蔵野市 | 16500 | done | BRouter生成 14695m(新宿駅→吉祥寺駅) |
 | 140 | tamako-cycling-road | 多摩湖サイクリングロード一周コース | 東京都東村山市 | 17600 | review | 上湖西側の周回園路がBRouterで通れず(西端で+58%の迂回or行き止まりスパー)。非掲載。Stravaルートで整備要 |
-| 141 | teganuma-loop | 手賀沼一周コース | 千葉県柏市 | 17600 | done | BRouter生成 15497m(道の駅しょうなん起点・曙橋東端) |
+| 141 | teganuma-loop | 手賀沼一周コース | 千葉県柏市 | 17600 | done | ユーザー提供GPX 17236m(2026-07-08にBRouter版から差し替え) |
 | 142 | inbanuma-loop | 印旛沼ぐるりコース | 千葉県印西市・佐倉市 | 15100 | done | BRouter生成 16343m(佐倉ふるさと広場起点。レポートの龍ヶ谷橋は特定できず代表点変更) |
 | 143 | choshi-inubosaki | 銚子海岸〜犬吠埼コース | 千葉県銚子市 | 21800 | done | BRouter生成 21338m(銚子駅→犬吠埼→外川折返し) |
-| 144 | suwako-loop | 諏訪湖一周コース | 長野県諏訪市 | 16000 | done | BRouter生成 17325m(すわっこランド起点。市街地経由分やや長め) |
+| 144 | suwako-loop | 諏訪湖一周コース | 長野県諏訪市 | 16000 | done | ユーザー提供GPX 16172m(2026-07-08にBRouter版から差し替え) |
 | 145 | nojiriko-loop | 野尻湖一周コース | 長野県信濃町 | 15400 | review | 湖東岸〜南岸の周回路がOSM未収録らしく+43〜77%の迂回。非掲載。Stravaルートで整備要 |
 | 146 | ibigawa-long | 揖斐川ロングコース | 岐阜県揖斐川町 | 42200 | done | BRouter生成 47288m(役場→横山ダム方面折返し) |
 | 147 | hida-kanayama-seiryu | ひだ金山清流コース | 岐阜県下呂市 | 32500 | done | BRouter生成 29321m(飛騨金山駅→馬瀬川上流折返し) |
@@ -239,10 +239,10 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 149 | okushizu-long | 奥静ロングコース | 静岡県静岡市 | 45500 | done | BRouter生成 48543m(静岡駅→梅ヶ島温泉) |
 | 150 | mishima-shuzenji | 三嶋大社〜修善寺温泉コース | 静岡県三島市 | 19500 | done | BRouter生成 21704m(三島駅→三嶋大社→修善寺温泉) |
 | 151 | ito-jogasaki | 伊東〜城ヶ崎海岸コース | 静岡県伊東市 | 24400 | review | 生成17.6〜21.7kmで期待24.4kmに-15%超。海沿い実コースの経路不明瞭。非掲載。Stravaルートで整備要 |
-| 152 | tanzawako-loop | 丹沢湖一周コース | 神奈川県山北町 | 15700 | done | BRouter生成 14222m(三保ダム起点反時計回り) |
+| 152 | tanzawako-loop | 丹沢湖一周コース | 神奈川県山北町 | 15700 | done | ユーザー作成Stravaルート(3509884731870514956)のexport_gpx 12659m(2026-07-08差し替え。紹介文も約13kmに修正) |
 | 153 | ashinoko-loop | 箱根芦ノ湖一周コース | 神奈川県箱根町 | 20000 | review | 東岸歩道(元箱根〜湖尻)がBRouterでtarget island/西岸往復化。非掲載。Stravaルートで整備要 |
 | 154 | yurihama-kaigansen | 湯梨浜町海岸線コース | 鳥取県湯梨浜町 | 17200 | done | BRouter生成 18478m(橋津→国道9号沿い往復) |
 | 155 | yakushima-seibu-rindo | 屋久島西部林道コース | 鹿児島県屋久島町 | 22700 | done | BRouter生成 25472m(永田いなか浜→大川の滝)。レポートのout_and_backは矛盾のためone_wayに修正 |
 | 156 | amami-ayamaru | 奄美あやまる岬コース | 鹿児島県奄美市 | 16000 | done | BRouter生成 17134m(奄美パーク→あやまる岬折返し) |
 | 157 | tokunoshima-shoko-road | 尚子ロード特訓コース(徳之島) | 鹿児島県天城町・徳之島町 | 31200 | done | BRouter生成 35715m(与名間→島北部周回) |
-| 158 | yoron-loop | 与論島一周コース | 鹿児島県与論町 | 19400 | done | BRouter生成 20624m(与論港→島一周。起点は港入口の陸側道路) |
+| 158 | yoron-loop | 与論島一周コース | 鹿児島県与論町 | 19400 | done | ユーザー提供のヨロンマラソン公式コースGPX(島一周を両方向に往復する42.7km)から往路1周分を切り出し+起点まで834mをBRouterで接続 22867m。原本は data/gpx/yoron-marathon-full.gpx。紹介文も約23kmに修正 |
