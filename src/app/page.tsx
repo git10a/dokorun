@@ -13,9 +13,9 @@ export default async function HomePage() {
   const countMap = new Map(counts.map((item) => [item.prefecture, item.count]));
   return (
     <>
-      <section className="relative overflow-hidden bg-brand px-4 pb-8 pt-14 text-center sm:pb-28 sm:pt-20">
-        <img src="/characters/ran-happy.png" alt="走るラン" className="pointer-events-none absolute bottom-2 left-[4%] hidden w-28 -scale-x-100 lg:block xl:w-36" />
-        <img src="/characters/hashiro-smile.png" alt="走るハシロー" className="pointer-events-none absolute bottom-2 right-[4%] hidden w-28 lg:block xl:w-36" />
+      <section className="relative overflow-hidden bg-brand px-4 pb-28 pt-14 text-center sm:pb-28 sm:pt-20">
+        <img src="/characters/ran-happy.png" alt="走るラン" className="pointer-events-none absolute bottom-2 left-[2%] w-16 -scale-x-100 sm:left-[4%] sm:w-24 lg:w-28 xl:w-36" />
+        <img src="/characters/hashiro-smile.png" alt="走るハシロー" className="pointer-events-none absolute bottom-2 right-[2%] w-16 sm:right-[4%] sm:w-24 lg:w-28 xl:w-36" />
         <div className="mx-auto max-w-3xl"><p className="mb-3 text-sm font-bold tracking-widest">RUNNING SPOT DATABASE</p><h1 className="text-4xl font-black tracking-tight sm:text-6xl">今日、どこ走る？</h1><p className="mt-4 text-sm font-medium sm:text-lg">日本全国のランニングスポットをあつめるサイト</p></div>
         <HeroSearch tags={tags} prefectureCounts={counts} />
         <div className="mx-auto mt-5 max-w-4xl">
