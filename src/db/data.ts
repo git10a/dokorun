@@ -1,6 +1,6 @@
 import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
-import { courses, favoriteSpots, hashiritai, photos, runDays, runs, spots, spotTags, tags, userPbs, users } from "./schema";
+import { courses, favoriteSpots, hashiritai, photos, runs, spots, spotTags, tags, userPbs, users } from "./schema";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
 
@@ -291,33 +291,6 @@ export async function getProfileUser(handle: string) {
 export async function getUserPbs(userId: string) {
   return getDb().select({ event: userPbs.event, timeS: userPbs.timeS }).from(userPbs)
     .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);
-}
-
-export type RunActivityDay = { day: string; count: number; source: "run" | "checkin" | "both" };
-
-export async function getRunActivity(userId: string, days = 400): Promise<RunActivityDay[]> {
-  const db = getDb();
-  const runDay = sql<string>`to_char(${runs.ranAt} at time zone 'Asia/Tokyo', 'YYYY-MM-DD')`;
-  const minDay = sql`((now() at time zone 'Asia/Tokyo')::date - ${days}::int)`;
-  const [runRows, checkinRows] = await Promise.all([
-    db.select({ day: runDay, count: count() }).from(runs)
-      .where(and(eq(runs.userId, userId), sql`${runs.ranAt} > now() - (${days} || ' days')::interval`))
-      .groupBy(runDay),
-    db.select({ day: sql<string>`to_char(${runDays.day}, 'YYYY-MM-DD')` }).from(runDays)
-      .where(and(eq(runDays.userId, userId), sql`${runDays.day} > ${minDay}`)),
-  ]);
-  const map = new Map<string, RunActivityDay>();
-  for (const row of runRows) map.set(row.day, { day: row.day, count: Number(row.count), source: "run" });
-  for (const row of checkinRows) {
-    const current = map.get(row.day);
-    if (current) {
-      current.count = Math.max(current.count, 1);
-      current.source = "both";
-    } else {
-      map.set(row.day, { day: row.day, count: 1, source: "checkin" });
-    }
-  }
-  return [...map.values()].sort((a, b) => a.day.localeCompare(b.day));
 }
 
 export async function getPublicRunsByUser(userId: string, limit = 10) {

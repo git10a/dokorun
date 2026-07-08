@@ -5,8 +5,8 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
-import { favoriteSpots, runDays, spots, userAvatars, userPbs, users } from "@/db/schema";
-import { jstDayFromOffset, jstYear } from "@/lib/jst";
+import { favoriteSpots, spots, userAvatars, userPbs, users } from "@/db/schema";
+import { jstYear } from "@/lib/jst";
 import { PB_EVENTS, secondsFromParts, validatePbTime } from "@/lib/pb";
 import { normalizeInstagram, normalizeStrava, normalizeXHandle } from "@/lib/social";
 import { getUser, requireUser } from "@/lib/user";
@@ -136,19 +136,6 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
   revalidatePath("/me");
   revalidatePath(`/u/${user.handle}`);
   return { status: "saved", message: "自己ベストを保存しました" };
-}
-
-export async function setRunDay(offset: 0 | -1, on: boolean) {
-  const user = await requireUser("/me");
-  const day = jstDayFromOffset(offset);
-  if (on) {
-    await getDb().insert(runDays).values({ userId: user.id, day }).onConflictDoNothing();
-  } else {
-    await getDb().delete(runDays).where(and(eq(runDays.userId, user.id), eq(runDays.day, day)));
-  }
-  revalidatePath("/me");
-  revalidatePath(`/u/${user.handle}`);
-  return { day, on };
 }
 
 export async function toggleFavorite(spotId: string, on: boolean) {

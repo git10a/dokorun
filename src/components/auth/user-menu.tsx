@@ -4,7 +4,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LogOut, UserRound } from "lucide-react";
-import { RunCheckinButton } from "@/components/run-checkin-button";
 import { authClient } from "@/lib/auth-client";
 
 const CLIENT_ID_KEY = "dokorun:client-id";
@@ -38,7 +37,6 @@ export function UserMenu() {
         <div className="absolute right-0 top-12 z-50 w-48 rounded-xl border border-line bg-paper p-2 text-sm shadow-lg">
           <p className="truncate px-3 py-2 font-bold">{session.user.name}</p>
           <Link href="/me" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 hover:bg-cream">マイページ</Link>
-          <RunCheckinButton compact />
           <button type="button" onClick={() => authClient.signOut({ fetchOptions: { onSuccess: () => { window.location.href = "/"; } } })} className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left hover:bg-cream"><LogOut size={16} />ログアウト</button>
         </div>
       )}
