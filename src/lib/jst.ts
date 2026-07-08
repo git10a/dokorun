@@ -1,6 +1,7 @@
 // Intl.DateTimeFormatの生成は1回あたり約0.07msと高価(Workers無料プランはCPU 10ms上限)。必ず使い回す。
 const jstYearFormat = new Intl.DateTimeFormat("en", { timeZone: "Asia/Tokyo", year: "numeric" });
 const jstMonthFormat = new Intl.DateTimeFormat("en", { timeZone: "Asia/Tokyo", month: "numeric" });
+const jstDatePartsFormat = new Intl.DateTimeFormat("en", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit" });
 const oneDayMs = 24 * 60 * 60 * 1000;
 const jstOffsetMs = 9 * 60 * 60 * 1000;
 
@@ -20,4 +21,11 @@ export function jstDayBounds(now = new Date()) {
 
 export function jstNoon(now = new Date()) {
   return new Date(jstDayBounds(now).start.getTime() + 12 * 60 * 60 * 1000);
+}
+
+export function jstDateInputValue(value: Date | string) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  const parts = Object.fromEntries(jstDatePartsFormat.formatToParts(date).map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
 }
