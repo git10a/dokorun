@@ -1,6 +1,7 @@
-import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
+import { and, asc, count, desc, eq, gte, ilike, inArray, lt, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
 import { courses, favoriteSpots, hashiritai, photos, runs, spots, spotTags, tags, userPbs, users } from "./schema";
+import { jstDayBounds } from "@/lib/jst";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
 
@@ -277,6 +278,15 @@ export async function getPublicRuns(spotId: string, limit = 10) {
     userId: users.id, userName: users.name, userHandle: users.handle, userImage: users.image, userCustomAvatarAt: users.customAvatarAt, courseName: courses.name,
   }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
     .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
+}
+
+export async function getTodayRunId(spotId: string, userId: string): Promise<string | null> {
+  const { start, end } = jstDayBounds();
+  const row = await getDb().select({ id: runs.id }).from(runs)
+    .where(and(eq(runs.spotId, spotId), eq(runs.userId, userId), gte(runs.ranAt, start), lt(runs.ranAt, end)))
+    .orderBy(desc(runs.createdAt))
+    .limit(1);
+  return row[0]?.id ?? null;
 }
 
 export async function getProfileUser(handle: string) {

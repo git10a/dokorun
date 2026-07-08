@@ -2,8 +2,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNearbySpots, getPublicRuns, getSpotBySlug, isFavoriteForUser, isHashiritaiForUser } from "@/db/data";
+import { getNearbySpots, getPublicRuns, getSpotBySlug, getTodayRunId, isFavoriteForUser, isHashiritaiForUser } from "@/db/data";
 import { CourseMap } from "@/components/map/course-map";
+import { CheckInButton } from "@/components/checkin-button";
 import { DirectionsLink } from "@/components/directions-link";
 import { FacilityIcons } from "@/components/facility-icons";
 import { TrackView } from "@/components/track-view";
@@ -33,16 +34,19 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 }
 
 const runDateFormat = new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeZone: "Asia/Tokyo" });
+const uuidPattern = /^[0-9a-f-]{36}$/i;
 
-export default async function SpotDetailPage({ params, searchParams }: { params: Params; searchParams: Promise<{ logs?: string; posted?: string }> }) {
+export default async function SpotDetailPage({ params, searchParams }: { params: Params; searchParams: Promise<{ logs?: string; posted?: string; run?: string }> }) {
   const [{ slug }, query, user] = await Promise.all([params, searchParams, getUser()]);
   const spot = await getSpotBySlug(slug);
   if (!spot) notFound();
-  const [nearby, publicRuns, initialLiked, initialFavorite] = await Promise.all([
+  const safeRunId = query.run && uuidPattern.test(query.run) ? query.run : null;
+  const [nearby, publicRuns, initialLiked, initialFavorite, todayRunId] = await Promise.all([
     getNearbySpots(spot.prefecture, spot.id),
     getPublicRuns(spot.id, query.logs === "all" ? 100 : 10),
     user ? isHashiritaiForUser(spot.id, user.id) : false,
     user ? isFavoriteForUser(spot.id, user.id) : false,
+    user ? getTodayRunId(spot.id, user.id) : null,
   ]);
   const destinations = getNearbyDestinations(spot.slug);
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -75,12 +79,13 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
       <NearbyDestinations places={destinations} />
       <section id="dokolog" className="rounded-2xl bg-cream px-5 py-8 sm:px-7">
-        <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのドコログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><Link href={user ? `/spots/${spot.slug}/log/new` : `/login?callbackURL=${encodeURIComponent(`/spots/${spot.slug}/log/new`)}`} className="rounded-lg bg-brand px-4 py-2.5 text-sm font-bold">走った記録を投稿</Link></div>
+        <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのドコログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><div className="flex flex-wrap items-center gap-3"><CheckInButton spotId={spot.id} spotSlug={spot.slug} loggedIn={Boolean(user)} todayRunId={todayRunId} /><Link href={user ? `/spots/${spot.slug}/log/new` : `/login?callbackURL=${encodeURIComponent(`/spots/${spot.slug}/log/new`)}`} className="rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold">ひとことつきで投稿</Link></div></div>
         {query.posted === "1" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ドコログを投稿しました</p>}
+        {query.posted === "checkin" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">走ったよを記録しました 🏃 {safeRunId && <Link href={`/me/logs/${safeRunId}/edit?returnTo=spot`} className="underline">ひとことを追加する</Link>}</p>}
         {query.posted === "updated" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ドコログを更新しました</p>}
         <div className="mt-6 space-y-4">{publicRuns.map((run) => {
           const userImage = avatarUrl({ id: run.userId, image: run.userImage, customAvatarAt: run.userCustomAvatarAt });
-          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div></div>{user?.id === run.userId && <Link href={`/me/logs/${run.id}/edit?returnTo=spot`} className="text-sm font-bold text-accent">編集</Link>}</div>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>;
+          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div></div>{user?.id === run.userId && <Link href={`/me/logs/${run.id}/edit?returnTo=spot`} className="text-sm font-bold text-accent">編集</Link>}</div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>;
         })}</div>
         {!publicRuns.length && <p className="mt-6 text-sub">まだドコログはありません。最初の記録を残してみませんか 🏃</p>}
         {query.logs !== "all" && spot.runsCount > 10 && <Link href={`/spots/${spot.slug}?logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}

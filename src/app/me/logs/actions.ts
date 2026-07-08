@@ -6,10 +6,12 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { runs, spots } from "@/db/schema";
+import { jstDayBounds, jstNoon } from "@/lib/jst";
 import { assertRunOwnership } from "@/lib/run-auth";
 import { requireUser } from "@/lib/user";
 
 export type RunFormState = { message?: string; errors?: Record<string, string[]> };
+export type CheckInState = { message?: string };
 
 const runSchema = z.object({
   id: z.string().uuid().optional(),
@@ -21,6 +23,11 @@ const runSchema = z.object({
   returnTo: z.enum(["spot", "me"]).optional(),
 });
 
+const checkInSchema = z.object({
+  spotId: z.string().uuid(),
+  spotSlug: z.string().min(1).max(120),
+});
+
 const blockedWords = ["死ね", "殺す", "消えろ", "ばか"];
 
 function values(formData: FormData) {
@@ -29,12 +36,6 @@ function values(formData: FormData) {
     return { success: false as const, error: { flatten: () => ({ fieldErrors: { comment: ["投稿できない表現が含まれています"] } }) } };
   }
   return parsed;
-}
-
-function jstDayBounds(now = new Date()) {
-  const shifted = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const start = new Date(Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate()) - 9 * 60 * 60 * 1000);
-  return { start, end: new Date(start.getTime() + 24 * 60 * 60 * 1000) };
 }
 
 function runValues(data: z.infer<typeof runSchema>) {
@@ -48,6 +49,39 @@ function runValues(data: z.infer<typeof runSchema>) {
     visibility: data.visibility,
     updatedAt: new Date(),
   };
+}
+
+export async function checkInRun(_: CheckInState, formData: FormData): Promise<CheckInState> {
+  const spotSlug = String(formData.get("spotSlug") ?? "");
+  const user = await requireUser(`/spots/${spotSlug}#dokolog`);
+  const parsed = checkInSchema.safeParse(Object.fromEntries(formData.entries()));
+  if (!parsed.success) return { message: "スポットが見つかりません" };
+  const db = getDb();
+  const now = new Date();
+  const { start, end } = jstDayBounds(now);
+  const daily = await db.select({ count: count() }).from(runs).where(and(eq(runs.userId, user.id), gte(runs.createdAt, start), lt(runs.createdAt, end)));
+  if ((daily[0]?.count ?? 0) >= 20) return { message: "1日に投稿できる記録は20件までです" };
+  const existing = await db.select({ id: runs.id }).from(runs)
+    .where(and(eq(runs.userId, user.id), eq(runs.spotId, parsed.data.spotId), gte(runs.ranAt, start), lt(runs.ranAt, end)))
+    .limit(1);
+  if (existing[0]) return { message: "今日はこのスポットで記録済みです" };
+  const spot = await db.select({ id: spots.id }).from(spots)
+    .where(and(eq(spots.id, parsed.data.spotId), eq(spots.slug, parsed.data.spotSlug), eq(spots.isPublished, true)))
+    .limit(1);
+  if (!spot[0]) return { message: "スポットが見つかりません" };
+  const inserted = await db.insert(runs).values({
+    userId: user.id,
+    spotId: parsed.data.spotId,
+    courseId: null,
+    ranAt: jstNoon(now),
+    distanceM: null,
+    durationS: null,
+    comment: null,
+    visibility: "public",
+    updatedAt: new Date(),
+  }).returning({ id: runs.id });
+  revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
+  redirect(`/spots/${parsed.data.spotSlug}?posted=checkin&run=${inserted[0].id}#dokolog`);
 }
 
 export async function createRun(_: RunFormState, formData: FormData): Promise<RunFormState> {
