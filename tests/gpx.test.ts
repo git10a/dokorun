@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseGpx } from "@/lib/gpx";
+import { parseGpx } from "@/lib/gpx-node";
 
 const wrap = (points: string) => `<?xml version="1.0"?><gpx><trk><trkseg>${points}</trkseg></trk></gpx>`;
 

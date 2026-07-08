@@ -19,4 +19,4 @@ export async function middleware(request: NextRequest) {
   return NextResponse.redirect(login);
 }
 
-export const config = { matcher: ["/me/:path*", "/admin/:path*", "/api/gpx/:path*", "/api/upload/:path*"] };
+export const config = { matcher: ["/me/:path*", "/admin/:path*", "/api/upload/:path*"] };

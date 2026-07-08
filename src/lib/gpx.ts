@@ -1,8 +1,6 @@
-import { XMLParser } from "fast-xml-parser";
 import type { CourseType, LineString } from "./types";
 
-type Point = { lat: number; lng: number; ele: number | null };
-type XmlNode = Record<string, unknown>;
+export type GpxPoint = { lat: number; lng: number; ele: number | null };
 
 export type GpxResult = {
   geojson: LineString;
@@ -14,7 +12,7 @@ export type GpxResult = {
 
 const earthRadiusM = 6_371_000;
 
-export function haversine(a: Pick<Point, "lat" | "lng">, b: Pick<Point, "lat" | "lng">) {
+export function haversine(a: Pick<GpxPoint, "lat" | "lng">, b: Pick<GpxPoint, "lat" | "lng">) {
   const toRad = (value: number) => (value * Math.PI) / 180;
   const dLat = toRad(b.lat - a.lat);
   const dLng = toRad(b.lng - a.lng);
@@ -24,20 +22,7 @@ export function haversine(a: Pick<Point, "lat" | "lng">, b: Pick<Point, "lat" | 
   return 2 * earthRadiusM * Math.asin(Math.sqrt(h));
 }
 
-function asArray<T>(value: T | T[] | undefined): T[] {
-  if (value === undefined) return [];
-  return Array.isArray(value) ? value : [value];
-}
-
-function readPoint(value: Record<string, unknown>): Point | null {
-  const lat = Number(value["@_lat"]);
-  const lng = Number(value["@_lon"]);
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
-  const rawEle = value.ele;
-  return { lat, lng, ele: rawEle === undefined ? null : Number(rawEle) };
-}
-
-function perpendicularDistance(point: Point, start: Point, end: Point) {
+function perpendicularDistance(point: GpxPoint, start: GpxPoint, end: GpxPoint) {
   const dx = end.lng - start.lng;
   const dy = end.lat - start.lat;
   if (dx === 0 && dy === 0) return Math.hypot(point.lng - start.lng, point.lat - start.lat);
@@ -45,7 +30,7 @@ function perpendicularDistance(point: Point, start: Point, end: Point) {
   return Math.hypot(point.lng - (start.lng + t * dx), point.lat - (start.lat + t * dy));
 }
 
-function simplify(points: Point[], tolerance: number): Point[] {
+function simplify(points: GpxPoint[], tolerance: number): GpxPoint[] {
   if (points.length <= 2) return points;
   let maxDistance = 0;
   let index = 0;
@@ -57,7 +42,7 @@ function simplify(points: Point[], tolerance: number): Point[] {
   return [...simplify(points.slice(0, index + 1), tolerance).slice(0, -1), ...simplify(points.slice(index), tolerance)];
 }
 
-function elevationGain(points: Point[]) {
+function elevationGain(points: GpxPoint[]) {
   if (points.some((point) => point.ele === null || !Number.isFinite(point.ele))) return null;
   const values = points.map((point) => point.ele as number);
   const smoothed = values.map((_, index) => {
@@ -67,7 +52,7 @@ function elevationGain(points: Point[]) {
   return Math.round(smoothed.slice(1).reduce((sum, value, index) => sum + Math.max(0, value - smoothed[index]), 0));
 }
 
-function pointAtDistance(points: Point[], cumulative: number[], distance: number): Point {
+function pointAtDistance(points: GpxPoint[], cumulative: number[], distance: number): GpxPoint {
   const clamped = Math.max(0, Math.min(distance, cumulative[cumulative.length - 1]));
   let index = 1;
   while (index < cumulative.length && cumulative[index] < clamped) index += 1;
@@ -81,7 +66,7 @@ function pointAtDistance(points: Point[], cumulative: number[], distance: number
   };
 }
 
-function isOutAndBack(points: Point[]) {
+function isOutAndBack(points: GpxPoint[]) {
   const cumulative = [0];
   for (let index = 1; index < points.length; index += 1) {
     cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
@@ -95,25 +80,7 @@ function isOutAndBack(points: Point[]) {
   return gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length <= 40 && Math.max(...gaps) <= 120;
 }
 
-export function parseGpx(xml: string): GpxResult {
-  let parsed: XmlNode;
-  try {
-    parsed = new XMLParser({ ignoreAttributes: false }).parse(xml);
-  } catch {
-    throw new Error("GPXファイルを解析できませんでした");
-  }
-  const gpx = parsed.gpx;
-  if (!gpx || typeof gpx !== "object" || Array.isArray(gpx)) throw new Error("GPXファイルを解析できませんでした");
-  const gpxNode = gpx as XmlNode;
-  const trackPoints = asArray(gpxNode.trk).flatMap((track) =>
-    track && typeof track === "object" && !Array.isArray(track)
-      ? asArray((track as XmlNode).trkseg).flatMap((segment) => segment && typeof segment === "object" && !Array.isArray(segment) ? asArray((segment as XmlNode).trkpt) : [])
-      : [],
-  );
-  const routePoints = asArray(gpxNode.rte).flatMap((route) => route && typeof route === "object" && !Array.isArray(route) ? asArray((route as XmlNode).rtept) : []);
-  const points = (trackPoints.length ? trackPoints : routePoints)
-    .map((point) => point && typeof point === "object" && !Array.isArray(point) ? readPoint(point as XmlNode) : null)
-    .filter((point: Point | null): point is Point => Boolean(point));
+export function gpxResultFromPoints(points: GpxPoint[]): GpxResult {
   if (points.length < 2) throw new Error("GPXファイルを解析できませんでした");
 
   const distanceM = Math.round(points.slice(1).reduce((sum, point, index) => sum + haversine(points[index], point), 0));
@@ -128,4 +95,28 @@ export function parseGpx(xml: string): GpxResult {
     suggestedCourseType: closed && !isOutAndBack(points) ? "loop" : "out_and_back",
     startPoint: { lat: points[0].lat, lng: points[0].lng },
   };
+}
+
+function readElementPoint(element: Element): GpxPoint | null {
+  const lat = Number(element.getAttribute("lat"));
+  const lng = Number(element.getAttribute("lon"));
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  const rawEle = element.querySelector("ele")?.textContent;
+  const ele = rawEle === undefined || rawEle === null || rawEle === "" ? null : Number(rawEle);
+  return { lat, lng, ele };
+}
+
+export function parseGpxDocument(document: Document): GpxResult {
+  const trackPoints = Array.from(document.querySelectorAll("trkpt"));
+  const routePoints = Array.from(document.querySelectorAll("rtept"));
+  const points = (trackPoints.length ? trackPoints : routePoints)
+    .map(readElementPoint)
+    .filter((point): point is GpxPoint => Boolean(point));
+  return gpxResultFromPoints(points);
+}
+
+export function parseGpxXmlInBrowser(xml: string): GpxResult {
+  const document = new DOMParser().parseFromString(xml, "application/xml");
+  if (document.querySelector("parsererror")) throw new Error("GPXファイルを解析できませんでした");
+  return parseGpxDocument(document);
 }

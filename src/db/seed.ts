@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { config } from "dotenv";
 import { getDb } from ".";
 import { courses, spotTags, spots, tags } from "./schema";
+import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import type { CourseType, Lighting, LineString, Surface } from "@/lib/types";
 
 config({ path: ".env.local" });
@@ -58,7 +59,8 @@ async function seed() {
     } }).returning({ id: spots.id });
     await db.delete(courses).where(eq(courses.spotId, spot.id));
     await db.delete(spotTags).where(eq(spotTags.spotId, spot.id));
-    await db.insert(courses).values({ spotId: spot.id, geojson: route(item.lat, item.lng, Math.min(0.012, item.distanceM / 700000)), distanceM: item.distanceM, elevationGainM: item.elevation, courseType: item.courseType, surface: item.surface, signalsCount: item.signals });
+    const geojson = route(item.lat, item.lng, Math.min(0.012, item.distanceM / 700000));
+    await db.insert(courses).values({ spotId: spot.id, geojson, geojsonSimplified: simplifyCourseGeojson(geojson), distanceM: item.distanceM, elevationGainM: item.elevation, courseType: item.courseType, surface: item.surface, signalsCount: item.signals });
     const selected = allTags.filter((tag) => item.tagSlugs.includes(tag.slug));
     if (selected.length) await db.insert(spotTags).values(selected.map((tag) => ({ spotId: spot.id, tagId: tag.id })));
   }

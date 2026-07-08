@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
 import { eq } from "drizzle-orm";
 import { config } from "dotenv";
-import { parseGpx } from "../src/lib/gpx";
+import { parseGpx } from "../src/lib/gpx-node";
+import { simplifyCourseGeojson } from "../src/lib/course-geojson";
 import { getDb } from "../src/db";
 import { courses, spots } from "../src/db/schema";
 
@@ -35,6 +36,7 @@ async function main() {
     }
     const values = {
       geojson: gpx.geojson,
+      geojsonSimplified: simplifyCourseGeojson(gpx.geojson),
       distanceM: Math.round(gpx.distanceM),
       elevationGainM: gpx.elevationGainM,
     };

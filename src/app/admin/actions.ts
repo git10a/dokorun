@@ -8,6 +8,7 @@ import { z } from "zod";
 import { getDb, withTxDb } from "@/db";
 import { courses, photos, runs, spots, spotTags, tags } from "@/db/schema";
 import { createSessionToken, isAdmin, sessionCookieName } from "@/lib/auth";
+import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import type { LineString } from "@/lib/types";
 
 export type FormState = { message?: string; errors?: Record<string, string[]> };
@@ -59,7 +60,7 @@ function flags(formData: FormData) {
 async function writeRelations(tx: Parameters<Parameters<ReturnType<typeof getDb>["transaction"]>[0]>[0], spotId: string, data: z.infer<typeof spotSchema>, formData: FormData) {
   let geojson: LineString | null = null;
   if (data.geojson) { try { geojson = JSON.parse(data.geojson) as LineString; } catch { geojson = null; } }
-  await tx.insert(courses).values({ spotId, distanceM: Math.round(data.distanceKm * 1000), elevationGainM: data.elevationGainM === null ? null : Math.round(data.elevationGainM), signalsCount: data.signalsCount === null ? null : Math.round(data.signalsCount), courseType: data.courseType, surface: data.surface, geojson });
+  await tx.insert(courses).values({ spotId, distanceM: Math.round(data.distanceKm * 1000), elevationGainM: data.elevationGainM === null ? null : Math.round(data.elevationGainM), signalsCount: data.signalsCount === null ? null : Math.round(data.signalsCount), courseType: data.courseType, surface: data.surface, geojson, geojsonSimplified: simplifyCourseGeojson(geojson) });
   const tagIds = formData.getAll("tagIds").map(String).filter(Boolean);
   if (tagIds.length) {
     const existing = await tx.select({ id: tags.id }).from(tags).where(inArray(tags.id, tagIds));

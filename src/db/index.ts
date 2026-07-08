@@ -10,7 +10,7 @@ type Database = ReturnType<typeof drizzleNeon<typeof schema>>;
 
 let database: Database | undefined;
 
-const isWorkers = globalThis.navigator?.userAgent === "Cloudflare-Workers";
+export const isWorkersRuntime = globalThis.navigator?.userAgent === "Cloudflare-Workers";
 
 function requireUrl() {
   if (!process.env.DATABASE_URL) {
@@ -19,8 +19,12 @@ function requireUrl() {
   return process.env.DATABASE_URL;
 }
 
-function isNeon(url: string) {
+export function isNeon(url: string) {
   return new URL(url).hostname.endsWith(".neon.tech");
+}
+
+export function canCacheRequestExternalDb(url = requireUrl()) {
+  return isWorkersRuntime && isNeon(url);
 }
 
 // 接続先ごとのドライバ:
@@ -34,13 +38,13 @@ export function getDb() {
   const url = requireUrl();
   // preview(workerd)からローカルPostgresへ接続する場合も、I/Oをリクエスト間で
   // 共有できない。短いアイドルタイムの接続をリクエスト内で作り直す。
-  if (isWorkers && !isNeon(url)) {
+  if (isWorkersRuntime && !isNeon(url)) {
     const client = postgres(url, { prepare: false, max: 1, idle_timeout: 1 });
     return drizzlePostgres(client, { schema }) as unknown as Database;
   }
   if (!database) {
     if (isNeon(url)) {
-      if (isWorkers) {
+      if (isWorkersRuntime) {
         database = drizzleNeonHttp(neon(url), { schema }) as unknown as Database;
       } else {
         // Node 20にはWebSocketグローバルがないためwsで代替する
@@ -61,7 +65,7 @@ export function getDb() {
 // (リクエストをまたいでI/Oを共有できないためキャッシュしない)。それ以外はgetDb()と同じ。
 export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> {
   const url = requireUrl();
-  if (isNeon(url) && isWorkers) {
+  if (isNeon(url) && isWorkersRuntime) {
     const pool = new Pool({ connectionString: url });
     try {
       return await fn(drizzleNeon(pool, { schema }));
@@ -69,7 +73,7 @@ export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> 
       await pool.end();
     }
   }
-  if (isWorkers) {
+  if (isWorkersRuntime) {
     const client = postgres(url, { prepare: false, max: 1 });
     try {
       const db = drizzlePostgres(client, { schema }) as unknown as Database;

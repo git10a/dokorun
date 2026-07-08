@@ -42,8 +42,8 @@ async function addRelations<T extends {
   signalsCount: number | null;
   courseType: CourseType;
   surface: Surface;
-  courseGeojson: LineString | null;
-}>(rows: T[]): Promise<(SpotSummary & Omit<T, "courseGeojson">)[]> {
+  hasCourse: boolean;
+}>(rows: T[]): Promise<(SpotSummary & T)[]> {
   if (!rows.length) return [];
   const db = getDb();
   const ids = rows.map((row) => row.id);
@@ -52,13 +52,11 @@ async function addRelations<T extends {
     db.select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name }).from(spotTags).innerJoin(tags, eq(spotTags.tagId, tags.id)).where(inArray(spotTags.spotId, ids)).orderBy(tags.sortOrder),
   ]);
   return rows.map((row) => {
-    const { courseGeojson, ...summary } = row;
     return {
-      ...summary,
-      hasCourse: Boolean(courseGeojson?.coordinates?.length),
+      ...row,
       photoUrl: photoRows.find((photo) => photo.spotId === row.id)?.url ?? null,
       tags: tagRows.filter((tag) => tag.spotId === row.id).map(({ slug, name }) => ({ slug, name })),
-    } as SpotSummary & Omit<T, "courseGeojson">;
+    } as SpotSummary & T;
   });
 }
 
@@ -83,7 +81,7 @@ const summarySelection = {
   signalsCount: courses.signalsCount,
   courseType: courses.courseType,
   surface: courses.surface,
-  courseGeojson: courses.geojson,
+  hasCourse: sql<boolean>`coalesce(jsonb_array_length(${courses.geojson}->'coordinates') > 0, false)`,
 };
 
 export async function getTags() {
@@ -211,13 +209,18 @@ export async function getSpotBySlug(slug: string) {
     nightLighting: spots.nightLighting,
     elevationGainM: courses.elevationGainM,
     signalsCount: courses.signalsCount,
-    geojson: courses.geojson,
+    // バックフィル済みなら簡略版だけを取り、生geojson(最大90KB級)のパースを避ける
+    geojson: sql<LineString | null>`coalesce(${courses.geojsonSimplified}, ${courses.geojson})`,
+    isSimplified: sql<boolean>`${courses.geojsonSimplified} is not null`,
   }).from(spots).innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
     .where(and(eq(spots.slug, slug), eq(spots.isPublished, true))).limit(1);
   const row = rows[0];
   if (!row) return null;
+  const geojson = row.geojson
+    ? (row.isSimplified ? row.geojson : { ...row.geojson, coordinates: simplifyLine(row.geojson.coordinates, 0.00005) } as LineString)
+    : null;
   const [decorated, allPhotos, hashiritaiCount, runsCount] = await Promise.all([
-    addRelations([{ ...row, courseGeojson: row.geojson }]),
+    addRelations([row]),
     db.select().from(photos).where(eq(photos.spotId, row.id)).orderBy(photos.sortOrder),
     db.select({ count: count() }).from(hashiritai).where(eq(hashiritai.spotId, row.id)),
     db.select({ count: count() }).from(runs).where(and(eq(runs.spotId, row.id), eq(runs.visibility, "public"))),
@@ -225,7 +228,7 @@ export async function getSpotBySlug(slug: string) {
   return {
     ...decorated[0],
     nightLighting: row.nightLighting as Lighting,
-    geojson: row.geojson ? { ...row.geojson, coordinates: simplifyLine(row.geojson.coordinates, 0.00005) } as LineString : null,
+    geojson,
     photos: allPhotos,
     hashiritaiCount: hashiritaiCount[0]?.count ?? 0,
     runsCount: runsCount[0]?.count ?? 0,

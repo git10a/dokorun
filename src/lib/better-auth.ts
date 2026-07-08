@@ -1,7 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { getDb } from "@/db";
+import { canCacheRequestExternalDb, getDb } from "@/db";
 import * as schema from "@/db/schema";
 
 function handleBase(email: string) {
@@ -28,7 +28,7 @@ const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
 
 export const isGoogleAuthConfigured = Boolean(googleClientId && googleClientSecret);
 
-export function createAuth() {
+function buildAuth() {
   return betterAuth({
   appName: "ドコラン",
   baseURL: process.env.BETTER_AUTH_URL || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
@@ -40,6 +40,10 @@ export function createAuth() {
     // Workers の neon-http はトランザクション非対応。Better Auth は複数操作を順次実行する。
     transaction: false,
   }),
+  session: {
+    // 署名付きcookieで5分だけセッションDB照会を省く。サインアウト後の他タブ反映は最大5分遅れる。
+    cookieCache: { enabled: true, maxAge: 300 },
+  },
   advanced: {
     database: { generateId: () => crypto.randomUUID() },
     cookiePrefix: "dokorun",
@@ -70,6 +74,14 @@ export function createAuth() {
     },
   },
   });
+}
+
+let cachedAuth: ReturnType<typeof buildAuth> | undefined;
+
+export function createAuth() {
+  if (!canCacheRequestExternalDb()) return buildAuth();
+  cachedAuth ??= buildAuth();
+  return cachedAuth;
 }
 
 // Better Auth CLIのスキーマ生成用。実リクエストではcreateAuth()を使い、

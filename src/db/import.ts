@@ -121,7 +121,7 @@ async function run() {
         nightLighting: entry.nightLighting ?? null, ...entry.facilities,
       }).returning({ id: spots.id });
       await tx.insert(courses).values({
-        spotId: spot.id, geojson: null, distanceM: entry.course.distanceM, courseType: entry.course.courseType,
+        spotId: spot.id, geojson: null, geojsonSimplified: null, distanceM: entry.course.distanceM, courseType: entry.course.courseType,
         surface: entry.course.surface, elevationGainM: entry.course.elevationGainM ?? null, signalsCount: entry.course.signalsCount ?? null,
       });
       if (tagIds.length) await tx.insert(spotTags).values(tagIds.map((tagId) => ({ spotId: spot.id, tagId })));

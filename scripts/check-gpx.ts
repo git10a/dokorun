@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { parseGpx } from "../src/lib/gpx";
+import { parseGpx } from "../src/lib/gpx-node";
 
 // 使い方: npm run gpx:check -- <gpxファイルパス>
 // GPXを登録せずに解析結果だけ表示する。gpx:applyの前の検証に使う。
