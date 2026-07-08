@@ -22,6 +22,7 @@ const runSchema = z.object({
   durationMinutes: optionalNumber,
   comment: z.string().trim().max(500, "ひとことは500文字までです"),
   visibility: z.enum(["public", "private"]),
+  returnTo: z.enum(["spot", "me"]).optional(),
 });
 
 const blockedWords = ["死ね", "殺す", "消えろ", "ばか"];
@@ -86,6 +87,7 @@ export async function updateRun(_: RunFormState, formData: FormData): Promise<Ru
   if (!await validateCourse(parsed.data.spotId, parsed.data.courseId)) return { message: "選択したコースを確認してください" };
   await db.update(runs).set(runValues(parsed.data)).where(and(eq(runs.id, parsed.data.id), eq(runs.userId, user.id)));
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
+  if (parsed.data.returnTo === "spot") redirect(`/spots/${parsed.data.spotSlug}?posted=updated#dokolog`);
   redirect("/me/logs?success=updated");
 }
 
@@ -102,4 +104,3 @@ export async function deleteRun(formData: FormData) {
   const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, current[0].spotId)).limit(1);
   if (spot[0]) revalidatePath(`/spots/${spot[0].slug}`);
 }
-

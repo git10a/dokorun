@@ -112,6 +112,7 @@ export const userPbs = pgTable("user_pbs", {
   userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
   event: text("event").notNull(),
   timeS: integer("time_s").notNull(),
+  competitionName: text("competition_name"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 }, (t) => [uniqueIndex("user_pbs_user_event_unique").on(t.userId, t.event)]);

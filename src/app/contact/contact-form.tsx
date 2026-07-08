@@ -42,6 +42,7 @@ export function ContactForm() {
       <div>
         <label htmlFor="feedback-contact" className="mb-2 block font-bold">連絡先 <span className="text-sm font-normal text-sub">(任意・メールアドレスやXアカウントなど)</span></label>
         <input id="feedback-contact" name="contact" maxLength={200} placeholder="you@example.com / @dokorun" className={inputClass} />
+        <p className="mt-2 text-sm leading-6 text-sub">内容の確認のため、折り返し連絡をすることがあります。</p>
       </div>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
       {state.status === "error" && <p role="alert" className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-[#B3261E]">{state.message}</p>}

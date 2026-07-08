@@ -102,14 +102,20 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
   const user = await requireUser("/me");
   const db = getDb();
   const errors: Record<string, string[]> = {};
-  const updates: { event: string; timeS: number | null }[] = [];
+  const updates: { event: string; timeS: number | null; competitionName: string | null }[] = [];
   for (const event of PB_EVENTS) {
     const hourValue = String(formData.get(`${event.key}-h`) ?? "");
     const minuteValue = String(formData.get(`${event.key}-m`) ?? "");
     const secondValue = String(formData.get(`${event.key}-s`) ?? "");
+    const competitionName = String(formData.get(`${event.key}-competition`) ?? "").trim();
     const hasAny = [hourValue, minuteValue, secondValue].some((value) => value !== "");
     if (!hasAny) {
-      updates.push({ event: event.key, timeS: null });
+      if (competitionName) errors[event.key] = [`${event.label}のタイムを入力してください`];
+      updates.push({ event: event.key, timeS: null, competitionName: null });
+      continue;
+    }
+    if (competitionName.length > 80) {
+      errors[event.key] = ["大会名は80文字までです"];
       continue;
     }
     const hours = hourValue === "" ? 0 : Number(hourValue);
@@ -122,15 +128,15 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
     const timeS = secondsFromParts(hours, minutes, seconds);
     const error = validatePbTime(event.key, timeS);
     if (error) errors[event.key] = [error];
-    updates.push({ event: event.key, timeS });
+    updates.push({ event: event.key, timeS, competitionName: competitionName || null });
   }
   if (Object.keys(errors).length) return { status: "error", message: "自己ベストを確認してください", errors };
   for (const update of updates) {
     if (update.timeS === null) {
       await db.delete(userPbs).where(and(eq(userPbs.userId, user.id), eq(userPbs.event, update.event)));
     } else {
-      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS })
-        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, updatedAt: new Date() } });
+      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS, competitionName: update.competitionName })
+        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, competitionName: update.competitionName, updatedAt: new Date() } });
     }
   }
   revalidatePath("/me");

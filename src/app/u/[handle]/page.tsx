@@ -32,14 +32,14 @@ function runnerYears(year: number | null, month: number | null) {
   return Math.floor(Math.max(months, 0) / 12) + 1;
 }
 
-function PbTable({ pbs }: { pbs: { event: string; timeS: number }[] }) {
-  const map = new Map(pbs.map((pb) => [pb.event, pb.timeS]));
-  const rows = PB_EVENTS.map((event) => ({ ...event, timeS: map.get(event.key) })).filter((event) => event.timeS);
+function PbTable({ pbs }: { pbs: { event: string; timeS: number; competitionName: string | null }[] }) {
+  const map = new Map(pbs.map((pb) => [pb.event, pb]));
+  const rows = PB_EVENTS.map((event) => ({ ...event, pb: map.get(event.key) })).filter((event) => event.pb);
   if (!rows.length) return <p className="text-sub">自己ベストはまだ登録されていません</p>;
   return (
     <div className="overflow-hidden rounded-xl border border-line">
       <table className="w-full text-sm">
-        <tbody>{rows.map((row) => <tr key={row.key} className="border-b border-line last:border-0"><th className="bg-cream px-4 py-3 text-left font-bold">{row.label}</th><td className="px-4 py-3 font-bold">{formatDuration(row.timeS!)}</td><td className="px-4 py-3 text-sub">{formatPace(row.timeS!, row.meters)}</td></tr>)}</tbody>
+        <tbody>{rows.map((row) => <tr key={row.key} className="border-b border-line last:border-0"><th className="bg-cream px-4 py-3 text-left font-bold">{row.label}</th><td className="px-4 py-3 font-bold">{formatDuration(row.pb!.timeS)}</td><td className="px-4 py-3 text-sub">{row.pb!.competitionName ? <><span className="font-bold text-ink">{row.pb!.competitionName}</span><br /><span>{formatPace(row.pb!.timeS, row.meters)}</span></> : formatPace(row.pb!.timeS, row.meters)}</td></tr>)}</tbody>
       </table>
     </div>
   );
@@ -106,7 +106,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
       )}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">自己ベスト</h2><PbTable pbs={pbs} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">好きなコース</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">好きなコースはまだ登録されていません</p>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ドコログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}{run.courseName ? ` ・ ${run.courseName}` : ""}</p></div><p className="mt-3 text-sm font-bold">{run.distanceM ? `${(run.distanceM / 1000).toFixed(2)}km` : "距離未入力"}{run.durationS ? ` ・ ${Math.round(run.durationS / 60)}分` : ""}</p>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ドコログはまだありません</p>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ドコログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ドコログはまだありません</p>}</section>
     </div>
   );
 }
