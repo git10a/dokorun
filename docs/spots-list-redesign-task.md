@@ -22,11 +22,11 @@ pnpmがクラッシュする環境のため、コマンドはすべて `npm run 
 - カードは白背景・薄い枠線・角丸。ページ背景は白〜薄グレーでカードが浮く
 - ページネーションは数字リンクの横並び
 
-## ドコランへの翻案(このリポジトリでの仕様)
+## どこランへの翻案(このリポジトリでの仕様)
 
-サウナイキタイの語彙をドコランに置き換える:
+サウナイキタイの語彙をどこランに置き換える:
 
-| サウナイキタイ | ドコラン |
+| サウナイキタイ | どこラン |
 |---|---|
 | サウナ温度 105℃ | 距離 **5.0**km |
 | 水風呂温度 15℃ | 高低差 **12**m |
@@ -72,7 +72,7 @@ pnpmがクラッシュする環境のため、コマンドはすべて `npm run 
      - 各項目は「小さいラベル(text-[11px] text-sub) + 大きい数値(text-xl sm:text-2xl font-bold) + 小さい単位(text-xs)」の構成。距離の数値のみ `text-brand-dark` で色を付ける(現行カード踏襲)
      - 距離: `(distanceM / 1000).toFixed(distanceM % 1000 ? 1 : 0)` + "km"(現行ロジック流用)
      - 高低差: `elevationGainM` + "m"。null なら数値部分を "−" にする(項目ごと消さない。3項目並んでいることが視覚的リズムを作る)
-     - 信号: `signalsCount`。0 のときも "0" と表示する(信号ゼロはドコランの最大の売り)。null なら "−"
+     - 信号: `signalsCount`。0 のときも "0" と表示する(信号ゼロはどこランの最大の売り)。null なら "−"
   4. `text-sm` で「{courseTypeLabels[courseType]}・{surfaceLabels[surface]}」
   5. タグチップ(現行の `rounded-full bg-cream px-2.5 py-1 text-xs`、`slice(0, 3)`)と `FacilityIcons`(compact)を1行にまとめる(`flex flex-wrap items-center gap-1.5`)。モバイルで窮屈ならタグは2個に減らしてよい
 - lucide-reactのアイコンをスペック項目に添えるのは任意。付けるなら距離=`Route`、高低差=`Mountain` 程度にとどめ、数字より目立たせない

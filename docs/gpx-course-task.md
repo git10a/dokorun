@@ -244,5 +244,5 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 154 | yurihama-kaigansen | 湯梨浜町海岸線コース | 鳥取県湯梨浜町 | 17200 | done | BRouter生成 18478m(橋津→国道9号沿い往復) |
 | 155 | yakushima-seibu-rindo | 屋久島西部林道コース | 鹿児島県屋久島町 | 22700 | done | BRouter生成 25472m(永田いなか浜→大川の滝)。レポートのout_and_backは矛盾のためone_wayに修正 |
 | 156 | amami-ayamaru | 奄美あやまる岬コース | 鹿児島県奄美市 | 16000 | done | BRouter生成 17134m(奄美パーク→あやまる岬折返し) |
-| 157 | tokunoshima-shoko-road | 尚子ロード特訓コース(徳之島) | 鹿児島県天城町・徳之島町 | 31200 | done | BRouter生成 35715m(与名間→島北部周回) |
+| 157 | tokunoshima-naoko-road | 尚子ロード特訓コース(徳之島) | 鹿児島県天城町・徳之島町 | 31200 | done | BRouter生成 35715m(与名間→島北部周回) |
 | 158 | yoron-loop | 与論島一周コース | 鹿児島県与論町 | 19400 | done | ユーザー提供のヨロンマラソン公式コースGPX(島一周を両方向に往復する42.7km)から往路1周分を切り出し+起点まで834mをBRouterで接続 22867m。原本は data/gpx/yoron-marathon-full.gpx。紹介文も約23kmに修正 |

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { handle } = await params;
   const user = await getProfileUser(handle);
   if (!user) return { title: "プロフィールが見つかりません", robots: { index: false } };
-  return { title: `${user.name}さんのプロフィール | ドコラン`, robots: { index: false } };
+  return { title: `${user.name}さんのプロフィール | どこラン`, robots: { index: false } };
 }
 
 const runDateFormat = new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeZone: "Asia/Tokyo" });

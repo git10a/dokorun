@@ -30,7 +30,7 @@ export const isGoogleAuthConfigured = Boolean(googleClientId && googleClientSecr
 
 function buildAuth() {
   return betterAuth({
-  appName: "ドコラン",
+  appName: "どこラン",
   baseURL: process.env.BETTER_AUTH_URL || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   secret: process.env.BETTER_AUTH_SECRET || "dokorun-local-development-secret-change-me",
   database: drizzleAdapter(getDb(), {

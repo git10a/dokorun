@@ -8,7 +8,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 md:px-6">
         <Link href="/" className="flex shrink-0 items-center gap-1.5 font-bold tracking-tight sm:gap-2">
           <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-brand sm:size-9"><Footprints size={20} /></span>
-          <span className="whitespace-nowrap text-[11px] sm:text-lg">ドコラン</span>
+          <span className="whitespace-nowrap text-[11px] sm:text-lg">どこラン</span>
         </Link>
         <nav aria-label="メインナビゲーション" className="flex shrink-0 items-center gap-2 text-[10px] font-bold sm:gap-5 sm:text-sm">
           <Link href="/spots" className="hidden transition-colors hover:text-accent sm:inline">スポットをさがす</Link>

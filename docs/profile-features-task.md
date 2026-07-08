@@ -222,7 +222,7 @@ select day, max(cnt) from (
 - 表示: アバター（`avatarUrl`）/ 表示名 / bio / SNSアイコン（social-links）/ ランナー歴 / PBテーブル / 草カレンダー / 好きなコース（スポットカード）/ 公開ドコログ最新10件（`visibility = 'public'` のみ。private は絶対に出さない）。
 - **email は絶対に表示しない**。
 - 導線: `/me` に「公開プロフィールを見る」リンク。スポット詳細のドコログのユーザー名（`src/app/spots/[slug]/page.tsx:79` 付近）を `/u/[handle]` へのリンクに変更（クエリに users.handle を追加）。
-- メタ: `generateMetadata` でタイトル「◯◯さんのプロフィール | ドコラン」。`robots: { index: false }` を初期値にする（本人が知らないうちに検索に載るのを避ける。開放は将来判断）。
+- メタ: `generateMetadata` でタイトル「◯◯さんのプロフィール | どこラン」。`robots: { index: false }` を初期値にする（本人が知らないうちに検索に載るのを避ける。開放は将来判断）。
 
 ---
 

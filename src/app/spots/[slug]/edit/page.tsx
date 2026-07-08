@@ -32,7 +32,7 @@ export default async function SpotEditPage({ params }: { params: Params }) {
         <ul className="mt-2 list-disc pl-5 text-sub">
           <li>わかる項目だけの修正で大丈夫です</li>
           <li>修正した内容はすぐにページへ反映されます</li>
-          <li>ドコランのユーザーなら誰でも情報を修正できます</li>
+          <li>どこランのユーザーなら誰でも情報を修正できます</li>
         </ul>
       </div>
       <SpotEditForm spot={{

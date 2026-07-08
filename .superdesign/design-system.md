@@ -1,4 +1,4 @@
-# ドコラン Design System
+# どこラン Design System
 
 ## Product
 
