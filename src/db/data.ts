@@ -266,7 +266,7 @@ export async function getSpotCourses(spotId: string) {
 export async function getPublicRuns(spotId: string, limit = 10) {
   return getDb().select({
     id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
-    userName: users.name, userHandle: users.handle, userImage: users.image, userAvatarKey: users.avatarKey, courseName: courses.name,
+    userId: users.id, userName: users.name, userHandle: users.handle, userImage: users.image, userCustomAvatarAt: users.customAvatarAt, courseName: courses.name,
   }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
     .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
 }
@@ -278,11 +278,12 @@ export async function getProfileUser(handle: string) {
     handle: users.handle,
     bio: users.bio,
     image: users.image,
-    avatarKey: users.avatarKey,
+    customAvatarAt: users.customAvatarAt,
     instagram: users.instagram,
     xHandle: users.xHandle,
     strava: users.strava,
     runningSinceYear: users.runningSinceYear,
+    runningSinceMonth: users.runningSinceMonth,
   }).from(users).where(eq(users.handle, handle)).limit(1);
   return rows[0] ?? null;
 }

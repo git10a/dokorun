@@ -90,12 +90,20 @@ export const users = pgTable("users", {
   image: text("image"),
   handle: text("handle").notNull().unique(),
   bio: text("bio"),
-  avatarKey: text("avatar_key"),
+  customAvatarAt: timestamp("custom_avatar_at"),
   instagram: text("instagram"),
   xHandle: text("x_handle"),
   strava: text("strava"),
   runningSinceYear: integer("running_since_year"),
+  runningSinceMonth: integer("running_since_month"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
+export const userAvatars = pgTable("user_avatars", {
+  userId: uuid("user_id").primaryKey().references(() => users.id, { onDelete: "cascade" }),
+  data: text("data").notNull(),
+  contentType: text("content_type").notNull(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 

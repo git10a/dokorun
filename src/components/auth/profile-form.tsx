@@ -1,13 +1,14 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { updateProfile, type ProfileState } from "@/app/me/actions";
 import { jstYear } from "@/lib/jst";
 
 const inputClass = "mt-2 w-full rounded-lg border border-line bg-paper px-3 py-2.5";
 
-export function ProfileForm({ user }: { user: { name: string; handle: string; bio: string | null; instagram?: string | null; xHandle?: string | null; strava?: string | null; runningSinceYear?: number | null } }) {
+export function ProfileForm({ user }: { user: { name: string; handle: string; bio: string | null; instagram?: string | null; xHandle?: string | null; strava?: string | null; runningSinceYear?: number | null; runningSinceMonth?: number | null } }) {
   const [state, action, pending] = useActionState<ProfileState, FormData>(updateProfile, {});
+  const [hasYear, setHasYear] = useState(Boolean(user.runningSinceYear));
   const currentYear = jstYear();
   const years = Array.from({ length: currentYear - 1950 + 1 }, (_, index) => currentYear - index);
   return (
@@ -21,12 +22,19 @@ export function ProfileForm({ user }: { user: { name: string; handle: string; bi
         <div><label htmlFor="profile-strava" className="font-bold">Strava</label><input id="profile-strava" name="strava" maxLength={120} placeholder="IDまたはURL" defaultValue={user.strava ?? ""} className={inputClass} />{state.errors?.strava?.map((error) => <p key={error} className="mt-1 text-sm text-danger">{error}</p>)}</div>
       </div>
       <div>
-        <label htmlFor="profile-running-since" className="font-bold">走り始めた年</label>
-        <select id="profile-running-since" name="runningSinceYear" defaultValue={user.runningSinceYear ?? ""} className={inputClass}>
-          <option value="">未設定</option>
-          {years.map((year) => <option key={year} value={year}>{year}年</option>)}
-        </select>
+        <label htmlFor="profile-running-since" className="font-bold">走り始めた年月</label>
+        <div className="mt-2 grid grid-cols-2 gap-3">
+          <select id="profile-running-since" name="runningSinceYear" defaultValue={user.runningSinceYear ?? ""} onChange={(event) => setHasYear(event.target.value !== "")} className={inputClass.replace("mt-2 ", "")}>
+            <option value="">未設定</option>
+            {years.map((year) => <option key={year} value={year}>{year}年</option>)}
+          </select>
+          <select id="profile-running-since-month" name="runningSinceMonth" defaultValue={user.runningSinceMonth ?? ""} disabled={!hasYear} className={inputClass.replace("mt-2 ", "") + " disabled:opacity-60"}>
+            <option value="">未設定</option>
+            {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => <option key={month} value={month}>{month}月</option>)}
+          </select>
+        </div>
         {state.errors?.runningSinceYear?.map((error) => <p key={error} className="mt-1 text-sm text-danger">{error}</p>)}
+        {state.errors?.runningSinceMonth?.map((error) => <p key={error} className="mt-1 text-sm text-danger">{error}</p>)}
       </div>
       {state.message && <p role="status" className={`rounded-lg px-4 py-3 text-sm font-bold ${state.status === "saved" ? "bg-cream" : "bg-danger/10 text-danger"}`}>{state.message}</p>}
       <button disabled={pending} className="rounded-lg bg-brand px-5 py-3 font-bold disabled:opacity-60">{pending ? "保存中…" : "保存する"}</button>

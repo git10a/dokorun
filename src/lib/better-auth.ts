@@ -3,7 +3,6 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { canCacheRequestExternalDb, getDb } from "@/db";
 import * as schema from "@/db/schema";
-import { isAvatarKey } from "@/lib/avatars";
 
 function handleBase(email: string) {
   const normalized = email.split("@")[0]?.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") ?? "";
@@ -63,7 +62,6 @@ function buildAuth() {
       // DB側は NOT NULL のまま、生成は下の before フックが保証する
       handle: { type: "string", required: false, input: false },
       bio: { type: "string", required: false, input: false },
-      avatarKey: { type: "string", required: false, input: true },
     },
   },
   databaseHooks: {
@@ -72,14 +70,6 @@ function buildAuth() {
         before: async (user) => ({
           data: { ...user, handle: await availableHandle(user.email), bio: null },
         }),
-      },
-      update: {
-        before: async (user) => {
-          if ("avatarKey" in user && user.avatarKey !== null && user.avatarKey !== undefined && !isAvatarKey(user.avatarKey)) {
-            throw new Error("invalid_avatar_key");
-          }
-          return { data: user };
-        },
       },
     },
   },

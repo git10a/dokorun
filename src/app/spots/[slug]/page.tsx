@@ -79,7 +79,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
         {query.posted === "1" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ドコログを投稿しました</p>}
         <div className="mt-6 space-y-4">{publicRuns.map((run) => {
           const pace = run.distanceM && run.durationS ? run.durationS / 60 / (run.distanceM / 1000) : null;
-          const userImage = avatarUrl({ image: run.userImage, avatarKey: run.userAvatarKey });
+          const userImage = avatarUrl({ id: run.userId, image: run.userImage, customAvatarAt: run.userCustomAvatarAt });
           return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}{run.courseName ? ` ・ ${run.courseName}` : ""}</p></div></div><p className="mt-3 text-sm font-bold">{run.distanceM ? `${(run.distanceM / 1000).toFixed(2)}km` : ""}{run.durationS ? ` ・ ${Math.round(run.durationS / 60)}分` : ""}{pace ? ` ・ ${Math.floor(pace)}:${String(Math.round((pace % 1) * 60)).padStart(2, "0")}/km` : ""}</p>{run.comment && <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>}</article>;
         })}</div>
         {!publicRuns.length && <p className="mt-6 text-sub">まだドコログはありません。最初の記録を残してみませんか 🏃</p>}

@@ -2,16 +2,18 @@
 
 import { and, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
-import { favoriteSpots, runDays, spots, userPbs, users } from "@/db/schema";
+import { favoriteSpots, runDays, spots, userAvatars, userPbs, users } from "@/db/schema";
 import { jstDayFromOffset, jstYear } from "@/lib/jst";
 import { PB_EVENTS, secondsFromParts, validatePbTime } from "@/lib/pb";
 import { normalizeInstagram, normalizeStrava, normalizeXHandle } from "@/lib/social";
-import { requireUser } from "@/lib/user";
+import { getUser, requireUser } from "@/lib/user";
 
 export type ProfileState = { status?: "saved" | "error"; message?: string; errors?: Record<string, string[]> };
 export type PbState = { status?: "saved" | "error"; message?: string; errors?: Record<string, string[]> };
+export type AvatarState = { status?: "saved" | "error"; message?: string };
 
 const profileSchema = z.object({
   name: z.string().trim().min(1, "表示名を入力してください").max(50, "表示名は50文字までです"),
@@ -21,7 +23,11 @@ const profileSchema = z.object({
   xHandle: z.string().trim().max(120).optional(),
   strava: z.string().trim().max(120).optional(),
   runningSinceYear: z.preprocess((value) => value === "" ? null : Number(value), z.number().int().min(1950).max(jstYear()).nullable()),
+  runningSinceMonth: z.preprocess((value) => value === "" ? null : Number(value), z.number().int().min(1).max(12).nullable()),
 });
+
+const allowedAvatarTypes = new Set(["image/webp", "image/jpeg", "image/png"]);
+const maxAvatarBytes = 200 * 1024;
 
 function normalizeOptional(value: string | undefined, normalize: (value: string) => string | null) {
   if (!value) return null;
@@ -40,6 +46,7 @@ export async function updateProfile(_: ProfileState, formData: FormData): Promis
   if (parsed.data.xHandle && !xHandle) errors.xHandle = ["Xのユーザー名またはURLを確認してください"];
   if (parsed.data.strava && !strava) errors.strava = ["StravaのID・ユーザー名またはURLを確認してください"];
   if (Object.keys(errors).length) return { status: "error", message: "入力内容を確認してください", errors };
+  const runningSinceMonth = parsed.data.runningSinceYear ? parsed.data.runningSinceMonth : null;
   try {
     await getDb().update(users).set({
       name: parsed.data.name,
@@ -49,6 +56,7 @@ export async function updateProfile(_: ProfileState, formData: FormData): Promis
       xHandle,
       strava,
       runningSinceYear: parsed.data.runningSinceYear,
+      runningSinceMonth,
       updatedAt: new Date(),
     }).where(eq(users.id, user.id));
   } catch (error) {
@@ -56,8 +64,38 @@ export async function updateProfile(_: ProfileState, formData: FormData): Promis
     return { status: "error", message: "保存できませんでした。時間をおいて再度お試しください" };
   }
   revalidatePath("/me");
-  revalidatePath(`/u/${parsed.data.handle}`);
+  revalidatePath(`/u/${user.handle}`);
+  if (parsed.data.handle !== user.handle) {
+    revalidatePath(`/u/${parsed.data.handle}`);
+    redirect(`/u/${parsed.data.handle}`);
+  }
   return { status: "saved", message: "プロフィールを保存しました" };
+}
+
+export async function updateAvatar(formData: FormData): Promise<AvatarState> {
+  const user = await getUser();
+  if (!user) return { status: "error", message: "ログインしてください" };
+  const file = formData.get("file");
+  if (!(file instanceof File)) return { status: "error", message: "画像が指定されていません" };
+  if (!allowedAvatarTypes.has(file.type)) return { status: "error", message: "webp・jpeg・pngのみアップロードできます" };
+  if (file.size > maxAvatarBytes) return { status: "error", message: "画像サイズが大きすぎます" };
+  const data = Buffer.from(await file.arrayBuffer()).toString("base64");
+  const db = getDb();
+  await db.insert(userAvatars).values({ userId: user.id, data, contentType: file.type })
+    .onConflictDoUpdate({ target: userAvatars.userId, set: { data, contentType: file.type, updatedAt: new Date() } });
+  await db.update(users).set({ customAvatarAt: new Date() }).where(eq(users.id, user.id));
+  revalidatePath(`/u/${user.handle}`);
+  return { status: "saved", message: "アバターを更新しました" };
+}
+
+export async function deleteAvatar(): Promise<AvatarState> {
+  const user = await getUser();
+  if (!user) return { status: "error", message: "ログインしてください" };
+  const db = getDb();
+  await db.delete(userAvatars).where(eq(userAvatars.userId, user.id));
+  await db.update(users).set({ customAvatarAt: null }).where(eq(users.id, user.id));
+  revalidatePath(`/u/${user.handle}`);
+  return { status: "saved", message: "Googleの画像に戻しました" };
 }
 
 export async function updatePbs(_: PbState, formData: FormData): Promise<PbState> {
