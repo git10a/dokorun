@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BookOpen, Heart, Star } from "lucide-react";
 import { getProfileUser, getPublicRunsByUser, getUserFavorites, getUserPbs } from "@/db/data";
 import { ProfileEditPanel } from "@/components/auth/profile-edit-panel";
 import { SocialLinks } from "@/components/social-links";
@@ -32,15 +31,29 @@ function runnerYears(year: number | null, month: number | null) {
   return Math.floor(Math.max(months, 0) / 12) + 1;
 }
 
-function PbTable({ pbs }: { pbs: { event: string; timeS: number; competitionName: string | null }[] }) {
+function PbSummary({ pbs }: { pbs: { event: string; timeS: number; competitionName: string | null }[] }) {
   const map = new Map(pbs.map((pb) => [pb.event, pb]));
   const rows = PB_EVENTS.map((event) => ({ ...event, pb: map.get(event.key) })).filter((event) => event.pb);
-  if (!rows.length) return <p className="text-sub">自己ベストはまだ登録されていません</p>;
+  if (!rows.length) {
+    return (
+      <div className="mt-4 rounded-xl bg-cream px-4 py-3 text-sm">
+        <span className="font-bold">自己ベスト</span>
+        <span className="ml-3 text-sub">未登録</span>
+      </div>
+    );
+  }
   return (
-    <div className="overflow-hidden rounded-xl border border-line">
-      <table className="w-full text-sm">
-        <tbody>{rows.map((row) => <tr key={row.key} className="border-b border-line last:border-0"><th className="bg-cream px-4 py-3 text-left font-bold">{row.label}</th><td className="px-4 py-3 font-bold">{formatDuration(row.pb!.timeS)}</td><td className="px-4 py-3 text-sub">{row.pb!.competitionName ? <><span className="font-bold text-ink">{row.pb!.competitionName}</span><br /><span>{formatPace(row.pb!.timeS, row.meters)}</span></> : formatPace(row.pb!.timeS, row.meters)}</td></tr>)}</tbody>
-      </table>
+    <div className="mt-4 rounded-xl bg-cream px-4 py-3 text-sm">
+      <p className="font-bold">自己ベスト</p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {rows.map((row) => (
+          <span key={row.key} className="rounded-full border border-line bg-paper px-3 py-1">
+            <span className="font-bold">{row.label}</span>
+            <span className="ml-2">{formatDuration(row.pb!.timeS)}</span>
+            <span className="ml-1 text-xs text-sub">{formatPace(row.pb!.timeS, row.meters)}</span>
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -77,6 +90,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
               </span>
             )}
           </div>
+          <PbSummary pbs={pbs} />
           {isOwner && (
             <ProfileEditPanel
               avatarUser={{ id: user.id, image: user.image, customAvatarAt: user.customAvatarAt }}
@@ -95,18 +109,8 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           )}
         </div>
       </header>
-      {isOwner && (
-        <section>
-          <div className="grid gap-3 sm:grid-cols-3">
-            <Link href="/me/hashiritai" className="flex items-center gap-3 rounded-xl border border-line p-5 font-bold hover:bg-cream"><Heart className="text-danger" />走りたいスポット</Link>
-            <Link href="/me/favorites" className="flex items-center gap-3 rounded-xl border border-line p-5 font-bold hover:bg-cream"><Star className="text-brand-dark" />お気に入りコース</Link>
-            <Link href="/me/logs" className="flex items-center gap-3 rounded-xl border border-line p-5 font-bold hover:bg-cream"><BookOpen className="text-accent" />走った記録・ドコログ</Link>
-          </div>
-        </section>
-      )}
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">自己ベスト</h2><PbTable pbs={pbs} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">好きなコース</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">好きなコースはまだ登録されていません</p>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ドコログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ドコログはまだありません</p>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
     </div>
   );
 }
