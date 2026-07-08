@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { assertRunOwnership } from "@/lib/run-auth";
 
-describe("ドコログの認可", () => {
+describe("ランログの認可", () => {
   it("本人の記録は変更できる", () => {
     expect(() => assertRunOwnership("user-a", "user-a")).not.toThrow();
   });
@@ -10,4 +10,3 @@ describe("ドコログの認可", () => {
     expect(() => assertRunOwnership("owner", "attacker")).toThrow("権限がありません");
   });
 });
-

@@ -1,10 +1,8 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
-import { Check, Link2, Share2 } from "lucide-react";
+import { useState } from "react";
+import { Check, Link2 } from "lucide-react";
 import { track } from "@/lib/track";
-
-const emptySubscribe = () => () => {};
 
 const buttonClass = "flex items-center gap-1.5 rounded-lg border border-line bg-paper px-3 py-2 text-sm font-bold hover:bg-cream";
 
@@ -14,8 +12,6 @@ function XLogo({ size = 14 }: { size?: number }) {
 
 export function ShareButtons({ url, text }: { url: string; text: string }) {
   const [copied, setCopied] = useState(false);
-  // SSR時はfalse、クライアントでは実際のWeb Share API対応状況を返す
-  const canShare = useSyncExternalStore(emptySubscribe, () => typeof navigator.share === "function", () => false);
 
   const copy = async () => {
     track("share", { channel: "copy" });
@@ -28,17 +24,11 @@ export function ShareButtons({ url, text }: { url: string; text: string }) {
     }
   };
 
-  const nativeShare = () => {
-    track("share", { channel: "native" });
-    navigator.share({ title: text, url }).catch(() => {});
-  };
-
   return (
     <div className="flex flex-wrap items-center gap-2" aria-label="このスポットをシェア">
       <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer" onClick={() => track("share", { channel: "x" })} className={buttonClass}><XLogo />ポスト</a>
       <a href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer" onClick={() => track("share", { channel: "line" })} className={buttonClass}>LINEで送る</a>
       <button type="button" onClick={copy} className={buttonClass}>{copied ? <Check size={14} /> : <Link2 size={14} />}{copied ? "コピーしました" : "リンクをコピー"}</button>
-      {canShare && <button type="button" onClick={nativeShare} className={buttonClass}><Share2 size={14} />シェア</button>}
     </div>
   );
 }
