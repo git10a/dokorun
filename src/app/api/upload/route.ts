@@ -18,7 +18,9 @@ export async function POST(request: Request) {
   try {
     const key = `spots/${crypto.randomUUID()}.${extension}`;
     const { env } = getCloudflareContext();
-    await env.IMAGE_BUCKET.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: file.type } });
+    // R2は現在wrangler.jsonc未バインディング(未有効化)。有効化時はIMAGE_BUCKETがCloudflareEnvに現れる
+    const bucket = (env as CloudflareEnv & { IMAGE_BUCKET: R2Bucket }).IMAGE_BUCKET;
+    await bucket.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: file.type } });
     return NextResponse.json({ url: `${publicBase.replace(/\/+$/, "")}/${key}` });
   } catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : "アップロードできませんでした" }, { status: 400 }); }
 }
