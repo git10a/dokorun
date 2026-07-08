@@ -6,6 +6,9 @@
   "compatibility_flags": ["nodejs_compat"],
   // 無料プランのWorkerサイズ上限(gzip後3MiB)対策。better-auth追加で超過したため必須
   "minify": true,
+  // リクエスト別ログ(URL・CPU超過の内訳をダッシュボードのObservabilityタブで確認可能)。
+  // 無料枠は1日20万イベントで現状トラフィック(1.2万req/日)なら十分
+  "observability": { "enabled": true },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"

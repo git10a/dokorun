@@ -1,5 +1,10 @@
+// Intl.DateTimeFormatの生成は1回あたり約0.07msと高価で、草カレンダーは1レンダーで
+// 500回以上呼ぶ(Workers無料プランのCPU 10ms上限を生成コストだけで超える)。必ず使い回す。
+const jstDateFormat = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" });
+const jstYearFormat = new Intl.DateTimeFormat("en", { timeZone: "Asia/Tokyo", year: "numeric" });
+
 export function jstDateString(date = new Date()) {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(date);
+  return jstDateFormat.format(date);
 }
 
 export function jstDayFromOffset(offsetDays: 0 | -1) {
@@ -8,5 +13,5 @@ export function jstDayFromOffset(offsetDays: 0 | -1) {
 }
 
 export function jstYear(date = new Date()) {
-  return Number(new Intl.DateTimeFormat("en", { timeZone: "Asia/Tokyo", year: "numeric" }).format(date));
+  return Number(jstYearFormat.format(date));
 }
