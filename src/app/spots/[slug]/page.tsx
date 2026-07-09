@@ -3,7 +3,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPublicRuns, getSpotDetailWithNearby, getUserSpotState } from "@/db/data";
+import { getPublicRuns, getSpotCommunities, getSpotDetailWithNearby, getUserSpotState } from "@/db/data";
 import { CourseMap } from "@/components/map/course-map";
 import { CheckInButton } from "@/components/checkin-button";
 import { DirectionsLink } from "@/components/directions-link";
@@ -17,6 +17,7 @@ import { TrackUsagePanel } from "@/components/track-usage-panel";
 import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
+import { SpotCommunities } from "@/components/spot-communities";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
@@ -47,9 +48,10 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   if (!detail) notFound();
   const { spot, nearby } = detail;
   const safeRunId = query.run && uuidPattern.test(query.run) ? query.run : null;
-  const [publicRuns, userState] = await Promise.all([
+  const [publicRuns, userState, spotCommunities] = await Promise.all([
     getPublicRuns(spot.id, query.logs === "all" ? 100 : 10),
     user ? getUserSpotState(spot.id, user.id) : null,
+    getSpotCommunities(spot.id),
   ]);
   const initialLiked = userState?.isHashiritai ?? false;
   const initialFavorite = userState?.isFavorite ?? false;
@@ -85,6 +87,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       {spot.trackUsage && <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">トラック利用情報</h2><TrackUsagePanel usage={spot.trackUsage} /></section>}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備</h2><FacilityIcons spot={spot} /></section>
       <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
+      <SpotCommunities communities={spotCommunities} />
       <NearbyDestinations places={destinations} />
       <section id="dokolog" className="rounded-2xl bg-cream px-5 py-8 sm:px-7">
         <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのランログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><div className="flex flex-wrap items-center gap-3"><CheckInButton spotId={spot.id} spotSlug={spot.slug} loggedIn={Boolean(user)} todayRunId={todayRunId} /><Link href={user ? `/spots/${spot.slug}/log/new` : `/login?callbackURL=${encodeURIComponent(`/spots/${spot.slug}/log/new`)}`} className="rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold">ひとことつきで投稿</Link></div></div>

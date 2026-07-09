@@ -201,6 +201,28 @@ export const hashiritai = pgTable("hashiritai", {
   index("hashiritai_user_idx").on(t.userId),
 ]);
 
+// この場所で活動しているランニングコミュニティ。プロフィールは薄く保ち、鮮度は外部リンク先に委ねる
+export const communities = pgTable("communities", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  schedule: text("schedule"),
+  instagram: text("instagram"),
+  xHandle: text("x_handle"),
+  website: text("website"),
+  isPublished: boolean("is_published").notNull().default(true),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
+export const spotCommunities = pgTable("spot_communities", {
+  spotId: uuid("spot_id").notNull().references(() => spots.id, { onDelete: "cascade" }),
+  communityId: uuid("community_id").notNull().references(() => communities.id, { onDelete: "cascade" }),
+}, (t) => [
+  uniqueIndex("spot_communities_pk").on(t.spotId, t.communityId),
+  index("spot_communities_community_idx").on(t.communityId),
+]);
+
 export const feedback = pgTable("feedback", {
   id: uuid("id").primaryKey().defaultRandom(),
   category: text("category").notNull(), // "spot_request" | "contact"

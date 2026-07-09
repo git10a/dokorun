@@ -1,6 +1,6 @@
 import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
-import { courses, favoriteSpots, hashiritai, photos, runs, spots, spotTags, tags, userPbs, users } from "./schema";
+import { communities, courses, favoriteSpots, hashiritai, photos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
 import { jstDayBounds } from "@/lib/jst";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
@@ -340,6 +340,45 @@ export async function getPublicRuns(spotId: string, limit = 10) {
     userId: users.id, userName: users.name, userHandle: users.handle, userImage: users.image, userCustomAvatarAt: users.customAvatarAt, courseName: courses.name,
   }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
     .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
+}
+
+export async function getSpotCommunities(spotId: string) {
+  return getDb().select({
+    id: communities.id,
+    name: communities.name,
+    description: communities.description,
+    schedule: communities.schedule,
+    instagram: communities.instagram,
+    xHandle: communities.xHandle,
+    website: communities.website,
+  }).from(spotCommunities)
+    .innerJoin(communities, eq(communities.id, spotCommunities.communityId))
+    .where(and(eq(spotCommunities.spotId, spotId), eq(communities.isPublished, true)))
+    .orderBy(communities.createdAt);
+}
+
+export async function getAdminCommunities() {
+  return getDb().select({
+    id: communities.id,
+    name: communities.name,
+    schedule: communities.schedule,
+    isPublished: communities.isPublished,
+    spotCount: sql<number>`(select count(*)::int from ${spotCommunities} where ${spotCommunities.communityId} = ${communities.id})`,
+  }).from(communities).orderBy(desc(communities.updatedAt));
+}
+
+export async function getAdminCommunity(id: string) {
+  const db = getDb();
+  const rows = await db.select().from(communities).where(eq(communities.id, id)).limit(1);
+  if (!rows[0]) return null;
+  const spotRows = await db.select({ spotId: spotCommunities.spotId }).from(spotCommunities).where(eq(spotCommunities.communityId, id));
+  return { ...rows[0], spotIds: spotRows.map((row) => row.spotId) };
+}
+
+// admin用: コミュニティ紐付けUIのスポット選択肢
+export async function getSpotOptions() {
+  return getDb().select({ id: spots.id, name: spots.name, prefecture: spots.prefecture }).from(spots)
+    .orderBy(spots.prefecture, spots.nameKana);
 }
 
 export async function getProfileUser(handle: string) {

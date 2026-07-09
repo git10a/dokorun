@@ -16,6 +16,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
         <div><p className="text-sm font-bold text-sub">ADMIN</p><h1 className="text-3xl font-bold">スポット管理</h1></div>
         <div className="flex flex-wrap gap-3">
           <form action={logout}><button className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">ログアウト</button></form>
+          <Link href="/admin/communities" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">コミュニティ</Link>
           <Link href="/admin/logs" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">ランログ</Link>
           <Link href="/admin/feedback" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">お問い合わせ</Link>
           <Link href="/admin/stats" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">統計</Link>
