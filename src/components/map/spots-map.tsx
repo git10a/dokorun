@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
+import { addPoiEmphasis } from "./poi-emphasis";
 import type { MapSpot } from "@/lib/types";
 
 export function SpotsMap({ spots }: { spots: MapSpot[] }) {
@@ -15,6 +16,7 @@ export function SpotsMap({ spots }: { spots: MapSpot[] }) {
       if (disposed || !container.current) return;
       map = new maplibregl.Map({ container: container.current, style: "https://tiles.openfreemap.org/styles/liberty", center: [spots[0].lng, spots[0].lat], zoom: 10 });
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      map.on("load", () => { if (map) void addPoiEmphasis(map); });
       const bounds = new maplibregl.LngLatBounds();
       spots.forEach((spot) => {
         bounds.extend([spot.lng, spot.lat]);

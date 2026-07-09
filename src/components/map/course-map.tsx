@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
+import { addPoiEmphasis } from "./poi-emphasis";
 import type { LineString } from "@/lib/types";
 
 export function CourseMap({ lat, lng, geojson }: { lat: number; lng: number; geojson: LineString | null; name?: string }) {
@@ -17,6 +18,7 @@ export function CourseMap({ lat, lng, geojson }: { lat: number; lng: number; geo
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
       map.on("load", () => {
         if (!map) return;
+        void addPoiEmphasis(map);
         if (geojson) {
           map.addSource("course", { type: "geojson", data: geojson });
           map.addLayer({ id: "course", type: "line", source: "course", paint: { "line-color": "#1A1A1A", "line-width": 4, "line-opacity": 0.85 } });
