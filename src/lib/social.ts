@@ -1,9 +1,10 @@
-export type SocialService = "instagram" | "x" | "strava";
+export type SocialService = "instagram" | "x" | "strava" | "stravaClub";
 
 const patterns: Record<SocialService, RegExp> = {
   instagram: /^[a-zA-Z0-9._]{1,30}$/,
   x: /^[A-Za-z0-9_]{1,15}$/,
   strava: /^[a-zA-Z0-9_-]{1,64}$/,
+  stravaClub: /^[a-zA-Z0-9_-]{1,64}$/,
 };
 
 function stripUrl(value: string, hosts: string[]) {
@@ -43,8 +44,17 @@ export function normalizeStrava(value: string) {
   return patterns.strava.test(name) ? name : null;
 }
 
+// コミュニティ用: Stravaクラブ(clubs/xxx)のslugに正規化する
+export function normalizeStravaClub(value: string) {
+  const stripped = stripUrl(value, ["strava.com"]);
+  const parts = stripped.split("/").filter(Boolean);
+  const name = parts[0] === "clubs" ? parts[1] ?? "" : parts.length === 1 ? parts[0] : "";
+  return patterns.strava.test(name) ? name : null;
+}
+
 export function socialUrl(service: SocialService, value: string) {
   if (service === "instagram") return `https://www.instagram.com/${value}`;
   if (service === "x") return `https://x.com/${value}`;
+  if (service === "stravaClub") return `https://www.strava.com/clubs/${value}`;
   return `https://www.strava.com/athletes/${value}`;
 }

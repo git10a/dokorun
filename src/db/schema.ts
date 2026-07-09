@@ -209,6 +209,7 @@ export const communities = pgTable("communities", {
   schedule: text("schedule"),
   instagram: text("instagram"),
   xHandle: text("x_handle"),
+  strava: text("strava"), // Stravaクラブのslug(個人のathletesではなくclubs)
   website: text("website"),
   isPublished: boolean("is_published").notNull().default(true),
   createdAt: timestamp("created_at").notNull().defaultNow(),

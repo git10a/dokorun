@@ -7,7 +7,7 @@ import type { FormState } from "@/app/admin/actions";
 type SpotOption = { id: string; name: string; prefecture: string };
 type Initial = {
   id?: string; name?: string; description?: string; schedule?: string | null;
-  instagram?: string | null; xHandle?: string | null; website?: string | null;
+  instagram?: string | null; xHandle?: string | null; strava?: string | null; website?: string | null;
   isPublished?: boolean; spotIds?: string[];
 };
 
@@ -33,9 +33,10 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
       <section>
         <h2 className="mb-2 text-xl font-bold">2. リンク</h2>
         <p className="mb-5 text-sm text-sub">ハンドル名(@なしでも可)またはURLで入力できます。</p>
-        <div className="grid gap-5 sm:grid-cols-3">
-          <Field label="Instagram" name="instagram" placeholder="hinode_running" defaultValue={initial.instagram ?? ""} />
-          <Field label="X" name="xHandle" placeholder="hinode_running" defaultValue={initial.xHandle ?? ""} />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Field label="Instagram" name="instagram" placeholder="hinode_run" defaultValue={initial.instagram ?? ""} />
+          <Field label="X" name="xHandle" placeholder="hinode_run" defaultValue={initial.xHandle ?? ""} />
+          <Field label="Stravaクラブ" name="strava" placeholder="strava.com/clubs/hinode" defaultValue={initial.strava ?? ""} />
           <Field label="Webサイト" name="website" placeholder="https://example.com" defaultValue={initial.website ?? ""} />
         </div>
       </section>

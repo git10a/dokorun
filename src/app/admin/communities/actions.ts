@@ -7,7 +7,7 @@ import { z } from "zod";
 import { getDb, withTxDb } from "@/db";
 import { communities, spotCommunities, spots } from "@/db/schema";
 import { isAdmin } from "@/lib/auth";
-import { normalizeInstagram, normalizeXHandle } from "@/lib/social";
+import { normalizeInstagram, normalizeStravaClub, normalizeXHandle } from "@/lib/social";
 import type { FormState } from "../actions";
 
 const optionalText = z.preprocess((value) => {
@@ -31,6 +31,7 @@ const communitySchema = z.object({
   schedule: optionalText,
   instagram: optionalSocial(normalizeInstagram, "Instagramのユーザー名またはURLを入力してください"),
   xHandle: optionalSocial(normalizeXHandle, "Xのユーザー名またはURLを入力してください"),
+  strava: optionalSocial(normalizeStravaClub, "StravaクラブのslugまたはURLを入力してください"),
   website: optionalText.refine((value) => value === null || /^https?:\/\//.test(value), "WebサイトはURL(https://〜)で入力してください"),
 });
 
@@ -64,7 +65,7 @@ export async function createCommunity(_: FormState, formData: FormData): Promise
     await withTxDb((db) => db.transaction(async (tx) => {
       const [community] = await tx.insert(communities).values({
         name: data.name, description: data.description, schedule: data.schedule,
-        instagram: data.instagram, xHandle: data.xHandle, website: data.website,
+        instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
         isPublished: formData.get("isPublished") === "on",
       }).returning({ id: communities.id });
       communityId = community.id;
@@ -87,7 +88,7 @@ export async function updateCommunity(_: FormState, formData: FormData): Promise
     await withTxDb((db) => db.transaction(async (tx) => {
       await tx.update(communities).set({
         name: data.name, description: data.description, schedule: data.schedule,
-        instagram: data.instagram, xHandle: data.xHandle, website: data.website,
+        instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
         isPublished: formData.get("isPublished") === "on", updatedAt: new Date(),
       }).where(eq(communities.id, communityId));
       await tx.delete(spotCommunities).where(eq(spotCommunities.communityId, communityId));

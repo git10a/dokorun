@@ -9,6 +9,7 @@ export type SpotCommunity = {
   schedule: string | null;
   instagram: string | null;
   xHandle: string | null;
+  strava: string | null;
   website: string | null;
 };
 
@@ -37,9 +38,9 @@ export function SpotCommunities({ communities }: { communities: SpotCommunity[] 
               </div>
             </div>
             <p className="mt-3 flex-1 text-sm leading-7 text-sub">{community.description}</p>
-            {(community.instagram || community.xHandle || community.website) && (
+            {(community.instagram || community.xHandle || community.strava || community.website) && (
               <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
-                <SocialLinks links={{ instagram: community.instagram, xHandle: community.xHandle }} />
+                <SocialLinks links={{ instagram: community.instagram, xHandle: community.xHandle, stravaClub: community.strava }} />
                 {community.website && (
                   <a href={community.website} target="_blank" rel="noopener noreferrer" title="Webサイト" className="grid size-10 place-items-center rounded-full border border-line bg-paper text-ink transition-colors hover:bg-brand">
                     <Globe size={16} aria-hidden="true" />

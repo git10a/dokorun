@@ -410,6 +410,7 @@ export async function getSpotCommunities(spotId: string) {
     schedule: communities.schedule,
     instagram: communities.instagram,
     xHandle: communities.xHandle,
+    strava: communities.strava,
     website: communities.website,
   }).from(spotCommunities)
     .innerJoin(communities, eq(communities.id, spotCommunities.communityId))
