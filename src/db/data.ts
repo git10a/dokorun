@@ -192,7 +192,7 @@ function featureCondition(featureSlug: string): SQL | null {
     case "night-run": return eq(spots.nightLighting, "bright");
     case "no-signals": return eq(courses.signalsCount, 0);
     case "long-run": return sql`${courses.distanceM} >= ${longRunDistanceM}`;
-    case "track": return or(eq(courses.courseType, "track"), sql`${spots.trackUsage} is not null`)!;
+    case "track": return or(eq(courses.courseType, "track"), sql`${spots.trackUsage}->>'publicAccess' in ('free', 'paid')`)!;
     case "water-toilet": return and(eq(spots.hasToilet, true), eq(spots.hasWaterFountain, true))!;
     case "shower": return or(eq(spots.hasShower, true), eq(spots.hasSentoNearby, true))!;
     case "parking": return eq(spots.hasParking, true);
@@ -216,7 +216,7 @@ export async function getFeatureCounts(): Promise<Record<string, number>> {
     nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')::int`,
     noSignals: sql<number>`count(*) filter (where ${courses.signalsCount} = 0)::int`,
     longRun: sql<number>`count(*) filter (where ${courses.distanceM} >= ${longRunDistanceM})::int`,
-    track: sql<number>`count(*) filter (where ${courses.courseType} = 'track' or ${spots.trackUsage} is not null)::int`,
+    track: sql<number>`count(*) filter (where ${courses.courseType} = 'track' or ${spots.trackUsage}->>'publicAccess' in ('free', 'paid'))::int`,
     waterToilet: sql<number>`count(*) filter (where ${spots.hasToilet} and ${spots.hasWaterFountain})::int`,
     shower: sql<number>`count(*) filter (where ${spots.hasShower} or ${spots.hasSentoNearby})::int`,
     parking: sql<number>`count(*) filter (where ${spots.hasParking})::int`,

@@ -14,7 +14,7 @@ const optionalText = z.string().trim().min(1).nullable().optional();
 const optionalUrl = z.url().nullable().optional();
 // トラック開放施設の個人利用情報。evidenceNotes/confidenceなどの調査用メタはzodが自動で落とす
 const trackUsageSchema = z.object({
-  publicAccess: z.enum(["free", "paid"]),
+  publicAccess: z.enum(["free", "paid", "unclear"]),
   feeText: optionalText, openingHoursText: optionalText, openDaysText: optionalText, closedDaysText: optionalText,
   reservationText: optionalText, showerText: optionalText, lockerText: optionalText, spikeRulesText: optionalText,
   officialUrl: optionalUrl, feeUrl: optionalUrl, scheduleUrl: optionalUrl,

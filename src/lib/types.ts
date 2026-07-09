@@ -33,7 +33,7 @@ export type MapSpot = Pick<SpotSummary, "slug" | "name" | "lat" | "lng" | "dista
 
 // トラック開放施設(競技場)の個人利用情報。一般的なスポットではnull
 export type TrackUsage = {
-  publicAccess: "free" | "paid";
+  publicAccess: "free" | "paid" | "unclear";
   feeText?: string | null;
   openingHoursText?: string | null;
   openDaysText?: string | null;
