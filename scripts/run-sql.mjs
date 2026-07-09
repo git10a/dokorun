@@ -1,26 +1,20 @@
-// SQLファイルをDATABASE_URLのDBへ適用する小さなランナー。
-// 使い方: node scripts/run-sql.mjs <path/to/file.sql>
-// 接続先は .env.local の DATABASE_URL(環境変数で上書き可)。
-import { readFileSync } from "node:fs";
-import postgres from "postgres";
-import { config } from "dotenv";
+// SQLファイルをD1(dokorun-db)へ適用する小さなランナー。
+// 使い方: node scripts/run-sql.mjs <path/to/file.sql> [--remote]
+//   デフォルトはローカルD1(.wrangler/state)。--remote で本番D1に適用する。
+// 注意: D1のSQLステートメント上限は100KB。巨大なINSERTは分割すること。
+import { execFileSync } from "node:child_process";
 
-config({ path: ".env.local" });
-
-const file = process.argv[2];
+const args = process.argv.slice(2);
+const remote = args.includes("--remote");
+const file = args.find((arg) => !arg.startsWith("--"));
 if (!file) {
-  console.error("usage: node scripts/run-sql.mjs <file.sql>");
-  process.exit(1);
-}
-if (!process.env.DATABASE_URL) {
-  console.error("DATABASE_URL is required");
+  console.error("usage: node scripts/run-sql.mjs <file.sql> [--remote]");
   process.exit(1);
 }
 
-const sql = postgres(process.env.DATABASE_URL, { max: 1 });
-try {
-  await sql.unsafe(readFileSync(file, "utf8"));
-  console.log(`applied: ${file}`);
-} finally {
-  await sql.end();
-}
+execFileSync(
+  "npx",
+  ["wrangler", "d1", "execute", "dokorun-db", remote ? "--remote" : "--local", "--file", file, ...(remote ? ["-y"] : [])],
+  { stdio: "inherit" },
+);
+console.log(`applied: ${file} (${remote ? "remote" : "local"})`);

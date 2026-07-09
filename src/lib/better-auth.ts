@@ -1,7 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { canCacheRequestExternalDb, getDb } from "@/db";
+import { getDb } from "@/db";
 import * as schema from "@/db/schema";
 
 function handleBase(email: string) {
@@ -34,10 +34,10 @@ function buildAuth() {
   baseURL: process.env.BETTER_AUTH_URL || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   secret: process.env.BETTER_AUTH_SECRET || "dokorun-local-development-secret-change-me",
   database: drizzleAdapter(getDb(), {
-    provider: "pg",
+    provider: "sqlite",
     schema,
     usePlural: true,
-    // Workers の neon-http はトランザクション非対応。Better Auth は複数操作を順次実行する。
+    // D1は対話的トランザクション非対応。Better Auth は複数操作を順次実行する。
     transaction: false,
   }),
   session: {
@@ -78,12 +78,11 @@ function buildAuth() {
 
 let cachedAuth: ReturnType<typeof buildAuth> | undefined;
 
+// D1バインディングはリクエスト間で共有しても安全なため常にキャッシュする
 export function createAuth() {
-  if (!canCacheRequestExternalDb()) return buildAuth();
   cachedAuth ??= buildAuth();
   return cachedAuth;
 }
 
-// Better Auth CLIのスキーマ生成用。実リクエストではcreateAuth()を使い、
-// workerd上でローカルDB接続がリクエスト間共有されないようにする。
+// Better Auth CLIのスキーマ生成用。実リクエストではcreateAuth()を使う。
 export const auth = createAuth();

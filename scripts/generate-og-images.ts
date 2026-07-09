@@ -15,8 +15,9 @@ config();
 // OGP画像(1200x630)を public/og/spots/<slug>.jpg に生成する。
 // 引数に slug を渡すとそのスポットだけ再生成する(省略時は geojson を持つ全公開スポット)。
 // gpx:apply やスポット名変更のあとは、対象 slug を指定して再実行すること。
-// 本番と同じ内容にするため、本番Neonの DATABASE_URL で実行するのが基本
-// (.env.production は & を含むため source せず、dotenv経由で環境変数に載せること)。
+// 本番と同じ内容にするため、本番D1のスナップショットで実行するのが基本:
+//   node scripts/d1-snapshot.mjs .d1-build/prod.sqlite
+//   D1_LOCAL_PATH=.d1-build/prod.sqlite npx tsx scripts/generate-og-images.ts
 // 実行にはローカルの Google Chrome が必要(puppeteer-core で起動する)。
 
 const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";

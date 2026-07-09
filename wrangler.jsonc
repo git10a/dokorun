@@ -17,6 +17,14 @@
   "kv_namespaces": [
     { "binding": "NEXT_INC_CACHE_KV", "id": "b9e9e322ead943ed94dd740aa36def2c" }
   ],
+  // 本体DB(Neonから移行。無料枠: 読み500万行/日・書き10万行/日)
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dokorun-db",
+      "database_id": "7e8b11a6-036e-410f-994a-877a672c8a5c"
+    }
+  ],
   // R2はアカウントで未有効化のため一時的にバインディングを外している。
   // 画像アップロードを有効にする場合: ダッシュボードでR2を有効化 →
   // `npx wrangler r2 bucket create dokorun-images` → 以下を復活させ、

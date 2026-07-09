@@ -44,7 +44,7 @@ export async function updateSpotInfo(_: SpotEditState, formData: FormData): Prom
   const db = getDb();
   const { start, end } = jstDayBounds();
   const daily = await db.select({ count: count() }).from(events)
-    .where(and(eq(events.name, "spot_edit"), gte(events.createdAt, start), lt(events.createdAt, end), sql`${events.meta}->>'userId' = ${user.id}`));
+    .where(and(eq(events.name, "spot_edit"), gte(events.createdAt, start), lt(events.createdAt, end), sql`json_extract(${events.meta}, '$.userId') = ${user.id}`));
   if ((daily[0]?.count ?? 0) >= 10) return { message: "1日に修正できるのは10回までです。また明日お願いします" };
   const current = (await db.select().from(spots)
     .where(and(eq(spots.id, data.spotId), eq(spots.slug, data.spotSlug), eq(spots.isPublished, true))).limit(1))[0];

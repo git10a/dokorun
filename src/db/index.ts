@@ -1,86 +1,80 @@
-import { drizzle as drizzleNeon } from "drizzle-orm/neon-serverless";
-import { drizzle as drizzleNeonHttp } from "drizzle-orm/neon-http";
-import { Pool, neon, neonConfig } from "@neondatabase/serverless";
-import { drizzle as drizzlePostgres } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
-import ws from "ws";
+import { createRequire } from "node:module";
+import { drizzle as drizzleD1 } from "drizzle-orm/d1";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import * as schema from "./schema";
 
-type Database = ReturnType<typeof drizzleNeon<typeof schema>>;
-
-let database: Database | undefined;
+export type Database = ReturnType<typeof drizzleD1<typeof schema>>;
 
 export const isWorkersRuntime = globalThis.navigator?.userAgent === "Cloudflare-Workers";
 
-function requireUrl() {
-  if (!process.env.DATABASE_URL) {
-    throw new Error("DATABASE_URL が設定されていません");
+let resolved: Database | undefined;
+
+// 実行環境ごとの接続先:
+// - Workers本番 / next dev: D1バインディング(getCloudflareContext経由)。
+//   dev は initOpenNextCloudflareForDev がミニフレアのローカルD1を提供する。
+// - ビルド時プリレンダ / CLIスクリプト(tsx): D1_LOCAL_PATH のsqliteファイルを
+//   @libsql/client(NAPIなのでnodeバージョン差に強い)で直接開く。
+//   deploy時は本番D1のスナップショット、ローカル作業時はminiflareのファイルを指す。
+function fromBinding(): Database | null {
+  try {
+    const { env } = getCloudflareContext();
+    const binding = (env as { DB?: D1Database }).DB;
+    return binding ? drizzleD1(binding, { schema }) : null;
+  } catch {
+    return null; // リクエストコンテキスト外(ビルド時・スクリプト)
   }
-  return process.env.DATABASE_URL;
 }
 
-export function isNeon(url: string) {
-  return new URL(url).hostname.endsWith(".neon.tech");
-}
-
-export function canCacheRequestExternalDb(url = requireUrl()) {
-  return isWorkersRuntime && isNeon(url);
-}
-
-// 接続先ごとのドライバ:
-// - Workers上のNeon: HTTPドライバ。WebSocket接続をモジュールスコープに持つと
-//   「Cannot perform I/O on behalf of a different request」で落ちるため、
-//   クエリごとに独立したfetchで完結するHTTPドライバのみキャッシュ可。
-//   ただしtransaction()は使えない(トランザクションはwithTxDbを使う)。
-// - NodeからのNeon(CLIスクリプト): WebSocketドライバ(wsで代替)。transaction可。
-// - それ以外(ローカルDocker Postgres等): postgres-js。
-export function getDb() {
-  const url = requireUrl();
-  // preview(workerd)からローカルPostgresへ接続する場合も、I/Oをリクエスト間で
-  // 共有できない。短いアイドルタイムの接続をリクエスト内で作り直す。
-  if (isWorkersRuntime && !isNeon(url)) {
-    const client = postgres(url, { prepare: false, max: 1, idle_timeout: 1 });
-    return drizzlePostgres(client, { schema }) as unknown as Database;
-  }
-  if (!database) {
-    if (isNeon(url)) {
-      if (isWorkersRuntime) {
-        database = drizzleNeonHttp(neon(url), { schema }) as unknown as Database;
-      } else {
-        // Node 20にはWebSocketグローバルがないためwsで代替する
-        if (typeof WebSocket === "undefined") neonConfig.webSocketConstructor = ws;
-        database = drizzleNeon(new Pool({ connectionString: url }), { schema });
-      }
-    } else {
-      const client = postgres(url, { prepare: false });
-      // クエリAPIは同一のPgDatabase系のため、型はNeon側に揃える
-      database = drizzlePostgres(client, { schema }) as unknown as Database;
-    }
-  }
-  return database;
-}
-
-// トランザクションが必要な処理はこちらを使う。
-// Workers上のNeonではリクエスト内で使い捨てのWebSocketプールを張り、終了時に閉じる
-// (リクエストをまたいでI/Oを共有できないためキャッシュしない)。それ以外はgetDb()と同じ。
-export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> {
-  const url = requireUrl();
-  if (isNeon(url) && isWorkersRuntime) {
-    const pool = new Pool({ connectionString: url });
-    try {
-      return await fn(drizzleNeon(pool, { schema }));
-    } finally {
-      await pool.end();
-    }
-  }
+function fromLocalFile(): Database {
   if (isWorkersRuntime) {
-    const client = postgres(url, { prepare: false, max: 1 });
-    try {
-      const db = drizzlePostgres(client, { schema }) as unknown as Database;
-      return await fn(db);
-    } finally {
-      await client.end();
-    }
+    throw new Error("D1バインディング(DB)が見つかりません。wrangler.jsonc の d1_databases を確認してください");
   }
+  // ワーカーバンドルにネイティブ依存(@libsql/client)を含めないため、
+  // bundlerの静的解析が届かないcreateRequire経由で読み込む
+  const nodeRequire = createRequire(process.cwd() + "/");
+  const path = process.env.D1_LOCAL_PATH ?? findMiniflareD1Path(nodeRequire);
+  if (!path) {
+    throw new Error(
+      "ローカルD1が見つかりません。`npx wrangler d1 execute dokorun-db --local` で初期化するか、D1_LOCAL_PATH でsqliteファイルを指定してください",
+    );
+  }
+  const { createClient } = nodeRequire("@libsql/client") as typeof import("@libsql/client");
+  const { drizzle } = nodeRequire("drizzle-orm/libsql") as typeof import("drizzle-orm/libsql");
+  return drizzle(createClient({ url: `file:${path}` }), { schema }) as unknown as Database;
+}
+
+// miniflareが管理するローカルD1のsqliteファイル(単一DB前提で最新のものを拾う)
+function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
+  const fs = nodeRequire("node:fs") as typeof import("node:fs");
+  const dir = ".wrangler/state/v3/d1/miniflare-D1DatabaseObject";
+  if (!fs.existsSync(dir)) return null;
+  const files = fs.readdirSync(dir).filter((file) => file.endsWith(".sqlite"));
+  if (!files.length) return null;
+  const newest = files
+    .map((file) => ({ file, mtime: fs.statSync(`${dir}/${file}`).mtimeMs }))
+    .sort((a, b) => b.mtime - a.mtime)[0];
+  return `${dir}/${newest.file}`;
+}
+
+function resolveDb(): Database {
+  if (!resolved) resolved = fromBinding() ?? fromLocalFile();
+  return resolved;
+}
+
+// モジュールスコープで getDb() が呼ばれても(better-auth初期化など)、実際の接続解決は
+// 最初のクエリまで遅延させる。Workersではリクエスト外にバインディングへ触れないため必須。
+export function getDb(): Database {
+  return new Proxy({} as Database, {
+    get(_, prop) {
+      const db = resolveDb();
+      const value = db[prop as keyof Database];
+      return typeof value === "function" ? (value as (...args: unknown[]) => unknown).bind(db) : value;
+    },
+  });
+}
+
+// D1は対話的トランザクション(BEGIN/COMMIT)非対応のため、逐次実行になる。
+// better-authのtransaction:falseと同じ割り切り(admin系の低頻度操作でのみ使用)。
+export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> {
   return fn(getDb());
 }

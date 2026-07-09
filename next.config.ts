@@ -11,13 +11,10 @@ const nextConfig: NextConfig = {
   // 注: better-auth は外部化するとSSR中の better-auth/react が別Reactインスタンスを
   // 参照して useRef null で落ちるため外部化しない(依存の kysely/jose は単独で外部化可)
   serverExternalPackages: [
-    "@neondatabase/serverless",
     "drizzle-orm",
     "kysely",
     "jose",
     "zod",
-    "postgres",
-    "ws",
   ],
 };
 

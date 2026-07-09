@@ -17,15 +17,17 @@ const eventLabels: Record<string, string> = {
 
 export default async function AdminStatsPage() {
   const db = getDb();
-  const since = sql`now() - interval '14 days'`;
-  // created_atはUTCのnaive timestampなので、UTCとして解釈してからJSTへ変換する
-  const day = sql<string>`to_char(${events.createdAt} at time zone 'UTC' at time zone 'Asia/Tokyo', 'YYYY-MM-DD')`;
+  // force-dynamicページなのでレンダー時点の現在時刻で集計してよい
+  // eslint-disable-next-line react-hooks/purity
+  const since = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
+  // created_atはUNIXミリ秒なので、JSTオフセット(+9h)を足してから日付文字列にする
+  const day = sql<string>`strftime('%Y-%m-%d', (${events.createdAt} + 32400000) / 1000, 'unixepoch')`;
   const [daily, topViews, topHashiritai] = await Promise.all([
     db.select({ day, name: events.name, count: count() }).from(events)
       .where(gte(events.createdAt, since)).groupBy(day, events.name),
-    db.select({ slug: sql<string>`${events.meta}->>'slug'`, count: count() }).from(events)
+    db.select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() }).from(events)
       .where(and(eq(events.name, "spot_view"), gte(events.createdAt, since)))
-      .groupBy(sql`${events.meta}->>'slug'`).orderBy(desc(count())).limit(10),
+      .groupBy(sql`json_extract(${events.meta}, '$.slug')`).orderBy(desc(count())).limit(10),
     db.select({ name: spots.name, slug: spots.slug, count: count() }).from(hashiritai)
       .innerJoin(spots, eq(spots.id, hashiritai.spotId))
       .groupBy(spots.id).orderBy(desc(count())).limit(10),

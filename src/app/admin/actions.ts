@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
-import { getDb, withTxDb } from "@/db";
+import { getDb, withTxDb, type Database } from "@/db";
 import { courses, photos, runs, spots, spotTags, tags } from "@/db/schema";
 import { createSessionToken, isAdmin, sessionCookieName } from "@/lib/auth";
 import { simplifyCourseGeojson } from "@/lib/course-geojson";
@@ -57,7 +57,7 @@ function flags(formData: FormData) {
   return { hasToilet: checked("hasToilet"), hasWaterFountain: checked("hasWaterFountain"), hasVendingMachine: checked("hasVendingMachine"), hasLocker: checked("hasLocker"), hasShower: checked("hasShower"), hasSentoNearby: checked("hasSentoNearby"), hasParking: checked("hasParking"), hasConvenienceStore: checked("hasConvenienceStore"), isPublished: checked("isPublished") };
 }
 
-async function writeRelations(tx: Parameters<Parameters<ReturnType<typeof getDb>["transaction"]>[0]>[0], spotId: string, data: z.infer<typeof spotSchema>, formData: FormData) {
+async function writeRelations(tx: Database, spotId: string, data: z.infer<typeof spotSchema>, formData: FormData) {
   let geojson: LineString | null = null;
   if (data.geojson) { try { geojson = JSON.parse(data.geojson) as LineString; } catch { geojson = null; } }
   await tx.insert(courses).values({ spotId, distanceM: Math.round(data.distanceKm * 1000), elevationGainM: data.elevationGainM === null ? null : Math.round(data.elevationGainM), signalsCount: data.signalsCount === null ? null : Math.round(data.signalsCount), courseType: data.courseType, surface: data.surface, geojson, geojsonSimplified: simplifyCourseGeojson(geojson) });
@@ -76,10 +76,11 @@ export async function createSpot(_: FormState, formData: FormData): Promise<Form
   if (!parsed.success) return { message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
   const data = parsed.data;
   try {
-    await withTxDb((db) => db.transaction(async (tx) => {
+    // D1は対話的トランザクション非対応のため逐次実行(admin限定の低頻度操作)
+    await withTxDb(async (tx) => {
       const [spot] = await tx.insert(spots).values({ name: data.name, nameKana: data.nameKana, slug: data.slug, prefecture: data.prefecture, city: data.city, lat: data.lat, lng: data.lng, description: data.description, access: data.access || null, nightLighting: data.nightLighting, ...flags(formData) }).returning({ id: spots.id });
       await writeRelations(tx, spot.id, data, formData);
-    }));
+    });
   } catch (error) { return { message: error instanceof Error && error.message.includes("unique") ? "このslugはすでに使われています" : "保存できませんでした" }; }
   revalidatePath("/"); revalidatePath("/spots"); redirect("/admin?success=created");
 }
@@ -90,11 +91,11 @@ export async function updateSpot(_: FormState, formData: FormData): Promise<Form
   if (!parsed.success || !parsed.data.id) return { message: "入力内容を確認してください", errors: parsed.success ? { id: ["スポットIDがありません"] } : parsed.error.flatten().fieldErrors };
   const data = parsed.data;
   try {
-    await withTxDb((db) => db.transaction(async (tx) => {
+    await withTxDb(async (tx) => {
       await tx.update(spots).set({ name: data.name, nameKana: data.nameKana, slug: data.slug, prefecture: data.prefecture, city: data.city, lat: data.lat, lng: data.lng, description: data.description, access: data.access || null, nightLighting: data.nightLighting, ...flags(formData), updatedAt: new Date() }).where(eq(spots.id, data.id!));
       await tx.delete(courses).where(eq(courses.spotId, data.id!)); await tx.delete(spotTags).where(eq(spotTags.spotId, data.id!)); await tx.delete(photos).where(eq(photos.spotId, data.id!));
       await writeRelations(tx, data.id!, data, formData);
-    }));
+    });
   } catch { return { message: "更新できませんでした" }; }
   revalidatePath("/"); revalidatePath("/spots"); revalidatePath(`/spots/${data.slug}`); redirect("/admin?success=updated");
 }

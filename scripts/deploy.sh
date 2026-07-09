@@ -1,15 +1,11 @@
 #!/bin/bash
-# 本番Neonの.env.productionを読み込んでからbuild+deployする。
-# DATABASE_URLをコマンドライン引数で渡さないための入り口。
+# 本番D1のスナップショットを取ってからbuild+deployする。
+# ビルド時プリレンダ(トップ/sitemap)が本番データを参照するための入り口。
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-if [ -f .env.production ]; then
-  set -a
-  # shellcheck disable=SC1091
-  source .env.production
-  set +a
-fi
+# predeploy(package.json)でも実行されるが、deploy.sh単体実行にも備えてここでも取る
+node scripts/d1-snapshot.mjs .d1-build/prod.sqlite
 
-NEXT_PUBLIC_SITE_URL=https://dokorun.com opennextjs-cloudflare build
+D1_LOCAL_PATH=.d1-build/prod.sqlite NEXT_PUBLIC_SITE_URL=https://dokorun.com opennextjs-cloudflare build
 opennextjs-cloudflare deploy

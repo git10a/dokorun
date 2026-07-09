@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
-import { getDb, withTxDb } from "@/db";
+import { getDb, withTxDb, type Database } from "@/db";
 import { communities, spotCommunities, spots } from "@/db/schema";
 import { isAdmin } from "@/lib/auth";
 import { normalizeInstagram, normalizeStravaClub, normalizeXHandle } from "@/lib/social";
@@ -35,7 +35,7 @@ const communitySchema = z.object({
   website: optionalText.refine((value) => value === null || /^https?:\/\//.test(value), "WebサイトはURL(https://〜)で入力してください"),
 });
 
-type Tx = Parameters<Parameters<ReturnType<typeof getDb>["transaction"]>[0]>[0];
+type Tx = Database;
 
 async function requireAdmin() {
   if (!await isAdmin()) throw new Error("認証が必要です");
@@ -62,7 +62,8 @@ export async function createCommunity(_: FormState, formData: FormData): Promise
   const data = parsed.data;
   let communityId = "";
   try {
-    await withTxDb((db) => db.transaction(async (tx) => {
+    // D1は対話的トランザクション非対応のため逐次実行(admin限定の低頻度操作)
+    await withTxDb(async (tx) => {
       const [community] = await tx.insert(communities).values({
         name: data.name, description: data.description, schedule: data.schedule,
         instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
@@ -70,7 +71,7 @@ export async function createCommunity(_: FormState, formData: FormData): Promise
       }).returning({ id: communities.id });
       communityId = community.id;
       await writeSpotLinks(tx, community.id, formData);
-    }));
+    });
   } catch { return { message: "保存できませんでした" }; }
   await revalidateLinkedSpots(communityId);
   redirect("/admin/communities?success=created");
@@ -85,7 +86,7 @@ export async function updateCommunity(_: FormState, formData: FormData): Promise
   // 紐付け解除されたスポットのページも更新するため、変更前のリンクを先に再検証対象へ含める
   await revalidateLinkedSpots(communityId);
   try {
-    await withTxDb((db) => db.transaction(async (tx) => {
+    await withTxDb(async (tx) => {
       await tx.update(communities).set({
         name: data.name, description: data.description, schedule: data.schedule,
         instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
@@ -93,7 +94,7 @@ export async function updateCommunity(_: FormState, formData: FormData): Promise
       }).where(eq(communities.id, communityId));
       await tx.delete(spotCommunities).where(eq(spotCommunities.communityId, communityId));
       await writeSpotLinks(tx, communityId, formData);
-    }));
+    });
   } catch { return { message: "更新できませんでした" }; }
   await revalidateLinkedSpots(communityId);
   redirect("/admin/communities?success=updated");

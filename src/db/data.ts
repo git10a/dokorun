@@ -1,4 +1,4 @@
-import { and, asc, count, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
+import { and, asc, count, desc, eq, inArray, like, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
 import { communities, courses, favoriteSpots, hashiritai, photos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
 import { jstDayBounds } from "@/lib/jst";
@@ -102,7 +102,7 @@ const summarySelection = {
   signalsCount: courses.signalsCount,
   courseType: courses.courseType,
   surface: courses.surface,
-  hasCourse: sql<boolean>`coalesce(jsonb_array_length(${courses.geojson}->'coordinates') > 0, false)`,
+  hasCourse: sql`coalesce(json_array_length(${courses.geojson}, '$.coordinates') > 0, 0)`.mapWith(Boolean),
 };
 
 export async function getTags() {
@@ -213,13 +213,13 @@ export async function getFeatureSpots(featureSlug: string) {
 // 特集一覧ページ用: 各特集の該当件数を1クエリでまとめて取得
 export async function getFeatureCounts(): Promise<Record<string, number>> {
   const rows = await getDb().select({
-    nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')::int`,
-    noSignals: sql<number>`count(*) filter (where ${courses.signalsCount} = 0)::int`,
-    longRun: sql<number>`count(*) filter (where ${courses.distanceM} >= ${longRunDistanceM})::int`,
-    track: sql<number>`count(*) filter (where ${courses.courseType} = 'track' or ${spots.trackUsage} is not null)::int`,
-    waterToilet: sql<number>`count(*) filter (where ${spots.hasToilet} and ${spots.hasWaterFountain})::int`,
-    shower: sql<number>`count(*) filter (where ${spots.hasShower} or ${spots.hasSentoNearby})::int`,
-    parking: sql<number>`count(*) filter (where ${spots.hasParking})::int`,
+    nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')`,
+    noSignals: sql<number>`count(*) filter (where ${courses.signalsCount} = 0)`,
+    longRun: sql<number>`count(*) filter (where ${courses.distanceM} >= ${longRunDistanceM})`,
+    track: sql<number>`count(*) filter (where ${courses.courseType} = 'track' or ${spots.trackUsage} is not null)`,
+    waterToilet: sql<number>`count(*) filter (where ${spots.hasToilet} and ${spots.hasWaterFountain})`,
+    shower: sql<number>`count(*) filter (where ${spots.hasShower} or ${spots.hasSentoNearby})`,
+    parking: sql<number>`count(*) filter (where ${spots.hasParking})`,
   }).from(spots)
     .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
     .where(eq(spots.isPublished, true));
@@ -238,7 +238,8 @@ export async function getFeatureCounts(): Promise<Record<string, number>> {
 function searchConditions(filters: SearchFilters) {
   const conditions: SQL[] = [eq(spots.isPublished, true), eq(courses.isPrimary, true)];
   if (filters.pref) conditions.push(eq(spots.prefecture, filters.pref));
-  if (filters.q) conditions.push(or(ilike(spots.name, `%${filters.q}%`), ilike(spots.nameKana, `%${filters.q}%`), ilike(spots.city, `%${filters.q}%`))!);
+  // SQLiteのLIKEはASCIIに対して大文字小文字を区別しないため、ilike相当として使える
+  if (filters.q) conditions.push(or(like(spots.name, `%${filters.q}%`), like(spots.nameKana, `%${filters.q}%`), like(spots.city, `%${filters.q}%`))!);
   if (filters.type) conditions.push(eq(courses.courseType, filters.type as CourseType));
   const selectedTagSlugs = filters.tags ?? [];
   const hasLongRunFilter = selectedTagSlugs.includes(longRunTag.slug);
@@ -264,7 +265,8 @@ function searchConditions(filters: SearchFilters) {
 function nearOrderExpr(filters: SearchFilters) {
   if (filters.sort !== "near" || filters.lat === undefined || filters.lng === undefined) return null;
   const cosLat = Math.cos((filters.lat * Math.PI) / 180);
-  return asc(sql`power(${spots.lat} - ${filters.lat}, 2) + power((${spots.lng} - ${filters.lng}) * ${cosLat}, 2)`);
+  // D1のSQLiteに数学関数が有効かはバージョン依存のため、power()を使わず乗算で書く
+  return asc(sql`(${spots.lat} - ${filters.lat}) * (${spots.lat} - ${filters.lat}) + ((${spots.lng} - ${filters.lng}) * ${cosLat}) * ((${spots.lng} - ${filters.lng}) * ${cosLat})`);
 }
 
 export async function searchSpots(filters: SearchFilters) {
@@ -308,11 +310,13 @@ function spotDetailSelection() {
     trackUsage: spots.trackUsage,
     elevationGainM: courses.elevationGainM,
     signalsCount: courses.signalsCount,
-    // バックフィル済みなら簡略版だけを取り、生geojson(最大90KB級)のパースを避ける
-    geojson: sql<LineString | null>`coalesce(${courses.geojsonSimplified}, ${courses.geojson})`,
-    isSimplified: sql<boolean>`${courses.geojsonSimplified} is not null`,
-    hashiritaiCount: sql<number>`(select count(*)::int from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`,
-    runsCount: sql<number>`(select count(*)::int from ${runs} where ${runs.spotId} = ${spots.id} and ${runs.visibility} = 'public')`,
+    // バックフィル済みなら簡略版だけを取り、生geojson(最大90KB級)のパースを避ける。
+    // 生SQL経由はカラムのjsonモード変換が効かないため、明示的にパースする
+    geojson: sql`coalesce(${courses.geojsonSimplified}, ${courses.geojson})`
+      .mapWith((value: string | null) => (value ? (JSON.parse(value) as LineString) : null)),
+    isSimplified: sql`${courses.geojsonSimplified} is not null`.mapWith(Boolean),
+    hashiritaiCount: sql<number>`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`,
+    runsCount: sql<number>`(select count(*) from ${runs} where ${runs.spotId} = ${spots.id} and ${runs.visibility} = 'public')`,
   };
 }
 
@@ -381,9 +385,10 @@ export async function getSpotDetailWithNearby(slug: string) {
 export async function getUserSpotState(spotId: string, userId: string) {
   const { start, end } = jstDayBounds();
   const rows = await getDb().select({
-    isHashiritai: sql<boolean>`exists (select 1 from ${hashiritai} where ${hashiritai.spotId} = ${spotId} and ${hashiritai.userId} = ${userId})`,
-    isFavorite: sql<boolean>`exists (select 1 from ${favoriteSpots} where ${favoriteSpots.spotId} = ${spotId} and ${favoriteSpots.userId} = ${userId})`,
-    todayRunId: sql<string | null>`(select ${runs.id} from ${runs} where ${runs.spotId} = ${spotId} and ${runs.userId} = ${userId} and ${runs.ranAt} >= ${start} and ${runs.ranAt} < ${end} order by ${runs.createdAt} desc limit 1)`,
+    isHashiritai: sql`exists (select 1 from ${hashiritai} where ${hashiritai.spotId} = ${spotId} and ${hashiritai.userId} = ${userId})`.mapWith(Boolean),
+    isFavorite: sql`exists (select 1 from ${favoriteSpots} where ${favoriteSpots.spotId} = ${spotId} and ${favoriteSpots.userId} = ${userId})`.mapWith(Boolean),
+    // ran_atはUNIXミリ秒のinteger。生SQLの引数はカラム型変換が効かないため数値で渡す
+    todayRunId: sql<string | null>`(select ${runs.id} from ${runs} where ${runs.spotId} = ${spotId} and ${runs.userId} = ${userId} and ${runs.ranAt} >= ${start.getTime()} and ${runs.ranAt} < ${end.getTime()} order by ${runs.createdAt} desc limit 1)`,
   }).from(users).where(eq(users.id, userId)).limit(1);
   const row = rows[0];
   return { isHashiritai: row?.isHashiritai ?? false, isFavorite: row?.isFavorite ?? false, todayRunId: row?.todayRunId ?? null };
@@ -424,7 +429,7 @@ export async function getAdminCommunities() {
     name: communities.name,
     schedule: communities.schedule,
     isPublished: communities.isPublished,
-    spotCount: sql<number>`(select count(*)::int from ${spotCommunities} where ${spotCommunities.communityId} = ${communities.id})`,
+    spotCount: sql<number>`(select count(*) from ${spotCommunities} where ${spotCommunities.communityId} = ${communities.id})`,
   }).from(communities).orderBy(desc(communities.updatedAt));
 }
 
