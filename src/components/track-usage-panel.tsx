@@ -17,14 +17,7 @@ const linkDefs: { key: keyof TrackUsage; label: string }[] = [
   { key: "scheduleUrl", label: "開放スケジュール" },
 ];
 
-const accessBadge = {
-  free: { label: "無料開放あり", className: "bg-brand" },
-  paid: { label: "有料開放", className: "bg-paper border border-line" },
-  unclear: { label: "開放状況要確認", className: "bg-paper border border-line" },
-} satisfies Record<TrackUsage["publicAccess"], { label: string; className: string }>;
-
 export function TrackUsagePanel({ usage }: { usage: TrackUsage }) {
-  const badge = accessBadge[usage.publicAccess];
   const rows = rowDefs.flatMap(({ key, label }) => {
     const value = usage[key];
     return value ? [{ label, value }] : [];
@@ -36,7 +29,7 @@ export function TrackUsagePanel({ usage }: { usage: TrackUsage }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-paper">
       <div className="flex flex-wrap items-center gap-3 border-b border-line bg-cream px-5 py-4">
-        <span className={`rounded-full px-3 py-1 text-sm font-bold ${badge.className}`}>{badge.label}</span>
+        <span className={`rounded-full px-3 py-1 text-sm font-bold ${usage.publicAccess === "free" ? "bg-brand" : "bg-paper border border-line"}`}>{usage.publicAccess === "free" ? "無料開放あり" : "有料開放"}</span>
         <p className="text-sm text-sub">大会・貸切等で利用できない日があります。おでかけ前に公式情報をご確認ください。</p>
       </div>
       <dl className="divide-y divide-line">

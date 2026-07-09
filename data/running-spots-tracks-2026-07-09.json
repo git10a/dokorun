@@ -250,14 +250,14 @@
     }
   },
   {
-    "slug": "kokuritsu-kyogijo-track",
-    "name": "国立競技場",
-    "nameKana": "こくりつきょうぎじょう",
+    "slug": "meiji-jingu-gaien-loop",
+    "name": "明治神宮外苑",
+    "nameKana": "めいじじんぐうがいえん",
     "prefecture": "東京都",
     "city": "新宿区",
     "lat": 35.675897,
     "lng": 139.720151,
-    "description": "国立競技場は明治神宮外苑に隣接するナショナルスタジアムです。東京2020大会の陸上競技会場となった全天候トラックを備えていますが、通常は一般ランニング開放されておらず、スタジアムツアー開催時に見学できる施設です。走る場合は競技場内ではなく、歩行者優先で周辺外周を使う形になります。添付GPXは競技場周辺の舗装路を往復する実走ルートとして登録しています。",
+    "description": "明治神宮外苑は国立競技場や神宮球場の近くを走る、都心の定番周回コースです。大きなトラックのような楕円形の舗装路で、1周約1.3km。信号待ちがなく、100mごとの距離表示を使ったペース走やインターバルにも向いています。添付GPXは複数周ログから神宮外苑1周分だけを切り出して登録しています。",
     "access": "JR総武線各駅停車 千駄ケ谷駅／信濃町駅より徒歩約5分。都営大江戸線 国立競技場駅（A2出口）徒歩1分、東京メトロ銀座線 外苑前駅（3番出口）徒歩9分。",
     "nightLighting": "bright",
     "tags": [
@@ -268,34 +268,18 @@
       "hasToilet": true,
       "hasWaterFountain": false,
       "hasVendingMachine": true,
-      "hasLocker": true,
-      "hasShower": true,
+      "hasLocker": false,
+      "hasShower": false,
       "hasSentoNearby": false,
       "hasParking": true,
       "hasConvenienceStore": false
     },
     "course": {
-      "distanceM": 3540,
-      "courseType": "out_and_back",
+      "distanceM": 1356,
+      "courseType": "loop",
       "surface": "asphalt",
-      "elevationGainM": 13,
+      "elevationGainM": 4,
       "signalsCount": 0
-    },
-    "trackUsage": {
-      "publicAccess": "unclear",
-      "feeText": "個人利用に関する公式案内は未確認。スタジアムツアーは有料。",
-      "openingHoursText": "スタジアムツアー開催時に見学可能（開催日は公式案内参照）。",
-      "openDaysText": "通常の一般ランニング開放は確認できません。",
-      "closedDaysText": "大会・イベント開催時や整備点検日は利用不可。",
-      "reservationText": "個人利用は原則不可。見学はスタジアムツアーの事前予約が必要。",
-      "showerText": "選手用設備として更衣室・シャワーあり（一般ランニング利用は未確認）。",
-      "lockerText": "選手用設備として更衣室・ロッカーあり（一般ランニング利用は未確認）。",
-      "spikeRulesText": "公式情報で案内なし。",
-      "officialUrl": "https://jns-e.com/",
-      "feeUrl": null,
-      "scheduleUrl": "https://jns-e.com/kokuritu-tours/",
-      "evidenceNotes": "公式サイトおよびスタジアムツアー案内で確認。確認日: 2026-07-09",
-      "confidence": "medium"
     }
   }
 ]
