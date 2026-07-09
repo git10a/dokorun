@@ -245,6 +245,7 @@ function spotDetailSelection() {
     description: spots.description,
     access: spots.access,
     nightLighting: spots.nightLighting,
+    trackUsage: spots.trackUsage,
     elevationGainM: courses.elevationGainM,
     signalsCount: courses.signalsCount,
     // バックフィル済みなら簡略版だけを取り、生geojson(最大90KB級)のパースを避ける

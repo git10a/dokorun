@@ -10,6 +10,15 @@ config({ path: ".env.local" });
 config();
 
 const optionalInt = z.number().int().nullable().optional();
+const optionalText = z.string().trim().min(1).nullable().optional();
+const optionalUrl = z.url().nullable().optional();
+// トラック開放施設の個人利用情報。evidenceNotes/confidenceなどの調査用メタはzodが自動で落とす
+const trackUsageSchema = z.object({
+  publicAccess: z.enum(["free", "paid"]),
+  feeText: optionalText, openingHoursText: optionalText, openDaysText: optionalText, closedDaysText: optionalText,
+  reservationText: optionalText, showerText: optionalText, lockerText: optionalText, spikeRulesText: optionalText,
+  officialUrl: optionalUrl, feeUrl: optionalUrl, scheduleUrl: optionalUrl,
+});
 const importSpotSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/, "slugは半角英数字とハイフン"),
   name: z.string().trim().min(1),
@@ -34,6 +43,7 @@ const importSpotSchema = z.object({
     elevationGainM: optionalInt,
     signalsCount: optionalInt,
   }),
+  trackUsage: trackUsageSchema.nullable().optional(),
 });
 
 const importFileSchema = z.array(importSpotSchema).min(1);
@@ -118,7 +128,7 @@ async function run() {
       const [spot] = await tx.insert(spots).values({
         slug: entry.slug, name: entry.name, nameKana: entry.nameKana, prefecture: entry.prefecture, city: entry.city,
         lat: entry.lat, lng: entry.lng, description: entry.description, access: entry.access ?? null,
-        nightLighting: entry.nightLighting ?? null, ...entry.facilities,
+        nightLighting: entry.nightLighting ?? null, trackUsage: entry.trackUsage ?? null, ...entry.facilities,
       }).returning({ id: spots.id });
       await tx.insert(courses).values({
         spotId: spot.id, geojson: null, geojsonSimplified: null, distanceM: entry.course.distanceM, courseType: entry.course.courseType,

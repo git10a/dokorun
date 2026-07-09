@@ -31,6 +31,22 @@ export type SpotSummary = {
 
 export type MapSpot = Pick<SpotSummary, "slug" | "name" | "lat" | "lng" | "distanceM">;
 
+// トラック開放施設(競技場)の個人利用情報。一般的なスポットではnull
+export type TrackUsage = {
+  publicAccess: "free" | "paid";
+  feeText?: string | null;
+  openingHoursText?: string | null;
+  openDaysText?: string | null;
+  closedDaysText?: string | null;
+  reservationText?: string | null;
+  showerText?: string | null;
+  lockerText?: string | null;
+  spikeRulesText?: string | null;
+  officialUrl?: string | null;
+  feeUrl?: string | null;
+  scheduleUrl?: string | null;
+};
+
 export const courseTypeLabels: Record<CourseType, string> = {
   loop: "周回",
   out_and_back: "往復",

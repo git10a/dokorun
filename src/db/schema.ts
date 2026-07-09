@@ -13,7 +13,7 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
-import type { LineString } from "@/lib/types";
+import type { LineString, TrackUsage } from "@/lib/types";
 
 export const courseTypeEnum = pgEnum("course_type", ["loop", "out_and_back", "one_way", "track"]);
 export const surfaceEnum = pgEnum("surface", ["asphalt", "dirt", "track", "trail", "mixed"]);
@@ -41,6 +41,7 @@ export const spots = pgTable("spots", {
   hasParking: boolean("has_parking").notNull().default(false),
   hasConvenienceStore: boolean("has_convenience_store").notNull().default(false),
   nightLighting: lightingEnum("night_lighting"),
+  trackUsage: jsonb("track_usage").$type<TrackUsage | null>(),
   isPublished: boolean("is_published").notNull().default(true),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
