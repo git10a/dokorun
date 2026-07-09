@@ -56,7 +56,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
   if (params.sento === "1") requestConditions.push("設備: 銭湯・サウナが近い");
   const requestLines = ["検索で条件に合うスポットが見つかりませんでした。掲載候補をリクエストします。", "", "探していた条件:"];
   requestLines.push(...(requestConditions.length ? requestConditions : ["未指定"]));
-  requestLines.push("", "具体的にどんなコースか教えてください:", "例: 明治神宮外苑1周コース など", "");
+  requestLines.push("", "具体的には:", "例: 明治神宮外苑1周コース など", "");
   const requestParams = new URLSearchParams({ category: "spot_request", message: requestLines.join("\n") });
   const requestHref = `/contact?${requestParams}`;
   const pageHref = (target: number) => { const next = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1]))); next.set("page", String(target)); return `/spots?${next}`; };
