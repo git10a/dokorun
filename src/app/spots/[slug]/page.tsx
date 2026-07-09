@@ -18,6 +18,7 @@ import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
 import { SpotCommunities } from "@/components/spot-communities";
+import { prefectureSlug } from "@/lib/areas";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
@@ -58,6 +59,15 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   const todayRunId = userState?.todayRunId ?? null;
   const destinations = getNearbyDestinations(spot.slug);
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: spot.prefecture, item: `${baseUrl}/areas/${prefectureSlug(spot.prefecture)}` },
+      { "@type": "ListItem", position: 3, name: spot.name, item: `${baseUrl}/spots/${spot.slug}` },
+    ],
+  };
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
@@ -76,10 +86,10 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   };
   return (
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-8 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbData, structuredData]).replace(/</g, "\\u003c") }} />
       <TrackView name="spot_view" meta={{ slug: spot.slug }} />
       {query.posted === "info" && <p className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">スポット情報を修正しました。ご協力ありがとうございます ✏️</p>}
-      <header><div className="flex items-start justify-between gap-3"><p className="text-sm text-sub">{spot.prefecture} {spot.city}</p><Link href={`/spots/${spot.slug}/edit`} className="shrink-0 rounded-lg border border-line bg-paper px-3 py-1.5 text-sm font-bold text-sub hover:bg-cream">✏️ 情報修正</Link></div><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
+      <header><div className="flex items-start justify-between gap-3"><p className="text-sm text-sub"><Link href={`/areas/${prefectureSlug(spot.prefecture)}`} className="hover:underline">{spot.prefecture}</Link> {spot.city}</p><Link href={`/spots/${spot.slug}/edit`} className="shrink-0 rounded-lg border border-line bg-paper px-3 py-1.5 text-sm font-bold text-sub hover:bg-cream">✏️ 情報修正</Link></div><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
       <div className="flex flex-wrap items-center gap-3"><HashiritaiButton slug={spot.slug} count={spot.hashiritaiCount} loggedIn={Boolean(user)} initialLiked={initialLiked} /><FavoriteButton spotId={spot.id} slug={spot.slug} loggedIn={Boolean(user)} initialFavorite={initialFavorite} /><div className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">ランログ {spot.runsCount}</div><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - どこラン`} /></div>
       {spot.photos.length > 0 && <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.map((photo, index) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><SpotImage src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} width={1280} height={720} sizes="(min-width: 640px) 60vw, 85vw" priority={index === 0} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>)}</section>}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><DirectionsLink lat={spot.lat} lng={spot.lng} name={spot.name} slug={spot.slug} /></section>

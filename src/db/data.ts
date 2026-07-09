@@ -175,6 +175,66 @@ export async function getPrefectureCounts() {
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
 }
 
+const hashiritaiCountExpr = sql`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`;
+
+// エリアハブページ用: 都道府県内の全スポットをハシリタイ数順で返す
+export async function getSpotsByPrefecture(prefecture: string) {
+  const rows = await getDb().select(summarySelection).from(spots)
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(spots.isPublished, true), eq(spots.prefecture, prefecture)))
+    .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
+  return addRelations(rows);
+}
+
+// 特集ページ(/features/{slug})の絞り込み条件。スラッグは src/lib/features.ts の定義と対応する
+function featureCondition(featureSlug: string): SQL | null {
+  switch (featureSlug) {
+    case "night-run": return eq(spots.nightLighting, "bright");
+    case "no-signals": return eq(courses.signalsCount, 0);
+    case "long-run": return sql`${courses.distanceM} >= ${longRunDistanceM}`;
+    case "track": return or(eq(courses.courseType, "track"), sql`${spots.trackUsage} is not null`)!;
+    case "water-toilet": return and(eq(spots.hasToilet, true), eq(spots.hasWaterFountain, true))!;
+    case "shower": return or(eq(spots.hasShower, true), eq(spots.hasSentoNearby, true))!;
+    case "parking": return eq(spots.hasParking, true);
+    default: return null;
+  }
+}
+
+export async function getFeatureSpots(featureSlug: string) {
+  const condition = featureCondition(featureSlug);
+  if (!condition) return [];
+  const rows = await getDb().select(summarySelection).from(spots)
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(spots.isPublished, true), condition))
+    .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
+  return addRelations(rows);
+}
+
+// 特集一覧ページ用: 各特集の該当件数を1クエリでまとめて取得
+export async function getFeatureCounts(): Promise<Record<string, number>> {
+  const rows = await getDb().select({
+    nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')::int`,
+    noSignals: sql<number>`count(*) filter (where ${courses.signalsCount} = 0)::int`,
+    longRun: sql<number>`count(*) filter (where ${courses.distanceM} >= ${longRunDistanceM})::int`,
+    track: sql<number>`count(*) filter (where ${courses.courseType} = 'track' or ${spots.trackUsage} is not null)::int`,
+    waterToilet: sql<number>`count(*) filter (where ${spots.hasToilet} and ${spots.hasWaterFountain})::int`,
+    shower: sql<number>`count(*) filter (where ${spots.hasShower} or ${spots.hasSentoNearby})::int`,
+    parking: sql<number>`count(*) filter (where ${spots.hasParking})::int`,
+  }).from(spots)
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(eq(spots.isPublished, true));
+  const row = rows[0];
+  return {
+    "night-run": row?.nightRun ?? 0,
+    "no-signals": row?.noSignals ?? 0,
+    "long-run": row?.longRun ?? 0,
+    "track": row?.track ?? 0,
+    "water-toilet": row?.waterToilet ?? 0,
+    "shower": row?.shower ?? 0,
+    "parking": row?.parking ?? 0,
+  };
+}
+
 function searchConditions(filters: SearchFilters) {
   const conditions: SQL[] = [eq(spots.isPublished, true), eq(courses.isPrimary, true)];
   if (filters.pref) conditions.push(eq(spots.prefecture, filters.pref));
