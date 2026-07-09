@@ -37,7 +37,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const description = `1周${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${spot.description.slice(0, 90)}`;
   const title = `${spot.name}のランニングコース - どこラン`;
-  return { title: { absolute: title }, description, openGraph: { title, description, images: spot.photos[0]?.url ? [imageTransformUrl(spot.photos[0].url, 1200)] : ["/og.png"] } };
+  // コース地図OGP(scripts/generate-og-images.tsで生成)を最優先。地図がなければ写真、それもなければ共通OGP
+  const ogImage = spot.hasCourse
+    ? { url: `/og/spots/${spot.slug}.jpg`, width: 1200, height: 630 }
+    : spot.photos[0]?.url
+      ? imageTransformUrl(spot.photos[0].url, 1200)
+      : "/og.png";
+  return { title: { absolute: title }, description, openGraph: { title, description, images: [ogImage] }, twitter: { card: "summary_large_image" } };
 }
 
 const runDateFormat = new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeZone: "Asia/Tokyo" });
