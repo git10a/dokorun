@@ -5,10 +5,11 @@ import { submitFeedback, type FeedbackState } from "./actions";
 import { track } from "@/lib/track";
 
 const inputClass = "w-full rounded-lg border border-line bg-paper px-3 py-2.5";
+type FeedbackCategory = "spot_request" | "contact";
 
-export function ContactForm() {
+export function ContactForm({ initialCategory = "spot_request", initialMessage }: { initialCategory?: FeedbackCategory; initialMessage?: string }) {
   const [state, action, pending] = useActionState<FeedbackState, FormData>(submitFeedback, {});
-  const categoryRef = useRef("spot_request");
+  const categoryRef = useRef<FeedbackCategory>(initialCategory);
 
   useEffect(() => {
     if (state.status === "sent") track("feedback", { category: categoryRef.current });
@@ -24,20 +25,23 @@ export function ContactForm() {
   }
 
   return (
-    <form action={action} className="space-y-6" onSubmit={(event) => { categoryRef.current = String(new FormData(event.currentTarget).get("category") ?? "spot_request"); }}>
+    <form action={action} className="space-y-6" onSubmit={(event) => {
+      const category = String(new FormData(event.currentTarget).get("category") ?? "spot_request");
+      categoryRef.current = category === "contact" ? "contact" : "spot_request";
+    }}>
       <fieldset>
         <legend className="mb-3 font-bold">内容の種類</legend>
         <div className="flex flex-wrap gap-3">
           {[["spot_request", "スポットの掲載リクエスト"], ["contact", "その他のお問い合わせ"]].map(([value, label]) => (
             <label key={value} className="flex items-center gap-2 rounded-lg border border-line bg-paper px-4 py-2.5 font-bold has-checked:border-brand has-checked:bg-cream">
-              <input type="radio" name="category" value={value} defaultChecked={value === "spot_request"} className="accent-(--color-brand)" />{label}
+              <input type="radio" name="category" value={value} defaultChecked={value === initialCategory} className="accent-(--color-brand)" />{label}
             </label>
           ))}
         </div>
       </fieldset>
       <div>
         <label htmlFor="feedback-message" className="mb-2 block font-bold">本文 <span className="text-sm font-normal text-sub">(必須・2000文字まで)</span></label>
-        <textarea id="feedback-message" name="message" required maxLength={2000} rows={6} placeholder="例: 〇〇県の△△公園を掲載してほしいです。1周約2kmでトイレと駐車場があります。" className={inputClass} />
+        <textarea id="feedback-message" name="message" required maxLength={2000} rows={6} placeholder="例: 〇〇県の△△公園を掲載してほしいです。1周約2kmでトイレと駐車場があります。" defaultValue={initialMessage} className={inputClass} />
       </div>
       <div>
         <label htmlFor="feedback-contact" className="mb-2 block font-bold">連絡先 <span className="text-sm font-normal text-sub">(任意・メールアドレスやXアカウントなど)</span></label>

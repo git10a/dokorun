@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   applicationName: "どこラン",
   title: { default: "どこラン - 日本全国のランニングスポット", template: "%s | どこラン" },
-  description: "「週末、どこ走る？」に答える、日本全国のランニングスポット検索サイト。距離、信号、路面、設備から走りたい場所を探せます。",
+  description: "「次はどこでランする？」に答える、日本全国のランニングスポット検索サイト。距離、信号、路面、設備から走りたい場所を探せます。",
   // OG画像は静的PNG(public/og.png)。動的生成(next/og)はWorkersの3MiB制限に収まらないため使わない
   openGraph: { siteName: "どこラン", images: ["/og.png"] },
   verification: { google: "J_vRwsGfizZ2o3YgX7tYByh-hvw8jthPcr67XKhLHVc" },

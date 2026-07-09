@@ -5,6 +5,7 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { TagChip } from "@/components/tag-chip";
 import { regionGroups } from "@/lib/prefectures";
+import { SearchInputClearButton } from "@/components/search-input-clear-button";
 
 type Tab = "keyword" | "pref" | "feature";
 type TagCategory = "terrain" | "environment" | "scenery";
@@ -95,7 +96,8 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
             <label className="relative min-w-0 flex-1">
               <span className="sr-only">キーワード</span>
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-sub" size={19} />
-              <input name="q" placeholder="スポット名・市区町村" className="h-12 w-full rounded-lg border border-line pl-10 pr-3 outline-none focus:border-ink" />
+              <input id="hero-keyword-search" name="q" placeholder="スポット名・市区町村" className="h-12 w-full rounded-lg border border-line pl-10 pr-11 outline-none focus:border-ink" />
+              <SearchInputClearButton inputId="hero-keyword-search" />
             </label>
             <button className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-ink px-4 font-bold text-white hover:bg-ink/85 sm:px-7">
               <Search size={18} />

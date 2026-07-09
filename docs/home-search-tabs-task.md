@@ -29,7 +29,7 @@ pnpmがクラッシュする環境のため、コマンドはすべて `npm run 
 
 - 新規 `src/components/hero-search.tsx` — `"use client"`。タブ状態(`useState<"keyword" | "pref" | "feature">`)を持つ
 - `page.tsx` はサーバーコンポーネントのまま、`getTags()` と `getPrefectureCounts()` の結果を props で `HeroSearch` に渡す(どちらも既存: [src/db/data.ts](../src/db/data.ts))
-- 既存のヒーローの見出し・コピー(「今日、どこ走る？」等)はそのまま残し、フォーム部分だけを `HeroSearch` に置き換える
+- 既存のヒーローの見出し・コピー(「次はどこでランする？」等)はそのまま残し、フォーム部分だけを `HeroSearch` に置き換える
 
 ### 2. タブバーのデザイン
 
