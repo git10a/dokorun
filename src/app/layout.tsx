@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   // Cloudflare Web Analytics。トークン未設定の環境(ローカル等)では何も出力しない
   const beaconToken = process.env.CF_BEACON_TOKEN;
   return (
-    <html lang="ja">
+    <html lang="ja" className="scroll-smooth">
       <body className={`${notoSansJp.variable} min-h-screen antialiased`}>
         <Header />
         <main>{children}</main>
