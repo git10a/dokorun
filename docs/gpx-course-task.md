@@ -85,6 +85,8 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 ## 進捗表
 
 > **2026-07-07決定:** review/skipのスポットは本番DBで `is_published = false` にして**非掲載化済み**(2026-07-07に27件。うち井の頭・彩湖は同日ユーザー実走GPXで整備し復帰済み。2026-07-08に#114 hakusan-park-yasuragiteiをGPX破損で追加非掲載化。同日、東京都内の新規15件を追加投入し14件掲載・#122 toyosu-gururi-parkをreview非掲載化→同日ユーザー作成Stravaルートで整備し復帰 → 現在非掲載26件・掲載107件)(雑なコースや未検証データを載せないため)。**2026-07-08夕: ロング走コース25件(#134〜158)をdeep researchから追加投入。21件BRouter整備で掲載、4件(多摩湖・野尻湖・伊東城ヶ崎・芦ノ湖)review非掲載 → 掲載128件・非掲載30件**。`db:import` は登録済みslugをスキップするので再インポートで勝手に復活はしない。復帰させる場合は、コースを整備(Stravaセグメント再探索 or gpx.studio手動トレース)してから `UPDATE spots SET is_published = true WHERE slug = '...'` を実行する。
+>
+> **2026-07-10: ユーザー作成StravaルートGPX 6本を投入**(scripts/sql/2026-07-10-strava-gpx-batch2.sql)。差し替え4件: kouri-island(10616→5978m)・hirosaki-park-loop(6922→3261m)・tazawako-loop(20562→20452m)・fuchu-no-mori-park(1268→1426m)。復帰1件: #140 tamako-cycling-road(11832mで公開化、説明を武蔵大和駅起点・約11.8kmに修正)。新規1件: yakushima-loop 屋久島1周(97602m・獲得1297m、西部林道コースとは別スポット) → **掲載228件・非掲載28件**。
 
 | # | slug | 名前 | 所在地 | 期待距離(m) | ステータス | メモ |
 |---|------|------|--------|-------------|-----------|------|
@@ -144,7 +146,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 54 | koganei-park | 小金井公園 | 東京都小金井市 | 3200 | done | BRouter生成 2825m |
 | 55 | inokashira-park | 井の頭恩賜公園 | 東京都武蔵野市 | 1500 | done | ユーザー実走6周ログから中央値の1周を切り出し 1557m(data/gpx/inokashira-park.gpx) |
 | 56 | musashinomori-park | 武蔵野の森公園 | 東京都府中市 | 1100 | done | Stravaセグメント むさもり北1km(18005785) |
-| 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | BRouter生成 1268m |
+| 57 | fuchu-no-mori-park | 府中の森公園 | 東京都府中市 | 1400 | done | ユーザー実走Stravaルート 1426m(2026-07-10にBRouter版1268mから差し替え) |
 | 58 | showa-kinen-park | 国営昭和記念公園 | 東京都立川市 | 5000 | done | Stravaセグメント Showa Kinen Park(19683557) |
 | 59 | rinko-park | 臨港パーク | 神奈川県横浜市西区 | 980 | done | BRouter生成 964m |
 | 60 | nogeyama-park | 野毛山公園 | 神奈川県横浜市西区 | 740 | review | 生成1325m(期待740m)。動物園周りで大回り |
@@ -227,7 +229,7 @@ npm run gpx:apply -- <slug> data/gpx/<slug>.gpx
 | 137 | natsudomari-asamushi | 夏泊半島〜浅虫温泉コース | 青森県平内町 | 34200 | done | BRouter生成 32117m(役場→半島時計回り→浅虫温泉駅。西岸は県道9号の山越え区間を含む) |
 | 138 | yamanote-loop | 山手線一周コース | 東京都千代田区ほか | 40400 | done | BRouter生成 36103m(東京駅起点・主要駅経由の周回) |
 | 139 | tamagawa-josui-ryokudo | 玉川上水緑道コース | 東京都新宿区〜武蔵野市 | 16500 | done | BRouter生成 14695m(新宿駅→吉祥寺駅) |
-| 140 | tamako-cycling-road | 多摩湖サイクリングロード一周コース | 東京都東村山市 | 17600 | review | 上湖西側の周回園路がBRouterで通れず(西端で+58%の迂回or行き止まりスパー)。非掲載。Stravaルートで整備要 |
+| 140 | tamako-cycling-road | 多摩湖サイクリングロード一周コース | 東京都東村山市 | 17600 | done | ユーザー作成Stravaルート 11832m(村山ダム1周)で2026-07-10整備・公開化。説明を武蔵大和駅起点・約11.8kmに修正 |
 | 141 | teganuma-loop | 手賀沼一周コース | 千葉県柏市 | 17600 | done | ユーザー提供GPX 17236m(2026-07-08にBRouter版から差し替え) |
 | 142 | inbanuma-loop | 印旛沼ぐるりコース | 千葉県印西市・佐倉市 | 15100 | done | BRouter生成 16343m(佐倉ふるさと広場起点。レポートの龍ヶ谷橋は特定できず代表点変更) |
 | 143 | choshi-inubosaki | 銚子海岸〜犬吠埼コース | 千葉県銚子市 | 21800 | done | BRouter生成 21338m(銚子駅→犬吠埼→外川折返し) |
