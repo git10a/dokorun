@@ -19,9 +19,7 @@ export default async function HomePage() {
   const totalSpots = counts.reduce((sum, item) => sum + item.count, 0);
   return (
     <>
-      <section className="relative overflow-hidden bg-brand px-4 pb-28 pt-14 text-center sm:pb-28 sm:pt-20">
-        <img src="/characters/ran-happy.png" alt="走るラン" className="pointer-events-none absolute bottom-2 left-[2%] w-16 -scale-x-100 sm:left-[4%] sm:w-24 lg:w-28 xl:w-36" />
-        <img src="/characters/hashiro-smile.png" alt="走るハシロー" className="pointer-events-none absolute bottom-2 right-[2%] w-16 sm:right-[4%] sm:w-24 lg:w-28 xl:w-36" />
+      <section className="relative overflow-hidden bg-brand px-4 pb-10 pt-14 text-center sm:pb-12 sm:pt-20">
         <div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black tracking-tight sm:text-6xl">次はどこでランする？</h1><p className="mt-4 text-sm font-medium sm:text-lg">日本全国のランニングスポットをあつめるサイト</p><p className="mt-3 inline-flex items-baseline gap-1 rounded-full bg-paper/85 px-4 py-1.5 text-xs font-bold shadow-sm sm:text-sm">全国<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{totalSpots}</span>スポット・<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{countMap.size}</span>都道府県を掲載中</p></div>
         <HeroSearch tags={tags} prefectureCounts={counts} />
         <div className="mx-auto mt-4 max-w-4xl">

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { TagChip } from "@/components/tag-chip";
 import { regionGroups } from "@/lib/prefectures";
 import { SearchInputClearButton } from "@/components/search-input-clear-button";
@@ -47,11 +47,31 @@ const chipClassName = "inline-flex items-center rounded-full bg-cream px-3 py-1.
 
 export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
   const [activeTab, setActiveTab] = useState<Tab>("keyword");
+  // キャラの向き: 素材は左向きなので右向きは-scale-x-100。初期は2人とも右向き
+  const [facing, setFacing] = useState<"left" | "right">("right");
+  const prevTabIndexRef = useRef(0);
   const countMap = new Map(prefectureCounts.map((item) => [item.prefecture, item.count]));
   const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
+  const selectTab = (tab: Tab) => {
+    const nextIndex = tabs.findIndex((item) => item.id === tab);
+    if (nextIndex !== prevTabIndexRef.current) {
+      setFacing(nextIndex > prevTabIndexRef.current ? "right" : "left");
+      prevTabIndexRef.current = nextIndex;
+    }
+    setActiveTab(tab);
+  };
+
+  // アクティブなタブの中央(3等分の中心)にキャラを立たせ、切替時はleftのtransitionで走って移動
+  const tabCenter = `${(activeTabIndex * 2 + 1) * (100 / 6)}%`;
+  const flip = facing === "right" ? " -scale-x-100" : "";
+
   return (
-    <div className="mx-auto mt-8 max-w-4xl text-left">
+    <div className="mx-auto mt-3 max-w-4xl text-left">
+      <div aria-hidden="true" className="relative h-14 sm:h-[4.5rem]">
+        <img src="/characters/ran-happy.png" alt="" className={`absolute bottom-0 w-12 -translate-x-[95%] transition-[left] duration-700 ease-in-out motion-reduce:transition-none sm:w-16${flip}`} style={{ left: tabCenter }} />
+        <img src="/characters/hashiro-smile.png" alt="" className={`absolute bottom-0 w-12 -translate-x-[5%] transition-[left] delay-150 duration-700 ease-in-out motion-reduce:transition-none sm:w-16${flip}`} style={{ left: tabCenter }} />
+      </div>
       <div className="relative">
         <div role="tablist" aria-label="スポットのさがし方" className="grid grid-cols-3 overflow-hidden rounded-xl border-2 border-ink">
           {tabs.map((tab, index) => {
@@ -64,9 +84,9 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
                 role="tab"
                 aria-selected={active}
                 aria-controls={`hero-search-panel-${tab.id}`}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => selectTab(tab.id)}
                 onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") setActiveTab(tab.id);
+                  if (event.key === "Enter" || event.key === " ") selectTab(tab.id);
                 }}
                 className={`min-h-12 px-1 py-2 text-center text-xs font-bold transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white sm:px-3 sm:text-sm ${index ? "border-l-2 border-ink" : ""} ${active ? "bg-ink text-white" : "bg-transparent text-ink hover:bg-paper/25"}`}
               >
