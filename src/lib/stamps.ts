@@ -3,7 +3,18 @@
 // 色は CSS mask + background で塗る(scripts/make-stamp-mask.mjs で生成)。
 // 新しいスポットのスタンプを追加したら STAMP_SLUGS に slug を足す。
 
-export const STAMP_SLUGS = ["kokyo", "osakajo", "yoyogi", "komazawa"] as const;
+export const STAMP_SLUGS = [
+  "kokyo",
+  "osakajo",
+  "yoyogi",
+  "komazawa",
+  "oohori",
+  "meijo",
+  "arakawa",
+  "senbako",
+  "rainbow-bridge-odaiba",
+  "kinuta-park-cross-country",
+] as const;
 
 export function hasStamp(slug: string): boolean {
   return (STAMP_SLUGS as readonly string[]).includes(slug);
