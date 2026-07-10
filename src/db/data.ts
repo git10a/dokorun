@@ -381,7 +381,7 @@ export async function getSpotDetailWithNearby(slug: string) {
   };
 }
 
-// ログイン中ユーザーのハシリタイ/お気に入り/本日のチェックイン有無を1クエリで取得
+// ログイン中ユーザーのハシリタイ/お気に入り/本日のチェックイン有無/走った回数を1クエリで取得
 export async function getUserSpotState(spotId: string, userId: string) {
   const { start, end } = jstDayBounds();
   const rows = await getDb().select({
@@ -389,9 +389,21 @@ export async function getUserSpotState(spotId: string, userId: string) {
     isFavorite: sql`exists (select 1 from ${favoriteSpots} where ${favoriteSpots.spotId} = ${spotId} and ${favoriteSpots.userId} = ${userId})`.mapWith(Boolean),
     // ran_atはUNIXミリ秒のinteger。生SQLの引数はカラム型変換が効かないため数値で渡す
     todayRunId: sql<string | null>`(select ${runs.id} from ${runs} where ${runs.spotId} = ${spotId} and ${runs.userId} = ${userId} and ${runs.ranAt} >= ${start.getTime()} and ${runs.ranAt} < ${end.getTime()} order by ${runs.createdAt} desc limit 1)`,
+    runCount: sql`(select count(*) from ${runs} where ${runs.spotId} = ${spotId} and ${runs.userId} = ${userId})`.mapWith(Number),
   }).from(users).where(eq(users.id, userId)).limit(1);
   const row = rows[0];
-  return { isHashiritai: row?.isHashiritai ?? false, isFavorite: row?.isFavorite ?? false, todayRunId: row?.todayRunId ?? null };
+  return { isHashiritai: row?.isHashiritai ?? false, isFavorite: row?.isFavorite ?? false, todayRunId: row?.todayRunId ?? null, runCount: row?.runCount ?? 0 };
+}
+
+// スタンプ帳: 対象スポット(スタンプ画像があるもの)ごとのユーザーの走った回数
+export async function getStampBook(userId: string, slugs: readonly string[]) {
+  if (!slugs.length) return [];
+  return getDb().select({
+    slug: spots.slug,
+    name: spots.name,
+    prefecture: spots.prefecture,
+    runCount: sql`(select count(*) from ${runs} where ${runs.spotId} = ${spots.id} and ${runs.userId} = ${userId})`.mapWith(Number),
+  }).from(spots).where(and(inArray(spots.slug, [...slugs]), eq(spots.isPublished, true)));
 }
 
 export async function getSpotCourses(spotId: string) {

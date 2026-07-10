@@ -18,7 +18,9 @@ import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
 import { SpotCommunities } from "@/components/spot-communities";
+import { SpotStampPanel } from "@/components/spot-stamp-panel";
 import { prefectureSlug } from "@/lib/areas";
+import { hasStamp } from "@/lib/stamps";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
@@ -107,6 +109,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <NearbyDestinations places={destinations} />
       <section id="dokolog" className="scroll-mt-20 rounded-2xl bg-cream px-5 py-8 sm:px-7">
         <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのランログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><div className="flex flex-wrap items-center gap-3"><CheckInButton spotId={spot.id} spotSlug={spot.slug} loggedIn={Boolean(user)} todayRunId={todayRunId} /><Link href={user ? `/spots/${spot.slug}/log/new` : `/login?callbackURL=${encodeURIComponent(`/spots/${spot.slug}/log/new`)}`} className="rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold">ひとことつきで投稿</Link></div></div>
+        {hasStamp(spot.slug) && <SpotStampPanel slug={spot.slug} runCount={userState?.runCount ?? 0} loggedIn={Boolean(user)} />}
         {query.posted === "1" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ランログを投稿しました</p>}
         {query.posted === "checkin" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">走ったよを記録しました 🏃 {safeRunId && <Link href={`/me/logs/${safeRunId}/edit?returnTo=spot`} className="underline">ひとことを追加する</Link>}</p>}
         {query.posted === "updated" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ランログを更新しました</p>}
