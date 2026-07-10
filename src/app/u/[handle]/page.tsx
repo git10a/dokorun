@@ -2,10 +2,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProfileUser, getPublicRunsByUser, getUserFavorites, getUserPbs } from "@/db/data";
+import { getProfileUser, getPublicRunsByUser, getStampBook, getUserFavorites, getUserPbs } from "@/db/data";
 import { ProfileEditPanel } from "@/components/auth/profile-edit-panel";
 import { SocialLinks } from "@/components/social-links";
 import { SpotCard } from "@/components/spot-card";
+import { SpotStamp } from "@/components/spot-stamp";
+import { STAMP_SLUGS, stampTier } from "@/lib/stamps";
 import { avatarUrl } from "@/lib/avatars";
 import { jstMonth, jstYear } from "@/lib/jst";
 import { formatDuration, formatPace, PB_EVENTS } from "@/lib/pb";
@@ -71,11 +73,14 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
   const [user, viewer] = await Promise.all([getProfileUser(handle), getUser()]);
   if (!user) notFound();
   const isOwner = viewer?.id === user.id;
-  const [pbs, favorites, runs] = await Promise.all([
+  const [pbs, favorites, runs, stampRows] = await Promise.all([
     getUserPbs(user.id),
     getUserFavorites(user.id),
     getPublicRunsByUser(user.id, 10),
+    // スタンプは非公開ランの回数も含むため本人にのみ表示する
+    isOwner ? getStampBook(user.id, STAMP_SLUGS) : Promise.resolve([]),
   ]);
+  const stamps = STAMP_SLUGS.map((slug) => stampRows.find((row) => row.slug === slug)).filter((row) => row != null);
   const image = avatarUrl(user);
   const years = runnerYears(user.runningSinceYear, user.runningSinceMonth);
   const sinceLabel = user.runningSinceYear ? `${user.runningSinceYear}年${user.runningSinceMonth ? `${user.runningSinceMonth}月` : ""}〜` : null;
@@ -117,6 +122,27 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           )}
         </div>
       </header>
+      {isOwner && (
+        <section>
+          <div className="mb-5 flex items-end justify-between gap-4">
+            <h2 className="border-l-4 border-brand pl-3 text-xl font-bold">スタンプ帳</h2>
+            <Link href="/me/stamps" className="text-sm font-bold text-accent">くわしく見る →</Link>
+          </div>
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+            {stamps.map((stamp) => {
+              const tier = stampTier(stamp.runCount);
+              return (
+                <Link key={stamp.slug} href={`/spots/${stamp.slug}`} className="rounded-xl border border-line bg-paper p-3 text-center transition hover:border-brand">
+                  <SpotStamp slug={stamp.slug} runCount={stamp.runCount} className="mx-auto size-16 sm:size-20" />
+                  <p className="mt-2 truncate text-xs font-bold">{stamp.name}</p>
+                  <p className="mt-0.5 text-xs text-sub">{tier ? `${stamp.runCount}回・${tier.label}色` : "未取得"}</p>
+                </Link>
+              );
+            })}
+          </div>
+          <p className="mt-3 text-sm text-sub">スポットで「走ったよ 🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)</p>
+        </section>
+      )}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">好きなコース</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">好きなコースはまだ登録されていません</p>}</section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
     </div>
