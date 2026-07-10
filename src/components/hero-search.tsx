@@ -53,10 +53,17 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
   const countMap = new Map(prefectureCounts.map((item) => [item.prefecture, item.count]));
   const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
+  const facingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const selectTab = (tab: Tab) => {
     const nextIndex = tabs.findIndex((item) => item.id === tab);
-    if (nextIndex !== prevTabIndexRef.current) {
-      setFacing(nextIndex > prevTabIndexRef.current ? "right" : "left");
+    const prevIndex = prevTabIndexRef.current;
+    if (nextIndex !== prevIndex) {
+      if (facingTimerRef.current) clearTimeout(facingTimerRef.current);
+      setFacing(nextIndex > prevIndex ? "right" : "left");
+      // 端のタブに着いたら内側へ向き直る(キーワード=右向き、特徴=左向き)。移動(700ms+追走150ms)の完了後に反転
+      const settled = nextIndex === 0 ? "right" : nextIndex === tabs.length - 1 ? "left" : null;
+      if (settled) facingTimerRef.current = setTimeout(() => setFacing(settled), 900);
       prevTabIndexRef.current = nextIndex;
     }
     setActiveTab(tab);
@@ -67,7 +74,7 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
   const flip = facing === "right" ? " -scale-x-100" : "";
 
   return (
-    <div className="mx-auto mt-3 max-w-4xl text-left">
+    <div className="mx-auto mt-7 max-w-4xl text-left">
       <div aria-hidden="true" className="relative h-9 sm:h-11">
         <img src="/characters/ran-happy.png" alt="" className={`absolute bottom-0 w-9 -translate-x-[95%] transition-[left] duration-700 ease-in-out motion-reduce:transition-none sm:w-11${flip}`} style={{ left: tabCenter }} />
         <img src="/characters/hashiro-smile.png" alt="" className={`absolute bottom-0 w-9 -translate-x-[5%] transition-[left] delay-150 duration-700 ease-in-out motion-reduce:transition-none sm:w-11${flip}`} style={{ left: tabCenter }} />
