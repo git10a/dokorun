@@ -28,11 +28,13 @@ if (!input || !slug) {
 const size = Number(sizeArg) || 640;
 const output = path.join(import.meta.dirname, '..', 'public', 'stamps', `${slug}.png`);
 
-// 1) 白背景基準で余白トリム → 正方形にパディング
+// 1) 白背景基準で余白トリム → 正方形にパディング → リサイズ。
+//    sharpは同一パイプライン内だと呼び出し順でなく内部固定順(resize→extend)で適用され
+//    出力サイズが狂うため、extendとresizeは必ず別パイプラインに分ける
 const trimmed = await sharp(input).trim({ background: '#ffffff', threshold: 40 }).toBuffer();
 const meta = await sharp(trimmed).metadata();
 const side = Math.max(meta.width, meta.height);
-const squared = await sharp(trimmed)
+const padded = await sharp(trimmed)
   .extend({
     top: Math.floor((side - meta.height) / 2),
     bottom: Math.ceil((side - meta.height) / 2),
@@ -40,8 +42,12 @@ const squared = await sharp(trimmed)
     right: Math.ceil((side - meta.width) / 2),
     background: '#ffffff',
   })
-  .resize(size, size)
   .toBuffer();
+const squared = await sharp(padded).resize(size, size).toBuffer();
+const squaredMeta = await sharp(squared).metadata();
+if (squaredMeta.width !== size || squaredMeta.height !== size) {
+  throw new Error(`unexpected size ${squaredMeta.width}x${squaredMeta.height} (expected ${size}x${size})`);
+}
 
 // 2) インク濃度をアルファに変換(白=透明、インク=不透明)。normaliseで濃部を255に張り付かせる
 const alpha = await sharp(squared)

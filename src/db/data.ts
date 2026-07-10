@@ -394,15 +394,20 @@ export async function getUserSpotState(spotId: string, userId: string) {
   return { isHashiritai: row?.isHashiritai ?? false, isFavorite: row?.isFavorite ?? false, todayRunId: row?.todayRunId ?? null };
 }
 
-// スタンプ帳: 対象スポット(スタンプ画像があるもの)ごとのユーザーの走った回数
+// スタンプ帳: 対象スポット(スタンプ画像があるもの)ごとのユーザーの走った回数。
+// 相関サブクエリはDrizzleのsql``内で列名が非修飾になり誤解決するため(spots.idがruns.idに化ける)、
+// スポット取得とGROUP BY集計の2クエリに分ける
 export async function getStampBook(userId: string, slugs: readonly string[]) {
   if (!slugs.length) return [];
-  return getDb().select({
-    slug: spots.slug,
-    name: spots.name,
-    prefecture: spots.prefecture,
-    runCount: sql`(select count(*) from ${runs} where ${runs.spotId} = ${spots.id} and ${runs.userId} = ${userId})`.mapWith(Number),
-  }).from(spots).where(and(inArray(spots.slug, [...slugs]), eq(spots.isPublished, true)));
+  const db = getDb();
+  const spotRows = await db.select({ id: spots.id, slug: spots.slug, name: spots.name, prefecture: spots.prefecture })
+    .from(spots).where(and(inArray(spots.slug, [...slugs]), eq(spots.isPublished, true)));
+  if (!spotRows.length) return [];
+  const countRows = await db.select({ spotId: runs.spotId, runCount: count() }).from(runs)
+    .where(and(eq(runs.userId, userId), inArray(runs.spotId, spotRows.map((row) => row.id))))
+    .groupBy(runs.spotId);
+  const countMap = new Map(countRows.map((row) => [row.spotId, row.runCount]));
+  return spotRows.map(({ id, ...row }) => ({ ...row, runCount: countMap.get(id) ?? 0 }));
 }
 
 export async function getSpotCourses(spotId: string) {
