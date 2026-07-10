@@ -10,8 +10,8 @@ import { track } from "@/lib/track";
 export function NearMeButtonHeroFallback() {
   return (
     <div className="text-center">
-      <button type="button" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 font-bold text-white shadow-lg transition-colors hover:bg-ink/85 disabled:opacity-70 sm:w-auto">
-        <LocateFixed size={20} />
+      <button type="button" className="inline-flex items-center gap-1.5 rounded-full border border-ink/30 px-4 py-1.5 text-sm font-bold transition-colors hover:bg-paper/60 disabled:opacity-70">
+        <LocateFixed size={16} />
         現在地から近い順でさがす
       </button>
     </div>
@@ -62,12 +62,12 @@ export function NearMeButton({ variant = "list" }: { variant?: "hero" | "list" }
     router.push(next.size ? `/spots?${next}` : "/spots");
   };
 
-  const icon = locating ? <LoaderCircle size={variant === "hero" ? 20 : 16} className="animate-spin" /> : <LocateFixed size={variant === "hero" ? 20 : 16} />;
+  const icon = locating ? <LoaderCircle size={16} className="animate-spin" /> : <LocateFixed size={16} />;
 
   if (variant === "hero") {
     return (
       <div className="text-center">
-        <button type="button" onClick={activate} disabled={locating} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 font-bold text-white shadow-lg transition-colors hover:bg-ink/85 disabled:opacity-70 sm:w-auto">
+        <button type="button" onClick={activate} disabled={locating} className="inline-flex items-center gap-1.5 rounded-full border border-ink/30 px-4 py-1.5 text-sm font-bold transition-colors hover:bg-paper/60 disabled:opacity-70">
           {icon}
           {locating ? "現在地を取得中…" : "現在地から近い順でさがす"}
         </button>
