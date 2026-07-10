@@ -22,6 +22,13 @@ export type NearbyDestinationCategory =
   | "cultural_site"
   | "market";
 
+export type NearbyDestinationRating = {
+  platform: string;
+  rating: number;
+  reviewCount: number;
+  url: string;
+};
+
 export type NearbyDestination = {
   rank: number;
   placeSlug: string;
@@ -36,6 +43,40 @@ export type NearbyDestination = {
   recommendedTiming: string;
   whyWorthGoing: string;
   runnerFitReason: string;
+  signatureItems?: string[];
+  openingHours?: string;
+  closedDays?: string;
+  takeoutAvailable?: boolean;
+  outdoorSeating?: boolean;
+  ratings?: NearbyDestinationRating[];
+  officialUrl?: string;
+  imageUrl?: string;
+  checkedAt?: string;
+};
+
+export const nearbyDestinationPurposeFilters = [
+  { slug: "bakery", label: "パン", categories: ["bakery"] },
+  { slug: "cafe", label: "カフェ", categories: ["cafe"] },
+  { slug: "sauna", label: "サウナ・温浴", categories: ["sento", "spa"] },
+  { slug: "meal", label: "ごはん", categories: ["casual_meal", "restaurant", "local_specialty"] },
+  { slug: "run_station", label: "ランステ", categories: ["run_station"] },
+] as const satisfies ReadonlyArray<{ slug: string; label: string; categories: NearbyDestinationCategory[] }>;
+
+export type NearbyDestinationPurpose = (typeof nearbyDestinationPurposeFilters)[number]["slug"];
+
+export const nearbyDestinationCategoryLabels: Record<NearbyDestinationCategory, string> = {
+  bakery: "パン",
+  cafe: "カフェ",
+  sweets: "甘味",
+  casual_meal: "気軽なごはん",
+  restaurant: "レストラン",
+  local_specialty: "ご当地グルメ",
+  sento: "銭湯",
+  spa: "温浴施設",
+  run_station: "ランステ",
+  historic_site: "史跡",
+  cultural_site: "文化・見どころ",
+  market: "複合施設",
 };
 
 type NearbyDestinationResearch = {
@@ -50,8 +91,48 @@ const destinationsBySpot = new Map(
   ]),
 );
 
+export type NearbyDestinationSearchItem = NearbyDestination & { spotSlug: string };
+
+const ratingPlatformRank = ["食べログ", "Tabelog", "Google Maps"];
+
+export function getPrimaryNearbyDestinationRating(destination: NearbyDestination) {
+  return [...(destination.ratings ?? [])]
+    ?.filter((rating) => Number.isFinite(rating.rating) && Number.isFinite(rating.reviewCount) && Boolean(rating.url))
+    .sort((a, b) => {
+      const rank = (platform: string) => {
+        const index = ratingPlatformRank.indexOf(platform);
+        return index === -1 ? ratingPlatformRank.length : index;
+      };
+      return rank(a.platform) - rank(b.platform) || b.reviewCount - a.reviewCount;
+    })[0] ?? null;
+}
+
+export function ratingPlatformLabel(platform: string) {
+  return platform === "Tabelog" ? "食べログ" : platform;
+}
+
+export function getNearbyDestinationHighlights(destination: NearbyDestination) {
+  const highlights: string[] = [];
+  if (destination.whyWorthGoing.includes("百名店")) highlights.push("百名店");
+  const openingHour = destination.openingHours?.match(/(\d{1,2}):\d{2}/)?.[1];
+  if (openingHour && Number(openingHour) <= 9) highlights.push(`朝${Number(openingHour)}時から`);
+  if (destination.takeoutAvailable) highlights.push("テイクアウト可");
+  if (destination.outdoorSeating) highlights.push("テラス席");
+  return highlights;
+}
+
 export function getNearbyDestinations(spotSlug: string) {
   return destinationsBySpot.get(spotSlug) ?? [];
+}
+
+export function getNearbyDestinationsForPurpose(purpose?: string): NearbyDestinationSearchItem[] {
+  const filter = nearbyDestinationPurposeFilters.find((item) => item.slug === purpose);
+  const categories: readonly NearbyDestinationCategory[] | undefined = filter?.categories;
+
+  return [...destinationsBySpot.entries()]
+    .flatMap(([spotSlug, places]) => places.map((place) => ({ ...place, spotSlug })))
+    .filter((item) => !categories || categories.includes(item.category))
+    .sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name, "ja"));
 }
 
 export function googleMapsPlaceUrl(place: NearbyDestination) {

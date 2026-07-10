@@ -284,6 +284,16 @@ export async function searchSpots(filters: SearchFilters) {
   return { spots: await addRelations(rows), total: totalRows[0]?.count ?? 0 };
 }
 
+export async function getSpotSummariesBySlugs(slugs: string[]) {
+  const uniqueSlugs = [...new Set(slugs)];
+  if (!uniqueSlugs.length) return [];
+
+  const rows = await getDb().select(summarySelection).from(spots)
+    .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
+    .where(and(eq(spots.isPublished, true), inArray(spots.slug, uniqueSlugs)));
+  return addRelations(rows);
+}
+
 export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
   return getDb().select({
     slug: spots.slug,

@@ -1,24 +1,9 @@
 import { ExternalLink, Footprints, MapPin, ShowerHead } from "lucide-react";
 import {
   googleMapsPlaceUrl,
+  nearbyDestinationCategoryLabels,
   type NearbyDestination,
-  type NearbyDestinationCategory,
 } from "@/lib/nearby-destinations";
-
-const categoryLabels: Record<NearbyDestinationCategory, string> = {
-  bakery: "パン",
-  cafe: "カフェ",
-  sweets: "甘味",
-  casual_meal: "気軽なごはん",
-  restaurant: "レストラン",
-  local_specialty: "ご当地グルメ",
-  sento: "銭湯",
-  spa: "温浴施設",
-  run_station: "ランステ",
-  historic_site: "史跡",
-  cultural_site: "文化・見どころ",
-  market: "複合施設",
-};
 
 function formatDistance(distanceM: number | null, walkingMinutes: number | null) {
   const distance = distanceM === null
@@ -46,7 +31,7 @@ export function NearbyDestinations({ places }: { places: NearbyDestination[] }) 
             <article key={place.placeSlug} className="flex flex-col rounded-xl border border-line bg-paper p-5">
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <span className="rounded-full bg-cream px-2.5 py-1 text-xs font-bold text-sub">
-                  {categoryLabels[place.category]}
+                  {nearbyDestinationCategoryLabels[place.category]}
                 </span>
                 <span className="flex items-center gap-1 text-xs font-bold text-accent">
                   <MapPin size={14} aria-hidden="true" />
