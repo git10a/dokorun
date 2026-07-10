@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getPrefectureCounts, getSitemapSpots } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { features } from "@/lib/features";
+import { races } from "@/lib/races";
 
 // クローラーアクセスのたびのNeonクエリを1日1回に抑える。新スポットの反映は最大1日遅れる
 export const revalidate = 86400;
@@ -13,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/spots`, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/areas`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/features`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/races`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/terms`, changeFrequency: "yearly", priority: 0.2 },
@@ -36,5 +38,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
     priority: 0.8,
   }));
-  return [...fixedPages, ...areaPages, ...featurePages, ...spotPages];
+  const racePages: MetadataRoute.Sitemap = races.map((race) => ({
+    url: `${baseUrl}/races/${race.slug}`,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+  return [...fixedPages, ...areaPages, ...featurePages, ...racePages, ...spotPages];
 }
