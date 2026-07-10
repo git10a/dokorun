@@ -68,9 +68,9 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
 
   return (
     <div className="mx-auto mt-3 max-w-4xl text-left">
-      <div aria-hidden="true" className="relative h-14 sm:h-[4.5rem]">
-        <img src="/characters/ran-happy.png" alt="" className={`absolute bottom-0 w-12 -translate-x-[95%] transition-[left] duration-700 ease-in-out motion-reduce:transition-none sm:w-16${flip}`} style={{ left: tabCenter }} />
-        <img src="/characters/hashiro-smile.png" alt="" className={`absolute bottom-0 w-12 -translate-x-[5%] transition-[left] delay-150 duration-700 ease-in-out motion-reduce:transition-none sm:w-16${flip}`} style={{ left: tabCenter }} />
+      <div aria-hidden="true" className="relative h-9 sm:h-11">
+        <img src="/characters/ran-happy.png" alt="" className={`absolute bottom-0 w-9 -translate-x-[95%] transition-[left] duration-700 ease-in-out motion-reduce:transition-none sm:w-11${flip}`} style={{ left: tabCenter }} />
+        <img src="/characters/hashiro-smile.png" alt="" className={`absolute bottom-0 w-9 -translate-x-[5%] transition-[left] delay-150 duration-700 ease-in-out motion-reduce:transition-none sm:w-11${flip}`} style={{ left: tabCenter }} />
       </div>
       <div className="relative">
         <div role="tablist" aria-label="スポットのさがし方" className="grid grid-cols-3 overflow-hidden rounded-xl border-2 border-ink">
