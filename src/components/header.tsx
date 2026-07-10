@@ -12,6 +12,7 @@ export function Header() {
         </Link>
         <nav aria-label="メインナビゲーション" className="flex shrink-0 items-center gap-2 text-[10px] font-bold sm:gap-5 sm:text-sm">
           <Link href="/spots" className="hidden transition-colors hover:text-accent sm:inline">スポットをさがす</Link>
+          <Link href="/destinations" className="hidden transition-colors hover:text-accent md:inline">走る理由からさがす</Link>
           <Link href="/about" className="hidden transition-colors hover:text-accent sm:inline">このサイトについて</Link>
           <UserMenu />
         </nav>

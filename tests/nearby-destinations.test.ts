@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getNearbyDestinations, googleMapsPlaceUrl } from "@/lib/nearby-destinations";
+import { getNearbyDestinationHighlights, getNearbyDestinations, getNearbyDestinationsForPurpose, getPrimaryNearbyDestinationRating, googleMapsPlaceUrl } from "@/lib/nearby-destinations";
 
 describe("nearby destinations", () => {
   it("returns the researched places for a listed spot", () => {
@@ -64,5 +64,21 @@ describe("nearby destinations", () => {
     expect(url.hostname).toBe("www.google.com");
     expect(url.pathname).toBe("/maps/search/");
     expect(url.searchParams.get("query")).toBe(`${place.name} ${place.address}`);
+  });
+
+  it("makes destination research searchable across spots by purpose", () => {
+    const bakeries = getNearbyDestinationsForPurpose("bakery");
+
+    expect(bakeries.length).toBeGreaterThan(0);
+    expect(bakeries.every((item) => item.category === "bakery")).toBe(true);
+    expect(bakeries.some((item) => item.spotSlug === "rinshi-no-mori-park")).toBe(true);
+  });
+
+  it("keeps researched ratings and factual highlights available for destination cards", () => {
+    const [place] = getNearbyDestinations("rinshi-no-mori-park");
+    const rating = getPrimaryNearbyDestinationRating(place);
+
+    expect(rating).toMatchObject({ platform: "Tabelog", rating: 3.73, reviewCount: 1028 });
+    expect(getNearbyDestinationHighlights(place)).toEqual(expect.arrayContaining(["百名店", "朝9時から", "テイクアウト可", "テラス席"]));
   });
 });
