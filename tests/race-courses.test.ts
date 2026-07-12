@@ -13,6 +13,7 @@ describe("大会コース", () => {
       expect(race.officialUrl, `${race.name} の公式URL`).toMatch(/^https:\/\//);
       expect(courses[race.slug], `${race.name} のマニフェスト`).toBeDefined();
       expect(existsSync(join(process.cwd(), "data", "race-gpx", `${race.slug}.gpx`)), `${race.name} のGPX原本`).toBe(true);
+      expect(existsSync(join(process.cwd(), "public", "race-gpx", `${race.slug}.gpx`)), `${race.name} の公開GPX`).toBe(true);
       expect(existsSync(join(process.cwd(), "public", "race-courses", `${race.slug}.json`)), `${race.name} の公開コース`).toBe(true);
     }
     expect(Object.keys(courses)).toHaveLength(races.length);
