@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AlertTriangle, Download, ExternalLink, Route, Search, Smartphone, Watch } from "lucide-react";
+import { AlertTriangle, Download, ExternalLink, Search, Smartphone, Watch } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "GPXの使い方・アプリへの取り込み方法",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 const apps = [
   {
     name: "Garmin Connect",
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cf/19/fa/cf19fa7d-ad84-1af9-299a-f35c17c04529/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
     note: "スマホだけで取り込めます。PCのGarmin Connect Webからインポートする方法もあります。",
     steps: [
       "ダウンロードしたGPXをスマホの「ファイル」や「ダウンロード」から開きます。",
@@ -22,6 +24,7 @@ const apps = [
   },
   {
     name: "COROS",
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/77/07/cb/7707cbb2-d765-9264-91a1-2ed285dc2fba/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
     note: "GPXルート対応モデルで利用できます。",
     steps: [
       "スマホに保存したGPXを「ファイル」やダウンロード一覧から開きます。",
@@ -32,6 +35,7 @@ const apps = [
   },
   {
     name: "Suunto",
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a3/1f/92/a31f923a-2d77-69a8-5bd6-fd392f2f2a60/SuuntoAppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-0-85-220.png/512x512bb.jpg",
     note: "iPhone・AndroidともSuuntoアプリのマップから取り込めます。",
     steps: [
       "Suuntoアプリでマップ画面を開き、「＋」を押します。",
@@ -42,6 +46,7 @@ const apps = [
   },
   {
     name: "Strava",
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/04/a8/a004a8c4-9251-ad2f-82f2-2214434cad3b/AppIcon-Primary-0-0-1x_U007ephone-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
     note: "Stravaウェブサイトのルート作成画面から取り込みます。アクティビティのアップロードとは別です。",
     steps: [
       "PCなどのブラウザでStravaにログインし、「Dashboard」→「My Routes」を開きます。",
@@ -52,6 +57,7 @@ const apps = [
   },
   {
     name: "Polar Flow",
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/5a/a8/c65aa844-f1bd-cc98-3ca0-74db8cf94f19/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
     note: "GPXルートに対応するPolar製品で利用できます。取り込みはPolar Flow Webで行います。",
     steps: [
       "ブラウザでPolar Flowにログインし、右上の「Favorites（お気に入り）」を開きます。",
@@ -90,7 +96,7 @@ export default function GpxGuidePage() {
         <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">アプリ別の取り込み方</h2>
         <div className="mt-6 divide-y divide-line overflow-hidden rounded-2xl border border-line">
           {apps.map((app) => <section key={app.name} className="p-5 sm:p-7">
-            <div className="flex items-center gap-3"><span className="grid size-10 place-items-center rounded-lg bg-brand/30"><Route size={20} /></span><h3 className="text-lg font-bold sm:text-xl">{app.name}</h3></div>
+            <div className="flex items-center gap-3"><img src={app.iconUrl} alt={`${app.name}のアプリアイコン`} width={40} height={40} className="size-10 shrink-0 rounded-lg" /><h3 className="text-lg font-bold sm:text-xl">{app.name}</h3></div>
             <p className="mt-3 text-sm leading-6 text-sub">{app.note}</p>
             <ol className="mt-5 space-y-3 text-sm leading-7">
               {app.steps.map((step, index) => <li key={step} className="flex gap-3"><span className="grid size-6 shrink-0 place-items-center rounded-full bg-cream text-xs font-bold">{index + 1}</span><span>{step}</span></li>)}
