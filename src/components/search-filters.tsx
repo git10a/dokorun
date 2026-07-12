@@ -18,7 +18,7 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
         <select name="pref" defaultValue={params.pref ?? ""} className="h-11 rounded-lg border border-line bg-paper px-3"><option value="">全国</option>{prefectures.map((prefecture) => <option key={prefecture}>{prefecture}</option>)}</select>
         <button className="h-11 rounded-lg bg-brand px-6 font-bold hover:bg-brand-dark">さがす</button>
       </div>
-      <details className="group" open={Boolean(params.tags || params.type || params.dist || params.toilet || params.locker || params.sento)}>
+      <details className="group">
         <summary className="flex cursor-pointer list-none items-center gap-1 font-bold [&::-webkit-details-marker]:hidden">絞り込み条件をすべて表示<ChevronDown size={18} className="transition-transform group-open:rotate-180" /></summary>
         <div className="mt-4 space-y-5 border-t border-line pt-4">
           <fieldset><legend className="mb-2 text-sm font-bold">タグ（複数選択可）</legend><div className="flex flex-wrap gap-2">{tags.map((tag) => <label key={tag.id} className="cursor-pointer"><input type="checkbox" name="tag" value={tag.slug} defaultChecked={selectedTags.includes(tag.slug)} className="peer sr-only" /><span className="inline-flex rounded-full bg-cream px-3 py-1.5 text-sm peer-checked:bg-brand">{tag.name}</span></label>)}</div><input type="hidden" name="tags" value={selectedTags.join(",")} className="tag-output" /></fieldset>
