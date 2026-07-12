@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, MapPin } from "lucide-react";
 import { getHomeSpots, getPrefectureCounts, getSearchTags } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
@@ -11,6 +12,11 @@ import { SpotCard } from "@/components/spot-card";
 // cookies/headers/searchParamsを読まず表示は全ユーザー共通のためISR化。
 // 人気/新着スポットや件数の反映が最大1時間遅れるのみ
 export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/", type: "website" },
+};
 
 export default async function HomePage() {
   const [{ popular: popularSpots, newest: newSpots }, tags, counts] = await Promise.all([getHomeSpots(), getSearchTags(), getPrefectureCounts()]);

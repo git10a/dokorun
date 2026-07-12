@@ -1,10 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { LoginButton } from "@/components/auth/login-button";
 import { isGoogleAuthConfigured } from "@/lib/better-auth";
 import { getUser } from "@/lib/user";
 
 export const dynamic = "force-dynamic";
+export const metadata: Metadata = { title: "ログイン", robots: { index: false, follow: false } };
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ callbackURL?: string }> }) {
   const [{ callbackURL }, user] = await Promise.all([searchParams, getUser()]);

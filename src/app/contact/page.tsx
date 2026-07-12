@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "./contact-form";
 
-export const metadata: Metadata = { title: "リクエスト・お問い合わせ", description: "掲載してほしいランニングスポットのリクエストや、どこランへのお問い合わせを受け付けています。" };
+export const metadata: Metadata = { title: "リクエスト・お問い合わせ", description: "掲載してほしいランニングスポットのリクエストや、どこランへのお問い合わせを受け付けています。", alternates: { canonical: "/contact" }, openGraph: { url: "/contact" } };
 
 type SearchParams = Promise<{ category?: string; message?: string }>;
 

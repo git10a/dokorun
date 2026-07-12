@@ -30,7 +30,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const names = areaSpots.slice(0, 3).map((spot) => spot.name).join("、");
   const title = `${prefecture}のランニングコース・スポット一覧【${areaSpots.length}件】`;
   const description = `${prefecture}のランニングコースを${areaSpots.length}件掲載。${names}など、コースマップ・距離・信号の数・トイレなどの設備情報つきで走る場所を探せます。`;
-  return { title, description, alternates: { canonical: `${baseUrl()}/areas/${pref}` }, openGraph: { title, description } };
+  const canonical = `${baseUrl()}/areas/${pref}`;
+  return { title, description, alternates: { canonical }, openGraph: { title, description, url: canonical } };
 }
 
 export default async function AreaPage({ params }: { params: Params }) {

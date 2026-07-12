@@ -26,9 +26,32 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   // Cloudflare Web Analytics。トークン未設定の環境(ローカル等)では何も出力しない
   const beaconToken = process.env.CF_BEACON_TOKEN;
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "どこラン",
+      url: siteUrl,
+      logo: `${siteUrl}/icon.png`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "どこラン",
+      alternateName: "dokorun",
+      description: metadata.description,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "ja-JP",
+    },
+  ];
   return (
     <html lang="ja" className="scroll-smooth">
       <body className={`${notoSansJp.variable} min-h-screen antialiased`}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -5,6 +5,8 @@ import { AlertTriangle, Download, ExternalLink, Route, Search, Smartphone, Watch
 export const metadata: Metadata = {
   title: "GPXの使い方・アプリへの取り込み方法",
   description: "どこランでダウンロードしたGPXをGarmin Connect、COROS、Suunto、Strava、Polar Flowへ取り込む方法を説明します。",
+  alternates: { canonical: "/guide/gpx" },
+  openGraph: { url: "/guide/gpx" },
 };
 
 const apps = [

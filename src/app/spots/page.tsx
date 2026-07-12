@@ -10,7 +10,23 @@ import { TrackView } from "@/components/track-view";
 import { getSearchTags, searchSpots } from "@/db/data";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "ランニングスポットをさがす", description: "都道府県、距離、コース形状、タグ、設備から日本全国のランニングスポットを検索できます。" };
+
+export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
+  const raw = await searchParams;
+  const params = Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value])) as Record<string, string | undefined>;
+  const page = Math.max(1, Number(params.page) || 1);
+  const nonPaginationParams = Object.keys(params).filter((key) => key !== "page" && params[key]);
+  const canonical = page > 1 && nonPaginationParams.length === 0 ? `/spots?page=${page}` : "/spots";
+  const title = page > 1 && nonPaginationParams.length === 0 ? `ランニングスポットをさがす (${page}ページ目)` : "ランニングスポットをさがす";
+  const description = "都道府県、距離、コース形状、タグ、設備から日本全国のランニングスポットを検索できます。";
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { title, description, url: canonical },
+    robots: nonPaginationParams.length > 0 ? { index: false, follow: true } : undefined,
+  };
+}
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 

@@ -30,7 +30,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const race = raceBySlug.get(slug);
   if (!race) return { title: "ページが見つかりません" };
   const title = `${race.name}の試走・前日ランにおすすめのコース`;
-  return { title, description: race.description, alternates: { canonical: `${baseUrl()}/races/${slug}` }, openGraph: { title, description: race.description } };
+  const canonical = `${baseUrl()}/races/${slug}`;
+  return { title, description: race.description, alternates: { canonical }, openGraph: { title, description: race.description, url: canonical } };
 }
 
 export default async function RacePage({ params }: { params: Params }) {

@@ -9,6 +9,8 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "大会からランニングコースをさがす(試走・前日ラン)",
   description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会別に、試走・前日ラン・当日アップに使えるランニングコースをまとめています。遠征ランナーの調整にどうぞ。",
+  alternates: { canonical: "/races" },
+  openGraph: { url: "/races" },
 };
 
 export default function RacesPage() {

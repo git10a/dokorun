@@ -9,6 +9,8 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "条件からランニングコースをさがす",
   description: "夜ラン向き、信号なし、ロング走向き、トラック開放など、こだわり条件別に日本全国のランニングコースをまとめています。",
+  alternates: { canonical: "/features" },
+  openGraph: { url: "/features" },
 };
 
 export default async function FeaturesPage() {

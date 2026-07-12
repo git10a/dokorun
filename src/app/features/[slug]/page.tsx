@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!feature) return { title: "ページが見つかりません" };
   const featureSpots = await getSpots(slug);
   const title = `${feature.title}【全国${featureSpots.length}件】`;
-  return { title, description: feature.description, alternates: { canonical: `${baseUrl()}/features/${slug}` }, openGraph: { title, description: feature.description } };
+  const canonical = `${baseUrl()}/features/${slug}`;
+  return { title, description: feature.description, alternates: { canonical }, openGraph: { title, description: feature.description, url: canonical } };
 }
 
 export default async function FeaturePage({ params }: { params: Params }) {

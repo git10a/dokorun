@@ -7,12 +7,22 @@ import { getSpotSummariesBySlugs } from "@/db/data";
 import { getNearbyDestinationsForPurpose, getPrimaryNearbyDestinationRating, nearbyDestinationPurposeFilters } from "@/lib/nearby-destinations";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = {
-  title: "走ったあとに寄る場所からさがす",
-  description: "旅先で走るコースと、走ったあとに寄りたいパン、カフェ、サウナを一緒に探せます。",
-};
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
+  const raw = await searchParams;
+  const hasFilters = Object.values(raw).some((value) => Array.isArray(value) ? value.some(Boolean) : Boolean(value));
+  const title = "走ったあとに寄る場所からさがす";
+  const description = "旅先で走るコースと、走ったあとに寄りたいパン、カフェ、サウナを一緒に探せます。";
+  return {
+    title,
+    description,
+    alternates: { canonical: "/destinations" },
+    openGraph: { title, description, url: "/destinations" },
+    robots: hasFilters ? { index: false, follow: true } : undefined,
+  };
+}
 
 export default async function DestinationsPage({ searchParams }: { searchParams: SearchParams }) {
   const raw = await searchParams;

@@ -7,17 +7,19 @@ import { races } from "@/lib/races";
 // クローラーアクセスのたびのD1クエリを1日1回に抑える。新スポットの反映は最大1日遅れる
 export const revalidate = 86400;
 
+const contentUpdatedAt = new Date("2026-07-12T00:00:00+09:00");
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   const fixedPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, changeFrequency: "weekly", priority: 1 },
-    { url: `${baseUrl}/spots`, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/destinations`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/areas`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/features`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/races`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/guide/gpx`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.5 },
+    { url: baseUrl, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/spots`, lastModified: contentUpdatedAt, changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/destinations`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/areas`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/features`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/races`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/guide/gpx`, lastModified: contentUpdatedAt, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/about`, lastModified: contentUpdatedAt, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/terms`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${baseUrl}/privacy`, changeFrequency: "yearly", priority: 0.2 },

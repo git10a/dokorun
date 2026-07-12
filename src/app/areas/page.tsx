@@ -12,6 +12,8 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "都道府県からランニングコースをさがす",
   description: "日本全国のランニングコース・スポットを都道府県別にまとめています。コースマップ・距離・信号の数・設備情報つき。",
+  alternates: { canonical: "/areas" },
+  openGraph: { url: "/areas" },
 };
 
 export default async function AreasPage() {
