@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Footprints } from "lucide-react";
+import Image from "next/image";
 import { UserMenu } from "@/components/auth/user-menu";
 
 export function Header() {
@@ -7,7 +7,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 md:px-6">
         <Link href="/" className="flex shrink-0 items-center gap-1.5 font-bold tracking-tight sm:gap-2">
-          <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-brand sm:size-9"><Footprints size={20} /></span>
+          <Image src="/characters/hashiro-smile.png" alt="" width={306} height={363} className="h-10 w-auto shrink-0 sm:h-11" priority />
           <span className="whitespace-nowrap text-[11px] sm:text-lg">どこラン</span>
         </Link>
         <nav aria-label="メインナビゲーション" className="flex shrink-0 items-center gap-2 text-[10px] font-bold sm:gap-5 sm:text-sm">
