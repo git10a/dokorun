@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footprints } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -9,11 +10,11 @@ export function Footer() {
           <div className="md:col-span-5 lg:col-span-6">
             <div className="mb-4 flex items-center gap-2 font-bold text-ink">
               <span className="grid size-8 place-items-center rounded-lg bg-brand"><Footprints size={18} /></span>
-              <span className="text-lg">どこラン</span>
+              <span className="text-lg">{siteConfig.name}</span>
               <img src="/characters/ran-happy.png" alt="" className="ml-2 h-7 w-auto -scale-x-100" />
               <img src="/characters/hashiro-smile.png" alt="" className="h-7 w-auto -scale-x-100" />
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-sub">「次はどこでランする？」に答えるランニングコース検索。日本全国の走りやすい代表コースを、地図と走るための情報つきで紹介しています。</p>
+            <p className="max-w-sm text-sm leading-relaxed text-sub">「{siteConfig.question}」に答えるランニングコース検索。日本全国の走りやすい代表コースを、地図と走るための情報つきで紹介しています。</p>
           </div>
 
           <nav aria-label="フッターナビゲーション" className="grid grid-cols-2 gap-8 md:col-span-7 lg:col-span-6">
@@ -40,7 +41,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-line pt-8 md:flex-row md:items-center">
-          <p className="text-xs text-sub">© {new Date().getFullYear()} どこラン</p>
+          <p className="text-xs text-sub">© {new Date().getFullYear()} {siteConfig.name}</p>
           <Link href="/admin" className="text-xs text-sub underline underline-offset-4 transition-colors hover:text-ink">運営者向け</Link>
         </div>
       </div>

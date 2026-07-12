@@ -23,6 +23,7 @@ import { prefectureSlug } from "@/lib/areas";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
+import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -66,7 +67,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   const initialFavorite = userState?.isFavorite ?? false;
   const todayRunId = userState?.todayRunId ?? null;
   const destinations = getNearbyDestinations(spot.slug);
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  const baseUrl = getSiteUrl();
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

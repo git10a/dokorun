@@ -8,12 +8,13 @@ import { SpotCard } from "@/components/spot-card";
 import { SpotsMapShell } from "@/components/map/spots-map-shell";
 import { TrackView } from "@/components/track-view";
 import { getSearchTags, searchSpots } from "@/db/data";
+import { buildSpotRequestHref, normalizeSearchParams, searchParamsHref, toSearchFilters } from "@/lib/spot-search";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
   const raw = await searchParams;
-  const params = Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value])) as Record<string, string | undefined>;
+  const params = normalizeSearchParams(raw);
   const page = Math.max(1, Number(params.page) || 1);
   const nonPaginationParams = Object.keys(params).filter((key) => key !== "page" && params[key]);
   const canonical = page > 1 && nonPaginationParams.length === 0 ? `/spots?page=${page}` : "/spots";
@@ -30,54 +31,16 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
-const courseTypeRequestLabels: Record<string, string> = {
-  loop: "周回",
-  out_and_back: "往復",
-  one_way: "ワンウェイ",
-  track: "トラック",
-};
-
-const distanceRequestLabels: Record<string, string> = {
-  "0-3": "〜3km",
-  "3-5": "3〜5km",
-  "5-10": "5〜10km",
-  "10-": "10km〜",
-};
-
 export default async function SpotsPage({ searchParams }: { searchParams: SearchParams }) {
   const raw = await searchParams;
-  const params = Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value])) as Record<string, string | undefined>;
-  const distance = params.dist?.split("-");
-  const distMin = distance?.[0] ? Number(distance[0]) * 1000 : undefined;
-  const distMax = distance?.[1] ? Number(distance[1]) * 1000 : undefined;
-  const page = Math.max(1, Number(params.page) || 1);
-  const lat = Number(params.lat);
-  const lng = Number(params.lng);
-  const validGeo = Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180;
-  const filters = {
-    pref: params.pref, tags: params.tags?.split(",").filter(Boolean), type: params.type, distMin, distMax, q: params.q,
-    toilet: params.toilet === "1", locker: params.locker === "1", sento: params.sento === "1", popular: params.popular === "1", sort: params.sort, page,
-    lat: validGeo ? lat : undefined, lng: validGeo ? lng : undefined,
-  };
+  const params = normalizeSearchParams(raw);
+  const filters = toSearchFilters(params);
+  const page = filters.page ?? 1;
   const [allTags, result] = await Promise.all([getSearchTags(), searchSpots(filters)]);
   const pages = Math.ceil(result.total / 20);
   const selectedTagNames = allTags.filter((tag) => filters.tags?.includes(tag.slug)).map((tag) => tag.name);
-  const requestConditions: string[] = [];
-  if (params.popular === "1") requestConditions.push("一覧: 人気スポット");
-  if (params.q) requestConditions.push(`キーワード: ${params.q}`);
-  if (params.pref) requestConditions.push(`都道府県: ${params.pref}`);
-  if (selectedTagNames.length) requestConditions.push(`特徴: ${selectedTagNames.join("、")}`);
-  if (params.type) requestConditions.push(`コース形状: ${courseTypeRequestLabels[params.type] ?? params.type}`);
-  if (params.dist) requestConditions.push(`距離: ${distanceRequestLabels[params.dist] ?? params.dist}`);
-  if (params.toilet === "1") requestConditions.push("設備: トイレあり");
-  if (params.locker === "1") requestConditions.push("設備: ロッカーあり");
-  if (params.sento === "1") requestConditions.push("設備: 銭湯・サウナが近い");
-  const requestLines = ["検索で条件に合うスポットが見つかりませんでした。掲載候補をリクエストします。", "", "探していた条件:"];
-  requestLines.push(...(requestConditions.length ? requestConditions : ["未指定"]));
-  requestLines.push("", "具体的には:", "例: 明治神宮外苑1周コース など", "");
-  const requestParams = new URLSearchParams({ category: "spot_request", message: requestLines.join("\n") });
-  const requestHref = `/contact?${requestParams}`;
-  const pageHref = (target: number) => { const next = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1]))); next.set("page", String(target)); return `/spots?${next}`; };
+  const requestHref = buildSpotRequestHref(params, selectedTagNames);
+  const pageHref = (target: number) => searchParamsHref("/spots", params, { page: String(target) });
   const mapParams = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1])));
   mapParams.delete("page");
   mapParams.delete("sort");

@@ -8,6 +8,7 @@ import { racesByCalendar } from "@/lib/races";
 import { regionGroups } from "@/lib/prefectures";
 import { HeroSearch } from "@/components/hero-search";
 import { SpotCard } from "@/components/spot-card";
+import { siteConfig } from "@/lib/site";
 
 // cookies/headers/searchParamsを読まず表示は全ユーザー共通のためISR化。
 // 人気/新着スポットや件数の反映が最大1時間遅れるのみ
@@ -25,7 +26,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden bg-brand px-4 pb-10 pt-14 text-center sm:pb-12 sm:pt-20">
-        <div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black tracking-tight sm:text-6xl">次はどこでランする？</h1><p className="mt-4 text-sm font-medium sm:text-lg"><span className="inline-block">旅先でも、出張先でも、大会遠征でも。</span><span className="inline-block">知らない土地で走れるコースが地図つきで見つかる</span></p><p className="mt-3 inline-flex items-baseline gap-1 rounded-full bg-paper/85 px-4 py-1.5 text-xs font-bold shadow-sm sm:text-sm">全国<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{totalSpots}</span>スポット・<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{countMap.size}</span>都道府県を掲載中</p></div>
+        <div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black tracking-tight sm:text-6xl">{siteConfig.question}</h1><p className="mt-4 text-sm font-medium sm:text-lg"><span className="inline-block">旅先でも、出張先でも、大会遠征でも。</span><span className="inline-block">知らない土地で走れるコースが地図つきで見つかる</span></p><p className="mt-3 inline-flex items-baseline gap-1 rounded-full bg-paper/85 px-4 py-1.5 text-xs font-bold shadow-sm sm:text-sm">全国<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{totalSpots}</span>スポット・<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{countMap.size}</span>都道府県を掲載中</p></div>
         <HeroSearch tags={tags} prefectureCounts={counts} />
       </section>
       <div className="mx-auto max-w-7xl space-y-16 px-4 pt-12 md:px-6">

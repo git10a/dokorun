@@ -4,24 +4,7 @@ import { communities, courses, favoriteSpots, hashiritai, photos, runs, spotComm
 import { jstDayBounds } from "@/lib/jst";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
-
-type SearchFilters = {
-  pref?: string;
-  tags?: string[];
-  type?: string;
-  distMin?: number;
-  distMax?: number;
-  q?: string;
-  toilet?: boolean;
-  locker?: boolean;
-  sento?: boolean;
-  popular?: boolean;
-  sort?: string;
-  lat?: number;
-  lng?: number;
-  page?: number;
-  limit?: number;
-};
+import type { SearchFilters } from "@/lib/spot-search";
 
 const longRunTag = { id: "virtual-long-run", slug: "long-run", name: "ロングラン", category: "terrain", sortOrder: 6 } as const;
 const longRunDistanceM = 10000;

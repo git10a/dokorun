@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/site";
 import { getPrefectureCounts, getSitemapSpots } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { features } from "@/lib/features";
@@ -10,7 +11,7 @@ export const revalidate = 86400;
 const contentUpdatedAt = new Date("2026-07-12T00:00:00+09:00");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  const baseUrl = getSiteUrl();
   const fixedPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/spots`, lastModified: contentUpdatedAt, changeFrequency: "daily", priority: 0.9 },
