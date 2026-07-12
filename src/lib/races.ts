@@ -1,6 +1,6 @@
 // 大会試走ページ(/races/{slug})の定義。
 // 掲載スポットは spots.slug で紐付け、表示時に getSpotSummariesBySlugs で解決する。
-// 開催日は毎年変わるため「毎年◯月ごろ」の粒度に留め、年次更新の保守を不要にする
+// 開催日は公式発表済みの当年日程を掲載し、毎年更新する。
 export type RaceSpotLink = {
   slug: string;
   // そのスポットが試走・前日ラン・当日アップにどう役立つか(カード上部に表示)
@@ -11,7 +11,7 @@ export type RaceDef = {
   slug: string;
   name: string;
   officialUrl: string;
-  timing: string; // 例: "毎年3月上旬"
+  timing: string; // 例: "2026年3月1日（日）"
   monthIndex: number; // 開催月(1-12)。一覧のカレンダー順ソートに使う
   prefecture: string;
   startFinish: string;
@@ -26,7 +26,7 @@ export const races: RaceDef[] = [
     slug: "ehime-marathon",
     name: "愛媛マラソン",
     officialUrl: "https://ehimemarathon.jp/",
-    timing: "毎年2月上旬",
+    timing: "2026年2月1日（日）",
     monthIndex: 2,
     prefecture: "愛媛県",
     startFinish: "松山市・城山公園周辺発着",
@@ -41,7 +41,7 @@ export const races: RaceDef[] = [
     slug: "saitama-marathon",
     name: "さいたまマラソン",
     officialUrl: "https://saitama-marathon.jp/",
-    timing: "毎年2月中旬",
+    timing: "2026年2月8日（日）",
     monthIndex: 2,
     prefecture: "埼玉県",
     startFinish: "さいたま新都心・さいたまスーパーアリーナ周辺発着",
@@ -56,7 +56,7 @@ export const races: RaceDef[] = [
     slug: "beppu-oita-marathon",
     name: "別府大分毎日マラソン",
     officialUrl: "https://www.betsudai.com/",
-    timing: "毎年2月上旬",
+    timing: "2026年2月1日（日）",
     monthIndex: 2,
     prefecture: "大分県",
     startFinish: "高崎山うみたまご前スタート、別大国道を経て大分市営陸上競技場フィニッシュ",
@@ -73,7 +73,7 @@ export const races: RaceDef[] = [
     slug: "kyoto-marathon",
     name: "京都マラソン",
     officialUrl: "https://kyoto-marathon.com/",
-    timing: "毎年2月中旬",
+    timing: "2026年2月15日（日）",
     monthIndex: 2,
     prefecture: "京都府",
     startFinish: "たけびしスタジアム京都(西京極)スタート、平安神宮前フィニッシュ",
@@ -90,7 +90,7 @@ export const races: RaceDef[] = [
     slug: "osaka-marathon",
     name: "大阪マラソン",
     officialUrl: "https://www.osaka-marathon.com/",
-    timing: "毎年2月下旬",
+    timing: "2026年2月22日（日）",
     monthIndex: 2,
     prefecture: "大阪府",
     startFinish: "大阪府庁前スタート、大阪城公園フィニッシュ",
@@ -107,7 +107,7 @@ export const races: RaceDef[] = [
     slug: "tokyo-marathon",
     name: "東京マラソン",
     officialUrl: "https://www.marathon.tokyo/",
-    timing: "毎年3月上旬",
+    timing: "2026年3月1日（日）",
     monthIndex: 3,
     prefecture: "東京都",
     startFinish: "東京都庁前スタート、丸の内・行幸通りフィニッシュ",
@@ -125,7 +125,7 @@ export const races: RaceDef[] = [
     slug: "nagoya-womens-marathon",
     name: "名古屋ウィメンズマラソン",
     officialUrl: "https://womens-marathon.nagoya/",
-    timing: "毎年3月上旬",
+    timing: "2026年3月8日（日）",
     monthIndex: 3,
     prefecture: "愛知県",
     startFinish: "バンテリンドーム ナゴヤ発着",
@@ -142,7 +142,7 @@ export const races: RaceDef[] = [
     slug: "itabashi-city-marathon",
     name: "板橋Cityマラソン",
     officialUrl: "https://i-c-m.jp/",
-    timing: "毎年3月中旬",
+    timing: "2026年3月15日（日）",
     monthIndex: 3,
     prefecture: "東京都",
     startFinish: "荒川河川敷(板橋・浮間エリア)発着",
@@ -158,7 +158,7 @@ export const races: RaceDef[] = [
     slug: "hokkaido-marathon",
     name: "北海道マラソン",
     officialUrl: "https://hokkaido-marathon.com/",
-    timing: "毎年8月下旬",
+    timing: "2026年8月30日（日）",
     monthIndex: 8,
     prefecture: "北海道",
     startFinish: "札幌・大通公園発着",
@@ -174,7 +174,7 @@ export const races: RaceDef[] = [
     slug: "tazawako-marathon",
     name: "田沢湖マラソン",
     officialUrl: "https://tazawako-marathon.com/",
-    timing: "毎年9月中旬",
+    timing: "2026年9月20日（日）",
     monthIndex: 9,
     prefecture: "秋田県",
     startFinish: "田沢湖畔発着",
@@ -189,7 +189,7 @@ export const races: RaceDef[] = [
     slug: "yokohama-marathon",
     name: "横浜マラソン",
     officialUrl: "https://yokohamamarathon.jp/",
-    timing: "毎年10月下旬",
+    timing: "2026年10月25日（日）",
     monthIndex: 10,
     prefecture: "神奈川県",
     startFinish: "みなとみらい発着",
@@ -206,7 +206,7 @@ export const races: RaceDef[] = [
     slug: "mito-komon-marathon",
     name: "水戸黄門漫遊マラソン",
     officialUrl: "https://mitokomon-manyu-marathon.com/",
-    timing: "毎年10月下旬",
+    timing: "2026年10月25日（日）",
     monthIndex: 10,
     prefecture: "茨城県",
     startFinish: "水戸市街地発着",
@@ -221,7 +221,7 @@ export const races: RaceDef[] = [
     slug: "kanazawa-marathon",
     name: "金沢マラソン",
     officialUrl: "https://www.kanazawa-marathon.jp/",
-    timing: "毎年10月下旬",
+    timing: "2026年10月25日（日）",
     monthIndex: 10,
     prefecture: "石川県",
     startFinish: "しいのき迎賓館前スタート、石川県西部緑地公園フィニッシュ",
@@ -237,7 +237,7 @@ export const races: RaceDef[] = [
     slug: "suwako-marathon",
     name: "諏訪湖マラソン",
     officialUrl: "https://suwako.marathon.fm/",
-    timing: "毎年10月下旬",
+    timing: "2026年10月25日（日）",
     monthIndex: 10,
     prefecture: "長野県",
     startFinish: "諏訪湖畔発着",
@@ -252,7 +252,7 @@ export const races: RaceDef[] = [
     slug: "fukuoka-marathon",
     name: "福岡マラソン",
     officialUrl: "https://www.f-marathon.jp/",
-    timing: "毎年11月上旬",
+    timing: "2026年11月8日（日）",
     monthIndex: 11,
     prefecture: "福岡県",
     startFinish: "天神スタート、糸島市フィニッシュ",
@@ -268,7 +268,7 @@ export const races: RaceDef[] = [
     slug: "shimonoseki-kaikyo-marathon",
     name: "下関海響マラソン",
     officialUrl: "https://kaikyomarathon.jp/",
-    timing: "毎年11月上旬",
+    timing: "2026年11月1日（日）",
     monthIndex: 11,
     prefecture: "山口県",
     startFinish: "海峡メッセ下関周辺発着",
@@ -283,7 +283,7 @@ export const races: RaceDef[] = [
     slug: "ibigawa-marathon",
     name: "いびがわマラソン",
     officialUrl: "https://ibigawa-marathon.jp/",
-    timing: "毎年11月上旬",
+    timing: "2026年11月8日（日）",
     monthIndex: 11,
     prefecture: "岐阜県",
     startFinish: "揖斐川町中心部発着",
@@ -298,7 +298,7 @@ export const races: RaceDef[] = [
     slug: "kobe-marathon",
     name: "神戸マラソン",
     officialUrl: "https://kobe-marathon.net/",
-    timing: "毎年11月中旬",
+    timing: "2026年11月15日（日）",
     monthIndex: 11,
     prefecture: "兵庫県",
     startFinish: "三宮・神戸市役所前スタート、ポートアイランドフィニッシュ",
@@ -314,8 +314,8 @@ export const races: RaceDef[] = [
     slug: "fujisan-marathon",
     name: "富士山マラソン",
     officialUrl: "https://mtfujimarathon.com/",
-    timing: "毎年11月下旬",
-    monthIndex: 11,
+    timing: "2026年12月13日（日）",
+    monthIndex: 12,
     prefecture: "山梨県",
     startFinish: "河口湖畔発着(河口湖・西湖をめぐる)",
     distanceLabel: "フルマラソン",
@@ -330,7 +330,7 @@ export const races: RaceDef[] = [
     slug: "aoshima-taiheiyo-marathon",
     name: "青島太平洋マラソン",
     officialUrl: "https://www.aotai.gr.jp/",
-    timing: "毎年12月上旬",
+    timing: "2026年12月13日（日）",
     monthIndex: 12,
     prefecture: "宮崎県",
     startFinish: "宮崎県総合運動公園発着",
@@ -346,7 +346,7 @@ export const races: RaceDef[] = [
     slug: "naha-marathon",
     name: "NAHAマラソン",
     officialUrl: "https://naha-marathon.jp/",
-    timing: "毎年12月上旬",
+    timing: "2026年12月6日（日）",
     monthIndex: 12,
     prefecture: "沖縄県",
     startFinish: "那覇市・奥武山公園周辺発着",
@@ -361,5 +361,11 @@ export const races: RaceDef[] = [
 
 export const raceBySlug = new Map(races.map((race) => [race.slug, race]));
 
-// カレンダー順(1月→12月)で並べた一覧。年をまたぐ概念はないため単純ソートでよい
-export const racesByCalendar = [...races].sort((a, b) => a.monthIndex - b.monthIndex);
+function timingSortKey(timing: string) {
+  const match = timing.match(/^(\d{4})年(\d{1,2})月(\d{1,2})日/);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return Number(match[1]) * 10_000 + Number(match[2]) * 100 + Number(match[3]);
+}
+
+// 公式発表済みの開催日順で並べる。同日開催は定義順を維持する。
+export const racesByCalendar = [...races].sort((a, b) => timingSortKey(a.timing) - timingSortKey(b.timing));
