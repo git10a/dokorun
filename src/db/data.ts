@@ -25,6 +25,39 @@ type SearchFilters = {
 
 const longRunTag = { id: "virtual-long-run", slug: "long-run", name: "ロングラン", category: "terrain", sortOrder: 6 } as const;
 const longRunDistanceM = 10000;
+const castleRunTag = { id: "virtual-castle-run", slug: "castle-run", name: "お城ラン", category: "scenery", sortOrder: 16 } as const;
+// 城が主目的・主要経由地になっているコースだけを対象にする。
+// 名前に「城」が含まれるだけの公園（城北中央公園など）は含めない。
+const castleRunSpotSlugs = [
+  "akashi-park",
+  "dogo-matsuyama-castle",
+  "fukuyama-castle-loop",
+  "hikone-castle-loop",
+  "himeji-castle-loop",
+  "hirosaki-park-loop",
+  "hiroshima-castle-loop",
+  "imabari-castle-port",
+  "kanazawa-castle-loop",
+  "katsuyama-park-murasaki-river",
+  "kochi-castle-loop",
+  "kumamoto-castle-loop",
+  "matsue-castle-loop",
+  "matsumoto-castle-loop",
+  "meijo",
+  "morioka-city-jog",
+  "okayama-castle-korakuen",
+  "osakajo",
+  "saga-castle-moat",
+  "shiroyama-park-horinouchi",
+  "sunpu-castle-park",
+  "takaoka-castle-park",
+  "tokushima-central-park",
+  "toyama-castle-park",
+  "tsurugajo-loop",
+  "wakayama-castle-park",
+  "yamagata-city-loop",
+  "yokote-park",
+] as const;
 
 type RelationRow = {
   id: string;
@@ -57,9 +90,13 @@ function decorateRows<T extends RelationRow>(
 ): (SpotSummary & T)[] {
   return rows.map((row) => {
     const rowTags = tagRows.filter((tag) => tag.spotId === row.id).map(({ slug, name }) => ({ slug, name }));
-    const displayTags = row.distanceM >= longRunDistanceM && !rowTags.some((tag) => tag.slug === longRunTag.slug)
-      ? [...rowTags, { slug: longRunTag.slug, name: longRunTag.name }]
-      : rowTags;
+    const displayTags = [...rowTags];
+    if (row.distanceM >= longRunDistanceM && !displayTags.some((tag) => tag.slug === longRunTag.slug)) {
+      displayTags.push({ slug: longRunTag.slug, name: longRunTag.name });
+    }
+    if (castleRunSpotSlugs.includes(row.slug as (typeof castleRunSpotSlugs)[number]) && !displayTags.some((tag) => tag.slug === castleRunTag.slug)) {
+      displayTags.push({ slug: castleRunTag.slug, name: castleRunTag.name });
+    }
     return {
       ...row,
       photoUrl: photoRows.find((photo) => photo.spotId === row.id)?.url ?? null,
@@ -112,8 +149,11 @@ export async function getTags() {
 
 export async function getSearchTags() {
   const rows = await getTags();
-  const hasLongRun = rows.some((tag) => tag.slug === longRunTag.slug);
-  return hasLongRun ? rows : [...rows, longRunTag];
+  return [
+    ...rows,
+    ...(rows.some((tag) => tag.slug === longRunTag.slug) ? [] : [longRunTag]),
+    ...(rows.some((tag) => tag.slug === castleRunTag.slug) ? [] : [castleRunTag]),
+  ];
 }
 
 // ハシリタイが集まるまでの初期表示用リスト
@@ -244,9 +284,11 @@ function searchConditions(filters: SearchFilters) {
   if (filters.type) conditions.push(eq(courses.courseType, filters.type as CourseType));
   const selectedTagSlugs = filters.tags ?? [];
   const hasLongRunFilter = selectedTagSlugs.includes(longRunTag.slug);
-  const realTagSlugs = selectedTagSlugs.filter((slug) => slug !== longRunTag.slug);
+  const hasCastleRunFilter = selectedTagSlugs.includes(castleRunTag.slug);
+  const realTagSlugs = selectedTagSlugs.filter((slug) => slug !== longRunTag.slug && slug !== castleRunTag.slug);
   const distanceMin = hasLongRunFilter ? Math.max(filters.distMin ?? 0, longRunDistanceM) : filters.distMin;
   if (distanceMin !== undefined) conditions.push(sql`${courses.distanceM} >= ${distanceMin}`);
+  if (hasCastleRunFilter) conditions.push(inArray(spots.slug, castleRunSpotSlugs));
   if (filters.distMax !== undefined) conditions.push(sql`${courses.distanceM} <= ${filters.distMax}`);
   if (filters.toilet) conditions.push(eq(spots.hasToilet, true));
   if (filters.locker) conditions.push(eq(spots.hasLocker, true));
