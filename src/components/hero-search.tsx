@@ -43,14 +43,6 @@ const extraFilters = [
   { name: "トラック", href: "/spots?type=track" },
 ] as const;
 
-const shopFilters = [
-  { name: "パン屋", href: "/destinations?purpose=bakery" },
-  { name: "カフェ", href: "/destinations?purpose=cafe" },
-  { name: "サウナ・温浴", href: "/destinations?purpose=sauna" },
-  { name: "ごはん", href: "/destinations?purpose=meal" },
-  { name: "ランステ", href: "/destinations?purpose=run_station" },
-] as const;
-
 const chipClassName = "inline-flex items-center rounded-full bg-cream px-3 py-1.5 text-sm font-medium transition-colors hover:bg-brand/45";
 
 export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
@@ -186,12 +178,6 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
               </section>
             );
           })}
-          <section aria-labelledby="hero-search-category-shops">
-            <h2 id="hero-search-category-shops" className="mb-2 text-xs font-bold text-sub">お店</h2>
-            <div className="flex flex-wrap gap-2">
-              {shopFilters.map((filter) => <Link key={filter.href} href={filter.href} className={chipClassName}>{filter.name}</Link>)}
-            </div>
-          </section>
           <section aria-labelledby="hero-search-category-extra">
             <h2 id="hero-search-category-extra" className="mb-2 text-xs font-bold text-sub">設備・タイプ</h2>
             <div className="flex flex-wrap gap-2">

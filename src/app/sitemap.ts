@@ -15,7 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const fixedPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/spots`, lastModified: contentUpdatedAt, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/destinations`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/areas`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/features`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/races`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },

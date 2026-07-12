@@ -24,7 +24,6 @@ export function Footer() {
                 <li><Link href="/areas" className="transition-colors hover:text-accent">エリアから</Link></li>
                 <li><Link href="/features" className="transition-colors hover:text-accent">条件から</Link></li>
                 <li><Link href="/races" className="transition-colors hover:text-accent">大会から</Link></li>
-                <li><Link href="/destinations" className="transition-colors hover:text-accent">走ったあとの寄り道</Link></li>
               </ul>
             </div>
             <div>
