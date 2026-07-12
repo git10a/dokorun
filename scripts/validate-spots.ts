@@ -4,7 +4,7 @@ import { z } from "zod";
 import { prefectureBounds, prefectures } from "@/lib/prefectures";
 
 const tagSlugs = new Set([
-  "no-signals", "flat", "hilly", "dirt-path", "dedicated-lane", "track", "cross-country",
+  "no-signals", "flat", "hilly", "dirt-path", "dedicated-lane", "trail", "track", "cross-country",
   "bright-at-night", "shaded", "less-crowded", "water-refill", "waterside", "riverside",
   "park", "scenic", "cherry-blossoms",
 ]);
