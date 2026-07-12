@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, Flag, MapPin, Route } from "lucide-react";
+import { CalendarDays, Download, ExternalLink, Flag, MapPin, Route } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { RaceCourseMap } from "@/components/map/race-course-map";
 import { SpotCard } from "@/components/spot-card";
@@ -85,15 +85,21 @@ export default async function RacePage({ params }: { params: Params }) {
         <div><dt className="flex items-center gap-1.5 font-bold text-sub"><Route size={16} className="text-brand-dark" />種目</dt><dd className="mt-1">{race.distanceLabel}</dd></div>
         <div><dt className="flex items-center gap-1.5 font-bold text-sub"><Flag size={16} className="text-brand-dark" />発着</dt><dd className="mt-1">{race.startFinish}</dd></div>
       </dl>
+      <a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-accent hover:underline">
+        {race.name}公式サイトを開く <ExternalLink size={15} />
+      </a>
       {courseMeta && (
         <section className="mt-10">
           <h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">大会コース{courseMeta.source === "map" && "(参考)"}</h2>
           <RaceCourseMap slug={slug} name={race.name} />
+          <a href={`/api/races/${slug}/gpx`} download className="mt-4 inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-3 font-bold transition hover:bg-cream">
+            <Download size={18} /> 大会コースのGPXをダウンロード
+          </a>
           <p className="mt-3 text-xs leading-5 text-sub">
             {courseMeta.source === "gps"
               ? `大会当日にこのコースを走ったランナーの実走GPSデータをもとに描いています(約${(courseMeta.distanceM / 1000).toFixed(1)}km)。`
               : `大会公式のコース図をもとに作成した参考図です(約${(courseMeta.distanceM / 1000).toFixed(1)}km)。`}
-            コースは年により変更される場合があります。最新の正式なコース・交通規制は大会公式サイトをご確認ください。
+            コースは年により変更される場合があります。最新の正式なコース・交通規制は<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">大会公式サイト</a>をご確認ください。
           </p>
         </section>
       )}

@@ -8,8 +8,8 @@ import { getNearbyDestinationsForPurpose, getPrimaryNearbyDestinationRating, nea
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "走る理由からさがす",
-  description: "パン、カフェ、サウナなど行きたい場所の近くで走れるランニングコースを探せます。",
+  title: "走ったあとに寄る場所からさがす",
+  description: "旅先で走るコースと、走ったあとに寄りたいパン、カフェ、サウナを一緒に探せます。",
 };
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
@@ -38,7 +38,7 @@ export default async function DestinationsPage({ searchParams }: { searchParams:
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <Link href="/spots" className="text-sm font-bold text-accent hover:underline">← コースから探す</Link>
-      <header className="mt-6 max-w-2xl"><p className="font-bold text-accent">RUN FOR SOMETHING</p><h1 className="mt-1 text-3xl font-black sm:text-4xl">走る理由からさがす</h1><p className="mt-3 leading-7 text-sub">行きたい場所の近くで、走れるコースを見つけよう。Googleマップの一覧ではなく、走ったあとに寄りたい場所だけを選んでいます。</p></header>
+      <header className="mt-6 max-w-2xl"><p className="font-bold text-accent">AFTER THE RUN</p><h1 className="mt-1 text-3xl font-black sm:text-4xl">走ったあと、どこ寄る？</h1><p className="mt-3 leading-7 text-sub">旅先で走るコースと、走ったあとに寄りたいパン・カフェ・サウナを一緒に見つけよう。Googleマップの一覧ではなく、ランニングと組み合わせやすい場所を選んでいます。</p></header>
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(280px,1fr)]">
         <div className="min-w-0 space-y-5 lg:order-2"><DestinationSearchFilters params={params} /></div>
         <main className="min-w-0 lg:order-1"><div className="mb-5 flex flex-wrap items-end justify-between gap-3"><div><p className="text-sm text-sub">{purpose ? `${purpose.label}を目的に` : "目的地から"}</p><p className="font-bold"><span className="text-2xl">{results.length}</span>件の組み合わせ</p></div><Link href="/spots" className="flex items-center gap-1 text-sm font-bold text-accent">コースから探す <ArrowRight size={16} /></Link></div>

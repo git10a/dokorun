@@ -16,6 +16,7 @@
     "db:seed": "tsx src/db/seed.ts",
     "db:import": "tsx src/db/import.ts",
     "db:exclusions": "tsx src/db/exclusions.ts",
+    "research:runtrip": "node scripts/research/fetch-runtrip-popular.mjs",
     "gpx:apply": "tsx scripts/apply-gpx.ts",
     "gpx:backfill": "tsx scripts/backfill-simplified-geojson.ts",
     "gpx:check": "tsx scripts/check-gpx.ts",

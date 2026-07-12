@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     toilet: params.get("toilet") === "1",
     locker: params.get("locker") === "1",
     sento: params.get("sento") === "1",
+    popular: params.get("popular") === "1",
   });
   return NextResponse.json(spots, { headers: { "Cache-Control": "public, max-age=300" } });
 }

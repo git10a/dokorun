@@ -12,7 +12,8 @@ const nameIndex = args.indexOf("--name");
 const blocksIndex = args.indexOf("--blocks");
 const lineName = nameIndex >= 0 ? args[nameIndex + 1] : null;
 const blocksSpec = blocksIndex >= 0 ? args[blocksIndex + 1] : null;
-const positional = args.filter((arg, i) => !arg.startsWith("--") && i !== nameIndex + 1 && i !== blocksIndex + 1);
+const optionValueIndexes = new Set([nameIndex, blocksIndex].filter((index) => index >= 0).map((index) => index + 1));
+const positional = args.filter((arg, i) => !arg.startsWith("--") && !optionValueIndexes.has(i));
 const [kmlPath, outPath] = positional;
 if (!kmlPath || !outPath || !lineName) {
   console.error("使い方: node scripts/kml-to-gpx.mjs <kmlファイル> <出力gpx> --name <LineString名の部分一致> [--blocks 0r,1r]");

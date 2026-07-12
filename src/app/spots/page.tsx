@@ -6,6 +6,7 @@ import { SearchFilters } from "@/components/search-filters";
 import { SortSelect } from "@/components/sort-select";
 import { SpotCard } from "@/components/spot-card";
 import { SpotsMapShell } from "@/components/map/spots-map-shell";
+import { TrackView } from "@/components/track-view";
 import { getSearchTags, searchSpots } from "@/db/data";
 
 export const dynamic = "force-dynamic";
@@ -39,13 +40,14 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
   const validGeo = Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180;
   const filters = {
     pref: params.pref, tags: params.tags?.split(",").filter(Boolean), type: params.type, distMin, distMax, q: params.q,
-    toilet: params.toilet === "1", locker: params.locker === "1", sento: params.sento === "1", sort: params.sort, page,
+    toilet: params.toilet === "1", locker: params.locker === "1", sento: params.sento === "1", popular: params.popular === "1", sort: params.sort, page,
     lat: validGeo ? lat : undefined, lng: validGeo ? lng : undefined,
   };
   const [allTags, result] = await Promise.all([getSearchTags(), searchSpots(filters)]);
   const pages = Math.ceil(result.total / 20);
   const selectedTagNames = allTags.filter((tag) => filters.tags?.includes(tag.slug)).map((tag) => tag.name);
   const requestConditions: string[] = [];
+  if (params.popular === "1") requestConditions.push("一覧: 人気スポット");
   if (params.q) requestConditions.push(`キーワード: ${params.q}`);
   if (params.pref) requestConditions.push(`都道府県: ${params.pref}`);
   if (selectedTagNames.length) requestConditions.push(`特徴: ${selectedTagNames.join("、")}`);
@@ -65,7 +67,8 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
   mapParams.delete("sort");
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <h1 className="mb-6 text-2xl font-bold sm:text-3xl">ランニングスポットをさがす</h1>
+      <TrackView name="search_results" meta={{ total: result.total, page, hasQuery: Boolean(params.q), pref: params.pref, tags: params.tags, type: params.type, dist: params.dist, sort: params.sort }} />
+      <h1 className="mb-6 text-2xl font-bold sm:text-3xl">{params.popular === "1" ? "人気スポット" : "ランニングスポットをさがす"}</h1>
       <div className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(340px,2fr)]">
         <div className="min-w-0 space-y-6">
           <SearchFilters tags={allTags} params={params} />

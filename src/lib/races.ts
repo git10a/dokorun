@@ -10,6 +10,7 @@ export type RaceSpotLink = {
 export type RaceDef = {
   slug: string;
   name: string;
+  officialUrl: string;
   timing: string; // 例: "毎年3月上旬"
   monthIndex: number; // 開催月(1-12)。一覧のカレンダー順ソートに使う
   prefecture: string;
@@ -22,8 +23,39 @@ export type RaceDef = {
 
 export const races: RaceDef[] = [
   {
+    slug: "ehime-marathon",
+    name: "愛媛マラソン",
+    officialUrl: "https://ehimemarathon.jp/",
+    timing: "毎年2月上旬",
+    monthIndex: 2,
+    prefecture: "愛媛県",
+    startFinish: "松山市・城山公園周辺発着",
+    distanceLabel: "フルマラソン",
+    description: "愛媛マラソンの前日ランにおすすめのコースまとめ。松山城や道後温泉をめぐりながら、遠征先で軽く走れるスポットを紹介します。",
+    lead: "松山市中心部に泊まる遠征ランナー向けに、大会前日の短いジョグと観光を一緒に楽しめるコースをまとめました。",
+    spots: [
+      { slug: "dogo-matsuyama-castle", reason: "道後温泉と松山城をつなぐ市街地コース。前日の軽いジョグで松山の街並みと起伏を確かめられます。" },
+    ],
+  },
+  {
+    slug: "saitama-marathon",
+    name: "さいたまマラソン",
+    officialUrl: "https://saitama-marathon.jp/",
+    timing: "毎年2月中旬",
+    monthIndex: 2,
+    prefecture: "埼玉県",
+    startFinish: "さいたま新都心・さいたまスーパーアリーナ周辺発着",
+    distanceLabel: "フルマラソン",
+    description: "さいたまマラソンの試走・前日ランにおすすめのコースまとめ。大会コース南側の雰囲気を確かめられるスポットを紹介します。",
+    lead: "市街地と郊外をつなぐコースは、後半まで細かな起伏が続きます。南側エリアで脚を動かしながら、さいたまの地形を確かめておきましょう。",
+    spots: [
+      { slug: "saitama-stadium-park", reason: "大会コース南側に近い、信号なしで走れる公園周回。遠征前後の調整ランに使いやすいスポットです。" },
+    ],
+  },
+  {
     slug: "beppu-oita-marathon",
     name: "別府大分毎日マラソン",
+    officialUrl: "https://www.betsudai.com/",
     timing: "毎年2月上旬",
     monthIndex: 2,
     prefecture: "大分県",
@@ -40,6 +72,7 @@ export const races: RaceDef[] = [
   {
     slug: "kyoto-marathon",
     name: "京都マラソン",
+    officialUrl: "https://kyoto-marathon.com/",
     timing: "毎年2月中旬",
     monthIndex: 2,
     prefecture: "京都府",
@@ -56,6 +89,7 @@ export const races: RaceDef[] = [
   {
     slug: "osaka-marathon",
     name: "大阪マラソン",
+    officialUrl: "https://www.osaka-marathon.com/",
     timing: "毎年2月下旬",
     monthIndex: 2,
     prefecture: "大阪府",
@@ -72,6 +106,7 @@ export const races: RaceDef[] = [
   {
     slug: "tokyo-marathon",
     name: "東京マラソン",
+    officialUrl: "https://www.marathon.tokyo/",
     timing: "毎年3月上旬",
     monthIndex: 3,
     prefecture: "東京都",
@@ -89,6 +124,7 @@ export const races: RaceDef[] = [
   {
     slug: "nagoya-womens-marathon",
     name: "名古屋ウィメンズマラソン",
+    officialUrl: "https://womens-marathon.nagoya/",
     timing: "毎年3月上旬",
     monthIndex: 3,
     prefecture: "愛知県",
@@ -105,6 +141,7 @@ export const races: RaceDef[] = [
   {
     slug: "itabashi-city-marathon",
     name: "板橋Cityマラソン",
+    officialUrl: "https://i-c-m.jp/",
     timing: "毎年3月中旬",
     monthIndex: 3,
     prefecture: "東京都",
@@ -120,6 +157,7 @@ export const races: RaceDef[] = [
   {
     slug: "hokkaido-marathon",
     name: "北海道マラソン",
+    officialUrl: "https://hokkaido-marathon.com/",
     timing: "毎年8月下旬",
     monthIndex: 8,
     prefecture: "北海道",
@@ -135,6 +173,7 @@ export const races: RaceDef[] = [
   {
     slug: "tazawako-marathon",
     name: "田沢湖マラソン",
+    officialUrl: "https://tazawako-marathon.com/",
     timing: "毎年9月中旬",
     monthIndex: 9,
     prefecture: "秋田県",
@@ -149,6 +188,7 @@ export const races: RaceDef[] = [
   {
     slug: "yokohama-marathon",
     name: "横浜マラソン",
+    officialUrl: "https://yokohamamarathon.jp/",
     timing: "毎年10月下旬",
     monthIndex: 10,
     prefecture: "神奈川県",
@@ -163,8 +203,24 @@ export const races: RaceDef[] = [
     ],
   },
   {
+    slug: "mito-komon-marathon",
+    name: "水戸黄門漫遊マラソン",
+    officialUrl: "https://mitokomon-manyu-marathon.com/",
+    timing: "毎年10月下旬",
+    monthIndex: 10,
+    prefecture: "茨城県",
+    startFinish: "水戸市街地発着",
+    distanceLabel: "フルマラソン",
+    description: "水戸黄門漫遊マラソンの試走・前日ランにおすすめのコースまとめ。終盤に走る千波湖をコース地図つきで紹介します。",
+    lead: "終盤の千波湖からフィニッシュへ向かう区間は大会の見どころ。湖畔を前日に軽く走れば、終盤の景色と距離感を先に掴めます。",
+    spots: [
+      { slug: "senbako", reason: "大会終盤で走る千波湖の1周約3kmコース。前日の軽いジョグで、終盤の景色とフラットな湖畔を確認できます。" },
+    ],
+  },
+  {
     slug: "kanazawa-marathon",
     name: "金沢マラソン",
+    officialUrl: "https://www.kanazawa-marathon.jp/",
     timing: "毎年10月下旬",
     monthIndex: 10,
     prefecture: "石川県",
@@ -180,6 +236,7 @@ export const races: RaceDef[] = [
   {
     slug: "suwako-marathon",
     name: "諏訪湖マラソン",
+    officialUrl: "https://suwako.marathon.fm/",
     timing: "毎年10月下旬",
     monthIndex: 10,
     prefecture: "長野県",
@@ -194,6 +251,7 @@ export const races: RaceDef[] = [
   {
     slug: "fukuoka-marathon",
     name: "福岡マラソン",
+    officialUrl: "https://www.f-marathon.jp/",
     timing: "毎年11月上旬",
     monthIndex: 11,
     prefecture: "福岡県",
@@ -209,6 +267,7 @@ export const races: RaceDef[] = [
   {
     slug: "shimonoseki-kaikyo-marathon",
     name: "下関海響マラソン",
+    officialUrl: "https://kaikyomarathon.jp/",
     timing: "毎年11月上旬",
     monthIndex: 11,
     prefecture: "山口県",
@@ -223,11 +282,12 @@ export const races: RaceDef[] = [
   {
     slug: "ibigawa-marathon",
     name: "いびがわマラソン",
+    officialUrl: "https://ibigawa-marathon.jp/",
     timing: "毎年11月上旬",
     monthIndex: 11,
     prefecture: "岐阜県",
     startFinish: "揖斐川町中心部発着",
-    distanceLabel: "フルマラソン・ハーフ",
+    distanceLabel: "ハーフマラソン",
     description: "いびがわマラソンの試走におすすめのコースまとめ。大会と同じ揖斐川沿いの区間をコース地図つきで紹介。名物のアップダウンを事前に確認できます。",
     lead: "「日本一きつくて日本一あたたかい」と言われる起伏の大会。揖斐川沿いのアップダウンを一度踏んでおくと、ペース配分の解像度が上がります。",
     spots: [
@@ -237,6 +297,7 @@ export const races: RaceDef[] = [
   {
     slug: "kobe-marathon",
     name: "神戸マラソン",
+    officialUrl: "https://kobe-marathon.net/",
     timing: "毎年11月中旬",
     monthIndex: 11,
     prefecture: "兵庫県",
@@ -252,6 +313,7 @@ export const races: RaceDef[] = [
   {
     slug: "fujisan-marathon",
     name: "富士山マラソン",
+    officialUrl: "https://mtfujimarathon.com/",
     timing: "毎年11月下旬",
     monthIndex: 11,
     prefecture: "山梨県",
@@ -267,6 +329,7 @@ export const races: RaceDef[] = [
   {
     slug: "aoshima-taiheiyo-marathon",
     name: "青島太平洋マラソン",
+    officialUrl: "https://www.aotai.gr.jp/",
     timing: "毎年12月上旬",
     monthIndex: 12,
     prefecture: "宮崎県",
@@ -277,6 +340,21 @@ export const races: RaceDef[] = [
     spots: [
       { slug: "aoshima-kisakihama", reason: "名物のトロピカルロード・青島エリアはコースそのもの。松林の日差しや路面を事前に体感できます。" },
       { slug: "miyazaki-night-run", reason: "宮崎市中心部泊の前日ジョグに。大淀川沿いまで含めて距離を調整しやすい市街地コースです。" },
+    ],
+  },
+  {
+    slug: "naha-marathon",
+    name: "NAHAマラソン",
+    officialUrl: "https://naha-marathon.jp/",
+    timing: "毎年12月上旬",
+    monthIndex: 12,
+    prefecture: "沖縄県",
+    startFinish: "那覇市・奥武山公園周辺発着",
+    distanceLabel: "フルマラソン",
+    description: "NAHAマラソンの前日ランにおすすめのコースまとめ。那覇市内泊から海沿いへ走れるスポットを紹介します。",
+    lead: "南部5市町をめぐる起伏の大きな大会。前日は距離を抑え、那覇市内から行きやすい海沿いで軽く脚を動かすのがおすすめです。",
+    spots: [
+      { slug: "naminoue-beach", reason: "那覇市中心部から走って行ける海沿いコース。移動の負担を増やさず、前日に短く脚を動かせます。" },
     ],
   },
 ];

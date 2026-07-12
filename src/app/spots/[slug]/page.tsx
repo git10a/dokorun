@@ -18,6 +18,7 @@ import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
 import { SpotCommunities } from "@/components/spot-communities";
+import { RunCoursePanel } from "@/components/run-course-panel";
 import { prefectureSlug } from "@/lib/areas";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
@@ -96,14 +97,14 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <TrackView name="spot_view" meta={{ slug: spot.slug }} />
       {query.posted === "info" && <p className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">スポット情報を修正しました。ご協力ありがとうございます ✏️</p>}
       <header><div className="flex items-start justify-between gap-3"><p className="text-sm text-sub"><Link href={`/areas/${prefectureSlug(spot.prefecture)}`} className="hover:underline">{spot.prefecture}</Link> {spot.city}</p><Link href={`/spots/${spot.slug}/edit`} className="shrink-0 rounded-lg border border-line bg-paper px-3 py-1.5 text-sm font-bold text-sub hover:bg-cream">✏️ 情報修正</Link></div><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-sm text-sub">{spot.nameKana}</p><div className="mt-4 flex flex-wrap gap-2">{spot.tags.map((tag) => <span key={tag.slug} className="rounded-full bg-cream px-3 py-1.5 text-sm">{tag.name}</span>)}</div></header>
-      <div className="flex flex-wrap items-center gap-3"><HashiritaiButton slug={spot.slug} count={spot.hashiritaiCount} loggedIn={Boolean(user)} initialLiked={initialLiked} /><FavoriteButton spotId={spot.id} slug={spot.slug} loggedIn={Boolean(user)} initialFavorite={initialFavorite} /><a href="#dokolog" className="flex items-center gap-1.5 rounded-lg border border-line bg-cream px-4 py-3 text-sm font-bold transition hover:bg-brand/20">🏃 ランログ {spot.runsCount}件 <span aria-hidden className="text-xs text-sub">↓</span></a><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - どこラン`} /></div>
+      <RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} distanceM={spot.distanceM} courseType={spot.courseType} surface={spot.surface} access={spot.access} canDownloadGpx={Boolean(spot.geojson)} />
+      <div className="flex flex-wrap items-center gap-3"><HashiritaiButton slug={spot.slug} count={spot.hashiritaiCount} loggedIn={Boolean(user)} initialLiked={initialLiked} /><FavoriteButton spotId={spot.id} slug={spot.slug} loggedIn={Boolean(user)} initialFavorite={initialFavorite} /><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - どこラン`} /></div>
       {spot.photos.length > 0 && <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.map((photo, index) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><SpotImage src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} width={1280} height={720} sizes="(min-width: 640px) 60vw, 85vw" priority={index === 0} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>)}</section>}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><DirectionsLink lat={spot.lat} lng={spot.lng} name={spot.name} slug={spot.slug} /></section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コーススペック</h2><SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} /></section>
       {spot.trackUsage && <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">トラック利用情報</h2><TrackUsagePanel usage={spot.trackUsage} /></section>}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備</h2><FacilityIcons spot={spot} /></section>
       <section className="space-y-7"><div><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このスポットについて</h2><p className="whitespace-pre-line leading-8">{spot.description}</p></div>{spot.access && <div><h3 className="mb-3 font-bold">場所・アクセス</h3><p className="leading-7 text-sub">{spot.access}</p></div>}</section>
-      <SpotCommunities communities={spotCommunities} />
       <NearbyDestinations places={destinations} />
       <section id="dokolog" className="scroll-mt-20 rounded-2xl bg-cream px-5 py-8 sm:px-7">
         <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのランログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><div className="flex flex-wrap items-center gap-3"><CheckInButton spotId={spot.id} spotSlug={spot.slug} loggedIn={Boolean(user)} todayRunId={todayRunId} /><Link href={user ? `/spots/${spot.slug}/log/new` : `/login?callbackURL=${encodeURIComponent(`/spots/${spot.slug}/log/new`)}`} className="rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold">ひとことつきで投稿</Link></div></div>        {query.posted === "1" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ランログを投稿しました</p>}
@@ -116,6 +117,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
         {!publicRuns.length && <p className="mt-6 text-sub">まだランログはありません。最初の記録を残してみませんか 🏃</p>}
         {query.logs !== "all" && spot.runsCount > 10 && <Link href={`/spots/${spot.slug}?logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}
       </section>
+      <SpotCommunities communities={spotCommunities} />
       {nearby.length > 0 && <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くのスポット</h2><div className="grid gap-5 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
     </div>
   );

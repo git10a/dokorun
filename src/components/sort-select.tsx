@@ -20,6 +20,12 @@ export function SortSelect() {
     const next = new URLSearchParams(searchParams.toString());
     next.delete("lat");
     next.delete("lng");
+    if (value === "popular") {
+      next.set("popular", "1");
+      next.delete("sort");
+      apply(next);
+      return;
+    }
     if (value === "near") {
       if (!("geolocation" in navigator)) {
         setError("この端末では位置情報を取得できません");
@@ -44,14 +50,16 @@ export function SortSelect() {
       );
       return;
     }
-    if (value === "new") next.delete("sort");
+    if (value === "new" && !next.has("popular")) next.delete("sort");
+    else if (value === "new") next.set("sort", "new");
     else next.set("sort", value);
     apply(next);
   };
 
   return (
     <div className="relative">
-      <select aria-label="並び順" value={searchParams.get("sort") ?? "new"} onChange={(event) => changeSort(event.target.value)} disabled={locating} className="h-10 rounded-lg border border-line bg-paper px-3 text-sm disabled:opacity-60">
+      <select aria-label="並び順" value={searchParams.get("sort") ?? (searchParams.get("popular") === "1" ? "popular" : "new")} onChange={(event) => changeSort(event.target.value)} disabled={locating} className="h-10 rounded-lg border border-line bg-paper px-3 text-sm disabled:opacity-60">
+        <option value="popular">人気順</option>
         <option value="new">新着順</option>
         <option value="near">{locating ? "現在地を取得中…" : "現在地から近い順"}</option>
         <option value="distance_asc">距離が短い順</option>

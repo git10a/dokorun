@@ -8,10 +8,11 @@ type Params = Record<string, string | undefined>;
 
 export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params }) {
   const selectedTags = (params.tags ?? "").split(",").filter(Boolean);
-  const active = [params.pref, params.type, params.dist, params.q, params.toilet, params.locker, params.sento, ...selectedTags].filter(Boolean);
+  const active = [params.pref, params.type, params.dist, params.q, params.toilet, params.locker, params.sento, params.popular, ...selectedTags].filter(Boolean);
   return (
     <form action="/spots" className="space-y-5 rounded-xl border border-line bg-paper p-4 sm:p-5">
       {params.sort && <input type="hidden" name="sort" value={params.sort} />}
+      {params.popular === "1" && <input type="hidden" name="popular" value="1" />}
       <div className="grid gap-3 sm:grid-cols-[1fr_180px_auto]">
         <label className="relative"><span className="sr-only">キーワード</span><Search className="absolute left-3 top-1/2 -translate-y-1/2 text-sub" size={18} /><input id="spots-keyword-search" name="q" defaultValue={params.q} placeholder="スポット名・市区町村" className="h-11 w-full rounded-lg border border-line pl-10 pr-11 outline-none focus:border-ink" /><SearchInputClearButton inputId="spots-keyword-search" /></label>
         <select name="pref" defaultValue={params.pref ?? ""} className="h-11 rounded-lg border border-line bg-paper px-3"><option value="">全国</option>{prefectures.map((prefecture) => <option key={prefecture}>{prefecture}</option>)}</select>

@@ -15,6 +15,7 @@ type SearchFilters = {
   toilet?: boolean;
   locker?: boolean;
   sento?: boolean;
+  popular?: boolean;
   sort?: string;
   lat?: number;
   lng?: number;
@@ -250,6 +251,7 @@ function searchConditions(filters: SearchFilters) {
   if (filters.toilet) conditions.push(eq(spots.hasToilet, true));
   if (filters.locker) conditions.push(eq(spots.hasLocker, true));
   if (filters.sento) conditions.push(eq(spots.hasSentoNearby, true));
+  if (filters.popular) conditions.push(or(sql`${hashiritaiCountExpr} > 0`, inArray(spots.slug, popularSpotSlugs))!);
   if (realTagSlugs.length) {
     const selectedTags = inArray(tags.slug, realTagSlugs);
     conditions.push(sql`(
@@ -274,7 +276,7 @@ export async function searchSpots(filters: SearchFilters) {
   const conditions = searchConditions(filters);
   const limit = filters.limit ?? 20;
   const page = Math.max(1, filters.page ?? 1);
-  const order = nearOrderExpr(filters) ?? (filters.sort === "distance_asc" ? asc(courses.distanceM) : filters.sort === "distance_desc" ? desc(courses.distanceM) : desc(spots.createdAt));
+  const order = nearOrderExpr(filters) ?? (filters.sort === "distance_asc" ? asc(courses.distanceM) : filters.sort === "distance_desc" ? desc(courses.distanceM) : filters.sort === "popular" || (filters.popular && filters.sort !== "new") ? desc(hashiritaiCountExpr) : desc(spots.createdAt));
   const [rows, totalRows] = await Promise.all([
     db.select(summarySelection).from(spots)
       .innerJoin(courses, eq(courses.spotId, spots.id))

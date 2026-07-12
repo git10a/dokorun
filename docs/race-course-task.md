@@ -92,23 +92,30 @@ npm run race-gpx:apply -- <race-slug> data/race-gpx/<race-slug>.gpx --source <gp
 |---|-----------|--------|----------|-----------|------|
 | 0 | itabashi-city-marathon | 板橋Cityマラソン | 42.195km | done | 実走GPS由来(source=gps)。見本 |
 | 1 | tokyo-marathon | 東京マラソン | 42.195km | done | 公式My Maps KML由来(mid=1jGYjkrF_m5K3rWgYJu1XqyMbjHPq2pQ)。42.28km。ブロック連結 0r,1r |
-| 2 | osaka-marathon | 大阪マラソン | 42.195km | todo | 府庁前→御堂筋→難波→住之江方面→大阪城。2022年以降の現行コース |
-| 3 | kyoto-marathon | 京都マラソン | 42.195km | todo | 西京極→嵐山→広沢池→上賀茂→宝ヶ池折返し→鴨川→平安神宮 |
-| 4 | nagoya-womens-marathon | 名古屋ウィメンズマラソン | 42.195km | todo | ドーム→市役所→栄→熱田折返し→ドーム |
-| 5 | kobe-marathon | 神戸マラソン | 42.195km | todo | 三宮→須磨・舞子折返し→ハーバー→ポーアイ |
-| 6 | yokohama-marathon | 横浜マラソン | 42.195km | todo | みなとみらい→山下→本牧・根岸→南部市場折返し→首都高湾岸線→パシフィコ |
-| 7 | fukuoka-marathon | 福岡マラソン | 42.195km | todo | 天神→百道→今宿→糸島(ワンウェイ) |
-| 8 | hokkaido-marathon | 北海道マラソン | 42.195km | todo | 大通→すすきの→中島公園→幌平橋→豊平川→新川通折返し→北大→大通 |
-| 9 | kanazawa-marathon | 金沢マラソン | 42.195km | todo | しいのき迎賓館→市街地周回→西部緑地公園 |
-| 10 | beppu-oita-marathon | 別府大分毎日マラソン | 42.195km | todo | うみたまご前→別府方面折返し→別大国道→大分市陸上競技場 |
+| 2 | osaka-marathon | 大阪マラソン | 42.195km | done | 公式My Maps KML由来(mid=1pWXP58aD4dUxOsWy6nTnC8iqO31PGfc)。2026年コース、42.72km |
+| 3 | kyoto-marathon | 京都マラソン | 42.195km | done | 公式図の主要通過地点を道路スナップして再現、41.90km |
+| 4 | nagoya-womens-marathon | 名古屋ウィメンズマラソン | 42.195km | done | ドーム・熱田・名古屋城など公式図の主要地点から再現、41.41km |
+| 5 | kobe-marathon | 神戸マラソン | 42.195km | done | 三宮・須磨方面・港湾部の主要地点から再現、41.28km |
+| 6 | yokohama-marathon | 横浜マラソン | 42.195km | done | みなとみらい・本牧・南部方面の主要地点から再現、43.44km |
+| 7 | fukuoka-marathon | 福岡マラソン | 42.195km | done | 天神から糸島まで公式コース図の主要地点を道路スナップ、41.32km |
+| 8 | hokkaido-marathon | 北海道マラソン | 42.195km | done | 2026公式コース全体図と公式通過道路をもとにBRouterで再現。43.29km |
+| 9 | kanazawa-marathon | 金沢マラソン | 42.195km | done | 市街地7ゾーンの主要地点を道路スナップして再現、42.85km |
+| 10 | beppu-oita-marathon | 別府大分毎日マラソン | 42.195km | done | うみたまご・亀川漁港折返し・大分市陸上競技場を結んで再現、41.04km |
 | 11 | fujisan-marathon | 富士山マラソン | 42.195km | done | 公式My Maps KML由来(mid=12E1VSHKzA2tl3l7p1JOP7NOA2ikgzug、mtfujimarathon.com/course/に埋め込み)。43.13km(手描き線のため+2.2%、許容) |
-| 12 | tazawako-marathon | 田沢湖マラソン | 42.195km | todo | 田沢湖畔発着、湖一周を含む。公式図で往復区間を確認 |
-| 13 | suwako-marathon | 諏訪湖マラソン | 21.0975km | todo | 諏訪湖畔一周+調整区間。ハーフ |
-| 14 | aoshima-taiheiyo-marathon | 青島太平洋マラソン | 42.195km | todo | 県総合運動公園→トロピカルロード→青島折返し→市街地方面折返し |
-| 15 | shimonoseki-kaikyo-marathon | 下関海響マラソン | 42.195km | todo | 海峡メッセ→関門海峡沿い→彦島周回→海峡メッセ |
-| 16 | ibigawa-marathon | いびがわマラソン | 42.195km | todo | 揖斐川町中心部→揖斐川上流折返し。ハーフ併設だがフルを登録 |
+| 12 | tazawako-marathon | 田沢湖マラソン | 42.195km | done | 確認済み湖畔一周GPXに公式図の往復区間を加えて再現、42.20km |
+| 13 | suwako-marathon | 諏訪湖マラソン | 21.0975km | done | 確認済み湖畔一周GPXに2026公式図の調整区間を加えて再現、21.18km |
+| 14 | aoshima-taiheiyo-marathon | 青島太平洋マラソン | 42.195km | done | 運動公園・市街地・青島方面の主要地点から再現、42.88km |
+| 15 | shimonoseki-kaikyo-marathon | 下関海響マラソン | 42.195km | done | 海峡メッセ・関門海峡沿い・折返し区間を再現、43.09km |
+| 16 | ibigawa-marathon | いびがわマラソン | 21.0975km | done | 2026年はハーフのみ。公式通過地点を道路スナップして再現、20.86km |
+| 17 | naha-marathon | NAHAマラソン | 42.195km | done | 公式My Maps KML由来(mid=1fJUo7rUVxmTC_kiE_2yKcsLUE7xfxqE)。2025年公認コース、42.73km |
+| 18 | ehime-marathon | 愛媛マラソン | 42.195km | done | 松山市街地から北条方面の公式主要地点を道路スナップ、42.42km |
+| 19 | saitama-marathon | さいたまマラソン | 42.195km | done | さいたま新都心から浦和・東部方面の主要地点を再現、43.40km |
+| 20 | mito-komon-marathon | 水戸黄門漫遊マラソン | 42.195km | done | 水戸市街地・西部折返し・千波湖の主要地点を再現、42.59km |
 
 ### 調査メモ(2026-07-11)
 
 - My Maps埋め込み調査済み: marathon.tokyo=**あり**(登録済み)、mtfujimarathon.com=**あり**(登録済み)。kanazawa-marathon.jp/course/、kobe-marathon.net/course/、osaka-marathon.com/2026/course/、kyoto-marathon.com/course/ は埋め込み**なし**(コースページのURLが違う可能性もあるので、サイト内の他ページも `grep google.com/maps/d` で探す価値あり)
+- 大阪マラソン2026公式ページでMy Maps埋め込みを確認し登録済み。`走路　Route` レイヤーを使用。短い「（ランの部）コース」レイヤーは7.29kmしかないため不採用。
+- NAHAマラソン公式コースページのMy Mapsから、公認コースのLineStringを取得して登録済み。2026ページ上の埋め込みマップ名は2025だが、公式ページでは同じ平和祈念公園コースを現行コースとして案内している。
+- 北海道マラソンは2026公式PDF(2026年5月19日作成)の全体図と公式大会要項の通過道路列を突合し、南側5km区間、新川通折返し、北海道大学内を含む参考コースとして登録した。
 - 埋め込みがない大会も、RUNNET・大会結果ページ・自治体観光ページ等にMy Mapsが載っていることがある。「<大会名> google my maps」「<大会名> コース kml」でも検索してみる
