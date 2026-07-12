@@ -28,5 +28,65 @@
       "elevationGainM": 84,
       "signalsCount": null
     }
+  },
+  {
+    "slug": "sanno-park-fukuoka",
+    "name": "山王公園ランニングコース",
+    "nameKana": "さんのうこうえんらんにんぐこーす",
+    "prefecture": "福岡県",
+    "city": "福岡市博多区",
+    "lat": 33.581555,
+    "lng": 130.4331434,
+    "description": "博多駅から約1km、オフィス街に近い山王公園の園路を一周する約1kmのランニングコースです。福岡市公式観光情報では500mと1kmの2コースが案内され、ゴムチップ舗装で足への負担を抑えて走れます。木陰が多く、出張中の朝ランや昼休みの軽いジョギング、周回数を決めたペース走に使いやすいコースです。一般の来園者や遊具付近では速度を落として走ってください。",
+    "access": "JR博多駅から約1km。西鉄バス 山王公園前バス停から徒歩1分。",
+    "nightLighting": null,
+    "tags": ["park", "flat", "shaded"],
+    "facilities": {
+      "hasToilet": true,
+      "hasWaterFountain": true,
+      "hasVendingMachine": false,
+      "hasLocker": false,
+      "hasShower": false,
+      "hasSentoNearby": false,
+      "hasParking": true,
+      "hasConvenienceStore": true
+    },
+    "course": {
+      "distanceM": 1025,
+      "courseType": "loop",
+      "surface": "mixed",
+      "elevationGainM": null,
+      "signalsCount": 0
+    }
+  },
+  {
+    "slug": "sendai-nishi-park-running-course",
+    "name": "仙台西公園1kmランニングコース",
+    "nameKana": "せんだいにしこうえんいちきろらんにんぐこーす",
+    "prefecture": "宮城県",
+    "city": "仙台市青葉区",
+    "lat": 38.2634782,
+    "lng": 140.8628851,
+    "description": "仙台市中心部の西公園北側に設定された、約1kmの公式ランニングコースです。仙台市の案内では平坦な舗装路で信号がなく、園内にはトイレ2か所と水飲み場があります。地下鉄大町西公園駅から近く、仙台駅・一番町周辺に宿泊した際の朝ランや、複数周を使った短時間のジョギングに適しています。一部は歩道を通るため、歩行者や自転車に注意してください。",
+    "access": "仙台市地下鉄東西線 大町西公園駅からすぐ。ランニングコース看板は北側エリアのSL広場付近。",
+    "nightLighting": null,
+    "tags": ["park", "flat", "no-signals", "water-refill"],
+    "facilities": {
+      "hasToilet": true,
+      "hasWaterFountain": true,
+      "hasVendingMachine": false,
+      "hasLocker": false,
+      "hasShower": false,
+      "hasSentoNearby": false,
+      "hasParking": false,
+      "hasConvenienceStore": true
+    },
+    "course": {
+      "distanceM": 1040,
+      "courseType": "loop",
+      "surface": "asphalt",
+      "elevationGainM": null,
+      "signalsCount": 0
+    }
   }
 ]

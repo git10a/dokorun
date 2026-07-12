@@ -34,9 +34,9 @@
 ## 実装進捗
 
 - `nakanoshima-loop`: BRouterで中之島外周6.78kmの周回GPXを作成。想定約6kmの±15%以内で、`gpx:check`の周回判定も合格したため登録データを作成。
-- `sanno-park-fukuoka`: 初回生成1.97kmで公式1kmコースから大きく乖離。GPXは調査用として保存し、登録しない。
-- `sendai-nishi-park`: 初回生成2.84kmで公式1kmコースから大きく乖離。GPXは調査用として保存し、登録しない。
-- `higashi-park-fukuoka`: 初回生成1.09kmで公式760mコースから大きく乖離。GPXは調査用として保存し、登録しない。
+- `sanno-park-fukuoka`: BRouter版は1.97kmで不採用。OSM園路グラフから公式1kmに対応する閉路を抽出し、1.025km・周回判定で合格したため登録データを作成。
+- `sendai-nishi-park-running-course`: BRouter版は2.84kmで不採用。OSM園路グラフから北側エリアの閉路を抽出し、1.04km・周回判定で合格したため登録データを作成。
+- `higashi-park-fukuoka`: BRouter版は1.09km。OSM閉路を再抽出すると615mで公式760mから乖離するため、登録しない。
 
 ## 次点候補
 
