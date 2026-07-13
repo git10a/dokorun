@@ -19,6 +19,8 @@ D1_LOCAL_PATH=.d1-build/prod.sqlite NEXT_PUBLIC_SITE_URL=https://dokorun.com ope
 
 sha="$(git rev-parse --short=12 HEAD)"
 message="${RELEASE_MESSAGE:-release ${sha}}"
+# OpenNextのWrangler引数転送は空白を再引用しないため、version messageを1語へ正規化する。
+message="${message// /-}"
 opennextjs-cloudflare upload --tag "$sha" --message "$message"
 
 echo "Uploaded version tag: $sha"
