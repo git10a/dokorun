@@ -9,8 +9,8 @@ import { prefectureSlug } from "@/lib/areas";
 import { prefectures } from "@/lib/prefectures";
 import { features, featureBySlug } from "@/lib/features";
 
-// スポットの追加・更新の反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
-export const revalidate = 3600;
+// 特集の対象はDBタグで増減するため、公開直後から最新の並び・件数を返す。
+export const dynamic = "force-dynamic";
 
 type Params = Promise<{ slug: string }>;
 
