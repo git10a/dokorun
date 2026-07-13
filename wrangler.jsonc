@@ -26,6 +26,19 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  // OpenNextの再検証Queueが同じWorkerを呼び戻すためのself service binding。
+  "services": [
+    { "binding": "WORKER_SELF_REFERENCE", "service": "dokorun" }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }
+    ]
+  },
+  // DO追加版より前へはrollbackできないため、この版ではまだキャッシュ挙動を変えない。
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }
+  ],
   // ISR/SSGのincremental cache受け皿。無料プランのKV write上限(1,000/日)に注意
   "kv_namespaces": [
     { "binding": "NEXT_INC_CACHE_KV", "id": "b9e9e322ead943ed94dd740aa36def2c" }
@@ -36,12 +49,21 @@
       "binding": "DB",
       "database_name": "dokorun-db",
       "database_id": "7e8b11a6-036e-410f-994a-877a672c8a5c"
+    },
+    {
+      "binding": "NEXT_TAG_CACHE_D1",
+      "database_name": "dokorun-opennext-tag-cache",
+      "database_id": "48a88fe9-ef30-4204-b9b5-413638a4ca8a"
     }
   ],
   "r2_buckets": [
     {
       "binding": "IMAGE_BUCKET",
       "bucket_name": "dokorun-images"
+    },
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "dokorun-opennext-cache"
     }
   ],
   "routes": [
