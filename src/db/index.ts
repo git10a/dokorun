@@ -7,7 +7,7 @@ export type Database = ReturnType<typeof drizzleD1<typeof schema>>;
 
 export const isWorkersRuntime = globalThis.navigator?.userAgent === "Cloudflare-Workers";
 
-let resolved: Database | undefined;
+let localFileDb: Database | undefined;
 
 // 実行環境ごとの接続先:
 // - Workers本番 / next dev: D1バインディング(getCloudflareContext経由)。
@@ -56,21 +56,13 @@ function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
   return `${dir}/${newest.file}`;
 }
 
-function resolveDb(): Database {
-  if (!resolved) resolved = fromBinding() ?? fromLocalFile();
-  return resolved;
-}
-
-// モジュールスコープで getDb() が呼ばれても(better-auth初期化など)、実際の接続解決は
-// 最初のクエリまで遅延させる。Workersではリクエスト外にバインディングへ触れないため必須。
+// WorkersのD1バインディングはリクエストに紐づくため、モジュールスコープでは保持しない。
+// Nodeで動くビルド・CLI用のローカルsqliteだけは同一プロセス内で再利用してよい。
 export function getDb(): Database {
-  return new Proxy({} as Database, {
-    get(_, prop) {
-      const db = resolveDb();
-      const value = db[prop as keyof Database];
-      return typeof value === "function" ? (value as (...args: unknown[]) => unknown).bind(db) : value;
-    },
-  });
+  const boundDb = fromBinding();
+  if (boundDb) return boundDb;
+  localFileDb ??= fromLocalFile();
+  return localFileDb;
 }
 
 // D1は対話的トランザクション(BEGIN/COMMIT)非対応のため、逐次実行になる。
