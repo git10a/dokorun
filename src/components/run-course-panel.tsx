@@ -35,7 +35,7 @@ export function RunCoursePanel({ slug, lat, lng, distanceM, courseType, surface,
             <Navigation size={20} />スタート地点へ
           </a>
           {canDownloadGpx && <>
-            <a href={`/api/spots/${slug}/gpx`} download={`${slug}.gpx`} onClick={() => track("gpx_download", { slug })} className="flex min-w-0 items-center justify-center gap-2 rounded-lg border border-line bg-paper px-4 py-3 font-bold text-sub transition-colors hover:bg-cream">
+            <a href={`/spot-gpx/${slug}.gpx`} download={`${slug}.gpx`} onClick={() => track("gpx_download", { slug })} className="flex min-w-0 items-center justify-center gap-2 rounded-lg border border-line bg-paper px-4 py-3 font-bold text-sub transition-colors hover:bg-cream">
               <Download size={20} />GPXをダウンロード
             </a>
             <button type="button" aria-label="GPXとは？使い方を表示" aria-expanded={showGpxHelp} onClick={() => { setShowGpxHelp((value) => !value); if (!showGpxHelp) track("gpx_help", { slug }); }} className="grid size-12 place-items-center rounded-lg border border-line bg-paper text-sub transition-colors hover:bg-cream hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">

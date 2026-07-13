@@ -3,9 +3,6 @@ import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
 import { racesByCalendar } from "@/lib/races";
 
-// 静的定義のみで完結するページだが、他の面と同じくISRに揃える
-export const revalidate = 3600;
-
 export const metadata: Metadata = {
   title: "大会からランニングコースをさがす(試走・前日ラン)",
   description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会別に、試走・前日ラン・当日アップに使えるランニングコースをまとめています。遠征ランナーの調整にどうぞ。",

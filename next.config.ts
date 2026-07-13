@@ -7,6 +7,10 @@ initOpenNextCloudflareForDev();
 const nextConfig: NextConfig = {
   experimental: {
     serverActions: { bodySizeLimit: "3mb" },
+    // ビルド用D1スナップショットは単一sqlite。複数workerから同時に開くと
+    // SQLITE_BUSY_RECOVERYになるため、静的生成は1 workerで逐次実行する。
+    staticGenerationMaxConcurrency: 1,
+    staticGenerationMinPagesPerWorker: 1000,
   },
   // Turbopackはルートごとのサーバーチャンクに依存を複製するため、OpenNextが全ルートを
   // 1つのWorkerに束ねると重い依存が最大7〜19回重複し、無料プランの3MiB制限を超える。

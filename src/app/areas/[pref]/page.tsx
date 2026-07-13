@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getSpotsByPrefecture } from "@/db/data";
+import { getPrefectureCounts, getSpotsByPrefecture } from "@/db/data";
 import { SpotCard } from "@/components/spot-card";
 import { TrackView } from "@/components/track-view";
 import { prefectureSlug, slugToPrefecture } from "@/lib/areas";
@@ -13,6 +13,11 @@ import { features } from "@/lib/features";
 export const revalidate = 3600;
 
 type Params = Promise<{ pref: string }>;
+
+export async function generateStaticParams() {
+  const counts = await getPrefectureCounts();
+  return counts.map(({ prefecture }) => ({ pref: prefectureSlug(prefecture) }));
+}
 
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getAreaSpots = cache(getSpotsByPrefecture);

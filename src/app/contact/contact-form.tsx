@@ -1,13 +1,17 @@
 "use client";
 
 import { useActionState, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import { submitFeedback, type FeedbackState } from "./actions";
 import { track } from "@/lib/track";
 
 const inputClass = "w-full rounded-lg border border-line bg-paper px-3 py-2.5";
 type FeedbackCategory = "spot_request" | "contact";
 
-export function ContactForm({ initialCategory = "spot_request", initialMessage }: { initialCategory?: FeedbackCategory; initialMessage?: string }) {
+export function ContactForm() {
+  const searchParams = useSearchParams();
+  const initialCategory: FeedbackCategory = searchParams.get("category") === "contact" ? "contact" : "spot_request";
+  const initialMessage = searchParams.get("message") ?? undefined;
   const [state, action, pending] = useActionState<FeedbackState, FormData>(submitFeedback, {});
   const categoryRef = useRef<FeedbackCategory>(initialCategory);
 

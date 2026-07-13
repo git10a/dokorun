@@ -18,6 +18,10 @@ export const revalidate = 3600;
 
 type Params = Promise<{ slug: string }>;
 
+export function generateStaticParams() {
+  return racesByCalendar.map((race) => ({ slug: race.slug }));
+}
+
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getSpots = cache(getSpotSummariesBySlugs);
 

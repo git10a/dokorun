@@ -9,10 +9,14 @@ import { prefectureSlug } from "@/lib/areas";
 import { prefectures } from "@/lib/prefectures";
 import { features, featureBySlug } from "@/lib/features";
 
-// 特集の対象はDBタグで増減するため、公開直後から最新の並び・件数を返す。
-export const dynamic = "force-dynamic";
+// 特集の対象は最大1時間の遅延を許容し、D1障害時も直前のHTMLを返せるようISR化する。
+export const revalidate = 3600;
 
 type Params = Promise<{ slug: string }>;
+
+export function generateStaticParams() {
+  return features.map((feature) => ({ slug: feature.slug }));
+}
 
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getSpots = cache(getFeatureSpots);

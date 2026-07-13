@@ -356,6 +356,12 @@ export async function getSitemapSpots() {
     .where(eq(spots.isPublished, true)).orderBy(spots.slug);
 }
 
+export async function getPublishedSpotIdBySlug(slug: string) {
+  const rows = await getDb().select({ id: spots.id }).from(spots)
+    .where(and(eq(spots.slug, slug), eq(spots.isPublished, true))).limit(1);
+  return rows[0]?.id ?? null;
+}
+
 function spotDetailSelection() {
   return {
     ...summarySelection,
