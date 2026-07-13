@@ -1,0 +1,140 @@
+{
+  "slug": "kanmon-kaikyo-crossing",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "下関駅から海沿いに唐戸市場・赤間神宮・みもすそ川公園(壇之浦古戦場跡)を巡り、関門トンネル人道(全長約780m・徒歩無料)で海峡を渡って九州へ。門司側は和布刈公園の坂を越え、めかり街道からブルーウィングもじ・旧門司税関のレトロ地区を抜けて門司港駅がゴールの約8.8km。人道は6時〜22時通行可でランナーも多い。コンビニ・自販機・トイレは随所にある。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点はJR下関駅、ゴールはJR門司港駅。電車で下関へ戻れる 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "下関駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.950306,
+      "destinationLng": 130.923038,
+      "routeAnchorLat": 33.950917,
+      "routeAnchorLng": 130.925001,
+      "routeMode": "forward",
+      "accessText": "下関駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "門司港駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.945138,
+      "destinationLng": 130.961549,
+      "routeAnchorLat": 33.945116,
+      "routeAnchorLng": 130.961473,
+      "routeMode": "reverse",
+      "accessText": "門司港駅からコースまで約10m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.950917,
+      "anchorLng": 130.925001,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 山口県下関市のマンホール蓋",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg/960px-Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg",
+        "alt": "関門海峡横断(下関〜門司港)のスタート周辺付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manhole_cover_of_Shimonoseki,_Yamaguchi.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.95683,
+      "anchorLng": 130.945,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 山口県下関市・唐戸市場",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Karato_Market_20131124.jpg/960px-Karato_Market_20131124.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の序盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karato_Market_20131124.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.961207,
+      "anchorLng": 130.962688,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 関門国道トンネルの山口県と福岡県の境で記念撮影。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boundary_of_Yamaguchi_and_Fukuoka_%281544233136%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の中盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boundary_of_Yamaguchi_and_Fukuoka_(1544233136).jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.956292,
+      "anchorLng": 130.970296,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 9/29に北九州空港から山口宇部空港を旅した際に撮影したもの。 門司側から関門橋を撮影。門司港駅から関門橋の下までは海岸沿いに遊歩道が整備されている。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Kanmon_bridge_from_Moji_%281525587684%29.jpg/960px-Kanmon_bridge_from_Moji_%281525587684%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の後半区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanmon_bridge_from_Moji_(1525587684).jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.945116,
+      "anchorLng": 130.961473,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 門司港駅",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg/960px-%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の終盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "くろふね",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_(1).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

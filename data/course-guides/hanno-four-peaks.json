@@ -1,0 +1,140 @@
+{
+  "slug": "hanno-four-peaks",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "飯能駅を発着して天覧山(197m)・多峯主山(271m)を越え、入間川沿いに下って吾妻峡を渡り、飯能三山の龍崖山(246m)・柏木山(303m)まで足を延ばす低山4座の周回。市街地からすぐトレイルに入れるのが飯能の魅力で、一つひとつは低いものの急な登り返しが続き、通しで走り切るには相応の脚力がいる。龍崖山公園にトイレあり。駅前に飲食店やコンビニが揃い、ラン後の補給にも困らない。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 西武池袋線飯能駅から徒歩すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "飯能駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.851189,
+      "destinationLng": 139.318824,
+      "routeAnchorLat": 35.850666,
+      "routeAnchorLng": 139.318845,
+      "routeMode": "loop",
+      "accessText": "飯能駅からコースまで約60m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "高麗駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.881982,
+      "destinationLng": 139.304414,
+      "routeAnchorLat": 35.868036,
+      "routeAnchorLng": 139.299284,
+      "routeMode": "loop",
+      "accessText": "高麗駅からコースまで約1620m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.850666,
+      "anchorLng": 139.318845,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 飯能駅 (Hanno Station)",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Hanno_Station_-_Feb_2_2021_various.jpeg/960px-Hanno_Station_-_Feb_2_2021_various.jpeg",
+        "alt": "飯能三山・天覧山めぐりのスタート周辺付近",
+        "caption": "飯能三山・天覧山めぐりの走路近隣で撮影された風景",
+        "credit": "Nesnad",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hanno_Station_-_Feb_2_2021_various.jpeg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.868036,
+      "anchorLng": 139.299284,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Juroku Rakan-zo (Statue of the Sixteen Arhats) on Mount Tenran in Hanno City, Saitama Prefecture, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/%E5%A4%A9%E8%A6%A7%E5%B1%B1%E5%8D%81%E5%85%AD%E7%BE%85%E6%BC%A2%E5%83%8F%EF%BC%8F%E9%A3%AF%E8%83%BD%E5%B8%82_-_panoramio.jpg/960px-%E5%A4%A9%E8%A6%A7%E5%B1%B1%E5%8D%81%E5%85%AD%E7%BE%85%E6%BC%A2%E5%83%8F%EF%BC%8F%E9%A3%AF%E8%83%BD%E5%B8%82_-_panoramio.jpg",
+        "alt": "飯能三山・天覧山めぐりの序盤区間付近",
+        "caption": "飯能三山・天覧山めぐりの走路近隣で撮影された風景",
+        "credit": "shikabane taro",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E8%A6%A7%E5%B1%B1%E5%8D%81%E5%85%AD%E7%BE%85%E6%BC%A2%E5%83%8F%EF%BC%8F%E9%A3%AF%E8%83%BD%E5%B8%82_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.854842,
+      "anchorLng": 139.292855,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 埼玉県飯能市にある大六天神社の鳥居。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Dairokuten_jinjya_%28Hanno%2C_Saitama%29_01.JPG/960px-Dairokuten_jinjya_%28Hanno%2C_Saitama%29_01.JPG",
+        "alt": "飯能三山・天覧山めぐりの中盤区間付近",
+        "caption": "飯能三山・天覧山めぐりの走路近隣で撮影された風景",
+        "credit": "Thirteen-fri",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dairokuten_jinjya_(Hanno,_Saitama)_01.JPG"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.850367,
+      "anchorLng": 139.286187,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 埼玉県道28号線 飯能市下畑付近（飯能市市街地方面を撮影）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Saitamakendo_28_Hanno_City_2.jpg/960px-Saitamakendo_28_Hanno_City_2.jpg",
+        "alt": "飯能三山・天覧山めぐりの後半区間付近",
+        "caption": "飯能三山・天覧山めぐりの走路近隣で撮影された風景",
+        "credit": "Ebiebi2",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saitamakendo_28_Hanno_City_2.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.846744,
+      "anchorLng": 139.292913,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 埼玉県道28号線 飯能市下畑付近（飯能市市街地方面を撮影）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Saitamakendo_28_Hanno_City_2.jpg/960px-Saitamakendo_28_Hanno_City_2.jpg",
+        "alt": "飯能三山・天覧山めぐりの終盤区間付近",
+        "caption": "飯能三山・天覧山めぐりの走路近隣で撮影された風景",
+        "credit": "Ebiebi2",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saitamakendo_28_Hanno_City_2.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

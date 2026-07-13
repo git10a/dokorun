@@ -1,0 +1,140 @@
+{
+  "slug": "tama-kyuryo-hashimoto-wakabadai",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "橋本駅から多摩丘陵の尾根をつないで若葉台駅まで走り抜ける約21kmのワンウェイ。戦車のテスト走行路だった歴史を持つ尾根緑道を東へ、谷戸と雑木林が残る都立小山田緑地を抜け、多摩ニュータウンの南縁に続く多摩よこやまの道の尾根道へとつなぐ。舗装の緑道と土の道が交互に現れ、ロードとトレイルの両方を一度に楽しめる。丘陵らしい小刻みな起伏で獲得標高は約300m。緑道沿いや公園に公衆トイレが点在し、発着どちらも駅前で補給できる。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点はJR横浜線・京王相模原線橋本駅、終点は京王相模原線若葉台駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "橋本駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.594975,
+      "destinationLng": 139.344586,
+      "routeAnchorLat": 35.595004,
+      "routeAnchorLng": 139.344989,
+      "routeMode": "forward",
+      "accessText": "橋本駅からコースまで約40m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "若葉台駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.619325,
+      "destinationLng": 139.472189,
+      "routeAnchorLat": 35.620406,
+      "routeAnchorLng": 139.471925,
+      "routeMode": "reverse",
+      "accessText": "若葉台駅からコースまで約120m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.595004,
+      "anchorLng": 139.344989,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 橋本駅ホーム（神奈川県相模原市）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/HashimotoSt3.jpg/960px-HashimotoSt3.jpg",
+        "alt": "多摩丘陵縦走(尾根緑道・よこやまの道)のスタート周辺付近",
+        "caption": "多摩丘陵縦走(尾根緑道・よこやまの道)の走路近隣で撮影された風景",
+        "credit": "Kouchiumi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HashimotoSt3.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.59793,
+      "anchorLng": 139.38375,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Kanachu Tama Branch",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Kanachu_Tama_branch.jpg/960px-Kanachu_Tama_branch.jpg",
+        "alt": "多摩丘陵縦走(尾根緑道・よこやまの道)の序盤区間付近",
+        "caption": "多摩丘陵縦走(尾根緑道・よこやまの道)の走路近隣で撮影された風景",
+        "credit": "Cassiopeia sweet",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanachu_Tama_branch.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.598326,
+      "anchorLng": 139.413678,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 小山田緑地",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%E5%B0%8F%E5%B1%B1%E7%94%B0%E7%B7%91%E5%9C%B0_-_panoramio.jpg/960px-%E5%B0%8F%E5%B1%B1%E7%94%B0%E7%B7%91%E5%9C%B0_-_panoramio.jpg",
+        "alt": "多摩丘陵縦走(尾根緑道・よこやまの道)の中盤区間付近",
+        "caption": "多摩丘陵縦走(尾根緑道・よこやまの道)の走路近隣で撮影された風景",
+        "credit": "ma go",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E5%B1%B1%E7%94%B0%E7%B7%91%E5%9C%B0_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.610182,
+      "anchorLng": 139.435016,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: よこやまの道",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%E3%82%88%E3%81%93%E3%82%84%E3%81%BE%E3%81%AE%E9%81%93_-_panoramio_-_ma_go.jpg/960px-%E3%82%88%E3%81%93%E3%82%84%E3%81%BE%E3%81%AE%E9%81%93_-_panoramio_-_ma_go.jpg",
+        "alt": "多摩丘陵縦走(尾根緑道・よこやまの道)の後半区間付近",
+        "caption": "多摩丘陵縦走(尾根緑道・よこやまの道)の走路近隣で撮影された風景",
+        "credit": "ma go",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%88%E3%81%93%E3%82%84%E3%81%BE%E3%81%AE%E9%81%93_-_panoramio_-_ma_go.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.620406,
+      "anchorLng": 139.471925,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Gate of Wakabadai Station on Keio Sagamihara Line in Asao-ku, Kawasaki, Kanagawa, Japan.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Gate_of_Wakabadai_Station_on_Keio_Sagamihara_Line.jpg/960px-Gate_of_Wakabadai_Station_on_Keio_Sagamihara_Line.jpg",
+        "alt": "多摩丘陵縦走(尾根緑道・よこやまの道)の終盤区間付近",
+        "caption": "多摩丘陵縦走(尾根緑道・よこやまの道)の走路近隣で撮影された風景",
+        "credit": "Nikm",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Wakabadai_Station_on_Keio_Sagamihara_Line.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

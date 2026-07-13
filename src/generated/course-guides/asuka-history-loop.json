@@ -1,0 +1,825 @@
+{
+  "slug": "asuka-history-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "橿原公苑を起点に明日香村を反時計回りに巡る約14.7kmの周回コース。前半は飛鳥寺や飛鳥宮跡を通る平坦な里道、中盤は石舞台古墳から棚田の広がる稲渕地区へ登る起伏区間、終盤は高松塚古墳のある国営飛鳥歴史公園を抜けて飛鳥駅前から戻る。田園と史跡が連続する明日香らしい景観をまとめて味わえる。観光地のため自販機・トイレは各所にあり、石舞台や飛鳥駅周辺で補給できる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 近鉄 橿原神宮前駅から約1km(橿原公苑) / 飛鳥駅(コース終盤) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "畝傍御陵前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.492758,
+      "destinationLng": 135.794254,
+      "routeAnchorLat": 34.488879,
+      "routeAnchorLng": 135.791607,
+      "routeMode": "loop",
+      "accessText": "畝傍御陵前駅からコースまで約500m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.488879,
+      "routeLng": 135.791607,
+      "elevationM": 75.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2941,
+        "section-3": 5913,
+        "section-4": 8829,
+        "section-5": 11782
+      },
+      "gpxHref": "/gpx/asuka-history-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "岡寺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.473963,
+      "destinationLng": 135.796088,
+      "routeAnchorLat": 34.481446,
+      "routeAnchorLng": 135.816443,
+      "routeMode": "loop",
+      "accessText": "岡寺駅からコースまで約2040m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 76,
+      "routeDistanceM": 2941,
+      "routeLat": 34.481446,
+      "routeLng": 135.816443,
+      "elevationM": 95.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 11761,
+        "section-2": 0,
+        "section-3": 2972,
+        "section-4": 5888,
+        "section-5": 8841
+      },
+      "gpxHref": "/gpx/asuka-history-loop-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "飛鳥駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.464928,
+      "destinationLng": 135.79816,
+      "routeAnchorLat": 34.460856,
+      "routeAnchorLng": 135.816262,
+      "routeMode": "loop",
+      "accessText": "飛鳥駅からコースまで約1730m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 309,
+      "routeDistanceM": 8829,
+      "routeLat": 34.460856,
+      "routeLng": 135.816262,
+      "elevationM": 176.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 5873,
+        "section-2": 8814,
+        "section-3": 11786,
+        "section-4": 0,
+        "section-5": 2953
+      },
+      "gpxHref": "/gpx/asuka-history-loop-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.488879,
+      "anchorLng": 135.791607,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 橿原神宮 第一鳥居",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Kashihara-jingu_Daiichi_Torii.jpg/960px-Kashihara-jingu_Daiichi_Torii.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)のスタート周辺付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "Yanajin33",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kashihara-jingu_Daiichi_Torii.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.488879,
+      "routeLng": 135.791607,
+      "elevationM": 75.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.481446,
+      "anchorLng": 135.816443,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: The legendary ruins of Empress Suiko 's Palace “Toyura-no-Miya”, in Asuka , Nara Prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Toyura-no-Miya.jpg/960px-Toyura-no-Miya.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の序盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "Takanuka",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyura-no-Miya.jpg"
+      },
+      "routePointIndex": 76,
+      "routeDistanceM": 2941,
+      "routeLat": 34.481446,
+      "routeLng": 135.816443,
+      "elevationM": 95.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.464469,
+      "anchorLng": 135.82688,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: ishibutai kofun(megalithic tombs),石舞台古墳 Wikipedia &lt;a rel=\"nofollow\" href=\" http://ja.wikipedia.org/wiki/%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Ishibutai_kofun%28megalithic_tombs%29%2C%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg/960px-Ishibutai_kofun%28megalithic_tombs%29%2C%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の中盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ishibutai_kofun(megalithic_tombs),%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg"
+      },
+      "routePointIndex": 182,
+      "routeDistanceM": 5913,
+      "routeLat": 34.464469,
+      "routeLng": 135.82688,
+      "elevationM": 144.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.460856,
+      "anchorLng": 135.816262,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Rock bridge of Asuka, Nara prefecture ,Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Asuka_no_iwahashi.JPG/960px-Asuka_no_iwahashi.JPG",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の後半区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "アラツク",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asuka_no_iwahashi.JPG"
+      },
+      "routePointIndex": 309,
+      "routeDistanceM": 8829,
+      "routeLat": 34.460856,
+      "routeLng": 135.816262,
+      "elevationM": 176.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.467157,
+      "anchorLng": 135.799114,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 欽明天皇陵",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg/960px-%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の終盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg"
+      },
+      "routePointIndex": 469,
+      "routeDistanceM": 11782,
+      "routeLat": 34.467157,
+      "routeLng": 135.799114,
+      "elevationM": 86.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 14702,
+  "elevationGainM": 188,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 75.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 70.3
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 70.8
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 72.9
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 73.3
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 73.5
+    },
+    {
+      "distanceM": 695,
+      "elevationM": 74.5
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 75.3
+    },
+    {
+      "distanceM": 894,
+      "elevationM": 76.3
+    },
+    {
+      "distanceM": 993,
+      "elevationM": 77.2
+    },
+    {
+      "distanceM": 1093,
+      "elevationM": 75.5
+    },
+    {
+      "distanceM": 1192,
+      "elevationM": 75.8
+    },
+    {
+      "distanceM": 1291,
+      "elevationM": 76.6
+    },
+    {
+      "distanceM": 1391,
+      "elevationM": 77.3
+    },
+    {
+      "distanceM": 1490,
+      "elevationM": 78
+    },
+    {
+      "distanceM": 1589,
+      "elevationM": 79.8
+    },
+    {
+      "distanceM": 1689,
+      "elevationM": 81.5
+    },
+    {
+      "distanceM": 1788,
+      "elevationM": 83.7
+    },
+    {
+      "distanceM": 1887,
+      "elevationM": 80.9
+    },
+    {
+      "distanceM": 1987,
+      "elevationM": 83
+    },
+    {
+      "distanceM": 2086,
+      "elevationM": 85.9
+    },
+    {
+      "distanceM": 2185,
+      "elevationM": 84.9
+    },
+    {
+      "distanceM": 2285,
+      "elevationM": 86.2
+    },
+    {
+      "distanceM": 2384,
+      "elevationM": 87.9
+    },
+    {
+      "distanceM": 2483,
+      "elevationM": 88.4
+    },
+    {
+      "distanceM": 2583,
+      "elevationM": 90.3
+    },
+    {
+      "distanceM": 2682,
+      "elevationM": 91.7
+    },
+    {
+      "distanceM": 2781,
+      "elevationM": 93.4
+    },
+    {
+      "distanceM": 2881,
+      "elevationM": 95
+    },
+    {
+      "distanceM": 2980,
+      "elevationM": 96.7
+    },
+    {
+      "distanceM": 3079,
+      "elevationM": 96.1
+    },
+    {
+      "distanceM": 3179,
+      "elevationM": 98.1
+    },
+    {
+      "distanceM": 3278,
+      "elevationM": 98.4
+    },
+    {
+      "distanceM": 3378,
+      "elevationM": 104
+    },
+    {
+      "distanceM": 3477,
+      "elevationM": 104.1
+    },
+    {
+      "distanceM": 3576,
+      "elevationM": 106.3
+    },
+    {
+      "distanceM": 3676,
+      "elevationM": 107.5
+    },
+    {
+      "distanceM": 3775,
+      "elevationM": 107.3
+    },
+    {
+      "distanceM": 3874,
+      "elevationM": 105.7
+    },
+    {
+      "distanceM": 3974,
+      "elevationM": 105
+    },
+    {
+      "distanceM": 4073,
+      "elevationM": 106.2
+    },
+    {
+      "distanceM": 4172,
+      "elevationM": 107.6
+    },
+    {
+      "distanceM": 4272,
+      "elevationM": 108.6
+    },
+    {
+      "distanceM": 4371,
+      "elevationM": 110.2
+    },
+    {
+      "distanceM": 4470,
+      "elevationM": 115.2
+    },
+    {
+      "distanceM": 4570,
+      "elevationM": 113.8
+    },
+    {
+      "distanceM": 4669,
+      "elevationM": 114.6
+    },
+    {
+      "distanceM": 4768,
+      "elevationM": 116.3
+    },
+    {
+      "distanceM": 4868,
+      "elevationM": 118.3
+    },
+    {
+      "distanceM": 4967,
+      "elevationM": 119.1
+    },
+    {
+      "distanceM": 5066,
+      "elevationM": 126.1
+    },
+    {
+      "distanceM": 5166,
+      "elevationM": 128.1
+    },
+    {
+      "distanceM": 5265,
+      "elevationM": 130.8
+    },
+    {
+      "distanceM": 5364,
+      "elevationM": 134.8
+    },
+    {
+      "distanceM": 5464,
+      "elevationM": 139.6
+    },
+    {
+      "distanceM": 5563,
+      "elevationM": 145.5
+    },
+    {
+      "distanceM": 5662,
+      "elevationM": 150.3
+    },
+    {
+      "distanceM": 5762,
+      "elevationM": 152.8
+    },
+    {
+      "distanceM": 5861,
+      "elevationM": 146.7
+    },
+    {
+      "distanceM": 5960,
+      "elevationM": 142.3
+    },
+    {
+      "distanceM": 6060,
+      "elevationM": 139.9
+    },
+    {
+      "distanceM": 6159,
+      "elevationM": 144.7
+    },
+    {
+      "distanceM": 6258,
+      "elevationM": 148.8
+    },
+    {
+      "distanceM": 6358,
+      "elevationM": 151.2
+    },
+    {
+      "distanceM": 6457,
+      "elevationM": 153.6
+    },
+    {
+      "distanceM": 6556,
+      "elevationM": 155.2
+    },
+    {
+      "distanceM": 6656,
+      "elevationM": 168.8
+    },
+    {
+      "distanceM": 6755,
+      "elevationM": 161.8
+    },
+    {
+      "distanceM": 6854,
+      "elevationM": 165.4
+    },
+    {
+      "distanceM": 6954,
+      "elevationM": 167.3
+    },
+    {
+      "distanceM": 7053,
+      "elevationM": 173.3
+    },
+    {
+      "distanceM": 7152,
+      "elevationM": 172.8
+    },
+    {
+      "distanceM": 7252,
+      "elevationM": 179.2
+    },
+    {
+      "distanceM": 7351,
+      "elevationM": 177.5
+    },
+    {
+      "distanceM": 7450,
+      "elevationM": 177.3
+    },
+    {
+      "distanceM": 7550,
+      "elevationM": 176.6
+    },
+    {
+      "distanceM": 7649,
+      "elevationM": 177.7
+    },
+    {
+      "distanceM": 7748,
+      "elevationM": 180
+    },
+    {
+      "distanceM": 7848,
+      "elevationM": 173
+    },
+    {
+      "distanceM": 7947,
+      "elevationM": 170.6
+    },
+    {
+      "distanceM": 8046,
+      "elevationM": 166.6
+    },
+    {
+      "distanceM": 8146,
+      "elevationM": 170.8
+    },
+    {
+      "distanceM": 8245,
+      "elevationM": 168.9
+    },
+    {
+      "distanceM": 8344,
+      "elevationM": 172.8
+    },
+    {
+      "distanceM": 8444,
+      "elevationM": 182.4
+    },
+    {
+      "distanceM": 8543,
+      "elevationM": 181.4
+    },
+    {
+      "distanceM": 8642,
+      "elevationM": 186.4
+    },
+    {
+      "distanceM": 8742,
+      "elevationM": 185.1
+    },
+    {
+      "distanceM": 8841,
+      "elevationM": 173.5
+    },
+    {
+      "distanceM": 8940,
+      "elevationM": 158
+    },
+    {
+      "distanceM": 9040,
+      "elevationM": 154.8
+    },
+    {
+      "distanceM": 9139,
+      "elevationM": 143.2
+    },
+    {
+      "distanceM": 9238,
+      "elevationM": 131.4
+    },
+    {
+      "distanceM": 9338,
+      "elevationM": 123
+    },
+    {
+      "distanceM": 9437,
+      "elevationM": 112.5
+    },
+    {
+      "distanceM": 9536,
+      "elevationM": 109.2
+    },
+    {
+      "distanceM": 9636,
+      "elevationM": 111.3
+    },
+    {
+      "distanceM": 9735,
+      "elevationM": 112.8
+    },
+    {
+      "distanceM": 9834,
+      "elevationM": 116.4
+    },
+    {
+      "distanceM": 9934,
+      "elevationM": 120.2
+    },
+    {
+      "distanceM": 10033,
+      "elevationM": 116.5
+    },
+    {
+      "distanceM": 10133,
+      "elevationM": 113.5
+    },
+    {
+      "distanceM": 10232,
+      "elevationM": 106.3
+    },
+    {
+      "distanceM": 10331,
+      "elevationM": 104.3
+    },
+    {
+      "distanceM": 10431,
+      "elevationM": 104.1
+    },
+    {
+      "distanceM": 10530,
+      "elevationM": 103.7
+    },
+    {
+      "distanceM": 10629,
+      "elevationM": 104.4
+    },
+    {
+      "distanceM": 10729,
+      "elevationM": 99
+    },
+    {
+      "distanceM": 10828,
+      "elevationM": 98.1
+    },
+    {
+      "distanceM": 10927,
+      "elevationM": 97.3
+    },
+    {
+      "distanceM": 11027,
+      "elevationM": 91.4
+    },
+    {
+      "distanceM": 11126,
+      "elevationM": 89.7
+    },
+    {
+      "distanceM": 11225,
+      "elevationM": 88.2
+    },
+    {
+      "distanceM": 11325,
+      "elevationM": 87.6
+    },
+    {
+      "distanceM": 11424,
+      "elevationM": 88.1
+    },
+    {
+      "distanceM": 11523,
+      "elevationM": 87.9
+    },
+    {
+      "distanceM": 11623,
+      "elevationM": 87.1
+    },
+    {
+      "distanceM": 11722,
+      "elevationM": 85.2
+    },
+    {
+      "distanceM": 11821,
+      "elevationM": 87.1
+    },
+    {
+      "distanceM": 11921,
+      "elevationM": 86.2
+    },
+    {
+      "distanceM": 12020,
+      "elevationM": 85.5
+    },
+    {
+      "distanceM": 12119,
+      "elevationM": 84.7
+    },
+    {
+      "distanceM": 12219,
+      "elevationM": 82.3
+    },
+    {
+      "distanceM": 12318,
+      "elevationM": 82.3
+    },
+    {
+      "distanceM": 12417,
+      "elevationM": 82.6
+    },
+    {
+      "distanceM": 12517,
+      "elevationM": 82.6
+    },
+    {
+      "distanceM": 12616,
+      "elevationM": 83
+    },
+    {
+      "distanceM": 12715,
+      "elevationM": 84
+    },
+    {
+      "distanceM": 12815,
+      "elevationM": 84.9
+    },
+    {
+      "distanceM": 12914,
+      "elevationM": 87.6
+    },
+    {
+      "distanceM": 13013,
+      "elevationM": 86.7
+    },
+    {
+      "distanceM": 13113,
+      "elevationM": 84.2
+    },
+    {
+      "distanceM": 13212,
+      "elevationM": 83
+    },
+    {
+      "distanceM": 13311,
+      "elevationM": 83.2
+    },
+    {
+      "distanceM": 13411,
+      "elevationM": 83.1
+    },
+    {
+      "distanceM": 13510,
+      "elevationM": 80.5
+    },
+    {
+      "distanceM": 13609,
+      "elevationM": 77.8
+    },
+    {
+      "distanceM": 13709,
+      "elevationM": 76.3
+    },
+    {
+      "distanceM": 13808,
+      "elevationM": 75.9
+    },
+    {
+      "distanceM": 13907,
+      "elevationM": 75.9
+    },
+    {
+      "distanceM": 14007,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 14106,
+      "elevationM": 72.1
+    },
+    {
+      "distanceM": 14205,
+      "elevationM": 73.3
+    },
+    {
+      "distanceM": 14305,
+      "elevationM": 72.9
+    },
+    {
+      "distanceM": 14404,
+      "elevationM": 70.8
+    },
+    {
+      "distanceM": 14503,
+      "elevationM": 70.3
+    },
+    {
+      "distanceM": 14603,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 14702,
+      "elevationM": 76.2
+    }
+  ]
+}

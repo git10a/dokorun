@@ -1,0 +1,735 @@
+{
+  "slug": "osakajo",
+  "spot": {
+    "slug": "osakajo",
+    "name": "大阪城公園",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "access": "JR大阪城公園駅・森ノ宮駅、地下鉄谷町四丁目駅などからアクセス可能。",
+    "course_type": "loop",
+    "distance_m": 3434,
+    "elevation_gain_m": 69,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 304,
+    "gpxDistanceM": 3434,
+    "distanceDifferencePct": 0,
+    "closureGapM": 3,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:18:54.826Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 34.683331,
+        "lng": 135.522065,
+        "ele": 26.6
+      },
+      "stations": [
+        {
+          "name": "谷町四丁目",
+          "prefecture": "大阪府",
+          "line": "大阪谷町線",
+          "x": 135.517253,
+          "y": 34.681914,
+          "postal": "5400012",
+          "distance": "470m",
+          "prev": "天満橋",
+          "next": "谷町六丁目"
+        },
+        {
+          "name": "天満橋",
+          "prefecture": "大阪府",
+          "line": "大阪谷町線",
+          "x": 135.517371,
+          "y": 34.689457,
+          "postal": "5400012",
+          "distance": "810m",
+          "prev": "南森町",
+          "next": "谷町四丁目"
+        },
+        {
+          "name": "森ノ宮",
+          "prefecture": "大阪府",
+          "line": "大阪中央線",
+          "x": 135.532687,
+          "y": 34.681508,
+          "postal": "5400002",
+          "distance": "990m",
+          "prev": "谷町四丁目",
+          "next": "緑橋"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Outer Moat of Osaka Castle 7",
+          "description": "大坂城・外濠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Outer_Moat_of_Osaka_Castle_7.JPG/960px-Outer_Moat_of_Osaka_Castle_7.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outer_Moat_of_Osaka_Castle_7.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.683492,
+            "lng": 135.522689
+          }
+        },
+        {
+          "title": "Tower of Education in Osaka Castle Park",
+          "description": "大阪城公園・教育塔",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tower_of_Education_in_Osaka_Castle_Park.jpg/960px-Tower_of_Education_in_Osaka_Castle_Park.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_Education_in_Osaka_Castle_Park.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.6832,
+            "lng": 135.522689
+          }
+        },
+        {
+          "title": "NHK Osaka Hall and Osaka Museum of History",
+          "description": "大阪歴史博物館とNHK大阪ホール",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/NHK_Osaka_Hall_and_Osaka_Museum_of_History.jpg/960px-NHK_Osaka_Hall_and_Osaka_Museum_of_History.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:NHK_Osaka_Hall_and_Osaka_Museum_of_History.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.683181,
+            "lng": 135.521836
+          }
+        },
+        {
+          "title": "View of Osaka Castle from Osaka Museum of History 2",
+          "description": "大阪歴史博物館9階より望む大坂城",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/View_of_Osaka_Castle_from_Osaka_Museum_of_History_2.JPG/960px-View_of_Osaka_Castle_from_Osaka_Museum_of_History_2.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Osaka_Castle_from_Osaka_Museum_of_History_2.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.682911,
+            "lng": 135.521089
+          }
+        },
+        {
+          "title": "Osaka Hist Mus",
+          "description": "Osaka Museum of History (left)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Osaka_Hist_Mus.jpg/500px-Osaka_Hist_Mus.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Hist_Mus.jpg",
+          "credit": "Fraxinus2",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.68415,
+            "lng": 135.522037
+          }
+        },
+        {
+          "title": "Osaka Castle Park, Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan - panoramio",
+          "description": "Osaka Castle Park, Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Osaka_Castle_Park%2C_Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio.jpg/960px-Osaka_Castle_Park%2C_Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_Park,_Osakajo,_Chuo_Ward,_Osaka,_Osaka_Prefecture_540-0002,_Japan_-_panoramio.jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.683428,
+            "lng": 135.52237
+          }
+        },
+        {
+          "title": "Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan - panoramio - jetsun",
+          "description": "Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio_-_jetsun.jpg/960px-Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio_-_jetsun.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osakajo,_Chuo_Ward,_Osaka,_Osaka_Prefecture_540-0002,_Japan_-_panoramio_-_jetsun.jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.683194,
+            "lng": 135.521625
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (3)",
+          "description": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%283%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(3).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.683458,
+            "lng": 135.522344
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 34.68261156026511,
+        "lng": 135.52922286136797,
+        "ele": 23.9
+      },
+      "stations": [
+        {
+          "name": "森ノ宮",
+          "prefecture": "大阪府",
+          "line": "大阪中央線",
+          "x": 135.532687,
+          "y": 34.681508,
+          "postal": "5400002",
+          "distance": "340m",
+          "prev": "谷町四丁目",
+          "next": "緑橋"
+        },
+        {
+          "name": "大阪城公園",
+          "prefecture": "大阪府",
+          "line": "JR大阪環状線",
+          "x": 135.534482,
+          "y": 34.68858,
+          "postal": "5360025",
+          "distance": "820m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        },
+        {
+          "name": "玉造",
+          "prefecture": "大阪府",
+          "line": "大阪長堀鶴見緑地線",
+          "x": 135.530251,
+          "y": 34.674662,
+          "postal": "5400004",
+          "distance": "890m",
+          "prev": "谷町六丁目",
+          "next": "森ノ宮"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Osaka Castle Sakuramon Kyoseki1",
+          "description": "大阪城 桜門枡形の巨石",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Osaka_Castle_Sakuramon_Kyoseki1.jpg/960px-Osaka_Castle_Sakuramon_Kyoseki1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_Sakuramon_Kyoseki1.jpg",
+          "credit": "Yanajin33",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.680972,
+            "lng": 135.528403
+          }
+        },
+        {
+          "title": "Osaka Castle Sakuramon Kyoseki2",
+          "description": "大阪城 桜門枡形の巨石",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Osaka_Castle_Sakuramon_Kyoseki2.jpg/960px-Osaka_Castle_Sakuramon_Kyoseki2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_Sakuramon_Kyoseki2.jpg",
+          "credit": "Yanajin33",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.680972,
+            "lng": 135.528403
+          }
+        },
+        {
+          "title": "Morinomiya Q's MALL BASE (5)",
+          "description": "もりのみやキューズモールBASEを撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Morinomiya_Q%27s_MALL_BASE_%285%29.JPG/960px-Morinomiya_Q%27s_MALL_BASE_%285%29.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morinomiya_Q%27s_MALL_BASE_(5).JPG",
+          "credit": "Tokumeigakarinoaoshima",
+          "license": "CC0",
+          "gps": {
+            "lat": 34.681,
+            "lng": 135.529769
+          }
+        },
+        {
+          "title": "UFO in the Osakajo park - panoramio",
+          "description": "UFO in the Osakajo park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/UFO_in_the_Osakajo_park_-_panoramio.jpg/960px-UFO_in_the_Osakajo_park_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:UFO_in_the_Osakajo_park_-_panoramio.jpg",
+          "credit": "kisaragi",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.684147,
+            "lng": 135.528854
+          }
+        },
+        {
+          "title": "Japan - Flickr - GregTheBusker (18)",
+          "description": "Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Japan_-_Flickr_-_GregTheBusker_%2818%29.jpg/960px-Japan_-_Flickr_-_GregTheBusker_%2818%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japan_-_Flickr_-_GregTheBusker_(18).jpg",
+          "credit": "Greg Schechter from San Francisco, USA",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 34.682433,
+            "lng": 135.527847
+          }
+        },
+        {
+          "title": "Japan - Flickr - GregTheBusker (20)",
+          "description": "Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Japan_-_Flickr_-_GregTheBusker_%2820%29.jpg/960px-Japan_-_Flickr_-_GregTheBusker_%2820%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japan_-_Flickr_-_GregTheBusker_(20).jpg",
+          "credit": "Greg Schechter from San Francisco, USA",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 34.682449,
+            "lng": 135.527863
+          }
+        },
+        {
+          "title": "大阪城公園 - panoramio",
+          "description": "大阪城公園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+          "credit": "kikosun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.682904,
+            "lng": 135.528242
+          }
+        },
+        {
+          "title": "大阪城公園 - panoramio - kikosun",
+          "description": "大阪城公園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio_-_kikosun.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio_-_kikosun.jpg",
+          "credit": "kikosun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.682845,
+            "lng": 135.527982
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 34.68608779768908,
+        "lng": 135.53259064417338,
+        "ele": 12.2
+      },
+      "stations": [
+        {
+          "name": "大阪城公園",
+          "prefecture": "大阪府",
+          "line": "JR大阪環状線",
+          "x": 135.534482,
+          "y": 34.68858,
+          "postal": "5360025",
+          "distance": "330m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        },
+        {
+          "name": "森ノ宮",
+          "prefecture": "大阪府",
+          "line": "大阪長堀鶴見緑地線",
+          "x": 135.533481,
+          "y": 34.681861,
+          "postal": "5400002",
+          "distance": "480m",
+          "prev": "玉造",
+          "next": "大阪ビジネスパーク"
+        },
+        {
+          "name": "大阪ビジネスパーク",
+          "prefecture": "大阪府",
+          "line": "大阪長堀鶴見緑地線",
+          "x": 135.529688,
+          "y": 34.692144,
+          "postal": "5400001",
+          "distance": "720m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        }
+      ],
+      "photos": [
+        {
+          "title": "JP-Osaka-Osaka-Castle-Park",
+          "description": "大阪城公園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/JP-Osaka-Osaka-Castle-Park.JPG/960px-JP-Osaka-Osaka-Castle-Park.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:JP-Osaka-Osaka-Castle-Park.JPG",
+          "credit": "Kanchi1979",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.686319,
+            "lng": 135.530527
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (39)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2839%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2839%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(39).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687707,
+            "lng": 135.53214
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (40)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2840%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2840%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(40).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687665,
+            "lng": 135.532048
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (41)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2841%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2841%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(41).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687657,
+            "lng": 135.531898
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (42)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2842%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2842%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(42).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687598,
+            "lng": 135.531955
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (43)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2843%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2843%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(43).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687553,
+            "lng": 135.53185
+          }
+        },
+        {
+          "title": "Osaka Castle, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan - panoramio - jetsun (44)",
+          "description": "Osaka King at Osaka Castle Park, １-１ 大阪城 中央区 Ōsaka-shi, Ōsaka-fu 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2844%29.jpg/960px-Osaka_Castle%2C_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi%2C_%C5%8Csaka-fu_540-0002%2C_Japan_-_panoramio_-_jetsun_%2844%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle,_%EF%BC%91-%EF%BC%91_%E5%A4%A7%E9%98%AA%E5%9F%8E_%E4%B8%AD%E5%A4%AE%E5%8C%BA_%C5%8Csaka-shi,_%C5%8Csaka-fu_540-0002,_Japan_-_panoramio_-_jetsun_(44).jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.68753,
+            "lng": 135.531473
+          }
+        },
+        {
+          "title": "太陽廣場 - panoramio",
+          "description": "太陽廣場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/%E5%A4%AA%E9%99%BD%E5%BB%A3%E5%A0%B4_-_panoramio.jpg/960px-%E5%A4%AA%E9%99%BD%E5%BB%A3%E5%A0%B4_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E9%99%BD%E5%BB%A3%E5%A0%B4_-_panoramio.jpg",
+          "credit": "Giant Shit",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.687386,
+            "lng": 135.531399
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 34.69046800628802,
+        "lng": 135.52740699056795,
+        "ele": -0.7
+      },
+      "stations": [
+        {
+          "name": "大阪ビジネスパーク",
+          "prefecture": "大阪府",
+          "line": "大阪長堀鶴見緑地線",
+          "x": 135.529688,
+          "y": 34.692144,
+          "postal": "5400001",
+          "distance": "280m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        },
+        {
+          "name": "大阪城北詰",
+          "prefecture": "大阪府",
+          "line": "JR東西線",
+          "x": 135.525538,
+          "y": 34.694283,
+          "postal": "5340026",
+          "distance": "460m",
+          "prev": "京橋",
+          "next": "大阪天満宮"
+        },
+        {
+          "name": "大阪城公園",
+          "prefecture": "大阪府",
+          "line": "JR大阪環状線",
+          "x": 135.534482,
+          "y": 34.68858,
+          "postal": "5360025",
+          "distance": "680m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Osaka Business Park - panoramio (13)",
+          "description": "Osaka Business Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Osaka_Business_Park_-_panoramio_%2813%29.jpg/960px-Osaka_Business_Park_-_panoramio_%2813%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Business_Park_-_panoramio_(13).jpg",
+          "credit": "DVMG",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.690721,
+            "lng": 135.527525
+          }
+        },
+        {
+          "title": "Osaka Castle Park - panoramio (1)",
+          "description": "Osaka Castle Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Osaka_Castle_Park_-_panoramio_%281%29.jpg/960px-Osaka_Castle_Park_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_Park_-_panoramio_(1).jpg",
+          "credit": "DVMG",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.690558,
+            "lng": 135.527015
+          }
+        },
+        {
+          "title": "Osaka Business Park - panoramio (14)",
+          "description": "Osaka Business Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Osaka_Business_Park_-_panoramio_%2814%29.jpg/960px-Osaka_Business_Park_-_panoramio_%2814%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Business_Park_-_panoramio_(14).jpg",
+          "credit": "DVMG",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.691017,
+            "lng": 135.527828
+          }
+        },
+        {
+          "title": "Osaka Business Park - panoramio (15)",
+          "description": "Osaka Business Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Osaka_Business_Park_-_panoramio_%2815%29.jpg/960px-Osaka_Business_Park_-_panoramio_%2815%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Business_Park_-_panoramio_(15).jpg",
+          "credit": "DVMG",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.690929,
+            "lng": 135.527761
+          }
+        },
+        {
+          "title": "Osaka Business Park - panoramio (16)",
+          "description": "Osaka Business Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Osaka_Business_Park_-_panoramio_%2816%29.jpg/960px-Osaka_Business_Park_-_panoramio_%2816%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Business_Park_-_panoramio_(16).jpg",
+          "credit": "DVMG",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.690984,
+            "lng": 135.527675
+          }
+        },
+        {
+          "title": "大阪ビジネスパーク - panoramio (3)",
+          "description": "大阪ビジネスパーク",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%283%29.jpg/960px-%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_(3).jpg",
+          "credit": "kanesue",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.691082,
+            "lng": 135.527829
+          }
+        },
+        {
+          "title": "大阪ビジネスパーク - panoramio (4)",
+          "description": "大阪ビジネスパーク",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%284%29.jpg/960px-%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%284%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_(4).jpg",
+          "credit": "kanesue",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.691116,
+            "lng": 135.527872
+          }
+        },
+        {
+          "title": "大阪ビジネスパーク - panoramio (6)",
+          "description": "大阪ビジネスパーク",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%286%29.jpg/960px-%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%286%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_(6).jpg",
+          "credit": "kanesue",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.691152,
+            "lng": 135.527828
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 34.68893035831019,
+        "lng": 135.52123870878188,
+        "ele": 20.2
+      },
+      "stations": [
+        {
+          "name": "天満橋",
+          "prefecture": "大阪府",
+          "line": "大阪谷町線",
+          "x": 135.517371,
+          "y": 34.689457,
+          "postal": "5400012",
+          "distance": "360m",
+          "prev": "南森町",
+          "next": "谷町四丁目"
+        },
+        {
+          "name": "大阪城北詰",
+          "prefecture": "大阪府",
+          "line": "JR東西線",
+          "x": 135.525538,
+          "y": 34.694283,
+          "postal": "5340026",
+          "distance": "710m",
+          "prev": "京橋",
+          "next": "大阪天満宮"
+        },
+        {
+          "name": "大阪ビジネスパーク",
+          "prefecture": "大阪府",
+          "line": "大阪長堀鶴見緑地線",
+          "x": 135.529688,
+          "y": 34.692144,
+          "postal": "5400001",
+          "distance": "850m",
+          "prev": "森ノ宮",
+          "next": "京橋"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Nishinomaru Garden Osaka Castle01s5s3200",
+          "description": "Nishinomaru Garden of Osaka Castle in Chuo-ku, Osaka , Osaka prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Nishinomaru_Garden_Osaka_Castle01s5s3200.jpg/960px-Nishinomaru_Garden_Osaka_Castle01s5s3200.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nishinomaru_Garden_Osaka_Castle01s5s3200.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 34.688056,
+            "lng": 135.522778
+          }
+        },
+        {
+          "title": "Headquarter of Television Osaka, Inc.",
+          "description": "テレビ大阪株式会社本社を撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Headquarter_of_Television_Osaka%2C_Inc..JPG/960px-Headquarter_of_Television_Osaka%2C_Inc..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Headquarter_of_Television_Osaka,_Inc..JPG",
+          "credit": "Tokumeigakarinoaoshima",
+          "license": "CC0",
+          "gps": {
+            "lat": 34.690305,
+            "lng": 135.520739
+          }
+        },
+        {
+          "title": "Chlorophyllum molybdites 2013-09-10",
+          "description": "Chlorophyllum molybdites",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Chlorophyllum_molybdites_2013-09-10.jpg/960px-Chlorophyllum_molybdites_2013-09-10.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorophyllum_molybdites_2013-09-10.jpg",
+          "credit": "Laitche",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.688345,
+            "lng": 135.522497
+          }
+        },
+        {
+          "title": "Chlorophyllum molybdites Crop 2013-09-10",
+          "description": "Chlorophyllum molybdites",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Chlorophyllum_molybdites_Crop_2013-09-10.jpg/960px-Chlorophyllum_molybdites_Crop_2013-09-10.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorophyllum_molybdites_Crop_2013-09-10.jpg",
+          "credit": "Laitche",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.688345,
+            "lng": 135.522497
+          }
+        },
+        {
+          "title": "NHK Osaka Hall and Osaka Museum of History from Osaka Castle Park",
+          "description": "大阪城公園より望むNHK大阪ホール・大阪歴史博物館方面",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG/960px-NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.6876,
+            "lng": 135.521744
+          }
+        },
+        {
+          "title": "Outer Moat of Osaka Castle 6",
+          "description": "大坂城・外濠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Outer_Moat_of_Osaka_Castle_6.JPG/960px-Outer_Moat_of_Osaka_Castle_6.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outer_Moat_of_Osaka_Castle_6.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.688992,
+            "lng": 135.520797
+          }
+        },
+        {
+          "title": "Outer Moat of Osaka Castle 5",
+          "description": "大坂城・外濠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Outer_Moat_of_Osaka_Castle_5.JPG/960px-Outer_Moat_of_Osaka_Castle_5.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outer_Moat_of_Osaka_Castle_5.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.688197,
+            "lng": 135.520447
+          }
+        },
+        {
+          "title": "Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan - panoramio",
+          "description": "Osakajo, Chuo Ward, Osaka, Osaka Prefecture 540-0002, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio.jpg/960px-Osakajo%2C_Chuo_Ward%2C_Osaka%2C_Osaka_Prefecture_540-0002%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osakajo,_Chuo_Ward,_Osaka,_Osaka_Prefecture_540-0002,_Japan_-_panoramio.jpg",
+          "credit": "jetsun",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 34.688631,
+            "lng": 135.520792
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

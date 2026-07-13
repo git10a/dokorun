@@ -1,0 +1,103 @@
+{
+  "slug": "amami-ayamaru",
+  "heroCheckpointId": "section-3",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "奄美パークを起点に、太平洋を望む海岸線を走ってあやまる岬を折り返す約16kmのロング走コースです。サンゴ礁の海と亜熱帯の緑が広がる景色の中、信号の少ない道で気持ちよく距離を踏めます。温暖な気候のため冬場のトレーニングにも最適。起点の奄美パークにはトイレや売店がそろっています。日差しが強い季節は暑さ対策を忘れずに。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 奄美空港から車で約5分。奄美パークに駐車場があります。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "往復コース起点",
+      "badge": "コース起点",
+      "destinationLat": 28.416248,
+      "destinationLng": 129.694086,
+      "routeAnchorLat": 28.416248,
+      "routeAnchorLng": 129.694086,
+      "routeMode": "forward",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 28.416248,
+      "anchorLng": 129.694086,
+      "description": "スタート周辺です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 28.43909,
+      "anchorLng": 129.707591,
+      "description": "序盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 28.463045,
+      "anchorLng": 129.712088,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: あやまる岬公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "奄美あやまる岬コースの中盤区間付近",
+        "caption": "奄美あやまる岬コースの走路近隣で撮影された風景",
+        "credit": "tinbotu",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 28.463045,
+      "anchorLng": 129.712088,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: あやまる岬公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "奄美あやまる岬コースの後半区間付近",
+        "caption": "奄美あやまる岬コースの走路近隣で撮影された風景",
+        "credit": "tinbotu",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 28.43909,
+      "anchorLng": 129.707591,
+      "description": "終盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  }
+}

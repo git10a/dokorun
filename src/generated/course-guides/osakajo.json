@@ -1,0 +1,400 @@
+{
+  "slug": "osakajo",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "大阪城の天守閣や石垣を眺めながら走れる、観光気分も味わえる都市型コースです。外周をつなぐと約3.5kmで、園内の道を組み合わせて距離を調整できます。適度な起伏があり、単調になりにくいのも魅力。春は桜の名所としてにぎわうため、混雑を避けるなら早朝のランがおすすめです。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR大阪城公園駅・森ノ宮駅、地下鉄谷町四丁目駅などからアクセス可能。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "谷町四丁目駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.681914,
+      "destinationLng": 135.517253,
+      "routeAnchorLat": 34.683331,
+      "routeAnchorLng": 135.522065,
+      "routeMode": "loop",
+      "accessText": "谷町四丁目駅からコースまで約470m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.683331,
+      "routeLng": 135.522065,
+      "elevationM": 26.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 686,
+        "section-3": 1380,
+        "section-4": 2058,
+        "section-5": 2743
+      },
+      "gpxHref": "/gpx/osakajo-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "森ノ宮駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.681508,
+      "destinationLng": 135.532687,
+      "routeAnchorLat": 34.682614,
+      "routeAnchorLng": 135.529215,
+      "routeMode": "loop",
+      "accessText": "森ノ宮駅からコースまで約340m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 60,
+      "routeDistanceM": 686,
+      "routeLat": 34.682614,
+      "routeLng": 135.529215,
+      "elevationM": 23.9,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2748,
+        "section-2": 0,
+        "section-3": 694,
+        "section-4": 1372,
+        "section-5": 2057
+      },
+      "gpxHref": "/gpx/osakajo-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "大阪城公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.68858,
+      "destinationLng": 135.534482,
+      "routeAnchorLat": 34.686136,
+      "routeAnchorLng": 135.532549,
+      "routeMode": "loop",
+      "accessText": "大阪城公園駅からコースまで約330m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 113,
+      "routeDistanceM": 1380,
+      "routeLat": 34.686136,
+      "routeLng": 135.532549,
+      "elevationM": 11.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2054,
+        "section-2": 2740,
+        "section-3": 0,
+        "section-4": 678,
+        "section-5": 1363
+      },
+      "gpxHref": "/gpx/osakajo-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "大阪ビジネスパーク駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.692144,
+      "destinationLng": 135.529688,
+      "routeAnchorLat": 34.690454,
+      "routeAnchorLng": 135.527428,
+      "routeMode": "loop",
+      "accessText": "大阪ビジネスパーク駅からコースまで約280m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 161,
+      "routeDistanceM": 2058,
+      "routeLat": 34.690454,
+      "routeLng": 135.527428,
+      "elevationM": -0.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1376,
+        "section-2": 2062,
+        "section-3": 2756,
+        "section-4": 0,
+        "section-5": 685
+      },
+      "gpxHref": "/gpx/osakajo-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.683331,
+      "anchorLng": 135.522065,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 大阪城公園・教育塔",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tower_of_Education_in_Osaka_Castle_Park.jpg/960px-Tower_of_Education_in_Osaka_Castle_Park.jpg",
+        "alt": "大阪城公園のスタート周辺付近",
+        "caption": "大阪城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_Education_in_Osaka_Castle_Park.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.683331,
+      "routeLng": 135.522065,
+      "elevationM": 26.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.682614,
+      "anchorLng": 135.529215,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 大阪城公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "大阪城公園の序盤区間付近",
+        "caption": "大阪城公園の走路近隣で撮影された風景",
+        "credit": "kikosun",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 60,
+      "routeDistanceM": 686,
+      "routeLat": 34.682614,
+      "routeLng": 135.529215,
+      "elevationM": 23.9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.686136,
+      "anchorLng": 135.532549,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 大阪城公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/JP-Osaka-Osaka-Castle-Park.JPG/960px-JP-Osaka-Osaka-Castle-Park.JPG",
+        "alt": "大阪城公園の中盤区間付近",
+        "caption": "大阪城公園の走路近隣で撮影された風景",
+        "credit": "Kanchi1979",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JP-Osaka-Osaka-Castle-Park.JPG"
+      },
+      "routePointIndex": 113,
+      "routeDistanceM": 1380,
+      "routeLat": 34.686136,
+      "routeLng": 135.532549,
+      "elevationM": 11.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.690454,
+      "anchorLng": 135.527428,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 大阪ビジネスパーク",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%283%29.jpg/960px-%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_%283%29.jpg",
+        "alt": "大阪城公園の後半区間付近",
+        "caption": "大阪城公園の走路近隣で撮影された風景",
+        "credit": "kanesue",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio_(3).jpg"
+      },
+      "routePointIndex": 161,
+      "routeDistanceM": 2058,
+      "routeLat": 34.690454,
+      "routeLng": 135.527428,
+      "elevationM": -0.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.688954,
+      "anchorLng": 135.521274,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 大阪城公園より望むNHK大阪ホール・大阪歴史博物館方面",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG/960px-NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG",
+        "alt": "大阪城公園の終盤区間付近",
+        "caption": "大阪城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:NHK_Osaka_Hall_and_Osaka_Museum_of_History_from_Osaka_Castle_Park.JPG"
+      },
+      "routePointIndex": 232,
+      "routeDistanceM": 2743,
+      "routeLat": 34.688954,
+      "routeLng": 135.521274,
+      "elevationM": 20.2,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 3434,
+  "elevationGainM": 69,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 26.6
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 25.7
+    },
+    {
+      "distanceM": 196,
+      "elevationM": 21.2
+    },
+    {
+      "distanceM": 294,
+      "elevationM": 26.9
+    },
+    {
+      "distanceM": 392,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 491,
+      "elevationM": 23.9
+    },
+    {
+      "distanceM": 589,
+      "elevationM": 24.6
+    },
+    {
+      "distanceM": 687,
+      "elevationM": 23.8
+    },
+    {
+      "distanceM": 785,
+      "elevationM": 18.2
+    },
+    {
+      "distanceM": 883,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 981,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 1079,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 1177,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 1276,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 1374,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 1472,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 1570,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 1668,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 1766,
+      "elevationM": 8.2
+    },
+    {
+      "distanceM": 1864,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 1962,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 2061,
+      "elevationM": -1.2
+    },
+    {
+      "distanceM": 2159,
+      "elevationM": -5.7
+    },
+    {
+      "distanceM": 2257,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 2355,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 2453,
+      "elevationM": 16.1
+    },
+    {
+      "distanceM": 2551,
+      "elevationM": 16.8
+    },
+    {
+      "distanceM": 2649,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 2747,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 2845,
+      "elevationM": 25.2
+    },
+    {
+      "distanceM": 2944,
+      "elevationM": 23.2
+    },
+    {
+      "distanceM": 3042,
+      "elevationM": 21.5
+    },
+    {
+      "distanceM": 3140,
+      "elevationM": 20.2
+    },
+    {
+      "distanceM": 3238,
+      "elevationM": 24.3
+    },
+    {
+      "distanceM": 3336,
+      "elevationM": 24.9
+    },
+    {
+      "distanceM": 3434,
+      "elevationM": 26.5
+    }
+  ]
+}

@@ -16,6 +16,8 @@ export type CourseGuideStartPoint = {
   routeLng: number;
   elevationM: number | null;
   gpxHref: string;
+  routeMode: "loop" | "forward" | "reverse";
+  checkpointDistances: Record<string, number>;
 };
 export type CourseGuideCheckpoint = {
   id: string;
@@ -27,12 +29,13 @@ export type CourseGuideCheckpoint = {
   routeLat: number;
   routeLng: number;
   elevationM: number | null;
-  photo: { url: string; alt: string; caption: string; credit: string; license: string; sourceUrl: string };
+  photo?: { url: string; alt: string; caption: string; credit: string; license: string; sourceUrl: string };
 };
 export type CourseGuide = {
   slug: string;
   heroCheckpointId: string;
   intro: string;
+  checkpointsTitle?: string;
   distanceM: number;
   elevationGainM: number | null;
   elevationProfile: ElevationSample[];

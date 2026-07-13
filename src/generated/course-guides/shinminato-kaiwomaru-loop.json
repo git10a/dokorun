@@ -1,0 +1,748 @@
+{
+  "slug": "shinminato-kaiwomaru-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "帆船海王丸が係留される海王丸パークを起点に、新湊大橋を見上げる越ノ潟から「日本のベニス」と呼ばれる内川沿いへ入り、西端の六渡寺から庄川河口右岸を経て、奈呉の浦の海岸沿いを東進して戻る約12kmの周回コース。富山湾越しの立山連峰、漁船が並ぶ内川の橋めぐり、白い斜張橋の新湊大橋と見どころが続く。全体にフラットで、海王丸パークと川の駅新湊にトイレ・自販機あり。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 万葉線 海王丸駅すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "海王丸駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.776726,
+      "destinationLng": 137.105331,
+      "routeAnchorLat": 36.780267,
+      "routeAnchorLng": 137.106315,
+      "routeMode": "loop",
+      "accessText": "海王丸駅からコースまで約400m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.780267,
+      "routeLng": 137.106315,
+      "elevationM": 4.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2432,
+        "section-3": 4856,
+        "section-4": 7295,
+        "section-5": 9703
+      },
+      "gpxHref": "/gpx/shinminato-kaiwomaru-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "東新湊駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.777825,
+      "destinationLng": 137.099368,
+      "routeAnchorLat": 36.773333,
+      "routeAnchorLng": 137.098622,
+      "routeMode": "loop",
+      "accessText": "東新湊駅からコースまで約500m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 84,
+      "routeDistanceM": 2432,
+      "routeLat": 36.773333,
+      "routeLng": 137.098622,
+      "elevationM": 2.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 9701,
+        "section-2": 0,
+        "section-3": 2424,
+        "section-4": 4863,
+        "section-5": 7271
+      },
+      "gpxHref": "/gpx/shinminato-kaiwomaru-loop-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "中新湊駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.775148,
+      "destinationLng": 137.088617,
+      "routeAnchorLat": 36.772477,
+      "routeAnchorLng": 137.084136,
+      "routeMode": "loop",
+      "accessText": "中新湊駅からコースまで約500m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 139,
+      "routeDistanceM": 4856,
+      "routeLat": 36.772477,
+      "routeLng": 137.084136,
+      "elevationM": 2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 7277,
+        "section-2": 9709,
+        "section-3": 0,
+        "section-4": 2439,
+        "section-5": 4847
+      },
+      "gpxHref": "/gpx/shinminato-kaiwomaru-loop-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "第一イン新湊クロスベイ前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.780056,
+      "destinationLng": 137.0753,
+      "routeAnchorLat": 36.777685,
+      "routeAnchorLng": 137.070585,
+      "routeMode": "loop",
+      "accessText": "第一イン新湊クロスベイ前駅からコースまで約490m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 195,
+      "routeDistanceM": 7295,
+      "routeLat": 36.777685,
+      "routeLng": 137.070585,
+      "elevationM": 2.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4838,
+        "section-2": 7270,
+        "section-3": 9694,
+        "section-4": 0,
+        "section-5": 2408
+      },
+      "gpxHref": "/gpx/shinminato-kaiwomaru-loop-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 36.780267,
+      "anchorLng": 137.106315,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 海王丸パーク",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio.jpg/960px-%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio.jpg",
+        "alt": "海王丸パーク・内川周回のスタート周辺付近",
+        "caption": "海王丸パーク・内川周回の走路近隣で撮影された風景",
+        "credit": "Tommaco U",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.780267,
+      "routeLng": 137.106315,
+      "elevationM": 4.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 36.773333,
+      "anchorLng": 137.098622,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 海王丸パーク 富山県射水市",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82_-_panoramio.jpg/960px-%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82_-_panoramio.jpg",
+        "alt": "海王丸パーク・内川周回の序盤区間付近",
+        "caption": "海王丸パーク・内川周回の走路近隣で撮影された風景",
+        "credit": "SilverHaze",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 84,
+      "routeDistanceM": 2432,
+      "routeLat": 36.773333,
+      "routeLng": 137.098622,
+      "elevationM": 2.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 36.772477,
+      "anchorLng": 137.084136,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: マルフク看板 富山県射水市越の潟町",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82%E8%B6%8A%E3%81%AE%E6%BD%9F%E7%94%BA_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82%E8%B6%8A%E3%81%AE%E6%BD%9F%E7%94%BA_-_panoramio.jpg",
+        "alt": "海王丸パーク・内川周回の中盤区間付近",
+        "caption": "海王丸パーク・内川周回の走路近隣で撮影された風景",
+        "credit": "marufuku_sign_collec…",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%B0%84%E6%B0%B4%E5%B8%82%E8%B6%8A%E3%81%AE%E6%BD%9F%E7%94%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 139,
+      "routeDistanceM": 4856,
+      "routeLat": 36.772477,
+      "routeLng": 137.084136,
+      "elevationM": 2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 36.777685,
+      "anchorLng": 137.070585,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: LRT 万葉線 中伏木駅",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/LRT_%E4%B8%87%E8%91%89%E7%B7%9A_%E4%B8%AD%E4%BC%8F%E6%9C%A8%E9%A7%85_-_panoramio.jpg/960px-LRT_%E4%B8%87%E8%91%89%E7%B7%9A_%E4%B8%AD%E4%BC%8F%E6%9C%A8%E9%A7%85_-_panoramio.jpg",
+        "alt": "海王丸パーク・内川周回の後半区間付近",
+        "caption": "海王丸パーク・内川周回の走路近隣で撮影された風景",
+        "credit": "SilverHaze",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:LRT_%E4%B8%87%E8%91%89%E7%B7%9A_%E4%B8%AD%E4%BC%8F%E6%9C%A8%E9%A7%85_-_panoramio.jpg"
+      },
+      "routePointIndex": 195,
+      "routeDistanceM": 7295,
+      "routeLat": 36.777685,
+      "routeLng": 137.070585,
+      "elevationM": 2.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 36.779606,
+      "anchorLng": 137.0842,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kaiomaru Park 海王丸パーク1",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Kaiomaru_Park_%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF1_-_panoramio.jpg/960px-Kaiomaru_Park_%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF1_-_panoramio.jpg",
+        "alt": "海王丸パーク・内川周回の終盤区間付近",
+        "caption": "海王丸パーク・内川周回の走路近隣で撮影された風景",
+        "credit": "baggio4ever",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaiomaru_Park_%E6%B5%B7%E7%8E%8B%E4%B8%B8%E3%83%91%E3%83%BC%E3%82%AF1_-_panoramio.jpg"
+      },
+      "routePointIndex": 249,
+      "routeDistanceM": 9703,
+      "routeLat": 36.779606,
+      "routeLng": 137.0842,
+      "elevationM": 3.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 12133,
+  "elevationGainM": 29,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 199,
+      "elevationM": -0.3
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 597,
+      "elevationM": 0.4
+    },
+    {
+      "distanceM": 696,
+      "elevationM": 0.8
+    },
+    {
+      "distanceM": 796,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 895,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 994,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 1094,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 1193,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 1293,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 1392,
+      "elevationM": 1.1
+    },
+    {
+      "distanceM": 1492,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 1591,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 1691,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 1790,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 1889,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 1989,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 2088,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 2188,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 2287,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 2387,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 2486,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 2586,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 2685,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 2785,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 2884,
+      "elevationM": 0.8
+    },
+    {
+      "distanceM": 2983,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 3083,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 3182,
+      "elevationM": -0.7
+    },
+    {
+      "distanceM": 3282,
+      "elevationM": 0.6
+    },
+    {
+      "distanceM": 3381,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 3481,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 3580,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 3680,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 3779,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 3878,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3978,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 4077,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 4177,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 4276,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 4376,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 4475,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 4575,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 4674,
+      "elevationM": 1.1
+    },
+    {
+      "distanceM": 4773,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 4873,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 4972,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 5072,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 5171,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 5271,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 5370,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 5470,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 5569,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 5668,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 5768,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 5867,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 5967,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 6066,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 6166,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 6265,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 6365,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6464,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6564,
+      "elevationM": 1.4
+    },
+    {
+      "distanceM": 6663,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 6762,
+      "elevationM": 0.8
+    },
+    {
+      "distanceM": 6862,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 6961,
+      "elevationM": 0.3
+    },
+    {
+      "distanceM": 7061,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 7160,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 7260,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 7359,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 7459,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 7558,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 7657,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 7757,
+      "elevationM": 1.4
+    },
+    {
+      "distanceM": 7856,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 7956,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 8055,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 8155,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 8254,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 8354,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 8453,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 8552,
+      "elevationM": 1.2
+    },
+    {
+      "distanceM": 8652,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 8751,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 8851,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 8950,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 9050,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 9149,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 9249,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 9348,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 9447,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 9547,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 9646,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 9746,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 9845,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 9945,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 10044,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 10144,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 10243,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 10343,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 10442,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 10541,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 10641,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 10740,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 10840,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 10939,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 11039,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 11138,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 11238,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 11337,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 11436,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 11536,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 11635,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 11735,
+      "elevationM": -0.1
+    },
+    {
+      "distanceM": 11834,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 11934,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 12033,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 12133,
+      "elevationM": 4.3
+    }
+  ]
+}

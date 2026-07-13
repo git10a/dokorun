@@ -1,0 +1,434 @@
+{
+  "slug": "hakusan-park-yasuragitei",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "新潟市中心部の水辺ランの王道で、やすらぎ堤の案内では昭和大橋、八千代橋、萬代橋、柳都大橋を結ぶ約4kmコースが紹介されています。川沿いの緑地帯はフラットで、風を感じながら長く気持ちよく走れるのが魅力です。トイレ、水飲み場、自販機、白山公園側駐車場の案内もあり、普段使いしやすい条件がそろいます。ジョグや距離走に向く新潟の定番です。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR越後線 白山駅から徒歩約10分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "白山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 37.911829,
+      "destinationLng": 139.029955,
+      "routeAnchorLat": 37.91417,
+      "routeAnchorLng": 139.037482,
+      "routeMode": "loop",
+      "accessText": "白山駅からコースまで約710m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.91417,
+      "routeLng": 139.037482,
+      "elevationM": 1,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1160,
+        "section-3": 873,
+        "section-4": 3398,
+        "section-5": 4275
+      },
+      "gpxHref": "/gpx/hakusan-park-yasuragitei-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "上所駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 37.906961,
+      "destinationLng": 139.04525,
+      "routeAnchorLat": 37.918707,
+      "routeAnchorLng": 139.045749,
+      "routeMode": "loop",
+      "accessText": "上所駅からコースまで約1280m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 61,
+      "routeDistanceM": 1160,
+      "routeLat": 37.918707,
+      "routeLng": 139.045749,
+      "elevationM": 2.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4489,
+        "section-2": 0,
+        "section-3": 5362,
+        "section-4": 2238,
+        "section-5": 3115
+      },
+      "gpxHref": "/gpx/hakusan-park-yasuragitei-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 37.91417,
+      "anchorLng": 139.037482,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 白山神社（新潟市） Hakusan jinja",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%E7%99%BD%E5%B1%B1%E7%A5%9E%E7%A4%BE%EF%BC%88%E6%96%B0%E6%BD%9F%E5%B8%82%EF%BC%89_Hakusan_jinja_-_panoramio.jpg",
+        "alt": "白山公園・信濃川やすらぎ堤のスタート周辺付近",
+        "caption": "白山公園・信濃川やすらぎ堤の走路近隣で撮影された風景",
+        "credit": "yamai36",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%99%BD%E5%B1%B1%E7%A5%9E%E7%A4%BE%EF%BC%88%E6%96%B0%E6%BD%9F%E5%B8%82%EF%BC%89_Hakusan_jinja_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.91417,
+      "routeLng": 139.037482,
+      "elevationM": 1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 37.918707,
+      "anchorLng": 139.045749,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 新潟県新潟市の本町交差点です。新潟県の道路元標があり、国道7号、国道8号、国道１７号他の起終点です。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/%E6%9C%AC%E7%94%BA%E4%BA%A4%E5%B7%AE%E7%82%B9_%28%E6%96%B0%E6%BD%9F%E7%9C%8C%29.jpg/960px-%E6%9C%AC%E7%94%BA%E4%BA%A4%E5%B7%AE%E7%82%B9_%28%E6%96%B0%E6%BD%9F%E7%9C%8C%29.jpg",
+        "alt": "白山公園・信濃川やすらぎ堤の序盤区間付近",
+        "caption": "白山公園・信濃川やすらぎ堤の走路近隣で撮影された風景",
+        "credit": "白露",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9C%AC%E7%94%BA%E4%BA%A4%E5%B7%AE%E7%82%B9_(%E6%96%B0%E6%BD%9F%E7%9C%8C).jpg"
+      },
+      "routePointIndex": 61,
+      "routeDistanceM": 1160,
+      "routeLat": 37.918707,
+      "routeLng": 139.045749,
+      "elevationM": 2.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 37.916667,
+      "anchorLng": 139.043816,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Niigata 1988",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Niigata_1988_-_panoramio.jpg/960px-Niigata_1988_-_panoramio.jpg",
+        "alt": "白山公園・信濃川やすらぎ堤の中盤区間付近",
+        "caption": "白山公園・信濃川やすらぎ堤の走路近隣で撮影された風景",
+        "credit": "kcomiida",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niigata_1988_-_panoramio.jpg"
+      },
+      "routePointIndex": 53,
+      "routeDistanceM": 873,
+      "routeLat": 37.916667,
+      "routeLng": 139.043816,
+      "elevationM": 0,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 37.914419,
+      "anchorLng": 139.037454,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 白山神社（新潟市） Hakusan jinja",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%E7%99%BD%E5%B1%B1%E7%A5%9E%E7%A4%BE%EF%BC%88%E6%96%B0%E6%BD%9F%E5%B8%82%EF%BC%89_Hakusan_jinja_-_panoramio.jpg",
+        "alt": "白山公園・信濃川やすらぎ堤の後半区間付近",
+        "caption": "白山公園・信濃川やすらぎ堤の走路近隣で撮影された風景",
+        "credit": "yamai36",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%99%BD%E5%B1%B1%E7%A5%9E%E7%A4%BE%EF%BC%88%E6%96%B0%E6%BD%9F%E5%B8%82%EF%BC%89_Hakusan_jinja_-_panoramio.jpg"
+      },
+      "routePointIndex": 166,
+      "routeDistanceM": 3398,
+      "routeLat": 37.914419,
+      "routeLng": 139.037454,
+      "elevationM": 1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 37.9099,
+      "anchorLng": 139.030341,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 新潟総鎮守、白山神社。新潟市中心部の白山公園の一角に鎮座する。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hakusan_Shrine_%28Niigata_City%29_Haiden.jpg/960px-Hakusan_Shrine_%28Niigata_City%29_Haiden.jpg",
+        "alt": "白山公園・信濃川やすらぎ堤の終盤区間付近",
+        "caption": "白山公園・信濃川やすらぎ堤の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hakusan_Shrine_(Niigata_City)_Haiden.jpg"
+      },
+      "routePointIndex": 187,
+      "routeDistanceM": 4275,
+      "routeLat": 37.9099,
+      "routeLng": 139.030341,
+      "elevationM": 0,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5649,
+  "elevationGainM": 25,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 0.8
+    },
+    {
+      "distanceM": 198,
+      "elevationM": -0.5
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 0.3
+    },
+    {
+      "distanceM": 595,
+      "elevationM": 0.9
+    },
+    {
+      "distanceM": 694,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 793,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 892,
+      "elevationM": 0.4
+    },
+    {
+      "distanceM": 991,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 1090,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 1189,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 1288,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 1387,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 1487,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 1586,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 1685,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 1784,
+      "elevationM": 4.9
+    },
+    {
+      "distanceM": 1883,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 1982,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 2081,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 2180,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 2279,
+      "elevationM": 0.1
+    },
+    {
+      "distanceM": 2378,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 2478,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 2577,
+      "elevationM": 0.8
+    },
+    {
+      "distanceM": 2676,
+      "elevationM": -0.1
+    },
+    {
+      "distanceM": 2775,
+      "elevationM": 0.9
+    },
+    {
+      "distanceM": 2874,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 2973,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 3072,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 3171,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 3270,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 3369,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 3469,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 3568,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 3667,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 3766,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 3865,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 3964,
+      "elevationM": 0.4
+    },
+    {
+      "distanceM": 4063,
+      "elevationM": -0.4
+    },
+    {
+      "distanceM": 4162,
+      "elevationM": 0.1
+    },
+    {
+      "distanceM": 4261,
+      "elevationM": 0.2
+    },
+    {
+      "distanceM": 4360,
+      "elevationM": 0.1
+    },
+    {
+      "distanceM": 4460,
+      "elevationM": 0.2
+    },
+    {
+      "distanceM": 4559,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 4658,
+      "elevationM": -0.1
+    },
+    {
+      "distanceM": 4757,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 4856,
+      "elevationM": 0.6
+    },
+    {
+      "distanceM": 4955,
+      "elevationM": 1.1
+    },
+    {
+      "distanceM": 5054,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 5153,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 5252,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5351,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 5451,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 5550,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 5649,
+      "elevationM": 1
+    }
+  ]
+}

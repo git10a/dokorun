@@ -1,0 +1,491 @@
+{
+  "slug": "megane-bashi-heiwa-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "日本最古級のアーチ石橋・眼鏡橋を起点に、長崎駅前から国道206号の路面電車通りを北上し、浦上の平和公園で折り返す往復約7.8km。歩道が広く走りやすいが市街地なので信号は多め。折り返し点の平和公園にはトイレ・自販機・平和祈念像があり、原爆資料館にも立ち寄れる。長崎の中心部と浦上をつなぐ観光ラン向きの一本。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 長崎電気軌道「めがね橋」電停からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "めがね橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.746785,
+      "destinationLng": 129.878204,
+      "routeAnchorLat": 32.747184,
+      "routeAnchorLng": 129.880074,
+      "routeMode": "forward",
+      "accessText": "めがね橋駅からコースまで約180m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.747184,
+      "routeLng": 129.880074,
+      "elevationM": 11.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1653,
+        "section-3": 3104,
+        "section-4": 3104,
+        "section-5": 1653
+      },
+      "gpxHref": "/gpx/megane-bashi-heiwa-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 32.747184,
+      "anchorLng": 129.880074,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 長崎眼鏡橋",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/%E9%95%B7%E5%B4%8E%E7%9C%BC%E9%8F%A1%E6%A9%8B_-_panoramio.jpg/960px-%E9%95%B7%E5%B4%8E%E7%9C%BC%E9%8F%A1%E6%A9%8B_-_panoramio.jpg",
+        "alt": "眼鏡橋(中島川公園)のスタート周辺付近",
+        "caption": "眼鏡橋(中島川公園)の走路近隣で撮影された風景",
+        "credit": "sk01",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E5%B4%8E%E7%9C%BC%E9%8F%A1%E6%A9%8B_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.747184,
+      "routeLng": 129.880074,
+      "elevationM": 11.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 32.757106,
+      "anchorLng": 129.868015,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 生目八幡宮",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg/960px-%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg",
+        "alt": "眼鏡橋(中島川公園)の序盤区間付近",
+        "caption": "眼鏡橋(中島川公園)の走路近隣で撮影された風景",
+        "credit": "Ke Ki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg"
+      },
+      "routePointIndex": 65,
+      "routeDistanceM": 1653,
+      "routeLat": 32.757106,
+      "routeLng": 129.868015,
+      "elevationM": 8.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 32.76937,
+      "anchorLng": 129.864032,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: ​長崎西洋館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg/960px-%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg",
+        "alt": "眼鏡橋(中島川公園)の中盤区間付近",
+        "caption": "眼鏡橋(中島川公園)の走路近隣で撮影された風景",
+        "credit": "na_sh",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 98,
+      "routeDistanceM": 3104,
+      "routeLat": 32.76937,
+      "routeLng": 129.864032,
+      "elevationM": 10.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 32.76937,
+      "anchorLng": 129.864032,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: ​長崎西洋館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg/960px-%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg",
+        "alt": "眼鏡橋(中島川公園)の後半区間付近",
+        "caption": "眼鏡橋(中島川公園)の走路近隣で撮影された風景",
+        "credit": "na_sh",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E5%B4%8E%E8%A5%BF%E6%B4%8B%E9%A4%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 98,
+      "routeDistanceM": 3104,
+      "routeLat": 32.76937,
+      "routeLng": 129.864032,
+      "elevationM": 10.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 32.757106,
+      "anchorLng": 129.868015,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 生目八幡宮",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg/960px-%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg",
+        "alt": "眼鏡橋(中島川公園)の終盤区間付近",
+        "caption": "眼鏡橋(中島川公園)の走路近隣で撮影された風景",
+        "credit": "Ke Ki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%9F%E7%9B%AE%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg"
+      },
+      "routePointIndex": 65,
+      "routeDistanceM": 1653,
+      "routeLat": 32.757106,
+      "routeLng": 129.868015,
+      "elevationM": 8.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 7797,
+  "elevationGainM": 68,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 300,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 400,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 500,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 600,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 700,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 800,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 900,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 1000,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 1100,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 1200,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 1300,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 1400,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 1500,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 1599,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 1699,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 1799,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 1899,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 1999,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 2099,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2199,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 2299,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 2399,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 2499,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 2599,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2699,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 2799,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 2899,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2999,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 3099,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 3199,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 3299,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 3399,
+      "elevationM": 14.8
+    },
+    {
+      "distanceM": 3499,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 3599,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 3699,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 3799,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 3899,
+      "elevationM": 21.9
+    },
+    {
+      "distanceM": 3999,
+      "elevationM": 14.4
+    },
+    {
+      "distanceM": 4099,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 4199,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 4299,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 4399,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 4499,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 4599,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 4698,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 4798,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 4898,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 4998,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 5098,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 5198,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 5298,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 5398,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 5498,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 5598,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 5698,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 5798,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 5898,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 5998,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 6098,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 6198,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 6298,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 6398,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 6498,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6598,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 6698,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 6798,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 6898,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 6998,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 7098,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 7198,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 7298,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 7398,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 7498,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 7598,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 7698,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 7797,
+      "elevationM": 12
+    }
+  ]
+}

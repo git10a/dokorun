@@ -1,0 +1,140 @@
+{
+  "slug": "meiji-jingu-gaien-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "明治神宮外苑は国立競技場や神宮球場の近くを走る、都心の定番周回コースです。大きなトラックのような楕円形の舗装路で、1周約1.3km。信号待ちがなく、100mごとの距離表示を使ったペース走やインターバルにも向いています。添付GPXは複数周ログから神宮外苑1周分だけを切り出して登録しています。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR総武線各駅停車 千駄ケ谷駅／信濃町駅より徒歩約5分。都営大江戸線 国立競技場駅（A2出口）徒歩1分、東京メトロ銀座線 外苑前駅（3番出口）徒歩9分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "信濃町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.680031,
+      "destinationLng": 139.720729,
+      "routeAnchorLat": 35.675897,
+      "routeAnchorLng": 139.720151,
+      "routeMode": "loop",
+      "accessText": "信濃町駅からコースまで約460m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "国立競技場駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.679831,
+      "destinationLng": 139.714932,
+      "routeAnchorLat": 35.679783,
+      "routeAnchorLng": 139.717452,
+      "routeMode": "loop",
+      "accessText": "国立競技場駅からコースまで約230m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.675897,
+      "anchorLng": 139.720151,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 明治神宮外苑",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%E5%A4%96%E8%8B%91_-_panoramio.jpg/960px-%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%E5%A4%96%E8%8B%91_-_panoramio.jpg",
+        "alt": "明治神宮外苑のスタート周辺付近",
+        "caption": "明治神宮外苑の走路近隣で撮影された風景",
+        "credit": "福原邦展",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%E5%A4%96%E8%8B%91_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.67822,
+      "anchorLng": 139.719293,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 一行院（新宿区）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Ichigyoin2.jpg/960px-Ichigyoin2.jpg",
+        "alt": "明治神宮外苑の序盤区間付近",
+        "caption": "明治神宮外苑の走路近隣で撮影された風景",
+        "credit": "江戸村のとくぞう (Edomura no Tokuzo)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ichigyoin2.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.679783,
+      "anchorLng": 139.717452,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: SAYONARA国立競技場 20140528",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/SAYONARA_Kokuritsu_20140528_%2814107606837%29.jpg/960px-SAYONARA_Kokuritsu_20140528_%2814107606837%29.jpg",
+        "alt": "明治神宮外苑の中盤区間付近",
+        "caption": "明治神宮外苑の走路近隣で撮影された風景",
+        "credit": "bm.iphone This photo was taken with iPhone 5",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SAYONARA_Kokuritsu_20140528_(14107606837).jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.677889,
+      "anchorLng": 139.716674,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Flags of Japan at the Tokyo Olympic Stadium during the final match of the East Asian Football Championship (February 14, 2010).",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Hinomaru_estadio.jpg/960px-Hinomaru_estadio.jpg",
+        "alt": "明治神宮外苑の後半区間付近",
+        "caption": "明治神宮外苑の走路近隣で撮影された風景",
+        "credit": "yoppy",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hinomaru_estadio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.675597,
+      "anchorLng": 139.717813,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 2015.10.2 ♡ おめでとう✨そしてありがとう✨✨",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/2015.10.2_%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86_%E3%81%9D%E3%81%97%E3%81%A6%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86_%2821863167736%29.jpg/960px-2015.10.2_%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86_%E3%81%9D%E3%81%97%E3%81%A6%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86_%2821863167736%29.jpg",
+        "alt": "明治神宮外苑の終盤区間付近",
+        "caption": "明治神宮外苑の走路近隣で撮影された風景",
+        "credit": "shiori.k",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015.10.2_%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86_%E3%81%9D%E3%81%97%E3%81%A6%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86_(21863167736).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

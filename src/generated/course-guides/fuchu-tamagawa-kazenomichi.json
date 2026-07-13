@@ -1,0 +1,573 @@
+{
+  "slug": "fuchu-tamagawa-kazenomichi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "府中市の多摩川左岸に整備されたジョギング・サイクリング用の堤防道です。府中多摩川マラソンの公認コースにも使われ、大会と日常練習の両面でランナー利用が定着しています。代表コースは是政橋から下流の多摩川原橋までを両岸で巡る1周約8.4kmの周回で、信号のないフラットな川沿いをロング走やペース走に使えます。距離を短くしたい場合は途中の橋で折り返す調整も容易です。ウォーキングマップにはトイレ表示もあり、西武多摩川線是政駅から是政橋まで徒歩圏でアクセスできます。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 西武多摩川線 是政駅から是政橋のたもとまで徒歩圏。JR南武線 南多摩駅からも橋を渡ってすぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "是政駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.656242,
+      "destinationLng": 139.488592,
+      "routeAnchorLat": 35.655505,
+      "routeAnchorLng": 139.489205,
+      "routeMode": "loop",
+      "accessText": "是政駅からコースまで約100m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.655505,
+      "routeLng": 139.489205,
+      "elevationM": 47.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1682,
+        "section-3": 3364,
+        "section-4": 5048,
+        "section-5": 6732
+      },
+      "gpxHref": "/gpx/fuchu-tamagawa-kazenomichi-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "競艇場前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.656232,
+      "destinationLng": 139.499721,
+      "routeAnchorLat": 35.65365,
+      "routeAnchorLng": 139.507443,
+      "routeMode": "loop",
+      "accessText": "競艇場前駅からコースまで約760m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 479,
+      "routeDistanceM": 1682,
+      "routeLat": 35.65365,
+      "routeLng": 139.507443,
+      "elevationM": 40.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 6741,
+        "section-2": 0,
+        "section-3": 1682,
+        "section-4": 3366,
+        "section-5": 5050
+      },
+      "gpxHref": "/gpx/fuchu-tamagawa-kazenomichi-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "矢野口駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.641305,
+      "destinationLng": 139.520849,
+      "routeAnchorLat": 35.64791,
+      "routeAnchorLng": 139.523412,
+      "routeMode": "loop",
+      "accessText": "矢野口駅からコースまで約770m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 981,
+      "routeDistanceM": 3364,
+      "routeLat": 35.64791,
+      "routeLng": 139.523412,
+      "elevationM": 34.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 5059,
+        "section-2": 6741,
+        "section-3": 0,
+        "section-4": 1684,
+        "section-5": 3368
+      },
+      "gpxHref": "/gpx/fuchu-tamagawa-kazenomichi-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.655505,
+      "anchorLng": 139.489205,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: The Koremasa-bashi is over the Tama-gawa , connect Inagi and Fuchū in Tokyo , Japan .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Koremasabashi_-01.jpg/960px-Koremasabashi_-01.jpg",
+        "alt": "府中多摩川かぜのみちのスタート周辺付近",
+        "caption": "府中多摩川かぜのみちの走路近隣で撮影された風景",
+        "credit": "Aimaimyi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koremasabashi_-01.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.655505,
+      "routeLng": 139.489205,
+      "elevationM": 47.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.65365,
+      "anchorLng": 139.507443,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Entrance sign of Inagi Bridge Road in Fuchu, Tokyo, Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sign_of_Inagi_Bridge_in_2010.jpg",
+        "alt": "府中多摩川かぜのみちの序盤区間付近",
+        "caption": "府中多摩川かぜのみちの走路近隣で撮影された風景",
+        "credit": "Nikm",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sign_of_Inagi_Bridge_in_2010.jpg"
+      },
+      "routePointIndex": 479,
+      "routeDistanceM": 1682,
+      "routeLat": 35.65365,
+      "routeLng": 139.507443,
+      "elevationM": 40.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.64791,
+      "anchorLng": 139.523412,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 多摩川",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/%E5%A4%9A%E6%91%A9%E5%B7%9D_-_panoramio_%2810%29.jpg/960px-%E5%A4%9A%E6%91%A9%E5%B7%9D_-_panoramio_%2810%29.jpg",
+        "alt": "府中多摩川かぜのみちの中盤区間付近",
+        "caption": "府中多摩川かぜのみちの走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%B7%9D_-_panoramio_(10).jpg"
+      },
+      "routePointIndex": 981,
+      "routeDistanceM": 3364,
+      "routeLat": 35.64791,
+      "routeLng": 139.523412,
+      "elevationM": 34.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.64803,
+      "anchorLng": 139.517202,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 多摩川 土手 押立周辺",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%E5%A4%9A%E6%91%A9%E5%B7%9D_%E5%9C%9F%E6%89%8B_%E6%8A%BC%E7%AB%8B%E5%91%A8%E8%BE%BA_-_panoramio.jpg/960px-%E5%A4%9A%E6%91%A9%E5%B7%9D_%E5%9C%9F%E6%89%8B_%E6%8A%BC%E7%AB%8B%E5%91%A8%E8%BE%BA_-_panoramio.jpg",
+        "alt": "府中多摩川かぜのみちの後半区間付近",
+        "caption": "府中多摩川かぜのみちの走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%B7%9D_%E5%9C%9F%E6%89%8B_%E6%8A%BC%E7%AB%8B%E5%91%A8%E8%BE%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 1491,
+      "routeDistanceM": 5048,
+      "routeLat": 35.64803,
+      "routeLng": 139.517202,
+      "elevationM": 33.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.650163,
+      "anchorLng": 139.500883,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 津島神社 稲城市東長沼(上新田) 2013.5.17",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/%E6%B4%A5%E5%B3%B6%E7%A5%9E%E7%A4%BE_%E7%A8%B2%E5%9F%8E%E5%B8%82%E6%9D%B1%E9%95%B7%E6%B2%BC%28%E4%B8%8A%E6%96%B0%E7%94%B0%29_2013.5.17_-_panoramio.jpg/960px-%E6%B4%A5%E5%B3%B6%E7%A5%9E%E7%A4%BE_%E7%A8%B2%E5%9F%8E%E5%B8%82%E6%9D%B1%E9%95%B7%E6%B2%BC%28%E4%B8%8A%E6%96%B0%E7%94%B0%29_2013.5.17_-_panoramio.jpg",
+        "alt": "府中多摩川かぜのみちの終盤区間付近",
+        "caption": "府中多摩川かぜのみちの走路近隣で撮影された風景",
+        "credit": "Nankou Oronain (as36…",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B4%A5%E5%B3%B6%E7%A5%9E%E7%A4%BE_%E7%A8%B2%E5%9F%8E%E5%B8%82%E6%9D%B1%E9%95%B7%E6%B2%BC(%E4%B8%8A%E6%96%B0%E7%94%B0)_2013.5.17_-_panoramio.jpg"
+      },
+      "routePointIndex": 2021,
+      "routeDistanceM": 6732,
+      "routeLat": 35.650163,
+      "routeLng": 139.500883,
+      "elevationM": 38.7,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8423,
+  "elevationGainM": 30,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 47.7
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 595,
+      "elevationM": 44.8
+    },
+    {
+      "distanceM": 694,
+      "elevationM": 44.8
+    },
+    {
+      "distanceM": 793,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 892,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 991,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 1090,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 1189,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 1288,
+      "elevationM": 42.7
+    },
+    {
+      "distanceM": 1387,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 1486,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 1585,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 1685,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 1784,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 1883,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 1982,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 2081,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 2180,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 2279,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 2378,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 2477,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 2576,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 2675,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 2775,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 2874,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 2973,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 3072,
+      "elevationM": 36.3
+    },
+    {
+      "distanceM": 3171,
+      "elevationM": 35.8
+    },
+    {
+      "distanceM": 3270,
+      "elevationM": 35.8
+    },
+    {
+      "distanceM": 3369,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 3468,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 3567,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 3666,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 3765,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 3865,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 3964,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 4063,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 4162,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 4261,
+      "elevationM": 35.8
+    },
+    {
+      "distanceM": 4360,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 4459,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 4558,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 4657,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 4756,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 4855,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 4954,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 5054,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 5153,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 5252,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 5351,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 5450,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 5549,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 5648,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 5747,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 5846,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 5945,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 6044,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 6144,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 6243,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 6342,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 6441,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 6540,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 6639,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 6738,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 6837,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 6936,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 7035,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 7134,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 7234,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 7333,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 7432,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 7531,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 7630,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 7729,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 7828,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 7927,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 8026,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 8125,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 8224,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 8324,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 8423,
+      "elevationM": 47.7
+    }
+  ]
+}

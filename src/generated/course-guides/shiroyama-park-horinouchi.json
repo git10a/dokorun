@@ -1,0 +1,488 @@
+{
+  "slug": "shiroyama-park-horinouchi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "松山中心部の定番で、堀之内の平地から松山城の山腹までつなげると約5.6kmの周回になります。前半はお堀沿いを走りやすく、後半は城へ向かう上りでしっかり負荷をかけられるのが特徴です。景観の変化が大きく、現存天守の城下を巡る松山らしさも十分です。ジョグだけでなく、坂刺激を入れたい日や観光を兼ねたランにも向く代表的スポットです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 伊予鉄道 県庁前駅から徒歩約5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "清水町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.849328,
+      "destinationLng": 132.764281,
+      "routeAnchorLat": 33.848118,
+      "routeAnchorLng": 132.762402,
+      "routeMode": "loop",
+      "accessText": "清水町駅からコースまで約220m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.848118,
+      "routeLng": 132.762402,
+      "elevationM": 29.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1106,
+        "section-3": 2258,
+        "section-4": 3362,
+        "section-5": 4572
+      },
+      "gpxHref": "/gpx/shiroyama-park-horinouchi-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "赤十字病院前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.848115,
+      "destinationLng": 132.772383,
+      "routeAnchorLat": 33.845523,
+      "routeAnchorLng": 132.770585,
+      "routeMode": "loop",
+      "accessText": "赤十字病院前駅からコースまで約320m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 17,
+      "routeDistanceM": 1106,
+      "routeLat": 33.845523,
+      "routeLng": 132.770585,
+      "elevationM": 47.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4582,
+        "section-2": 0,
+        "section-3": 1152,
+        "section-4": 2256,
+        "section-5": 3466
+      },
+      "gpxHref": "/gpx/shiroyama-park-horinouchi-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "大街道駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.841103,
+      "destinationLng": 132.769861,
+      "routeAnchorLat": 33.8382,
+      "routeAnchorLng": 132.768957,
+      "routeMode": "loop",
+      "accessText": "大街道駅からコースまで約340m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 62,
+      "routeDistanceM": 2258,
+      "routeLat": 33.8382,
+      "routeLng": 132.768957,
+      "elevationM": 32,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 3430,
+        "section-2": 4536,
+        "section-3": 0,
+        "section-4": 1104,
+        "section-5": 2314
+      },
+      "gpxHref": "/gpx/shiroyama-park-horinouchi-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "松山市駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.835656,
+      "destinationLng": 132.762281,
+      "routeAnchorLat": 33.835355,
+      "routeAnchorLng": 132.760278,
+      "routeMode": "loop",
+      "accessText": "松山市駅からコースまで約240m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 120,
+      "routeDistanceM": 3362,
+      "routeLat": 33.835355,
+      "routeLng": 132.760278,
+      "elevationM": 28,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2326,
+        "section-2": 3432,
+        "section-3": 4584,
+        "section-4": 0,
+        "section-5": 1210
+      },
+      "gpxHref": "/gpx/shiroyama-park-horinouchi-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.848118,
+      "anchorLng": 132.762402,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 愛媛県松山市木屋町一丁目（味酒地区）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kiyatown_Matsuyamacity_Ehimepref.JPG/960px-Kiyatown_Matsuyamacity_Ehimepref.JPG",
+        "alt": "城山公園(堀之内)〜松山城周回のスタート周辺付近",
+        "caption": "城山公園(堀之内)〜松山城周回の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kiyatown_Matsuyamacity_Ehimepref.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.848118,
+      "routeLng": 132.762402,
+      "elevationM": 29.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.845523,
+      "anchorLng": 132.770585,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 1961年ごろに撮影された松山城ロープウェイの初代ゴンドラ。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg/960px-%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg",
+        "alt": "城山公園(堀之内)〜松山城周回の序盤区間付近",
+        "caption": "城山公園(堀之内)〜松山城周回の走路近隣で撮影された風景",
+        "credit": "Cafelasm",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg"
+      },
+      "routePointIndex": 17,
+      "routeDistanceM": 1106,
+      "routeLat": 33.845523,
+      "routeLng": 132.770585,
+      "elevationM": 47.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.8382,
+      "anchorLng": 132.768957,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Sanbancho 4-chome",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sanbancho_4-chome_-_panoramio_%287%29.jpg/960px-Sanbancho_4-chome_-_panoramio_%287%29.jpg",
+        "alt": "城山公園(堀之内)〜松山城周回の中盤区間付近",
+        "caption": "城山公園(堀之内)〜松山城周回の走路近隣で撮影された風景",
+        "credit": "DVMG",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanbancho_4-chome_-_panoramio_(7).jpg"
+      },
+      "routePointIndex": 62,
+      "routeDistanceM": 2258,
+      "routeLat": 33.8382,
+      "routeLng": 132.768957,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.835355,
+      "anchorLng": 132.760278,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Matsuyama City Station",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%9D%BE%E5%B1%B1%E5%B8%82_-_panoramio_%286%29.jpg/960px-%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%9D%BE%E5%B1%B1%E5%B8%82_-_panoramio_%286%29.jpg",
+        "alt": "城山公園(堀之内)〜松山城周回の後半区間付近",
+        "caption": "城山公園(堀之内)〜松山城周回の走路近隣で撮影された風景",
+        "credit": "iPhone修理/カスタマイズパーツ販売…",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%9D%BE%E5%B1%B1%E5%B8%82_-_panoramio_(6).jpg"
+      },
+      "routePointIndex": 120,
+      "routeDistanceM": 3362,
+      "routeLat": 33.835355,
+      "routeLng": 132.760278,
+      "elevationM": 28,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.843417,
+      "anchorLng": 132.755889,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Misakemachi 2-chome",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Misakemachi_2-chome_-_panoramio_%285%29.jpg/960px-Misakemachi_2-chome_-_panoramio_%285%29.jpg",
+        "alt": "城山公園(堀之内)〜松山城周回の終盤区間付近",
+        "caption": "城山公園(堀之内)〜松山城周回の走路近隣で撮影された風景",
+        "credit": "DVMG",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Misakemachi_2-chome_-_panoramio_(5).jpg"
+      },
+      "routePointIndex": 173,
+      "routeDistanceM": 4572,
+      "routeLat": 33.843417,
+      "routeLng": 132.755889,
+      "elevationM": 23,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5688,
+  "elevationGainM": 43,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 29.8
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 29
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 36.9
+    },
+    {
+      "distanceM": 499,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 599,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 699,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 798,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 898,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 998,
+      "elevationM": 41.2
+    },
+    {
+      "distanceM": 1098,
+      "elevationM": 45.9
+    },
+    {
+      "distanceM": 1198,
+      "elevationM": 43.2
+    },
+    {
+      "distanceM": 1297,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 1397,
+      "elevationM": 38.1
+    },
+    {
+      "distanceM": 1497,
+      "elevationM": 36.1
+    },
+    {
+      "distanceM": 1597,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 1697,
+      "elevationM": 36.3
+    },
+    {
+      "distanceM": 1796,
+      "elevationM": 35.9
+    },
+    {
+      "distanceM": 1896,
+      "elevationM": 40.2
+    },
+    {
+      "distanceM": 1996,
+      "elevationM": 41.3
+    },
+    {
+      "distanceM": 2096,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 2196,
+      "elevationM": 32.6
+    },
+    {
+      "distanceM": 2295,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 2395,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 2495,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 2595,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 2694,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 2794,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 2894,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 2994,
+      "elevationM": 31
+    },
+    {
+      "distanceM": 3094,
+      "elevationM": 31.3
+    },
+    {
+      "distanceM": 3193,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 3293,
+      "elevationM": 28.5
+    },
+    {
+      "distanceM": 3393,
+      "elevationM": 27.5
+    },
+    {
+      "distanceM": 3493,
+      "elevationM": 26.2
+    },
+    {
+      "distanceM": 3593,
+      "elevationM": 27.7
+    },
+    {
+      "distanceM": 3692,
+      "elevationM": 23.7
+    },
+    {
+      "distanceM": 3792,
+      "elevationM": 24.3
+    },
+    {
+      "distanceM": 3892,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 3992,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 4092,
+      "elevationM": 25.5
+    },
+    {
+      "distanceM": 4191,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 4291,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 4391,
+      "elevationM": 23.7
+    },
+    {
+      "distanceM": 4491,
+      "elevationM": 23.4
+    },
+    {
+      "distanceM": 4591,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 4690,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 4790,
+      "elevationM": 25.1
+    },
+    {
+      "distanceM": 4890,
+      "elevationM": 26
+    },
+    {
+      "distanceM": 4990,
+      "elevationM": 27.3
+    },
+    {
+      "distanceM": 5090,
+      "elevationM": 28.8
+    },
+    {
+      "distanceM": 5189,
+      "elevationM": 26.1
+    },
+    {
+      "distanceM": 5289,
+      "elevationM": 26.3
+    },
+    {
+      "distanceM": 5389,
+      "elevationM": 27.8
+    },
+    {
+      "distanceM": 5489,
+      "elevationM": 28.2
+    },
+    {
+      "distanceM": 5589,
+      "elevationM": 29
+    },
+    {
+      "distanceM": 5688,
+      "elevationM": 30.8
+    }
+  ]
+}

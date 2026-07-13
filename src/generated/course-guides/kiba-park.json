@@ -1,0 +1,346 @@
+{
+  "slug": "kiba-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "木場公園は園内橋梁と広い園路を使って走れる都心近接の定番コースです。代表周回は約3.5kmで、舗装が主体ながら一部に石畳もあり、100mごとの距離表示でペースを作りやすいのが特徴です。東京都現代美術館や木場公園大橋の景色に変化があり、起伏は小さく信号なしで流れを切られにくいため、ジョグからペース走、10km前後の周回走まで幅広く使えます。平日夜の利用もしやすいスポットです。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東京メトロ東西線 木場駅から徒歩5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "木場駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.669351,
+      "destinationLng": 139.807042,
+      "routeAnchorLat": 35.673882,
+      "routeAnchorLng": 139.808691,
+      "routeMode": "loop",
+      "accessText": "木場駅からコースまで約530m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.673882,
+      "routeLng": 139.808691,
+      "elevationM": 11.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 694,
+        "section-3": 1388,
+        "section-4": 2080,
+        "section-5": 2771
+      },
+      "gpxHref": "/gpx/kiba-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "清澄白河駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.682105,
+      "destinationLng": 139.798851,
+      "routeAnchorLat": 35.67936,
+      "routeAnchorLng": 139.808285,
+      "routeMode": "loop",
+      "accessText": "清澄白河駅からコースまで約910m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 664,
+      "routeDistanceM": 2080,
+      "routeLat": 35.67936,
+      "routeLng": 139.808285,
+      "elevationM": 12.4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1386,
+        "section-2": 2080,
+        "section-3": 2774,
+        "section-4": 0,
+        "section-5": 691
+      },
+      "gpxHref": "/gpx/kiba-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.673882,
+      "anchorLng": 139.808691,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 都立木場公園",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "木場公園のスタート周辺付近",
+        "caption": "木場公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.673882,
+      "routeLng": 139.808691,
+      "elevationM": 11.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.673838,
+      "anchorLng": 139.809287,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 都立木場公園",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "木場公園の序盤区間付近",
+        "caption": "木場公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 223,
+      "routeDistanceM": 694,
+      "routeLat": 35.673838,
+      "routeLng": 139.809287,
+      "elevationM": 12.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.674698,
+      "anchorLng": 139.809191,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 都立木場公園",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "木場公園の中盤区間付近",
+        "caption": "木場公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E6%9C%A8%E5%A0%B4%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 451,
+      "routeDistanceM": 1388,
+      "routeLat": 35.674698,
+      "routeLng": 139.809191,
+      "elevationM": 15.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.67936,
+      "anchorLng": 139.808285,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 東京都現代美術館 （東京都江東区三好4-1-1）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Museum_of_Contemporary_Art_Tokyo_20071004.jpg/960px-Museum_of_Contemporary_Art_Tokyo_20071004.jpg",
+        "alt": "木場公園の後半区間付近",
+        "caption": "木場公園の走路近隣で撮影された風景",
+        "credit": "Uploader; Vantey",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Contemporary_Art_Tokyo_20071004.jpg"
+      },
+      "routePointIndex": 664,
+      "routeDistanceM": 2080,
+      "routeLat": 35.67936,
+      "routeLng": 139.808285,
+      "elevationM": 12.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.677994,
+      "anchorLng": 139.807955,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 東京都現代美術館 （東京都江東区三好4-1-1）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Museum_of_Contemporary_Art_Tokyo_20071004.jpg/960px-Museum_of_Contemporary_Art_Tokyo_20071004.jpg",
+        "alt": "木場公園の終盤区間付近",
+        "caption": "木場公園の走路近隣で撮影された風景",
+        "credit": "Uploader; Vantey",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Contemporary_Art_Tokyo_20071004.jpg"
+      },
+      "routePointIndex": 868,
+      "routeDistanceM": 2771,
+      "routeLat": 35.677994,
+      "routeLng": 139.807955,
+      "elevationM": 12.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 3466,
+  "elevationGainM": 32,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 594,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 693,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 792,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 891,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 990,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 1089,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 1188,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 1287,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 1386,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1485,
+      "elevationM": 19.7
+    },
+    {
+      "distanceM": 1584,
+      "elevationM": 19.2
+    },
+    {
+      "distanceM": 1683,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 1782,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 1881,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 1980,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 2079,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 2178,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 2278,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 2377,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 2476,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 2575,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 2674,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 2773,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 2872,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 2971,
+      "elevationM": 16.5
+    },
+    {
+      "distanceM": 3070,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 3169,
+      "elevationM": 16.8
+    },
+    {
+      "distanceM": 3268,
+      "elevationM": 13.2
+    },
+    {
+      "distanceM": 3367,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 3466,
+      "elevationM": 12
+    }
+  ]
+}

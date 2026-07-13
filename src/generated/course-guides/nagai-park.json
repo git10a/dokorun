@@ -1,0 +1,349 @@
+{
+  "slug": "nagai-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "大阪を代表する総合公園で、公式案内に一周2.8kmの長距離走路が明記されています。別の公的PDFでも1周約2.8km、平坦で全面舗装、距離表示が整っていることが確認でき、日常のペース走・閾値走に向いた典型例です。加えて公園内マップでトイレ、トレーニングセンター案内でロッカーとシャワー利用も確認でき、都市部のランナー向け設備面が強い候補です。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: Osaka Metro長居駅・JR長居駅から近接。公園公式アクセスと大阪市地下駐車場案内あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "長居駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.609873,
+      "destinationLng": 135.513761,
+      "routeAnchorLat": 34.612588,
+      "routeAnchorLng": 135.518489,
+      "routeMode": "loop",
+      "accessText": "長居駅からコースまで約530m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.612588,
+      "routeLng": 135.518489,
+      "elevationM": 14.9,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 569,
+        "section-3": 1137,
+        "section-4": 1703,
+        "section-5": 2273
+      },
+      "gpxHref": "/gpx/nagai-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "針中野駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.616969,
+      "destinationLng": 135.533078,
+      "routeAnchorLat": 34.611671,
+      "routeAnchorLng": 135.526535,
+      "routeMode": "loop",
+      "accessText": "針中野駅からコースまで約840m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 393,
+      "routeDistanceM": 1703,
+      "routeLat": 34.611671,
+      "routeLng": 135.526535,
+      "elevationM": 9,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1147,
+        "section-2": 1716,
+        "section-3": 2284,
+        "section-4": 0,
+        "section-5": 570
+      },
+      "gpxHref": "/gpx/nagai-park-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "鶴ヶ丘駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.617999,
+      "destinationLng": 135.517088,
+      "routeAnchorLat": 34.615079,
+      "routeAnchorLng": 135.52395,
+      "routeMode": "loop",
+      "accessText": "鶴ヶ丘駅からコースまで約710m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 532,
+      "routeDistanceM": 2273,
+      "routeLat": 34.615079,
+      "routeLng": 135.52395,
+      "elevationM": 12.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 577,
+        "section-2": 1146,
+        "section-3": 1714,
+        "section-4": 2280,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/nagai-park-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.612588,
+      "anchorLng": 135.518489,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Tree sparrow in Nagai Park, Osaka, Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tree_Sparrow_at_Osaka_Japan.jpg/960px-Tree_Sparrow_at_Osaka_Japan.jpg",
+        "alt": "長居公園のスタート周辺付近",
+        "caption": "長居公園の走路近隣で撮影された風景",
+        "credit": "Laitche",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_at_Osaka_Japan.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.612588,
+      "routeLng": 135.518489,
+      "elevationM": 14.9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.609836,
+      "anchorLng": 135.516187,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Tree sparrow in Nagai Park, Osaka, Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tree_Sparrow_at_Osaka_Japan.jpg/960px-Tree_Sparrow_at_Osaka_Japan.jpg",
+        "alt": "長居公園の序盤区間付近",
+        "caption": "長居公園の走路近隣で撮影された風景",
+        "credit": "Laitche",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_at_Osaka_Japan.jpg"
+      },
+      "routePointIndex": 130,
+      "routeDistanceM": 569,
+      "routeLat": 34.609836,
+      "routeLng": 135.516187,
+      "elevationM": 14.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.60961,
+      "anchorLng": 135.522264,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Cape daisy",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Venidium_fastuosum_-_White.jpg/960px-Venidium_fastuosum_-_White.jpg",
+        "alt": "長居公園の中盤区間付近",
+        "caption": "長居公園の走路近隣で撮影された風景",
+        "credit": "Laitche",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Venidium_fastuosum_-_White.jpg"
+      },
+      "routePointIndex": 264,
+      "routeDistanceM": 1137,
+      "routeLat": 34.60961,
+      "routeLng": 135.522264,
+      "elevationM": 12.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.611671,
+      "anchorLng": 135.526535,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Maxim - Hybrid Tea 1994",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rosa_Maxim.jpg/960px-Rosa_Maxim.jpg",
+        "alt": "長居公園の後半区間付近",
+        "caption": "長居公園の走路近隣で撮影された風景",
+        "credit": "Laitche",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rosa_Maxim.jpg"
+      },
+      "routePointIndex": 393,
+      "routeDistanceM": 1703,
+      "routeLat": 34.611671,
+      "routeLng": 135.526535,
+      "elevationM": 9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.615079,
+      "anchorLng": 135.52395,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Swamp chrysanthemum",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Leucanthemum_paludosum_May_2008.jpg/960px-Leucanthemum_paludosum_May_2008.jpg",
+        "alt": "長居公園の終盤区間付近",
+        "caption": "長居公園の走路近隣で撮影された風景",
+        "credit": "Laitche",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leucanthemum_paludosum_May_2008.jpg"
+      },
+      "routePointIndex": 532,
+      "routeDistanceM": 2273,
+      "routeLat": 34.615079,
+      "routeLng": 135.52395,
+      "elevationM": 12.6,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2850,
+  "elevationGainM": 37,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 197,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 295,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 393,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 491,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 590,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 688,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 786,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 885,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 983,
+      "elevationM": 14.7
+    },
+    {
+      "distanceM": 1081,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 1179,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 1278,
+      "elevationM": 11.9
+    },
+    {
+      "distanceM": 1376,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 1474,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1573,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 1671,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 1769,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 1867,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 1966,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 2064,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 2162,
+      "elevationM": 14.7
+    },
+    {
+      "distanceM": 2261,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 2359,
+      "elevationM": 12.3
+    },
+    {
+      "distanceM": 2457,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 2555,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 2654,
+      "elevationM": 13.9
+    },
+    {
+      "distanceM": 2752,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 2850,
+      "elevationM": 14.9
+    }
+  ]
+}

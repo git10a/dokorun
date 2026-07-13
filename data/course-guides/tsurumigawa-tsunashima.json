@@ -1,0 +1,153 @@
+{
+  "slug": "tsurumigawa-tsunashima",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "東急東横線綱島駅から大綱橋で鶴見川の土手に上がり、新羽橋・亀甲橋を経て新横浜公園まで遡上、日産スタジアムの外周をぐるりと回って同じ土手を戻る約14kmのコース。土手上は信号がなくペースを刻みやすい。新横浜公園内にはトイレ・自販機・周回園路が揃い距離調整もしやすい。綱島駅周辺には日帰り温泉があり、走った後に汗を流して帰れるのも魅力。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東急東横線 綱島駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "綱島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.536906,
+      "destinationLng": 139.63491,
+      "routeAnchorLat": 35.536584,
+      "routeAnchorLng": 139.634186,
+      "routeMode": "loop",
+      "accessText": "綱島駅からコースまで約70m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "新羽駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.527701,
+      "destinationLng": 139.612065,
+      "routeAnchorLat": 35.52857,
+      "routeAnchorLng": 139.616649,
+      "routeMode": "loop",
+      "accessText": "新羽駅からコースまで約440m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-3",
+      "name": "小机駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.508533,
+      "destinationLng": 139.599787,
+      "routeAnchorLat": 35.511914,
+      "routeAnchorLng": 139.602834,
+      "routeMode": "loop",
+      "accessText": "小机駅からコースまで約460m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.536584,
+      "anchorLng": 139.634186,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 綱島山 東照寺（横浜市港北区綱島西）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Toshoji_%28Yokohama%29_02.jpg/960px-Toshoji_%28Yokohama%29_02.jpg",
+        "alt": "鶴見川・新横浜公園のスタート周辺付近",
+        "caption": "鶴見川・新横浜公園の走路近隣で撮影された風景",
+        "credit": "Suikotei",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toshoji_(Yokohama)_02.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.52857,
+      "anchorLng": 139.616649,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: イオン横浜新吉田ショッピングセンターの外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/AEON_Yokohama_Shinyoshida_SC_002.jpg/960px-AEON_Yokohama_Shinyoshida_SC_002.jpg",
+        "alt": "鶴見川・新横浜公園の序盤区間付近",
+        "caption": "鶴見川・新横浜公園の走路近隣で撮影された風景",
+        "credit": "第四京浜",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AEON_Yokohama_Shinyoshida_SC_002.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.511914,
+      "anchorLng": 139.602834,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 新横浜公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%E6%96%B0%E6%A8%AA%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_%284%29.jpg/960px-%E6%96%B0%E6%A8%AA%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_%284%29.jpg",
+        "alt": "鶴見川・新横浜公園の中盤区間付近",
+        "caption": "鶴見川・新横浜公園の走路近隣で撮影された風景",
+        "credit": "alonfloc",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E6%A8%AA%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_(4).jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.511888,
+      "anchorLng": 139.608438,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 横浜北線トンネルウォーク",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/%E6%A8%AA%E6%B5%9C%E5%8C%97%E7%B7%9A%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF_2017_%E6%80%A5%E3%82%AB%E3%83%BC%E3%83%96%E6%B3%A8%E6%84%8F_%E6%B8%9B%E9%80%9F_%2832987623840%29.jpg/960px-%E6%A8%AA%E6%B5%9C%E5%8C%97%E7%B7%9A%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF_2017_%E6%80%A5%E3%82%AB%E3%83%BC%E3%83%96%E6%B3%A8%E6%84%8F_%E6%B8%9B%E9%80%9F_%2832987623840%29.jpg",
+        "alt": "鶴見川・新横浜公園の後半区間付近",
+        "caption": "鶴見川・新横浜公園の走路近隣で撮影された風景",
+        "credit": "keyaki from Yokohama-shi, Kanagawa-ken, Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%A8%AA%E6%B5%9C%E5%8C%97%E7%B7%9A%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF_2017_%E6%80%A5%E3%82%AB%E3%83%BC%E3%83%96%E6%B3%A8%E6%84%8F_%E6%B8%9B%E9%80%9F_(32987623840).jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.52857,
+      "anchorLng": 139.616649,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: イオン横浜新吉田ショッピングセンターの外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/AEON_Yokohama_Shinyoshida_SC_002.jpg/960px-AEON_Yokohama_Shinyoshida_SC_002.jpg",
+        "alt": "鶴見川・新横浜公園の終盤区間付近",
+        "caption": "鶴見川・新横浜公園の走路近隣で撮影された風景",
+        "credit": "第四京浜",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AEON_Yokohama_Shinyoshida_SC_002.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

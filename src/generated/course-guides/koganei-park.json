@@ -1,0 +1,295 @@
+{
+  "slug": "koganei-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "小金井公園は西東京を代表する大型公園で、代表周回は約3.2kmです。常設の専用レーンではないものの、広い園路をつないで信号なしで距離を取りやすく、園内売店やトイレも点在しています。舗装主体で高低差は小さく、桜や紅葉の季節は景観も優秀です。混雑しやすい時間帯を外せば一定ペースの周回がしやすく、ジョグ、ペース走、長めのEペース走、ファミリー利用と両立した週末ランにも向いています。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR中央線 東小金井駅または武蔵小金井駅から徒歩25分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "花小金井駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.726129,
+      "destinationLng": 139.513228,
+      "routeAnchorLat": 35.717015,
+      "routeAnchorLng": 139.51334,
+      "routeMode": "loop",
+      "accessText": "花小金井駅からコースまで約1010m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.717015,
+      "routeLng": 139.51334,
+      "elevationM": 72.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 541,
+        "section-3": 1134,
+        "section-4": 1653,
+        "section-5": 2266
+      },
+      "gpxHref": "/gpx/koganei-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.717015,
+      "anchorLng": 139.51334,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 江戸東京たてもの園の高橋是清邸。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/House_of_Korekiyo_Takahashi.jpg/960px-House_of_Korekiyo_Takahashi.jpg",
+        "alt": "小金井公園のスタート周辺付近",
+        "caption": "小金井公園の走路近隣で撮影された風景",
+        "credit": "Kentaro Ohno",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_of_Korekiyo_Takahashi.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.717015,
+      "routeLng": 139.51334,
+      "elevationM": 72.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.717152,
+      "anchorLng": 139.51811,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 江戸東京たてもの園の小寺醤油店。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Kodera_Soy_Sauce_Store.jpg/960px-Kodera_Soy_Sauce_Store.jpg",
+        "alt": "小金井公園の序盤区間付近",
+        "caption": "小金井公園の走路近隣で撮影された風景",
+        "credit": "Kentaro Ohno",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodera_Soy_Sauce_Store.jpg"
+      },
+      "routePointIndex": 11,
+      "routeDistanceM": 541,
+      "routeLat": 35.717152,
+      "routeLng": 139.51811,
+      "elevationM": 74.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.714368,
+      "anchorLng": 139.514731,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 江戸東京たてもの園の上野消防署（旧・下谷消防署）望楼上部。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ueno_Fire_Station_Watchtower.jpg/960px-Ueno_Fire_Station_Watchtower.jpg",
+        "alt": "小金井公園の中盤区間付近",
+        "caption": "小金井公園の走路近隣で撮影された風景",
+        "credit": "Kentaro Ohno",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ueno_Fire_Station_Watchtower.jpg"
+      },
+      "routePointIndex": 41,
+      "routeDistanceM": 1134,
+      "routeLat": 35.714368,
+      "routeLng": 139.514731,
+      "elevationM": 74,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.715464,
+      "anchorLng": 139.515021,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 江戸東京たてもの園の植村邸(左)と大和屋本店(右)。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Front_View_of_Yamatoya_Main_Store%2C_Front_View_of_House_of_Uemura.jpg/960px-Front_View_of_Yamatoya_Main_Store%2C_Front_View_of_House_of_Uemura.jpg",
+        "alt": "小金井公園の後半区間付近",
+        "caption": "小金井公園の走路近隣で撮影された風景",
+        "credit": "Kentaro Ohno",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Front_View_of_Yamatoya_Main_Store,_Front_View_of_House_of_Uemura.jpg"
+      },
+      "routePointIndex": 74,
+      "routeDistanceM": 1653,
+      "routeLat": 35.715464,
+      "routeLng": 139.515021,
+      "elevationM": 75.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.716035,
+      "anchorLng": 139.509052,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 江戸東京たてもの園の奄美の高倉。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Granary_in_Amami.jpg/960px-Granary_in_Amami.jpg",
+        "alt": "小金井公園の終盤区間付近",
+        "caption": "小金井公園の走路近隣で撮影された風景",
+        "credit": "Kentaro Ohno",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Granary_in_Amami.jpg"
+      },
+      "routePointIndex": 99,
+      "routeDistanceM": 2266,
+      "routeLat": 35.716035,
+      "routeLng": 139.509052,
+      "elevationM": 77.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2825,
+  "elevationGainM": 12,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 72.5
+    },
+    {
+      "distanceM": 97,
+      "elevationM": 73
+    },
+    {
+      "distanceM": 195,
+      "elevationM": 75.3
+    },
+    {
+      "distanceM": 292,
+      "elevationM": 75.8
+    },
+    {
+      "distanceM": 390,
+      "elevationM": 75.5
+    },
+    {
+      "distanceM": 487,
+      "elevationM": 74.9
+    },
+    {
+      "distanceM": 584,
+      "elevationM": 75.1
+    },
+    {
+      "distanceM": 682,
+      "elevationM": 75.4
+    },
+    {
+      "distanceM": 779,
+      "elevationM": 73.4
+    },
+    {
+      "distanceM": 877,
+      "elevationM": 73.8
+    },
+    {
+      "distanceM": 974,
+      "elevationM": 75
+    },
+    {
+      "distanceM": 1071,
+      "elevationM": 74.5
+    },
+    {
+      "distanceM": 1169,
+      "elevationM": 74.3
+    },
+    {
+      "distanceM": 1266,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 1364,
+      "elevationM": 75
+    },
+    {
+      "distanceM": 1461,
+      "elevationM": 74.2
+    },
+    {
+      "distanceM": 1558,
+      "elevationM": 74
+    },
+    {
+      "distanceM": 1656,
+      "elevationM": 75.2
+    },
+    {
+      "distanceM": 1753,
+      "elevationM": 76.4
+    },
+    {
+      "distanceM": 1851,
+      "elevationM": 77.1
+    },
+    {
+      "distanceM": 1948,
+      "elevationM": 75.2
+    },
+    {
+      "distanceM": 2046,
+      "elevationM": 75.3
+    },
+    {
+      "distanceM": 2143,
+      "elevationM": 77
+    },
+    {
+      "distanceM": 2240,
+      "elevationM": 77.6
+    },
+    {
+      "distanceM": 2338,
+      "elevationM": 75.6
+    },
+    {
+      "distanceM": 2435,
+      "elevationM": 73.9
+    },
+    {
+      "distanceM": 2533,
+      "elevationM": 72.5
+    },
+    {
+      "distanceM": 2630,
+      "elevationM": 73.3
+    },
+    {
+      "distanceM": 2727,
+      "elevationM": 73.3
+    },
+    {
+      "distanceM": 2825,
+      "elevationM": 73.3
+    }
+  ]
+}

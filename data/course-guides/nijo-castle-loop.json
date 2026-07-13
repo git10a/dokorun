@@ -1,0 +1,140 @@
+{
+  "slug": "nijo-castle-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "元離宮二条城の南東側から、堀沿いの歩道と城北・城西の街路をつないで一周する約3.8kmの都市型コースです。東大手門、石垣、堀を眺めながら平坦に走れ、地下鉄駅からすぐ始められます。京都中心部で距離を把握しやすい朝ランコースですが、観光客や通勤通学の歩行者が多い時間帯は速度を落としてください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京都市営地下鉄 二条城前駅からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "二条駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.010978,
+      "destinationLng": 135.741701,
+      "routeAnchorLat": 35.010198,
+      "routeAnchorLng": 135.744577,
+      "routeMode": "loop",
+      "accessText": "二条駅からコースまで約280m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "二条城前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.011892,
+      "destinationLng": 135.750473,
+      "routeAnchorLat": 35.010714,
+      "routeAnchorLng": 135.751885,
+      "routeMode": "loop",
+      "accessText": "二条城前駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.010198,
+      "anchorLng": 135.744577,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: JR Nijo Station",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Nijo_station-20080120.jpg/960px-Nijo_station-20080120.jpg",
+        "alt": "二条城外周のスタート周辺付近",
+        "caption": "二条城外周の走路近隣で撮影された風景",
+        "credit": "Marikino2522",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nijo_station-20080120.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.010714,
+      "anchorLng": 135.751885,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 京都市中京区役所",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Nakagyo_Ward_Office_of_Kyoto_City.JPG/960px-Nakagyo_Ward_Office_of_Kyoto_City.JPG",
+        "alt": "二条城外周の序盤区間付近",
+        "caption": "二条城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nakagyo_Ward_Office_of_Kyoto_City.JPG"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.01701,
+      "anchorLng": 135.752154,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Torii.jpg",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Torii.jpg/960px-Torii.jpg",
+        "alt": "二条城外周の中盤区間付近",
+        "caption": "二条城外周の走路近隣で撮影された風景",
+        "credit": "Günther Starnberger",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.017645,
+      "anchorLng": 135.746483,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: NHK京都放送局の外観。郁芳通美福西入から。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NHK%E4%BA%AC%E9%83%BD%E6%94%BE%E9%80%81%E5%B1%80%E5%A4%96%E8%A6%B3.JPG/960px-NHK%E4%BA%AC%E9%83%BD%E6%94%BE%E9%80%81%E5%B1%80%E5%A4%96%E8%A6%B3.JPG",
+        "alt": "二条城外周の後半区間付近",
+        "caption": "二条城外周の走路近隣で撮影された風景",
+        "credit": "うら",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:NHK%E4%BA%AC%E9%83%BD%E6%94%BE%E9%80%81%E5%B1%80%E5%A4%96%E8%A6%B3.JPG"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.015048,
+      "anchorLng": 135.741911,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 協栄便のトラック。京都市内にて。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Kyoway_Bin_%E5%8D%94%E6%A0%84%E4%BE%BF_%284671598949%29.jpg/960px-Kyoway_Bin_%E5%8D%94%E6%A0%84%E4%BE%BF_%284671598949%29.jpg",
+        "alt": "二条城外周の終盤区間付近",
+        "caption": "二条城外周の走路近隣で撮影された風景",
+        "credit": "Gwydion M. Williams",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyoway_Bin_%E5%8D%94%E6%A0%84%E4%BE%BF_(4671598949).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

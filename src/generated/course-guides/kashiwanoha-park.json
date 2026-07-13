@@ -1,0 +1,263 @@
+{
+  "slug": "kashiwanoha-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "県立柏の葉公園は、広い運動公園型のレイアウトの中にランニングコースA・Bが設定された使いやすい候補です。公式公園マップではランニングコースの存在が確認でき、周辺ランナーの詳細な現地レビューではAコース1500m、Bコース2000mの周回と100mごとの距離表示が整理されています。徒歩アクセスと駐車場の両方が使え、距離表示も期待できる一方、距離数値自体の一次ソース明記は追加確認を残します。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: つくばエクスプレス柏の葉キャンパス駅から徒歩圏。公園管理事務所住所は柏市柏の葉4-1。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "柏の葉キャンパス駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.89308,
+      "destinationLng": 139.952454,
+      "routeAnchorLat": 35.897462,
+      "routeAnchorLng": 139.939283,
+      "routeMode": "loop",
+      "accessText": "柏の葉キャンパス駅からコースまで約1280m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.897462,
+      "routeLng": 139.939283,
+      "elevationM": 21,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 400,
+        "section-3": 812,
+        "section-4": 1219,
+        "section-5": 1621
+      },
+      "gpxHref": "/gpx/kashiwanoha-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.897462,
+      "anchorLng": 139.939283,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 音楽家の パッパラー河合 氏。 柏の葉公園総合競技場 （ 千葉県 、 日本 ）にて撮影。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Papala_Kawaii%2C_2014-10-11.jpg/960px-Papala_Kawaii%2C_2014-10-11.jpg",
+        "alt": "柏の葉公園のスタート周辺付近",
+        "caption": "柏の葉公園の走路近隣で撮影された風景",
+        "credit": "Dɐ",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papala_Kawaii,_2014-10-11.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.897462,
+      "routeLng": 139.939283,
+      "elevationM": 21,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.895917,
+      "anchorLng": 139.941791,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Kashiwa city Chiba-ken(Prefecture), Japan 千葉県立 柏の葉公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg/960px-Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg",
+        "alt": "柏の葉公園の序盤区間付近",
+        "caption": "柏の葉公園の走路近隣で撮影された風景",
+        "credit": "TANAKA Juuyoh (田中十洋)",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A(%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F)_%E2%80%94_TANAKA_Juuyoh_(%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B).jpg"
+      },
+      "routePointIndex": 14,
+      "routeDistanceM": 400,
+      "routeLat": 35.895917,
+      "routeLng": 139.941791,
+      "elevationM": 21.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.893301,
+      "anchorLng": 139.941182,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Kashiwa city Chiba-ken(Prefecture), Japan 千葉県立 柏の葉公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg/960px-Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg",
+        "alt": "柏の葉公園の中盤区間付近",
+        "caption": "柏の葉公園の走路近隣で撮影された風景",
+        "credit": "TANAKA Juuyoh (田中十洋)",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A(%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F)_%E2%80%94_TANAKA_Juuyoh_(%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B).jpg"
+      },
+      "routePointIndex": 45,
+      "routeDistanceM": 812,
+      "routeLat": 35.893301,
+      "routeLng": 139.941182,
+      "elevationM": 21.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.893156,
+      "anchorLng": 139.937327,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Kashiwa city Chiba-ken(Prefecture), Japan 千葉県立 柏の葉公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg/960px-Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg",
+        "alt": "柏の葉公園の後半区間付近",
+        "caption": "柏の葉公園の走路近隣で撮影された風景",
+        "credit": "TANAKA Juuyoh (田中十洋)",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A(%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F)_%E2%80%94_TANAKA_Juuyoh_(%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B).jpg"
+      },
+      "routePointIndex": 66,
+      "routeDistanceM": 1219,
+      "routeLat": 35.893156,
+      "routeLng": 139.937327,
+      "elevationM": 23.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.895742,
+      "anchorLng": 139.937105,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kashiwa city Chiba-ken(Prefecture), Japan 千葉県立 柏の葉公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg/960px-Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A%28%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F%29_%E2%80%94_TANAKA_Juuyoh_%28%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B%29.jpg",
+        "alt": "柏の葉公園の終盤区間付近",
+        "caption": "柏の葉公園の走路近隣で撮影された風景",
+        "credit": "TANAKA Juuyoh (田中十洋)",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tickseed_-_Coreopsis_lanceolata_-_%E5%A4%A7%E9%87%91%E9%B6%8F%E8%8F%8A(%E3%81%8A%E3%81%8A%E3%81%8D%E3%82%93%E3%81%91%E3%81%84%E3%81%8E%E3%81%8F)_%E2%80%94_TANAKA_Juuyoh_(%E7%94%B0%E4%B8%AD%E5%8D%81%E6%B4%8B).jpg"
+      },
+      "routePointIndex": 98,
+      "routeDistanceM": 1621,
+      "routeLat": 35.895742,
+      "routeLng": 139.937105,
+      "elevationM": 22,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2034,
+  "elevationGainM": 18,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 21
+    },
+    {
+      "distanceM": 97,
+      "elevationM": 22.1
+    },
+    {
+      "distanceM": 194,
+      "elevationM": 21.6
+    },
+    {
+      "distanceM": 291,
+      "elevationM": 20.5
+    },
+    {
+      "distanceM": 387,
+      "elevationM": 20.9
+    },
+    {
+      "distanceM": 484,
+      "elevationM": 22
+    },
+    {
+      "distanceM": 581,
+      "elevationM": 21.3
+    },
+    {
+      "distanceM": 678,
+      "elevationM": 22
+    },
+    {
+      "distanceM": 775,
+      "elevationM": 20.5
+    },
+    {
+      "distanceM": 872,
+      "elevationM": 21.2
+    },
+    {
+      "distanceM": 968,
+      "elevationM": 21.6
+    },
+    {
+      "distanceM": 1065,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 1162,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 1259,
+      "elevationM": 21.9
+    },
+    {
+      "distanceM": 1356,
+      "elevationM": 23.4
+    },
+    {
+      "distanceM": 1453,
+      "elevationM": 25.5
+    },
+    {
+      "distanceM": 1550,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 1646,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 1743,
+      "elevationM": 26.5
+    },
+    {
+      "distanceM": 1840,
+      "elevationM": 20.7
+    },
+    {
+      "distanceM": 1937,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 2034,
+      "elevationM": 21
+    }
+  ]
+}

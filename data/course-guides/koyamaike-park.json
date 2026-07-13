@@ -1,0 +1,153 @@
+{
+  "slug": "koyamaike-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "日本最大級の池である湖山池を中心に複数ゾーンが整備された公園群で、都市近接のロング周回候補です。観光公式では湖山池の周囲18km、散策マップの存在、青島やナチュラルガーデンなど景観資源が確認できます。公園公式からゾーンごとの無料駐車場台数も確認でき、LSDやロングジョグ向きの長いループとして整理しやすい構成です。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 鳥取駅から車約20分、バス利用あり。代表起点は湖山池オアシスパーク周辺。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "湖山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.513455,
+      "destinationLng": 134.186232,
+      "routeAnchorLat": 35.518195,
+      "routeAnchorLng": 134.184728,
+      "routeMode": "loop",
+      "accessText": "湖山駅からコースまで約540m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "鳥取駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.493953,
+      "destinationLng": 134.225901,
+      "routeAnchorLat": 35.502781,
+      "routeAnchorLng": 134.207698,
+      "routeMode": "loop",
+      "accessText": "鳥取駅からコースまで約1920m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-3",
+      "name": "鳥取大学前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.51804,
+      "destinationLng": 134.174305,
+      "routeAnchorLat": 35.508485,
+      "routeAnchorLng": 134.175362,
+      "routeMode": "loop",
+      "accessText": "鳥取大学前駅からコースまで約1090m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.518195,
+      "anchorLng": 134.184728,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 鳥取県鳥取市賀露町北4丁目 鳥取県道41号鳥取港線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Karotownkita4_Tottoricity_Tottoripref.JPG/960px-Karotownkita4_Tottoricity_Tottoripref.JPG",
+        "alt": "湖山池公園のスタート周辺付近",
+        "caption": "湖山池公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karotownkita4_Tottoricity_Tottoripref.JPG"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.502781,
+      "anchorLng": 134.207698,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 鳥取県鳥取市古海 鳥取県道189号高路古海線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG/960px-Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG",
+        "alt": "湖山池公園の序盤区間付近",
+        "caption": "湖山池公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.481368,
+      "anchorLng": 134.189955,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 鳥取県鳥取市古海 鳥取県道189号高路古海線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG/960px-Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG",
+        "alt": "湖山池公園の中盤区間付近",
+        "caption": "湖山池公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.494234,
+      "anchorLng": 134.179373,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 鳥取県鳥取市古海 鳥取県道189号高路古海線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG/960px-Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG",
+        "alt": "湖山池公園の後半区間付近",
+        "caption": "湖山池公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shobu_Tottoricity_Tottoripref_Tottoriprefectural_road_189_Koro_Furumi_line.JPG"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.508485,
+      "anchorLng": 134.175362,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 鳥取空港国際線ターミナル（国際会館）外観全景",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/%E9%B3%A5%E5%8F%96%E7%A9%BA%E6%B8%AF%E5%9B%BD%E9%9A%9B%E7%B7%9A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%88%E5%9B%BD%E9%9A%9B%E4%BC%9A%E9%A4%A8%EF%BC%89%E5%A4%96%E8%A6%B3.jpg/960px-%E9%B3%A5%E5%8F%96%E7%A9%BA%E6%B8%AF%E5%9B%BD%E9%9A%9B%E7%B7%9A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%88%E5%9B%BD%E9%9A%9B%E4%BC%9A%E9%A4%A8%EF%BC%89%E5%A4%96%E8%A6%B3.jpg",
+        "alt": "湖山池公園の終盤区間付近",
+        "caption": "湖山池公園の走路近隣で撮影された風景",
+        "credit": "T.Fujiba",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%B3%A5%E5%8F%96%E7%A9%BA%E6%B8%AF%E5%9B%BD%E9%9A%9B%E7%B7%9A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%88%E5%9B%BD%E9%9A%9B%E4%BC%9A%E9%A4%A8%EF%BC%89%E5%A4%96%E8%A6%B3.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "slug": "oohori",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "福岡ランナーの聖地として親しまれる、水辺の1周約2kmコースです。走行部分には足にやさしいゴム舗装が使われ、歩行者や自転車とレーンが分かれているため快適。距離表示もわかりやすく、日々のジョグからスピード練習まで使えます。夜も比較的明るく、仕事帰りのランにも便利です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 福岡市地下鉄 大濠公園駅から徒歩約3分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "大濠公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.589957,
+      "destinationLng": 130.378784,
+      "routeAnchorLat": 33.585527,
+      "routeAnchorLng": 130.378878,
+      "routeMode": "loop",
+      "accessText": "大濠公園駅からコースまで約490m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.585527,
+      "routeLng": 130.378878,
+      "elevationM": 3.2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 395,
+        "section-3": 786,
+        "section-4": 1183,
+        "section-5": 1574
+      },
+      "gpxHref": "/gpx/oohori-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "唐人町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.590235,
+      "destinationLng": 130.370451,
+      "routeAnchorLat": 33.588357,
+      "routeAnchorLng": 130.373913,
+      "routeMode": "loop",
+      "accessText": "唐人町駅からコースまで約380m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 174,
+      "routeDistanceM": 786,
+      "routeLat": 33.588357,
+      "routeLng": 130.373913,
+      "elevationM": 0.4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1182,
+        "section-2": 1577,
+        "section-3": 0,
+        "section-4": 397,
+        "section-5": 788
+      },
+      "gpxHref": "/gpx/oohori-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "六本松駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.577678,
+      "destinationLng": 130.377287,
+      "routeAnchorLat": 33.5829,
+      "routeAnchorLng": 130.376913,
+      "routeMode": "loop",
+      "accessText": "六本松駅からコースまで約580m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 339,
+      "routeDistanceM": 1574,
+      "routeLat": 33.5829,
+      "routeLng": 130.376913,
+      "elevationM": 4.4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 394,
+        "section-2": 789,
+        "section-3": 1180,
+        "section-4": 1577,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/oohori-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.585527,
+      "anchorLng": 130.378878,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 花火大会前の大濠公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ohori_Park_before_firework_display_20150801-3.JPG/960px-Ohori_Park_before_firework_display_20150801-3.JPG",
+        "alt": "大濠公園のスタート周辺付近",
+        "caption": "大濠公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ohori_Park_before_firework_display_20150801-3.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.585527,
+      "routeLng": 130.378878,
+      "elevationM": 3.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.588723,
+      "anchorLng": 130.377403,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 大濠公園の景色",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ohori_Park_20150927-1.JPG/960px-Ohori_Park_20150927-1.JPG",
+        "alt": "大濠公園の序盤区間付近",
+        "caption": "大濠公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ohori_Park_20150927-1.JPG"
+      },
+      "routePointIndex": 86,
+      "routeDistanceM": 395,
+      "routeLat": 33.588723,
+      "routeLng": 130.377403,
+      "elevationM": -5.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.588357,
+      "anchorLng": 130.373913,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 大濠公園より望む在福岡米国領事館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/View_of_Consulate_of_the_United_States_in_Fukuoka_from_Ohori_Park.jpg/960px-View_of_Consulate_of_the_United_States_in_Fukuoka_from_Ohori_Park.jpg",
+        "alt": "大濠公園の中盤区間付近",
+        "caption": "大濠公園の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Consulate_of_the_United_States_in_Fukuoka_from_Ohori_Park.jpg"
+      },
+      "routePointIndex": 174,
+      "routeDistanceM": 786,
+      "routeLat": 33.588357,
+      "routeLng": 130.373913,
+      "elevationM": 0.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.584981,
+      "anchorLng": 130.374012,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: さつき橋より望む大濠公園(NHK福岡放送局方面)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Satsukibashi_Bridge_of_Ohori_Park.JPG/960px-View_from_Satsukibashi_Bridge_of_Ohori_Park.JPG",
+        "alt": "大濠公園の後半区間付近",
+        "caption": "大濠公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_Satsukibashi_Bridge_of_Ohori_Park.JPG"
+      },
+      "routePointIndex": 261,
+      "routeDistanceM": 1183,
+      "routeLat": 33.584981,
+      "routeLng": 130.374012,
+      "elevationM": 1.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.5829,
+      "anchorLng": 130.376913,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 南岸より望む大濠公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Ohori_Park_20170505-5.jpg/960px-Ohori_Park_20170505-5.jpg",
+        "alt": "大濠公園の終盤区間付近",
+        "caption": "大濠公園の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ohori_Park_20170505-5.jpg"
+      },
+      "routePointIndex": 339,
+      "routeDistanceM": 1574,
+      "routeLat": 33.5829,
+      "routeLng": 130.376913,
+      "elevationM": 4.4,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1968,
+  "elevationGainM": 30,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 98,
+      "elevationM": -3.9
+    },
+    {
+      "distanceM": 197,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 295,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 394,
+      "elevationM": -5.1
+    },
+    {
+      "distanceM": 492,
+      "elevationM": 1.1
+    },
+    {
+      "distanceM": 590,
+      "elevationM": -2.1
+    },
+    {
+      "distanceM": 689,
+      "elevationM": -4.2
+    },
+    {
+      "distanceM": 787,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 885,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 984,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 1082,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 1181,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 1279,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 1377,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 1476,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 1574,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 1672,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 1771,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 1869,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 1968,
+      "elevationM": 3.5
+    }
+  ]
+}

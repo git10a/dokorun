@@ -1,0 +1,116 @@
+{
+  "slug": "okumusashi-izugatake",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "西武秩父線・正丸駅を起点に、正丸峠から奥武蔵屈指の人気峰・伊豆ヶ岳(851m)へ登り、古御岳・高畑山・天目指峠を経て足腰守護で知られる子ノ権現天龍寺まで尾根を縦走する周回コース。下山後は西吾野から国道299号沿いの緩い下り基調で駅へ戻る。累積標高800m超で、伊豆ヶ岳直下の鎖場(男坂)には巻き道あり。子ノ権現に茶屋・トイレ・自販機がある。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 西武秩父線正丸駅すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "正丸駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.938324,
+      "destinationLng": 139.181521,
+      "routeAnchorLat": 35.938335,
+      "routeAnchorLng": 139.182224,
+      "routeMode": "loop",
+      "accessText": "正丸駅からコースまで約60m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "西吾野駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.927082,
+      "destinationLng": 139.202425,
+      "routeAnchorLat": 35.908049,
+      "routeAnchorLng": 139.191839,
+      "routeMode": "loop",
+      "accessText": "西吾野駅からコースまで約2310m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.938335,
+      "anchorLng": 139.182224,
+      "description": "伊豆ヶ岳・子ノ権現を示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: 子ノ権現付近から古御岳と伊豆ヶ岳",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/%E5%AD%90%E3%83%8E%E6%A8%A9%E7%8F%BE%E4%BB%98%E8%BF%91%E3%81%8B%E3%82%89%E5%8F%A4%E5%BE%A1%E5%B2%B3%E3%81%A8%E4%BC%8A%E8%B1%86%E3%83%B6%E5%B2%B3.jpg/960px-%E5%AD%90%E3%83%8E%E6%A8%A9%E7%8F%BE%E4%BB%98%E8%BF%91%E3%81%8B%E3%82%89%E5%8F%A4%E5%BE%A1%E5%B2%B3%E3%81%A8%E4%BC%8A%E8%B1%86%E3%83%B6%E5%B2%B3.jpg",
+        "alt": "伊豆ヶ岳・子ノ権現のスタート周辺付近",
+        "caption": "伊豆ヶ岳・子ノ権現の参考写真（区間位置とは一致しない場合があります）",
+        "credit": "Koda6029",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AD%90%E3%83%8E%E6%A8%A9%E7%8F%BE%E4%BB%98%E8%BF%91%E3%81%8B%E3%82%89%E5%8F%A4%E5%BE%A1%E5%B2%B3%E3%81%A8%E4%BC%8A%E8%B1%86%E3%83%B6%E5%B2%B3.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.937923,
+      "anchorLng": 139.159554,
+      "description": "序盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.913471,
+      "anchorLng": 139.16418,
+      "description": "中盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.908049,
+      "anchorLng": 139.191839,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 子の権現の小僧",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%E5%AD%90%E3%81%AE%E6%A8%A9%E7%8F%BE%E3%81%AE%E5%B0%8F%E5%83%A7_-_panoramio.jpg/960px-%E5%AD%90%E3%81%AE%E6%A8%A9%E7%8F%BE%E3%81%AE%E5%B0%8F%E5%83%A7_-_panoramio.jpg",
+        "alt": "伊豆ヶ岳・子ノ権現の後半区間付近",
+        "caption": "伊豆ヶ岳・子ノ権現の走路近隣で撮影された風景",
+        "credit": "Hyakutaro",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AD%90%E3%81%AE%E6%A8%A9%E7%8F%BE%E3%81%AE%E5%B0%8F%E5%83%A7_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.926054,
+      "anchorLng": 139.201844,
+      "description": "終盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先"
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  }
+}

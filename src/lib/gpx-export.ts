@@ -20,6 +20,10 @@ export function rotateClosedLoopPoints(points: GpxPoint[], start: Pick<GpxPoint,
   return [...rotated, rotated[0]];
 }
 
+export function reversePoints(points: GpxPoint[]) {
+  return [...points].reverse();
+}
+
 export function pointsToGpx(name: string, points: GpxPoint[]) {
   if (points.length < 2) throw new Error("GPXに変換できるコース形状がありません");
   const pointXml = points.map(({ lat, lng, ele }) => {

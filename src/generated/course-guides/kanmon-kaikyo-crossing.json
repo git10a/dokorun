@@ -1,0 +1,562 @@
+{
+  "slug": "kanmon-kaikyo-crossing",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "下関駅から海沿いに唐戸市場・赤間神宮・みもすそ川公園(壇之浦古戦場跡)を巡り、関門トンネル人道(全長約780m・徒歩無料)で海峡を渡って九州へ。門司側は和布刈公園の坂を越え、めかり街道からブルーウィングもじ・旧門司税関のレトロ地区を抜けて門司港駅がゴールの約8.8km。人道は6時〜22時通行可でランナーも多い。コンビニ・自販機・トイレは随所にある。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点はJR下関駅、ゴールはJR門司港駅。電車で下関へ戻れる 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "下関駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.950306,
+      "destinationLng": 130.923038,
+      "routeAnchorLat": 33.950917,
+      "routeAnchorLng": 130.925001,
+      "routeMode": "forward",
+      "accessText": "下関駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.950917,
+      "routeLng": 130.925001,
+      "elevationM": 9,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2211,
+        "section-3": 4780,
+        "section-4": 6639,
+        "section-5": 8828
+      },
+      "gpxHref": "/gpx/kanmon-kaikyo-crossing-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "門司港駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.945138,
+      "destinationLng": 130.961549,
+      "routeAnchorLat": 33.945116,
+      "routeAnchorLng": 130.961473,
+      "routeMode": "reverse",
+      "accessText": "門司港駅からコースまで約10m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。",
+      "routePointIndex": 401,
+      "routeDistanceM": 8828,
+      "routeLat": 33.945116,
+      "routeLng": 130.961473,
+      "elevationM": 6.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 8828,
+        "section-2": 6617,
+        "section-3": 4048,
+        "section-4": 2189,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/kanmon-kaikyo-crossing-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.950917,
+      "anchorLng": 130.925001,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 山口県下関市のマンホール蓋",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg/960px-Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg",
+        "alt": "関門海峡横断(下関〜門司港)のスタート周辺付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manhole_cover_of_Shimonoseki,_Yamaguchi.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.950917,
+      "routeLng": 130.925001,
+      "elevationM": 9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.95683,
+      "anchorLng": 130.945,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 山口県下関市・唐戸市場",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Karato_Market_20131124.jpg/960px-Karato_Market_20131124.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の序盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karato_Market_20131124.jpg"
+      },
+      "routePointIndex": 97,
+      "routeDistanceM": 2211,
+      "routeLat": 33.95683,
+      "routeLng": 130.945,
+      "elevationM": 4.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.961207,
+      "anchorLng": 130.962688,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 関門国道トンネルの山口県と福岡県の境で記念撮影。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boundary_of_Yamaguchi_and_Fukuoka_%281544233136%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の中盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boundary_of_Yamaguchi_and_Fukuoka_(1544233136).jpg"
+      },
+      "routePointIndex": 168,
+      "routeDistanceM": 4780,
+      "routeLat": 33.961207,
+      "routeLng": 130.962688,
+      "elevationM": 27,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.956292,
+      "anchorLng": 130.970296,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 9/29に北九州空港から山口宇部空港を旅した際に撮影したもの。 門司側から関門橋を撮影。門司港駅から関門橋の下までは海岸沿いに遊歩道が整備されている。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Kanmon_bridge_from_Moji_%281525587684%29.jpg/960px-Kanmon_bridge_from_Moji_%281525587684%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の後半区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanmon_bridge_from_Moji_(1525587684).jpg"
+      },
+      "routePointIndex": 285,
+      "routeDistanceM": 6639,
+      "routeLat": 33.956292,
+      "routeLng": 130.970296,
+      "elevationM": 115.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.945116,
+      "anchorLng": 130.961473,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 門司港駅",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg/960px-%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg",
+        "alt": "関門海峡横断(下関〜門司港)の終盤区間付近",
+        "caption": "関門海峡横断(下関〜門司港)の走路近隣で撮影された風景",
+        "credit": "くろふね",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_(1).jpg"
+      },
+      "routePointIndex": 401,
+      "routeDistanceM": 8828,
+      "routeLat": 33.945116,
+      "routeLng": 130.961473,
+      "elevationM": 6.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8828,
+  "elevationGainM": 175,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 7.9
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 595,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 694,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 794,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 893,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 992,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 1091,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 1190,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 1290,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 1389,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 1488,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 1587,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 1686,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 1786,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 1885,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 1984,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 2083,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 2182,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 2281,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 2381,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 2480,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2579,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 2678,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2777,
+      "elevationM": 21.9
+    },
+    {
+      "distanceM": 2877,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 2976,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 3075,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 3174,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 3273,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 3373,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 3472,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 3571,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 3670,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 3769,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 3869,
+      "elevationM": 17.5
+    },
+    {
+      "distanceM": 3968,
+      "elevationM": 18.5
+    },
+    {
+      "distanceM": 4067,
+      "elevationM": 19.6
+    },
+    {
+      "distanceM": 4166,
+      "elevationM": 20.6
+    },
+    {
+      "distanceM": 4265,
+      "elevationM": 21.6
+    },
+    {
+      "distanceM": 4365,
+      "elevationM": 22.7
+    },
+    {
+      "distanceM": 4464,
+      "elevationM": 23.7
+    },
+    {
+      "distanceM": 4563,
+      "elevationM": 24.7
+    },
+    {
+      "distanceM": 4662,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 4761,
+      "elevationM": 26.8
+    },
+    {
+      "distanceM": 4861,
+      "elevationM": 29.6
+    },
+    {
+      "distanceM": 4960,
+      "elevationM": 52.6
+    },
+    {
+      "distanceM": 5059,
+      "elevationM": 43.5
+    },
+    {
+      "distanceM": 5158,
+      "elevationM": 46.8
+    },
+    {
+      "distanceM": 5257,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 5357,
+      "elevationM": 49.8
+    },
+    {
+      "distanceM": 5456,
+      "elevationM": 47.6
+    },
+    {
+      "distanceM": 5555,
+      "elevationM": 49.8
+    },
+    {
+      "distanceM": 5654,
+      "elevationM": 62.8
+    },
+    {
+      "distanceM": 5753,
+      "elevationM": 91.2
+    },
+    {
+      "distanceM": 5852,
+      "elevationM": 95.1
+    },
+    {
+      "distanceM": 5952,
+      "elevationM": 105
+    },
+    {
+      "distanceM": 6051,
+      "elevationM": 125.5
+    },
+    {
+      "distanceM": 6150,
+      "elevationM": 130.3
+    },
+    {
+      "distanceM": 6249,
+      "elevationM": 127.4
+    },
+    {
+      "distanceM": 6348,
+      "elevationM": 127.7
+    },
+    {
+      "distanceM": 6448,
+      "elevationM": 132.6
+    },
+    {
+      "distanceM": 6547,
+      "elevationM": 119.6
+    },
+    {
+      "distanceM": 6646,
+      "elevationM": 115.8
+    },
+    {
+      "distanceM": 6745,
+      "elevationM": 110.9
+    },
+    {
+      "distanceM": 6844,
+      "elevationM": 92
+    },
+    {
+      "distanceM": 6944,
+      "elevationM": 58.7
+    },
+    {
+      "distanceM": 7043,
+      "elevationM": 38.4
+    },
+    {
+      "distanceM": 7142,
+      "elevationM": 22.7
+    },
+    {
+      "distanceM": 7241,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 7340,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 7440,
+      "elevationM": 1.4
+    },
+    {
+      "distanceM": 7539,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 7638,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 7737,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 7836,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 7936,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 8035,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 8134,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 8233,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 8332,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 8432,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 8531,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 8630,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 8729,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 8828,
+      "elevationM": 6.8
+    }
+  ]
+}

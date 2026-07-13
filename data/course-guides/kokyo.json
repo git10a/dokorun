@@ -1,0 +1,166 @@
+{
+  "slug": "kokyo",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "日本で最もよく知られたランニングコースのひとつ。信号のない約5kmの周回路で、都心にありながら石垣や緑、季節の景色を楽しめます。ランナーは反時計回りで走るのが暗黙のルール。竹橋から半蔵門にかけての上りがほどよい刺激になり、初心者の一周からペース走まで幅広く使えます。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東京メトロ竹橋駅・半蔵門駅などから徒歩すぐ。周辺にランニングステーション多数。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "日比谷駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.676036,
+      "destinationLng": 139.759998,
+      "routeAnchorLat": 35.677813,
+      "routeAnchorLng": 139.756266,
+      "routeMode": "loop",
+      "accessText": "日比谷駅からコースまで約390m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "大手町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.684856,
+      "destinationLng": 139.762959,
+      "routeAnchorLat": 35.685891,
+      "routeAnchorLng": 139.761055,
+      "routeMode": "loop",
+      "accessText": "大手町駅からコースまで約210m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-3",
+      "name": "竹橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.690662,
+      "destinationLng": 139.756817,
+      "routeAnchorLat": 35.68981,
+      "routeAnchorLng": 139.754553,
+      "routeMode": "loop",
+      "accessText": "竹橋駅からコースまで約230m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-4",
+      "name": "半蔵門駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.685703,
+      "destinationLng": 139.74163,
+      "routeAnchorLat": 35.68746,
+      "routeAnchorLng": 139.745124,
+      "routeMode": "loop",
+      "accessText": "半蔵門駅からコースまで約370m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.677813,
+      "anchorLng": 139.756266,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 東京都千代田区霞が関一丁目・日比谷公園と 皇居外苑 の間にある、 東京都道301号白山祝田田町線 の 祝田橋 。手前は日比谷濠。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Iwaidabashi_01.JPG/960px-Iwaidabashi_01.JPG",
+        "alt": "皇居のスタート周辺付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwaidabashi_01.JPG"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.685891,
+      "anchorLng": 139.761055,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 皇居の東側-南側の一般道を閉鎖して、週末に開催されている｢パレスサイドサイクリングコース｣の様子。中央遠方から右側に、皇居ランニングをしているランナーも見える。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Palace_Side_Cycling1.jpg/960px-Palace_Side_Cycling1.jpg",
+        "alt": "皇居の序盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "メルビル",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_Side_Cycling1.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.68981,
+      "anchorLng": 139.754553,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: National Museum of Modern Art Tokyo .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/National_Museum_of_Modern_Art%2C_Tokyo_-signboard.jpg/960px-National_Museum_of_Modern_Art%2C_Tokyo_-signboard.jpg",
+        "alt": "皇居の中盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "Michael Stout from Tokyo",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Modern_Art,_Tokyo_-signboard.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.68746,
+      "anchorLng": 139.745124,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 皇居の望楼 A Turrent Watchtower of the Imperial Palace",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg/960px-%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg",
+        "alt": "皇居の後半区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "Bohao Zhao",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.679536,
+      "anchorLng": 139.74731,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kensei-kinenkan in Chiyoda-ku , Tokyo , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg/960px-Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg",
+        "alt": "皇居の終盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

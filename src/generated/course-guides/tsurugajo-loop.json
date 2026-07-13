@@ -1,0 +1,370 @@
+{
+  "slug": "tsurugajo-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "鶴ヶ城公園の南側から、三ノ丸、北出丸、西出丸周辺の街路をつないで城郭を一周する約4.1kmのコースです。赤瓦の天守、石垣、堀を眺めながら会津の歴史を感じられ、城下町観光と組み合わせやすい距離です。桜や紅葉の時期は混雑するため早朝が走りやすく、積雪期は路面状況を確認してください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: まちなか周遊バス 鶴ヶ城入口または鶴ヶ城三ノ丸口バス停からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "西若松駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 37.486034,
+      "destinationLng": 139.914172,
+      "routeAnchorLat": 37.484174,
+      "routeAnchorLng": 139.926989,
+      "routeMode": "loop",
+      "accessText": "西若松駅からコースまで約1150m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.484174,
+      "routeLng": 139.926989,
+      "elevationM": 219.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 832,
+        "section-3": 1664,
+        "section-4": 2430,
+        "section-5": 3274
+      },
+      "gpxHref": "/gpx/tsurugajo-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "七日町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 37.50121,
+      "destinationLng": 139.918958,
+      "routeAnchorLat": 37.491626,
+      "routeAnchorLng": 139.928752,
+      "routeMode": "loop",
+      "accessText": "七日町駅からコースまで約1380m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 86,
+      "routeDistanceM": 2430,
+      "routeLat": 37.491626,
+      "routeLng": 139.928752,
+      "elevationM": 222,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1639,
+        "section-2": 2471,
+        "section-3": 3303,
+        "section-4": 0,
+        "section-5": 844
+      },
+      "gpxHref": "/gpx/tsurugajo-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 37.484174,
+      "anchorLng": 139.926989,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Yugawa river at Omotemachi-town, Aizuwakamatsu, Fukushima.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Yugawa_at_Omotemachi-town%2C_Aizuwakamatsu.jpg/960px-Yugawa_at_Omotemachi-town%2C_Aizuwakamatsu.jpg",
+        "alt": "鶴ヶ城外周のスタート周辺付近",
+        "caption": "鶴ヶ城外周の走路近隣で撮影された風景",
+        "credit": "Breakover",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yugawa_at_Omotemachi-town,_Aizuwakamatsu.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.484174,
+      "routeLng": 139.926989,
+      "elevationM": 219.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 37.484926,
+      "anchorLng": 139.932734,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: \"Rinkaku\" , Chashitsu at the Aizuwakamatsu castle in Fukushima pref Japan. refer : Welcome to SAMURAI CITY",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE%E5%B8%82%E9%BA%9F%E9%96%A3_-_panoramio.jpg/960px-%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE%E5%B8%82%E9%BA%9F%E9%96%A3_-_panoramio.jpg",
+        "alt": "鶴ヶ城外周の序盤区間付近",
+        "caption": "鶴ヶ城外周の走路近隣で撮影された風景",
+        "credit": "jeienne",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE%E5%B8%82%E9%BA%9F%E9%96%A3_-_panoramio.jpg"
+      },
+      "routePointIndex": 22,
+      "routeDistanceM": 832,
+      "routeLat": 37.484926,
+      "routeLng": 139.932734,
+      "elevationM": 226.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 37.489875,
+      "anchorLng": 139.935515,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 会津若松",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE_-_panoramio.jpg/960px-%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE_-_panoramio.jpg",
+        "alt": "鶴ヶ城外周の中盤区間付近",
+        "caption": "鶴ヶ城外周の走路近隣で撮影された風景",
+        "credit": "shikabane taro",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BC%9A%E6%B4%A5%E8%8B%A5%E6%9D%BE_-_panoramio.jpg"
+      },
+      "routePointIndex": 63,
+      "routeDistanceM": 1664,
+      "routeLat": 37.489875,
+      "routeLng": 139.935515,
+      "elevationM": 228.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 37.491626,
+      "anchorLng": 139.928752,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: A corridor of the Samurai training school at Nishinkan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nishinkan_samurai_training_school_corridor.jpg/960px-Nishinkan_samurai_training_school_corridor.jpg",
+        "alt": "鶴ヶ城外周の後半区間付近",
+        "caption": "鶴ヶ城外周の走路近隣で撮影された風景",
+        "credit": "Russell Trow from Worcester, UK",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nishinkan_samurai_training_school_corridor.jpg"
+      },
+      "routePointIndex": 86,
+      "routeDistanceM": 2430,
+      "routeLat": 37.491626,
+      "routeLng": 139.928752,
+      "elevationM": 222,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 37.48814,
+      "anchorLng": 139.926502,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: This is a landscape of Outemachi-town, Aizuwakamatsu, Fukushima.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Outemachi-town%2C_Aizuwakamatsu%2C_Fukushima.jpg/960px-Outemachi-town%2C_Aizuwakamatsu%2C_Fukushima.jpg",
+        "alt": "鶴ヶ城外周の終盤区間付近",
+        "caption": "鶴ヶ城外周の走路近隣で撮影された風景",
+        "credit": "Breakover",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outemachi-town,_Aizuwakamatsu,_Fukushima.jpg"
+      },
+      "routePointIndex": 111,
+      "routeDistanceM": 3274,
+      "routeLat": 37.48814,
+      "routeLng": 139.926502,
+      "elevationM": 219.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 4069,
+  "elevationGainM": 15,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 219.5
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 220.3
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 221.7
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 222.4
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 222.5
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 222.1
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 223
+    },
+    {
+      "distanceM": 695,
+      "elevationM": 222.8
+    },
+    {
+      "distanceM": 794,
+      "elevationM": 224.7
+    },
+    {
+      "distanceM": 893,
+      "elevationM": 228.6
+    },
+    {
+      "distanceM": 993,
+      "elevationM": 230.4
+    },
+    {
+      "distanceM": 1092,
+      "elevationM": 232.1
+    },
+    {
+      "distanceM": 1191,
+      "elevationM": 230.9
+    },
+    {
+      "distanceM": 1290,
+      "elevationM": 231.3
+    },
+    {
+      "distanceM": 1390,
+      "elevationM": 230.1
+    },
+    {
+      "distanceM": 1489,
+      "elevationM": 229
+    },
+    {
+      "distanceM": 1588,
+      "elevationM": 227.8
+    },
+    {
+      "distanceM": 1687,
+      "elevationM": 228.1
+    },
+    {
+      "distanceM": 1787,
+      "elevationM": 228.5
+    },
+    {
+      "distanceM": 1886,
+      "elevationM": 226.6
+    },
+    {
+      "distanceM": 1985,
+      "elevationM": 224.4
+    },
+    {
+      "distanceM": 2084,
+      "elevationM": 224.7
+    },
+    {
+      "distanceM": 2184,
+      "elevationM": 223.5
+    },
+    {
+      "distanceM": 2283,
+      "elevationM": 224
+    },
+    {
+      "distanceM": 2382,
+      "elevationM": 222.6
+    },
+    {
+      "distanceM": 2481,
+      "elevationM": 222.7
+    },
+    {
+      "distanceM": 2581,
+      "elevationM": 224.2
+    },
+    {
+      "distanceM": 2680,
+      "elevationM": 223.6
+    },
+    {
+      "distanceM": 2779,
+      "elevationM": 223.1
+    },
+    {
+      "distanceM": 2878,
+      "elevationM": 222
+    },
+    {
+      "distanceM": 2978,
+      "elevationM": 221.6
+    },
+    {
+      "distanceM": 3077,
+      "elevationM": 221.4
+    },
+    {
+      "distanceM": 3176,
+      "elevationM": 221.5
+    },
+    {
+      "distanceM": 3275,
+      "elevationM": 219.8
+    },
+    {
+      "distanceM": 3375,
+      "elevationM": 219.8
+    },
+    {
+      "distanceM": 3474,
+      "elevationM": 219.8
+    },
+    {
+      "distanceM": 3573,
+      "elevationM": 219.5
+    },
+    {
+      "distanceM": 3672,
+      "elevationM": 219.5
+    },
+    {
+      "distanceM": 3772,
+      "elevationM": 219.2
+    },
+    {
+      "distanceM": 3871,
+      "elevationM": 219.5
+    },
+    {
+      "distanceM": 3970,
+      "elevationM": 219.6
+    },
+    {
+      "distanceM": 4069,
+      "elevationM": 219.8
+    }
+  ]
+}

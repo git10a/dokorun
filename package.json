@@ -21,6 +21,12 @@
     "gpx:backfill": "tsx scripts/backfill-simplified-geojson.ts",
     "gpx:check": "tsx scripts/check-gpx.ts",
     "course-guide:build": "tsx scripts/build-course-guide.ts",
+    "course-guide:audit": "tsx scripts/audit-course-guide-coverage.ts",
+    "course-guide:research": "tsx scripts/collect-course-guide-research.ts",
+    "course-guide:evaluate": "tsx scripts/evaluate-course-guide-research.ts",
+    "course-guide:elevation": "tsx scripts/backfill-course-guide-elevation.ts",
+    "course-guide:generate": "tsx scripts/generate-course-guide-sources.ts",
+    "course-guide:photos": "tsx scripts/supplement-course-guide-photos.ts",
     "race-gpx:apply": "tsx scripts/apply-race-gpx.ts",
     "validate:spots": "tsx scripts/validate-spots.ts"
   },

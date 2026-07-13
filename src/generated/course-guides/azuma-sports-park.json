@@ -1,0 +1,303 @@
+{
+  "slug": "azuma-sports-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "福島市西部の広い総合運動公園で、公式に3km・5kmのジョギングコースが公開されています。園内を車や信号を気にせず走れると明記されており、代表距離は使い勝手のよい3kmを採用しました。ロード主体で周回の組み立てがしやすく、長めのイージーランから距離走まで対応しやすい構成です。アクセスと駐車場情報も整っており、県内の掲載候補として検証可能性が高い部類です。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 福島西ICから車約10分／福島大笹生ICから車約15分。公園公式のアクセス・駐車場案内あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "周回コース起点",
+      "badge": "コース起点",
+      "destinationLat": 37.723253,
+      "destinationLng": 140.359943,
+      "routeAnchorLat": 37.723253,
+      "routeAnchorLng": 140.359943,
+      "routeMode": "loop",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.723253,
+      "routeLng": 140.359943,
+      "elevationM": 212.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 601,
+        "section-3": 1201,
+        "section-4": 1804,
+        "section-5": 2404
+      },
+      "gpxHref": "/gpx/azuma-sports-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 37.723253,
+      "anchorLng": 140.359943,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 福島県福島市の福島県あづま総合運動公園内にある福島県営あづま総合体育館の外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fukushima_Azuma_Gymnasium.jpg/960px-Fukushima_Azuma_Gymnasium.jpg",
+        "alt": "あづま総合運動公園のスタート周辺付近",
+        "caption": "あづま総合運動公園の走路近隣で撮影された風景",
+        "credit": "Yauchi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukushima_Azuma_Gymnasium.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 37.723253,
+      "routeLng": 140.359943,
+      "elevationM": 212.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 37.720161,
+      "anchorLng": 140.35808,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 福島県福島市の福島県あづま総合運動公園内にある福島県営あづま総合体育館の外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fukushima_Azuma_Gymnasium.jpg/960px-Fukushima_Azuma_Gymnasium.jpg",
+        "alt": "あづま総合運動公園の序盤区間付近",
+        "caption": "あづま総合運動公園の走路近隣で撮影された風景",
+        "credit": "Yauchi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukushima_Azuma_Gymnasium.jpg"
+      },
+      "routePointIndex": 167,
+      "routeDistanceM": 601,
+      "routeLat": 37.720161,
+      "routeLng": 140.35808,
+      "elevationM": 225.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 37.71648,
+      "anchorLng": 140.35474,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 福島県福島市の福島県あづま総合運動公園内にある福島県営あづま総合体育館の外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fukushima_Azuma_Gymnasium.jpg/960px-Fukushima_Azuma_Gymnasium.jpg",
+        "alt": "あづま総合運動公園の中盤区間付近",
+        "caption": "あづま総合運動公園の走路近隣で撮影された風景",
+        "credit": "Yauchi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukushima_Azuma_Gymnasium.jpg"
+      },
+      "routePointIndex": 325,
+      "routeDistanceM": 1201,
+      "routeLat": 37.71648,
+      "routeLng": 140.35474,
+      "elevationM": 238.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 37.717235,
+      "anchorLng": 140.359516,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 福島県福島市の福島県あづま総合運動公園内にある福島県営あづま総合体育館の外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fukushima_Azuma_Gymnasium.jpg/960px-Fukushima_Azuma_Gymnasium.jpg",
+        "alt": "あづま総合運動公園の後半区間付近",
+        "caption": "あづま総合運動公園の走路近隣で撮影された風景",
+        "credit": "Yauchi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukushima_Azuma_Gymnasium.jpg"
+      },
+      "routePointIndex": 472,
+      "routeDistanceM": 1804,
+      "routeLat": 37.717235,
+      "routeLng": 140.359516,
+      "elevationM": 233.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 37.72177,
+      "anchorLng": 140.36193,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 福島県福島市の福島県あづま総合運動公園内にある福島県営あづま総合体育館の外観",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fukushima_Azuma_Gymnasium.jpg/960px-Fukushima_Azuma_Gymnasium.jpg",
+        "alt": "あづま総合運動公園の終盤区間付近",
+        "caption": "あづま総合運動公園の走路近隣で撮影された風景",
+        "credit": "Yauchi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukushima_Azuma_Gymnasium.jpg"
+      },
+      "routePointIndex": 609,
+      "routeDistanceM": 2404,
+      "routeLat": 37.72177,
+      "routeLng": 140.36193,
+      "elevationM": 215.2,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 3080,
+  "elevationGainM": 82,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 212.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 213.2
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 216.6
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 218
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 219.4
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 222
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 225.8
+    },
+    {
+      "distanceM": 696,
+      "elevationM": 227.6
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 229.6
+    },
+    {
+      "distanceM": 894,
+      "elevationM": 231.2
+    },
+    {
+      "distanceM": 994,
+      "elevationM": 234
+    },
+    {
+      "distanceM": 1093,
+      "elevationM": 237.8
+    },
+    {
+      "distanceM": 1192,
+      "elevationM": 240
+    },
+    {
+      "distanceM": 1292,
+      "elevationM": 241.1
+    },
+    {
+      "distanceM": 1391,
+      "elevationM": 244.2
+    },
+    {
+      "distanceM": 1490,
+      "elevationM": 243.2
+    },
+    {
+      "distanceM": 1590,
+      "elevationM": 239.6
+    },
+    {
+      "distanceM": 1689,
+      "elevationM": 237
+    },
+    {
+      "distanceM": 1789,
+      "elevationM": 233.8
+    },
+    {
+      "distanceM": 1888,
+      "elevationM": 230.1
+    },
+    {
+      "distanceM": 1987,
+      "elevationM": 224.6
+    },
+    {
+      "distanceM": 2087,
+      "elevationM": 222.5
+    },
+    {
+      "distanceM": 2186,
+      "elevationM": 221.4
+    },
+    {
+      "distanceM": 2285,
+      "elevationM": 211.3
+    },
+    {
+      "distanceM": 2385,
+      "elevationM": 215.8
+    },
+    {
+      "distanceM": 2484,
+      "elevationM": 215.2
+    },
+    {
+      "distanceM": 2583,
+      "elevationM": 212.4
+    },
+    {
+      "distanceM": 2683,
+      "elevationM": 211.7
+    },
+    {
+      "distanceM": 2782,
+      "elevationM": 208.8
+    },
+    {
+      "distanceM": 2882,
+      "elevationM": 207.8
+    },
+    {
+      "distanceM": 2981,
+      "elevationM": 212.2
+    },
+    {
+      "distanceM": 3080,
+      "elevationM": 212.8
+    }
+  ]
+}

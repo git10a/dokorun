@@ -1,0 +1,127 @@
+{
+  "slug": "saga-sunrise-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "県都の新しい定番で、誰でも使えるランニングループが整備されています。公式に1周1530m、1110m、700mの3コースが案内され、目的の距離や練習内容に合わせて組み合わせやすいのが強みです。夜21時まで利用でき、平日夕方以降も走りやすい環境です。ジョグ、インターバル、ペース走まで対応しやすく、佐賀県内では使い勝手の良い周回拠点として認知されています。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR佐賀駅から徒歩約15分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "佐賀駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.264212,
+      "destinationLng": 130.297608,
+      "routeAnchorLat": 33.276485,
+      "routeAnchorLng": 130.29267,
+      "routeMode": "loop",
+      "accessText": "佐賀駅からコースまで約1440m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.276485,
+      "anchorLng": 130.29267,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Front of Saga City Cultural Hall, in Saga city, Saga prefecture, Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Saga_City_Cultural_Hall_front.JPG/960px-Saga_City_Cultural_Hall_front.JPG",
+        "alt": "SAGAサンライズパークのスタート周辺付近",
+        "caption": "SAGAサンライズパークの走路近隣で撮影された風景",
+        "credit": "Peka",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_City_Cultural_Hall_front.JPG"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.277578,
+      "anchorLng": 130.290432,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Saga sportspark main stadium.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Saga20040206_1.jpg/960px-Saga20040206_1.jpg",
+        "alt": "SAGAサンライズパークの序盤区間付近",
+        "caption": "SAGAサンライズパークの走路近隣で撮影された風景",
+        "credit": "Waka77",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga20040206_1.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.276173,
+      "anchorLng": 130.288674,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Saga sportspark main stadium.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Saga20040206_1.jpg/960px-Saga20040206_1.jpg",
+        "alt": "SAGAサンライズパークの中盤区間付近",
+        "caption": "SAGAサンライズパークの走路近隣で撮影された風景",
+        "credit": "Waka77",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga20040206_1.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.273737,
+      "anchorLng": 130.289658,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Saga sportspark main stadium.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Saga20040206_1.jpg/960px-Saga20040206_1.jpg",
+        "alt": "SAGAサンライズパークの後半区間付近",
+        "caption": "SAGAサンライズパークの走路近隣で撮影された風景",
+        "credit": "Waka77",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga20040206_1.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.275618,
+      "anchorLng": 130.290558,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Saga sportspark main stadium.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Saga20040206_1.jpg/960px-Saga20040206_1.jpg",
+        "alt": "SAGAサンライズパークの終盤区間付近",
+        "caption": "SAGAサンライズパークの走路近隣で撮影された風景",
+        "credit": "Waka77",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga20040206_1.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

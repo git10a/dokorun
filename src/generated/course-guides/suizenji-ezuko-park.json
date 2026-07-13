@@ -1,0 +1,389 @@
+{
+  "slug": "suizenji-ezuko-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "熊本市街地に近い江津湖を生かした大型公園で、公式に下江津湖3.8km、上江津湖・下江津湖7.3kmの公認周遊コースが案内されています。スタート／ゴールは広木地区サービスセンターと明記されており、周回系スポットとしてデータ化しやすい構造です。駐車場5か所やアクセスも公式で確認でき、水辺景観が明快な地方都市型ランニングスポットとして掲載優先度が高い候補です。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 市電「八丁馬場」または「動植物園入口」から徒歩利用。広木地区ほか駐車場5か所あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "健軍町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.778381,
+      "destinationLng": 130.761209,
+      "routeAnchorLat": 32.768064,
+      "routeAnchorLng": 130.757235,
+      "routeMode": "loop",
+      "accessText": "健軍町駅からコースまで約1210m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.768064,
+      "routeLng": 130.757235,
+      "elevationM": 2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 775,
+        "section-3": 1551,
+        "section-4": 2330,
+        "section-5": 3107
+      },
+      "gpxHref": "/gpx/suizenji-ezuko-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "動植物園入口駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.78051,
+      "destinationLng": 130.754707,
+      "routeAnchorLat": 32.773229,
+      "routeAnchorLng": 130.752218,
+      "routeMode": "loop",
+      "accessText": "動植物園入口駅からコースまで約840m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 173,
+      "routeDistanceM": 775,
+      "routeLat": 32.773229,
+      "routeLng": 130.752218,
+      "elevationM": 8.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 3113,
+        "section-2": 0,
+        "section-3": 776,
+        "section-4": 1555,
+        "section-5": 2332
+      },
+      "gpxHref": "/gpx/suizenji-ezuko-park-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "健軍校前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.781917,
+      "destinationLng": 130.750952,
+      "routeAnchorLat": 32.773376,
+      "routeAnchorLng": 130.745267,
+      "routeMode": "loop",
+      "accessText": "健軍校前駅からコースまで約1090m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 352,
+      "routeDistanceM": 1551,
+      "routeLat": 32.773376,
+      "routeLng": 130.745267,
+      "elevationM": 5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2337,
+        "section-2": 3112,
+        "section-3": 0,
+        "section-4": 779,
+        "section-5": 1556
+      },
+      "gpxHref": "/gpx/suizenji-ezuko-park-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 32.768064,
+      "anchorLng": 130.757235,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 熊本市立秋津小学校",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Kumamoto_city_Akistu_E_school.jpg/960px-Kumamoto_city_Akistu_E_school.jpg",
+        "alt": "水前寺江津湖公園のスタート周辺付近",
+        "caption": "水前寺江津湖公園の走路近隣で撮影された風景",
+        "credit": "Motoki-jj",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kumamoto_city_Akistu_E_school.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.768064,
+      "routeLng": 130.757235,
+      "elevationM": 2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 32.773229,
+      "anchorLng": 130.752218,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 熊本市立泉ヶ丘小学校",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Kumamotocity_Izumigaoka_E_school.jpg/960px-Kumamotocity_Izumigaoka_E_school.jpg",
+        "alt": "水前寺江津湖公園の序盤区間付近",
+        "caption": "水前寺江津湖公園の走路近隣で撮影された風景",
+        "credit": "Motoki-jj",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kumamotocity_Izumigaoka_E_school.jpg"
+      },
+      "routePointIndex": 173,
+      "routeDistanceM": 775,
+      "routeLat": 32.773229,
+      "routeLng": 130.752218,
+      "elevationM": 8.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 32.773376,
+      "anchorLng": 130.745267,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 熊本 名物の 春雨 スープ「 太平燕 」（ 熊本市 健軍2-26-14、 健軍校前駅 最寄り、 健軍神社 そばの 中華料理 店「中国料理雲南」） 「熊本名物の太平燕（タイピーエン、または、タイピンエン）。おおざっぱに言えばチャンポンの麺を春雨にしたものとも言えるが、この太平燕のス",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Taipien_by_woinary_in_Kumamoto.jpg/960px-Taipien_by_woinary_in_Kumamoto.jpg",
+        "alt": "水前寺江津湖公園の中盤区間付近",
+        "caption": "水前寺江津湖公園の走路近隣で撮影された風景",
+        "credit": "woinary from Chinese restaurant Unnan in Kumamoto, Kumamoto",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipien_by_woinary_in_Kumamoto.jpg"
+      },
+      "routePointIndex": 352,
+      "routeDistanceM": 1551,
+      "routeLat": 32.773376,
+      "routeLng": 130.745267,
+      "elevationM": 5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 32.76999,
+      "anchorLng": 130.749286,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 熊本市立若葉小学校",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Kumamotocity_Wakaba_E_school.jpg/960px-Kumamotocity_Wakaba_E_school.jpg",
+        "alt": "水前寺江津湖公園の後半区間付近",
+        "caption": "水前寺江津湖公園の走路近隣で撮影された風景",
+        "credit": "Motoki-jj",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kumamotocity_Wakaba_E_school.jpg"
+      },
+      "routePointIndex": 539,
+      "routeDistanceM": 2330,
+      "routeLat": 32.76999,
+      "routeLng": 130.749286,
+      "elevationM": 8.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 32.764573,
+      "anchorLng": 130.75337,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 水前寺江津湖公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Suizenji_Ezuko_park.jpg/960px-Suizenji_Ezuko_park.jpg",
+        "alt": "水前寺江津湖公園の終盤区間付近",
+        "caption": "水前寺江津湖公園の走路近隣で撮影された風景",
+        "credit": "Motoki-jj",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Suizenji_Ezuko_park.jpg"
+      },
+      "routePointIndex": 722,
+      "routeDistanceM": 3107,
+      "routeLat": 32.764573,
+      "routeLng": 130.75337,
+      "elevationM": 7.6,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 3888,
+  "elevationGainM": 124,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 100,
+      "elevationM": -0.9
+    },
+    {
+      "distanceM": 199,
+      "elevationM": -3.6
+    },
+    {
+      "distanceM": 299,
+      "elevationM": -3.2
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 0.7
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 698,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 897,
+      "elevationM": -1.4
+    },
+    {
+      "distanceM": 997,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 1097,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 1296,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 1396,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 1495,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 1595,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 1695,
+      "elevationM": 13.2
+    },
+    {
+      "distanceM": 1794,
+      "elevationM": 13.2
+    },
+    {
+      "distanceM": 1894,
+      "elevationM": -4.5
+    },
+    {
+      "distanceM": 1994,
+      "elevationM": -6.8
+    },
+    {
+      "distanceM": 2093,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 2193,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 2293,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 2392,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 2492,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 2592,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 2691,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 2791,
+      "elevationM": 1.1
+    },
+    {
+      "distanceM": 2891,
+      "elevationM": -3.4
+    },
+    {
+      "distanceM": 2990,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 3090,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 3190,
+      "elevationM": -4.2
+    },
+    {
+      "distanceM": 3290,
+      "elevationM": -10.2
+    },
+    {
+      "distanceM": 3389,
+      "elevationM": -1.9
+    },
+    {
+      "distanceM": 3489,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 3589,
+      "elevationM": -0.9
+    },
+    {
+      "distanceM": 3688,
+      "elevationM": -8.6
+    },
+    {
+      "distanceM": 3788,
+      "elevationM": -4.8
+    },
+    {
+      "distanceM": 3888,
+      "elevationM": 2
+    }
+  ]
+}

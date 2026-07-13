@@ -1,0 +1,116 @@
+{
+  "slug": "yakushima-seibu-rindo",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "永田いなか浜を起点に、世界自然遺産登録地を貫く西部林道を走り、日本の滝百選の大川の滝へ至る約22.7kmのロング走コースです。照葉樹の原生林の中、ヤクシカやヤクザルに出会いながら走る特別感は屋久島ならでは。アップダウンが連続するタフなコースで、走力に自信のあるランナー向けです。補給ポイントがないため、飲料・補給食は必ず携行してください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 屋久島空港から車で約40分。永田いなか浜に駐車場があります。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "コース始点",
+      "badge": "コース起点",
+      "destinationLat": 30.409387,
+      "destinationLng": 130.435946,
+      "routeAnchorLat": 30.409387,
+      "routeAnchorLng": 130.435946,
+      "routeMode": "forward",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "コース終点側",
+      "badge": "コース起点",
+      "destinationLat": 30.292,
+      "destinationLng": 130.412412,
+      "routeAnchorLat": 30.292,
+      "routeAnchorLng": 130.412412,
+      "routeMode": "reverse",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 30.409387,
+      "anchorLng": 130.435946,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Yakushima beach",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Yakushima_beach_4.jpg/960px-Yakushima_beach_4.jpg",
+        "alt": "屋久島西部林道コースのスタート周辺付近",
+        "caption": "屋久島西部林道コースの走路近隣で撮影された風景",
+        "credit": "NMaia",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yakushima_beach_4.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 30.396769,
+      "anchorLng": 130.399225,
+      "description": "序盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 30.365069,
+      "anchorLng": 130.38616,
+      "description": "中盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 30.331085,
+      "anchorLng": 130.394762,
+      "description": "後半区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 30.292,
+      "anchorLng": 130.412412,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Oko Falls in Yakushima, one of the Japan's Top 100 Waterfalls",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Oko_Falls_in_Yakushima.jpg/960px-Oko_Falls_in_Yakushima.jpg",
+        "alt": "屋久島西部林道コースの終盤区間付近",
+        "caption": "屋久島西部林道コースの走路近隣で撮影された風景",
+        "credit": "Yasu ( talk )",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oko_Falls_in_Yakushima.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  }
+}

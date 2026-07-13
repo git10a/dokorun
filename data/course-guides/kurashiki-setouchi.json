@@ -1,0 +1,140 @@
+{
+  "slug": "kurashiki-setouchi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "倉敷駅から白壁の美観地区を抜けて南下し、児島駅から瀬戸内海沿いへ。渋川海岸の白砂のビーチと王子が岳の麓を通り、玉野市の宇野駅・宇野港まで走り切る約36kmのロングラン。前半は平坦な市街地・田園地帯、児島以降は海を見ながらのアップダウンが続く(獲得標高約320m)。コンビニは前半に多く後半の海沿いは少なめなので補給計画を。ゴールの宇野港には温浴施設があり、帰りはJR宇野線で戻れる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点はJR倉敷駅、ゴールはJR宇野駅。電車で倉敷へ戻れる 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "倉敷市駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.601595,
+      "destinationLng": 133.765512,
+      "routeAnchorLat": 34.607288,
+      "routeAnchorLng": 133.762386,
+      "routeMode": "forward",
+      "accessText": "倉敷市駅からコースまで約700m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "宇野駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.495035,
+      "destinationLng": 133.953706,
+      "routeAnchorLat": 34.490054,
+      "routeAnchorLng": 133.949732,
+      "routeMode": "reverse",
+      "accessText": "宇野駅からコースまで約660m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.607288,
+      "anchorLng": 133.762386,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 三井アウトレットパーク倉敷の東エントランス",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/MitsuiOutletParkKurashiki002.jpg/960px-MitsuiOutletParkKurashiki002.jpg",
+        "alt": "倉敷〜宇野港のスタート周辺付近",
+        "caption": "倉敷〜宇野港の走路近隣で撮影された風景",
+        "credit": "じぇい☆",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MitsuiOutletParkKurashiki002.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.541434,
+      "anchorLng": 133.800767,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 倉敷帆布の生産拠点である丸進工業株式会社（岡山県倉敷市）内の出荷場。織り上がった帆布生地を約50m単位で畳み、出荷を待つ状態。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/%E5%80%89%E6%95%B7%E5%B8%86%E5%B8%83%EF%BC%88%E5%87%BA%E8%8D%B7%E5%89%8D%E3%81%AE%E6%A7%98%E5%AD%90%EF%BC%89.jpg",
+        "alt": "倉敷〜宇野港の序盤区間付近",
+        "caption": "倉敷〜宇野港の走路近隣で撮影された風景",
+        "credit": "Baistone",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%80%89%E6%95%B7%E5%B8%86%E5%B8%83%EF%BC%88%E5%87%BA%E8%8D%B7%E5%89%8D%E3%81%AE%E6%A7%98%E5%AD%90%EF%BC%89.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.465248,
+      "anchorLng": 133.808924,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: ドムドム児島店。岡山県倉敷市児島駅前２丁目35。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/DOMDOM_in_2014_%2815768860611%29.jpg",
+        "alt": "倉敷〜宇野港の中盤区間付近",
+        "caption": "倉敷〜宇野港の走路近隣で撮影された風景",
+        "credit": "Tadashi Sugiyama",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:DOMDOM_in_2014_(15768860611).jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.457126,
+      "anchorLng": 133.887449,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 玉野市 王子ヶ岳 ❀ 心ややおちつけば遠山霞みかな（種田山頭火）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%E7%8E%89%E9%87%8E%E5%B8%82_%E7%8E%8B%E5%AD%90%E3%83%B6%E5%B2%B3_%E2%9D%80_%E5%BF%83%E3%82%84%E3%82%84%E3%81%8A%E3%81%A1%E3%81%A4%E3%81%91%E3%81%B0%E9%81%A0%E5%B1%B1%E9%9C%9E%E3%81%BF%E3%81%8B%E3%81%AA%EF%BC%88%E7%A8%AE%E7%94%B0%E5%B1%B1%E9%A0%AD%E7%81%AB%EF%BC%89_-_panoramio.jpg/960px-%E7%8E%89%E9%87%8E%E5%B8%82_%E7%8E%8B%E5%AD%90%E3%83%B6%E5%B2%B3_%E2%9D%80_%E5%BF%83%E3%82%84%E3%82%84%E3%81%8A%E3%81%A1%E3%81%A4%E3%81%91%E3%81%B0%E9%81%A0%E5%B1%B1%E9%9C%9E%E3%81%BF%E3%81%8B%E3%81%AA%EF%BC%88%E7%A8%AE%E7%94%B0%E5%B1%B1%E9%A0%AD%E7%81%AB%EF%BC%89_-_panoramio.jpg",
+        "alt": "倉敷〜宇野港の後半区間付近",
+        "caption": "倉敷〜宇野港の走路近隣で撮影された風景",
+        "credit": "Yoshio Kohara",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8E%89%E9%87%8E%E5%B8%82_%E7%8E%8B%E5%AD%90%E3%83%B6%E5%B2%B3_%E2%9D%80_%E5%BF%83%E3%82%84%E3%82%84%E3%81%8A%E3%81%A1%E3%81%A4%E3%81%91%E3%81%B0%E9%81%A0%E5%B1%B1%E9%9C%9E%E3%81%BF%E3%81%8B%E3%81%AA%EF%BC%88%E7%A8%AE%E7%94%B0%E5%B1%B1%E9%A0%AD%E7%81%AB%EF%BC%89_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.490054,
+      "anchorLng": 133.949732,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Tamano police station, Tamano, Okayama.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tamano_police_station.jpg/960px-Tamano_police_station.jpg",
+        "alt": "倉敷〜宇野港の終盤区間付近",
+        "caption": "倉敷〜宇野港の走路近隣で撮影された風景",
+        "credit": "Phronimoi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tamano_police_station.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "slug": "shinjuku-central-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "新宿中央公園は高層ビル街の中で信号なし周回ができる、都心では貴重な練習場所です。代表は外周約1.1kmで、園内には約900mや短い広場周回も取りやすく、目的に応じて組み替えられます。舗装路主体でほぼ平坦、夜も比較的明るく、仕事前後に使いやすいのが特長です。短めのジョグや流し、閾値走の分割、ビジネス街でのすき間練習に向き、都心部で皇居以外の選択肢を探す人にも相性が良いです。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 都営大江戸線 都庁前駅から徒歩1分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "西新宿五丁目駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.689798,
+      "destinationLng": 139.684304,
+      "routeAnchorLat": 35.690851,
+      "routeAnchorLng": 139.687391,
+      "routeMode": "loop",
+      "accessText": "西新宿五丁目駅からコースまで約300m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.690851,
+      "routeLng": 139.687391,
+      "elevationM": 39,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 234,
+        "section-3": 487,
+        "section-4": 687,
+        "section-5": 911
+      },
+      "gpxHref": "/gpx/shinjuku-central-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "都庁前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.690551,
+      "destinationLng": 139.69257,
+      "routeAnchorLat": 35.690064,
+      "routeAnchorLng": 139.688791,
+      "routeMode": "loop",
+      "accessText": "都庁前駅からコースまで約350m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 15,
+      "routeDistanceM": 234,
+      "routeLat": 35.690064,
+      "routeLng": 139.688791,
+      "elevationM": 41.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 913,
+        "section-2": 0,
+        "section-3": 253,
+        "section-4": 453,
+        "section-5": 677
+      },
+      "gpxHref": "/gpx/shinjuku-central-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.690851,
+      "anchorLng": 139.687391,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 新宿区西新宿6丁目にあるコンシェリア西新宿 TOWER'S WESTのエントランス",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Concieria-Shinjuku2.JPG/960px-Concieria-Shinjuku2.JPG",
+        "alt": "新宿中央公園のスタート周辺付近",
+        "caption": "新宿中央公園の走路近隣で撮影された風景",
+        "credit": "Mountainlife",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Concieria-Shinjuku2.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.690851,
+      "routeLng": 139.687391,
+      "elevationM": 39,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.690064,
+      "anchorLng": 139.688791,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 新宿中央公園ナイアガラ滝裏",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg/960px-%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg",
+        "alt": "新宿中央公園の序盤区間付近",
+        "caption": "新宿中央公園の走路近隣で撮影された風景",
+        "credit": "Adachi Masayuki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg"
+      },
+      "routePointIndex": 15,
+      "routeDistanceM": 234,
+      "routeLat": 35.690064,
+      "routeLng": 139.688791,
+      "elevationM": 41.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.688636,
+      "anchorLng": 139.688015,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 新宿中央公園ナイアガラ滝裏",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg/960px-%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg",
+        "alt": "新宿中央公園の中盤区間付近",
+        "caption": "新宿中央公園の走路近隣で撮影された風景",
+        "credit": "Adachi Masayuki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%AE%BF%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E3%83%8A%E3%82%A4%E3%82%A2%E3%82%AC%E3%83%A9%E6%BB%9D%E8%A3%8F_-_panoramio.jpg"
+      },
+      "routePointIndex": 31,
+      "routeDistanceM": 487,
+      "routeLat": 35.688636,
+      "routeLng": 139.688015,
+      "elevationM": 50,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.688748,
+      "anchorLng": 139.686513,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Part of the series One Hundred Famous Views of Edo , no. 050 , part 2: Summer.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/100_views_edo_064.jpg",
+        "alt": "新宿中央公園の後半区間付近",
+        "caption": "新宿中央公園の走路近隣で撮影された風景",
+        "credit": "Utagawa Hiroshige",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:100_views_edo_064.jpg"
+      },
+      "routePointIndex": 37,
+      "routeDistanceM": 687,
+      "routeLat": 35.688748,
+      "routeLng": 139.686513,
+      "elevationM": 43,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.689917,
+      "anchorLng": 139.686143,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 新宿区西新宿6丁目にあるコンシェリア西新宿 TOWER'S WESTのエントランス",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Concieria-Shinjuku2.JPG/960px-Concieria-Shinjuku2.JPG",
+        "alt": "新宿中央公園の終盤区間付近",
+        "caption": "新宿中央公園の走路近隣で撮影された風景",
+        "credit": "Mountainlife",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Concieria-Shinjuku2.JPG"
+      },
+      "routePointIndex": 44,
+      "routeDistanceM": 911,
+      "routeLat": 35.689917,
+      "routeLng": 139.686143,
+      "elevationM": 38.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1147,
+  "elevationGainM": 13,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 96,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 191,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 287,
+      "elevationM": 42.5
+    },
+    {
+      "distanceM": 382,
+      "elevationM": 46.7
+    },
+    {
+      "distanceM": 478,
+      "elevationM": 49.8
+    },
+    {
+      "distanceM": 574,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 669,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 765,
+      "elevationM": 41.1
+    },
+    {
+      "distanceM": 860,
+      "elevationM": 38.6
+    },
+    {
+      "distanceM": 956,
+      "elevationM": 36.3
+    },
+    {
+      "distanceM": 1052,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 1147,
+      "elevationM": 38.3
+    }
+  ]
+}

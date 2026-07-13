@@ -1,0 +1,727 @@
+{
+  "slug": "beppu-kaigan-kamegawa",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR亀川駅近くの海岸から別府市の湾岸を南下し、松林の遊歩道が心地よい上人ヶ浜公園、砂浜沿いのSPAビーチ、ヤシ並木の的ヶ浜公園を経て東別府駅前で折り返す約13.6kmの往復コース。別府湾と対岸の大分市街、振り返れば湯けむりの上がる山手の街並みを眺められる。的ヶ浜公園と上人ヶ浜公園にトイレ・自販機があり、コンビニも国道10号沿いに点在。別府駅前泊のトラベルランにも組み込みやすい。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR日豊本線 亀川駅から約400m / 別府駅(コース中間) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "亀川駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.330688,
+      "destinationLng": 131.493019,
+      "routeAnchorLat": 33.323899,
+      "routeAnchorLng": 131.495747,
+      "routeMode": "forward",
+      "accessText": "亀川駅からコースまで約800m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.323899,
+      "routeLng": 131.495747,
+      "elevationM": 3.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2725,
+        "section-3": 5442,
+        "section-4": 5442,
+        "section-5": 2725
+      },
+      "gpxHref": "/gpx/beppu-kaigan-kamegawa-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.323899,
+      "anchorLng": 131.495747,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 亀川駅の駅名標。イラストは「血の池地獄」",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kamegawa_Station_Sign.jpg/960px-Kamegawa_Station_Sign.jpg",
+        "alt": "別府湾岸・亀川〜東別府のスタート周辺付近",
+        "caption": "別府湾岸・亀川〜東別府の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamegawa_Station_Sign.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.323899,
+      "routeLng": 131.495747,
+      "elevationM": 3.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.301747,
+      "anchorLng": 131.502326,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 別府港第2フェーリーターミナル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg/960px-%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg",
+        "alt": "別府湾岸・亀川〜東別府の序盤区間付近",
+        "caption": "別府湾岸・亀川〜東別府の走路近隣で撮影された風景",
+        "credit": "KUNIO MIURA",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 76,
+      "routeDistanceM": 2725,
+      "routeLat": 33.301747,
+      "routeLng": 131.502326,
+      "elevationM": 6.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.278114,
+      "anchorLng": 131.506626,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 大分県別府市・北浜公園(右奥の山は高崎山)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Kitahama_Park_in_Beppu%2C_Oita.JPG/960px-Kitahama_Park_in_Beppu%2C_Oita.JPG",
+        "alt": "別府湾岸・亀川〜東別府の中盤区間付近",
+        "caption": "別府湾岸・亀川〜東別府の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitahama_Park_in_Beppu,_Oita.JPG"
+      },
+      "routePointIndex": 201,
+      "routeDistanceM": 5442,
+      "routeLat": 33.278114,
+      "routeLng": 131.506626,
+      "elevationM": 6.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.278114,
+      "anchorLng": 131.506626,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 大分県別府市・北浜公園(右奥の山は高崎山)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Kitahama_Park_in_Beppu%2C_Oita.JPG/960px-Kitahama_Park_in_Beppu%2C_Oita.JPG",
+        "alt": "別府湾岸・亀川〜東別府の後半区間付近",
+        "caption": "別府湾岸・亀川〜東別府の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitahama_Park_in_Beppu,_Oita.JPG"
+      },
+      "routePointIndex": 201,
+      "routeDistanceM": 5442,
+      "routeLat": 33.278114,
+      "routeLng": 131.506626,
+      "elevationM": 6.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.301747,
+      "anchorLng": 131.502326,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 別府港第2フェーリーターミナル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg/960px-%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg",
+        "alt": "別府湾岸・亀川〜東別府の終盤区間付近",
+        "caption": "別府湾岸・亀川〜東別府の走路近隣で撮影された風景",
+        "credit": "KUNIO MIURA",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%88%A5%E5%BA%9C%E6%B8%AF%E7%AC%AC2%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 76,
+      "routeDistanceM": 2725,
+      "routeLat": 33.301747,
+      "routeLng": 131.502326,
+      "elevationM": 6.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 13600,
+  "elevationGainM": 68,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 695,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 794,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 893,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 993,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 1092,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 1191,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1291,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 1390,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 1489,
+      "elevationM": 8.2
+    },
+    {
+      "distanceM": 1588,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 1688,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 1787,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 1886,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 1985,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 2085,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 2184,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 2283,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2382,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2482,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 2581,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2680,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 2780,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 2879,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 2978,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 3077,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 3177,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 3276,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 3375,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 3474,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3574,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 3673,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 3772,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 3872,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3971,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 4070,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 4169,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 4269,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 4368,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 4467,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 4566,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 4666,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 4765,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 4864,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 4964,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 5063,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 5162,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 5261,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 5361,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 5460,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 5559,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 5658,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 5758,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 5857,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 5956,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 6055,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 6155,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6254,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 6353,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 6453,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 6552,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 6651,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 6750,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 6850,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 6949,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 7048,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 7147,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 7247,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 7346,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 7445,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 7545,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 7644,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 7743,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 7842,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 7942,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 8041,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 8140,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 8239,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 8339,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 8438,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 8537,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 8637,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 8736,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 8835,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 8934,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 9034,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 9133,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 9232,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 9331,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 9431,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 9530,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 9629,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 9728,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 9828,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 9927,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 10026,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 10126,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 10225,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 10324,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 10423,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 10523,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 10622,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 10721,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 10820,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 10920,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 11019,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 11118,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 11218,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 11317,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 11416,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 11515,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 11615,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 11714,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 11813,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 11912,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 12012,
+      "elevationM": 8.2
+    },
+    {
+      "distanceM": 12111,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 12210,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 12310,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 12409,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 12508,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 12607,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 12707,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 12806,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 12905,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 13004,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 13104,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 13203,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 13302,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 13401,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 13501,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 13600,
+      "elevationM": 3.3
+    }
+  ]
+}

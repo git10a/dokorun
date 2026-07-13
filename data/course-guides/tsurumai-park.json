@@ -1,0 +1,140 @@
+{
+  "slug": "tsurumai-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "名古屋中心部で広く知られる定番で、園内の散策路を使うと約2.2km前後の周回が取りやすい公園です。桜やバラなど季節の見どころが多く、木陰もあるため気分よく走れます。駅からすぐ入れてトイレや駐車場も確保しやすく、平日の短時間ジョグにも便利です。スピード練習よりはフォームを整えるジョグや周回での距離調整に向き、名古屋の街なかランの定番として定着しています。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR中央線・地下鉄鶴舞線 鶴舞駅から徒歩すぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "鶴舞駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.156416,
+      "destinationLng": 136.917436,
+      "routeAnchorLat": 35.156228,
+      "routeAnchorLng": 136.923,
+      "routeMode": "loop",
+      "accessText": "鶴舞駅からコースまで約510m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "荒畑駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.149654,
+      "destinationLng": 136.92593,
+      "routeAnchorLat": 35.153058,
+      "routeAnchorLng": 136.922872,
+      "routeMode": "loop",
+      "accessText": "荒畑駅からコースまで約470m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.156228,
+      "anchorLng": 136.923,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 名古屋市昭和区鶴舞の鶴舞公園内のさぼてん",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Saboten_20170527.jpg/960px-Saboten_20170527.jpg",
+        "alt": "鶴舞公園のスタート周辺付近",
+        "caption": "鶴舞公園の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント (Enshuritsu 3 percent)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saboten_20170527.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.157684,
+      "anchorLng": 136.919032,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 名古屋市中区",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Naka_20211002-13.jpg/960px-Naka_20211002-13.jpg",
+        "alt": "鶴舞公園の序盤区間付近",
+        "caption": "鶴舞公園の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naka_20211002-13.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.154868,
+      "anchorLng": 136.916728,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 日本の愛知県名古屋市中区鶴舞（つるまい）の鶴舞（つるま）公園内にある名古屋市立鶴舞（つるまい）中央図書館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Nagoya_city_Tsuruma_Central_library_01.JPG/960px-Nagoya_city_Tsuruma_Central_library_01.JPG",
+        "alt": "鶴舞公園の中盤区間付近",
+        "caption": "鶴舞公園の走路近隣で撮影された風景",
+        "credit": "Gnsin",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagoya_city_Tsuruma_Central_library_01.JPG"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.152589,
+      "anchorLng": 136.91859,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 名古屋市昭和区鶴舞の矢場とん安いよ～市",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Yabaton_Sasuiyo_Ichi_20170519.jpg/960px-Yabaton_Sasuiyo_Ichi_20170519.jpg",
+        "alt": "鶴舞公園の後半区間付近",
+        "caption": "鶴舞公園の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント (Enshuritsu 3 percent)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yabaton_Sasuiyo_Ichi_20170519.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.153058,
+      "anchorLng": 136.922872,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Hachiman-yama kofun Loc: Shōwa-ku, Nagoya city, Aichi Prefecture, Japan. ja: 八幡山古墳 撮影場所 愛知県名古屋市昭和区",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Hachimanyama_kofun-Aichi01.jpg",
+        "alt": "鶴舞公園の終盤区間付近",
+        "caption": "鶴舞公園の走路近隣で撮影された風景",
+        "credit": "KAMUI",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hachimanyama_kofun-Aichi01.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

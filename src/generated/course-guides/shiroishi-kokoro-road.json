@@ -1,0 +1,926 @@
+{
+  "slug": "shiroishi-kokoro-road",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "札幌市白石区から北広島市まで続く自転車歩行者専用道「白石こころーど（札幌恵庭自転車道路）」を走る片道約18.5kmのロング走コースです。ラソラ札幌（旧イーアス札幌）付近を起点にJR北広島駅までほぼ途切れずに走り続けられ、車道と分離されているため安全に距離を稼げます。途中にコンビニやトイレもあり補給しやすく、ゴール後は電車で戻れるのも魅力です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 地下鉄東西線 東札幌駅・南郷13丁目駅からアクセス可能。ゴールのJR北広島駅から電車で戻れます。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "東札幌駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 43.051614,
+      "destinationLng": 141.384922,
+      "routeAnchorLat": 43.05418,
+      "routeAnchorLng": 141.382802,
+      "routeMode": "forward",
+      "accessText": "東札幌駅からコースまで約330m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 43.05418,
+      "routeLng": 141.382802,
+      "elevationM": 20.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 4919,
+        "section-3": 9820,
+        "section-4": 14716,
+        "section-5": 19638
+      },
+      "gpxHref": "/gpx/shiroishi-kokoro-road-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "北広島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 42.979239,
+      "destinationLng": 141.563115,
+      "routeAnchorLat": 42.98548,
+      "routeAnchorLng": 141.563721,
+      "routeMode": "reverse",
+      "accessText": "北広島駅からコースまで約700m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。",
+      "routePointIndex": 430,
+      "routeDistanceM": 19638,
+      "routeLat": 42.98548,
+      "routeLng": 141.563721,
+      "elevationM": 21,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 19638,
+        "section-2": 14719,
+        "section-3": 9818,
+        "section-4": 4922,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/shiroishi-kokoro-road-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 43.05418,
+      "anchorLng": 141.382802,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 北海道道1148号札幌恵庭自転車道線（Shiroishi cycling road）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg/960px-%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg",
+        "alt": "白石こころーど（札幌恵庭自転車道路）のスタート周辺付近",
+        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
+        "credit": "t-konno",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 43.05418,
+      "routeLng": 141.382802,
+      "elevationM": 20.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 43.03267,
+      "anchorLng": 141.4295,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 北海道道1148号札幌恵庭自転車道線（Shiroishi cycling road）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_%287%29.jpg/960px-%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_%287%29.jpg",
+        "alt": "白石こころーど（札幌恵庭自転車道路）の序盤区間付近",
+        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
+        "credit": "t-konno",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_(7).jpg"
+      },
+      "routePointIndex": 116,
+      "routeDistanceM": 4919,
+      "routeLat": 43.03267,
+      "routeLng": 141.4295,
+      "elevationM": 24.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 43.013496,
+      "anchorLng": 141.472877,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 札幌市清田区 平岡公園 の梅林",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "白石こころーど（札幌恵庭自転車道路）の中盤区間付近",
+        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
+        "credit": "taku-k",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 243,
+      "routeDistanceM": 9820,
+      "routeLat": 43.013496,
+      "routeLng": 141.472877,
+      "elevationM": 52,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 43.007196,
+      "anchorLng": 141.522033,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: JR Hokkaido Rapid Train, Sapporo, Hokkaido, Japan, JR快速列車, 札幌, 北海道, 日本, JR快速エアポート, さっぽろし, ほっかいどう, にっぽん, にほん",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/JR_Hokkaido_Rapid_Train%2C_Sapporo%2C_Hokkaido%2C_Japan%2C_JR%E5%BF%AB%E9%80%9F%E5%88%97%E8%BB%8A%2C_%E6%9C%AD%E5%B9%8C%2C_%E5%8C%97%E6%B5%B7%E9%81%93%2C_%E6%97%A5%E6%9C%AC%2C_JR%E5%BF%AB%E9%80%9F%E3%82%A8%E3%82%A2%E3%83%9D%E3%83%BC%E3%83%88%2C_%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%81%97%2C_%E3%81%BB%E3%81%A3%E3%81%8B%E3%81%84%E3%81%A9%E3%81%86%2C_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93%2C_%E3%81%AB%E3%81%BB%E3%82%93_%2816765610585%29.jpg/960px-thumbnail.jpg",
+        "alt": "白石こころーど（札幌恵庭自転車道路）の後半区間付近",
+        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
+        "credit": "bryan...",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_Hokkaido_Rapid_Train,_Sapporo,_Hokkaido,_Japan,_JR%E5%BF%AB%E9%80%9F%E5%88%97%E8%BB%8A,_%E6%9C%AD%E5%B9%8C,_%E5%8C%97%E6%B5%B7%E9%81%93,_%E6%97%A5%E6%9C%AC,_JR%E5%BF%AB%E9%80%9F%E3%82%A8%E3%82%A2%E3%83%9D%E3%83%BC%E3%83%88,_%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%81%97,_%E3%81%BB%E3%81%A3%E3%81%8B%E3%81%84%E3%81%A9%E3%81%86,_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93,_%E3%81%AB%E3%81%BB%E3%82%93_(16765610585).jpg"
+      },
+      "routePointIndex": 319,
+      "routeDistanceM": 14716,
+      "routeLat": 43.007196,
+      "routeLng": 141.522033,
+      "elevationM": 91,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 42.98548,
+      "anchorLng": 141.563721,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: An ESCON FIELD",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg/960px-%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg",
+        "alt": "白石こころーど（札幌恵庭自転車道路）の終盤区間付近",
+        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
+        "credit": "Reetlol",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg"
+      },
+      "routePointIndex": 430,
+      "routeDistanceM": 19638,
+      "routeLat": 42.98548,
+      "routeLng": 141.563721,
+      "elevationM": 21,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 19638,
+  "elevationGainM": 156,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 20.5
+    },
+    {
+      "distanceM": 109,
+      "elevationM": 22.1
+    },
+    {
+      "distanceM": 218,
+      "elevationM": 24.8
+    },
+    {
+      "distanceM": 327,
+      "elevationM": 25.4
+    },
+    {
+      "distanceM": 436,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 545,
+      "elevationM": 24
+    },
+    {
+      "distanceM": 655,
+      "elevationM": 24.3
+    },
+    {
+      "distanceM": 764,
+      "elevationM": 24.7
+    },
+    {
+      "distanceM": 873,
+      "elevationM": 26.6
+    },
+    {
+      "distanceM": 982,
+      "elevationM": 27.8
+    },
+    {
+      "distanceM": 1091,
+      "elevationM": 28.2
+    },
+    {
+      "distanceM": 1200,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 1309,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 1418,
+      "elevationM": 30.5
+    },
+    {
+      "distanceM": 1527,
+      "elevationM": 30.8
+    },
+    {
+      "distanceM": 1636,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 1746,
+      "elevationM": 34.3
+    },
+    {
+      "distanceM": 1855,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 1964,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 2073,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 2182,
+      "elevationM": 33
+    },
+    {
+      "distanceM": 2291,
+      "elevationM": 33.5
+    },
+    {
+      "distanceM": 2400,
+      "elevationM": 31.6
+    },
+    {
+      "distanceM": 2509,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 2618,
+      "elevationM": 31.3
+    },
+    {
+      "distanceM": 2727,
+      "elevationM": 33.5
+    },
+    {
+      "distanceM": 2837,
+      "elevationM": 35.2
+    },
+    {
+      "distanceM": 2946,
+      "elevationM": 35.2
+    },
+    {
+      "distanceM": 3055,
+      "elevationM": 34.4
+    },
+    {
+      "distanceM": 3164,
+      "elevationM": 34.5
+    },
+    {
+      "distanceM": 3273,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 3382,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 3491,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 3600,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 3709,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 3818,
+      "elevationM": 32.6
+    },
+    {
+      "distanceM": 3928,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 4037,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 4146,
+      "elevationM": 33.3
+    },
+    {
+      "distanceM": 4255,
+      "elevationM": 35.1
+    },
+    {
+      "distanceM": 4364,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 4473,
+      "elevationM": 26
+    },
+    {
+      "distanceM": 4582,
+      "elevationM": 23.9
+    },
+    {
+      "distanceM": 4691,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 4800,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 4909,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 5019,
+      "elevationM": 27.6
+    },
+    {
+      "distanceM": 5128,
+      "elevationM": 28.1
+    },
+    {
+      "distanceM": 5237,
+      "elevationM": 28
+    },
+    {
+      "distanceM": 5346,
+      "elevationM": 25.7
+    },
+    {
+      "distanceM": 5455,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 5564,
+      "elevationM": 23.2
+    },
+    {
+      "distanceM": 5673,
+      "elevationM": 21.8
+    },
+    {
+      "distanceM": 5782,
+      "elevationM": 23.8
+    },
+    {
+      "distanceM": 5891,
+      "elevationM": 22.1
+    },
+    {
+      "distanceM": 6000,
+      "elevationM": 21.7
+    },
+    {
+      "distanceM": 6110,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 6219,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 6328,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 6437,
+      "elevationM": 20.5
+    },
+    {
+      "distanceM": 6546,
+      "elevationM": 21.2
+    },
+    {
+      "distanceM": 6655,
+      "elevationM": 23.2
+    },
+    {
+      "distanceM": 6764,
+      "elevationM": 23.1
+    },
+    {
+      "distanceM": 6873,
+      "elevationM": 23.2
+    },
+    {
+      "distanceM": 6982,
+      "elevationM": 26.9
+    },
+    {
+      "distanceM": 7091,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 7200,
+      "elevationM": 33.4
+    },
+    {
+      "distanceM": 7310,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 7419,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 7528,
+      "elevationM": 34.1
+    },
+    {
+      "distanceM": 7637,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 7746,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 7855,
+      "elevationM": 36
+    },
+    {
+      "distanceM": 7964,
+      "elevationM": 36.2
+    },
+    {
+      "distanceM": 8073,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 8182,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 8291,
+      "elevationM": 39.7
+    },
+    {
+      "distanceM": 8401,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 8510,
+      "elevationM": 35.7
+    },
+    {
+      "distanceM": 8619,
+      "elevationM": 30.9
+    },
+    {
+      "distanceM": 8728,
+      "elevationM": 28.9
+    },
+    {
+      "distanceM": 8837,
+      "elevationM": 32.9
+    },
+    {
+      "distanceM": 8946,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 9055,
+      "elevationM": 41.6
+    },
+    {
+      "distanceM": 9164,
+      "elevationM": 44.4
+    },
+    {
+      "distanceM": 9273,
+      "elevationM": 45.5
+    },
+    {
+      "distanceM": 9382,
+      "elevationM": 47.3
+    },
+    {
+      "distanceM": 9492,
+      "elevationM": 49.1
+    },
+    {
+      "distanceM": 9601,
+      "elevationM": 51.3
+    },
+    {
+      "distanceM": 9710,
+      "elevationM": 51.5
+    },
+    {
+      "distanceM": 9819,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 9928,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 10037,
+      "elevationM": 54
+    },
+    {
+      "distanceM": 10146,
+      "elevationM": 54.8
+    },
+    {
+      "distanceM": 10255,
+      "elevationM": 55.8
+    },
+    {
+      "distanceM": 10364,
+      "elevationM": 57.6
+    },
+    {
+      "distanceM": 10473,
+      "elevationM": 56
+    },
+    {
+      "distanceM": 10583,
+      "elevationM": 54.3
+    },
+    {
+      "distanceM": 10692,
+      "elevationM": 49.9
+    },
+    {
+      "distanceM": 10801,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 10910,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 11019,
+      "elevationM": 37.5
+    },
+    {
+      "distanceM": 11128,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 11237,
+      "elevationM": 32.2
+    },
+    {
+      "distanceM": 11346,
+      "elevationM": 29.6
+    },
+    {
+      "distanceM": 11455,
+      "elevationM": 25.9
+    },
+    {
+      "distanceM": 11564,
+      "elevationM": 24.7
+    },
+    {
+      "distanceM": 11674,
+      "elevationM": 23.4
+    },
+    {
+      "distanceM": 11783,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 11892,
+      "elevationM": 38.1
+    },
+    {
+      "distanceM": 12001,
+      "elevationM": 43.3
+    },
+    {
+      "distanceM": 12110,
+      "elevationM": 48.6
+    },
+    {
+      "distanceM": 12219,
+      "elevationM": 51.9
+    },
+    {
+      "distanceM": 12328,
+      "elevationM": 55.1
+    },
+    {
+      "distanceM": 12437,
+      "elevationM": 58.3
+    },
+    {
+      "distanceM": 12546,
+      "elevationM": 59
+    },
+    {
+      "distanceM": 12655,
+      "elevationM": 60.1
+    },
+    {
+      "distanceM": 12765,
+      "elevationM": 62.9
+    },
+    {
+      "distanceM": 12874,
+      "elevationM": 63.7
+    },
+    {
+      "distanceM": 12983,
+      "elevationM": 64.8
+    },
+    {
+      "distanceM": 13092,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 13201,
+      "elevationM": 65.2
+    },
+    {
+      "distanceM": 13310,
+      "elevationM": 66.6
+    },
+    {
+      "distanceM": 13419,
+      "elevationM": 68
+    },
+    {
+      "distanceM": 13528,
+      "elevationM": 69.7
+    },
+    {
+      "distanceM": 13637,
+      "elevationM": 71.3
+    },
+    {
+      "distanceM": 13746,
+      "elevationM": 72.9
+    },
+    {
+      "distanceM": 13855,
+      "elevationM": 74.5
+    },
+    {
+      "distanceM": 13965,
+      "elevationM": 76.2
+    },
+    {
+      "distanceM": 14074,
+      "elevationM": 78.7
+    },
+    {
+      "distanceM": 14183,
+      "elevationM": 81.2
+    },
+    {
+      "distanceM": 14292,
+      "elevationM": 83.8
+    },
+    {
+      "distanceM": 14401,
+      "elevationM": 86.3
+    },
+    {
+      "distanceM": 14510,
+      "elevationM": 88.5
+    },
+    {
+      "distanceM": 14619,
+      "elevationM": 89.3
+    },
+    {
+      "distanceM": 14728,
+      "elevationM": 91.2
+    },
+    {
+      "distanceM": 14837,
+      "elevationM": 92.6
+    },
+    {
+      "distanceM": 14946,
+      "elevationM": 93.8
+    },
+    {
+      "distanceM": 15056,
+      "elevationM": 94.2
+    },
+    {
+      "distanceM": 15165,
+      "elevationM": 91.2
+    },
+    {
+      "distanceM": 15274,
+      "elevationM": 87.2
+    },
+    {
+      "distanceM": 15383,
+      "elevationM": 84.3
+    },
+    {
+      "distanceM": 15492,
+      "elevationM": 79.8
+    },
+    {
+      "distanceM": 15601,
+      "elevationM": 74.8
+    },
+    {
+      "distanceM": 15710,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 15819,
+      "elevationM": 71.8
+    },
+    {
+      "distanceM": 15928,
+      "elevationM": 68
+    },
+    {
+      "distanceM": 16037,
+      "elevationM": 64.1
+    },
+    {
+      "distanceM": 16147,
+      "elevationM": 60.3
+    },
+    {
+      "distanceM": 16256,
+      "elevationM": 58.3
+    },
+    {
+      "distanceM": 16365,
+      "elevationM": 58.7
+    },
+    {
+      "distanceM": 16474,
+      "elevationM": 58.2
+    },
+    {
+      "distanceM": 16583,
+      "elevationM": 54.6
+    },
+    {
+      "distanceM": 16692,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 16801,
+      "elevationM": 52.5
+    },
+    {
+      "distanceM": 16910,
+      "elevationM": 51.6
+    },
+    {
+      "distanceM": 17019,
+      "elevationM": 50.8
+    },
+    {
+      "distanceM": 17128,
+      "elevationM": 50.8
+    },
+    {
+      "distanceM": 17238,
+      "elevationM": 49.7
+    },
+    {
+      "distanceM": 17347,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 17456,
+      "elevationM": 42.5
+    },
+    {
+      "distanceM": 17565,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 17674,
+      "elevationM": 47.8
+    },
+    {
+      "distanceM": 17783,
+      "elevationM": 48.4
+    },
+    {
+      "distanceM": 17892,
+      "elevationM": 46.6
+    },
+    {
+      "distanceM": 18001,
+      "elevationM": 44.2
+    },
+    {
+      "distanceM": 18110,
+      "elevationM": 41.7
+    },
+    {
+      "distanceM": 18219,
+      "elevationM": 39.2
+    },
+    {
+      "distanceM": 18329,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 18438,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 18547,
+      "elevationM": 31
+    },
+    {
+      "distanceM": 18656,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 18765,
+      "elevationM": 27.9
+    },
+    {
+      "distanceM": 18874,
+      "elevationM": 26.1
+    },
+    {
+      "distanceM": 18983,
+      "elevationM": 24.1
+    },
+    {
+      "distanceM": 19092,
+      "elevationM": 17.8
+    },
+    {
+      "distanceM": 19201,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 19310,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 19420,
+      "elevationM": 15.8
+    },
+    {
+      "distanceM": 19529,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 19638,
+      "elevationM": 21
+    }
+  ]
+}

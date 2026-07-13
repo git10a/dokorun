@@ -1,0 +1,383 @@
+{
+  "slug": "yokote-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR横手駅を起点に横手川を渡り、模擬天守の横手城展望台が建つ城山の横手公園と園内の池・牛沼をめぐって戻る約5kmの周回。城山への登り坂で短いながらしっかり心拍が上がる。桜の名所で春は花見ランにも良い。園内にトイレがあり、駅そばの温浴施設をランステ代わりに使える。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR横手駅から徒歩すぐが起点。駅周辺にコインパーキングあり 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "横手駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 39.310146,
+      "destinationLng": 140.5604,
+      "routeAnchorLat": 39.310342,
+      "routeAnchorLng": 140.560839,
+      "routeMode": "loop",
+      "accessText": "横手駅からコースまで約40m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 39.310342,
+      "routeLng": 140.560839,
+      "elevationM": 67.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1000,
+        "section-3": 2022,
+        "section-4": 3038,
+        "section-5": 4043
+      },
+      "gpxHref": "/gpx/yokote-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 39.310342,
+      "anchorLng": 140.560839,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 秋田県横手市の郵便ポスト。ポストの上にかまくらが乗せられている。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mailbox_in_Yokote%2C_Akita.jpg/960px-Mailbox_in_Yokote%2C_Akita.jpg",
+        "alt": "横手公園のスタート周辺付近",
+        "caption": "横手公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mailbox_in_Yokote,_Akita.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 39.310342,
+      "routeLng": 140.560839,
+      "elevationM": 67.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 39.315775,
+      "anchorLng": 140.566778,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 横手市立横手図書館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Yokote_Municipal_Yokote_Library.jpg/960px-Yokote_Municipal_Yokote_Library.jpg",
+        "alt": "横手公園の序盤区間付近",
+        "caption": "横手公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Yokote_Library.jpg"
+      },
+      "routePointIndex": 60,
+      "routeDistanceM": 1000,
+      "routeLat": 39.315775,
+      "routeLng": 140.566778,
+      "elevationM": 66,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 39.31908,
+      "anchorLng": 140.571858,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 横手城本丸内、秋田神社",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg/960px-Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg",
+        "alt": "横手公園の中盤区間付近",
+        "caption": "横手公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg"
+      },
+      "routePointIndex": 116,
+      "routeDistanceM": 2022,
+      "routeLat": 39.31908,
+      "routeLng": 140.571858,
+      "elevationM": 85,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 39.321913,
+      "anchorLng": 140.569292,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 秋田県立横手城南高等学校",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Akita_Prefectural_Yokote-Jonan_High_school.jpg/960px-Akita_Prefectural_Yokote-Jonan_High_school.jpg",
+        "alt": "横手公園の後半区間付近",
+        "caption": "横手公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akita_Prefectural_Yokote-Jonan_High_school.jpg"
+      },
+      "routePointIndex": 184,
+      "routeDistanceM": 3038,
+      "routeLat": 39.321913,
+      "routeLng": 140.569292,
+      "elevationM": 99,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 39.316524,
+      "anchorLng": 140.565841,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 横手市立横手図書館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Yokote_Municipal_Yokote_Library.jpg/960px-Yokote_Municipal_Yokote_Library.jpg",
+        "alt": "横手公園の終盤区間付近",
+        "caption": "横手公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Yokote_Library.jpg"
+      },
+      "routePointIndex": 244,
+      "routeDistanceM": 4043,
+      "routeLat": 39.316524,
+      "routeLng": 140.565841,
+      "elevationM": 65,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5056,
+  "elevationGainM": 70,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 67.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 68
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 70
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 67.3
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 64.8
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 595,
+      "elevationM": 64.7
+    },
+    {
+      "distanceM": 694,
+      "elevationM": 65.3
+    },
+    {
+      "distanceM": 793,
+      "elevationM": 67.5
+    },
+    {
+      "distanceM": 892,
+      "elevationM": 66.2
+    },
+    {
+      "distanceM": 991,
+      "elevationM": 66
+    },
+    {
+      "distanceM": 1090,
+      "elevationM": 65.1
+    },
+    {
+      "distanceM": 1190,
+      "elevationM": 63.8
+    },
+    {
+      "distanceM": 1289,
+      "elevationM": 62.3
+    },
+    {
+      "distanceM": 1388,
+      "elevationM": 62.8
+    },
+    {
+      "distanceM": 1487,
+      "elevationM": 62.3
+    },
+    {
+      "distanceM": 1586,
+      "elevationM": 63.4
+    },
+    {
+      "distanceM": 1685,
+      "elevationM": 67.5
+    },
+    {
+      "distanceM": 1784,
+      "elevationM": 67.2
+    },
+    {
+      "distanceM": 1884,
+      "elevationM": 75.5
+    },
+    {
+      "distanceM": 1983,
+      "elevationM": 81.4
+    },
+    {
+      "distanceM": 2082,
+      "elevationM": 93.5
+    },
+    {
+      "distanceM": 2181,
+      "elevationM": 95
+    },
+    {
+      "distanceM": 2280,
+      "elevationM": 104.1
+    },
+    {
+      "distanceM": 2379,
+      "elevationM": 101.2
+    },
+    {
+      "distanceM": 2478,
+      "elevationM": 98.2
+    },
+    {
+      "distanceM": 2578,
+      "elevationM": 93.7
+    },
+    {
+      "distanceM": 2677,
+      "elevationM": 98.7
+    },
+    {
+      "distanceM": 2776,
+      "elevationM": 100
+    },
+    {
+      "distanceM": 2875,
+      "elevationM": 97.7
+    },
+    {
+      "distanceM": 2974,
+      "elevationM": 98.9
+    },
+    {
+      "distanceM": 3073,
+      "elevationM": 99.1
+    },
+    {
+      "distanceM": 3172,
+      "elevationM": 94
+    },
+    {
+      "distanceM": 3271,
+      "elevationM": 81
+    },
+    {
+      "distanceM": 3371,
+      "elevationM": 70
+    },
+    {
+      "distanceM": 3470,
+      "elevationM": 67.4
+    },
+    {
+      "distanceM": 3569,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 3668,
+      "elevationM": 63.1
+    },
+    {
+      "distanceM": 3767,
+      "elevationM": 62.2
+    },
+    {
+      "distanceM": 3866,
+      "elevationM": 61.5
+    },
+    {
+      "distanceM": 3965,
+      "elevationM": 62.5
+    },
+    {
+      "distanceM": 4065,
+      "elevationM": 65.3
+    },
+    {
+      "distanceM": 4164,
+      "elevationM": 64.4
+    },
+    {
+      "distanceM": 4263,
+      "elevationM": 64.7
+    },
+    {
+      "distanceM": 4362,
+      "elevationM": 64.8
+    },
+    {
+      "distanceM": 4461,
+      "elevationM": 64.7
+    },
+    {
+      "distanceM": 4560,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 4659,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 4758,
+      "elevationM": 67.3
+    },
+    {
+      "distanceM": 4858,
+      "elevationM": 70
+    },
+    {
+      "distanceM": 4957,
+      "elevationM": 68
+    },
+    {
+      "distanceM": 5056,
+      "elevationM": 68
+    }
+  ]
+}

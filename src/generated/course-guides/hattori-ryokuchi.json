@@ -1,0 +1,429 @@
+{
+  "slug": "hattori-ryokuchi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "北大阪の定番練習地で、園内をぐるりと回る約4kmコースのほか、2.25kmコースや5km計測コースも使えます。舗装路だけでなく土や芝の区間も選べるため、脚への刺激を変えやすいのが魅力です。池や樹林が多く、木陰を感じながら走れる一方、場所によっては緩い起伏もあります。普段のジョグからクロスカントリー気味の補強までこなしやすい大阪の定番公園です。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 北大阪急行 緑地公園駅から徒歩約5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "桃山台駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.793842,
+      "destinationLng": 135.497142,
+      "routeAnchorLat": 34.79098,
+      "routeAnchorLng": 135.494558,
+      "routeMode": "loop",
+      "accessText": "桃山台駅からコースまで約400m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.79098,
+      "routeLng": 135.494558,
+      "elevationM": 70.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1000,
+        "section-3": 1936,
+        "section-4": 2881,
+        "section-5": 3881
+      },
+      "gpxHref": "/gpx/hattori-ryokuchi-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "千里山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.778903,
+      "destinationLng": 135.505466,
+      "routeAnchorLat": 34.78223,
+      "routeAnchorLng": 135.497439,
+      "routeMode": "loop",
+      "accessText": "千里山駅からコースまで約820m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 84,
+      "routeDistanceM": 1936,
+      "routeLat": 34.78223,
+      "routeLng": 135.497439,
+      "elevationM": 40,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2911,
+        "section-2": 3911,
+        "section-3": 0,
+        "section-4": 945,
+        "section-5": 1945
+      },
+      "gpxHref": "/gpx/hattori-ryokuchi-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "緑地公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.774772,
+      "destinationLng": 135.495278,
+      "routeAnchorLat": 34.783339,
+      "routeAnchorLng": 135.490616,
+      "routeMode": "loop",
+      "accessText": "緑地公園駅からコースまで約1070m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 150,
+      "routeDistanceM": 2881,
+      "routeLat": 34.783339,
+      "routeLng": 135.490616,
+      "elevationM": 54,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1966,
+        "section-2": 2966,
+        "section-3": 3902,
+        "section-4": 0,
+        "section-5": 1000
+      },
+      "gpxHref": "/gpx/hattori-ryokuchi-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.79098,
+      "anchorLng": 135.494558,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 北大阪急行桃山台駅",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%87%BA%E5%8F%A3.jpg/960px-%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%87%BA%E5%8F%A3.jpg",
+        "alt": "服部緑地のスタート周辺付近",
+        "caption": "服部緑地の走路近隣で撮影された風景",
+        "credit": "NatsuTV",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%87%BA%E5%8F%A3.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.79098,
+      "routeLng": 135.494558,
+      "elevationM": 70.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.788529,
+      "anchorLng": 135.497645,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 北大阪急行桃山台駅",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%8C%97%E5%8F%A3.jpg/960px-%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%8C%97%E5%8F%A3.jpg",
+        "alt": "服部緑地の序盤区間付近",
+        "caption": "服部緑地の走路近隣で撮影された風景",
+        "credit": "NatsuTV",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E5%A4%A7%E9%98%AA%E6%80%A5%E8%A1%8C%E6%A1%83%E5%B1%B1%E5%8F%B0%E9%A7%85%E6%9D%B1%E5%8C%97%E5%8F%A3.jpg"
+      },
+      "routePointIndex": 52,
+      "routeDistanceM": 1000,
+      "routeLat": 34.788529,
+      "routeLng": 135.497645,
+      "elevationM": 48.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.78223,
+      "anchorLng": 135.497439,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 大阪の高速道路",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Osaka_Highway_%2838825853715%29.jpg/960px-Osaka_Highway_%2838825853715%29.jpg",
+        "alt": "服部緑地の中盤区間付近",
+        "caption": "服部緑地の走路近隣で撮影された風景",
+        "credit": "Raita Futo from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Highway_(38825853715).jpg"
+      },
+      "routePointIndex": 84,
+      "routeDistanceM": 1936,
+      "routeLat": 34.78223,
+      "routeLng": 135.497439,
+      "elevationM": 40,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.783339,
+      "anchorLng": 135.490616,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Hattori Ryokuchi in Osaka prefecture , Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/151128_Hattori_Ryokuchi_Park_Osaka_pref_Japan07n.jpg/960px-151128_Hattori_Ryokuchi_Park_Osaka_pref_Japan07n.jpg",
+        "alt": "服部緑地の後半区間付近",
+        "caption": "服部緑地の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:151128_Hattori_Ryokuchi_Park_Osaka_pref_Japan07n.jpg"
+      },
+      "routePointIndex": 150,
+      "routeDistanceM": 2881,
+      "routeLat": 34.783339,
+      "routeLng": 135.490616,
+      "elevationM": 54,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.78797,
+      "anchorLng": 135.487278,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 八坂神社（豊中市） 鳥居（ 大阪府 豊中市 ）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Yasaka_Kumano01.jpg/960px-Yasaka_Kumano01.jpg",
+        "alt": "服部緑地の終盤区間付近",
+        "caption": "服部緑地の走路近隣で撮影された風景",
+        "credit": "bittercup",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yasaka_Kumano01.jpg"
+      },
+      "routePointIndex": 205,
+      "routeDistanceM": 3881,
+      "routeLat": 34.78797,
+      "routeLng": 135.487278,
+      "elevationM": 39.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 4847,
+  "elevationGainM": 85,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 70.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 69.8
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 69
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 64.4
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 56
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 54.5
+    },
+    {
+      "distanceM": 594,
+      "elevationM": 54.1
+    },
+    {
+      "distanceM": 692,
+      "elevationM": 53.2
+    },
+    {
+      "distanceM": 791,
+      "elevationM": 53.7
+    },
+    {
+      "distanceM": 890,
+      "elevationM": 53.5
+    },
+    {
+      "distanceM": 989,
+      "elevationM": 48.7
+    },
+    {
+      "distanceM": 1088,
+      "elevationM": 44.6
+    },
+    {
+      "distanceM": 1187,
+      "elevationM": 40.6
+    },
+    {
+      "distanceM": 1286,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 1385,
+      "elevationM": 40.9
+    },
+    {
+      "distanceM": 1484,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 1583,
+      "elevationM": 42.4
+    },
+    {
+      "distanceM": 1682,
+      "elevationM": 45
+    },
+    {
+      "distanceM": 1781,
+      "elevationM": 43.4
+    },
+    {
+      "distanceM": 1880,
+      "elevationM": 40.4
+    },
+    {
+      "distanceM": 1979,
+      "elevationM": 38.9
+    },
+    {
+      "distanceM": 2077,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 2176,
+      "elevationM": 31.9
+    },
+    {
+      "distanceM": 2275,
+      "elevationM": 32.4
+    },
+    {
+      "distanceM": 2374,
+      "elevationM": 36.8
+    },
+    {
+      "distanceM": 2473,
+      "elevationM": 42.4
+    },
+    {
+      "distanceM": 2572,
+      "elevationM": 58.3
+    },
+    {
+      "distanceM": 2671,
+      "elevationM": 62.4
+    },
+    {
+      "distanceM": 2770,
+      "elevationM": 57.8
+    },
+    {
+      "distanceM": 2869,
+      "elevationM": 54.6
+    },
+    {
+      "distanceM": 2968,
+      "elevationM": 47.7
+    },
+    {
+      "distanceM": 3067,
+      "elevationM": 41.5
+    },
+    {
+      "distanceM": 3166,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 3265,
+      "elevationM": 42.9
+    },
+    {
+      "distanceM": 3363,
+      "elevationM": 36.2
+    },
+    {
+      "distanceM": 3462,
+      "elevationM": 33.5
+    },
+    {
+      "distanceM": 3561,
+      "elevationM": 39.3
+    },
+    {
+      "distanceM": 3660,
+      "elevationM": 37.5
+    },
+    {
+      "distanceM": 3759,
+      "elevationM": 35.6
+    },
+    {
+      "distanceM": 3858,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 3957,
+      "elevationM": 40
+    },
+    {
+      "distanceM": 4056,
+      "elevationM": 43.2
+    },
+    {
+      "distanceM": 4155,
+      "elevationM": 56.3
+    },
+    {
+      "distanceM": 4254,
+      "elevationM": 59.1
+    },
+    {
+      "distanceM": 4353,
+      "elevationM": 56.7
+    },
+    {
+      "distanceM": 4452,
+      "elevationM": 56.9
+    },
+    {
+      "distanceM": 4551,
+      "elevationM": 59.5
+    },
+    {
+      "distanceM": 4649,
+      "elevationM": 60.3
+    },
+    {
+      "distanceM": 4748,
+      "elevationM": 64.5
+    },
+    {
+      "distanceM": 4847,
+      "elevationM": 69.8
+    }
+  ]
+}

@@ -1,0 +1,760 @@
+{
+  "slug": "dogo-matsuyama-castle",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "道後温泉本館そばを起点に平和通りを西へ進み、松山城のある城山をぐるりと囲む堀端と城山公園を2周してから道後温泉へ戻る約12.4kmの周回。堀端は歩道が広く走りやすい。走り終えたらそのまま道後温泉で汗を流せるのが最大の魅力。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 伊予鉄道後温泉駅から徒歩約3分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "道後温泉駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.850477,
+      "destinationLng": 132.784817,
+      "routeAnchorLat": 33.851772,
+      "routeAnchorLng": 132.787184,
+      "routeMode": "loop",
+      "accessText": "道後温泉駅からコースまで約260m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.851772,
+      "routeLng": 132.787184,
+      "elevationM": 61.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2477,
+        "section-3": 4978,
+        "section-4": 3472,
+        "section-5": 5969
+      },
+      "gpxHref": "/gpx/dogo-matsuyama-castle-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "清水町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.849328,
+      "destinationLng": 132.764281,
+      "routeAnchorLat": 33.848698,
+      "routeAnchorLng": 132.764811,
+      "routeMode": "loop",
+      "accessText": "清水町駅からコースまで約90m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 79,
+      "routeDistanceM": 2477,
+      "routeLat": 33.848698,
+      "routeLng": 132.764811,
+      "elevationM": 32.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 9945,
+        "section-2": 0,
+        "section-3": 2501,
+        "section-4": 995,
+        "section-5": 3492
+      },
+      "gpxHref": "/gpx/dogo-matsuyama-castle-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "警察署前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.844596,
+      "destinationLng": 132.775354,
+      "routeAnchorLat": 33.844865,
+      "routeAnchorLng": 132.772273,
+      "routeMode": "loop",
+      "accessText": "警察署前駅からコースまで約290m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 166,
+      "routeDistanceM": 4978,
+      "routeLat": 33.844865,
+      "routeLng": 132.772273,
+      "elevationM": 38.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 7444,
+        "section-2": 9921,
+        "section-3": 0,
+        "section-4": 10916,
+        "section-5": 991
+      },
+      "gpxHref": "/gpx/dogo-matsuyama-castle-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "県庁前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.841067,
+      "destinationLng": 132.766364,
+      "routeAnchorLat": 33.843125,
+      "routeAnchorLng": 132.762953,
+      "routeMode": "loop",
+      "accessText": "県庁前駅からコースまで約390m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 104,
+      "routeDistanceM": 3472,
+      "routeLat": 33.843125,
+      "routeLng": 132.762953,
+      "elevationM": 32,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 8950,
+        "section-2": 11427,
+        "section-3": 1506,
+        "section-4": 0,
+        "section-5": 2497
+      },
+      "gpxHref": "/gpx/dogo-matsuyama-castle-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.851772,
+      "anchorLng": 132.787184,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 道後温泉",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89_-_panoramio_%282%29.jpg/960px-%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89_-_panoramio_%282%29.jpg",
+        "alt": "道後温泉・城山公園のスタート周辺付近",
+        "caption": "道後温泉・城山公園の走路近隣で撮影された風景",
+        "credit": "kajikawa",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89_-_panoramio_(2).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.851772,
+      "routeLng": 132.787184,
+      "elevationM": 61.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.848698,
+      "anchorLng": 132.764811,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 伊予鉄道 城北線の電車です",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iyo_Railway_J%C5%8Dhoku_Line.jpg/960px-Iyo_Railway_J%C5%8Dhoku_Line.jpg",
+        "alt": "道後温泉・城山公園の序盤区間付近",
+        "caption": "道後温泉・城山公園の走路近隣で撮影された風景",
+        "credit": "がっさん",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iyo_Railway_J%C5%8Dhoku_Line.jpg"
+      },
+      "routePointIndex": 79,
+      "routeDistanceM": 2477,
+      "routeLat": 33.848698,
+      "routeLng": 132.764811,
+      "elevationM": 32.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.844865,
+      "anchorLng": 132.772273,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 1961年ごろに撮影された松山城ロープウェイの初代ゴンドラ。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg/960px-%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg",
+        "alt": "道後温泉・城山公園の中盤区間付近",
+        "caption": "道後温泉・城山公園の走路近隣で撮影された風景",
+        "credit": "Cafelasm",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B1%B1%E5%9F%8E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%88%9D%E4%BB%A3%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%80%8C%E3%81%B2%E3%82%88%E3%81%A9%E3%82%8A%E5%8F%B7%E3%80%8D.jpg"
+      },
+      "routePointIndex": 166,
+      "routeDistanceM": 4978,
+      "routeLat": 33.844865,
+      "routeLng": 132.772273,
+      "elevationM": 38.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.843125,
+      "anchorLng": 132.762953,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 松山城",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/%E6%9D%BE%E5%B1%B1%E5%9F%8E_-_panoramio_%282%29.jpg/960px-%E6%9D%BE%E5%B1%B1%E5%9F%8E_-_panoramio_%282%29.jpg",
+        "alt": "道後温泉・城山公園の後半区間付近",
+        "caption": "道後温泉・城山公園の走路近隣で撮影された風景",
+        "credit": "kajikawa",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B1%B1%E5%9F%8E_-_panoramio_(2).jpg"
+      },
+      "routePointIndex": 104,
+      "routeDistanceM": 3472,
+      "routeLat": 33.843125,
+      "routeLng": 132.762953,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.84867,
+      "anchorLng": 132.766227,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 本丸広場から松山城天守。右が大天守で、画面中央やや左が小天守。左端は隅櫓。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%E6%9D%BE%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88_%282372904566%29.jpg/960px-%E6%9D%BE%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88_%282372904566%29.jpg",
+        "alt": "道後温泉・城山公園の終盤区間付近",
+        "caption": "道後温泉・城山公園の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88_(2372904566).jpg"
+      },
+      "routePointIndex": 202,
+      "routeDistanceM": 5969,
+      "routeLat": 33.84867,
+      "routeLng": 132.766227,
+      "elevationM": 29,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 12422,
+  "elevationGainM": 119,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 61.3
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 54.5
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 47.5
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 44.5
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 44.6
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 696,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 894,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 994,
+      "elevationM": 36.8
+    },
+    {
+      "distanceM": 1093,
+      "elevationM": 36.5
+    },
+    {
+      "distanceM": 1192,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 1292,
+      "elevationM": 35.7
+    },
+    {
+      "distanceM": 1391,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 1491,
+      "elevationM": 32.2
+    },
+    {
+      "distanceM": 1590,
+      "elevationM": 30.9
+    },
+    {
+      "distanceM": 1689,
+      "elevationM": 31.2
+    },
+    {
+      "distanceM": 1789,
+      "elevationM": 31.3
+    },
+    {
+      "distanceM": 1888,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 1987,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 2087,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 2186,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 2286,
+      "elevationM": 30.2
+    },
+    {
+      "distanceM": 2385,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 2484,
+      "elevationM": 32.4
+    },
+    {
+      "distanceM": 2584,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 2683,
+      "elevationM": 30.5
+    },
+    {
+      "distanceM": 2782,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 2882,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 2981,
+      "elevationM": 34.4
+    },
+    {
+      "distanceM": 3081,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 3180,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 3279,
+      "elevationM": 38.6
+    },
+    {
+      "distanceM": 3379,
+      "elevationM": 43.1
+    },
+    {
+      "distanceM": 3478,
+      "elevationM": 31.2
+    },
+    {
+      "distanceM": 3577,
+      "elevationM": 22.9
+    },
+    {
+      "distanceM": 3677,
+      "elevationM": 28.9
+    },
+    {
+      "distanceM": 3776,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 3876,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 3975,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 4074,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 4174,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 4273,
+      "elevationM": 40.4
+    },
+    {
+      "distanceM": 4372,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 4472,
+      "elevationM": 38.1
+    },
+    {
+      "distanceM": 4571,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 4670,
+      "elevationM": 35.9
+    },
+    {
+      "distanceM": 4770,
+      "elevationM": 35.2
+    },
+    {
+      "distanceM": 4869,
+      "elevationM": 36.4
+    },
+    {
+      "distanceM": 4969,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 5068,
+      "elevationM": 37.9
+    },
+    {
+      "distanceM": 5167,
+      "elevationM": 36
+    },
+    {
+      "distanceM": 5267,
+      "elevationM": 36.5
+    },
+    {
+      "distanceM": 5366,
+      "elevationM": 32.7
+    },
+    {
+      "distanceM": 5465,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 5565,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 5664,
+      "elevationM": 31.5
+    },
+    {
+      "distanceM": 5764,
+      "elevationM": 30.5
+    },
+    {
+      "distanceM": 5863,
+      "elevationM": 31.5
+    },
+    {
+      "distanceM": 5962,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 6062,
+      "elevationM": 29.8
+    },
+    {
+      "distanceM": 6161,
+      "elevationM": 30.1
+    },
+    {
+      "distanceM": 6260,
+      "elevationM": 30.2
+    },
+    {
+      "distanceM": 6360,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 6459,
+      "elevationM": 32.5
+    },
+    {
+      "distanceM": 6559,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 6658,
+      "elevationM": 30.5
+    },
+    {
+      "distanceM": 6757,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 6857,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 6956,
+      "elevationM": 34.4
+    },
+    {
+      "distanceM": 7055,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 7155,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 7254,
+      "elevationM": 39.1
+    },
+    {
+      "distanceM": 7354,
+      "elevationM": 42.7
+    },
+    {
+      "distanceM": 7453,
+      "elevationM": 30.8
+    },
+    {
+      "distanceM": 7552,
+      "elevationM": 22.9
+    },
+    {
+      "distanceM": 7652,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 7751,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 7850,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 7950,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 8049,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 8149,
+      "elevationM": 39.2
+    },
+    {
+      "distanceM": 8248,
+      "elevationM": 40.4
+    },
+    {
+      "distanceM": 8347,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 8447,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 8546,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 8645,
+      "elevationM": 35.8
+    },
+    {
+      "distanceM": 8745,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 8844,
+      "elevationM": 36.5
+    },
+    {
+      "distanceM": 8943,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 9043,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 9142,
+      "elevationM": 35.9
+    },
+    {
+      "distanceM": 9242,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 9341,
+      "elevationM": 32.6
+    },
+    {
+      "distanceM": 9440,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 9540,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 9639,
+      "elevationM": 31.3
+    },
+    {
+      "distanceM": 9738,
+      "elevationM": 30.5
+    },
+    {
+      "distanceM": 9838,
+      "elevationM": 31.4
+    },
+    {
+      "distanceM": 9937,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 10037,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 10136,
+      "elevationM": 30.2
+    },
+    {
+      "distanceM": 10235,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 10335,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 10434,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 10533,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 10633,
+      "elevationM": 31.3
+    },
+    {
+      "distanceM": 10732,
+      "elevationM": 31.2
+    },
+    {
+      "distanceM": 10832,
+      "elevationM": 30.9
+    },
+    {
+      "distanceM": 10931,
+      "elevationM": 32.2
+    },
+    {
+      "distanceM": 11030,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 11130,
+      "elevationM": 35.7
+    },
+    {
+      "distanceM": 11229,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 11328,
+      "elevationM": 36.5
+    },
+    {
+      "distanceM": 11428,
+      "elevationM": 36.8
+    },
+    {
+      "distanceM": 11527,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 11627,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 11726,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 11825,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 11925,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 12024,
+      "elevationM": 44.6
+    },
+    {
+      "distanceM": 12123,
+      "elevationM": 44.5
+    },
+    {
+      "distanceM": 12223,
+      "elevationM": 47.5
+    },
+    {
+      "distanceM": 12322,
+      "elevationM": 54.5
+    },
+    {
+      "distanceM": 12422,
+      "elevationM": 62.3
+    }
+  ]
+}

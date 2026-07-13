@@ -1,0 +1,794 @@
+{
+  "slug": "tamagawa-josui-ryokudo",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "新宿駅から玉川上水緑道に入り、吉祥寺駅付近まで走る片道約16.5kmのコースです。木々に覆われた緑道はフラットで涼しく、夏場のロング走の暑さ対策にも向いています。公園や緑道内は車の心配がなく、快適に距離を踏めるのが魅力。市街地に出る区間では横断に注意してください。ゴールの吉祥寺からは電車で戻れるため、片道ランに最適です。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: スタートはJR新宿駅。ゴールの吉祥寺駅からJR中央線などで戻れます。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "新宿駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.690163,
+      "destinationLng": 139.699187,
+      "routeAnchorLat": 35.689993,
+      "routeAnchorLng": 139.698932,
+      "routeMode": "forward",
+      "accessText": "新宿駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.689993,
+      "routeLng": 139.698932,
+      "elevationM": 63,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3613,
+        "section-3": 7358,
+        "section-4": 11024,
+        "section-5": 14695
+      },
+      "gpxHref": "/gpx/tamagawa-josui-ryokudo-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "吉祥寺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.703119,
+      "destinationLng": 139.579765,
+      "routeAnchorLat": 35.703284,
+      "routeAnchorLng": 139.579899,
+      "routeMode": "reverse",
+      "accessText": "吉祥寺駅からコースまで約20m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。",
+      "routePointIndex": 540,
+      "routeDistanceM": 14695,
+      "routeLat": 35.703284,
+      "routeLng": 139.579899,
+      "elevationM": 68.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 14695,
+        "section-2": 11082,
+        "section-3": 7337,
+        "section-4": 3671,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/tamagawa-josui-ryokudo-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.689993,
+      "anchorLng": 139.698932,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 新宿～飛騨高山線(濃飛乗合自動車)",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/%E6%96%B0%E5%AE%BF%EF%BD%9E%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E7%B7%9A%28%E6%BF%83%E9%A3%9B%E4%B9%97%E5%90%88%E8%87%AA%E5%8B%95%E8%BB%8A%29_-_panoramio.jpg/960px-%E6%96%B0%E5%AE%BF%EF%BD%9E%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E7%B7%9A%28%E6%BF%83%E9%A3%9B%E4%B9%97%E5%90%88%E8%87%AA%E5%8B%95%E8%BB%8A%29_-_panoramio.jpg",
+        "alt": "玉川上水緑道コースのスタート周辺付近",
+        "caption": "玉川上水緑道コースの走路近隣で撮影された風景",
+        "credit": "KΛNΛTΛ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%AE%BF%EF%BD%9E%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E7%B7%9A(%E6%BF%83%E9%A3%9B%E4%B9%97%E5%90%88%E8%87%AA%E5%8B%95%E8%BB%8A)_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.689993,
+      "routeLng": 139.698932,
+      "elevationM": 63,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.673571,
+      "anchorLng": 139.666368,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Priority seat inside Toei 10-300 series EMU 3rd-batch set 10-490",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Priority_seat_of_Toei_10-490.jpg/960px-Priority_seat_of_Toei_10-490.jpg",
+        "alt": "玉川上水緑道コースの序盤区間付近",
+        "caption": "玉川上水緑道コースの走路近隣で撮影された風景",
+        "credit": "Rsa",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Priority_seat_of_Toei_10-490.jpg"
+      },
+      "routePointIndex": 79,
+      "routeDistanceM": 3613,
+      "routeLat": 35.673571,
+      "routeLng": 139.666368,
+      "elevationM": 51,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.676151,
+      "anchorLng": 139.632256,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 新宿駅 5番線 都営新宿線",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Shinjuku_Station-2.jpg/960px-Shinjuku_Station-2.jpg",
+        "alt": "玉川上水緑道コースの中盤区間付近",
+        "caption": "玉川上水緑道コースの走路近隣で撮影された風景",
+        "credit": "江戸村のとくぞう",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinjuku_Station-2.jpg"
+      },
+      "routePointIndex": 201,
+      "routeDistanceM": 7358,
+      "routeLat": 35.676151,
+      "routeLng": 139.632256,
+      "elevationM": 40.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.688136,
+      "anchorLng": 139.601434,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: JR East E6 series shinkansen car E611-1 (car No. 11) of pre-production set S12 at Omiya Station",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/E611-1.jpg/960px-E611-1.jpg",
+        "alt": "玉川上水緑道コースの後半区間付近",
+        "caption": "玉川上水緑道コースの走路近隣で撮影された風景",
+        "credit": "Rsa",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:E611-1.jpg"
+      },
+      "routePointIndex": 361,
+      "routeDistanceM": 11024,
+      "routeLat": 35.688136,
+      "routeLng": 139.601434,
+      "elevationM": 49.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.703284,
+      "anchorLng": 139.579899,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Little fats & Swingin'hot shot party @ Kichijoji Station, 20:50, 14th May 2006",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Little_fats_%26_Swinginhot_shot_party%2C_Kichijoji_Station%2C_2006-05-14.jpg",
+        "alt": "玉川上水緑道コースの終盤区間付近",
+        "caption": "玉川上水緑道コースの走路近隣で撮影された風景",
+        "credit": "knothole eyes",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Little_fats_%26_Swinginhot_shot_party,_Kichijoji_Station,_2006-05-14.jpg"
+      },
+      "routePointIndex": 540,
+      "routeDistanceM": 14695,
+      "routeLat": 35.703284,
+      "routeLng": 139.579899,
+      "elevationM": 68.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 14695,
+  "elevationGainM": 115,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 63
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 63.2
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 57
+    },
+    {
+      "distanceM": 300,
+      "elevationM": 55.7
+    },
+    {
+      "distanceM": 400,
+      "elevationM": 60.4
+    },
+    {
+      "distanceM": 500,
+      "elevationM": 57.3
+    },
+    {
+      "distanceM": 600,
+      "elevationM": 58.7
+    },
+    {
+      "distanceM": 700,
+      "elevationM": 59.1
+    },
+    {
+      "distanceM": 800,
+      "elevationM": 59.9
+    },
+    {
+      "distanceM": 900,
+      "elevationM": 68.1
+    },
+    {
+      "distanceM": 1000,
+      "elevationM": 58.8
+    },
+    {
+      "distanceM": 1100,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 1200,
+      "elevationM": 58
+    },
+    {
+      "distanceM": 1300,
+      "elevationM": 58.5
+    },
+    {
+      "distanceM": 1399,
+      "elevationM": 59.9
+    },
+    {
+      "distanceM": 1499,
+      "elevationM": 57.4
+    },
+    {
+      "distanceM": 1599,
+      "elevationM": 55.3
+    },
+    {
+      "distanceM": 1699,
+      "elevationM": 52.1
+    },
+    {
+      "distanceM": 1799,
+      "elevationM": 50.5
+    },
+    {
+      "distanceM": 1899,
+      "elevationM": 47.9
+    },
+    {
+      "distanceM": 1999,
+      "elevationM": 46.6
+    },
+    {
+      "distanceM": 2099,
+      "elevationM": 45.9
+    },
+    {
+      "distanceM": 2199,
+      "elevationM": 49.4
+    },
+    {
+      "distanceM": 2299,
+      "elevationM": 47.2
+    },
+    {
+      "distanceM": 2399,
+      "elevationM": 49
+    },
+    {
+      "distanceM": 2499,
+      "elevationM": 52.6
+    },
+    {
+      "distanceM": 2599,
+      "elevationM": 53.2
+    },
+    {
+      "distanceM": 2699,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 2799,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 2899,
+      "elevationM": 48
+    },
+    {
+      "distanceM": 2999,
+      "elevationM": 47.8
+    },
+    {
+      "distanceM": 3099,
+      "elevationM": 47.5
+    },
+    {
+      "distanceM": 3199,
+      "elevationM": 49.9
+    },
+    {
+      "distanceM": 3299,
+      "elevationM": 50.2
+    },
+    {
+      "distanceM": 3399,
+      "elevationM": 53.1
+    },
+    {
+      "distanceM": 3499,
+      "elevationM": 54.4
+    },
+    {
+      "distanceM": 3599,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 3699,
+      "elevationM": 51
+    },
+    {
+      "distanceM": 3799,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 3899,
+      "elevationM": 52.2
+    },
+    {
+      "distanceM": 3999,
+      "elevationM": 51.7
+    },
+    {
+      "distanceM": 4099,
+      "elevationM": 49.6
+    },
+    {
+      "distanceM": 4198,
+      "elevationM": 50.6
+    },
+    {
+      "distanceM": 4298,
+      "elevationM": 49.4
+    },
+    {
+      "distanceM": 4398,
+      "elevationM": 48.9
+    },
+    {
+      "distanceM": 4498,
+      "elevationM": 47.2
+    },
+    {
+      "distanceM": 4598,
+      "elevationM": 45.4
+    },
+    {
+      "distanceM": 4698,
+      "elevationM": 49.4
+    },
+    {
+      "distanceM": 4798,
+      "elevationM": 51.1
+    },
+    {
+      "distanceM": 4898,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 4998,
+      "elevationM": 54
+    },
+    {
+      "distanceM": 5098,
+      "elevationM": 51.9
+    },
+    {
+      "distanceM": 5198,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 5298,
+      "elevationM": 52.3
+    },
+    {
+      "distanceM": 5398,
+      "elevationM": 55.8
+    },
+    {
+      "distanceM": 5498,
+      "elevationM": 55.3
+    },
+    {
+      "distanceM": 5598,
+      "elevationM": 52.2
+    },
+    {
+      "distanceM": 5698,
+      "elevationM": 48.6
+    },
+    {
+      "distanceM": 5798,
+      "elevationM": 42.8
+    },
+    {
+      "distanceM": 5898,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 5998,
+      "elevationM": 42.7
+    },
+    {
+      "distanceM": 6098,
+      "elevationM": 40.3
+    },
+    {
+      "distanceM": 6198,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 6298,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 6398,
+      "elevationM": 38.9
+    },
+    {
+      "distanceM": 6498,
+      "elevationM": 37.1
+    },
+    {
+      "distanceM": 6598,
+      "elevationM": 40.3
+    },
+    {
+      "distanceM": 6698,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 6798,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 6897,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 6997,
+      "elevationM": 42.2
+    },
+    {
+      "distanceM": 7097,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 7197,
+      "elevationM": 40.8
+    },
+    {
+      "distanceM": 7297,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 7397,
+      "elevationM": 40.8
+    },
+    {
+      "distanceM": 7497,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 7597,
+      "elevationM": 41.2
+    },
+    {
+      "distanceM": 7697,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 7797,
+      "elevationM": 40.8
+    },
+    {
+      "distanceM": 7897,
+      "elevationM": 42
+    },
+    {
+      "distanceM": 7997,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 8097,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 8197,
+      "elevationM": 42.8
+    },
+    {
+      "distanceM": 8297,
+      "elevationM": 42.3
+    },
+    {
+      "distanceM": 8397,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 8497,
+      "elevationM": 46.2
+    },
+    {
+      "distanceM": 8597,
+      "elevationM": 43.3
+    },
+    {
+      "distanceM": 8697,
+      "elevationM": 42
+    },
+    {
+      "distanceM": 8797,
+      "elevationM": 42.8
+    },
+    {
+      "distanceM": 8897,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 8997,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 9097,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 9197,
+      "elevationM": 48.4
+    },
+    {
+      "distanceM": 9297,
+      "elevationM": 47.3
+    },
+    {
+      "distanceM": 9397,
+      "elevationM": 51.6
+    },
+    {
+      "distanceM": 9497,
+      "elevationM": 54.1
+    },
+    {
+      "distanceM": 9597,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 9696,
+      "elevationM": 53.8
+    },
+    {
+      "distanceM": 9796,
+      "elevationM": 55.5
+    },
+    {
+      "distanceM": 9896,
+      "elevationM": 51.3
+    },
+    {
+      "distanceM": 9996,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 10096,
+      "elevationM": 48.8
+    },
+    {
+      "distanceM": 10196,
+      "elevationM": 50.7
+    },
+    {
+      "distanceM": 10296,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 10396,
+      "elevationM": 50.6
+    },
+    {
+      "distanceM": 10496,
+      "elevationM": 49
+    },
+    {
+      "distanceM": 10596,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 10696,
+      "elevationM": 51.1
+    },
+    {
+      "distanceM": 10796,
+      "elevationM": 51.5
+    },
+    {
+      "distanceM": 10896,
+      "elevationM": 49.9
+    },
+    {
+      "distanceM": 10996,
+      "elevationM": 48.6
+    },
+    {
+      "distanceM": 11096,
+      "elevationM": 50.3
+    },
+    {
+      "distanceM": 11196,
+      "elevationM": 48.7
+    },
+    {
+      "distanceM": 11296,
+      "elevationM": 47.3
+    },
+    {
+      "distanceM": 11396,
+      "elevationM": 51.3
+    },
+    {
+      "distanceM": 11496,
+      "elevationM": 51.8
+    },
+    {
+      "distanceM": 11596,
+      "elevationM": 51
+    },
+    {
+      "distanceM": 11696,
+      "elevationM": 50.1
+    },
+    {
+      "distanceM": 11796,
+      "elevationM": 50.8
+    },
+    {
+      "distanceM": 11896,
+      "elevationM": 51.6
+    },
+    {
+      "distanceM": 11996,
+      "elevationM": 51.8
+    },
+    {
+      "distanceM": 12096,
+      "elevationM": 50.5
+    },
+    {
+      "distanceM": 12196,
+      "elevationM": 51.7
+    },
+    {
+      "distanceM": 12296,
+      "elevationM": 53.8
+    },
+    {
+      "distanceM": 12396,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 12495,
+      "elevationM": 50.5
+    },
+    {
+      "distanceM": 12595,
+      "elevationM": 51.6
+    },
+    {
+      "distanceM": 12695,
+      "elevationM": 53
+    },
+    {
+      "distanceM": 12795,
+      "elevationM": 54.1
+    },
+    {
+      "distanceM": 12895,
+      "elevationM": 53.3
+    },
+    {
+      "distanceM": 12995,
+      "elevationM": 53.9
+    },
+    {
+      "distanceM": 13095,
+      "elevationM": 55
+    },
+    {
+      "distanceM": 13195,
+      "elevationM": 53.8
+    },
+    {
+      "distanceM": 13295,
+      "elevationM": 52.8
+    },
+    {
+      "distanceM": 13395,
+      "elevationM": 52.7
+    },
+    {
+      "distanceM": 13495,
+      "elevationM": 54.8
+    },
+    {
+      "distanceM": 13595,
+      "elevationM": 55.2
+    },
+    {
+      "distanceM": 13695,
+      "elevationM": 53.3
+    },
+    {
+      "distanceM": 13795,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 13895,
+      "elevationM": 53.7
+    },
+    {
+      "distanceM": 13995,
+      "elevationM": 54.5
+    },
+    {
+      "distanceM": 14095,
+      "elevationM": 57.5
+    },
+    {
+      "distanceM": 14195,
+      "elevationM": 58.1
+    },
+    {
+      "distanceM": 14295,
+      "elevationM": 62.1
+    },
+    {
+      "distanceM": 14395,
+      "elevationM": 66
+    },
+    {
+      "distanceM": 14495,
+      "elevationM": 70.9
+    },
+    {
+      "distanceM": 14595,
+      "elevationM": 69.3
+    },
+    {
+      "distanceM": 14695,
+      "elevationM": 68.8
+    }
+  ]
+}

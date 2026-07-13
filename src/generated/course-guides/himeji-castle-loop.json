@@ -1,0 +1,422 @@
+{
+  "slug": "himeji-castle-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "姫路城の大手門前を起点に、城見台公園、兵庫県立歴史博物館、シロトピア記念公園、千姫の小径をつないで城郭を大きく一周する約5.3kmのコースです。白い大天守をさまざまな方向から望め、内堀や中堀の名残、城下町の街並みも楽しめます。公園内や観光客の多い場所では歩行者を優先して走ってください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR・山陽電鉄 姫路駅から大手前通りを北へ約1km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "山陽姫路駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.828783,
+      "destinationLng": 134.689263,
+      "routeAnchorLat": 34.834855,
+      "routeAnchorLng": 134.693884,
+      "routeMode": "loop",
+      "accessText": "山陽姫路駅からコースまで約800m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.834855,
+      "routeLng": 134.693884,
+      "elevationM": 16.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1142,
+        "section-3": 2134,
+        "section-4": 3192,
+        "section-5": 4274
+      },
+      "gpxHref": "/gpx/himeji-castle-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "京口駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.834672,
+      "destinationLng": 134.70535,
+      "routeAnchorLat": 34.838929,
+      "routeAnchorLng": 134.700669,
+      "routeMode": "loop",
+      "accessText": "京口駅からコースまで約600m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 31,
+      "routeDistanceM": 1142,
+      "routeLat": 34.838929,
+      "routeLng": 134.700669,
+      "elevationM": 18.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4199,
+        "section-2": 0,
+        "section-3": 992,
+        "section-4": 2050,
+        "section-5": 3132
+      },
+      "gpxHref": "/gpx/himeji-castle-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.834855,
+      "anchorLng": 134.693884,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 決してこの為に姫路に来たわけではない！ と強く強く訴える所存w",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/10%E6%9C%881%E6%97%A5%E3%81%AF%E6%97%A5%E6%9C%AC%E9%85%92%E3%81%AE%E6%97%A5%EF%BC%81_%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%E8%A2%AB%E7%81%BD%E5%9C%B0%E7%AD%89%E3%81%B8%E3%83%81%E3%83%A3%E3%83%AA%E3%83%86%E3%82%A3_in_%E5%A7%AB%E8%B7%AF%E5%9F%8E_2016_%2829923105322%29.jpg/960px-10%E6%9C%881%E6%97%A5%E3%81%AF%E6%97%A5%E6%9C%AC%E9%85%92%E3%81%AE%E6%97%A5%EF%BC%81_%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%E8%A2%AB%E7%81%BD%E5%9C%B0%E7%AD%89%E3%81%B8%E3%83%81%E3%83%A3%E3%83%AA%E3%83%86%E3%82%A3_in_%E5%A7%AB%E8%B7%AF%E5%9F%8E_2016_%2829923105322%29.jpg",
+        "alt": "姫路城外周のスタート周辺付近",
+        "caption": "姫路城外周の走路近隣で撮影された風景",
+        "credit": "Tadashi Sugiyama",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:10%E6%9C%881%E6%97%A5%E3%81%AF%E6%97%A5%E6%9C%AC%E9%85%92%E3%81%AE%E6%97%A5%EF%BC%81_%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%E8%A2%AB%E7%81%BD%E5%9C%B0%E7%AD%89%E3%81%B8%E3%83%81%E3%83%A3%E3%83%AA%E3%83%86%E3%82%A3_in_%E5%A7%AB%E8%B7%AF%E5%9F%8E_2016_(29923105322).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.834855,
+      "routeLng": 134.693884,
+      "elevationM": 16.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.838929,
+      "anchorLng": 134.700669,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 姫路東消防署",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Himeji-Higashi_fire_department.jpg/960px-Himeji-Higashi_fire_department.jpg",
+        "alt": "姫路城外周の序盤区間付近",
+        "caption": "姫路城外周の走路近隣で撮影された風景",
+        "credit": "Corpse Reviver",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Himeji-Higashi_fire_department.jpg"
+      },
+      "routePointIndex": 31,
+      "routeDistanceM": 1142,
+      "routeLat": 34.838929,
+      "routeLng": 134.700669,
+      "elevationM": 18.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.844039,
+      "anchorLng": 134.694504,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Japan Castle Research Center in Himeji , Hyogo Prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/HCRCF01s3200.jpg/960px-HCRCF01s3200.jpg",
+        "alt": "姫路城外周の中盤区間付近",
+        "caption": "姫路城外周の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HCRCF01s3200.jpg"
+      },
+      "routePointIndex": 56,
+      "routeDistanceM": 2134,
+      "routeLat": 34.844039,
+      "routeLng": 134.694504,
+      "elevationM": 17.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.841295,
+      "anchorLng": 134.68716,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 姫路城西部を流れる 船場川 。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Senba_river.jpg/960px-Senba_river.jpg",
+        "alt": "姫路城外周の後半区間付近",
+        "caption": "姫路城外周の走路近隣で撮影された風景",
+        "credit": "Corpse Reviver",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Senba_river.jpg"
+      },
+      "routePointIndex": 105,
+      "routeDistanceM": 3192,
+      "routeLat": 34.841295,
+      "routeLng": 134.68716,
+      "elevationM": 16.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.836422,
+      "anchorLng": 134.685994,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 姫路城・灯籠の台石",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Stone_Lantern_Base_in_Himeji_Castle.JPG/960px-Stone_Lantern_Base_in_Himeji_Castle.JPG",
+        "alt": "姫路城外周の終盤区間付近",
+        "caption": "姫路城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stone_Lantern_Base_in_Himeji_Castle.JPG"
+      },
+      "routePointIndex": 141,
+      "routeDistanceM": 4274,
+      "routeLat": 34.836422,
+      "routeLng": 134.685994,
+      "elevationM": 15,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5341,
+  "elevationGainM": 18,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 17.6
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 17.1
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 17.7
+    },
+    {
+      "distanceM": 593,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 692,
+      "elevationM": 18.9
+    },
+    {
+      "distanceM": 791,
+      "elevationM": 18.8
+    },
+    {
+      "distanceM": 890,
+      "elevationM": 19
+    },
+    {
+      "distanceM": 989,
+      "elevationM": 19
+    },
+    {
+      "distanceM": 1088,
+      "elevationM": 18.5
+    },
+    {
+      "distanceM": 1187,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 1286,
+      "elevationM": 18.2
+    },
+    {
+      "distanceM": 1385,
+      "elevationM": 19.6
+    },
+    {
+      "distanceM": 1484,
+      "elevationM": 20
+    },
+    {
+      "distanceM": 1582,
+      "elevationM": 20.7
+    },
+    {
+      "distanceM": 1681,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 1780,
+      "elevationM": 20.9
+    },
+    {
+      "distanceM": 1879,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 1978,
+      "elevationM": 17
+    },
+    {
+      "distanceM": 2077,
+      "elevationM": 17.5
+    },
+    {
+      "distanceM": 2176,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 2275,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 2374,
+      "elevationM": 18.2
+    },
+    {
+      "distanceM": 2473,
+      "elevationM": 18.4
+    },
+    {
+      "distanceM": 2572,
+      "elevationM": 17.7
+    },
+    {
+      "distanceM": 2670,
+      "elevationM": 21.1
+    },
+    {
+      "distanceM": 2769,
+      "elevationM": 21.6
+    },
+    {
+      "distanceM": 2868,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 2967,
+      "elevationM": 20.5
+    },
+    {
+      "distanceM": 3066,
+      "elevationM": 18.3
+    },
+    {
+      "distanceM": 3165,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 3264,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 3363,
+      "elevationM": 15.6
+    },
+    {
+      "distanceM": 3462,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 3561,
+      "elevationM": 15.2
+    },
+    {
+      "distanceM": 3659,
+      "elevationM": 15.2
+    },
+    {
+      "distanceM": 3758,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 3857,
+      "elevationM": 14.8
+    },
+    {
+      "distanceM": 3956,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 4055,
+      "elevationM": 16.1
+    },
+    {
+      "distanceM": 4154,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 4253,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 4352,
+      "elevationM": 15.9
+    },
+    {
+      "distanceM": 4451,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 4550,
+      "elevationM": 13.9
+    },
+    {
+      "distanceM": 4649,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 4747,
+      "elevationM": 15.9
+    },
+    {
+      "distanceM": 4846,
+      "elevationM": 16.2
+    },
+    {
+      "distanceM": 4945,
+      "elevationM": 15.8
+    },
+    {
+      "distanceM": 5044,
+      "elevationM": 15.6
+    },
+    {
+      "distanceM": 5143,
+      "elevationM": 16.1
+    },
+    {
+      "distanceM": 5242,
+      "elevationM": 17.5
+    },
+    {
+      "distanceM": 5341,
+      "elevationM": 16.5
+    }
+  ]
+}

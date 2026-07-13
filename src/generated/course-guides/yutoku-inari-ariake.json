@@ -1,0 +1,914 @@
+{
+  "slug": "yutoku-inari-ariake",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR肥前浜駅を起点に、白壁の酒蔵が並ぶ肥前浜宿を抜けて九州屈指の稲荷社・祐徳稲荷神社へ向かい、参拝後は有明海側へ折り返して太良町の大魚神社海中鳥居まで南下する約18kmのワンウェイ。ゴール後はJR多良駅から列車で戻れる。海中鳥居は干潮時に鳥居の下まで歩ける干満差の大きい有明海ならではのスポット。アップダウンは祐徳稲荷周辺のみで、後半は海を感じる開放的な平坦路が続く。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR長崎本線 肥前浜駅(スタート) / 多良駅(ゴール) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "肥前浜駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.095103,
+      "destinationLng": 130.117079,
+      "routeAnchorLat": 33.095601,
+      "routeAnchorLng": 130.117211,
+      "routeMode": "forward",
+      "accessText": "肥前浜駅からコースまで約60m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.095601,
+      "routeLng": 130.117211,
+      "elevationM": 0,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3912,
+        "section-3": 8915,
+        "section-4": 13365,
+        "section-5": 17822
+      },
+      "gpxHref": "/gpx/yutoku-inari-ariake-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "多良駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.02524,
+      "destinationLng": 130.176049,
+      "routeAnchorLat": 33.025103,
+      "routeAnchorLng": 130.176309,
+      "routeMode": "reverse",
+      "accessText": "多良駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。",
+      "routePointIndex": 497,
+      "routeDistanceM": 17822,
+      "routeLat": 33.025103,
+      "routeLng": 130.176309,
+      "elevationM": 6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 17822,
+        "section-2": 13910,
+        "section-3": 8907,
+        "section-4": 4457,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/yutoku-inari-ariake-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.095601,
+      "anchorLng": 130.117211,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 佐賀県鹿島市・富久千代酒造付近の路地",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/View_near_Fukuchiyo_Brewery.jpg/960px-View_near_Fukuchiyo_Brewery.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居のスタート周辺付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_near_Fukuchiyo_Brewery.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.095601,
+      "routeLng": 130.117211,
+      "elevationM": 0,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.076043,
+      "anchorLng": 130.108708,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 祐徳稲荷神社の参道と大鳥居",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg/960px-Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の序盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg"
+      },
+      "routePointIndex": 116,
+      "routeDistanceM": 3912,
+      "routeLat": 33.076043,
+      "routeLng": 130.108708,
+      "elevationM": 39.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.081561,
+      "anchorLng": 130.138035,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Kashima Coast (Saga, Japan)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kashima_Coast_Saga_Japan_01.jpg/960px-Kashima_Coast_Saga_Japan_01.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の中盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "ja:User:Sanjo",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kashima_Coast_Saga_Japan_01.jpg"
+      },
+      "routePointIndex": 228,
+      "routeDistanceM": 8915,
+      "routeLat": 33.081561,
+      "routeLng": 130.138035,
+      "elevationM": 3.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.054756,
+      "anchorLng": 130.163788,
+      "description": "後半区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "routePointIndex": 366,
+      "routeDistanceM": 13365,
+      "routeLat": 33.054756,
+      "routeLng": 130.163788,
+      "elevationM": 6.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.025103,
+      "anchorLng": 130.176309,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 多良駅の駅名標",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tara_Station_Sign.jpg/960px-Tara_Station_Sign.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の終盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tara_Station_Sign.jpg"
+      },
+      "routePointIndex": 497,
+      "routeDistanceM": 17822,
+      "routeLat": 33.025103,
+      "routeLng": 130.176309,
+      "elevationM": 6,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  },
+  "distanceM": 17822,
+  "elevationGainM": 155,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 0.3
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 1.3
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 0.7
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 597,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 896,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 1095,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 1195,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 1294,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 1394,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 1494,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1593,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 1693,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 1792,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 1892,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 1991,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 2091,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 2190,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 2290,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 2390,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 2489,
+      "elevationM": 15.9
+    },
+    {
+      "distanceM": 2589,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 2688,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 2788,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 2887,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 2987,
+      "elevationM": 21
+    },
+    {
+      "distanceM": 3087,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 3186,
+      "elevationM": 25.3
+    },
+    {
+      "distanceM": 3286,
+      "elevationM": 26.7
+    },
+    {
+      "distanceM": 3385,
+      "elevationM": 26
+    },
+    {
+      "distanceM": 3485,
+      "elevationM": 29.6
+    },
+    {
+      "distanceM": 3584,
+      "elevationM": 31.5
+    },
+    {
+      "distanceM": 3684,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 3784,
+      "elevationM": 36.1
+    },
+    {
+      "distanceM": 3883,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 3983,
+      "elevationM": 41.1
+    },
+    {
+      "distanceM": 4082,
+      "elevationM": 42.3
+    },
+    {
+      "distanceM": 4182,
+      "elevationM": 51.5
+    },
+    {
+      "distanceM": 4281,
+      "elevationM": 42.6
+    },
+    {
+      "distanceM": 4381,
+      "elevationM": 41.1
+    },
+    {
+      "distanceM": 4481,
+      "elevationM": 38.8
+    },
+    {
+      "distanceM": 4580,
+      "elevationM": 36.2
+    },
+    {
+      "distanceM": 4680,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 4779,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 4879,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 4978,
+      "elevationM": 26.3
+    },
+    {
+      "distanceM": 5078,
+      "elevationM": 26.5
+    },
+    {
+      "distanceM": 5177,
+      "elevationM": 25.6
+    },
+    {
+      "distanceM": 5277,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 5377,
+      "elevationM": 21.6
+    },
+    {
+      "distanceM": 5476,
+      "elevationM": 17.6
+    },
+    {
+      "distanceM": 5576,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 5675,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 5775,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 5874,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 5974,
+      "elevationM": 17.1
+    },
+    {
+      "distanceM": 6074,
+      "elevationM": 21.4
+    },
+    {
+      "distanceM": 6173,
+      "elevationM": 18.9
+    },
+    {
+      "distanceM": 6273,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 6372,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 6472,
+      "elevationM": 21.3
+    },
+    {
+      "distanceM": 6571,
+      "elevationM": 25.4
+    },
+    {
+      "distanceM": 6671,
+      "elevationM": 28.7
+    },
+    {
+      "distanceM": 6771,
+      "elevationM": 25.7
+    },
+    {
+      "distanceM": 6870,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 6970,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 7069,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 7169,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 7268,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 7368,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 7468,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 7567,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 7667,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 7766,
+      "elevationM": 0.5
+    },
+    {
+      "distanceM": 7866,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 7965,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 8065,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 8164,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 8264,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 8364,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 8463,
+      "elevationM": 0.3
+    },
+    {
+      "distanceM": 8563,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 8662,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 8762,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 8861,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 8961,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 9061,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 9160,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 9260,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 9359,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 9459,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 9558,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 9658,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 9758,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 9857,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 9957,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 10056,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 10156,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 10255,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 10355,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 10455,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 10554,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 10654,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 10753,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 10853,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 10952,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 11052,
+      "elevationM": 4.9
+    },
+    {
+      "distanceM": 11151,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 11251,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 11351,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 11450,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 11550,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 11649,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 11749,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 11848,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 11948,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 12048,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 12147,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 12247,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 12346,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 12446,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 12545,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 12645,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 12745,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 12844,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 12944,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 13043,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 13143,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 13242,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 13342,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 13442,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 13541,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 13641,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 13740,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 13840,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 13939,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 14039,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 14138,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 14238,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 14338,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 14437,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 14537,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 14636,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 14736,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 14835,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 14935,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 15035,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 15134,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 15234,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 15333,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 15433,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 15532,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 15632,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 15732,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 15831,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 15931,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 16030,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 16130,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 16229,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 16329,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 16429,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 16528,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 16628,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 16727,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 16827,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 16926,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 17026,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 17125,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 17225,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 17325,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 17424,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 17524,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 17623,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 17723,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 17822,
+      "elevationM": 6
+    }
+  ]
+}

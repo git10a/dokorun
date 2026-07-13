@@ -1,0 +1,140 @@
+{
+  "slug": "yamanakagoe-tetsugaku",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "京阪滋賀里駅を起点に、比叡山南麓の山中越(県道30号)で山中町の峠集落を越えて京都・北白川へ下る片道コース。銀閣寺橋からは琵琶湖疏水分線沿いの哲学の道を南下し、南禅寺の水路閣がゴール。前半で約350mを登る本格的な峠走、後半は桜並木の静かな小径と、雰囲気の違いを楽しめる。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点は京阪石山坂本線滋賀里駅。ゴールの南禅寺から地下鉄蹴上駅まで徒歩約10分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "唐崎駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.049795,
+      "destinationLng": 135.866969,
+      "routeAnchorLat": 35.050011,
+      "routeAnchorLng": 135.866889,
+      "routeMode": "forward",
+      "accessText": "唐崎駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "蹴上駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.008037,
+      "destinationLng": 135.790227,
+      "routeAnchorLat": 35.010567,
+      "routeAnchorLng": 135.794499,
+      "routeMode": "reverse",
+      "accessText": "蹴上駅からコースまで約480m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.050011,
+      "anchorLng": 135.866889,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: マルフク看板 大津市滋賀里1丁目",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_%281%29.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_%281%29.jpg",
+        "alt": "山中越・哲学の道のスタート周辺付近",
+        "caption": "山中越・哲学の道の走路近隣で撮影された風景",
+        "credit": "marufuku_sign_collec…",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_(1).jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.02775,
+      "anchorLng": 135.849778,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 近江神宮・外院回廊",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Outer_Cloister_of_Omi_Shrine_2.jpg/960px-Outer_Cloister_of_Omi_Shrine_2.jpg",
+        "alt": "山中越・哲学の道の序盤区間付近",
+        "caption": "山中越・哲学の道の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outer_Cloister_of_Omi_Shrine_2.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.04031,
+      "anchorLng": 135.823814,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: View of Otsu city and Lake Biwa, Shiga Prefecture, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/View_of_Otsu_city_and_Lake_Biwa.jpg/960px-View_of_Otsu_city_and_Lake_Biwa.jpg",
+        "alt": "山中越・哲学の道の中盤区間付近",
+        "caption": "山中越・哲学の道の走路近隣で撮影された風景",
+        "credit": "Ita140188",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Otsu_city_and_Lake_Biwa.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.032485,
+      "anchorLng": 135.796411,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: マルフク看板 京都市左京区北白川下別当町",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg",
+        "alt": "山中越・哲学の道の後半区間付近",
+        "caption": "山中越・哲学の道の走路近隣で撮影された風景",
+        "credit": "marufuku_sign_collec…",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.010567,
+      "anchorLng": 135.794499,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Nanzen-ji (南禅寺) is a Zen Buddhist temple in Kyoto, Japan.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zen_Garden%2C_Nanzen-ji_Temple_%287005735830%29_%283%29.jpg/960px-Zen_Garden%2C_Nanzen-ji_Temple_%287005735830%29_%283%29.jpg",
+        "alt": "山中越・哲学の道の終盤区間付近",
+        "caption": "山中越・哲学の道の走路近隣で撮影された風景",
+        "credit": "BriYYZ from Toronto, Canada",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zen_Garden,_Nanzen-ji_Temple_(7005735830)_(3).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

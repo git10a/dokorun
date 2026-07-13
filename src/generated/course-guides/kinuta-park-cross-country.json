@@ -1,0 +1,274 @@
+{
+  "slug": "kinuta-park-cross-country",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "元は都営ゴルフ場だった砧公園の、うねりのある芝生と木立を生かした1周約1.7kmの内周コース。適度な起伏の不整地を周回するクロスカントリー走ができ、実業団や大学の長距離チームも練習に訪れる。芝生の上にはランナーが踏み固めた細い走路が浮かび上がっており、初めてでも迷わず周回できる。木の根の張り出しには注意。園内は桜の名所で、1周約1.7kmのサイクリングロード外周と組み合わせれば距離も伸ばせる。トイレ・自販機・有料駐車場あり。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東急田園都市線用賀駅から徒歩約20分。東名高速東京IC至近(有料駐車場あり) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "用賀駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.626436,
+      "destinationLng": 139.633928,
+      "routeAnchorLat": 35.629039,
+      "routeAnchorLng": 139.620073,
+      "routeMode": "loop",
+      "accessText": "用賀駅からコースまで約1290m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.629039,
+      "routeLng": 139.620073,
+      "elevationM": 45.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 331,
+        "section-3": 665,
+        "section-4": 998,
+        "section-5": 1330
+      },
+      "gpxHref": "/gpx/kinuta-park-cross-country-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "祖師ヶ谷大蔵駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.643236,
+      "destinationLng": 139.609659,
+      "routeAnchorLat": 35.630649,
+      "routeAnchorLng": 139.615944,
+      "routeMode": "loop",
+      "accessText": "祖師ヶ谷大蔵駅からコースまで約1510m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 62,
+      "routeDistanceM": 665,
+      "routeLat": 35.630649,
+      "routeLng": 139.615944,
+      "elevationM": 44,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 999,
+        "section-2": 1330,
+        "section-3": 0,
+        "section-4": 333,
+        "section-5": 665
+      },
+      "gpxHref": "/gpx/kinuta-park-cross-country-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.629039,
+      "anchorLng": 139.620073,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 東名高速脇、伐れずの木",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%E6%9D%B1%E5%90%8D%E9%AB%98%E9%80%9F%E8%84%87%E3%80%81%E4%BC%90%E3%82%8C%E3%81%9A%E3%81%AE%E6%9C%A8_-_panoramio.jpg/960px-%E6%9D%B1%E5%90%8D%E9%AB%98%E9%80%9F%E8%84%87%E3%80%81%E4%BC%90%E3%82%8C%E3%81%9A%E3%81%AE%E6%9C%A8_-_panoramio.jpg",
+        "alt": "砧公園クロカンコースのスタート周辺付近",
+        "caption": "砧公園クロカンコースの走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E5%90%8D%E9%AB%98%E9%80%9F%E8%84%87%E3%80%81%E4%BC%90%E3%82%8C%E3%81%9A%E3%81%AE%E6%9C%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.629039,
+      "routeLng": 139.620073,
+      "elevationM": 45.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.629059,
+      "anchorLng": 139.61659,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 国鉄C57型蒸気機関車57号機。世田谷区の大蔵運動公園にて静態保存",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Jnr-c5757_%282%29.jpg/960px-Jnr-c5757_%282%29.jpg",
+        "alt": "砧公園クロカンコースの序盤区間付近",
+        "caption": "砧公園クロカンコースの走路近隣で撮影された風景",
+        "credit": "Stealth3327 This photo was taken with Fujifilm X-A1",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jnr-c5757_(2).jpg"
+      },
+      "routePointIndex": 19,
+      "routeDistanceM": 331,
+      "routeLat": 35.629059,
+      "routeLng": 139.61659,
+      "elevationM": 40.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.630649,
+      "anchorLng": 139.615944,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 国鉄C57型蒸気機関車57号機。世田谷区の大蔵運動公園にて静態保存",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Jnr-c5757_%282%29.jpg/960px-Jnr-c5757_%282%29.jpg",
+        "alt": "砧公園クロカンコースの中盤区間付近",
+        "caption": "砧公園クロカンコースの走路近隣で撮影された風景",
+        "credit": "Stealth3327 This photo was taken with Fujifilm X-A1",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jnr-c5757_(2).jpg"
+      },
+      "routePointIndex": 62,
+      "routeDistanceM": 665,
+      "routeLat": 35.630649,
+      "routeLng": 139.615944,
+      "elevationM": 44,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.632697,
+      "anchorLng": 139.617723,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 世田谷美術館",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg/960px-%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg",
+        "alt": "砧公園クロカンコースの後半区間付近",
+        "caption": "砧公園クロカンコースの走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 91,
+      "routeDistanceM": 998,
+      "routeLat": 35.632697,
+      "routeLng": 139.617723,
+      "elevationM": 48.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.631667,
+      "anchorLng": 139.620395,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 世田谷美術館",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg/960px-%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg",
+        "alt": "砧公園クロカンコースの終盤区間付近",
+        "caption": "砧公園クロカンコースの走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%96%E7%94%B0%E8%B0%B7%E7%BE%8E%E8%A1%93%E9%A4%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 130,
+      "routeDistanceM": 1330,
+      "routeLat": 35.631667,
+      "routeLng": 139.620395,
+      "elevationM": 41.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1664,
+  "elevationGainM": 22,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 45.5
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 196,
+      "elevationM": 47.4
+    },
+    {
+      "distanceM": 294,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 391,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 489,
+      "elevationM": 42.5
+    },
+    {
+      "distanceM": 587,
+      "elevationM": 43.8
+    },
+    {
+      "distanceM": 685,
+      "elevationM": 44.5
+    },
+    {
+      "distanceM": 783,
+      "elevationM": 46.1
+    },
+    {
+      "distanceM": 881,
+      "elevationM": 46.9
+    },
+    {
+      "distanceM": 979,
+      "elevationM": 49.3
+    },
+    {
+      "distanceM": 1077,
+      "elevationM": 42.6
+    },
+    {
+      "distanceM": 1174,
+      "elevationM": 39.8
+    },
+    {
+      "distanceM": 1272,
+      "elevationM": 40.9
+    },
+    {
+      "distanceM": 1370,
+      "elevationM": 40.7
+    },
+    {
+      "distanceM": 1468,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 1566,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 1664,
+      "elevationM": 45.5
+    }
+  ]
+}

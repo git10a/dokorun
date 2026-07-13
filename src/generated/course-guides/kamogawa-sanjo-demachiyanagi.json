@@ -1,0 +1,375 @@
+{
+  "slug": "kamogawa-sanjo-demachiyanagi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "京都の街なかランの王道区間で、三条大橋から出町柳までは片道およそ2.3kmです。河川敷に下りれば信号に止められにくく、川の流れや比叡山方面の眺めを感じながら一定ペースで走れます。周辺に橋が多いため距離調整もしやすく、観光や仕事の合間の朝ランにも好相性です。ジョグからテンポ走まで幅広く対応でき、京都でまず名前が挙がる代表的なリバーサイドです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京阪本線 三条駅から徒歩約3分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "三条京阪駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.009278,
+      "destinationLng": 135.773773,
+      "routeAnchorLat": 35.009499,
+      "routeAnchorLng": 135.773946,
+      "routeMode": "forward",
+      "accessText": "三条京阪駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.009499,
+      "routeLng": 135.773946,
+      "elevationM": 46.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1012,
+        "section-3": 1973,
+        "section-4": 1973,
+        "section-5": 1012
+      },
+      "gpxHref": "/gpx/kamogawa-sanjo-demachiyanagi-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.009499,
+      "anchorLng": 135.773946,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 三条京阪駅の駅名標",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sanjo-Keihan_Station_Sign.jpg/960px-Sanjo-Keihan_Station_Sign.jpg",
+        "alt": "鴨川河川敷(三条大橋〜出町柳)のスタート周辺付近",
+        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanjo-Keihan_Station_Sign.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.009499,
+      "routeLng": 135.773946,
+      "elevationM": 46.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.017365,
+      "anchorLng": 135.772329,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: View of Kamo River from Marutamachi bridge.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamogawa_from_Marutamachi.jpg/960px-Kamogawa_from_Marutamachi.jpg",
+        "alt": "鴨川河川敷(三条大橋〜出町柳)の序盤区間付近",
+        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
+        "credit": "Myself",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamogawa_from_Marutamachi.jpg"
+      },
+      "routePointIndex": 22,
+      "routeDistanceM": 1012,
+      "routeLat": 35.017365,
+      "routeLng": 135.772329,
+      "elevationM": 43.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.026,
+      "anchorLng": 135.772388,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Inside Keihan 5000 carriage",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Keihan_5000_inside.JPG/960px-Keihan_5000_inside.JPG",
+        "alt": "鴨川河川敷(三条大橋〜出町柳)の中盤区間付近",
+        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
+        "credit": "Hahifuheho",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keihan_5000_inside.JPG"
+      },
+      "routePointIndex": 42,
+      "routeDistanceM": 1973,
+      "routeLat": 35.026,
+      "routeLng": 135.772388,
+      "elevationM": 50.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.026,
+      "anchorLng": 135.772388,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Inside Keihan 5000 carriage",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Keihan_5000_inside.JPG/960px-Keihan_5000_inside.JPG",
+        "alt": "鴨川河川敷(三条大橋〜出町柳)の後半区間付近",
+        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
+        "credit": "Hahifuheho",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keihan_5000_inside.JPG"
+      },
+      "routePointIndex": 42,
+      "routeDistanceM": 1973,
+      "routeLat": 35.026,
+      "routeLng": 135.772388,
+      "elevationM": 50.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.017365,
+      "anchorLng": 135.772329,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: View of Kamo River from Marutamachi bridge.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamogawa_from_Marutamachi.jpg/960px-Kamogawa_from_Marutamachi.jpg",
+        "alt": "鴨川河川敷(三条大橋〜出町柳)の終盤区間付近",
+        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
+        "credit": "Myself",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamogawa_from_Marutamachi.jpg"
+      },
+      "routePointIndex": 22,
+      "routeDistanceM": 1012,
+      "routeLat": 35.017365,
+      "routeLng": 135.772329,
+      "elevationM": 43.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 4881,
+  "elevationGainM": 18,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 46.5
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 44.7
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 43.8
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 42.4
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 43.1
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 43.6
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 45.6
+    },
+    {
+      "distanceM": 1195,
+      "elevationM": 47
+    },
+    {
+      "distanceM": 1295,
+      "elevationM": 46.9
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 47.6
+    },
+    {
+      "distanceM": 1494,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 1594,
+      "elevationM": 47.8
+    },
+    {
+      "distanceM": 1694,
+      "elevationM": 48.8
+    },
+    {
+      "distanceM": 1793,
+      "elevationM": 51.9
+    },
+    {
+      "distanceM": 1893,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 1992,
+      "elevationM": 50.7
+    },
+    {
+      "distanceM": 2092,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 2192,
+      "elevationM": 51.5
+    },
+    {
+      "distanceM": 2291,
+      "elevationM": 50.5
+    },
+    {
+      "distanceM": 2391,
+      "elevationM": 49.6
+    },
+    {
+      "distanceM": 2490,
+      "elevationM": 49.6
+    },
+    {
+      "distanceM": 2590,
+      "elevationM": 51.2
+    },
+    {
+      "distanceM": 2690,
+      "elevationM": 51.5
+    },
+    {
+      "distanceM": 2789,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 2889,
+      "elevationM": 50.7
+    },
+    {
+      "distanceM": 2989,
+      "elevationM": 50
+    },
+    {
+      "distanceM": 3088,
+      "elevationM": 51.9
+    },
+    {
+      "distanceM": 3188,
+      "elevationM": 48.8
+    },
+    {
+      "distanceM": 3287,
+      "elevationM": 47.8
+    },
+    {
+      "distanceM": 3387,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 3487,
+      "elevationM": 47.6
+    },
+    {
+      "distanceM": 3586,
+      "elevationM": 46.9
+    },
+    {
+      "distanceM": 3686,
+      "elevationM": 47
+    },
+    {
+      "distanceM": 3786,
+      "elevationM": 45.6
+    },
+    {
+      "distanceM": 3885,
+      "elevationM": 43.6
+    },
+    {
+      "distanceM": 3985,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 4084,
+      "elevationM": 43.1
+    },
+    {
+      "distanceM": 4184,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 4284,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 4383,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 4483,
+      "elevationM": 42.4
+    },
+    {
+      "distanceM": 4582,
+      "elevationM": 43.8
+    },
+    {
+      "distanceM": 4682,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 4782,
+      "elevationM": 44.7
+    },
+    {
+      "distanceM": 4881,
+      "elevationM": 47.3
+    }
+  ]
+}

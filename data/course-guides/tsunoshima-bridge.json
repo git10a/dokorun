@@ -1,0 +1,140 @@
+{
+  "slug": "tsunoshima-bridge",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR特牛駅を起点に海士ヶ瀬公園まで北上し、全長約1780mの角島大橋でコバルトブルーの海峡を渡って島を横断、西端の角島灯台公園で折り返して橋を渡り返し、ホテル西長門リゾート前まで走る約20.6km。橋の上は路肩が狭いので車に十分注意。トイレは海士ヶ瀬公園と灯台公園にあり、島内にも自販機がある。丘越えが続き獲得標高は約300m。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR山陰本線特牛駅からスタート。海士ヶ瀬公園に無料駐車場あり 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "特牛駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.305979,
+      "destinationLng": 130.91887,
+      "routeAnchorLat": 34.30608,
+      "routeAnchorLng": 130.918911,
+      "routeMode": "forward",
+      "accessText": "特牛駅からコースまで約10m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "コース終点側",
+      "badge": "コース起点",
+      "destinationLat": 34.343091,
+      "destinationLng": 130.891234,
+      "routeAnchorLat": 34.343091,
+      "routeAnchorLng": 130.891234,
+      "routeMode": "reverse",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.30608,
+      "anchorLng": 130.918911,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 山陰本線普通列車の整理券(特牛駅)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Numbered_ticket_of_San%27in_Main_Line_%28Kottoi_Station%29.jpg/960px-Numbered_ticket_of_San%27in_Main_Line_%28Kottoi_Station%29.jpg",
+        "alt": "角島大橋・角島灯台のスタート周辺付近",
+        "caption": "角島大橋・角島灯台の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Numbered_ticket_of_San%27in_Main_Line_(Kottoi_Station).jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.339761,
+      "anchorLng": 130.917582,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 角島大橋",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg/960px-%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg",
+        "alt": "角島大橋・角島灯台の序盤区間付近",
+        "caption": "角島大橋・角島灯台の走路近隣で撮影された風景",
+        "credit": "sk01",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.355721,
+      "anchorLng": 130.873095,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Park of the wind of Makizaki ［Sunset］ 山口県下関市にある 牧崎風の公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Park_of_the_wind_of_Makizaki_%EF%BC%BBSunset%EF%BC%BD_%E7%89%A7%E5%B4%8E%E9%A2%A8%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio_%281%29.jpg/960px-Park_of_the_wind_of_Makizaki_%EF%BC%BBSunset%EF%BC%BD_%E7%89%A7%E5%B4%8E%E9%A2%A8%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio_%281%29.jpg",
+        "alt": "角島大橋・角島灯台の中盤区間付近",
+        "caption": "角島大橋・角島灯台の走路近隣で撮影された風景",
+        "credit": "nanamori",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Park_of_the_wind_of_Makizaki_%EF%BC%BBSunset%EF%BC%BD_%E7%89%A7%E5%B4%8E%E9%A2%A8%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio_(1).jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.353936,
+      "anchorLng": 130.856404,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 角島灯台",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/%E8%A7%92%E5%B3%B6%E7%81%AF%E5%8F%B0_-_panoramio.jpg/960px-%E8%A7%92%E5%B3%B6%E7%81%AF%E5%8F%B0_-_panoramio.jpg",
+        "alt": "角島大橋・角島灯台の後半区間付近",
+        "caption": "角島大橋・角島灯台の走路近隣で撮影された風景",
+        "credit": "sk01",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%A7%92%E5%B3%B6%E7%81%AF%E5%8F%B0_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.343091,
+      "anchorLng": 130.891234,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 角島大橋",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg/960px-%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg",
+        "alt": "角島大橋・角島灯台の終盤区間付近",
+        "caption": "角島大橋・角島灯台の走路近隣で撮影された風景",
+        "credit": "sk01",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%A7%92%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "slug": "inokashira-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "井の頭恩賜公園は池を囲む約1.5km周回が取りやすく、吉祥寺の街ラン拠点として非常に人気があります。路面は舗装と石畳が主体で、木陰と水辺の雰囲気が心地良く、駅から近いのに自然感があるのが魅力です。大きな上りはないものの細かな起伏はあり、単調になりません。観光客の少ない朝に走れば景色を楽しみながらゆったり距離を積め、普段のジョグや回復走、旅先ラン、カフェ利用と組み合わせた休日ランに向きます。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京王井の頭線 井の頭公園駅から徒歩5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "吉祥寺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.702291,
+      "destinationLng": 139.580306,
+      "routeAnchorLat": 35.700497,
+      "routeAnchorLng": 139.577514,
+      "routeMode": "loop",
+      "accessText": "吉祥寺駅からコースまで約320m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.700497,
+      "routeLng": 139.577514,
+      "elevationM": 48.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 311,
+        "section-3": 618,
+        "section-4": 931,
+        "section-5": 1243
+      },
+      "gpxHref": "/gpx/inokashira-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "井の頭公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.697304,
+      "destinationLng": 139.583112,
+      "routeAnchorLat": 35.698352,
+      "routeAnchorLng": 139.579307,
+      "routeMode": "loop",
+      "accessText": "井の頭公園駅からコースまで約360m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 73,
+      "routeDistanceM": 931,
+      "routeLat": 35.698352,
+      "routeLng": 139.579307,
+      "elevationM": 58.2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 626,
+        "section-2": 937,
+        "section-3": 1244,
+        "section-4": 0,
+        "section-5": 312
+      },
+      "gpxHref": "/gpx/inokashira-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.700497,
+      "anchorLng": 139.577514,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: @井の頭公園",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/%E3%82%B3%E3%82%A4%E3%83%8E%E3%82%A8%E3%82%B5_%28181299693%29.jpg/960px-%E3%82%B3%E3%82%A4%E3%83%8E%E3%82%A8%E3%82%B5_%28181299693%29.jpg",
+        "alt": "井の頭恩賜公園のスタート周辺付近",
+        "caption": "井の頭恩賜公園の走路近隣で撮影された風景",
+        "credit": "Shinichi Sugiyama",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%B3%E3%82%A4%E3%83%8E%E3%82%A8%E3%82%B5_(181299693).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.700497,
+      "routeLng": 139.577514,
+      "elevationM": 48.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.700416,
+      "anchorLng": 139.575041,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: This photo is taken at Inokashira Park Zoo. 撮影場所：井の頭自然文化園 Canon EOS 7D + Canon EF 70-200mm F2.8L USM",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Duck%27s_wing_%284563153954%29.jpg/960px-Duck%27s_wing_%284563153954%29.jpg",
+        "alt": "井の頭恩賜公園の序盤区間付近",
+        "caption": "井の頭恩賜公園の走路近隣で撮影された風景",
+        "credit": "Takashi Hososhima from Tokyo, Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Duck%27s_wing_(4563153954).jpg"
+      },
+      "routePointIndex": 24,
+      "routeDistanceM": 311,
+      "routeLat": 35.700416,
+      "routeLng": 139.575041,
+      "elevationM": 54,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.699361,
+      "anchorLng": 139.576196,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 井の頭恩賜公園・井の頭池七井橋 2014.01.05 06:41",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/%E4%BA%95%E3%81%AE%E9%A0%AD%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92%E3%83%BB%E4%BA%95%E3%81%AE%E9%A0%AD%E6%B1%A0%E4%B8%83%E4%BA%95%E6%A9%8B_2014.01.05_06-41_-_panoramio.jpg/960px-%E4%BA%95%E3%81%AE%E9%A0%AD%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92%E3%83%BB%E4%BA%95%E3%81%AE%E9%A0%AD%E6%B1%A0%E4%B8%83%E4%BA%95%E6%A9%8B_2014.01.05_06-41_-_panoramio.jpg",
+        "alt": "井の頭恩賜公園の中盤区間付近",
+        "caption": "井の頭恩賜公園の走路近隣で撮影された風景",
+        "credit": "Mitsuyoshi Kondo",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%95%E3%81%AE%E9%A0%AD%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92%E3%83%BB%E4%BA%95%E3%81%AE%E9%A0%AD%E6%B1%A0%E4%B8%83%E4%BA%95%E6%A9%8B_2014.01.05_06-41_-_panoramio.jpg"
+      },
+      "routePointIndex": 48,
+      "routeDistanceM": 618,
+      "routeLat": 35.699361,
+      "routeLng": 139.576196,
+      "elevationM": 56.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.698352,
+      "anchorLng": 139.579307,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: [ Nikon D4, Nikon AF-S NIKKOR 85mm f/1.4G, f/2.0, 1/30sec, ISO18102, Lightroom 4.4 ]",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Sakura_evening_%288626408072%29.jpg/960px-Sakura_evening_%288626408072%29.jpg",
+        "alt": "井の頭恩賜公園の後半区間付近",
+        "caption": "井の頭恩賜公園の走路近隣で撮影された風景",
+        "credit": "Takashi Hososhima from Tokyo, Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sakura_evening_(8626408072).jpg"
+      },
+      "routePointIndex": 73,
+      "routeDistanceM": 931,
+      "routeLat": 35.698352,
+      "routeLng": 139.579307,
+      "elevationM": 58.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.698664,
+      "anchorLng": 139.58008,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Tokyo 2011-04-15",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Inokashira_park_%287475543280%29.jpg/960px-Inokashira_park_%287475543280%29.jpg",
+        "alt": "井の頭恩賜公園の終盤区間付近",
+        "caption": "井の頭恩賜公園の走路近隣で撮影された風景",
+        "credit": "KimonBerlin",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inokashira_park_(7475543280).jpg"
+      },
+      "routePointIndex": 97,
+      "routeDistanceM": 1243,
+      "routeLat": 35.698664,
+      "routeLng": 139.58008,
+      "elevationM": 58,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1557,
+  "elevationGainM": 18,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 48.7
+    },
+    {
+      "distanceM": 97,
+      "elevationM": 55.1
+    },
+    {
+      "distanceM": 195,
+      "elevationM": 58.4
+    },
+    {
+      "distanceM": 292,
+      "elevationM": 55.2
+    },
+    {
+      "distanceM": 389,
+      "elevationM": 59.4
+    },
+    {
+      "distanceM": 487,
+      "elevationM": 57.3
+    },
+    {
+      "distanceM": 584,
+      "elevationM": 56.2
+    },
+    {
+      "distanceM": 681,
+      "elevationM": 56
+    },
+    {
+      "distanceM": 779,
+      "elevationM": 56.6
+    },
+    {
+      "distanceM": 876,
+      "elevationM": 58.8
+    },
+    {
+      "distanceM": 973,
+      "elevationM": 58
+    },
+    {
+      "distanceM": 1071,
+      "elevationM": 57.4
+    },
+    {
+      "distanceM": 1168,
+      "elevationM": 56.4
+    },
+    {
+      "distanceM": 1265,
+      "elevationM": 58
+    },
+    {
+      "distanceM": 1363,
+      "elevationM": 56.4
+    },
+    {
+      "distanceM": 1460,
+      "elevationM": 53.4
+    },
+    {
+      "distanceM": 1557,
+      "elevationM": 48.5
+    }
+  ]
+}

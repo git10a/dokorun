@@ -1,0 +1,729 @@
+{
+  "slug": "satsukiyama-ikeda-trail",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "阪急池田駅から五月山公園へ上がり、日の丸展望台・五月平展望台を結ぶ遊歩道と五月山ドライブウェイ沿いに東進してようらく台園地方面へ。東斜面のトレイルで下山し市街地を駅へ戻る約12.3kmの周回。標高315mの低山ながら累積約480mあり、展望台からは大阪平野や伊丹空港を一望できる。五月山公園にトイレ・自販機あり。夜景の名所だが山中は照明がないため明るい時間帯の走行が前提。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 阪急宝塚線 池田駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "池田駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.821544,
+      "destinationLng": 135.425797,
+      "routeAnchorLat": 34.821823,
+      "routeAnchorLng": 135.425623,
+      "routeMode": "loop",
+      "accessText": "池田駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.821823,
+      "routeLng": 135.425623,
+      "elevationM": 28.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 888,
+        "section-3": 4911,
+        "section-4": 7380,
+        "section-5": 9757
+      },
+      "gpxHref": "/gpx/satsukiyama-ikeda-trail-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "絹延橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.834809,
+      "destinationLng": 135.423025,
+      "routeAnchorLat": 34.828406,
+      "routeAnchorLng": 135.425952,
+      "routeMode": "loop",
+      "accessText": "絹延橋駅からコースまで約760m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 44,
+      "routeDistanceM": 888,
+      "routeLat": 34.828406,
+      "routeLng": 135.425952,
+      "elevationM": 37,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 11419,
+        "section-2": 0,
+        "section-3": 4023,
+        "section-4": 6492,
+        "section-5": 8869
+      },
+      "gpxHref": "/gpx/satsukiyama-ikeda-trail-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "箕面駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.834404,
+      "destinationLng": 135.46819,
+      "routeAnchorLat": 34.837048,
+      "routeAnchorLng": 135.44897,
+      "routeMode": "loop",
+      "accessText": "箕面駅からコースまで約1780m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 468,
+      "routeDistanceM": 7380,
+      "routeLat": 34.837048,
+      "routeLng": 135.44897,
+      "elevationM": 255.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4927,
+        "section-2": 5815,
+        "section-3": 9838,
+        "section-4": 0,
+        "section-5": 2377
+      },
+      "gpxHref": "/gpx/satsukiyama-ikeda-trail-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.821823,
+      "anchorLng": 135.425623,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 池田 インスタントラーメン発明記念館",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E7%99%BA%E6%98%8E%E8%A8%98%E5%BF%B5%E9%A4%A8_%288738456552%29.jpg/960px-%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E7%99%BA%E6%98%8E%E8%A8%98%E5%BF%B5%E9%A4%A8_%288738456552%29.jpg",
+        "alt": "五月山・ようらく台園地のスタート周辺付近",
+        "caption": "五月山・ようらく台園地の走路近隣で撮影された風景",
+        "credit": "Richard, enjoy my life!",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E7%99%BA%E6%98%8E%E8%A8%98%E5%BF%B5%E9%A4%A8_(8738456552).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.821823,
+      "routeLng": 135.425623,
+      "elevationM": 28.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.828406,
+      "anchorLng": 135.425952,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Itsuo Art Museum in Ikeda , Osaka prefecture , Japan .",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg/960px-150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg",
+        "alt": "五月山・ようらく台園地の序盤区間付近",
+        "caption": "五月山・ようらく台園地の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg"
+      },
+      "routePointIndex": 44,
+      "routeDistanceM": 888,
+      "routeLat": 34.828406,
+      "routeLng": 135.425952,
+      "elevationM": 37,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.835232,
+      "anchorLng": 135.437822,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 大阪府 池田市",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ikeda-Jo%28Settsu%29_01.jpg/960px-Ikeda-Jo%28Settsu%29_01.jpg",
+        "alt": "五月山・ようらく台園地の中盤区間付近",
+        "caption": "五月山・ようらく台園地の走路近隣で撮影された風景",
+        "credit": "Maechan0360",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ikeda-Jo(Settsu)_01.jpg"
+      },
+      "routePointIndex": 344,
+      "routeDistanceM": 4911,
+      "routeLat": 34.835232,
+      "routeLng": 135.437822,
+      "elevationM": 271,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.837048,
+      "anchorLng": 135.44897,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 五月山から見た大阪",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Osaka_view_from_Satsukiyama_%2839014654694%29.jpg/960px-Osaka_view_from_Satsukiyama_%2839014654694%29.jpg",
+        "alt": "五月山・ようらく台園地の後半区間付近",
+        "caption": "五月山・ようらく台園地の走路近隣で撮影された風景",
+        "credit": "Raita Futo from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_view_from_Satsukiyama_(39014654694).jpg"
+      },
+      "routePointIndex": 468,
+      "routeDistanceM": 7380,
+      "routeLat": 34.837048,
+      "routeLng": 135.44897,
+      "elevationM": 255.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.830898,
+      "anchorLng": 135.442118,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Itsuo Art Museum in Ikeda , Osaka prefecture , Japan .",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg/960px-150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg",
+        "alt": "五月山・ようらく台園地の終盤区間付近",
+        "caption": "五月山・ようらく台園地の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:150214_Itsuo_Art_Museum_Ikeda_Osaka_pref_Japan01n.jpg"
+      },
+      "routePointIndex": 605,
+      "routeDistanceM": 9757,
+      "routeLat": 34.830898,
+      "routeLng": 135.442118,
+      "elevationM": 113.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 12307,
+  "elevationGainM": 477,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 28.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 26.8
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 27.8
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 29.6
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 30.1
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 27.8
+    },
+    {
+      "distanceM": 695,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 794,
+      "elevationM": 32.9
+    },
+    {
+      "distanceM": 893,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 993,
+      "elevationM": 50.6
+    },
+    {
+      "distanceM": 1092,
+      "elevationM": 54.3
+    },
+    {
+      "distanceM": 1191,
+      "elevationM": 55.1
+    },
+    {
+      "distanceM": 1290,
+      "elevationM": 70.1
+    },
+    {
+      "distanceM": 1390,
+      "elevationM": 82
+    },
+    {
+      "distanceM": 1489,
+      "elevationM": 102.9
+    },
+    {
+      "distanceM": 1588,
+      "elevationM": 119.1
+    },
+    {
+      "distanceM": 1687,
+      "elevationM": 139.2
+    },
+    {
+      "distanceM": 1787,
+      "elevationM": 150.2
+    },
+    {
+      "distanceM": 1886,
+      "elevationM": 130.9
+    },
+    {
+      "distanceM": 1985,
+      "elevationM": 111
+    },
+    {
+      "distanceM": 2084,
+      "elevationM": 89.2
+    },
+    {
+      "distanceM": 2184,
+      "elevationM": 76.1
+    },
+    {
+      "distanceM": 2283,
+      "elevationM": 61.5
+    },
+    {
+      "distanceM": 2382,
+      "elevationM": 47.4
+    },
+    {
+      "distanceM": 2481,
+      "elevationM": 35.6
+    },
+    {
+      "distanceM": 2581,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 2680,
+      "elevationM": 29.5
+    },
+    {
+      "distanceM": 2779,
+      "elevationM": 28.6
+    },
+    {
+      "distanceM": 2878,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 2978,
+      "elevationM": 37.9
+    },
+    {
+      "distanceM": 3077,
+      "elevationM": 41.9
+    },
+    {
+      "distanceM": 3176,
+      "elevationM": 43.6
+    },
+    {
+      "distanceM": 3275,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 3375,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 3474,
+      "elevationM": 56.1
+    },
+    {
+      "distanceM": 3573,
+      "elevationM": 65.4
+    },
+    {
+      "distanceM": 3672,
+      "elevationM": 71.7
+    },
+    {
+      "distanceM": 3772,
+      "elevationM": 76
+    },
+    {
+      "distanceM": 3871,
+      "elevationM": 84.6
+    },
+    {
+      "distanceM": 3970,
+      "elevationM": 98.3
+    },
+    {
+      "distanceM": 4069,
+      "elevationM": 115.9
+    },
+    {
+      "distanceM": 4169,
+      "elevationM": 141.9
+    },
+    {
+      "distanceM": 4268,
+      "elevationM": 170.3
+    },
+    {
+      "distanceM": 4367,
+      "elevationM": 189.5
+    },
+    {
+      "distanceM": 4466,
+      "elevationM": 210.5
+    },
+    {
+      "distanceM": 4566,
+      "elevationM": 232.1
+    },
+    {
+      "distanceM": 4665,
+      "elevationM": 248.8
+    },
+    {
+      "distanceM": 4764,
+      "elevationM": 262.2
+    },
+    {
+      "distanceM": 4863,
+      "elevationM": 267.8
+    },
+    {
+      "distanceM": 4963,
+      "elevationM": 272
+    },
+    {
+      "distanceM": 5062,
+      "elevationM": 269.5
+    },
+    {
+      "distanceM": 5161,
+      "elevationM": 261
+    },
+    {
+      "distanceM": 5260,
+      "elevationM": 270.6
+    },
+    {
+      "distanceM": 5360,
+      "elevationM": 272
+    },
+    {
+      "distanceM": 5459,
+      "elevationM": 276.3
+    },
+    {
+      "distanceM": 5558,
+      "elevationM": 282.5
+    },
+    {
+      "distanceM": 5657,
+      "elevationM": 293.5
+    },
+    {
+      "distanceM": 5757,
+      "elevationM": 300.2
+    },
+    {
+      "distanceM": 5856,
+      "elevationM": 307.9
+    },
+    {
+      "distanceM": 5955,
+      "elevationM": 310
+    },
+    {
+      "distanceM": 6054,
+      "elevationM": 305.6
+    },
+    {
+      "distanceM": 6154,
+      "elevationM": 308.2
+    },
+    {
+      "distanceM": 6253,
+      "elevationM": 309.9
+    },
+    {
+      "distanceM": 6352,
+      "elevationM": 307.3
+    },
+    {
+      "distanceM": 6451,
+      "elevationM": 308.5
+    },
+    {
+      "distanceM": 6551,
+      "elevationM": 316.8
+    },
+    {
+      "distanceM": 6650,
+      "elevationM": 322
+    },
+    {
+      "distanceM": 6749,
+      "elevationM": 320.3
+    },
+    {
+      "distanceM": 6848,
+      "elevationM": 314.9
+    },
+    {
+      "distanceM": 6948,
+      "elevationM": 309.1
+    },
+    {
+      "distanceM": 7047,
+      "elevationM": 300.3
+    },
+    {
+      "distanceM": 7146,
+      "elevationM": 289.9
+    },
+    {
+      "distanceM": 7245,
+      "elevationM": 272.3
+    },
+    {
+      "distanceM": 7345,
+      "elevationM": 258.2
+    },
+    {
+      "distanceM": 7444,
+      "elevationM": 244.9
+    },
+    {
+      "distanceM": 7543,
+      "elevationM": 225.2
+    },
+    {
+      "distanceM": 7642,
+      "elevationM": 220
+    },
+    {
+      "distanceM": 7742,
+      "elevationM": 207.8
+    },
+    {
+      "distanceM": 7841,
+      "elevationM": 182.8
+    },
+    {
+      "distanceM": 7940,
+      "elevationM": 165.8
+    },
+    {
+      "distanceM": 8039,
+      "elevationM": 160
+    },
+    {
+      "distanceM": 8139,
+      "elevationM": 160.8
+    },
+    {
+      "distanceM": 8238,
+      "elevationM": 144
+    },
+    {
+      "distanceM": 8337,
+      "elevationM": 134.9
+    },
+    {
+      "distanceM": 8436,
+      "elevationM": 130.9
+    },
+    {
+      "distanceM": 8536,
+      "elevationM": 113.7
+    },
+    {
+      "distanceM": 8635,
+      "elevationM": 105.2
+    },
+    {
+      "distanceM": 8734,
+      "elevationM": 101.9
+    },
+    {
+      "distanceM": 8833,
+      "elevationM": 103.1
+    },
+    {
+      "distanceM": 8933,
+      "elevationM": 103.9
+    },
+    {
+      "distanceM": 9032,
+      "elevationM": 103.8
+    },
+    {
+      "distanceM": 9131,
+      "elevationM": 103.5
+    },
+    {
+      "distanceM": 9230,
+      "elevationM": 101.5
+    },
+    {
+      "distanceM": 9330,
+      "elevationM": 97.7
+    },
+    {
+      "distanceM": 9429,
+      "elevationM": 96.2
+    },
+    {
+      "distanceM": 9528,
+      "elevationM": 95.8
+    },
+    {
+      "distanceM": 9627,
+      "elevationM": 102.8
+    },
+    {
+      "distanceM": 9727,
+      "elevationM": 107.8
+    },
+    {
+      "distanceM": 9826,
+      "elevationM": 126.1
+    },
+    {
+      "distanceM": 9925,
+      "elevationM": 107.1
+    },
+    {
+      "distanceM": 10024,
+      "elevationM": 111
+    },
+    {
+      "distanceM": 10124,
+      "elevationM": 101.8
+    },
+    {
+      "distanceM": 10223,
+      "elevationM": 89.4
+    },
+    {
+      "distanceM": 10322,
+      "elevationM": 85.4
+    },
+    {
+      "distanceM": 10421,
+      "elevationM": 85.6
+    },
+    {
+      "distanceM": 10521,
+      "elevationM": 82.8
+    },
+    {
+      "distanceM": 10620,
+      "elevationM": 77.2
+    },
+    {
+      "distanceM": 10719,
+      "elevationM": 74
+    },
+    {
+      "distanceM": 10818,
+      "elevationM": 67.9
+    },
+    {
+      "distanceM": 10918,
+      "elevationM": 64.4
+    },
+    {
+      "distanceM": 11017,
+      "elevationM": 62
+    },
+    {
+      "distanceM": 11116,
+      "elevationM": 56.8
+    },
+    {
+      "distanceM": 11215,
+      "elevationM": 46.2
+    },
+    {
+      "distanceM": 11315,
+      "elevationM": 42.5
+    },
+    {
+      "distanceM": 11414,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 11513,
+      "elevationM": 36.3
+    },
+    {
+      "distanceM": 11612,
+      "elevationM": 33.7
+    },
+    {
+      "distanceM": 11712,
+      "elevationM": 30.1
+    },
+    {
+      "distanceM": 11811,
+      "elevationM": 27.3
+    },
+    {
+      "distanceM": 11910,
+      "elevationM": 26.6
+    },
+    {
+      "distanceM": 12009,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 12109,
+      "elevationM": 26.1
+    },
+    {
+      "distanceM": 12208,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 12307,
+      "elevationM": 28.5
+    }
+  ]
+}

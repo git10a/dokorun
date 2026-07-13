@@ -1,0 +1,589 @@
+{
+  "slug": "miyazaki-night-run",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "宮崎市の中心繁華街・橘通りから北上して神武天皇を祀る宮崎神宮へ、折り返して南西の大淀川堤防に出て川沿いを橘橋・市役所前まで下り、橘通りを北上して戻る約8.9kmの市街地周回。街路灯の多い大通りと川沿い遊歩道が中心でナイトランでも走りやすく、出張や旅行の拠点から出やすいのが魅力。コンビニと自販機は市街地に豊富、大淀川沿いはフラットで信号も少ない。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 宮崎交通 橘通り周辺バス停 / JR宮崎駅から約1km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "宮崎駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 31.915742,
+      "destinationLng": 131.431975,
+      "routeAnchorLat": 31.91814,
+      "routeAnchorLng": 131.423551,
+      "routeMode": "loop",
+      "accessText": "宮崎駅からコースまで約840m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 31.91814,
+      "routeLng": 131.423551,
+      "elevationM": 10.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1798,
+        "section-3": 1126,
+        "section-4": 5328,
+        "section-5": 7122
+      },
+      "gpxHref": "/gpx/miyazaki-night-run-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "宮崎神宮駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 31.938067,
+      "destinationLng": 131.430223,
+      "routeAnchorLat": 31.933736,
+      "routeAnchorLng": 131.428379,
+      "routeMode": "loop",
+      "accessText": "宮崎神宮駅からコースまで約530m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 35,
+      "routeDistanceM": 1798,
+      "routeLat": 31.933736,
+      "routeLng": 131.428379,
+      "elevationM": 10.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 7084,
+        "section-2": 0,
+        "section-3": 8210,
+        "section-4": 3530,
+        "section-5": 5324
+      },
+      "gpxHref": "/gpx/miyazaki-night-run-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "南宮崎駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 31.895097,
+      "destinationLng": 131.422329,
+      "routeAnchorLat": 31.908879,
+      "routeAnchorLng": 131.416584,
+      "routeMode": "loop",
+      "accessText": "南宮崎駅からコースまで約1640m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 172,
+      "routeDistanceM": 7122,
+      "routeLat": 31.908879,
+      "routeLng": 131.416584,
+      "elevationM": 4.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1760,
+        "section-2": 3558,
+        "section-3": 2886,
+        "section-4": 7088,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/miyazaki-night-run-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 31.91814,
+      "anchorLng": 131.423551,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: MRT 宮崎放送 「 バリッと朝！ 」に生出演",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/MRT_Radio_Studio_in_2011_Miyazaki_.jpg/960px-MRT_Radio_Studio_in_2011_Miyazaki_.jpg",
+        "alt": "橘通り〜宮崎神宮〜大淀川のスタート周辺付近",
+        "caption": "橘通り〜宮崎神宮〜大淀川の走路近隣で撮影された風景",
+        "credit": "Naoki Tomeno from Miyazaki, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRT_Radio_Studio_in_2011_Miyazaki_.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 31.91814,
+      "routeLng": 131.423551,
+      "elevationM": 10.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 31.933736,
+      "anchorLng": 131.428379,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Miyazaki Jingu(shrine) , 宮崎神宮",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Miyazaki_Jingu%28shrine%29_%2C_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg/960px-Miyazaki_Jingu%28shrine%29_%2C_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg",
+        "alt": "橘通り〜宮崎神宮〜大淀川の序盤区間付近",
+        "caption": "橘通り〜宮崎神宮〜大淀川の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miyazaki_Jingu(shrine)_,_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg"
+      },
+      "routePointIndex": 35,
+      "routeDistanceM": 1798,
+      "routeLat": 31.933736,
+      "routeLng": 131.428379,
+      "elevationM": 10.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 31.927947,
+      "anchorLng": 131.426308,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Miyazaki Jingu(shrine) , 宮崎神宮",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Miyazaki_Jingu%28shrine%29_%2C_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg/960px-Miyazaki_Jingu%28shrine%29_%2C_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg",
+        "alt": "橘通り〜宮崎神宮〜大淀川の中盤区間付近",
+        "caption": "橘通り〜宮崎神宮〜大淀川の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miyazaki_Jingu(shrine)_,_%E5%AE%AE%E5%B4%8E%E7%A5%9E%E5%AE%AE_-_panoramio.jpg"
+      },
+      "routePointIndex": 22,
+      "routeDistanceM": 1126,
+      "routeLat": 31.927947,
+      "routeLng": 131.426308,
+      "elevationM": 9.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 31.917438,
+      "anchorLng": 131.415735,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 宮崎市街地の様子",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/View_of_Miyazaki_City_20170318.jpg/960px-View_of_Miyazaki_City_20170318.jpg",
+        "alt": "橘通り〜宮崎神宮〜大淀川の後半区間付近",
+        "caption": "橘通り〜宮崎神宮〜大淀川の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Miyazaki_City_20170318.jpg"
+      },
+      "routePointIndex": 116,
+      "routeDistanceM": 5328,
+      "routeLat": 31.917438,
+      "routeLng": 131.415735,
+      "elevationM": 7.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 31.908879,
+      "anchorLng": 131.416584,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 宮崎県遺族会館付近のストリートビュー",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/View_near_Miyazaki_Prefectural_War-Bereaved_Families_Association_Hall.jpg/960px-View_near_Miyazaki_Prefectural_War-Bereaved_Families_Association_Hall.jpg",
+        "alt": "橘通り〜宮崎神宮〜大淀川の終盤区間付近",
+        "caption": "橘通り〜宮崎神宮〜大淀川の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_near_Miyazaki_Prefectural_War-Bereaved_Families_Association_Hall.jpg"
+      },
+      "routePointIndex": 172,
+      "routeDistanceM": 7122,
+      "routeLat": 31.908879,
+      "routeLng": 131.416584,
+      "elevationM": 4.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8882,
+  "elevationGainM": 44,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 499,
+      "elevationM": 14.2
+    },
+    {
+      "distanceM": 599,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 699,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 798,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 898,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 998,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 1098,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 1198,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 1297,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 1397,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 1497,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 1597,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 1697,
+      "elevationM": 8.9
+    },
+    {
+      "distanceM": 1796,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 1896,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 1996,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 2096,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2196,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 2295,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 2395,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 2495,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 2595,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2695,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 2794,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 2894,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 2994,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 3094,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 3194,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 3293,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 3393,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 3493,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 3593,
+      "elevationM": 8.9
+    },
+    {
+      "distanceM": 3693,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 3792,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 3892,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 3992,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 4092,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 4192,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 4291,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 4391,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 4491,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 4591,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 4691,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 4790,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 4890,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 4990,
+      "elevationM": 7.9
+    },
+    {
+      "distanceM": 5090,
+      "elevationM": 8.9
+    },
+    {
+      "distanceM": 5190,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 5289,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 5389,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 5489,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 5589,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 5689,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 5788,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 5888,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 5988,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 6088,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 6188,
+      "elevationM": 4.9
+    },
+    {
+      "distanceM": 6287,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 6387,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 6487,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6587,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 6687,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 6786,
+      "elevationM": 4.9
+    },
+    {
+      "distanceM": 6886,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 6986,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 7086,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 7186,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 7285,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 7385,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 7485,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 7585,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 7685,
+      "elevationM": 13.1
+    },
+    {
+      "distanceM": 7784,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 7884,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 7984,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 8084,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 8183,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 8283,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 8383,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 8483,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 8583,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 8682,
+      "elevationM": 22
+    },
+    {
+      "distanceM": 8782,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 8882,
+      "elevationM": 11.5
+    }
+  ]
+}

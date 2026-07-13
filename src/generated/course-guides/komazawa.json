@@ -1,0 +1,294 @@
+{
+  "slug": "komazawa",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "公園内に1周2.14kmのジョギングコースが整備された、走りやすさ抜群の定番スポットです。100mごとの距離表示があり、ペースを細かく確認しながら練習できます。信号がなく高低差もほぼないため、初心者のジョギングからテンポ走まで対応。園内にはトイレや給水設備、自動販売機もそろっています。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東急田園都市線 駒沢大学駅から徒歩約15分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "駒沢大学駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.633471,
+      "destinationLng": 139.661702,
+      "routeAnchorLat": 35.624912,
+      "routeAnchorLng": 139.664863,
+      "routeMode": "loop",
+      "accessText": "駒沢大学駅からコースまで約990m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.624912,
+      "routeLng": 139.664863,
+      "elevationM": 40.1,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 423,
+        "section-3": 858,
+        "section-4": 1280,
+        "section-5": 1709
+      },
+      "gpxHref": "/gpx/komazawa-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "都立大学駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.617835,
+      "destinationLng": 139.676393,
+      "routeAnchorLat": 35.621846,
+      "routeAnchorLng": 139.663916,
+      "routeMode": "loop",
+      "accessText": "都立大学駅からコースまで約1210m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 101,
+      "routeDistanceM": 1709,
+      "routeLat": 35.621846,
+      "routeLng": 139.663916,
+      "elevationM": 44.7,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 427,
+        "section-2": 850,
+        "section-3": 1285,
+        "section-4": 1707,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/komazawa-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.624912,
+      "anchorLng": 139.664863,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 駒沢オリンピック公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "駒沢オリンピック公園のスタート周辺付近",
+        "caption": "駒沢オリンピック公園の走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.624912,
+      "routeLng": 139.664863,
+      "elevationM": 40.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.627654,
+      "anchorLng": 139.662207,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: DSC_4330",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/FC_Tokyo_vs_Albirex_Niigata.jpg/960px-FC_Tokyo_vs_Albirex_Niigata.jpg",
+        "alt": "駒沢オリンピック公園の序盤区間付近",
+        "caption": "駒沢オリンピック公園の走路近隣で撮影された風景",
+        "credit": "yoppy from Kawasaki, Kanagawa, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FC_Tokyo_vs_Albirex_Niigata.jpg"
+      },
+      "routePointIndex": 27,
+      "routeDistanceM": 423,
+      "routeLat": 35.627654,
+      "routeLng": 139.662207,
+      "elevationM": 39,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.626187,
+      "anchorLng": 139.65887,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Sara.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Watermelon%3F_%284934368460%29.jpg/960px-Watermelon%3F_%284934368460%29.jpg",
+        "alt": "駒沢オリンピック公園の中盤区間付近",
+        "caption": "駒沢オリンピック公園の走路近隣で撮影された風景",
+        "credit": "tenaciousme from Toronto, Canada",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Watermelon%3F_(4934368460).jpg"
+      },
+      "routePointIndex": 51,
+      "routeDistanceM": 858,
+      "routeLat": 35.626187,
+      "routeLng": 139.65887,
+      "elevationM": 49.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.624311,
+      "anchorLng": 139.661766,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 都立駒沢オリンピック公園：駒沢競技場",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/%E9%83%BD%E7%AB%8B%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92%EF%BC%9A%E9%A7%92%E6%B2%A2%E7%AB%B6%E6%8A%80%E5%A0%B4_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92%EF%BC%9A%E9%A7%92%E6%B2%A2%E7%AB%B6%E6%8A%80%E5%A0%B4_-_panoramio.jpg",
+        "alt": "駒沢オリンピック公園の後半区間付近",
+        "caption": "駒沢オリンピック公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92%EF%BC%9A%E9%A7%92%E6%B2%A2%E7%AB%B6%E6%8A%80%E5%A0%B4_-_panoramio.jpg"
+      },
+      "routePointIndex": 77,
+      "routeDistanceM": 1280,
+      "routeLat": 35.624311,
+      "routeLng": 139.661766,
+      "elevationM": 37.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.621846,
+      "anchorLng": 139.663916,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 駒沢オリンピック公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio_%283%29.jpg/960px-%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio_%283%29.jpg",
+        "alt": "駒沢オリンピック公園の終盤区間付近",
+        "caption": "駒沢オリンピック公園の走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%A7%92%E6%B2%A2%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%E5%85%AC%E5%9C%92_-_panoramio_(3).jpg"
+      },
+      "routePointIndex": 101,
+      "routeDistanceM": 1709,
+      "routeLat": 35.621846,
+      "routeLng": 139.663916,
+      "elevationM": 44.7,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2136,
+  "elevationGainM": 29,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 40.1
+    },
+    {
+      "distanceM": 97,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 194,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 291,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 388,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 486,
+      "elevationM": 42.8
+    },
+    {
+      "distanceM": 583,
+      "elevationM": 46.4
+    },
+    {
+      "distanceM": 680,
+      "elevationM": 45.3
+    },
+    {
+      "distanceM": 777,
+      "elevationM": 46.4
+    },
+    {
+      "distanceM": 874,
+      "elevationM": 48.5
+    },
+    {
+      "distanceM": 971,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 1068,
+      "elevationM": 45.2
+    },
+    {
+      "distanceM": 1165,
+      "elevationM": 45.7
+    },
+    {
+      "distanceM": 1262,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 1359,
+      "elevationM": 39.5
+    },
+    {
+      "distanceM": 1457,
+      "elevationM": 45.1
+    },
+    {
+      "distanceM": 1554,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 1651,
+      "elevationM": 43.2
+    },
+    {
+      "distanceM": 1748,
+      "elevationM": 45.8
+    },
+    {
+      "distanceM": 1845,
+      "elevationM": 39.7
+    },
+    {
+      "distanceM": 1942,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 2039,
+      "elevationM": 38.1
+    },
+    {
+      "distanceM": 2136,
+      "elevationM": 40
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "slug": "kibagata-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "白山を望む湖畔公園で、公式トップページに1周6.4kmの園路が明記されています。周回距離が分かりやすく、水辺景観と広い園地を兼ね備えるため、旅ランでも日常走でも扱いやすいスポットです。中央園地ではトイレと自動販売機、アクセスページでは各園地の駐車台数が確認でき、設備の裏付けも十分です。信号の影響を受けにくい長めのループとして、北陸ブロックの有力候補に入ります。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 加賀ICから約30分／小松ICから約25分。中央園地ほか各園地に駐車場あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "粟津駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.35575,
+      "destinationLng": 136.424544,
+      "routeAnchorLat": 36.369928,
+      "routeAnchorLng": 136.443574,
+      "routeMode": "loop",
+      "accessText": "粟津駅からコースまで約2330m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 326,
+      "routeDistanceM": 1283,
+      "routeLat": 36.369928,
+      "routeLng": 136.443574,
+      "elevationM": -0.9,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 5124,
+        "section-2": 0,
+        "section-3": 1280,
+        "section-4": 2560,
+        "section-5": 3841
+      },
+      "gpxHref": "/gpx/kibagata-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 36.376622,
+      "anchorLng": 136.449349,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 石川県小松市小松キリスト教会",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg/960px-%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg",
+        "alt": "木場潟公園のスタート周辺付近",
+        "caption": "木場潟公園の走路近隣で撮影された風景",
+        "credit": "officeshema",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.376622,
+      "routeLng": 136.449349,
+      "elevationM": -5.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 36.369928,
+      "anchorLng": 136.443574,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 石川県小松市小松キリスト教会",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg/960px-%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg",
+        "alt": "木場潟公園の序盤区間付近",
+        "caption": "木場潟公園の走路近隣で撮影された風景",
+        "credit": "officeshema",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg"
+      },
+      "routePointIndex": 326,
+      "routeDistanceM": 1283,
+      "routeLat": 36.369928,
+      "routeLng": 136.443574,
+      "elevationM": -0.9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 36.361569,
+      "anchorLng": 136.440107,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: マツダT600。石川県小松市日本自動車博物館所蔵",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/MAZDA_T600_NJM.jpg/960px-MAZDA_T600_NJM.jpg",
+        "alt": "木場潟公園の中盤区間付近",
+        "caption": "木場潟公園の走路近隣で撮影された風景",
+        "credit": "Nagoya Taro",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MAZDA_T600_NJM.jpg"
+      },
+      "routePointIndex": 659,
+      "routeDistanceM": 2563,
+      "routeLat": 36.361569,
+      "routeLng": 136.440107,
+      "elevationM": -2.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 36.357939,
+      "anchorLng": 136.444009,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: マツダT600。石川県小松市日本自動車博物館所蔵",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/MAZDA_T600_NJM.jpg/960px-MAZDA_T600_NJM.jpg",
+        "alt": "木場潟公園の後半区間付近",
+        "caption": "木場潟公園の走路近隣で撮影された風景",
+        "credit": "Nagoya Taro",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MAZDA_T600_NJM.jpg"
+      },
+      "routePointIndex": 989,
+      "routeDistanceM": 3843,
+      "routeLat": 36.357939,
+      "routeLng": 136.444009,
+      "elevationM": 0.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 36.368169,
+      "anchorLng": 136.449352,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 石川県小松市小松キリスト教会",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg/960px-%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg",
+        "alt": "木場潟公園の終盤区間付近",
+        "caption": "木場潟公園の走路近隣で撮影された風景",
+        "credit": "officeshema",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%9D%BE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E6%95%99%E4%BC%9A_-_panoramio.jpg"
+      },
+      "routePointIndex": 1323,
+      "routeDistanceM": 5124,
+      "routeLat": 36.368169,
+      "routeLng": 136.449352,
+      "elevationM": -4.2,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 6407,
+  "elevationGainM": 38,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": -5.1
+    },
+    {
+      "distanceM": 99,
+      "elevationM": -5.5
+    },
+    {
+      "distanceM": 197,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 296,
+      "elevationM": -2.1
+    },
+    {
+      "distanceM": 394,
+      "elevationM": 0.6
+    },
+    {
+      "distanceM": 493,
+      "elevationM": 0.1
+    },
+    {
+      "distanceM": 591,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 690,
+      "elevationM": -0.6
+    },
+    {
+      "distanceM": 789,
+      "elevationM": -0.9
+    },
+    {
+      "distanceM": 887,
+      "elevationM": -1.2
+    },
+    {
+      "distanceM": 986,
+      "elevationM": -1.4
+    },
+    {
+      "distanceM": 1084,
+      "elevationM": -1.8
+    },
+    {
+      "distanceM": 1183,
+      "elevationM": -1.7
+    },
+    {
+      "distanceM": 1281,
+      "elevationM": -0.9
+    },
+    {
+      "distanceM": 1380,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 1478,
+      "elevationM": -1.1
+    },
+    {
+      "distanceM": 1577,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 1676,
+      "elevationM": -1.2
+    },
+    {
+      "distanceM": 1774,
+      "elevationM": -1.3
+    },
+    {
+      "distanceM": 1873,
+      "elevationM": -1.7
+    },
+    {
+      "distanceM": 1971,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 2070,
+      "elevationM": -2.2
+    },
+    {
+      "distanceM": 2168,
+      "elevationM": -2.5
+    },
+    {
+      "distanceM": 2267,
+      "elevationM": -2.7
+    },
+    {
+      "distanceM": 2366,
+      "elevationM": -3.1
+    },
+    {
+      "distanceM": 2464,
+      "elevationM": -2.6
+    },
+    {
+      "distanceM": 2563,
+      "elevationM": -2.5
+    },
+    {
+      "distanceM": 2661,
+      "elevationM": -2.9
+    },
+    {
+      "distanceM": 2760,
+      "elevationM": -2.9
+    },
+    {
+      "distanceM": 2858,
+      "elevationM": -2.8
+    },
+    {
+      "distanceM": 2957,
+      "elevationM": -2.7
+    },
+    {
+      "distanceM": 3056,
+      "elevationM": -2.5
+    },
+    {
+      "distanceM": 3154,
+      "elevationM": -2.3
+    },
+    {
+      "distanceM": 3253,
+      "elevationM": -2.2
+    },
+    {
+      "distanceM": 3351,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 3450,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 3548,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 3647,
+      "elevationM": 1.6
+    },
+    {
+      "distanceM": 3745,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 3844,
+      "elevationM": 0.2
+    },
+    {
+      "distanceM": 3943,
+      "elevationM": -0.5
+    },
+    {
+      "distanceM": 4041,
+      "elevationM": -0.9
+    },
+    {
+      "distanceM": 4140,
+      "elevationM": -1.4
+    },
+    {
+      "distanceM": 4238,
+      "elevationM": -1.2
+    },
+    {
+      "distanceM": 4337,
+      "elevationM": -1.5
+    },
+    {
+      "distanceM": 4435,
+      "elevationM": -1.9
+    },
+    {
+      "distanceM": 4534,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 4633,
+      "elevationM": -1.9
+    },
+    {
+      "distanceM": 4731,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 4830,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 4928,
+      "elevationM": -2.7
+    },
+    {
+      "distanceM": 5027,
+      "elevationM": -3.5
+    },
+    {
+      "distanceM": 5125,
+      "elevationM": -4.2
+    },
+    {
+      "distanceM": 5224,
+      "elevationM": -1.7
+    },
+    {
+      "distanceM": 5323,
+      "elevationM": -2.9
+    },
+    {
+      "distanceM": 5421,
+      "elevationM": -1.7
+    },
+    {
+      "distanceM": 5520,
+      "elevationM": -0.6
+    },
+    {
+      "distanceM": 5618,
+      "elevationM": -0.1
+    },
+    {
+      "distanceM": 5717,
+      "elevationM": -1.8
+    },
+    {
+      "distanceM": 5815,
+      "elevationM": -4.5
+    },
+    {
+      "distanceM": 5914,
+      "elevationM": -1.1
+    },
+    {
+      "distanceM": 6012,
+      "elevationM": -2.7
+    },
+    {
+      "distanceM": 6111,
+      "elevationM": -4.2
+    },
+    {
+      "distanceM": 6210,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 6308,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 6407,
+      "elevationM": -5.1
+    }
+  ]
+}

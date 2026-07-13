@@ -1,0 +1,127 @@
+{
+  "slug": "kii-tanabe-ogigahama",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR紀伊田辺駅を起点に、熊野古道(紀伊路・中辺路)ゆかりの世界遺産・闘鶏神社の前を通って扇ヶ浜海岸へ下りる街なか周回コース。弓状に開けた扇ヶ浜のビーチ沿いを走り、漁港側から市街地へ戻る。信号の少ない海沿い区間は透明度の高い田辺湾を眺められ、駅前泊の出張ランや旅ランの朝にちょうどよい距離感。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR紀伊田辺駅から徒歩すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "紀伊田辺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.733619,
+      "destinationLng": 135.383581,
+      "routeAnchorLat": 33.733691,
+      "routeAnchorLng": 135.384089,
+      "routeMode": "loop",
+      "accessText": "紀伊田辺駅からコースまで約50m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.733691,
+      "anchorLng": 135.384089,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 紀伊田辺駅駅舎",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Kiitanabe_station_001.JPG/960px-Kiitanabe_station_001.JPG",
+        "alt": "紀伊田辺・扇ヶ浜のスタート周辺付近",
+        "caption": "紀伊田辺・扇ヶ浜の走路近隣で撮影された風景",
+        "credit": "Vanquish0",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kiitanabe_station_001.JPG"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.728992,
+      "anchorLng": 135.382783,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 闘鶏神社／田辺市",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/%E9%97%98%E9%B6%8F%E7%A5%9E%E7%A4%BE%EF%BC%8F%E7%94%B0%E8%BE%BA%E5%B8%82_-_panoramio.jpg/960px-%E9%97%98%E9%B6%8F%E7%A5%9E%E7%A4%BE%EF%BC%8F%E7%94%B0%E8%BE%BA%E5%B8%82_-_panoramio.jpg",
+        "alt": "紀伊田辺・扇ヶ浜の序盤区間付近",
+        "caption": "紀伊田辺・扇ヶ浜の走路近隣で撮影された風景",
+        "credit": "shikabane taro",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%97%98%E9%B6%8F%E7%A5%9E%E7%A4%BE%EF%BC%8F%E7%94%B0%E8%BE%BA%E5%B8%82_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.725177,
+      "anchorLng": 135.379082,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 田辺市役所庁舎",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Tanabe_city_hall.jpg/960px-Tanabe_city_hall.jpg",
+        "alt": "紀伊田辺・扇ヶ浜の中盤区間付近",
+        "caption": "紀伊田辺・扇ヶ浜の走路近隣で撮影された風景",
+        "credit": "Vanquish0",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanabe_city_hall.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.723509,
+      "anchorLng": 135.382441,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 田辺市にて 闘雞神社境内の玉置神社 2012.8.22",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_%E9%97%98%E9%9B%9E%E7%A5%9E%E7%A4%BE%E5%A2%83%E5%86%85%E3%81%AE%E7%8E%89%E7%BD%AE%E7%A5%9E%E7%A4%BE_2012.8.22_-_panoramio.jpg/960px-%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_%E9%97%98%E9%9B%9E%E7%A5%9E%E7%A4%BE%E5%A2%83%E5%86%85%E3%81%AE%E7%8E%89%E7%BD%AE%E7%A5%9E%E7%A4%BE_2012.8.22_-_panoramio.jpg",
+        "alt": "紀伊田辺・扇ヶ浜の後半区間付近",
+        "caption": "紀伊田辺・扇ヶ浜の走路近隣で撮影された風景",
+        "credit": "Nankou Oronain (as36…",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_%E9%97%98%E9%9B%9E%E7%A5%9E%E7%A4%BE%E5%A2%83%E5%86%85%E3%81%AE%E7%8E%89%E7%BD%AE%E7%A5%9E%E7%A4%BE_2012.8.22_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.729126,
+      "anchorLng": 135.382031,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: アオイ通り商店街 田辺市にて 2012.8.22",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/%E3%82%A2%E3%82%AA%E3%82%A4%E9%80%9A%E3%82%8A%E5%95%86%E5%BA%97%E8%A1%97_%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_2012.8.22_-_panoramio.jpg/960px-%E3%82%A2%E3%82%AA%E3%82%A4%E9%80%9A%E3%82%8A%E5%95%86%E5%BA%97%E8%A1%97_%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_2012.8.22_-_panoramio.jpg",
+        "alt": "紀伊田辺・扇ヶ浜の終盤区間付近",
+        "caption": "紀伊田辺・扇ヶ浜の走路近隣で撮影された風景",
+        "credit": "Nankou Oronain (as36…",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%82%AA%E3%82%A4%E9%80%9A%E3%82%8A%E5%95%86%E5%BA%97%E8%A1%97_%E7%94%B0%E8%BE%BA%E5%B8%82%E3%81%AB%E3%81%A6_2012.8.22_-_panoramio.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

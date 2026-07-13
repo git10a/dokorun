@@ -1,0 +1,505 @@
+{
+  "slug": "nakanoshima-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "大阪の業務中心地にある中之島を、剣先公園付近から堂島川・土佐堀川沿いに一周する約6.8kmの都市型コースです。大阪市中央公会堂や中之島美術館などを眺めながら、水辺の遊歩道を中心に走ります。淀屋橋・北浜・肥後橋周辺のホテルからアクセスしやすく、出張中の朝ランや仕事後のゆっくりしたジョギングに向きます。橋の出入口や歩行者の多い区間では速度を落として走ってください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: Osaka Metro・京阪 淀屋橋駅または北浜駅から徒歩約5分。なにわ橋駅からもすぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "天満橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.6902,
+      "destinationLng": 135.516633,
+      "routeAnchorLat": 34.692683,
+      "routeAnchorLng": 135.515057,
+      "routeMode": "loop",
+      "accessText": "天満橋駅からコースまで約310m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.692683,
+      "routeLng": 135.515057,
+      "elevationM": 14.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1437,
+        "section-3": 2712,
+        "section-4": 2691,
+        "section-5": 5428
+      },
+      "gpxHref": "/gpx/nakanoshima-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "淀屋橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.692456,
+      "destinationLng": 135.501648,
+      "routeAnchorLat": 34.692511,
+      "routeAnchorLng": 135.501209,
+      "routeMode": "loop",
+      "accessText": "淀屋橋駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 48,
+      "routeDistanceM": 1437,
+      "routeLat": 34.692511,
+      "routeLng": 135.501209,
+      "elevationM": 16.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 5343,
+        "section-2": 0,
+        "section-3": 1275,
+        "section-4": 1254,
+        "section-5": 3991
+      },
+      "gpxHref": "/gpx/nakanoshima-loop-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "中之島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.691504,
+      "destinationLng": 135.487373,
+      "routeAnchorLat": 34.692945,
+      "routeAnchorLng": 135.49046,
+      "routeMode": "loop",
+      "accessText": "中之島駅からコースまで約330m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 94,
+      "routeDistanceM": 2712,
+      "routeLat": 34.692945,
+      "routeLng": 135.49046,
+      "elevationM": 0.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4068,
+        "section-2": 5505,
+        "section-3": 0,
+        "section-4": 6759,
+        "section-5": 2716
+      },
+      "gpxHref": "/gpx/nakanoshima-loop-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.692683,
+      "anchorLng": 135.515057,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 日本の大阪市 北区 天満にある「動く彫刻と建築の一帯作品」。 総合デザイン・設計は日本の彫刻家である新宮晋。施工は松村組。設計管理は尾形建築事務所。構造は山田建築構造事務所。ブレーンセンターの本社ビル。1992年竣工。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/%E3%83%96%E3%83%AC%E3%83%BC%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%8C%E9%A2%A8%E3%81%AE%E4%B8%87%E8%8F%AF%E9%8F%A1%E3%80%8D%E3%83%93%E3%83%AB.jpg/960px-%E3%83%96%E3%83%AC%E3%83%BC%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%8C%E9%A2%A8%E3%81%AE%E4%B8%87%E8%8F%AF%E9%8F%A1%E3%80%8D%E3%83%93%E3%83%AB.jpg",
+        "alt": "中之島一周のスタート周辺付近",
+        "caption": "中之島一周の走路近隣で撮影された風景",
+        "credit": "Editbluebb",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%96%E3%83%AC%E3%83%BC%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%8C%E9%A2%A8%E3%81%AE%E4%B8%87%E8%8F%AF%E9%8F%A1%E3%80%8D%E3%83%93%E3%83%AB.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.692683,
+      "routeLng": 135.515057,
+      "elevationM": 14.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.692511,
+      "anchorLng": 135.501209,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 淀屋橋駅(京阪)の出入り口の一つ",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/An_entrance_of_Yodoyabashi_Station_%28Keihan%29_20141009.jpg/960px-An_entrance_of_Yodoyabashi_Station_%28Keihan%29_20141009.jpg",
+        "alt": "中之島一周の序盤区間付近",
+        "caption": "中之島一周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_entrance_of_Yodoyabashi_Station_(Keihan)_20141009.jpg"
+      },
+      "routePointIndex": 48,
+      "routeDistanceM": 1437,
+      "routeLat": 34.692511,
+      "routeLng": 135.501209,
+      "elevationM": 16.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.692945,
+      "anchorLng": 135.49046,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Quokka, mascot of ESEAP region, attending West-Japan Wikimedia Conference 2025",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quokka_in_West-Japan_Wikimedia_Conference_2025%2C_01.jpg/960px-Quokka_in_West-Japan_Wikimedia_Conference_2025%2C_01.jpg",
+        "alt": "中之島一周の中盤区間付近",
+        "caption": "中之島一周の走路近隣で撮影された風景",
+        "credit": "Aspere",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quokka_in_West-Japan_Wikimedia_Conference_2025,_01.jpg"
+      },
+      "routePointIndex": 94,
+      "routeDistanceM": 2712,
+      "routeLat": 34.692945,
+      "routeLng": 135.49046,
+      "elevationM": 0.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.693011,
+      "anchorLng": 135.490675,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Quokka, mascot of ESEAP region, attending West-Japan Wikimedia Conference 2025",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quokka_in_West-Japan_Wikimedia_Conference_2025%2C_01.jpg/960px-Quokka_in_West-Japan_Wikimedia_Conference_2025%2C_01.jpg",
+        "alt": "中之島一周の後半区間付近",
+        "caption": "中之島一周の走路近隣で撮影された風景",
+        "credit": "Aspere",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quokka_in_West-Japan_Wikimedia_Conference_2025,_01.jpg"
+      },
+      "routePointIndex": 93,
+      "routeDistanceM": 2691,
+      "routeLat": 34.693011,
+      "routeLng": 135.490675,
+      "elevationM": -0.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.693986,
+      "anchorLng": 135.503514,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 2009-09-27，アヒルちゃんオフ。水都大阪のポスター（平松市長バージョン）を撮影して Twitter（TwitPic）に投稿する人。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/%E5%86%85%E8%82%A1%E3%82%AC%E3%83%BC%E3%83%AB_%283961313205%29.jpg/960px-%E5%86%85%E8%82%A1%E3%82%AC%E3%83%BC%E3%83%AB_%283961313205%29.jpg",
+        "alt": "中之島一周の終盤区間付近",
+        "caption": "中之島一周の走路近隣で撮影された風景",
+        "credit": "Kousuke Sekidou",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%86%85%E8%82%A1%E3%82%AC%E3%83%BC%E3%83%AB_(3961313205).jpg"
+      },
+      "routePointIndex": 221,
+      "routeDistanceM": 5428,
+      "routeLat": 34.693986,
+      "routeLng": 135.503514,
+      "elevationM": 5.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 6780,
+  "elevationGainM": 84,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 12.9
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 499,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 698,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 798,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 997,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 1097,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 1296,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 1396,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 1496,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 1595,
+      "elevationM": 18.4
+    },
+    {
+      "distanceM": 1695,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 1795,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1894,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 1994,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 2094,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 2193,
+      "elevationM": 17.1
+    },
+    {
+      "distanceM": 2293,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 2393,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 2493,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 2592,
+      "elevationM": -0.5
+    },
+    {
+      "distanceM": 2692,
+      "elevationM": -0.5
+    },
+    {
+      "distanceM": 2792,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 2891,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 2991,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 3091,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 3191,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 3290,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 3390,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 3490,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 3589,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 3689,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 3789,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 3888,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 3988,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 4088,
+      "elevationM": -1.4
+    },
+    {
+      "distanceM": 4188,
+      "elevationM": -0.5
+    },
+    {
+      "distanceM": 4287,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 4387,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 4487,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 4586,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 4686,
+      "elevationM": 18.3
+    },
+    {
+      "distanceM": 4786,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 4885,
+      "elevationM": 18.8
+    },
+    {
+      "distanceM": 4985,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 5085,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 5185,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 5284,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 5384,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 5484,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 5583,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 5683,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 5783,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 5883,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 5982,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 6082,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 6182,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 6281,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 6381,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 6481,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 6580,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 6680,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 6780,
+      "elevationM": 14.5
+    }
+  ]
+}

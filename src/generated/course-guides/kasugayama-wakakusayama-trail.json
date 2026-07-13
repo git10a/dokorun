@@ -1,0 +1,774 @@
+{
+  "slug": "kasugayama-wakakusayama-trail",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "近鉄奈良駅を起点に興福寺・浮見堂・春日大社を経て、石畳の旧柳生街道「滝坂の道」を首切地蔵まで登り、世界遺産・春日山原始林の縁を走る春日山遊歩道から若草山山頂(342m)へ抜ける約14kmの周回。山頂からは奈良盆地と大仏殿の大屋根を一望できる。下りは二月堂・東大寺南大門を通って市街へ戻る。獲得標高約540mで、市街地と原生林トレイルが半々の初心者向けトレラン入門コース。奈良公園一帯は鹿が多く、観光地なのでトイレ・自販機に困らない。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 近鉄奈良線 近鉄奈良駅すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "近鉄奈良駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.684323,
+      "destinationLng": 135.827472,
+      "routeAnchorLat": 34.684219,
+      "routeAnchorLng": 135.8282,
+      "routeMode": "loop",
+      "accessText": "近鉄奈良駅からコースまで約70m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.684219,
+      "routeLng": 135.8282,
+      "elevationM": 90,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2820,
+        "section-3": 4905,
+        "section-4": 8467,
+        "section-5": 8654
+      },
+      "gpxHref": "/gpx/kasugayama-wakakusayama-trail-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "京終駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.670031,
+      "destinationLng": 135.828446,
+      "routeAnchorLat": 34.677857,
+      "routeAnchorLng": 135.848662,
+      "routeMode": "loop",
+      "accessText": "京終駅からコースまで約2040m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 112,
+      "routeDistanceM": 2820,
+      "routeLat": 34.677857,
+      "routeLng": 135.848662,
+      "elevationM": 149,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 11286,
+        "section-2": 0,
+        "section-3": 2085,
+        "section-4": 5647,
+        "section-5": 5834
+      },
+      "gpxHref": "/gpx/kasugayama-wakakusayama-trail-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.684219,
+      "anchorLng": 135.8282,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: ファミリーマート近鉄奈良駅改札内店",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/K-FamilyMart_in_the_ticket_gate_of_Kintetsu_Nara_Station_store.JPG/960px-K-FamilyMart_in_the_ticket_gate_of_Kintetsu_Nara_Station_store.JPG",
+        "alt": "春日山遊歩道・若草山周回のスタート周辺付近",
+        "caption": "春日山遊歩道・若草山周回の走路近隣で撮影された風景",
+        "credit": "Tokumeigakarinoaoshima",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-FamilyMart_in_the_ticket_gate_of_Kintetsu_Nara_Station_store.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.684219,
+      "routeLng": 135.8282,
+      "elevationM": 90,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.677857,
+      "anchorLng": 135.848662,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 隔夜寺、奈良高畑町。境内外北側から",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kakuya-dera-Nara-Back.jpg/960px-Kakuya-dera-Nara-Back.jpg",
+        "alt": "春日山遊歩道・若草山周回の序盤区間付近",
+        "caption": "春日山遊歩道・若草山周回の走路近隣で撮影された風景",
+        "credit": "Kochizufan",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kakuya-dera-Nara-Back.jpg"
+      },
+      "routePointIndex": 112,
+      "routeDistanceM": 2820,
+      "routeLat": 34.677857,
+      "routeLng": 135.848662,
+      "elevationM": 149,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.67366,
+      "anchorLng": 135.867739,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 奈良市高畑町 親ろく地蔵尊",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shinroku_Jizo_Nara.jpg/960px-Shinroku_Jizo_Nara.jpg",
+        "alt": "春日山遊歩道・若草山周回の中盤区間付近",
+        "caption": "春日山遊歩道・若草山周回の走路近隣で撮影された風景",
+        "credit": "Kochizufan",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinroku_Jizo_Nara.jpg"
+      },
+      "routePointIndex": 201,
+      "routeDistanceM": 4905,
+      "routeLat": 34.67366,
+      "routeLng": 135.867739,
+      "elevationM": 362.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.683385,
+      "anchorLng": 135.846939,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Kasuganocho, Nara, Nara Prefecture 630-8212, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Kasuganocho%2C_Nara%2C_Nara_Prefecture_630-8212%2C_Japan_-_panoramio_-_jetsun_%284%29.jpg/960px-Kasuganocho%2C_Nara%2C_Nara_Prefecture_630-8212%2C_Japan_-_panoramio_-_jetsun_%284%29.jpg",
+        "alt": "春日山遊歩道・若草山周回の後半区間付近",
+        "caption": "春日山遊歩道・若草山周回の走路近隣で撮影された風景",
+        "credit": "jetsun",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kasuganocho,_Nara,_Nara_Prefecture_630-8212,_Japan_-_panoramio_-_jetsun_(4).jpg"
+      },
+      "routePointIndex": 380,
+      "routeDistanceM": 8467,
+      "routeLat": 34.683385,
+      "routeLng": 135.846939,
+      "elevationM": 147.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.684673,
+      "anchorLng": 135.847687,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: A row of deers feeding. For the longest time, my Japanese co-workers thought the english translation for deers was bambi. It was a great sho",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nara_Deer_in_a_row_%286080938797%29.jpg/960px-Nara_Deer_in_a_row_%286080938797%29.jpg",
+        "alt": "春日山遊歩道・若草山周回の終盤区間付近",
+        "caption": "春日山遊歩道・若草山周回の走路近隣で撮影された風景",
+        "credit": "SteFou!",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nara_Deer_in_a_row_(6080938797).jpg"
+      },
+      "routePointIndex": 392,
+      "routeDistanceM": 8654,
+      "routeLat": 34.684673,
+      "routeLng": 135.847687,
+      "elevationM": 158.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 14106,
+  "elevationGainM": 540,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 90
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 90.4
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 93.3
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 96.6
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 97.4
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 96.2
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 100
+    },
+    {
+      "distanceM": 695,
+      "elevationM": 100.5
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 101
+    },
+    {
+      "distanceM": 894,
+      "elevationM": 102.9
+    },
+    {
+      "distanceM": 993,
+      "elevationM": 106.4
+    },
+    {
+      "distanceM": 1093,
+      "elevationM": 105.3
+    },
+    {
+      "distanceM": 1192,
+      "elevationM": 106.7
+    },
+    {
+      "distanceM": 1291,
+      "elevationM": 107.2
+    },
+    {
+      "distanceM": 1391,
+      "elevationM": 104.5
+    },
+    {
+      "distanceM": 1490,
+      "elevationM": 104.8
+    },
+    {
+      "distanceM": 1589,
+      "elevationM": 106
+    },
+    {
+      "distanceM": 1689,
+      "elevationM": 107.3
+    },
+    {
+      "distanceM": 1788,
+      "elevationM": 112
+    },
+    {
+      "distanceM": 1887,
+      "elevationM": 113.1
+    },
+    {
+      "distanceM": 1987,
+      "elevationM": 115.7
+    },
+    {
+      "distanceM": 2086,
+      "elevationM": 120.9
+    },
+    {
+      "distanceM": 2185,
+      "elevationM": 127.9
+    },
+    {
+      "distanceM": 2285,
+      "elevationM": 135.8
+    },
+    {
+      "distanceM": 2384,
+      "elevationM": 137.4
+    },
+    {
+      "distanceM": 2483,
+      "elevationM": 142.1
+    },
+    {
+      "distanceM": 2583,
+      "elevationM": 151.1
+    },
+    {
+      "distanceM": 2682,
+      "elevationM": 155.8
+    },
+    {
+      "distanceM": 2782,
+      "elevationM": 152.7
+    },
+    {
+      "distanceM": 2881,
+      "elevationM": 142
+    },
+    {
+      "distanceM": 2980,
+      "elevationM": 139.3
+    },
+    {
+      "distanceM": 3080,
+      "elevationM": 144.9
+    },
+    {
+      "distanceM": 3179,
+      "elevationM": 151.4
+    },
+    {
+      "distanceM": 3278,
+      "elevationM": 155.4
+    },
+    {
+      "distanceM": 3378,
+      "elevationM": 153.5
+    },
+    {
+      "distanceM": 3477,
+      "elevationM": 157.8
+    },
+    {
+      "distanceM": 3576,
+      "elevationM": 169.3
+    },
+    {
+      "distanceM": 3676,
+      "elevationM": 183.4
+    },
+    {
+      "distanceM": 3775,
+      "elevationM": 194.4
+    },
+    {
+      "distanceM": 3874,
+      "elevationM": 204.2
+    },
+    {
+      "distanceM": 3974,
+      "elevationM": 213.6
+    },
+    {
+      "distanceM": 4073,
+      "elevationM": 230.4
+    },
+    {
+      "distanceM": 4172,
+      "elevationM": 238.3
+    },
+    {
+      "distanceM": 4272,
+      "elevationM": 250.2
+    },
+    {
+      "distanceM": 4371,
+      "elevationM": 263.6
+    },
+    {
+      "distanceM": 4470,
+      "elevationM": 280.2
+    },
+    {
+      "distanceM": 4570,
+      "elevationM": 300
+    },
+    {
+      "distanceM": 4669,
+      "elevationM": 313.4
+    },
+    {
+      "distanceM": 4768,
+      "elevationM": 333.2
+    },
+    {
+      "distanceM": 4868,
+      "elevationM": 352.6
+    },
+    {
+      "distanceM": 4967,
+      "elevationM": 365.6
+    },
+    {
+      "distanceM": 5066,
+      "elevationM": 368
+    },
+    {
+      "distanceM": 5166,
+      "elevationM": 371.7
+    },
+    {
+      "distanceM": 5265,
+      "elevationM": 377.5
+    },
+    {
+      "distanceM": 5364,
+      "elevationM": 372
+    },
+    {
+      "distanceM": 5464,
+      "elevationM": 368.9
+    },
+    {
+      "distanceM": 5563,
+      "elevationM": 366.8
+    },
+    {
+      "distanceM": 5662,
+      "elevationM": 358.5
+    },
+    {
+      "distanceM": 5762,
+      "elevationM": 336.9
+    },
+    {
+      "distanceM": 5861,
+      "elevationM": 317
+    },
+    {
+      "distanceM": 5960,
+      "elevationM": 302.9
+    },
+    {
+      "distanceM": 6060,
+      "elevationM": 282.9
+    },
+    {
+      "distanceM": 6159,
+      "elevationM": 270.1
+    },
+    {
+      "distanceM": 6258,
+      "elevationM": 251
+    },
+    {
+      "distanceM": 6358,
+      "elevationM": 241.4
+    },
+    {
+      "distanceM": 6457,
+      "elevationM": 232.9
+    },
+    {
+      "distanceM": 6556,
+      "elevationM": 216.7
+    },
+    {
+      "distanceM": 6656,
+      "elevationM": 206.1
+    },
+    {
+      "distanceM": 6755,
+      "elevationM": 196.6
+    },
+    {
+      "distanceM": 6854,
+      "elevationM": 186.1
+    },
+    {
+      "distanceM": 6954,
+      "elevationM": 172.3
+    },
+    {
+      "distanceM": 7053,
+      "elevationM": 159.1
+    },
+    {
+      "distanceM": 7152,
+      "elevationM": 153.7
+    },
+    {
+      "distanceM": 7252,
+      "elevationM": 156.1
+    },
+    {
+      "distanceM": 7351,
+      "elevationM": 152.2
+    },
+    {
+      "distanceM": 7450,
+      "elevationM": 146.8
+    },
+    {
+      "distanceM": 7550,
+      "elevationM": 141
+    },
+    {
+      "distanceM": 7649,
+      "elevationM": 139.7
+    },
+    {
+      "distanceM": 7748,
+      "elevationM": 150.6
+    },
+    {
+      "distanceM": 7848,
+      "elevationM": 155.5
+    },
+    {
+      "distanceM": 7947,
+      "elevationM": 159.9
+    },
+    {
+      "distanceM": 8047,
+      "elevationM": 157
+    },
+    {
+      "distanceM": 8146,
+      "elevationM": 151.9
+    },
+    {
+      "distanceM": 8245,
+      "elevationM": 146.6
+    },
+    {
+      "distanceM": 8345,
+      "elevationM": 148.8
+    },
+    {
+      "distanceM": 8444,
+      "elevationM": 147.9
+    },
+    {
+      "distanceM": 8543,
+      "elevationM": 150.2
+    },
+    {
+      "distanceM": 8643,
+      "elevationM": 156.5
+    },
+    {
+      "distanceM": 8742,
+      "elevationM": 173.5
+    },
+    {
+      "distanceM": 8841,
+      "elevationM": 186
+    },
+    {
+      "distanceM": 8941,
+      "elevationM": 206.6
+    },
+    {
+      "distanceM": 9040,
+      "elevationM": 228
+    },
+    {
+      "distanceM": 9139,
+      "elevationM": 244.8
+    },
+    {
+      "distanceM": 9239,
+      "elevationM": 250.9
+    },
+    {
+      "distanceM": 9338,
+      "elevationM": 268.9
+    },
+    {
+      "distanceM": 9437,
+      "elevationM": 285
+    },
+    {
+      "distanceM": 9537,
+      "elevationM": 289.5
+    },
+    {
+      "distanceM": 9636,
+      "elevationM": 295.6
+    },
+    {
+      "distanceM": 9735,
+      "elevationM": 309
+    },
+    {
+      "distanceM": 9835,
+      "elevationM": 319.3
+    },
+    {
+      "distanceM": 9934,
+      "elevationM": 326.4
+    },
+    {
+      "distanceM": 10033,
+      "elevationM": 326.2
+    },
+    {
+      "distanceM": 10133,
+      "elevationM": 319.1
+    },
+    {
+      "distanceM": 10232,
+      "elevationM": 305.5
+    },
+    {
+      "distanceM": 10331,
+      "elevationM": 293.2
+    },
+    {
+      "distanceM": 10431,
+      "elevationM": 290.9
+    },
+    {
+      "distanceM": 10530,
+      "elevationM": 281.6
+    },
+    {
+      "distanceM": 10629,
+      "elevationM": 264.9
+    },
+    {
+      "distanceM": 10729,
+      "elevationM": 248.1
+    },
+    {
+      "distanceM": 10828,
+      "elevationM": 241.1
+    },
+    {
+      "distanceM": 10927,
+      "elevationM": 223.5
+    },
+    {
+      "distanceM": 11027,
+      "elevationM": 201.2
+    },
+    {
+      "distanceM": 11126,
+      "elevationM": 183.9
+    },
+    {
+      "distanceM": 11225,
+      "elevationM": 170.6
+    },
+    {
+      "distanceM": 11325,
+      "elevationM": 153
+    },
+    {
+      "distanceM": 11424,
+      "elevationM": 153.2
+    },
+    {
+      "distanceM": 11523,
+      "elevationM": 150.3
+    },
+    {
+      "distanceM": 11623,
+      "elevationM": 141.4
+    },
+    {
+      "distanceM": 11722,
+      "elevationM": 134.7
+    },
+    {
+      "distanceM": 11821,
+      "elevationM": 136.8
+    },
+    {
+      "distanceM": 11921,
+      "elevationM": 139.3
+    },
+    {
+      "distanceM": 12020,
+      "elevationM": 154.8
+    },
+    {
+      "distanceM": 12119,
+      "elevationM": 146.9
+    },
+    {
+      "distanceM": 12219,
+      "elevationM": 133
+    },
+    {
+      "distanceM": 12318,
+      "elevationM": 125.4
+    },
+    {
+      "distanceM": 12417,
+      "elevationM": 120.6
+    },
+    {
+      "distanceM": 12517,
+      "elevationM": 112.3
+    },
+    {
+      "distanceM": 12616,
+      "elevationM": 105.6
+    },
+    {
+      "distanceM": 12715,
+      "elevationM": 105.3
+    },
+    {
+      "distanceM": 12815,
+      "elevationM": 106.6
+    },
+    {
+      "distanceM": 12914,
+      "elevationM": 104.8
+    },
+    {
+      "distanceM": 13013,
+      "elevationM": 108.1
+    },
+    {
+      "distanceM": 13113,
+      "elevationM": 103.8
+    },
+    {
+      "distanceM": 13212,
+      "elevationM": 104.5
+    },
+    {
+      "distanceM": 13312,
+      "elevationM": 103.3
+    },
+    {
+      "distanceM": 13411,
+      "elevationM": 102
+    },
+    {
+      "distanceM": 13510,
+      "elevationM": 100.8
+    },
+    {
+      "distanceM": 13610,
+      "elevationM": 96.7
+    },
+    {
+      "distanceM": 13709,
+      "elevationM": 93.1
+    },
+    {
+      "distanceM": 13808,
+      "elevationM": 96.6
+    },
+    {
+      "distanceM": 13908,
+      "elevationM": 93.3
+    },
+    {
+      "distanceM": 14007,
+      "elevationM": 90.4
+    },
+    {
+      "distanceM": 14106,
+      "elevationM": 88.8
+    }
+  ]
+}

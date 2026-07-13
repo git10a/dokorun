@@ -1,0 +1,926 @@
+{
+  "slug": "shimanto-sada-chinkabashi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "中村市街の東側から四万十川左岸の堤防道を上流へたどり、最下流の沈下橋である佐田沈下橋(全長約290m)を渡って対岸へ。右岸は入田の集落と田園を縫って下り、赤鉄橋の愛称で知られる四万十川橋で再び左岸へ戻る約18.8kmの周回。右岸側は小刻みなアップダウンが続き獲得標高は約300m。市街を離れると補給ポイントが少ないので飲料持参が安心。佐田沈下橋のたもとにトイレと駐車場がある。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 土佐くろしお鉄道中村駅から約2km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "中村駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.984641,
+      "destinationLng": 132.943927,
+      "routeAnchorLat": 32.984245,
+      "routeAnchorLng": 132.940409,
+      "routeMode": "loop",
+      "accessText": "中村駅からコースまで約330m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.984245,
+      "routeLng": 132.940409,
+      "elevationM": 11.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3736,
+        "section-3": 7502,
+        "section-4": 5804,
+        "section-5": 14205
+      },
+      "gpxHref": "/gpx/shimanto-sada-chinkabashi-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "具同駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 32.9794,
+      "destinationLng": 132.915473,
+      "routeAnchorLat": 32.996581,
+      "routeAnchorLng": 132.918002,
+      "routeMode": "loop",
+      "accessText": "具同駅からコースまで約1940m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 80,
+      "routeDistanceM": 3736,
+      "routeLat": 32.996581,
+      "routeLng": 132.918002,
+      "elevationM": 10.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 15030,
+        "section-2": 0,
+        "section-3": 3766,
+        "section-4": 2068,
+        "section-5": 10469
+      },
+      "gpxHref": "/gpx/shimanto-sada-chinkabashi-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 32.984245,
+      "anchorLng": 132.940409,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 四万十 ホテル ビュッフェ",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Shimanto_20190906064204_01.jpg/960px-Shimanto_20190906064204_01.jpg",
+        "alt": "四万十川・佐田沈下橋のスタート周辺付近",
+        "caption": "四万十川・佐田沈下橋の走路近隣で撮影された風景",
+        "credit": "inunami",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shimanto_20190906064204_01.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 32.984245,
+      "routeLng": 132.940409,
+      "elevationM": 11.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 32.996581,
+      "anchorLng": 132.918002,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Sinictinogomphus clavatus at Shimanto City , Kochi Pref , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sinictinogomphus_clavatus.jpg/960px-Sinictinogomphus_clavatus.jpg",
+        "alt": "四万十川・佐田沈下橋の序盤区間付近",
+        "caption": "四万十川・佐田沈下橋の走路近隣で撮影された風景",
+        "credit": "Navian",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sinictinogomphus_clavatus.jpg"
+      },
+      "routePointIndex": 80,
+      "routeDistanceM": 3736,
+      "routeLat": 32.996581,
+      "routeLng": 132.918002,
+      "elevationM": 10.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.009287,
+      "anchorLng": 132.885777,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 四万十川",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%2828%29.jpg/960px-%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%2828%29.jpg",
+        "alt": "四万十川・佐田沈下橋の中盤区間付近",
+        "caption": "四万十川・佐田沈下橋の走路近隣で撮影された風景",
+        "credit": "Yobito KAYANUMA",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_(28).jpg"
+      },
+      "routePointIndex": 211,
+      "routeDistanceM": 7502,
+      "routeLat": 33.009287,
+      "routeLng": 132.885777,
+      "elevationM": 31.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.003401,
+      "anchorLng": 132.897975,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 四万十川",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%2828%29.jpg/960px-%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%2828%29.jpg",
+        "alt": "四万十川・佐田沈下橋の後半区間付近",
+        "caption": "四万十川・佐田沈下橋の走路近隣で撮影された風景",
+        "credit": "Yobito KAYANUMA",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_(28).jpg"
+      },
+      "routePointIndex": 115,
+      "routeDistanceM": 5804,
+      "routeLat": 33.003401,
+      "routeLng": 132.897975,
+      "elevationM": 18.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 32.993019,
+      "anchorLng": 132.913211,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Sinictinogomphus clavatus at Shimanto City , Kochi Pref , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sinictinogomphus_clavatus.jpg/960px-Sinictinogomphus_clavatus.jpg",
+        "alt": "四万十川・佐田沈下橋の終盤区間付近",
+        "caption": "四万十川・佐田沈下橋の走路近隣で撮影された風景",
+        "credit": "Navian",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sinictinogomphus_clavatus.jpg"
+      },
+      "routePointIndex": 508,
+      "routeDistanceM": 14205,
+      "routeLat": 32.993019,
+      "routeLng": 132.913211,
+      "elevationM": 43.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 18766,
+  "elevationGainM": 299,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 104,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 209,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 313,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 417,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 521,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 626,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 730,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 834,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 938,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1043,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 1147,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1251,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 1355,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 1460,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 1564,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 1668,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 1772,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 1877,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 1981,
+      "elevationM": 14.7
+    },
+    {
+      "distanceM": 2085,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2189,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2294,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2398,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2502,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2606,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2711,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 2815,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 2919,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 3023,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 3128,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 3232,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 3336,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 3440,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 3545,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 3649,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 3753,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 3857,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 3962,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 4066,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 4170,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 4274,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 4379,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 4483,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 4587,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 4691,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 4796,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 4900,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 5004,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 5108,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 5213,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 5317,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 5421,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 5525,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 5630,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 5734,
+      "elevationM": 15.6
+    },
+    {
+      "distanceM": 5838,
+      "elevationM": 22.9
+    },
+    {
+      "distanceM": 5942,
+      "elevationM": 31.2
+    },
+    {
+      "distanceM": 6047,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 6151,
+      "elevationM": 40.1
+    },
+    {
+      "distanceM": 6255,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 6359,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 6464,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 6568,
+      "elevationM": 24
+    },
+    {
+      "distanceM": 6672,
+      "elevationM": 28.3
+    },
+    {
+      "distanceM": 6776,
+      "elevationM": 45.9
+    },
+    {
+      "distanceM": 6881,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 6985,
+      "elevationM": 44.2
+    },
+    {
+      "distanceM": 7089,
+      "elevationM": 40.8
+    },
+    {
+      "distanceM": 7193,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 7298,
+      "elevationM": 34.8
+    },
+    {
+      "distanceM": 7402,
+      "elevationM": 40.9
+    },
+    {
+      "distanceM": 7506,
+      "elevationM": 30.9
+    },
+    {
+      "distanceM": 7610,
+      "elevationM": 36.8
+    },
+    {
+      "distanceM": 7715,
+      "elevationM": 48.7
+    },
+    {
+      "distanceM": 7819,
+      "elevationM": 40.8
+    },
+    {
+      "distanceM": 7923,
+      "elevationM": 37.8
+    },
+    {
+      "distanceM": 8027,
+      "elevationM": 19.6
+    },
+    {
+      "distanceM": 8132,
+      "elevationM": 22.2
+    },
+    {
+      "distanceM": 8236,
+      "elevationM": 21.4
+    },
+    {
+      "distanceM": 8340,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 8445,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 8549,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 8653,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 8757,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 8862,
+      "elevationM": 23.9
+    },
+    {
+      "distanceM": 8966,
+      "elevationM": 19.7
+    },
+    {
+      "distanceM": 9070,
+      "elevationM": 27.5
+    },
+    {
+      "distanceM": 9174,
+      "elevationM": 39.6
+    },
+    {
+      "distanceM": 9279,
+      "elevationM": 44.4
+    },
+    {
+      "distanceM": 9383,
+      "elevationM": 46
+    },
+    {
+      "distanceM": 9487,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 9591,
+      "elevationM": 35.2
+    },
+    {
+      "distanceM": 9696,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 9800,
+      "elevationM": 39.9
+    },
+    {
+      "distanceM": 9904,
+      "elevationM": 37.3
+    },
+    {
+      "distanceM": 10008,
+      "elevationM": 39.4
+    },
+    {
+      "distanceM": 10113,
+      "elevationM": 37.4
+    },
+    {
+      "distanceM": 10217,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 10321,
+      "elevationM": 29.5
+    },
+    {
+      "distanceM": 10425,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 10530,
+      "elevationM": 29.1
+    },
+    {
+      "distanceM": 10634,
+      "elevationM": 38.4
+    },
+    {
+      "distanceM": 10738,
+      "elevationM": 39.9
+    },
+    {
+      "distanceM": 10842,
+      "elevationM": 43.3
+    },
+    {
+      "distanceM": 10947,
+      "elevationM": 32.4
+    },
+    {
+      "distanceM": 11051,
+      "elevationM": 28.9
+    },
+    {
+      "distanceM": 11155,
+      "elevationM": 32.6
+    },
+    {
+      "distanceM": 11259,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 11364,
+      "elevationM": 13.9
+    },
+    {
+      "distanceM": 11468,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 11572,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 11676,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 11781,
+      "elevationM": 15.6
+    },
+    {
+      "distanceM": 11885,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 11989,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 12093,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 12198,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 12302,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 12406,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 12510,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 12615,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 12719,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 12823,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 12927,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 13032,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 13136,
+      "elevationM": 9.4
+    },
+    {
+      "distanceM": 13240,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 13344,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 13449,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 13553,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 13657,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 13761,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 13866,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 13970,
+      "elevationM": 29.2
+    },
+    {
+      "distanceM": 14074,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 14178,
+      "elevationM": 43.6
+    },
+    {
+      "distanceM": 14283,
+      "elevationM": 38.6
+    },
+    {
+      "distanceM": 14387,
+      "elevationM": 32.5
+    },
+    {
+      "distanceM": 14491,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 14595,
+      "elevationM": 42.5
+    },
+    {
+      "distanceM": 14700,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 14804,
+      "elevationM": 32.5
+    },
+    {
+      "distanceM": 14908,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 15012,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 15117,
+      "elevationM": 38.6
+    },
+    {
+      "distanceM": 15221,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 15325,
+      "elevationM": 25.7
+    },
+    {
+      "distanceM": 15429,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 15534,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 15638,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 15742,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 15846,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 15951,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 16055,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 16159,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 16264,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 16368,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 16472,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 16576,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 16681,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 16785,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 16889,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 16993,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 17098,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 17202,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 17306,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 17410,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 17515,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 17619,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 17723,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 17827,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 17932,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 18036,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 18140,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 18244,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 18349,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 18453,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 18557,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 18661,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 18766,
+      "elevationM": 11.8
+    }
+  ]
+}

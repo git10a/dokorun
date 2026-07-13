@@ -1,0 +1,737 @@
+{
+  "slug": "sanno-park-fukuoka",
+  "spot": {
+    "slug": "sanno-park-fukuoka",
+    "name": "山王公園ランニングコース",
+    "prefecture": "福岡県",
+    "city": "福岡市博多区",
+    "access": "JR博多駅から約1km。西鉄バス 山王公園前バス停から徒歩1分。",
+    "course_type": "loop",
+    "distance_m": 1025,
+    "elevation_gain_m": null,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 18,
+    "gpxDistanceM": 1025,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": false,
+    "detectedCourseType": "loop",
+    "issues": [
+      "missing_gpx_elevation"
+    ]
+  },
+  "collectedAt": "2026-07-13T09:19:38.117Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 33.581555,
+        "lng": 130.4331434,
+        "ele": null
+      },
+      "stations": [
+        {
+          "name": "東比恵",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.43128,
+          "y": 33.589958,
+          "postal": "8120007",
+          "distance": "950m",
+          "prev": "博多",
+          "next": "福岡空港"
+        },
+        {
+          "name": "竹下",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.431625,
+          "y": 33.568688,
+          "postal": "8120895",
+          "distance": "1440m",
+          "prev": "博多",
+          "next": "笹原"
+        },
+        {
+          "name": "博多",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.42085,
+          "y": 33.590204,
+          "postal": "8120012",
+          "distance": "1490m",
+          "prev": "祇園",
+          "next": "東比恵"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kyushukyuko bus Fukuoka depot",
+          "description": "Kyushukyuko Bus Fukuoka Depot, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kyushukyuko_bus_Fukuoka_depot.jpg/960px-Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580285,
+            "lng": 130.429792
+          }
+        },
+        {
+          "title": "Kyushukyuko Bus Headquarters",
+          "description": "Kyushukyuko Bus headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kyushukyuko_Bus_Headquarters.jpg/960px-Kyushukyuko_Bus_Headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_Bus_Headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580196,
+            "lng": 130.430735
+          }
+        },
+        {
+          "title": "Shoyaku headquarters",
+          "description": "Shoyaku headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Shoyaku_headquarters.jpg/960px-Shoyaku_headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyaku_headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.58087,
+            "lng": 130.434862
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ひよこの乗物",
+          "description": "福岡市扇町公園 ひよこの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578352,
+            "lng": 130.435917
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ラッコの乗物",
+          "description": "福岡市扇町公園 ラッコの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578368,
+            "lng": 130.435882
+          }
+        },
+        {
+          "title": "福岡市扇町公園 砂場",
+          "description": "福岡市扇町公園 砂場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578337,
+            "lng": 130.43589
+          }
+        },
+        {
+          "title": "福岡市山王公園 登り棒１",
+          "description": "福岡市山王公園 登り棒１",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.583997,
+            "lng": 130.432692
+          }
+        },
+        {
+          "title": "福岡市山王公園 水飲み場",
+          "description": "福岡市山王公園 水飲み場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.584004,
+            "lng": 130.432692
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 33.581413902118925,
+        "lng": 130.4323560968739,
+        "ele": null
+      },
+      "stations": [
+        {
+          "name": "東比恵",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.43128,
+          "y": 33.589958,
+          "postal": "8120007",
+          "distance": "960m",
+          "prev": "博多",
+          "next": "福岡空港"
+        },
+        {
+          "name": "竹下",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.431625,
+          "y": 33.568688,
+          "postal": "8120895",
+          "distance": "1420m",
+          "prev": "博多",
+          "next": "笹原"
+        },
+        {
+          "name": "博多",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.42085,
+          "y": 33.590204,
+          "postal": "8120012",
+          "distance": "1450m",
+          "prev": "祇園",
+          "next": "東比恵"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kyushukyuko bus Fukuoka depot",
+          "description": "Kyushukyuko Bus Fukuoka Depot, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kyushukyuko_bus_Fukuoka_depot.jpg/960px-Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580285,
+            "lng": 130.429792
+          }
+        },
+        {
+          "title": "Kyushukyuko Bus Headquarters",
+          "description": "Kyushukyuko Bus headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kyushukyuko_Bus_Headquarters.jpg/960px-Kyushukyuko_Bus_Headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_Bus_Headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580196,
+            "lng": 130.430735
+          }
+        },
+        {
+          "title": "Shoyaku headquarters",
+          "description": "Shoyaku headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Shoyaku_headquarters.jpg/960px-Shoyaku_headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyaku_headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.58087,
+            "lng": 130.434862
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ひよこの乗物",
+          "description": "福岡市扇町公園 ひよこの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578352,
+            "lng": 130.435917
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ラッコの乗物",
+          "description": "福岡市扇町公園 ラッコの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578368,
+            "lng": 130.435882
+          }
+        },
+        {
+          "title": "福岡市扇町公園 砂場",
+          "description": "福岡市扇町公園 砂場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578337,
+            "lng": 130.43589
+          }
+        },
+        {
+          "title": "福岡市山王公園 登り棒１",
+          "description": "福岡市山王公園 登り棒１",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.583997,
+            "lng": 130.432692
+          }
+        },
+        {
+          "title": "福岡市山王公園 水飲み場",
+          "description": "福岡市山王公園 水飲み場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.584004,
+            "lng": 130.432692
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 33.58193715564756,
+        "lng": 130.43078741529067,
+        "ele": null
+      },
+      "stations": [
+        {
+          "name": "東比恵",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.43128,
+          "y": 33.589958,
+          "postal": "8120007",
+          "distance": "890m",
+          "prev": "博多",
+          "next": "福岡空港"
+        },
+        {
+          "name": "博多",
+          "prefecture": "福岡県",
+          "line": "九州新幹線",
+          "x": 130.420622,
+          "y": 33.590002,
+          "postal": "8120012",
+          "distance": "1300m",
+          "prev": null,
+          "next": "新鳥栖"
+        },
+        {
+          "name": "竹下",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.431625,
+          "y": 33.568688,
+          "postal": "8120895",
+          "distance": "1480m",
+          "prev": "博多",
+          "next": "笹原"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kyushukyuko bus Fukuoka depot",
+          "description": "Kyushukyuko Bus Fukuoka Depot, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kyushukyuko_bus_Fukuoka_depot.jpg/960px-Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580285,
+            "lng": 130.429792
+          }
+        },
+        {
+          "title": "Kyushukyuko Bus Headquarters",
+          "description": "Kyushukyuko Bus headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kyushukyuko_Bus_Headquarters.jpg/960px-Kyushukyuko_Bus_Headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_Bus_Headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580196,
+            "lng": 130.430735
+          }
+        },
+        {
+          "title": "Platform of Takeshita Station",
+          "description": "Platform of Takeshita Station",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Platform_of_Takeshita_Station.jpg/960px-Platform_of_Takeshita_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Platform_of_Takeshita_Station.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578789,
+            "lng": 130.426269
+          }
+        },
+        {
+          "title": "Shoyaku headquarters",
+          "description": "Shoyaku headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Shoyaku_headquarters.jpg/960px-Shoyaku_headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyaku_headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.58087,
+            "lng": 130.434862
+          }
+        },
+        {
+          "title": "-i---i- (31406499161)",
+          "description": "-i---i- (31406499161).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/-i---i-_%2831406499161%29.jpg/960px--i---i-_%2831406499161%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(31406499161).jpg",
+          "credit": "Thomas Woodtli from Zürich, Switzerland",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.58218,
+            "lng": 130.424163
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ラッコの乗物",
+          "description": "福岡市扇町公園 ラッコの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578368,
+            "lng": 130.435882
+          }
+        },
+        {
+          "title": "福岡市山王公園 登り棒１",
+          "description": "福岡市山王公園 登り棒１",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.583997,
+            "lng": 130.432692
+          }
+        },
+        {
+          "title": "福岡市山王公園 水飲み場",
+          "description": "福岡市山王公園 水飲み場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.584004,
+            "lng": 130.432692
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 33.5816954005987,
+        "lng": 130.43001394353638,
+        "ele": null
+      },
+      "stations": [
+        {
+          "name": "東比恵",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.43128,
+          "y": 33.589958,
+          "postal": "8120007",
+          "distance": "930m",
+          "prev": "博多",
+          "next": "福岡空港"
+        },
+        {
+          "name": "博多",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.420622,
+          "y": 33.590002,
+          "postal": "8120012",
+          "distance": "1270m",
+          "prev": "吉塚",
+          "next": "竹下"
+        },
+        {
+          "name": "竹下",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.431625,
+          "y": 33.568688,
+          "postal": "8120895",
+          "distance": "1460m",
+          "prev": "博多",
+          "next": "笹原"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Higashisumiyoshi junior high school, Hakata",
+          "description": "This is the Fukuoka city Higashisumiyoshi junior high school in Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Higashisumiyoshi_junior_high_school%2C_Hakata.jpg/960px-Higashisumiyoshi_junior_high_school%2C_Hakata.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Higashisumiyoshi_junior_high_school,_Hakata.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.5842,
+            "lng": 130.424216
+          }
+        },
+        {
+          "title": "Kyushukyuko bus Fukuoka depot",
+          "description": "Kyushukyuko Bus Fukuoka Depot, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kyushukyuko_bus_Fukuoka_depot.jpg/960px-Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580285,
+            "lng": 130.429792
+          }
+        },
+        {
+          "title": "Kyushukyuko Bus Headquarters",
+          "description": "Kyushukyuko Bus headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kyushukyuko_Bus_Headquarters.jpg/960px-Kyushukyuko_Bus_Headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_Bus_Headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580196,
+            "lng": 130.430735
+          }
+        },
+        {
+          "title": "Platform of Takeshita Station",
+          "description": "Platform of Takeshita Station",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Platform_of_Takeshita_Station.jpg/960px-Platform_of_Takeshita_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Platform_of_Takeshita_Station.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578789,
+            "lng": 130.426269
+          }
+        },
+        {
+          "title": "Shoyaku headquarters",
+          "description": "Shoyaku headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Shoyaku_headquarters.jpg/960px-Shoyaku_headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyaku_headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.58087,
+            "lng": 130.434862
+          }
+        },
+        {
+          "title": "-i---i- (31406499161)",
+          "description": "-i---i- (31406499161).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/-i---i-_%2831406499161%29.jpg/960px--i---i-_%2831406499161%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(31406499161).jpg",
+          "credit": "Thomas Woodtli from Zürich, Switzerland",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.58218,
+            "lng": 130.424163
+          }
+        },
+        {
+          "title": "福岡市山王公園 登り棒１",
+          "description": "福岡市山王公園 登り棒１",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.583997,
+            "lng": 130.432692
+          }
+        },
+        {
+          "title": "福岡市山王公園 水飲み場",
+          "description": "福岡市山王公園 水飲み場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.584004,
+            "lng": 130.432692
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 33.580414577266076,
+        "lng": 130.43160421270366,
+        "ele": null
+      },
+      "stations": [
+        {
+          "name": "東比恵",
+          "prefecture": "福岡県",
+          "line": "福岡市空港線",
+          "x": 130.43128,
+          "y": 33.589958,
+          "postal": "8120007",
+          "distance": "1060m",
+          "prev": "博多",
+          "next": "福岡空港"
+        },
+        {
+          "name": "竹下",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.431625,
+          "y": 33.568688,
+          "postal": "8120895",
+          "distance": "1310m",
+          "prev": "博多",
+          "next": "笹原"
+        },
+        {
+          "name": "博多",
+          "prefecture": "福岡県",
+          "line": "山陽新幹線",
+          "x": 130.420622,
+          "y": 33.590002,
+          "postal": "8120012",
+          "distance": "1480m",
+          "prev": "小倉",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kyushukyuko bus Fukuoka depot",
+          "description": "Kyushukyuko Bus Fukuoka Depot, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kyushukyuko_bus_Fukuoka_depot.jpg/960px-Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_bus_Fukuoka_depot.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580285,
+            "lng": 130.429792
+          }
+        },
+        {
+          "title": "Kyushukyuko Bus Headquarters",
+          "description": "Kyushukyuko Bus headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kyushukyuko_Bus_Headquarters.jpg/960px-Kyushukyuko_Bus_Headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushukyuko_Bus_Headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.580196,
+            "lng": 130.430735
+          }
+        },
+        {
+          "title": "Shoyaku headquarters",
+          "description": "Shoyaku headquarters, Hakata Ward, Fukuoka City, Fukuoka, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Shoyaku_headquarters.jpg/960px-Shoyaku_headquarters.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyaku_headquarters.jpg",
+          "credit": "Muyo",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.58087,
+            "lng": 130.434862
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ひよこの乗物",
+          "description": "福岡市扇町公園 ひよこの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%81%B2%E3%82%88%E3%81%93%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578352,
+            "lng": 130.435917
+          }
+        },
+        {
+          "title": "福岡市扇町公園 ラッコの乗物",
+          "description": "福岡市扇町公園 ラッコの乗物",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E3%83%A9%E3%83%83%E3%82%B3%E3%81%AE%E4%B9%97%E7%89%A9.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578368,
+            "lng": 130.435882
+          }
+        },
+        {
+          "title": "福岡市扇町公園 砂場",
+          "description": "福岡市扇町公園 砂場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E6%89%87%E7%94%BA%E5%85%AC%E5%9C%92_%E7%A0%82%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.578337,
+            "lng": 130.43589
+          }
+        },
+        {
+          "title": "福岡市山王公園 登り棒１",
+          "description": "福岡市山王公園 登り棒１",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E7%99%BB%E3%82%8A%E6%A3%92%EF%BC%91.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.583997,
+            "lng": 130.432692
+          }
+        },
+        {
+          "title": "福岡市山王公園 水飲み場",
+          "description": "福岡市山王公園 水飲み場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg/960px-%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%B1%B1%E7%8E%8B%E5%85%AC%E5%9C%92_%E6%B0%B4%E9%A3%B2%E3%81%BF%E5%A0%B4.jpg",
+          "credit": "Harimawood",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.584004,
+            "lng": 130.432692
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "kyoto-gyoen",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "京都市民の定番として知られる外周コースは約4km。中心部にありながら広い敷地と豊かな樹林があり、季節を感じながら落ち着いて走れます。外周は舗装主体ですが、内側には砂利混じりの園路もあり、脚当たりを変えながら練習できます。観光地の近くでも比較的リズムを作りやすく、ジョグ、周回走、出張時の距離確保に向く、京都らしい雰囲気を味わえる代表的スポットです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京都市営地下鉄烏丸線 丸太町駅1番出口から徒歩約1分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "今出川駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.030168,
+      "destinationLng": 135.759385,
+      "routeAnchorLat": 35.024087,
+      "routeAnchorLng": 135.760224,
+      "routeMode": "loop",
+      "accessText": "今出川駅からコースまで約680m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "丸太町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.016554,
+      "destinationLng": 135.759537,
+      "routeAnchorLat": 35.019966,
+      "routeAnchorLng": 135.764031,
+      "routeMode": "loop",
+      "accessText": "丸太町駅からコースまで約570m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.024087,
+      "anchorLng": 135.760224,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 月華門 - 京都御所",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/%E6%9C%88%E8%8F%AF%E9%96%80_-_%E4%BA%AC%E9%83%BD%E5%BE%A1%E6%89%80_-_panoramio.jpg/960px-%E6%9C%88%E8%8F%AF%E9%96%80_-_%E4%BA%AC%E9%83%BD%E5%BE%A1%E6%89%80_-_panoramio.jpg",
+        "alt": "京都御苑のスタート周辺付近",
+        "caption": "京都御苑の走路近隣で撮影された風景",
+        "credit": "kajikawa",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9C%88%E8%8F%AF%E9%96%80_-_%E4%BA%AC%E9%83%BD%E5%BE%A1%E6%89%80_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.019966,
+      "anchorLng": 135.764031,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Japan, 京都府京都市 京都御苑",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Japan%2C_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun_%284%29.jpg/960px-Japan%2C_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun_%284%29.jpg",
+        "alt": "京都御苑の序盤区間付近",
+        "caption": "京都御苑の走路近隣で撮影された風景",
+        "credit": "jetsun",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japan,_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun_(4).jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.017497,
+      "anchorLng": 135.764001,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Japan, 京都府京都市 京都御苑",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Japan%2C_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun.jpg/960px-Japan%2C_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun.jpg",
+        "alt": "京都御苑の中盤区間付近",
+        "caption": "京都御苑の走路近隣で撮影された風景",
+        "credit": "jetsun",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japan,_%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82_%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91_-_panoramio_-_jetsun.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.016842,
+      "anchorLng": 135.757185,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 菅原院天満宮 手水舎",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Le_Temple_Shint%C3%B4_Sugawara-in-Ten%27man-g%C3%BB_-_Le_temizuya.jpg/960px-Le_Temple_Shint%C3%B4_Sugawara-in-Ten%27man-g%C3%BB_-_Le_temizuya.jpg",
+        "alt": "京都御苑の後半区間付近",
+        "caption": "京都御苑の走路近隣で撮影された風景",
+        "credit": "Yanajin33",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Le_Temple_Shint%C3%B4_Sugawara-in-Ten%27man-g%C3%BB_-_Le_temizuya.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.021304,
+      "anchorLng": 135.756296,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kyoto Prefecture, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Women_Kimonos_Kyoto_Prefecture_%28Unsplash%29.jpg/960px-Women_Kimonos_Kyoto_Prefecture_%28Unsplash%29.jpg",
+        "alt": "京都御苑の終盤区間付近",
+        "caption": "京都御苑の走路近隣で撮影された風景",
+        "credit": "Redd Angelo reddangelo16",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Women_Kimonos_Kyoto_Prefecture_(Unsplash).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,705 @@
+{
+  "slug": "tamako-cycling-road",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "武蔵大和駅そばを起点に多摩湖(村山貯水池)の湖畔を一周する約11.8kmのコースです。大部分が自転車歩行者専用道のため車を気にせず走ることができ、湖と森の景色の変化を楽しみながら距離を踏めます。起伏はわずかで安定したペース走にも好適。途中にトイレや自動販売機があり、補給ポイントを確認しながら走れば安心です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 西武多摩湖線 武蔵大和駅から徒歩すぐ。狭山公園経由で湖畔に出られます。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "武蔵大和駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.756427,
+      "destinationLng": 139.444008,
+      "routeAnchorLat": 35.75985,
+      "routeAnchorLng": 139.43946000000003,
+      "routeMode": "loop",
+      "accessText": "武蔵大和駅からコースまで約560m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.75985,
+      "routeLng": 139.43946000000003,
+      "elevationM": 111,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2345,
+        "section-3": 4755,
+        "section-4": 7053,
+        "section-5": 9397
+      },
+      "gpxHref": "/gpx/tamako-cycling-road-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "西武球場前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.77093,
+      "destinationLng": 139.41966,
+      "routeAnchorLat": 35.766760000000005,
+      "routeAnchorLng": 139.42758,
+      "routeMode": "loop",
+      "accessText": "西武球場前駅からコースまで約850m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 28,
+      "routeDistanceM": 2345,
+      "routeLat": 35.766760000000005,
+      "routeLng": 139.42758,
+      "elevationM": 109,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 9415,
+        "section-2": 0,
+        "section-3": 2410,
+        "section-4": 4708,
+        "section-5": 7052
+      },
+      "gpxHref": "/gpx/tamako-cycling-road-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "上北台駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.745824,
+      "destinationLng": 139.415822,
+      "routeAnchorLat": 35.75826,
+      "routeAnchorLng": 139.4189,
+      "routeMode": "loop",
+      "accessText": "上北台駅からコースまで約1410m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 138,
+      "routeDistanceM": 9397,
+      "routeLat": 35.75826,
+      "routeLng": 139.4189,
+      "elevationM": 134,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2363,
+        "section-2": 4708,
+        "section-3": 7118,
+        "section-4": 9416,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/tamako-cycling-road-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.75985,
+      "anchorLng": 139.43946000000003,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 都立狭山自然公園・宅ちゃん池",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg",
+        "alt": "多摩湖サイクリングロード一周コースのスタート周辺付近",
+        "caption": "多摩湖サイクリングロード一周コースの走路近隣で撮影された風景",
+        "credit": "Adachi Masayuki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.75985,
+      "routeLng": 139.43946000000003,
+      "elevationM": 111,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.766760000000005,
+      "anchorLng": 139.42758,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 田植え",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg/960px-%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg",
+        "alt": "多摩湖サイクリングロード一周コースの序盤区間付近",
+        "caption": "多摩湖サイクリングロード一周コースの走路近隣で撮影された風景",
+        "credit": "nekoneko",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg"
+      },
+      "routePointIndex": 28,
+      "routeDistanceM": 2345,
+      "routeLat": 35.766760000000005,
+      "routeLng": 139.42758,
+      "elevationM": 109,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.76887,
+      "anchorLng": 139.40599,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Atsushi Nakazato, pitcher of the Yomiuri Giants .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giants_nakazato63.jpg",
+        "alt": "多摩湖サイクリングロード一周コースの中盤区間付近",
+        "caption": "多摩湖サイクリングロード一周コースの走路近隣で撮影された風景",
+        "credit": "Ship1231",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giants_nakazato63.jpg"
+      },
+      "routePointIndex": 65,
+      "routeDistanceM": 4755,
+      "routeLat": 35.76887,
+      "routeLng": 139.40599,
+      "elevationM": 149,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.762570000000004,
+      "anchorLng": 139.39764000000002,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 2 Chome Nakatō, Musashimurayama-shi, Tōkyō-to 208-0001, Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg/960px-2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg",
+        "alt": "多摩湖サイクリングロード一周コースの後半区間付近",
+        "caption": "多摩湖サイクリングロード一周コースの走路近隣で撮影された風景",
+        "credit": "ESU",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2_Chome_Nakat%C5%8D,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0001,_Japan_-_panoramio.jpg"
+      },
+      "routePointIndex": 99,
+      "routeDistanceM": 7053,
+      "routeLat": 35.762570000000004,
+      "routeLng": 139.39764000000002,
+      "elevationM": 155,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.75826,
+      "anchorLng": 139.4189,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Atsushi Nakazato, pitcher of the Yomiuri Giants .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giants_nakazato63.jpg",
+        "alt": "多摩湖サイクリングロード一周コースの終盤区間付近",
+        "caption": "多摩湖サイクリングロード一周コースの走路近隣で撮影された風景",
+        "credit": "Ship1231",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giants_nakazato63.jpg"
+      },
+      "routePointIndex": 138,
+      "routeDistanceM": 9397,
+      "routeLat": 35.75826,
+      "routeLng": 139.4189,
+      "elevationM": 134,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 11760,
+  "elevationGainM": 102,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 111
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 102.1
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 102.7
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 103.3
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 103.9
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 104.5
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 105.2
+    },
+    {
+      "distanceM": 698,
+      "elevationM": 105.8
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 102.3
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 106
+    },
+    {
+      "distanceM": 997,
+      "elevationM": 103.7
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 113.5
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 112
+    },
+    {
+      "distanceM": 1296,
+      "elevationM": 110
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 107
+    },
+    {
+      "distanceM": 1495,
+      "elevationM": 112
+    },
+    {
+      "distanceM": 1595,
+      "elevationM": 115.1
+    },
+    {
+      "distanceM": 1694,
+      "elevationM": 114.5
+    },
+    {
+      "distanceM": 1794,
+      "elevationM": 116.7
+    },
+    {
+      "distanceM": 1894,
+      "elevationM": 113.8
+    },
+    {
+      "distanceM": 1993,
+      "elevationM": 121.2
+    },
+    {
+      "distanceM": 2093,
+      "elevationM": 119.5
+    },
+    {
+      "distanceM": 2193,
+      "elevationM": 116.9
+    },
+    {
+      "distanceM": 2292,
+      "elevationM": 109.4
+    },
+    {
+      "distanceM": 2392,
+      "elevationM": 111.8
+    },
+    {
+      "distanceM": 2492,
+      "elevationM": 120.9
+    },
+    {
+      "distanceM": 2591,
+      "elevationM": 119.5
+    },
+    {
+      "distanceM": 2691,
+      "elevationM": 127.7
+    },
+    {
+      "distanceM": 2791,
+      "elevationM": 129.4
+    },
+    {
+      "distanceM": 2890,
+      "elevationM": 131
+    },
+    {
+      "distanceM": 2990,
+      "elevationM": 132.4
+    },
+    {
+      "distanceM": 3090,
+      "elevationM": 129.3
+    },
+    {
+      "distanceM": 3189,
+      "elevationM": 130.3
+    },
+    {
+      "distanceM": 3289,
+      "elevationM": 126.7
+    },
+    {
+      "distanceM": 3389,
+      "elevationM": 127
+    },
+    {
+      "distanceM": 3488,
+      "elevationM": 125
+    },
+    {
+      "distanceM": 3588,
+      "elevationM": 125
+    },
+    {
+      "distanceM": 3687,
+      "elevationM": 129.4
+    },
+    {
+      "distanceM": 3787,
+      "elevationM": 135.5
+    },
+    {
+      "distanceM": 3887,
+      "elevationM": 139
+    },
+    {
+      "distanceM": 3986,
+      "elevationM": 139
+    },
+    {
+      "distanceM": 4086,
+      "elevationM": 140
+    },
+    {
+      "distanceM": 4186,
+      "elevationM": 140
+    },
+    {
+      "distanceM": 4285,
+      "elevationM": 140.9
+    },
+    {
+      "distanceM": 4385,
+      "elevationM": 144.3
+    },
+    {
+      "distanceM": 4485,
+      "elevationM": 145.7
+    },
+    {
+      "distanceM": 4584,
+      "elevationM": 147.1
+    },
+    {
+      "distanceM": 4684,
+      "elevationM": 148.3
+    },
+    {
+      "distanceM": 4784,
+      "elevationM": 148.7
+    },
+    {
+      "distanceM": 4883,
+      "elevationM": 151.4
+    },
+    {
+      "distanceM": 4983,
+      "elevationM": 149.6
+    },
+    {
+      "distanceM": 5083,
+      "elevationM": 153.4
+    },
+    {
+      "distanceM": 5182,
+      "elevationM": 155.1
+    },
+    {
+      "distanceM": 5282,
+      "elevationM": 157.8
+    },
+    {
+      "distanceM": 5382,
+      "elevationM": 159
+    },
+    {
+      "distanceM": 5481,
+      "elevationM": 154
+    },
+    {
+      "distanceM": 5581,
+      "elevationM": 155.9
+    },
+    {
+      "distanceM": 5681,
+      "elevationM": 154.2
+    },
+    {
+      "distanceM": 5780,
+      "elevationM": 155
+    },
+    {
+      "distanceM": 5880,
+      "elevationM": 155.8
+    },
+    {
+      "distanceM": 5980,
+      "elevationM": 161.5
+    },
+    {
+      "distanceM": 6079,
+      "elevationM": 159.9
+    },
+    {
+      "distanceM": 6179,
+      "elevationM": 162.3
+    },
+    {
+      "distanceM": 6279,
+      "elevationM": 158.4
+    },
+    {
+      "distanceM": 6378,
+      "elevationM": 159.1
+    },
+    {
+      "distanceM": 6478,
+      "elevationM": 167
+    },
+    {
+      "distanceM": 6578,
+      "elevationM": 167.1
+    },
+    {
+      "distanceM": 6677,
+      "elevationM": 165.3
+    },
+    {
+      "distanceM": 6777,
+      "elevationM": 163.5
+    },
+    {
+      "distanceM": 6877,
+      "elevationM": 160.4
+    },
+    {
+      "distanceM": 6976,
+      "elevationM": 157.5
+    },
+    {
+      "distanceM": 7076,
+      "elevationM": 155
+    },
+    {
+      "distanceM": 7176,
+      "elevationM": 159.3
+    },
+    {
+      "distanceM": 7275,
+      "elevationM": 159.6
+    },
+    {
+      "distanceM": 7375,
+      "elevationM": 158.4
+    },
+    {
+      "distanceM": 7475,
+      "elevationM": 154
+    },
+    {
+      "distanceM": 7574,
+      "elevationM": 152.8
+    },
+    {
+      "distanceM": 7674,
+      "elevationM": 146
+    },
+    {
+      "distanceM": 7774,
+      "elevationM": 149.5
+    },
+    {
+      "distanceM": 7873,
+      "elevationM": 153
+    },
+    {
+      "distanceM": 7973,
+      "elevationM": 150
+    },
+    {
+      "distanceM": 8073,
+      "elevationM": 146.8
+    },
+    {
+      "distanceM": 8172,
+      "elevationM": 147
+    },
+    {
+      "distanceM": 8272,
+      "elevationM": 147.8
+    },
+    {
+      "distanceM": 8372,
+      "elevationM": 137.5
+    },
+    {
+      "distanceM": 8471,
+      "elevationM": 139.7
+    },
+    {
+      "distanceM": 8571,
+      "elevationM": 138.7
+    },
+    {
+      "distanceM": 8671,
+      "elevationM": 139.8
+    },
+    {
+      "distanceM": 8770,
+      "elevationM": 133.3
+    },
+    {
+      "distanceM": 8870,
+      "elevationM": 135.9
+    },
+    {
+      "distanceM": 8970,
+      "elevationM": 137
+    },
+    {
+      "distanceM": 9069,
+      "elevationM": 131.8
+    },
+    {
+      "distanceM": 9169,
+      "elevationM": 139
+    },
+    {
+      "distanceM": 9269,
+      "elevationM": 132.4
+    },
+    {
+      "distanceM": 9368,
+      "elevationM": 133.1
+    },
+    {
+      "distanceM": 9468,
+      "elevationM": 136
+    },
+    {
+      "distanceM": 9568,
+      "elevationM": 130.2
+    },
+    {
+      "distanceM": 9667,
+      "elevationM": 135.2
+    },
+    {
+      "distanceM": 9767,
+      "elevationM": 135.4
+    },
+    {
+      "distanceM": 9867,
+      "elevationM": 133.1
+    },
+    {
+      "distanceM": 9966,
+      "elevationM": 135
+    },
+    {
+      "distanceM": 10066,
+      "elevationM": 128
+    },
+    {
+      "distanceM": 10166,
+      "elevationM": 125
+    },
+    {
+      "distanceM": 10265,
+      "elevationM": 128
+    },
+    {
+      "distanceM": 10365,
+      "elevationM": 128
+    },
+    {
+      "distanceM": 10464,
+      "elevationM": 117.9
+    },
+    {
+      "distanceM": 10564,
+      "elevationM": 101.3
+    },
+    {
+      "distanceM": 10664,
+      "elevationM": 122
+    },
+    {
+      "distanceM": 10763,
+      "elevationM": 123.8
+    },
+    {
+      "distanceM": 10863,
+      "elevationM": 124.1
+    },
+    {
+      "distanceM": 10963,
+      "elevationM": 117
+    },
+    {
+      "distanceM": 11062,
+      "elevationM": 117.2
+    },
+    {
+      "distanceM": 11162,
+      "elevationM": 120.1
+    },
+    {
+      "distanceM": 11262,
+      "elevationM": 110.6
+    },
+    {
+      "distanceM": 11361,
+      "elevationM": 114.8
+    },
+    {
+      "distanceM": 11461,
+      "elevationM": 117
+    },
+    {
+      "distanceM": 11561,
+      "elevationM": 116.1
+    },
+    {
+      "distanceM": 11660,
+      "elevationM": 115.4
+    },
+    {
+      "distanceM": 11760,
+      "elevationM": 111
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "slug": "kokyo",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "日本で最もよく知られたランニングコースのひとつ。信号のない約5kmの周回路で、都心にありながら石垣や緑、季節の景色を楽しめます。ランナーは反時計回りで走るのが暗黙のルール。竹橋から半蔵門にかけての上りがほどよい刺激になり、初心者の一周からペース走まで幅広く使えます。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 東京メトロ竹橋駅・半蔵門駅などから徒歩すぐ。周辺にランニングステーション多数。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "日比谷駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.676036,
+      "destinationLng": 139.759998,
+      "routeAnchorLat": 35.677813,
+      "routeAnchorLng": 139.756266,
+      "routeMode": "loop",
+      "accessText": "日比谷駅からコースまで約390m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.677813,
+      "routeLng": 139.756266,
+      "elevationM": 11.4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1004,
+        "section-3": 2004,
+        "section-4": 3002,
+        "section-5": 4002
+      },
+      "gpxHref": "/gpx/kokyo-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "大手町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.684856,
+      "destinationLng": 139.762959,
+      "routeAnchorLat": 35.685891,
+      "routeAnchorLng": 139.761055,
+      "routeMode": "loop",
+      "accessText": "大手町駅からコースまで約210m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 70,
+      "routeDistanceM": 1004,
+      "routeLat": 35.685891,
+      "routeLng": 139.761055,
+      "elevationM": 10.1,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4007,
+        "section-2": 0,
+        "section-3": 1000,
+        "section-4": 1998,
+        "section-5": 2998
+      },
+      "gpxHref": "/gpx/kokyo-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "竹橋駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.690662,
+      "destinationLng": 139.756817,
+      "routeAnchorLat": 35.68981,
+      "routeAnchorLng": 139.754553,
+      "routeMode": "loop",
+      "accessText": "竹橋駅からコースまで約230m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 141,
+      "routeDistanceM": 2004,
+      "routeLat": 35.68981,
+      "routeLng": 139.754553,
+      "elevationM": 18.4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 3007,
+        "section-2": 4011,
+        "section-3": 0,
+        "section-4": 998,
+        "section-5": 1998
+      },
+      "gpxHref": "/gpx/kokyo-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "半蔵門駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.685703,
+      "destinationLng": 139.74163,
+      "routeAnchorLat": 35.68746,
+      "routeAnchorLng": 139.745124,
+      "routeMode": "loop",
+      "accessText": "半蔵門駅からコースまで約370m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 215,
+      "routeDistanceM": 3002,
+      "routeLat": 35.68746,
+      "routeLng": 139.745124,
+      "elevationM": 31,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2009,
+        "section-2": 3013,
+        "section-3": 4013,
+        "section-4": 0,
+        "section-5": 1000
+      },
+      "gpxHref": "/gpx/kokyo-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.677813,
+      "anchorLng": 139.756266,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 東京都千代田区霞が関一丁目・日比谷公園と 皇居外苑 の間にある、 東京都道301号白山祝田田町線 の 祝田橋 。手前は日比谷濠。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Iwaidabashi_01.JPG/960px-Iwaidabashi_01.JPG",
+        "alt": "皇居のスタート周辺付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwaidabashi_01.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.677813,
+      "routeLng": 139.756266,
+      "elevationM": 11.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.685891,
+      "anchorLng": 139.761055,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 皇居の東側-南側の一般道を閉鎖して、週末に開催されている｢パレスサイドサイクリングコース｣の様子。中央遠方から右側に、皇居ランニングをしているランナーも見える。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Palace_Side_Cycling1.jpg/960px-Palace_Side_Cycling1.jpg",
+        "alt": "皇居の序盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "メルビル",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_Side_Cycling1.jpg"
+      },
+      "routePointIndex": 70,
+      "routeDistanceM": 1004,
+      "routeLat": 35.685891,
+      "routeLng": 139.761055,
+      "elevationM": 10.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.68981,
+      "anchorLng": 139.754553,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: National Museum of Modern Art Tokyo .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/National_Museum_of_Modern_Art%2C_Tokyo_-signboard.jpg/960px-National_Museum_of_Modern_Art%2C_Tokyo_-signboard.jpg",
+        "alt": "皇居の中盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "Michael Stout from Tokyo",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Modern_Art,_Tokyo_-signboard.jpg"
+      },
+      "routePointIndex": 141,
+      "routeDistanceM": 2004,
+      "routeLat": 35.68981,
+      "routeLng": 139.754553,
+      "elevationM": 18.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.68746,
+      "anchorLng": 139.745124,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 皇居の望楼 A Turrent Watchtower of the Imperial Palace",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg/960px-%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg",
+        "alt": "皇居の後半区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "Bohao Zhao",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9A%87%E5%B1%85%E3%81%AE%E6%9C%9B%E6%A5%BC_A_Turrent_Watchtower_of_the_Imperial_Palace_-_panoramio.jpg"
+      },
+      "routePointIndex": 215,
+      "routeDistanceM": 3002,
+      "routeLat": 35.68746,
+      "routeLng": 139.745124,
+      "elevationM": 31,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.679536,
+      "anchorLng": 139.74731,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kensei-kinenkan in Chiyoda-ku , Tokyo , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg/960px-Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg",
+        "alt": "皇居の終盤区間付近",
+        "caption": "皇居の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memorial_Hall_of_constitutional_politics_Japan01s3200.jpg"
+      },
+      "routePointIndex": 279,
+      "routeDistanceM": 4002,
+      "routeLat": 35.679536,
+      "routeLng": 139.74731,
+      "elevationM": 19.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5011,
+  "elevationGainM": 28,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 11.4
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 197,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 295,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 393,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 491,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 590,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 688,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 786,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 884,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 983,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 1081,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 1179,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 1277,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 1376,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 1474,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 1572,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 1670,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 1769,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 1867,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 1965,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 2063,
+      "elevationM": 19.8
+    },
+    {
+      "distanceM": 2162,
+      "elevationM": 21.7
+    },
+    {
+      "distanceM": 2260,
+      "elevationM": 23.1
+    },
+    {
+      "distanceM": 2358,
+      "elevationM": 25.2
+    },
+    {
+      "distanceM": 2457,
+      "elevationM": 26.2
+    },
+    {
+      "distanceM": 2555,
+      "elevationM": 28.1
+    },
+    {
+      "distanceM": 2653,
+      "elevationM": 30
+    },
+    {
+      "distanceM": 2751,
+      "elevationM": 31.9
+    },
+    {
+      "distanceM": 2850,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 2948,
+      "elevationM": 29.7
+    },
+    {
+      "distanceM": 3046,
+      "elevationM": 31.9
+    },
+    {
+      "distanceM": 3144,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 3243,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 3341,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 3439,
+      "elevationM": 34.6
+    },
+    {
+      "distanceM": 3537,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 3636,
+      "elevationM": 31.6
+    },
+    {
+      "distanceM": 3734,
+      "elevationM": 29.8
+    },
+    {
+      "distanceM": 3832,
+      "elevationM": 26.5
+    },
+    {
+      "distanceM": 3930,
+      "elevationM": 21.3
+    },
+    {
+      "distanceM": 4029,
+      "elevationM": 18.9
+    },
+    {
+      "distanceM": 4127,
+      "elevationM": 17.8
+    },
+    {
+      "distanceM": 4225,
+      "elevationM": 17.5
+    },
+    {
+      "distanceM": 4323,
+      "elevationM": 17
+    },
+    {
+      "distanceM": 4422,
+      "elevationM": 15.2
+    },
+    {
+      "distanceM": 4520,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 4618,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 4717,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 4815,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 4913,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 5011,
+      "elevationM": 11.4
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "slug": "yamagata-city-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "山形駅西口を起点に市内の名所をつなぐ周回コース。山形城跡の霞城公園を園路でめぐり、東大手門から里之宮湯殿山神社、レンガ造りの旧県庁舎・文翔館へ。馬見ヶ崎橋で川を眺めて折り返し、七日町大通りを南下して駅へ戻る。信号は多めだが道はフラットで、公園の桜(春)や歴史的建築を楽しみながら走れる街ラン向きの一周。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR山形駅西口からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "山形駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 38.248098,
+      "destinationLng": 140.327253,
+      "routeAnchorLat": 38.247744,
+      "routeAnchorLng": 140.324193,
+      "routeMode": "loop",
+      "accessText": "山形駅からコースまで約270m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 38.247744,
+      "routeLng": 140.324193,
+      "elevationM": 129,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1704,
+        "section-3": 3527,
+        "section-4": 4779,
+        "section-5": 6998
+      },
+      "gpxHref": "/gpx/yamagata-city-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "北山形駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 38.265902,
+      "destinationLng": 140.332658,
+      "routeAnchorLat": 38.25877,
+      "routeAnchorLng": 140.325839,
+      "routeMode": "loop",
+      "accessText": "北山形駅からコースまで約980m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 59,
+      "routeDistanceM": 1704,
+      "routeLat": 38.25877,
+      "routeLng": 140.325839,
+      "elevationM": 126.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 7012,
+        "section-2": 0,
+        "section-3": 1823,
+        "section-4": 3075,
+        "section-5": 5294
+      },
+      "gpxHref": "/gpx/yamagata-city-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 38.247744,
+      "anchorLng": 140.324193,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 左沢線のキハ101を山形駅にて。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/JR_east_Aterazawa_line_train_%40Yamagata_%284026695438%29.jpg/960px-JR_east_Aterazawa_line_train_%40Yamagata_%284026695438%29.jpg",
+        "alt": "山形市中心部(霞城公園・文翔館)のスタート周辺付近",
+        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_east_Aterazawa_line_train_@Yamagata_(4026695438).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 38.247744,
+      "routeLng": 140.324193,
+      "elevationM": 129,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 38.25877,
+      "anchorLng": 140.325839,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Yamagata Castle in Yamagata , Yamagata prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg/960px-220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg",
+        "alt": "山形市中心部(霞城公園・文翔館)の序盤区間付近",
+        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg"
+      },
+      "routePointIndex": 59,
+      "routeDistanceM": 1704,
+      "routeLat": 38.25877,
+      "routeLng": 140.325839,
+      "elevationM": 126.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 38.256937,
+      "anchorLng": 140.338631,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 文翔館（旧山形県庁） Yamagata Old City Hall",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/%E6%96%87%E7%BF%94%E9%A4%A8%EF%BC%88%E6%97%A7%E5%B1%B1%E5%BD%A2%E7%9C%8C%E5%BA%81%EF%BC%89_Yamagata_Old_City_Hall_-_panoramio.jpg",
+        "alt": "山形市中心部(霞城公園・文翔館)の中盤区間付近",
+        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
+        "credit": "佐藤智史",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%87%E7%BF%94%E9%A4%A8%EF%BC%88%E6%97%A7%E5%B1%B1%E5%BD%A2%E7%9C%8C%E5%BA%81%EF%BC%89_Yamagata_Old_City_Hall_-_panoramio.jpg"
+      },
+      "routePointIndex": 112,
+      "routeDistanceM": 3527,
+      "routeLat": 38.256937,
+      "routeLng": 140.338631,
+      "elevationM": 145.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 38.260002,
+      "anchorLng": 140.347886,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 山形県護国神社 遠景",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Yamagata_Pref._Gokoku-jinja_longshot.jpg/960px-Yamagata_Pref._Gokoku-jinja_longshot.jpg",
+        "alt": "山形市中心部(霞城公園・文翔館)の後半区間付近",
+        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
+        "credit": "Suz-b",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamagata_Pref._Gokoku-jinja_longshot.jpg"
+      },
+      "routePointIndex": 138,
+      "routeDistanceM": 4779,
+      "routeLat": 38.260002,
+      "routeLng": 140.347886,
+      "elevationM": 149.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 38.248948,
+      "anchorLng": 140.338412,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 山形市の大通り",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yamagata_main_street_%2839904896492%29.jpg/960px-Yamagata_main_street_%2839904896492%29.jpg",
+        "alt": "山形市中心部(霞城公園・文翔館)の終盤区間付近",
+        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
+        "credit": "Raita Futo from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamagata_main_street_(39904896492).jpg"
+      },
+      "routePointIndex": 176,
+      "routeDistanceM": 6998,
+      "routeLat": 38.248948,
+      "routeLng": 140.338412,
+      "elevationM": 149.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8716,
+  "elevationGainM": 48,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 129
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 129.4
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 128.2
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 131.6
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 130.8
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 130.5
+    },
+    {
+      "distanceM": 594,
+      "elevationM": 131.2
+    },
+    {
+      "distanceM": 693,
+      "elevationM": 133.7
+    },
+    {
+      "distanceM": 792,
+      "elevationM": 131.6
+    },
+    {
+      "distanceM": 891,
+      "elevationM": 129.2
+    },
+    {
+      "distanceM": 990,
+      "elevationM": 128.9
+    },
+    {
+      "distanceM": 1089,
+      "elevationM": 130
+    },
+    {
+      "distanceM": 1189,
+      "elevationM": 130.7
+    },
+    {
+      "distanceM": 1288,
+      "elevationM": 128.1
+    },
+    {
+      "distanceM": 1387,
+      "elevationM": 128
+    },
+    {
+      "distanceM": 1486,
+      "elevationM": 128.6
+    },
+    {
+      "distanceM": 1585,
+      "elevationM": 128
+    },
+    {
+      "distanceM": 1684,
+      "elevationM": 127
+    },
+    {
+      "distanceM": 1783,
+      "elevationM": 129
+    },
+    {
+      "distanceM": 1882,
+      "elevationM": 129.3
+    },
+    {
+      "distanceM": 1981,
+      "elevationM": 133.1
+    },
+    {
+      "distanceM": 2080,
+      "elevationM": 132.3
+    },
+    {
+      "distanceM": 2179,
+      "elevationM": 131.5
+    },
+    {
+      "distanceM": 2278,
+      "elevationM": 131.8
+    },
+    {
+      "distanceM": 2377,
+      "elevationM": 133.9
+    },
+    {
+      "distanceM": 2476,
+      "elevationM": 134.8
+    },
+    {
+      "distanceM": 2575,
+      "elevationM": 135.9
+    },
+    {
+      "distanceM": 2674,
+      "elevationM": 134.9
+    },
+    {
+      "distanceM": 2773,
+      "elevationM": 135
+    },
+    {
+      "distanceM": 2872,
+      "elevationM": 134.7
+    },
+    {
+      "distanceM": 2971,
+      "elevationM": 134.6
+    },
+    {
+      "distanceM": 3070,
+      "elevationM": 136.2
+    },
+    {
+      "distanceM": 3169,
+      "elevationM": 138
+    },
+    {
+      "distanceM": 3268,
+      "elevationM": 140.5
+    },
+    {
+      "distanceM": 3368,
+      "elevationM": 141.9
+    },
+    {
+      "distanceM": 3467,
+      "elevationM": 144.3
+    },
+    {
+      "distanceM": 3566,
+      "elevationM": 147.9
+    },
+    {
+      "distanceM": 3665,
+      "elevationM": 147.3
+    },
+    {
+      "distanceM": 3764,
+      "elevationM": 146.2
+    },
+    {
+      "distanceM": 3863,
+      "elevationM": 147.6
+    },
+    {
+      "distanceM": 3962,
+      "elevationM": 148.3
+    },
+    {
+      "distanceM": 4061,
+      "elevationM": 147.3
+    },
+    {
+      "distanceM": 4160,
+      "elevationM": 145.7
+    },
+    {
+      "distanceM": 4259,
+      "elevationM": 148.8
+    },
+    {
+      "distanceM": 4358,
+      "elevationM": 147.6
+    },
+    {
+      "distanceM": 4457,
+      "elevationM": 144.9
+    },
+    {
+      "distanceM": 4556,
+      "elevationM": 144.1
+    },
+    {
+      "distanceM": 4655,
+      "elevationM": 146
+    },
+    {
+      "distanceM": 4754,
+      "elevationM": 148.3
+    },
+    {
+      "distanceM": 4853,
+      "elevationM": 149.2
+    },
+    {
+      "distanceM": 4952,
+      "elevationM": 147.3
+    },
+    {
+      "distanceM": 5051,
+      "elevationM": 147.3
+    },
+    {
+      "distanceM": 5150,
+      "elevationM": 148.6
+    },
+    {
+      "distanceM": 5249,
+      "elevationM": 148.9
+    },
+    {
+      "distanceM": 5348,
+      "elevationM": 146.2
+    },
+    {
+      "distanceM": 5447,
+      "elevationM": 144.3
+    },
+    {
+      "distanceM": 5546,
+      "elevationM": 144.5
+    },
+    {
+      "distanceM": 5646,
+      "elevationM": 147.4
+    },
+    {
+      "distanceM": 5745,
+      "elevationM": 148.9
+    },
+    {
+      "distanceM": 5844,
+      "elevationM": 149.2
+    },
+    {
+      "distanceM": 5943,
+      "elevationM": 150.3
+    },
+    {
+      "distanceM": 6042,
+      "elevationM": 149.1
+    },
+    {
+      "distanceM": 6141,
+      "elevationM": 149.7
+    },
+    {
+      "distanceM": 6240,
+      "elevationM": 150.6
+    },
+    {
+      "distanceM": 6339,
+      "elevationM": 152.2
+    },
+    {
+      "distanceM": 6438,
+      "elevationM": 153.7
+    },
+    {
+      "distanceM": 6537,
+      "elevationM": 152.4
+    },
+    {
+      "distanceM": 6636,
+      "elevationM": 152.2
+    },
+    {
+      "distanceM": 6735,
+      "elevationM": 151.1
+    },
+    {
+      "distanceM": 6834,
+      "elevationM": 150.5
+    },
+    {
+      "distanceM": 6933,
+      "elevationM": 150.2
+    },
+    {
+      "distanceM": 7032,
+      "elevationM": 150
+    },
+    {
+      "distanceM": 7131,
+      "elevationM": 150.7
+    },
+    {
+      "distanceM": 7230,
+      "elevationM": 148.6
+    },
+    {
+      "distanceM": 7329,
+      "elevationM": 144.7
+    },
+    {
+      "distanceM": 7428,
+      "elevationM": 145.3
+    },
+    {
+      "distanceM": 7527,
+      "elevationM": 145.8
+    },
+    {
+      "distanceM": 7626,
+      "elevationM": 144.8
+    },
+    {
+      "distanceM": 7725,
+      "elevationM": 142.8
+    },
+    {
+      "distanceM": 7824,
+      "elevationM": 142.3
+    },
+    {
+      "distanceM": 7924,
+      "elevationM": 142.2
+    },
+    {
+      "distanceM": 8023,
+      "elevationM": 142.6
+    },
+    {
+      "distanceM": 8122,
+      "elevationM": 142.1
+    },
+    {
+      "distanceM": 8221,
+      "elevationM": 140.9
+    },
+    {
+      "distanceM": 8320,
+      "elevationM": 137.1
+    },
+    {
+      "distanceM": 8419,
+      "elevationM": 133.9
+    },
+    {
+      "distanceM": 8518,
+      "elevationM": 128.2
+    },
+    {
+      "distanceM": 8617,
+      "elevationM": 129.4
+    },
+    {
+      "distanceM": 8716,
+      "elevationM": 129
+    }
+  ]
+}

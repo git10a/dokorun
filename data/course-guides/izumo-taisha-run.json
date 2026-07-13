@@ -1,0 +1,140 @@
+{
+  "slug": "izumo-taisha-run",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR出雲市駅から北西へ、出雲平野の田園地帯を抜けて縁結びの神様・出雲大社を目指す片道約9.4km。終盤は明治の木造駅舎が残る旧大社駅(重要文化財)を通り、宇迦橋の大鳥居から石畳の神門通りを上って勢溜の正門鳥居がゴール。高低差は50m弱とほぼ平坦で、沿道にコンビニや自販機が点在するため補給とトイレの心配が少ない。復路は一畑電車やバスで戻れるので出張朝ランにも使いやすい。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点はJR出雲市駅。帰りは一畑電車出雲大社前駅やバスを利用可 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "出雲市駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.360694,
+      "destinationLng": 132.756518,
+      "routeAnchorLat": 35.36051,
+      "routeAnchorLng": 132.756707,
+      "routeMode": "forward",
+      "accessText": "出雲市駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "出雲大社前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.393245,
+      "destinationLng": 132.687531,
+      "routeAnchorLat": 35.399798,
+      "routeAnchorLng": 132.68515,
+      "routeMode": "reverse",
+      "accessText": "出雲大社前駅からコースまで約760m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.36051,
+      "anchorLng": 132.756707,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: JR出雲市駅 JR Izumoshi Sta.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/JR%E5%87%BA%E9%9B%B2%E5%B8%82%E9%A7%85_JR_Izumoshi_Sta._-_panoramio.jpg/960px-JR%E5%87%BA%E9%9B%B2%E5%B8%82%E9%A7%85_JR_Izumoshi_Sta._-_panoramio.jpg",
+        "alt": "出雲市駅〜出雲大社のスタート周辺付近",
+        "caption": "出雲市駅〜出雲大社の走路近隣で撮影された風景",
+        "credit": "iloverjoa",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR%E5%87%BA%E9%9B%B2%E5%B8%82%E9%A7%85_JR_Izumoshi_Sta._-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.369115,
+      "anchorLng": 132.738615,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: エディオン出雲店（島根県 出雲市 渡橋町796-1）で販売されていた福袋。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Fukubukuro_-_various_-_Jan_5_2019_10_13_14_976000.jpeg/960px-Fukubukuro_-_various_-_Jan_5_2019_10_13_14_976000.jpeg",
+        "alt": "出雲市駅〜出雲大社の序盤区間付近",
+        "caption": "出雲市駅〜出雲大社の走路近隣で撮影された風景",
+        "credit": "Nesnad",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukubukuro_-_various_-_Jan_5_2019_10_13_14_976000.jpeg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.378827,
+      "anchorLng": 132.716861,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 弥山 (島根県) - 島根県出雲市にある標高506mの山 (Mount Misen, Shimane)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mount_Misen_2022_Oct_02_01-05PM.jpeg/960px-Mount_Misen_2022_Oct_02_01-05PM.jpeg",
+        "alt": "出雲市駅〜出雲大社の中盤区間付近",
+        "caption": "出雲市駅〜出雲大社の走路近隣で撮影された風景",
+        "credit": "Nesnad",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Misen_2022_Oct_02_01-05PM.jpeg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.383361,
+      "anchorLng": 132.694694,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Ichibata Electric Railway Izumo taisha mae sta. , 一畑電車 出雲大社前駅",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ichibata_Electric_Railway_Izumo_taisha_mae_sta._%2C_%E4%B8%80%E7%95%91%E9%9B%BB%E8%BB%8A_%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE%E5%89%8D%E9%A7%85_-_panoramio_%286%29.jpg/960px-Ichibata_Electric_Railway_Izumo_taisha_mae_sta._%2C_%E4%B8%80%E7%95%91%E9%9B%BB%E8%BB%8A_%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE%E5%89%8D%E9%A7%85_-_panoramio_%286%29.jpg",
+        "alt": "出雲市駅〜出雲大社の後半区間付近",
+        "caption": "出雲市駅〜出雲大社の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ichibata_Electric_Railway_Izumo_taisha_mae_sta._,_%E4%B8%80%E7%95%91%E9%9B%BB%E8%BB%8A_%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE%E5%89%8D%E9%A7%85_-_panoramio_(6).jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.399798,
+      "anchorLng": 132.68515,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Izumo Grand Shrine , 出雲大社",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Izumo_Grand_Shrine_%2C_%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE_-_panoramio_%282%29.jpg",
+        "alt": "出雲市駅〜出雲大社の終盤区間付近",
+        "caption": "出雲市駅〜出雲大社の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumo_Grand_Shrine_,_%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE_-_panoramio_(2).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

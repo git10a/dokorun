@@ -1,0 +1,735 @@
+{
+  "slug": "yamanakagoe-tetsugaku",
+  "spot": {
+    "slug": "yamanakagoe-tetsugaku",
+    "name": "山中越・哲学の道",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "access": "起点は京阪石山坂本線滋賀里駅。ゴールの南禅寺から地下鉄蹴上駅まで徒歩約10分",
+    "course_type": "one_way",
+    "distance_m": 15051,
+    "elevation_gain_m": 367,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 665,
+    "gpxDistanceM": 15051,
+    "distanceDifferencePct": 0,
+    "closureGapM": 7917,
+    "hasGpxElevation": true,
+    "detectedCourseType": "out_and_back",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:23:18.694Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 35.050011,
+        "lng": 135.866889,
+        "ele": 93.5
+      },
+      "stations": [
+        {
+          "name": "唐崎",
+          "prefecture": "滋賀県",
+          "line": "JR湖西線",
+          "x": 135.866969,
+          "y": 35.049795,
+          "postal": "5200106",
+          "distance": "30m",
+          "prev": "比叡山坂本",
+          "next": "大津京"
+        },
+        {
+          "name": "穴太",
+          "prefecture": "滋賀県",
+          "line": "京阪石山坂本線",
+          "x": 135.864755,
+          "y": 35.055675,
+          "postal": "5200114",
+          "distance": "660m",
+          "prev": "滋賀里",
+          "next": "松ノ馬場"
+        },
+        {
+          "name": "滋賀里",
+          "prefecture": "滋賀県",
+          "line": "京阪石山坂本線",
+          "x": 135.858994,
+          "y": 35.043402,
+          "postal": "5200004",
+          "distance": "1030m",
+          "prev": "南滋賀",
+          "next": "穴太"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Karasaki-station-20080229",
+          "description": "JR Karasaki Station",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Karasaki-station-20080229.jpg/960px-Karasaki-station-20080229.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karasaki-station-20080229.jpg",
+          "credit": "Marikino2522",
+          "license": "Public domain",
+          "gps": {
+            "lat": 35.049594,
+            "lng": 135.86705
+          }
+        },
+        {
+          "title": "Shiga-no-Takaanaho-no-Miya",
+          "description": "The legendary ruins of Emperor Keikō and Emperor Seimu 's Palace “Shiga-no-Takaanaho-no-Miya”, in Ōtsu , Shiga Prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Shiga-no-Takaanaho-no-Miya.jpg/960px-Shiga-no-Takaanaho-no-Miya.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shiga-no-Takaanaho-no-Miya.jpg",
+          "credit": "Takanuka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.056093,
+            "lng": 135.865641
+          }
+        },
+        {
+          "title": "Takaanaho Jinja",
+          "description": "Takaanaho Jinja Shrine, in Ōtsu , Shiga Prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Takaanaho_Jinja.jpg/960px-Takaanaho_Jinja.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takaanaho_Jinja.jpg",
+          "credit": "Takanuka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.05623,
+            "lng": 135.867029
+          }
+        },
+        {
+          "title": "Terraced Rice-fields in Shigasato 滋賀里の棚田 - panoramio",
+          "description": "Terraced Rice-fields in Shigasato 滋賀里の棚田",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Terraced_Rice-fields_in_Shigasato_%E6%BB%8B%E8%B3%80%E9%87%8C%E3%81%AE%E6%A3%9A%E7%94%B0_-_panoramio.jpg/960px-Terraced_Rice-fields_in_Shigasato_%E6%BB%8B%E8%B3%80%E9%87%8C%E3%81%AE%E6%A3%9A%E7%94%B0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terraced_Rice-fields_in_Shigasato_%E6%BB%8B%E8%B3%80%E9%87%8C%E3%81%AE%E6%A3%9A%E7%94%B0_-_panoramio.jpg",
+          "credit": "Atsushi Yamaoka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.043692,
+            "lng": 135.85477
+          }
+        },
+        {
+          "title": "Shiga Hachiman Guu Torii - Gate of Shinto Shrine 志賀八幡宮 - panoramio",
+          "description": "Shiga Hachiman Guu Torii - Gate of Shinto Shrine 志賀八幡宮",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Shiga_Hachiman_Guu_Torii_-_Gate_of_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg/960px-Shiga_Hachiman_Guu_Torii_-_Gate_of_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shiga_Hachiman_Guu_Torii_-_Gate_of_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE_-_panoramio.jpg",
+          "credit": "Atsushi Yamaoka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.04302,
+            "lng": 135.857779
+          }
+        },
+        {
+          "title": "Shiga Hachiman Guu - Shinto Shrine 志賀八幡宮本殿 - panoramio",
+          "description": "Shiga Hachiman Guu - Shinto Shrine 志賀八幡宮本殿",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Shiga_Hachiman_Guu_-_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE%E6%9C%AC%E6%AE%BF_-_panoramio.jpg/960px-Shiga_Hachiman_Guu_-_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE%E6%9C%AC%E6%AE%BF_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shiga_Hachiman_Guu_-_Shinto_Shrine_%E5%BF%97%E8%B3%80%E5%85%AB%E5%B9%A1%E5%AE%AE%E6%9C%AC%E6%AE%BF_-_panoramio.jpg",
+          "credit": "Atsushi Yamaoka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.04315,
+            "lng": 135.856364
+          }
+        },
+        {
+          "title": "マルフク看板 大津市滋賀里1丁目 - panoramio (1)",
+          "description": "マルフク看板 大津市滋賀里1丁目",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_%281%29.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C1%E4%B8%81%E7%9B%AE_-_panoramio_(1).jpg",
+          "credit": "marufuku_sign_collec…",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.042541,
+            "lng": 135.856052
+          }
+        },
+        {
+          "title": "マルフク看板 大津市滋賀里2丁目 - panoramio",
+          "description": "マルフク看板 大津市滋賀里2丁目",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C2%E4%B8%81%E7%9B%AE_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C2%E4%B8%81%E7%9B%AE_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E5%A4%A7%E6%B4%A5%E5%B8%82%E6%BB%8B%E8%B3%80%E9%87%8C2%E4%B8%81%E7%9B%AE_-_panoramio.jpg",
+          "credit": "marufuku_sign_collec…",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.045631,
+            "lng": 135.857667
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "point": {
+        "lat": 35.02773369914606,
+        "lng": 135.849862588215,
+        "ele": 135.75
+      },
+      "stations": [
+        {
+          "name": "近江神宮前",
+          "prefecture": "滋賀県",
+          "line": "京阪石山坂本線",
+          "x": 135.855807,
+          "y": 35.028194,
+          "postal": "5200026",
+          "distance": "540m",
+          "prev": "京阪大津京",
+          "next": "南滋賀"
+        },
+        {
+          "name": "京阪大津京",
+          "prefecture": "滋賀県",
+          "line": "京阪石山坂本線",
+          "x": 135.855521,
+          "y": 35.02274,
+          "postal": "5200025",
+          "distance": "760m",
+          "prev": "大津市役所前",
+          "next": "近江神宮前"
+        },
+        {
+          "name": "大津京",
+          "prefecture": "滋賀県",
+          "line": "JR湖西線",
+          "x": 135.857268,
+          "y": 35.024428,
+          "postal": "5200025",
+          "distance": "770m",
+          "prev": "唐崎",
+          "next": "山科"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Stele of Poem of Yasuda Yojuro in Omi Shrine",
+          "description": "近江神宮にある保田與重郎の歌碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Stele_of_Poem_of_Yasuda_Yojuro_in_Omi_Shrine.jpg/960px-Stele_of_Poem_of_Yasuda_Yojuro_in_Omi_Shrine.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stele_of_Poem_of_Yasuda_Yojuro_in_Omi_Shrine.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.031667,
+            "lng": 135.852569
+          }
+        },
+        {
+          "title": "Outer Cloister of Omi Shrine 2",
+          "description": "近江神宮・外院回廊",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Outer_Cloister_of_Omi_Shrine_2.jpg/960px-Outer_Cloister_of_Omi_Shrine_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outer_Cloister_of_Omi_Shrine_2.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.031739,
+            "lng": 135.852036
+          }
+        },
+        {
+          "title": "Haraedo for automobile in Omi Shrine",
+          "description": "近江神宮・自動車清祓所",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Haraedo_for_automobile_in_Omi_Shrine.jpg/960px-Haraedo_for_automobile_in_Omi_Shrine.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haraedo_for_automobile_in_Omi_Shrine.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.031811,
+            "lng": 135.851928
+          }
+        },
+        {
+          "title": "Ōmi Ōtsu Palace ruins",
+          "description": "The monument of Ōmi Ōtsu Palace ruins, in Ōtsu , Shiga Prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/%C5%8Cmi_%C5%8Ctsu_Palace_ruins.jpg/960px-%C5%8Cmi_%C5%8Ctsu_Palace_ruins.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%8Cmi_%C5%8Ctsu_Palace_ruins.jpg",
+          "credit": "Takanuka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.028478,
+            "lng": 135.854849
+          }
+        },
+        {
+          "title": "Ōmi Ōtsu Palace Nishigori Site",
+          "description": "Ōmi Ōtsu Palace Nishigori Site, in Ōtsu , Shiga Prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/%C5%8Cmi_%C5%8Ctsu_Palace_Nishigori_Site.jpg/960px-%C5%8Cmi_%C5%8Ctsu_Palace_Nishigori_Site.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%8Cmi_%C5%8Ctsu_Palace_Nishigori_Site.jpg",
+          "credit": "Takanuka",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.028926,
+            "lng": 135.854866
+          }
+        },
+        {
+          "title": "Tail-lights traces - panoramio",
+          "description": "tail-lights traces",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Tail-lights_traces_-_panoramio.jpg/960px-Tail-lights_traces_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tail-lights_traces_-_panoramio.jpg",
+          "credit": "ccfarmer",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.024158,
+            "lng": 135.848857
+          }
+        },
+        {
+          "title": "早尾神社例大祭 - panoramio",
+          "description": "早尾神社例大祭",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/%E6%97%A9%E5%B0%BE%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD_-_panoramio.jpg/960px-%E6%97%A9%E5%B0%BE%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%97%A9%E5%B0%BE%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD_-_panoramio.jpg",
+          "credit": "田附宏秀",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.024414,
+            "lng": 135.848255
+          }
+        },
+        {
+          "title": "Ojiyama Kofun, Top",
+          "description": "皇子山1号墳 墳頂",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ojiyama_Kofun%2C_Top.jpg/960px-Ojiyama_Kofun%2C_Top.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ojiyama_Kofun,_Top.jpg",
+          "credit": "AsPJT",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.028694,
+            "lng": 135.850667
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "point": {
+        "lat": 35.04019363110966,
+        "lng": 135.82401731621218,
+        "ele": 308.5
+      },
+      "stations": [
+        {
+          "name": "ケーブル比叡",
+          "prefecture": "京都府",
+          "line": "京福電鉄鋼索線",
+          "x": 135.822408,
+          "y": 35.064214,
+          "postal": "6011254",
+          "distance": "2680m",
+          "prev": "ケーブル八瀬",
+          "next": null
+        },
+        {
+          "name": "南滋賀",
+          "prefecture": "滋賀県",
+          "line": "京阪石山坂本線",
+          "x": 135.85747,
+          "y": 35.036691,
+          "postal": "5200011",
+          "distance": "3070m",
+          "prev": "近江神宮前",
+          "next": "滋賀里"
+        },
+        {
+          "name": "八瀬比叡山口",
+          "prefecture": "京都府",
+          "line": "叡山電鉄本線",
+          "x": 135.8085,
+          "y": 35.065225,
+          "postal": "6011254",
+          "distance": "3120m",
+          "prev": "三宅八幡",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kyoto City to view from Mt. Hiei - panoramio",
+          "description": "Kyoto City to view from Mt. Hiei",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kyoto_City_to_view_from_Mt._Hiei_-_panoramio.jpg/960px-Kyoto_City_to_view_from_Mt._Hiei_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_City_to_view_from_Mt._Hiei_-_panoramio.jpg",
+          "credit": "ccfarmer",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.052809,
+            "lng": 135.831399
+          }
+        },
+        {
+          "title": "View of Otsu city and Lake Biwa",
+          "description": "View of Otsu city and Lake Biwa, Shiga Prefecture, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/View_of_Otsu_city_and_Lake_Biwa.jpg/960px-View_of_Otsu_city_and_Lake_Biwa.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Otsu_city_and_Lake_Biwa.jpg",
+          "credit": "Ita140188",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.034027,
+            "lng": 135.832624
+          }
+        },
+        {
+          "title": "琵琶湖 - panoramio - kajikawa",
+          "description": "琵琶湖",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/%E7%90%B5%E7%90%B6%E6%B9%96_-_panoramio_-_kajikawa.jpg/960px-%E7%90%B5%E7%90%B6%E6%B9%96_-_panoramio_-_kajikawa.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%90%B5%E7%90%B6%E6%B9%96_-_panoramio_-_kajikawa.jpg",
+          "credit": "kajikawa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.03437,
+            "lng": 135.837692
+          }
+        },
+        {
+          "title": "比叡平 - panoramio",
+          "description": "比叡平",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio.jpg/960px-%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio.jpg",
+          "credit": "kajikawa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.032558,
+            "lng": 135.832245
+          }
+        },
+        {
+          "title": "比叡平 - panoramio (1)",
+          "description": "比叡平",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%281%29.jpg/960px-%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_(1).jpg",
+          "credit": "kajikawa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.032543,
+            "lng": 135.832275
+          }
+        },
+        {
+          "title": "Minamishigacho, Otsu, Shiga Prefecture 520-0018, Japan - panoramio",
+          "description": "Minamishigacho, Otsu, Shiga Prefecture 520-0018, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Minamishigacho%2C_Otsu%2C_Shiga_Prefecture_520-0018%2C_Japan_-_panoramio.jpg/960px-Minamishigacho%2C_Otsu%2C_Shiga_Prefecture_520-0018%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minamishigacho,_Otsu,_Shiga_Prefecture_520-0018,_Japan_-_panoramio.jpg",
+          "credit": "Fumihiko Ueno",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.039093,
+            "lng": 135.838104
+          }
+        },
+        {
+          "title": "比叡平 - panoramio (2)",
+          "description": "比叡平",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%282%29.jpg/960px-%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_(2).jpg",
+          "credit": "kajikawa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.032518,
+            "lng": 135.832328
+          }
+        },
+        {
+          "title": "比叡平 - panoramio (3)",
+          "description": "比叡平",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%283%29.jpg/960px-%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AF%94%E5%8F%A1%E5%B9%B3_-_panoramio_(3).jpg",
+          "credit": "kajikawa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.032539,
+            "lng": 135.832245
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "point": {
+        "lat": 35.032498432999745,
+        "lng": 135.7965311708896,
+        "ele": 95
+      },
+      "stations": [
+        {
+          "name": "茶山・京都芸術大学",
+          "prefecture": "京都府",
+          "line": "叡山電鉄本線",
+          "x": 135.784508,
+          "y": 35.038248,
+          "postal": "6068233",
+          "distance": "1270m",
+          "prev": "元田中",
+          "next": "一乗寺"
+        },
+        {
+          "name": "元田中",
+          "prefecture": "京都府",
+          "line": "叡山電鉄本線",
+          "x": 135.781411,
+          "y": 35.034968,
+          "postal": "6068214",
+          "distance": "1410m",
+          "prev": "出町柳",
+          "next": "茶山・京都芸術大学"
+        },
+        {
+          "name": "一乗寺",
+          "prefecture": "京都府",
+          "line": "叡山電鉄本線",
+          "x": 135.787416,
+          "y": 35.044247,
+          "postal": "6068115",
+          "distance": "1550m",
+          "prev": "茶山・京都芸術大学",
+          "next": "修学院"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Gate of Jodoin Temple near Jishoji Temple",
+          "description": "慈照寺の近くにある浄土院",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gate_of_Jodoin_Temple_near_Jishoji_Temple.JPG/960px-Gate_of_Jodoin_Temple_near_Jishoji_Temple.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Jodoin_Temple_near_Jishoji_Temple.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.027381,
+            "lng": 135.797072
+          }
+        },
+        {
+          "title": "Sando of Jishoji Temple 2",
+          "description": "慈照寺前より望む参道",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sando_of_Jishoji_Temple_2.JPG/960px-Sando_of_Jishoji_Temple_2.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sando_of_Jishoji_Temple_2.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.027214,
+            "lng": 135.797347
+          }
+        },
+        {
+          "title": "Biwako Canal near Ginkakujibashi Bridge",
+          "description": "銀閣寺橋より望む琵琶湖疏水分線(下流側)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Biwako_Canal_near_Ginkakujibashi_Bridge.jpg/960px-Biwako_Canal_near_Ginkakujibashi_Bridge.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Biwako_Canal_near_Ginkakujibashi_Bridge.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.027325,
+            "lng": 135.794983
+          }
+        },
+        {
+          "title": "Japanese five-lined skink - panoramio",
+          "description": "Japanese five-lined skink",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Japanese_five-lined_skink_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_five-lined_skink_-_panoramio.jpg",
+          "credit": "ccfarmer",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.028022,
+            "lng": 135.798585
+          }
+        },
+        {
+          "title": "Road near Jishoji Temple 20140318",
+          "description": "慈照寺近くの京都府道101号",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Road_near_Jishoji_Temple_20140318.JPG/960px-Road_near_Jishoji_Temple_20140318.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Road_near_Jishoji_Temple_20140318.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.027686,
+            "lng": 135.794053
+          }
+        },
+        {
+          "title": "マルフク看板 京都市左京区北白川下別当町 - panoramio",
+          "description": "マルフク看板 京都市左京区北白川下別当町",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E5%88%A5%E5%BD%93%E7%94%BA_-_panoramio.jpg",
+          "credit": "marufuku_sign_collec…",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.030469,
+            "lng": 135.792786
+          }
+        },
+        {
+          "title": "マルフク看板 京都市左京区北白川上池田町 - panoramio",
+          "description": "マルフク看板 京都市左京区北白川上池田町",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8A%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8A%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8A%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg",
+          "credit": "marufuku_sign_collec…",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.03154,
+            "lng": 135.795186
+          }
+        },
+        {
+          "title": "マルフク看板 京都市左京区北白川下池田町 - panoramio",
+          "description": "マルフク看板 京都市左京区北白川下池田町",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg/960px-%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%AB%E3%83%95%E3%82%AF%E7%9C%8B%E6%9D%BF_%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E5%8C%97%E7%99%BD%E5%B7%9D%E4%B8%8B%E6%B1%A0%E7%94%B0%E7%94%BA_-_panoramio.jpg",
+          "credit": "marufuku_sign_collec…",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.029786,
+            "lng": 135.793435
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 1,
+      "point": {
+        "lat": 35.010567,
+        "lng": 135.794499,
+        "ele": 86.5
+      },
+      "stations": [
+        {
+          "name": "蹴上",
+          "prefecture": "京都府",
+          "line": "京都市東西線",
+          "x": 135.790227,
+          "y": 35.008037,
+          "postal": "6050044",
+          "distance": "480m",
+          "prev": "東山",
+          "next": "御陵"
+        },
+        {
+          "name": "東山",
+          "prefecture": "京都府",
+          "line": "京都市東西線",
+          "x": 135.780448,
+          "y": 35.009425,
+          "postal": "6050022",
+          "distance": "1290m",
+          "prev": "三条京阪",
+          "next": "蹴上"
+        },
+        {
+          "name": "御陵",
+          "prefecture": "京都府",
+          "line": "京阪京津線",
+          "x": 135.801637,
+          "y": 34.996158,
+          "postal": "6078424",
+          "distance": "1730m",
+          "prev": null,
+          "next": "京阪山科"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Zen Garden, Nanzen-ji Temple (7005735830) (3)",
+          "description": "Nanzen-ji (南禅寺) is a Zen Buddhist temple in Kyoto, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zen_Garden%2C_Nanzen-ji_Temple_%287005735830%29_%283%29.jpg/960px-Zen_Garden%2C_Nanzen-ji_Temple_%287005735830%29_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zen_Garden,_Nanzen-ji_Temple_(7005735830)_(3).jpg",
+          "credit": "BriYYZ from Toronto, Canada",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.010543,
+            "lng": 135.794942
+          }
+        },
+        {
+          "title": "Nanzen-ji, Kyoto 2016 (31229502946)",
+          "description": "Nanzen-ji, Kyoto",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Nanzen-ji%2C_Kyoto_2016_%2831229502946%29.jpg/960px-Nanzen-ji%2C_Kyoto_2016_%2831229502946%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanzen-ji,_Kyoto_2016_(31229502946).jpg",
+          "credit": "Kzaral",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.010283,
+            "lng": 135.794883
+          }
+        },
+        {
+          "title": "プラスチック製のお茶容器 (30897851420)",
+          "description": "Kyoto Railway Museum",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E8%A3%BD%E3%81%AE%E3%81%8A%E8%8C%B6%E5%AE%B9%E5%99%A8_%2830897851420%29.jpg/960px-%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E8%A3%BD%E3%81%AE%E3%81%8A%E8%8C%B6%E5%AE%B9%E5%99%A8_%2830897851420%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF%E8%A3%BD%E3%81%AE%E3%81%8A%E8%8C%B6%E5%AE%B9%E5%99%A8_(30897851420).jpg",
+          "credit": "Kzaral",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.010283,
+            "lng": 135.794883
+          }
+        },
+        {
+          "title": "Nanzenji Fukuchicho, Sakyo Ward, Kyoto, Kyoto Prefecture 606-8435, Japan - panoramio (12)",
+          "description": "Nanzenji Fukuchicho, Sakyo Ward, Kyoto, Kyoto Prefecture 606-8435, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nanzenji_Fukuchicho%2C_Sakyo_Ward%2C_Kyoto%2C_Kyoto_Prefecture_606-8435%2C_Japan_-_panoramio_%2812%29.jpg/960px-Nanzenji_Fukuchicho%2C_Sakyo_Ward%2C_Kyoto%2C_Kyoto_Prefecture_606-8435%2C_Japan_-_panoramio_%2812%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanzenji_Fukuchicho,_Sakyo_Ward,_Kyoto,_Kyoto_Prefecture_606-8435,_Japan_-_panoramio_(12).jpg",
+          "credit": "Fumihiko Ueno",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.010596,
+            "lng": 135.794012
+          }
+        },
+        {
+          "title": "1800 steam locomotive model 1801 at the Kyoto Railway Museum",
+          "description": "Kyoto Railway Museum",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/1800_steam_locomotive_model_1801_at_the_Kyoto_Railway_Museum.jpg/960px-1800_steam_locomotive_model_1801_at_the_Kyoto_Railway_Museum.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:1800_steam_locomotive_model_1801_at_the_Kyoto_Railway_Museum.jpg",
+          "credit": "Kzaral",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.010283,
+            "lng": 135.794883
+          }
+        },
+        {
+          "title": "Kyoto Railway Museum Twilight Plaza 2016-11-21",
+          "description": "Kyoto Railway Museum",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Kyoto_Railway_Museum_Twilight_Plaza_2016-11-21.jpg/960px-Kyoto_Railway_Museum_Twilight_Plaza_2016-11-21.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_Railway_Museum_Twilight_Plaza_2016-11-21.jpg",
+          "credit": "Kzaral",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.010283,
+            "lng": 135.794883
+          }
+        },
+        {
+          "title": "Daihatsu Midget MPA mini truck Kyoto Railway Museum",
+          "description": "Kyoto Railway Museum",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Daihatsu_Midget_MPA_mini_truck_Kyoto_Railway_Museum.jpg/960px-Daihatsu_Midget_MPA_mini_truck_Kyoto_Railway_Museum.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daihatsu_Midget_MPA_mini_truck_Kyoto_Railway_Museum.jpg",
+          "credit": "Kzaral",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.010283,
+            "lng": 135.794883
+          }
+        },
+        {
+          "title": "京都 - panoramio (7)",
+          "description": "京都",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%E4%BA%AC%E9%83%BD_-_panoramio_%287%29.jpg/960px-%E4%BA%AC%E9%83%BD_-_panoramio_%287%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%AC%E9%83%BD_-_panoramio_(7).jpg",
+          "credit": "优",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.010528,
+            "lng": 135.794034
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

@@ -1,0 +1,132 @@
+{
+  "slug": "yutoku-inari-ariake",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR肥前浜駅を起点に、白壁の酒蔵が並ぶ肥前浜宿を抜けて九州屈指の稲荷社・祐徳稲荷神社へ向かい、参拝後は有明海側へ折り返して太良町の大魚神社海中鳥居まで南下する約18kmのワンウェイ。ゴール後はJR多良駅から列車で戻れる。海中鳥居は干潮時に鳥居の下まで歩ける干満差の大きい有明海ならではのスポット。アップダウンは祐徳稲荷周辺のみで、後半は海を感じる開放的な平坦路が続く。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR長崎本線 肥前浜駅(スタート) / 多良駅(ゴール) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "肥前浜駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.095103,
+      "destinationLng": 130.117079,
+      "routeAnchorLat": 33.095601,
+      "routeAnchorLng": 130.117211,
+      "routeMode": "forward",
+      "accessText": "肥前浜駅からコースまで約60m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "多良駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.02524,
+      "destinationLng": 130.176049,
+      "routeAnchorLat": 33.025103,
+      "routeAnchorLng": 130.176309,
+      "routeMode": "reverse",
+      "accessText": "多良駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.095601,
+      "anchorLng": 130.117211,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 佐賀県鹿島市・富久千代酒造付近の路地",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/View_near_Fukuchiyo_Brewery.jpg/960px-View_near_Fukuchiyo_Brewery.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居のスタート周辺付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_near_Fukuchiyo_Brewery.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.076043,
+      "anchorLng": 130.108708,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 祐徳稲荷神社の参道と大鳥居",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg/960px-Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の序盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sando_and_grand_torii_of_Yutoku_Inari_Shrine.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.081561,
+      "anchorLng": 130.138035,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Kashima Coast (Saga, Japan)",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kashima_Coast_Saga_Japan_01.jpg/960px-Kashima_Coast_Saga_Japan_01.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の中盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "ja:User:Sanjo",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kashima_Coast_Saga_Japan_01.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.054756,
+      "anchorLng": 130.163788,
+      "description": "後半区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先"
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.025103,
+      "anchorLng": 130.176309,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 多良駅の駅名標",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tara_Station_Sign.jpg/960px-Tara_Station_Sign.jpg",
+        "alt": "祐徳稲荷神社〜大魚神社海中鳥居の終盤区間付近",
+        "caption": "祐徳稲荷神社〜大魚神社海中鳥居の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tara_Station_Sign.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  }
+}

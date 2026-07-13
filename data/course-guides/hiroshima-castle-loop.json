@@ -1,0 +1,153 @@
+{
+  "slug": "hiroshima-castle-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "広島城のお堀沿いを回る市街地の定番コースで、各所で案内される外周は約1.5kmです。天守を眺めながらほぼ平坦に走れ、周回管理がしやすいので出張ランや平日夜の短時間練習にも向きます。300mごとの距離表示がある情報も確認でき、ジョグだけでなくペースの確認もしやすいのが利点です。中心部にありながら景観が良く、広島らしさを感じやすい一周です。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 広島電鉄「紙屋町東」電停から徒歩約10分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "城北駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.405407,
+      "destinationLng": 132.458914,
+      "routeAnchorLat": 34.403733,
+      "routeAnchorLng": 132.458664,
+      "routeMode": "loop",
+      "accessText": "城北駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "縮景園前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.399881,
+      "destinationLng": 132.465334,
+      "routeAnchorLat": 34.400261,
+      "routeAnchorLng": 132.460771,
+      "routeMode": "loop",
+      "accessText": "縮景園前駅からコースまで約420m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-3",
+      "name": "県庁前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.396863,
+      "destinationLng": 132.458231,
+      "routeAnchorLat": 34.399664,
+      "routeAnchorLng": 132.458393,
+      "routeMode": "loop",
+      "accessText": "県庁前駅からコースまで約310m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.403733,
+      "anchorLng": 132.458664,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 広島城・堀と天守閣",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Moat_and_Tenshu_of_Hiroshima_Castle_2.jpg/960px-Moat_and_Tenshu_of_Hiroshima_Castle_2.jpg",
+        "alt": "広島城外周のスタート周辺付近",
+        "caption": "広島城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moat_and_Tenshu_of_Hiroshima_Castle_2.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.402893,
+      "anchorLng": 132.461714,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 広島城・裏御門跡前の堀",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Moat_of_Hiroshima_Castle_10.jpg/960px-Moat_of_Hiroshima_Castle_10.jpg",
+        "alt": "広島城外周の序盤区間付近",
+        "caption": "広島城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moat_of_Hiroshima_Castle_10.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.400261,
+      "anchorLng": 132.460771,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 広島城二の丸の平櫓",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Yagura_of_Ninomaru_in_Hiroshima_Castle.JPG/960px-Yagura_of_Ninomaru_in_Hiroshima_Castle.JPG",
+        "alt": "広島城外周の中盤区間付近",
+        "caption": "広島城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yagura_of_Ninomaru_in_Hiroshima_Castle.JPG"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.399664,
+      "anchorLng": 132.458393,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 広島城の表御門・平櫓・多聞櫓と太鼓櫓",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Moat_and_turrets_of_Hiroshima_Castle.jpg/960px-Moat_and_turrets_of_Hiroshima_Castle.jpg",
+        "alt": "広島城外周の後半区間付近",
+        "caption": "広島城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moat_and_turrets_of_Hiroshima_Castle.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.40158,
+      "anchorLng": 132.457527,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 広島城の天守閣と堀",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Tenshu_of_Hiroshima_Castle_3.JPG/960px-Tenshu_of_Hiroshima_Castle_3.JPG",
+        "alt": "広島城外周の終盤区間付近",
+        "caption": "広島城外周の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tenshu_of_Hiroshima_Castle_3.JPG"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

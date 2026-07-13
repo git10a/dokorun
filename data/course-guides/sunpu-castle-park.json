@@ -1,0 +1,127 @@
+{
+  "slug": "sunpu-castle-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "静岡市中心部の定番で、市のランニング・ウォーキングコースマップでも中堀周回道路を使うコースが案内されています。内堀を回る代表周回は約1.7kmで、歴史的な櫓や石垣を見ながら信号の少ない環境で走れるのが魅力です。起伏は大きくなく、仕事前後の短いジョグから周回走まで組みやすいです。街なかで距離管理しやすい、静岡らしい城ランの定番スポットです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 静岡鉄道 新静岡駅から徒歩約10分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "新静岡駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.975823,
+      "destinationLng": 138.387423,
+      "routeAnchorLat": 34.977077,
+      "routeAnchorLng": 138.385273,
+      "routeMode": "loop",
+      "accessText": "新静岡駅からコースまで約240m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.977077,
+      "anchorLng": 138.385273,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 駿府城の巽櫓と静岡県庁舎別館",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Shizuoka_Prefectural_Government_Headquarters_and_Tatsumi-Yagura_of_Sumpu_Castle.jpg/960px-Shizuoka_Prefectural_Government_Headquarters_and_Tatsumi-Yagura_of_Sumpu_Castle.jpg",
+        "alt": "駿府城公園のスタート周辺付近",
+        "caption": "駿府城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shizuoka_Prefectural_Government_Headquarters_and_Tatsumi-Yagura_of_Sumpu_Castle.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.98006,
+      "anchorLng": 138.385619,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 駿府城公園・紅葉山庭園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Momijiyama_Garden_in_Sumpu_Castle_Park_2.JPG/960px-Momijiyama_Garden_in_Sumpu_Castle_Park_2.JPG",
+        "alt": "駿府城公園の序盤区間付近",
+        "caption": "駿府城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Momijiyama_Garden_in_Sumpu_Castle_Park_2.JPG"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.981531,
+      "anchorLng": 138.382899,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 駿府城公園にある家康公お手植えのミカン",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Citrus_unshiu_tree_planted_by_Tokugawa_Ieyasu_in_Sumpu_Castle_Park.JPG/960px-Citrus_unshiu_tree_planted_by_Tokugawa_Ieyasu_in_Sumpu_Castle_Park.JPG",
+        "alt": "駿府城公園の中盤区間付近",
+        "caption": "駿府城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Citrus_unshiu_tree_planted_by_Tokugawa_Ieyasu_in_Sumpu_Castle_Park.JPG"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.979904,
+      "anchorLng": 138.380848,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 駿府城公園より望む静岡県庁舎",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG/960px-Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG",
+        "alt": "駿府城公園の後半区間付近",
+        "caption": "駿府城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.977561,
+      "anchorLng": 138.381435,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 駿府城公園より望む静岡県庁舎",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG/960px-Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG",
+        "alt": "駿府城公園の終盤区間付近",
+        "caption": "駿府城公園の走路近隣で撮影された風景",
+        "credit": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shizuoka_Prefectural_Government_Headquarters_from_Sumpu_Castle_Park.JPG"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

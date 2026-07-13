@@ -1,0 +1,306 @@
+{
+  "slug": "okayama-sogo-ground",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "岡山市中心部に近い大規模運動公園で、公式サイトからアクセスと駐車台数を確認できます。コース紹介では外周と一部園路を使う1周2.5kmの周回が案内され、夜間照明もあると整理されています。駅から徒歩約20分で公共交通利用も可能なため、通勤帰りの候補にもなります。距離の一次情報明示は弱いものの、施設管理主体がはっきりしており、都市型周回スポットとして実装しやすいです。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR岡山駅運動公園口から徒歩約20分／バス「学南町」「武道館口」利用可。駐車場あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "法界院駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.684851,
+      "destinationLng": 133.927547,
+      "routeAnchorLat": 34.678425,
+      "routeAnchorLng": 133.920868,
+      "routeMode": "loop",
+      "accessText": "法界院駅からコースまで約940m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.678425,
+      "routeLng": 133.920868,
+      "elevationM": 7.2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 486,
+        "section-3": 994,
+        "section-4": 1483,
+        "section-5": 1968
+      },
+      "gpxHref": "/gpx/okayama-sogo-ground-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "岡山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.666572,
+      "destinationLng": 133.918552,
+      "routeAnchorLat": 34.6759,
+      "routeAnchorLng": 133.917652,
+      "routeMode": "loop",
+      "accessText": "岡山駅からコースまで約1040m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 95,
+      "routeDistanceM": 1968,
+      "routeLat": 34.6759,
+      "routeLng": 133.917652,
+      "elevationM": 8.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 507,
+        "section-2": 993,
+        "section-3": 1501,
+        "section-4": 1990,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/okayama-sogo-ground-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.678425,
+      "anchorLng": 133.920868,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 岡山市上空",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg/960px-%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg",
+        "alt": "岡山県総合グラウンドのスタート周辺付近",
+        "caption": "岡山県総合グラウンドの走路近隣で撮影された風景",
+        "credit": "pikotyan",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.678425,
+      "routeLng": 133.920868,
+      "elevationM": 7.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.681594,
+      "anchorLng": 133.918971,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 岡山市上空",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg/960px-%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg",
+        "alt": "岡山県総合グラウンドの序盤区間付近",
+        "caption": "岡山県総合グラウンドの走路近隣で撮影された風景",
+        "credit": "pikotyan",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 23,
+      "routeDistanceM": 486,
+      "routeLat": 34.681594,
+      "routeLng": 133.918971,
+      "elevationM": 6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.681313,
+      "anchorLng": 133.913421,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 岡山市上空",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg/960px-%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg",
+        "alt": "岡山県総合グラウンドの中盤区間付近",
+        "caption": "岡山県総合グラウンドの走路近隣で撮影された風景",
+        "credit": "pikotyan",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 47,
+      "routeDistanceM": 994,
+      "routeLat": 34.681313,
+      "routeLng": 133.913421,
+      "elevationM": 8.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.679119,
+      "anchorLng": 133.915401,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 岡山市上空",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg/960px-%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg",
+        "alt": "岡山県総合グラウンドの後半区間付近",
+        "caption": "岡山県総合グラウンドの走路近隣で撮影された風景",
+        "credit": "pikotyan",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E5%B1%B1%E5%B8%82%E4%B8%8A%E7%A9%BA_-_panoramio.jpg"
+      },
+      "routePointIndex": 71,
+      "routeDistanceM": 1483,
+      "routeLat": 34.679119,
+      "routeLng": 133.915401,
+      "elevationM": 10.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.6759,
+      "anchorLng": 133.917652,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Famile Tower Plaza Okayama in Kita-ku, Okayama, Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Famile_Tower_Plaza_Okayama.jpg/960px-Famile_Tower_Plaza_Okayama.jpg",
+        "alt": "岡山県総合グラウンドの終盤区間付近",
+        "caption": "岡山県総合グラウンドの走路近隣で撮影された風景",
+        "credit": "Phronimoi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Famile_Tower_Plaza_Okayama.jpg"
+      },
+      "routePointIndex": 95,
+      "routeDistanceM": 1968,
+      "routeLat": 34.6759,
+      "routeLng": 133.917652,
+      "elevationM": 8.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2475,
+  "elevationGainM": 14,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 297,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 396,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 495,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 594,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 693,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 792,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 891,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 990,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 1089,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 1188,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 1287,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 1386,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 1485,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 1584,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 1683,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 1782,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 1881,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 1980,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 2079,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 2178,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2277,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 2376,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 2475,
+      "elevationM": 7.2
+    }
+  ]
+}

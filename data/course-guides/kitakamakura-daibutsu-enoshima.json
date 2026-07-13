@@ -1,0 +1,140 @@
+{
+  "slug": "kitakamakura-daibutsu-enoshima",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "北鎌倉駅から浄智寺脇の登山口で葛原岡・大仏ハイキングコースに入り、葛原岡神社・源氏山公園を経て鎌倉大仏(高徳院)へ抜ける前半約4kmの土のトレイル。長谷からは国道134号沿いの歩道に出て、稲村ヶ崎・七里ヶ浜と湘南の海岸線を西へ走り、江の島弁天橋を往復してから境川沿いに藤沢駅へ至る片道コース。山の緑と海の展望を一度に味わえる。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 起点=JR横須賀線北鎌倉駅、終点=JR東海道線藤沢駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "北鎌倉駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.337198,
+      "destinationLng": 139.545134,
+      "routeAnchorLat": 35.336747,
+      "routeAnchorLng": 139.545212,
+      "routeMode": "forward",
+      "accessText": "北鎌倉駅からコースまで約50m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "藤沢駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.338882,
+      "destinationLng": 139.487293,
+      "routeAnchorLat": 35.338586,
+      "routeAnchorLng": 139.487548,
+      "routeMode": "reverse",
+      "accessText": "藤沢駅からコースまで約40m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.336747,
+      "anchorLng": 139.545212,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Kita-Kamakura Station (北鎌倉駅)",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Kita-Kamakura_Station_May_21_2021_various.jpeg/960px-Kita-Kamakura_Station_May_21_2021_various.jpeg",
+        "alt": "大仏ハイキングコース・湘南海岸のスタート周辺付近",
+        "caption": "大仏ハイキングコース・湘南海岸の走路近隣で撮影された風景",
+        "credit": "Nesnad",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kita-Kamakura_Station_May_21_2021_various.jpeg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.316597,
+      "anchorLng": 139.535951,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 鎌倉大仏",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F_-_panoramio.jpg/960px-%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F_-_panoramio.jpg",
+        "alt": "大仏ハイキングコース・湘南海岸の序盤区間付近",
+        "caption": "大仏ハイキングコース・湘南海岸の走路近隣で撮影された風景",
+        "credit": "baggio4ever",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.305895,
+      "anchorLng": 139.506897,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: shichirigahama",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Shichirigahama_-_panoramio.jpg/960px-Shichirigahama_-_panoramio.jpg",
+        "alt": "大仏ハイキングコース・湘南海岸の中盤区間付近",
+        "caption": "大仏ハイキングコース・湘南海岸の走路近隣で撮影された風景",
+        "credit": "Taka Nozaki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shichirigahama_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.305764,
+      "anchorLng": 139.482793,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 1 Chome Katasekaigan, Fujisawa-shi, Kanagawa-ken 251-0035, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/1_Chome_Katasekaigan%2C_Fujisawa-shi%2C_Kanagawa-ken_251-0035%2C_Japan_-_panoramio.jpg/960px-1_Chome_Katasekaigan%2C_Fujisawa-shi%2C_Kanagawa-ken_251-0035%2C_Japan_-_panoramio.jpg",
+        "alt": "大仏ハイキングコース・湘南海岸の後半区間付近",
+        "caption": "大仏ハイキングコース・湘南海岸の走路近隣で撮影された風景",
+        "credit": "jetsun",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_Chome_Katasekaigan,_Fujisawa-shi,_Kanagawa-ken_251-0035,_Japan_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.338586,
+      "anchorLng": 139.487548,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: ​ 藤澤車站",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fujisawa_Station_SouthGate.jpg/960px-Fujisawa_Station_SouthGate.jpg",
+        "alt": "大仏ハイキングコース・湘南海岸の終盤区間付近",
+        "caption": "大仏ハイキングコース・湘南海岸の走路近隣で撮影された風景",
+        "credit": "SElefant",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fujisawa_Station_SouthGate.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "oonoyama-hillclimb",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR御殿場線・山北駅前の日帰り温泉「さくらの湯」を発着点に、大野山(723m)山頂まで約8.7kmを車道でひたすら登るヒルクライム練習コース。山頂一帯はかつて牧場だった開けた草原で、富士山や丹沢湖の展望が広がる。下りは地蔵岩コースの土のトレイルで共和地区へ下り、往路の道を駅まで戻る周回。獲得標高900m超とタフで、夏場の強化練習にも向く。山頂と駅にトイレあり。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR御殿場線山北駅から徒歩2分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "山北駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.360808,
+      "destinationLng": 139.080212,
+      "routeAnchorLat": 35.360311,
+      "routeAnchorLng": 139.079809,
+      "routeMode": "loop",
+      "accessText": "山北駅からコースまで約70m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "谷峨駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.366561,
+      "destinationLng": 139.038234,
+      "routeAnchorLat": 35.378646,
+      "routeAnchorLng": 139.051367,
+      "routeMode": "loop",
+      "accessText": "谷峨駅からコースまで約1800m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.360311,
+      "anchorLng": 139.079809,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: U-RJ3HJA Fujikyu M1256 height2900mm.jpg",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/U-RJ3HJA_Fujikyu_M1256_height2900mm.jpg",
+        "alt": "大野山のスタート周辺付近",
+        "caption": "大野山の走路近隣で撮影された風景",
+        "credit": "Cassiopeia sweet",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:U-RJ3HJA_Fujikyu_M1256_height2900mm.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.371321,
+      "anchorLng": 139.064327,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Minasegawa, Yamakita, Ashigarakami District, Kanagawa Prefecture 258-0121, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Minasegawa%2C_Yamakita%2C_Ashigarakami_District%2C_Kanagawa_Prefecture_258-0121%2C_Japan_-_panoramio_-_SYM50cc_EMR_%282%29.jpg",
+        "alt": "大野山の序盤区間付近",
+        "caption": "大野山の走路近隣で撮影された風景",
+        "credit": "SYM50cc EMR",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minasegawa,_Yamakita,_Ashigarakami_District,_Kanagawa_Prefecture_258-0121,_Japan_-_panoramio_-_SYM50cc_EMR_(2).jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.378646,
+      "anchorLng": 139.051367,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 県立大野山乳牛育成牧場ゲート",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/%E7%9C%8C%E7%AB%8B%E5%A4%A7%E9%87%8E%E5%B1%B1%E4%B9%B3%E7%89%9B%E8%82%B2%E6%88%90%E7%89%A7%E5%A0%B4%E3%82%B2%E3%83%BC%E3%83%88_-_panoramio.jpg",
+        "alt": "大野山の中盤区間付近",
+        "caption": "大野山の走路近隣で撮影された風景",
+        "credit": "SYM50cc EMR",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E7%AB%8B%E5%A4%A7%E9%87%8E%E5%B1%B1%E4%B9%B3%E7%89%9B%E8%82%B2%E6%88%90%E7%89%A7%E5%A0%B4%E3%82%B2%E3%83%BC%E3%83%88_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.387848,
+      "anchorLng": 139.054191,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 大野山山頂から丹沢湖",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/%E5%A4%A7%E9%87%8E%E5%B1%B1%E5%B1%B1%E9%A0%82%E3%81%8B%E3%82%89%E4%B8%B9%E6%B2%A2%E6%B9%96_-_panoramio.jpg",
+        "alt": "大野山の後半区間付近",
+        "caption": "大野山の走路近隣で撮影された風景",
+        "credit": "SYM50cc EMR",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%87%8E%E5%B1%B1%E5%B1%B1%E9%A0%82%E3%81%8B%E3%82%89%E4%B8%B9%E6%B2%A2%E6%B9%96_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.369444,
+      "anchorLng": 139.063783,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Yamakita, Ashigarakami District, Kanagawa Prefecture 258-0113, Japan",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Yamakita%2C_Ashigarakami_District%2C_Kanagawa_Prefecture_258-0113%2C_Japan_-_panoramio_-_SYM50cc_EMR.jpg",
+        "alt": "大野山の終盤区間付近",
+        "caption": "大野山の走路近隣で撮影された風景",
+        "credit": "SYM50cc EMR",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamakita,_Ashigarakami_District,_Kanagawa_Prefecture_258-0113,_Japan_-_panoramio_-_SYM50cc_EMR.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "heiwa-no-mori-omori-hamabe",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "大田区が公式ランニングコースを設定する平和の森公園と大森ふるさとの浜辺公園を組み合わせて走れるスポットです。区のコース図には3kmと5kmの2コースと距離番号表示があり、アップダウンが少ない舗装路で初心者からペース走まで対応します。公園外周と白い砂浜が広がる浜辺沿いをつなぐ周回は景色の変化も楽しめます。レストハウスにロッカー・更衣室・シャワーが備わり、近隣の大森スポーツセンターにはランニングステーションもあるため、拠点を構えた練習がしやすい環境です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京急本線 平和島駅から徒歩圏。区公式コース図にも平和島駅からの案内があります。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "平和島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.57868,
+      "destinationLng": 139.73491,
+      "routeAnchorLat": 35.57668,
+      "routeAnchorLng": 139.742595,
+      "routeMode": "loop",
+      "accessText": "平和島駅からコースまで約730m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "昭和島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.570656,
+      "destinationLng": 139.749918,
+      "routeAnchorLat": 35.572567,
+      "routeAnchorLng": 139.742569,
+      "routeMode": "loop",
+      "accessText": "昭和島駅からコースまで約710m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.57668,
+      "anchorLng": 139.742595,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: （2015年7月31日撮影）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Omori_Nori_Museum1.JPG/960px-Omori_Nori_Museum1.JPG",
+        "alt": "平和の森公園・大森ふるさとの浜辺公園のスタート周辺付近",
+        "caption": "平和の森公園・大森ふるさとの浜辺公園の走路近隣で撮影された風景",
+        "credit": "江戸村のとくぞう (Edomura no Tokuzo)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Omori_Nori_Museum1.JPG"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.581629,
+      "anchorLng": 139.739738,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 大田区立平和の森公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%B9%B3%E5%92%8C%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%B9%B3%E5%92%8C%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "平和の森公園・大森ふるさとの浜辺公園の序盤区間付近",
+        "caption": "平和の森公園・大森ふるさとの浜辺公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%B9%B3%E5%92%8C%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.579806,
+      "anchorLng": 139.739787,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 東京都大田区平和島、 ヤマトインターナショナル東京本社ビル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Yamato_International_Tokyo_Building.jpg/960px-Yamato_International_Tokyo_Building.jpg",
+        "alt": "平和の森公園・大森ふるさとの浜辺公園の中盤区間付近",
+        "caption": "平和の森公園・大森ふるさとの浜辺公園の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamato_International_Tokyo_Building.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.575742,
+      "anchorLng": 139.742629,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Walk around Omori",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Walk_around_Omori_2.jpg/960px-Walk_around_Omori_2.jpg",
+        "alt": "平和の森公園・大森ふるさとの浜辺公園の後半区間付近",
+        "caption": "平和の森公園・大森ふるさとの浜辺公園の走路近隣で撮影された風景",
+        "credit": "Syced",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walk_around_Omori_2.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.572567,
+      "anchorLng": 139.742569,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 大田区立大森ふるさとの浜辺公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%A4%A7%E6%A3%AE%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E3%81%AE%E6%B5%9C%E8%BE%BA%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%A4%A7%E6%A3%AE%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E3%81%AE%E6%B5%9C%E8%BE%BA%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "平和の森公園・大森ふるさとの浜辺公園の終盤区間付近",
+        "caption": "平和の森公園・大森ふるさとの浜辺公園の走路近隣で撮影された風景",
+        "credit": "koji_h",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%A4%A7%E6%A3%AE%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E3%81%AE%E6%B5%9C%E8%BE%BA%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "slug": "chiba-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "千葉公園は綿打池を一周する約600mのジョギングコースが分かりやすく整備された、市街地の定番スポットです。100mごとの表示板があり、池を眺めながら一定のリズムで走れます。距離は短いものの平坦で扱いやすく、駅から近いので日常使いしやすいのが強みです。長い距離を踏むより、短時間のジョグや流し、フォーム確認、仕事前後の軽い運動に向きます。春は桜が映え、景色を楽しみながら走りやすい公園です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 千葉都市モノレール 千葉公園駅から徒歩すぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "千葉公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.619774,
+      "destinationLng": 140.117944,
+      "routeAnchorLat": 35.617363,
+      "routeAnchorLng": 140.118047,
+      "routeMode": "loop",
+      "accessText": "千葉公園駅からコースまで約270m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.617363,
+      "routeLng": 140.118047,
+      "elevationM": 19.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 118,
+        "section-3": 232,
+        "section-4": 355,
+        "section-5": 467
+      },
+      "gpxHref": "/gpx/chiba-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.617363,
+      "anchorLng": 140.118047,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 千葉公園 綿打池と モノレール",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/960px-Chiba_Park_with_monorail.jpg",
+        "alt": "千葉公園のスタート周辺付近",
+        "caption": "千葉公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.617363,
+      "routeLng": 140.118047,
+      "elevationM": 19.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.618406,
+      "anchorLng": 140.118031,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 千葉公園 綿打池と モノレール",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/960px-Chiba_Park_with_monorail.jpg",
+        "alt": "千葉公園の序盤区間付近",
+        "caption": "千葉公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg"
+      },
+      "routePointIndex": 9,
+      "routeDistanceM": 118,
+      "routeLat": 35.618406,
+      "routeLng": 140.118031,
+      "elevationM": 19.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.619285,
+      "anchorLng": 140.117462,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 千葉公園 綿打池と モノレール",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/960px-Chiba_Park_with_monorail.jpg",
+        "alt": "千葉公園の中盤区間付近",
+        "caption": "千葉公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg"
+      },
+      "routePointIndex": 15,
+      "routeDistanceM": 232,
+      "routeLat": 35.619285,
+      "routeLng": 140.117462,
+      "elevationM": 19.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.618729,
+      "anchorLng": 140.116452,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 千葉公園 綿打池と モノレール",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/960px-Chiba_Park_with_monorail.jpg",
+        "alt": "千葉公園の後半区間付近",
+        "caption": "千葉公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg"
+      },
+      "routePointIndex": 24,
+      "routeDistanceM": 355,
+      "routeLat": 35.618729,
+      "routeLng": 140.116452,
+      "elevationM": 20.4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.617889,
+      "anchorLng": 140.117096,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 千葉公園 綿打池と モノレール",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/960px-Chiba_Park_with_monorail.jpg",
+        "alt": "千葉公園の終盤区間付近",
+        "caption": "千葉公園の走路近隣で撮影された風景",
+        "credit": "掬茶",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg"
+      },
+      "routePointIndex": 32,
+      "routeDistanceM": 467,
+      "routeLat": 35.617889,
+      "routeLng": 140.117096,
+      "elevationM": 19.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 591,
+  "elevationGainM": 1,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 19.6
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 19.4
+    },
+    {
+      "distanceM": 197,
+      "elevationM": 19.9
+    },
+    {
+      "distanceM": 295,
+      "elevationM": 20
+    },
+    {
+      "distanceM": 394,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 492,
+      "elevationM": 19.8
+    },
+    {
+      "distanceM": 591,
+      "elevationM": 19.4
+    }
+  ]
+}

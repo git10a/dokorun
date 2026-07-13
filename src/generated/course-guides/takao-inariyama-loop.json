@@ -1,0 +1,530 @@
+{
+  "slug": "takao-inariyama-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "清滝駅前から尾根通しの稲荷山コースで登り、もみじ台を踏んでから高尾山頂(599m)へ。下りは琵琶滝のかかる沢沿いの6号路で戻る周回。舗装された1号路と違い登り下りとも土の道で、ケーブルカー圏より人が少なく走りやすい。山頂手前には長い階段、6号路下部には飛び石の渡渉区間がある。山頂と清滝周辺にトイレ・売店・自販機が揃い、下山後はそのまま高尾山口駅併設の温泉に立ち寄れる。距離が短めなのでトレラン初挑戦にも向く。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京王高尾山口駅から清滝駅前まで徒歩約5分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "高尾山口駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.632377,
+      "destinationLng": 139.269856,
+      "routeAnchorLat": 35.632202,
+      "routeAnchorLng": 139.270051,
+      "routeMode": "loop",
+      "accessText": "高尾山口駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.632202,
+      "routeLng": 139.270051,
+      "elevationM": 196,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1610,
+        "section-3": 3210,
+        "section-4": 4819,
+        "section-5": 6429
+      },
+      "gpxHref": "/gpx/takao-inariyama-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "高尾山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.63111,
+      "destinationLng": 139.256026,
+      "routeAnchorLat": 35.627184,
+      "routeAnchorLng": 139.257673,
+      "routeMode": "loop",
+      "accessText": "高尾山駅からコースまで約460m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 86,
+      "routeDistanceM": 1610,
+      "routeLat": 35.627184,
+      "routeLng": 139.257673,
+      "elevationM": 370.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 6425,
+        "section-2": 0,
+        "section-3": 1600,
+        "section-4": 3209,
+        "section-5": 4819
+      },
+      "gpxHref": "/gpx/takao-inariyama-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.632202,
+      "anchorLng": 139.270051,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Takaosanguchi Station",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%E9%AB%98%E5%B0%BE%E5%B1%B1%E5%8F%A3%E9%A7%85_-_panoramio_-_%E3%81%8F%E3%82%8D%E3%81%B5%E3%81%AD.jpg/960px-%E9%AB%98%E5%B0%BE%E5%B1%B1%E5%8F%A3%E9%A7%85_-_panoramio_-_%E3%81%8F%E3%82%8D%E3%81%B5%E3%81%AD.jpg",
+        "alt": "高尾山稲荷山コース周回のスタート周辺付近",
+        "caption": "高尾山稲荷山コース周回の走路近隣で撮影された風景",
+        "credit": "くろふね (Kurofune)",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E5%B0%BE%E5%B1%B1%E5%8F%A3%E9%A7%85_-_panoramio_-_%E3%81%8F%E3%82%8D%E3%81%B5%E3%81%AD.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.632202,
+      "routeLng": 139.270051,
+      "elevationM": 196,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.627184,
+      "anchorLng": 139.257673,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 高尾山登山ルート 稲荷山展望台から新宿方面",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/%E9%AB%98%E5%B0%BE%E5%B1%B1%E7%99%BB%E5%B1%B1%E3%83%AB%E3%83%BC%E3%83%88_%E7%A8%B2%E8%8D%B7%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%81%8B%E3%82%89%E6%96%B0%E5%AE%BF%E6%96%B9%E9%9D%A2_-_panoramio.jpg/960px-%E9%AB%98%E5%B0%BE%E5%B1%B1%E7%99%BB%E5%B1%B1%E3%83%AB%E3%83%BC%E3%83%88_%E7%A8%B2%E8%8D%B7%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%81%8B%E3%82%89%E6%96%B0%E5%AE%BF%E6%96%B9%E9%9D%A2_-_panoramio.jpg",
+        "alt": "高尾山稲荷山コース周回の序盤区間付近",
+        "caption": "高尾山稲荷山コース周回の走路近隣で撮影された風景",
+        "credit": "nekoneko",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E5%B0%BE%E5%B1%B1%E7%99%BB%E5%B1%B1%E3%83%AB%E3%83%BC%E3%83%88_%E7%A8%B2%E8%8D%B7%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%81%8B%E3%82%89%E6%96%B0%E5%AE%BF%E6%96%B9%E9%9D%A2_-_panoramio.jpg"
+      },
+      "routePointIndex": 86,
+      "routeDistanceM": 1610,
+      "routeLat": 35.627184,
+      "routeLng": 139.257673,
+      "elevationM": 370.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.621877,
+      "anchorLng": 139.244096,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Ice segragation in Keiskea japonica.",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Ice_segregation_in_Keiskea_japonica_JAN2017.jpg/960px-Ice_segregation_in_Keiskea_japonica_JAN2017.jpg",
+        "alt": "高尾山稲荷山コース周回の中盤区間付近",
+        "caption": "高尾山稲荷山コース周回の走路近隣で撮影された風景",
+        "credit": "Ka23 13",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ice_segregation_in_Keiskea_japonica_JAN2017.jpg"
+      },
+      "routePointIndex": 159,
+      "routeDistanceM": 3210,
+      "routeLat": 35.621877,
+      "routeLng": 139.244096,
+      "elevationM": 515,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.626186,
+      "anchorLng": 139.248919,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Mount Takao - Trail 6",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mount_Takao_-_Trail_6_%289407372597%29.jpg/960px-Mount_Takao_-_Trail_6_%289407372597%29.jpg",
+        "alt": "高尾山稲荷山コース周回の後半区間付近",
+        "caption": "高尾山稲荷山コース周回の走路近隣で撮影された風景",
+        "credit": "Rob Young from United Kingdom",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Takao_-_Trail_6_(9407372597).jpg"
+      },
+      "routePointIndex": 283,
+      "routeDistanceM": 4819,
+      "routeLat": 35.626186,
+      "routeLng": 139.248919,
+      "elevationM": 549.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.629727,
+      "anchorLng": 139.258509,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 高尾山びわ滝の狛犬 Koma-inu which can be seen by Biwa-taki of Mount Takao",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%E9%AB%98%E5%B0%BE%E5%B1%B1%E3%81%B3%E3%82%8F%E6%BB%9D%E3%81%AE%E7%8B%9B%E7%8A%AC_Koma-inu_which_can_be_seen_by_Biwa-taki_of_Mount_Takao_-_panoramio.jpg/960px-%E9%AB%98%E5%B0%BE%E5%B1%B1%E3%81%B3%E3%82%8F%E6%BB%9D%E3%81%AE%E7%8B%9B%E7%8A%AC_Koma-inu_which_can_be_seen_by_Biwa-taki_of_Mount_Takao_-_panoramio.jpg",
+        "alt": "高尾山稲荷山コース周回の終盤区間付近",
+        "caption": "高尾山稲荷山コース周回の走路近隣で撮影された風景",
+        "credit": "hiroyuki.moriya",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E5%B0%BE%E5%B1%B1%E3%81%B3%E3%82%8F%E6%BB%9D%E3%81%AE%E7%8B%9B%E7%8A%AC_Koma-inu_which_can_be_seen_by_Biwa-taki_of_Mount_Takao_-_panoramio.jpg"
+      },
+      "routePointIndex": 400,
+      "routeDistanceM": 6429,
+      "routeLat": 35.629727,
+      "routeLng": 139.258509,
+      "elevationM": 367.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8035,
+  "elevationGainM": 496,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 196
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 198.1
+    },
+    {
+      "distanceM": 198,
+      "elevationM": 208.9
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 223.5
+    },
+    {
+      "distanceM": 397,
+      "elevationM": 223.5
+    },
+    {
+      "distanceM": 496,
+      "elevationM": 240.4
+    },
+    {
+      "distanceM": 595,
+      "elevationM": 250.3
+    },
+    {
+      "distanceM": 694,
+      "elevationM": 271.5
+    },
+    {
+      "distanceM": 794,
+      "elevationM": 288.4
+    },
+    {
+      "distanceM": 893,
+      "elevationM": 305.2
+    },
+    {
+      "distanceM": 992,
+      "elevationM": 333.7
+    },
+    {
+      "distanceM": 1091,
+      "elevationM": 329.2
+    },
+    {
+      "distanceM": 1190,
+      "elevationM": 324.7
+    },
+    {
+      "distanceM": 1290,
+      "elevationM": 347.1
+    },
+    {
+      "distanceM": 1389,
+      "elevationM": 365.6
+    },
+    {
+      "distanceM": 1488,
+      "elevationM": 378.6
+    },
+    {
+      "distanceM": 1587,
+      "elevationM": 371.5
+    },
+    {
+      "distanceM": 1686,
+      "elevationM": 378.1
+    },
+    {
+      "distanceM": 1786,
+      "elevationM": 394.7
+    },
+    {
+      "distanceM": 1885,
+      "elevationM": 399.1
+    },
+    {
+      "distanceM": 1984,
+      "elevationM": 399.7
+    },
+    {
+      "distanceM": 2083,
+      "elevationM": 407.3
+    },
+    {
+      "distanceM": 2182,
+      "elevationM": 413.2
+    },
+    {
+      "distanceM": 2282,
+      "elevationM": 421.9
+    },
+    {
+      "distanceM": 2381,
+      "elevationM": 447.8
+    },
+    {
+      "distanceM": 2480,
+      "elevationM": 448.9
+    },
+    {
+      "distanceM": 2579,
+      "elevationM": 455
+    },
+    {
+      "distanceM": 2678,
+      "elevationM": 468.6
+    },
+    {
+      "distanceM": 2778,
+      "elevationM": 482.1
+    },
+    {
+      "distanceM": 2877,
+      "elevationM": 486.2
+    },
+    {
+      "distanceM": 2976,
+      "elevationM": 489.3
+    },
+    {
+      "distanceM": 3075,
+      "elevationM": 499.1
+    },
+    {
+      "distanceM": 3174,
+      "elevationM": 513
+    },
+    {
+      "distanceM": 3274,
+      "elevationM": 524.8
+    },
+    {
+      "distanceM": 3373,
+      "elevationM": 541.2
+    },
+    {
+      "distanceM": 3472,
+      "elevationM": 562.7
+    },
+    {
+      "distanceM": 3571,
+      "elevationM": 559.1
+    },
+    {
+      "distanceM": 3670,
+      "elevationM": 546.1
+    },
+    {
+      "distanceM": 3770,
+      "elevationM": 552
+    },
+    {
+      "distanceM": 3869,
+      "elevationM": 550.3
+    },
+    {
+      "distanceM": 3968,
+      "elevationM": 544.2
+    },
+    {
+      "distanceM": 4067,
+      "elevationM": 573.9
+    },
+    {
+      "distanceM": 4166,
+      "elevationM": 589.7
+    },
+    {
+      "distanceM": 4266,
+      "elevationM": 588.6
+    },
+    {
+      "distanceM": 4365,
+      "elevationM": 583.8
+    },
+    {
+      "distanceM": 4464,
+      "elevationM": 586.2
+    },
+    {
+      "distanceM": 4563,
+      "elevationM": 569
+    },
+    {
+      "distanceM": 4662,
+      "elevationM": 558.5
+    },
+    {
+      "distanceM": 4762,
+      "elevationM": 553.9
+    },
+    {
+      "distanceM": 4861,
+      "elevationM": 551.3
+    },
+    {
+      "distanceM": 4960,
+      "elevationM": 545.7
+    },
+    {
+      "distanceM": 5059,
+      "elevationM": 526.5
+    },
+    {
+      "distanceM": 5158,
+      "elevationM": 519.6
+    },
+    {
+      "distanceM": 5258,
+      "elevationM": 546
+    },
+    {
+      "distanceM": 5357,
+      "elevationM": 532.1
+    },
+    {
+      "distanceM": 5456,
+      "elevationM": 515.7
+    },
+    {
+      "distanceM": 5555,
+      "elevationM": 502.6
+    },
+    {
+      "distanceM": 5654,
+      "elevationM": 497.9
+    },
+    {
+      "distanceM": 5754,
+      "elevationM": 488.8
+    },
+    {
+      "distanceM": 5853,
+      "elevationM": 487.5
+    },
+    {
+      "distanceM": 5952,
+      "elevationM": 480.6
+    },
+    {
+      "distanceM": 6051,
+      "elevationM": 471.3
+    },
+    {
+      "distanceM": 6150,
+      "elevationM": 435.6
+    },
+    {
+      "distanceM": 6250,
+      "elevationM": 404
+    },
+    {
+      "distanceM": 6349,
+      "elevationM": 384
+    },
+    {
+      "distanceM": 6448,
+      "elevationM": 361.1
+    },
+    {
+      "distanceM": 6547,
+      "elevationM": 327.4
+    },
+    {
+      "distanceM": 6646,
+      "elevationM": 323.5
+    },
+    {
+      "distanceM": 6746,
+      "elevationM": 334.9
+    },
+    {
+      "distanceM": 6845,
+      "elevationM": 315.9
+    },
+    {
+      "distanceM": 6944,
+      "elevationM": 310.9
+    },
+    {
+      "distanceM": 7043,
+      "elevationM": 302.4
+    },
+    {
+      "distanceM": 7142,
+      "elevationM": 280.8
+    },
+    {
+      "distanceM": 7242,
+      "elevationM": 269.5
+    },
+    {
+      "distanceM": 7341,
+      "elevationM": 255.3
+    },
+    {
+      "distanceM": 7440,
+      "elevationM": 243.2
+    },
+    {
+      "distanceM": 7539,
+      "elevationM": 246.6
+    },
+    {
+      "distanceM": 7638,
+      "elevationM": 232.7
+    },
+    {
+      "distanceM": 7738,
+      "elevationM": 223.5
+    },
+    {
+      "distanceM": 7837,
+      "elevationM": 208.9
+    },
+    {
+      "distanceM": 7936,
+      "elevationM": 198.1
+    },
+    {
+      "distanceM": 8035,
+      "elevationM": 196.3
+    }
+  ]
+}

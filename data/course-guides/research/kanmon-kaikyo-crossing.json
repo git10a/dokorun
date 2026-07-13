@@ -1,0 +1,735 @@
+{
+  "slug": "kanmon-kaikyo-crossing",
+  "spot": {
+    "slug": "kanmon-kaikyo-crossing",
+    "name": "関門海峡横断(下関〜門司港)",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "access": "起点はJR下関駅、ゴールはJR門司港駅。電車で下関へ戻れる",
+    "course_type": "one_way",
+    "distance_m": 8828,
+    "elevation_gain_m": 175,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 402,
+    "gpxDistanceM": 8828,
+    "distanceDifferencePct": 0,
+    "closureGapM": 3425,
+    "hasGpxElevation": true,
+    "detectedCourseType": "out_and_back",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:14:47.722Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 33.950917,
+        "lng": 130.925001,
+        "ele": 9
+      },
+      "stations": [
+        {
+          "name": "下関",
+          "prefecture": "山口県",
+          "line": "JR山陽本線",
+          "x": 130.923038,
+          "y": 33.950306,
+          "postal": "7500025",
+          "distance": "190m",
+          "prev": "幡生",
+          "next": "門司"
+        },
+        {
+          "name": "幡生",
+          "prefecture": "山口県",
+          "line": "JR山陰本線",
+          "x": 130.92734,
+          "y": 33.981592,
+          "postal": "7510829",
+          "distance": "3420m",
+          "prev": "綾羅木",
+          "next": "下関"
+        },
+        {
+          "name": "門司港",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.961549,
+          "y": 33.945138,
+          "postal": "8010841",
+          "distance": "3440m",
+          "prev": null,
+          "next": "小森江"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Little Pusan in Shimonoseki, Yamaguchi",
+          "description": "下関の釜山門",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Little_Pusan_in_Shimonoseki%2C_Yamaguchi.JPG/960px-Little_Pusan_in_Shimonoseki%2C_Yamaguchi.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Little_Pusan_in_Shimonoseki,_Yamaguchi.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.950572,
+            "lng": 130.924058
+          }
+        },
+        {
+          "title": "Grand-Place Saint Valentine in front of Shimonoseki Station",
+          "description": "下関駅前にある結婚式場、グランプラス・セント・バレンタイン",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Grand-Place_Saint_Valentine_in_front_of_Shimonoseki_Station.JPG/960px-Grand-Place_Saint_Valentine_in_front_of_Shimonoseki_Station.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place_Saint_Valentine_in_front_of_Shimonoseki_Station.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.950603,
+            "lng": 130.924117
+          }
+        },
+        {
+          "title": "View of Shimonoseki Station 20150621",
+          "description": "下関駅駅舎の遠景",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/View_of_Shimonoseki_Station_20150621.JPG/960px-View_of_Shimonoseki_Station_20150621.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Shimonoseki_Station_20150621.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.9507,
+            "lng": 130.924089
+          }
+        },
+        {
+          "title": "Gate of Little Pusan (Green Mall) near Shimonoseki Station",
+          "description": "下関駅付近の釜山門",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Gate_of_Little_Pusan_%28Green_Mall%29_near_Shimonoseki_Station.JPG/960px-Gate_of_Little_Pusan_%28Green_Mall%29_near_Shimonoseki_Station.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Little_Pusan_(Green_Mall)_near_Shimonoseki_Station.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.950886,
+            "lng": 130.923997
+          }
+        },
+        {
+          "title": "Manhole cover of Shimonoseki, Yamaguchi",
+          "description": "山口県下関市のマンホール蓋",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg/960px-Manhole_cover_of_Shimonoseki%2C_Yamaguchi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manhole_cover_of_Shimonoseki,_Yamaguchi.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.950875,
+            "lng": 130.9245
+          }
+        },
+        {
+          "title": "Torii of Otoshi Shrine in Shimonoseki, Yamaguchi",
+          "description": "下関市竹崎町・大歳神社の鳥居",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Torii_of_Otoshi_Shrine_in_Shimonoseki%2C_Yamaguchi.JPG/960px-Torii_of_Otoshi_Shrine_in_Shimonoseki%2C_Yamaguchi.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii_of_Otoshi_Shrine_in_Shimonoseki,_Yamaguchi.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.950889,
+            "lng": 130.925903
+          }
+        },
+        {
+          "title": "View of sando of Otoshi Shrine in Shimonoseki, Yamaguchi",
+          "description": "下関市竹崎町の歩道橋より望む大歳神社の参道",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/View_of_sando_of_Otoshi_Shrine_in_Shimonoseki%2C_Yamaguchi.jpg/960px-View_of_sando_of_Otoshi_Shrine_in_Shimonoseki%2C_Yamaguchi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_sando_of_Otoshi_Shrine_in_Shimonoseki,_Yamaguchi.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.950761,
+            "lng": 130.926072
+          }
+        },
+        {
+          "title": "Shimonoseki Post Office 20150621",
+          "description": "歩道橋から望む下関郵便局",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Shimonoseki_Post_Office_20150621.JPG/960px-Shimonoseki_Post_Office_20150621.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shimonoseki_Post_Office_20150621.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.950981,
+            "lng": 130.923906
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "point": {
+        "lat": 33.95682463629772,
+        "lng": 130.94495530248102,
+        "ele": 4.25
+      },
+      "stations": [
+        {
+          "name": "ノーフォーク広場",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.964254,
+          "y": 33.955973,
+          "postal": "8010854",
+          "distance": "1780m",
+          "prev": "出光美術館",
+          "next": "関門海峡めかり"
+        },
+        {
+          "name": "門司港",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.961549,
+          "y": 33.945138,
+          "postal": "8010841",
+          "distance": "2010m",
+          "prev": null,
+          "next": "小森江"
+        },
+        {
+          "name": "関門海峡めかり",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.967347,
+          "y": 33.960627,
+          "postal": "8010855",
+          "distance": "2110m",
+          "prev": "ノーフォーク広場",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "Karato Market 20131124",
+          "description": "山口県下関市・唐戸市場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Karato_Market_20131124.jpg/960px-Karato_Market_20131124.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karato_Market_20131124.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.956344,
+            "lng": 130.945039
+          }
+        },
+        {
+          "title": "Torii of Kameyama Hachiman Shrine 20150621",
+          "description": "亀山八幡宮の大鳥居",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Torii_of_Kameyama_Hachiman_Shrine_20150621.JPG/960px-Torii_of_Kameyama_Hachiman_Shrine_20150621.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii_of_Kameyama_Hachiman_Shrine_20150621.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.956919,
+            "lng": 130.945131
+          }
+        },
+        {
+          "title": "Haiden of Kameyama Hachiman Shrine 2",
+          "description": "亀山八幡宮の拝殿",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Haiden_of_Kameyama_Hachiman_Shrine_2.JPG/960px-Haiden_of_Kameyama_Hachiman_Shrine_2.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haiden_of_Kameyama_Hachiman_Shrine_2.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.957294,
+            "lng": 130.944917
+          }
+        },
+        {
+          "title": "Haiden of Kameyama Hachiman Shrine",
+          "description": "亀山八幡宮の拝殿",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Haiden_of_Kameyama_Hachiman_Shrine.JPG/960px-Haiden_of_Kameyama_Hachiman_Shrine.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haiden_of_Kameyama_Hachiman_Shrine.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.957206,
+            "lng": 130.944931
+          }
+        },
+        {
+          "title": "Torii of Kameyama Hachiman Shrine from inner side",
+          "description": "亀山八幡宮境内より望む大鳥居と国道9号",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Torii_of_Kameyama_Hachiman_Shrine_from_inner_side.JPG/960px-Torii_of_Kameyama_Hachiman_Shrine_from_inner_side.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii_of_Kameyama_Hachiman_Shrine_from_inner_side.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.957181,
+            "lng": 130.945022
+          }
+        },
+        {
+          "title": "Torii of Kameyama Hachiman Shrine and Kammon Strait",
+          "description": "亀山八幡宮境内より望む関門海峡",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Torii_of_Kameyama_Hachiman_Shrine_and_Kammon_Strait.JPG/960px-Torii_of_Kameyama_Hachiman_Shrine_and_Kammon_Strait.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii_of_Kameyama_Hachiman_Shrine_and_Kammon_Strait.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.957317,
+            "lng": 130.944917
+          }
+        },
+        {
+          "title": "Side view of torii of Kameyama Hachiman Shrine",
+          "description": "亀山八幡宮の大鳥居",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Side_view_of_torii_of_Kameyama_Hachiman_Shrine.jpg/960px-Side_view_of_torii_of_Kameyama_Hachiman_Shrine.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Side_view_of_torii_of_Kameyama_Hachiman_Shrine.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.95705,
+            "lng": 130.944886
+          }
+        },
+        {
+          "title": "Lighthouses on breakwaters near Karato Market",
+          "description": "唐戸市場付近の防波堤と恋人の灯台",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Lighthouses_on_breakwaters_near_Karato_Market.JPG/960px-Lighthouses_on_breakwaters_near_Karato_Market.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lighthouses_on_breakwaters_near_Karato_Market.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.956306,
+            "lng": 130.945161
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "point": {
+        "lat": 33.963072380259796,
+        "lng": 130.96014692753403,
+        "ele": 18.5
+      },
+      "stations": [
+        {
+          "name": "関門海峡めかり",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.967347,
+          "y": 33.960627,
+          "postal": "8010855",
+          "distance": "720m",
+          "prev": "ノーフォーク広場",
+          "next": null
+        },
+        {
+          "name": "ノーフォーク広場",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.964254,
+          "y": 33.955973,
+          "postal": "8010854",
+          "distance": "880m",
+          "prev": "出光美術館",
+          "next": "関門海峡めかり"
+        },
+        {
+          "name": "出光美術館",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.965292,
+          "y": 33.947792,
+          "postal": "8010856",
+          "distance": "1770m",
+          "prev": "九州鉄道記念館",
+          "next": "ノーフォーク広場"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Boundary of Yamaguchi and Fukuoka (1544233136)",
+          "description": "関門国道トンネルの山口県と福岡県の境で記念撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boundary_of_Yamaguchi_and_Fukuoka_%281544233136%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boundary_of_Yamaguchi_and_Fukuoka_(1544233136).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.963861,
+            "lng": 130.958555
+          }
+        },
+        {
+          "title": "Boundary of Yamaguchi and Fukuoka (1543368551)",
+          "description": "関門国道トンネルの山口県と福岡県の境で記念撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Boundary_of_Yamaguchi_and_Fukuoka_%281543368551%29.jpg/960px-Boundary_of_Yamaguchi_and_Fukuoka_%281543368551%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boundary_of_Yamaguchi_and_Fukuoka_(1543368551).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.963777,
+            "lng": 130.958694
+          }
+        },
+        {
+          "title": "Kanmonkyo Bridge from Moji",
+          "description": "門司方面より望む関門橋",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kanmonkyo_Bridge_from_Moji.JPG/960px-Kanmonkyo_Bridge_from_Moji.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanmonkyo_Bridge_from_Moji.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.961369,
+            "lng": 130.9626
+          }
+        },
+        {
+          "title": "Mount Hinoyama from Kitakyushu, Fukuoka",
+          "description": "門司側より望む火の山",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mount_Hinoyama_from_Kitakyushu%2C_Fukuoka.JPG/960px-Mount_Hinoyama_from_Kitakyushu%2C_Fukuoka.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Hinoyama_from_Kitakyushu,_Fukuoka.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.961364,
+            "lng": 130.9626
+          }
+        },
+        {
+          "title": "Shimonoseki, Yamaguchi from Moji, Kitakyushu",
+          "description": "門司方面より望む下関市",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Shimonoseki%2C_Yamaguchi_from_Moji%2C_Kitakyushu.JPG/960px-Shimonoseki%2C_Yamaguchi_from_Moji%2C_Kitakyushu.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shimonoseki,_Yamaguchi_from_Moji,_Kitakyushu.JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.961381,
+            "lng": 130.962617
+          }
+        },
+        {
+          "title": "Mount Hinoyama and Kammon Strait from Mekari Shrine",
+          "description": "和布刈神社より望む関門海峡対岸の火の山",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mount_Hinoyama_and_Kammon_Strait_from_Mekari_Shrine.JPG/960px-Mount_Hinoyama_and_Kammon_Strait_from_Mekari_Shrine.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Hinoyama_and_Kammon_Strait_from_Mekari_Shrine.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.960933,
+            "lng": 130.962128
+          }
+        },
+        {
+          "title": "Mount Hinoyama and ship in Kammon Strait from Mekari Shrine",
+          "description": "和布刈神社より望む関門海峡対岸の火の山",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mount_Hinoyama_and_ship_in_Kammon_Strait_from_Mekari_Shrine.JPG/960px-Mount_Hinoyama_and_ship_in_Kammon_Strait_from_Mekari_Shrine.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Hinoyama_and_ship_in_Kammon_Strait_from_Mekari_Shrine.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.960992,
+            "lng": 130.962158
+          }
+        },
+        {
+          "title": "Hayatomo Inari Shrine in Mekari Shrine",
+          "description": "和布刈神社の境内にある早鞆稲荷社の鳥居",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Hayatomo_Inari_Shrine_in_Mekari_Shrine.JPG/960px-Hayatomo_Inari_Shrine_in_Mekari_Shrine.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hayatomo_Inari_Shrine_in_Mekari_Shrine.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.961014,
+            "lng": 130.962233
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "point": {
+        "lat": 33.956417727636165,
+        "lng": 130.97018067429056,
+        "ele": 118.75
+      },
+      "stations": [
+        {
+          "name": "関門海峡めかり",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.967347,
+          "y": 33.960627,
+          "postal": "8010855",
+          "distance": "540m",
+          "prev": "ノーフォーク広場",
+          "next": null
+        },
+        {
+          "name": "ノーフォーク広場",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.964254,
+          "y": 33.955973,
+          "postal": "8010854",
+          "distance": "550m",
+          "prev": "出光美術館",
+          "next": "関門海峡めかり"
+        },
+        {
+          "name": "出光美術館",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.965292,
+          "y": 33.947792,
+          "postal": "8010856",
+          "distance": "1060m",
+          "prev": "九州鉄道記念館",
+          "next": "ノーフォーク広場"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kanmon bridge from Moji (1525587684)",
+          "description": "9/29に北九州空港から山口宇部空港を旅した際に撮影したもの。 門司側から関門橋を撮影。門司港駅から関門橋の下までは海岸沿いに遊歩道が整備されている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Kanmon_bridge_from_Moji_%281525587684%29.jpg/960px-Kanmon_bridge_from_Moji_%281525587684%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanmon_bridge_from_Moji_(1525587684).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.954527,
+            "lng": 130.964722
+          }
+        },
+        {
+          "title": "Kanmon bridge from Moji (1524723315)",
+          "description": "9/29に北九州空港から山口宇部空港を旅した際に撮影したもの。 門司側から関門橋を撮影。門司港駅から関門橋の下までは海岸沿いに遊歩道が整備されている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kanmon_bridge_from_Moji_%281524723315%29.jpg/960px-Kanmon_bridge_from_Moji_%281524723315%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanmon_bridge_from_Moji_(1524723315).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.9535,
+            "lng": 130.965527
+          }
+        },
+        {
+          "title": "Grand torii of Mekari Shrine",
+          "description": "和布刈神社・大鳥居",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Grand_torii_of_Mekari_Shrine.JPG/960px-Grand_torii_of_Mekari_Shrine.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand_torii_of_Mekari_Shrine.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.956803,
+            "lng": 130.964553
+          }
+        },
+        {
+          "title": "関門橋 - panoramio (1)",
+          "description": "関門橋。北九州市側から撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/%E9%96%A2%E9%96%80%E6%A9%8B_-_panoramio_%281%29.jpg/960px-%E9%96%A2%E9%96%80%E6%A9%8B_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%96%A2%E9%96%80%E6%A9%8B_-_panoramio_(1).jpg",
+          "credit": "Yoshio Kohara",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.958151,
+            "lng": 130.967224
+          }
+        },
+        {
+          "title": "Forest under the interchange インターチェンジの下の森 - panoramio",
+          "description": "Forest under the interchange インターチェンジの下の森",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Forest_under_the_interchange_%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8%E3%81%AE%E4%B8%8B%E3%81%AE%E6%A3%AE_-_panoramio.jpg/960px-Forest_under_the_interchange_%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8%E3%81%AE%E4%B8%8B%E3%81%AE%E6%A3%AE_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Forest_under_the_interchange_%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8%E3%81%AE%E4%B8%8B%E3%81%AE%E6%A3%AE_-_panoramio.jpg",
+          "credit": "nanamori",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.957807,
+            "lng": 130.96485
+          }
+        },
+        {
+          "title": "甲宗八幡神社 - panoramio",
+          "description": "甲宗八幡神社",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/%E7%94%B2%E5%AE%97%E5%85%AB%E5%B9%A1%E7%A5%9E%E7%A4%BE_-_panoramio.jpg/960px-%E7%94%B2%E5%AE%97%E5%85%AB%E5%B9%A1%E7%A5%9E%E7%A4%BE_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%B2%E5%AE%97%E5%85%AB%E5%B9%A1%E7%A5%9E%E7%A4%BE_-_panoramio.jpg",
+          "credit": "kokko man",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.952776,
+            "lng": 130.967637
+          }
+        },
+        {
+          "title": "1 Chome Kyūmoji, Moji-ku, Kitakyūshū-shi, Fukuoka-ken 801-0854, Japan - panoramio",
+          "description": "1 Chome Kyūmoji, Moji-ku, Kitakyūshū-shi, Fukuoka-ken 801-0854, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/1_Chome_Ky%C5%ABmoji%2C_Moji-ku%2C_Kitaky%C5%ABsh%C5%AB-shi%2C_Fukuoka-ken_801-0854%2C_Japan_-_panoramio.jpg/960px-1_Chome_Ky%C5%ABmoji%2C_Moji-ku%2C_Kitaky%C5%ABsh%C5%AB-shi%2C_Fukuoka-ken_801-0854%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_Chome_Ky%C5%ABmoji,_Moji-ku,_Kitaky%C5%ABsh%C5%AB-shi,_Fukuoka-ken_801-0854,_Japan_-_panoramio.jpg",
+          "credit": "kokko man",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.952772,
+            "lng": 130.967631
+          }
+        },
+        {
+          "title": "Kammon Strait near Norfolk Hiroba (Norfolk Square) Station",
+          "description": "レトロ列車「潮風号」内より望む関門海峡と下関市",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Kammon_Strait_near_Norfolk_Hiroba_%28Norfolk_Square%29_Station.jpg/960px-Kammon_Strait_near_Norfolk_Hiroba_%28Norfolk_Square%29_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kammon_Strait_near_Norfolk_Hiroba_(Norfolk_Square)_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.954639,
+            "lng": 130.964736
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 1,
+      "point": {
+        "lat": 33.945116,
+        "lng": 130.961473,
+        "ele": 6
+      },
+      "stations": [
+        {
+          "name": "門司港",
+          "prefecture": "福岡県",
+          "line": "JR鹿児島本線",
+          "x": 130.961549,
+          "y": 33.945138,
+          "postal": "8010841",
+          "distance": "10m",
+          "prev": null,
+          "next": "小森江"
+        },
+        {
+          "name": "九州鉄道記念館",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.962439,
+          "y": 33.944392,
+          "postal": "8010833",
+          "distance": "120m",
+          "prev": null,
+          "next": "出光美術館"
+        },
+        {
+          "name": "出光美術館",
+          "prefecture": "福岡県",
+          "line": "門司港レトロ観光線",
+          "x": 130.965292,
+          "y": 33.947792,
+          "postal": "8010856",
+          "distance": "460m",
+          "prev": "九州鉄道記念館",
+          "next": "ノーフォーク広場"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Kagoshima Main Line Mojiko Station Platform No.1 and 2",
+          "description": "Kagoshima Main Line Mojiko Station Platform No. 1, 2",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Kagoshima_Main_Line_Mojiko_Station_Platform_No.1_and_2.jpg/960px-Kagoshima_Main_Line_Mojiko_Station_Platform_No.1_and_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kagoshima_Main_Line_Mojiko_Station_Platform_No.1_and_2.jpg",
+          "credit": "G43",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.944908,
+            "lng": 130.961419
+          }
+        },
+        {
+          "title": "Tabidachi-no-kane and Kofuku-no-izumi at Mojiko Station",
+          "description": "Tabidachi no kane (\"Bell for the Begin of the Journey\") and Kofuku no izumi (\"Fountain of Happiness\") at Mojiko Station",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Tabidachi-no-kane_and_Kofuku-no-izumi_at_Mojiko_Station.jpg/960px-Tabidachi-no-kane_and_Kofuku-no-izumi_at_Mojiko_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tabidachi-no-kane_and_Kofuku-no-izumi_at_Mojiko_Station.jpg",
+          "credit": "Yasu ( talk )",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.945,
+            "lng": 130.961389
+          }
+        },
+        {
+          "title": "門司港駅 - panoramio (1)",
+          "description": "門司港駅",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg/960px-%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85_-_panoramio_(1).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 33.94492,
+            "lng": 130.961349
+          }
+        },
+        {
+          "title": "Spring of Happiness in Mojiko Station",
+          "description": "門司港駅構内の「幸福の泉」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Spring_of_Happiness_in_Mojiko_Station.jpg/960px-Spring_of_Happiness_in_Mojiko_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spring_of_Happiness_in_Mojiko_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.944997,
+            "lng": 130.961392
+          }
+        },
+        {
+          "title": "Zero-mile marker for Kyushu Railroad in Mojiko Station",
+          "description": "門司港駅構内の0哩標識",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Zero-mile_marker_for_Kyushu_Railroad_in_Mojiko_Station.jpg/960px-Zero-mile_marker_for_Kyushu_Railroad_in_Mojiko_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zero-mile_marker_for_Kyushu_Railroad_in_Mojiko_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.944947,
+            "lng": 130.961289
+          }
+        },
+        {
+          "title": "Ticket office of Mojiko Station",
+          "description": "門司港駅の切符売り場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ticket_office_of_Mojiko_Station.jpg/960px-Ticket_office_of_Mojiko_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ticket_office_of_Mojiko_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.944972,
+            "lng": 130.961472
+          }
+        },
+        {
+          "title": "Entrance of Mojiko Station",
+          "description": "門司港駅の入り口",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Entrance_of_Mojiko_Station.jpg/960px-Entrance_of_Mojiko_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entrance_of_Mojiko_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.945233,
+            "lng": 130.961694
+          }
+        },
+        {
+          "title": "Moji 20190502 110749",
+          "description": "The corridor on the second floor of Mojikō Station building. (May, 2019)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Moji_20190502_110749.jpg/960px-Moji_20190502_110749.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moji_20190502_110749.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.945227,
+            "lng": 130.96164
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

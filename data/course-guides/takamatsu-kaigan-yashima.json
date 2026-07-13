@@ -1,0 +1,140 @@
+{
+  "slug": "takamatsu-kaigan-yashima",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "高松港西側の岸壁からサンポート高松のプロムナードを抜け、赤灯台「せとしるべ」を望みつつ瀬戸内の海沿いを東へ。詰田川・春日川の河口を渡り、屋島西町の相引川河口付近まで走る約6.3kmの片道コース。ほぼ平坦で、朝は海越しに屋島と島影が朝日に照らされる。折り返せば約13kmの練習コースになる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR高松駅・ことでん高松築港駅からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "高松駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.350754,
+      "destinationLng": 134.046821,
+      "routeAnchorLat": 34.349407,
+      "routeAnchorLng": 134.043119,
+      "routeMode": "forward",
+      "accessText": "高松駅からコースまで約370m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "潟元駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.341363,
+      "destinationLng": 134.098231,
+      "routeAnchorLat": 34.354408,
+      "routeAnchorLng": 134.092641,
+      "routeMode": "reverse",
+      "accessText": "潟元駅からコースまで約1540m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.349407,
+      "anchorLng": 134.043119,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 香川県高松市錦町にあるNHK高松放送局放送会館。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/NHK-Takamatsu_Headquarters.jpg/960px-NHK-Takamatsu_Headquarters.jpg",
+        "alt": "高松港・屋島海岸線のスタート周辺付近",
+        "caption": "高松港・屋島海岸線の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:NHK-Takamatsu_Headquarters.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.348287,
+      "anchorLng": 134.052996,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 香川県 にある 高松市立城内中学校 。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Takamatsu_city_Jy%C5%8Dnai_jhs.jpg/960px-Takamatsu_city_Jy%C5%8Dnai_jhs.jpg",
+        "alt": "高松港・屋島海岸線の序盤区間付近",
+        "caption": "高松港・屋島海岸線の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takamatsu_city_Jy%C5%8Dnai_jhs.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.346989,
+      "anchorLng": 134.069753,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 香川県高松市通町にある東讃交通株式会社の本社。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tousan_Koutsu_Company_Head_Office.jpg/960px-Tousan_Koutsu_Company_Head_Office.jpg",
+        "alt": "高松港・屋島海岸線の中盤区間付近",
+        "caption": "高松港・屋島海岸線の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tousan_Koutsu_Company_Head_Office.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.347246,
+      "anchorLng": 134.086824,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 香川県 高松市 にある株式会社 STNet の本社。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/STNet_Inc..jpg/960px-STNet_Inc..jpg",
+        "alt": "高松港・屋島海岸線の後半区間付近",
+        "caption": "高松港・屋島海岸線の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:STNet_Inc..jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.354408,
+      "anchorLng": 134.092641,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 香川県高松市にある屋島山頂の展望台「獅子の霊巌」から眺める市内の夜景。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Takamatsu_night_view_from_Yashima.jpg/960px-Takamatsu_night_view_from_Yashima.jpg",
+        "alt": "高松港・屋島海岸線の終盤区間付近",
+        "caption": "高松港・屋島海岸線の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takamatsu_night_view_from_Yashima.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

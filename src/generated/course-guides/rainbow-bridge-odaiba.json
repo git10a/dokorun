@@ -1,0 +1,897 @@
+{
+  "slug": "rainbow-bridge-odaiba",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "品川駅港南口エリアを起点に芝浦ふ頭へ進み、レインボーブリッジの遊歩道(約1.7km)で東京湾を渡ってお台場へ。お台場海浜公園からシンボルプロムナード、ダイバーシティ前を回り、同じ遊歩道で戻る約16.5kmの周回。橋上からは都心と湾岸のパノラマが広がり夜景も見事。遊歩道は開放時間制(4-10月9-21時・11-3月10-18時、第3月曜休)で通行無料・自転車走行不可。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR品川駅港南口から約1km/ゆりかもめお台場海浜公園駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "高輪ゲートウェイ駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.635476,
+      "destinationLng": 139.740651,
+      "routeAnchorLat": 35.631974,
+      "routeAnchorLng": 139.742992,
+      "routeMode": "loop",
+      "accessText": "高輪ゲートウェイ駅からコースまで約440m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.631974,
+      "routeLng": 139.742992,
+      "elevationM": 21,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3313,
+        "section-3": 7367,
+        "section-4": 7353,
+        "section-5": 3313
+      },
+      "gpxHref": "/gpx/rainbow-bridge-odaiba-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "芝浦ふ頭駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.641773,
+      "destinationLng": 139.757852,
+      "routeAnchorLat": 35.637216,
+      "routeAnchorLng": 139.754668,
+      "routeMode": "loop",
+      "accessText": "芝浦ふ頭駅からコースまで約590m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 88,
+      "routeDistanceM": 3313,
+      "routeLat": 35.637216,
+      "routeLng": 139.754668,
+      "elevationM": 13.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 13230,
+        "section-2": 0,
+        "section-3": 4054,
+        "section-4": 4040,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/rainbow-bridge-odaiba-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "お台場海浜公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.629813,
+      "destinationLng": 139.778607,
+      "routeAnchorLat": 35.630037,
+      "routeAnchorLng": 139.776585,
+      "routeMode": "loop",
+      "accessText": "お台場海浜公園駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 211,
+      "routeDistanceM": 7367,
+      "routeLat": 35.630037,
+      "routeLng": 139.776585,
+      "elevationM": 13.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 9176,
+        "section-2": 12489,
+        "section-3": 0,
+        "section-4": 16529,
+        "section-5": 12489
+      },
+      "gpxHref": "/gpx/rainbow-bridge-odaiba-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.631974,
+      "anchorLng": 139.742992,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Sony Head Office, Minato-ku, Tokyo ( See where this picture was taken. ). Photo taken with a NIKON D80.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Sonyheadquartersnight.jpg/960px-Sonyheadquartersnight.jpg",
+        "alt": "レインボーブリッジ・お台場のスタート周辺付近",
+        "caption": "レインボーブリッジ・お台場の走路近隣で撮影された風景",
+        "credit": "Hiroyasu. N from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sonyheadquartersnight.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.631974,
+      "routeLng": 139.742992,
+      "elevationM": 21,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.637216,
+      "anchorLng": 139.754668,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: A \"KEEP OUT\" sign is standing here. I putted my camera on the sign and took 18 pictures. So sorry, theres are many blurred objects in this p",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg/960px-Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg",
+        "alt": "レインボーブリッジ・お台場の序盤区間付近",
+        "caption": "レインボーブリッジ・お台場の走路近隣で撮影された風景",
+        "credit": "heiwa4126",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg"
+      },
+      "routePointIndex": 88,
+      "routeDistanceM": 3313,
+      "routeLat": 35.637216,
+      "routeLng": 139.754668,
+      "elevationM": 13.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.630037,
+      "anchorLng": 139.776585,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Rainbow Bridge and Party Boats レインボーブリッジと屋形船",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rainbow_Bridge_and_Party_Boats_%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8%E3%81%A8%E5%B1%8B%E5%BD%A2%E8%88%B9_-_panoramio.jpg/960px-Rainbow_Bridge_and_Party_Boats_%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8%E3%81%A8%E5%B1%8B%E5%BD%A2%E8%88%B9_-_panoramio.jpg",
+        "alt": "レインボーブリッジ・お台場の中盤区間付近",
+        "caption": "レインボーブリッジ・お台場の走路近隣で撮影された風景",
+        "credit": "AMANO Jun-ichi",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rainbow_Bridge_and_Party_Boats_%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8%E3%81%A8%E5%B1%8B%E5%BD%A2%E8%88%B9_-_panoramio.jpg"
+      },
+      "routePointIndex": 211,
+      "routeDistanceM": 7367,
+      "routeLat": 35.630037,
+      "routeLng": 139.776585,
+      "elevationM": 13.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.629974,
+      "anchorLng": 139.776461,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: デックス東京ビーチ",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%BC%E3%83%81_-_panoramio.jpg/960px-%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%BC%E3%83%81_-_panoramio.jpg",
+        "alt": "レインボーブリッジ・お台場の後半区間付近",
+        "caption": "レインボーブリッジ・お台場の走路近隣で撮影された風景",
+        "credit": "hasano_jp",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%BC%E3%83%81_-_panoramio.jpg"
+      },
+      "routePointIndex": 210,
+      "routeDistanceM": 7353,
+      "routeLat": 35.629974,
+      "routeLng": 139.776461,
+      "elevationM": 13.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.637216,
+      "anchorLng": 139.754668,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: A \"KEEP OUT\" sign is standing here. I putted my camera on the sign and took 18 pictures. So sorry, theres are many blurred objects in this p",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg/960px-Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg",
+        "alt": "レインボーブリッジ・お台場の終盤区間付近",
+        "caption": "レインボーブリッジ・お台場の走路近隣で撮影された風景",
+        "credit": "heiwa4126",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Rainbow_Bridge_View_from_Shibaura_Side.jpg"
+      },
+      "routePointIndex": 88,
+      "routeDistanceM": 3313,
+      "routeLat": 35.637216,
+      "routeLng": 139.754668,
+      "elevationM": 13.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 16543,
+  "elevationGainM": 96,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 21
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 698,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 19.2
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 997,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 1296,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 1495,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 1595,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 1694,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 1794,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 1893,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 1993,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 2093,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 2192,
+      "elevationM": 16.5
+    },
+    {
+      "distanceM": 2292,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 2392,
+      "elevationM": 14.8
+    },
+    {
+      "distanceM": 2491,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 2591,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 2691,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2790,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 2890,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 2990,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 3089,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 3189,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 3289,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 3388,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 3488,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 3588,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 3687,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 3787,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 3887,
+      "elevationM": 12.5
+    },
+    {
+      "distanceM": 3986,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 4086,
+      "elevationM": 12.3
+    },
+    {
+      "distanceM": 4186,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 4285,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 4385,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 4485,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 4584,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 4684,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 4784,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 4883,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 4983,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 5083,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 5182,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 5282,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 5381,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 5481,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 5581,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 5680,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 5780,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 5880,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 5979,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 6079,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 6179,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 6278,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 6378,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 6478,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 6577,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 6677,
+      "elevationM": 12.7
+    },
+    {
+      "distanceM": 6777,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 6876,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 6976,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 7076,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 7175,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 7275,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 7375,
+      "elevationM": 13.1
+    },
+    {
+      "distanceM": 7474,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 7574,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 7674,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 7773,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 7873,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 7973,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 8072,
+      "elevationM": 7.9
+    },
+    {
+      "distanceM": 8172,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 8272,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 8371,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 8471,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 8571,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 8670,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 8770,
+      "elevationM": 14.8
+    },
+    {
+      "distanceM": 8869,
+      "elevationM": 13.9
+    },
+    {
+      "distanceM": 8969,
+      "elevationM": 24.8
+    },
+    {
+      "distanceM": 9069,
+      "elevationM": 24.2
+    },
+    {
+      "distanceM": 9168,
+      "elevationM": 18.5
+    },
+    {
+      "distanceM": 9268,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 9368,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 9467,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 9567,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 9667,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 9766,
+      "elevationM": 11.9
+    },
+    {
+      "distanceM": 9866,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 9966,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 10065,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 10165,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 10265,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 10364,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 10464,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 10564,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 10663,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 10763,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 10863,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 10962,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 11062,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 11162,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 11261,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 11361,
+      "elevationM": 10.7
+    },
+    {
+      "distanceM": 11461,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 11560,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 11660,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 11760,
+      "elevationM": 11.3
+    },
+    {
+      "distanceM": 11859,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 11959,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 12059,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 12158,
+      "elevationM": 11.9
+    },
+    {
+      "distanceM": 12258,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 12357,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 12457,
+      "elevationM": 12.4
+    },
+    {
+      "distanceM": 12557,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 12656,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 12756,
+      "elevationM": 12.9
+    },
+    {
+      "distanceM": 12856,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 12955,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 13055,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 13155,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 13254,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 13354,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 13454,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 13553,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 13653,
+      "elevationM": 14.3
+    },
+    {
+      "distanceM": 13753,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 13852,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 13952,
+      "elevationM": 14.7
+    },
+    {
+      "distanceM": 14052,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 14151,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 14251,
+      "elevationM": 15.2
+    },
+    {
+      "distanceM": 14351,
+      "elevationM": 16.5
+    },
+    {
+      "distanceM": 14450,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 14550,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 14650,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 14749,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 14849,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 14949,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 15048,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 15148,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 15248,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 15347,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 15447,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 15547,
+      "elevationM": 16.3
+    },
+    {
+      "distanceM": 15646,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 15746,
+      "elevationM": 19.2
+    },
+    {
+      "distanceM": 15845,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 15945,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 16045,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 16144,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 16244,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 16344,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 16443,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 16543,
+      "elevationM": 21.3
+    }
+  ]
+}

@@ -34,3 +34,12 @@ export function rotateElevationProfile(profile: ElevationSample[], startDistance
     { distanceM: totalDistanceM, elevationM: startElevation },
   ];
 }
+
+export function reverseElevationProfile(profile: ElevationSample[], totalDistanceM: number) {
+  return [...profile]
+    .map((sample) => ({
+      distanceM: Math.round(totalDistanceM - sample.distanceM),
+      elevationM: sample.elevationM,
+    }))
+    .sort((a, b) => a.distanceM - b.distanceM);
+}

@@ -1,0 +1,735 @@
+{
+  "slug": "inbanuma-loop",
+  "spot": {
+    "slug": "inbanuma-loop",
+    "name": "印旛沼ぐるりコース",
+    "prefecture": "千葉県",
+    "city": "印西市・佐倉市",
+    "access": "京成臼井駅・佐倉駅から徒歩またはバス。佐倉ふるさと広場周辺に駐車場があります。",
+    "course_type": "loop",
+    "distance_m": 16343,
+    "elevation_gain_m": 136,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 470,
+    "gpxDistanceM": 16343,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:13:44.350Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 35.740837,
+        "lng": 140.202163,
+        "ele": 4.25
+      },
+      "stations": [
+        {
+          "name": "京成臼井",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.180796,
+          "y": 35.730017,
+          "postal": "2850864",
+          "distance": "2280m",
+          "prev": "ユーカリが丘",
+          "next": "京成佐倉"
+        },
+        {
+          "name": "京成佐倉",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.229633,
+          "y": 35.725205,
+          "postal": "2850014",
+          "distance": "3030m",
+          "prev": "京成臼井",
+          "next": "大佐倉"
+        },
+        {
+          "name": "佐倉",
+          "prefecture": "千葉県",
+          "line": "JR成田線",
+          "x": 140.226722,
+          "y": 35.709743,
+          "postal": "2850812",
+          "distance": "4110m",
+          "prev": null,
+          "next": "酒々井"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Netherland Windmill (Sakura Furusato Square) - panoramio",
+          "description": "Netherland windmill at the Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Netherland_Windmill_%28Sakura_Furusato_Square%29_-_panoramio.jpg/960px-Netherland_Windmill_%28Sakura_Furusato_Square%29_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Netherland_Windmill_(Sakura_Furusato_Square)_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.73918,
+            "lng": 140.199913
+          }
+        },
+        {
+          "title": "Netherland Windmill (Sakura Furusato Square) - panoramio - jofutsu",
+          "description": "Netherland windmill at the Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Netherland_Windmill_%28Sakura_Furusato_Square%29_-_panoramio_-_jofutsu.jpg/960px-Netherland_Windmill_%28Sakura_Furusato_Square%29_-_panoramio_-_jofutsu.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Netherland_Windmill_(Sakura_Furusato_Square)_-_panoramio_-_jofutsu.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.741163,
+            "lng": 140.201895
+          }
+        },
+        {
+          "title": "MatricariaRecutita Chamomile MAY20160 Chiba Japan",
+          "description": "Chamomile (Matricaria recutita)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg/960px-MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.748043,
+            "lng": 140.211848
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場のチューリップ (Tulips Garden in Sakura) 14 Apr, 2013 - panoramio",
+          "description": "佐倉ふるさと広場のチューリップ (Tulips Garden in Sakura) 14 Apr, 2013",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%97_%28Tulips_Garden_in_Sakura%29_14_Apr%2C_2013_-_panoramio.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%97_%28Tulips_Garden_in_Sakura%29_14_Apr%2C_2013_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%97_(Tulips_Garden_in_Sakura)_14_Apr,_2013_-_panoramio.jpg",
+          "credit": "Hiroaki Kaneko",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.740558,
+            "lng": 140.202118
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 - panoramio",
+          "description": "Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio.jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.739834,
+            "lng": 140.200821
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 - panoramio (1)",
+          "description": "Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%281%29.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_(1).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.739826,
+            "lng": 140.201431
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 - panoramio (2)",
+          "description": "Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%282%29.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_(2).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.741428,
+            "lng": 140.198929
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 - panoramio (3)",
+          "description": "Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%283%29.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_(3).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.739723,
+            "lng": 140.201172
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 35.754877478373984,
+        "lng": 140.21699179225678,
+        "ele": 11.75
+      },
+      "stations": [
+        {
+          "name": "京成佐倉",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.229633,
+          "y": 35.725205,
+          "postal": "2850014",
+          "distance": "3500m",
+          "prev": "京成臼井",
+          "next": "大佐倉"
+        },
+        {
+          "name": "印旛日本医大",
+          "prefecture": "千葉県",
+          "line": "京成成田空港線",
+          "x": 140.203112,
+          "y": 35.787512,
+          "postal": "2701609",
+          "distance": "3840m",
+          "prev": "千葉ニュータウン中央",
+          "next": "成田湯川"
+        },
+        {
+          "name": "大佐倉",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.25079,
+          "y": 35.729908,
+          "postal": "2850041",
+          "distance": "4130m",
+          "prev": "京成佐倉",
+          "next": "京成酒々井"
+        }
+      ],
+      "photos": [
+        {
+          "title": "MatricariaRecutita Chamomile MAY20160 Chiba Japan",
+          "description": "Chamomile (Matricaria recutita)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg/960px-MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatricariaRecutita_Chamomile_MAY20160_Chiba_Japan.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.748043,
+            "lng": 140.211848
+          }
+        },
+        {
+          "title": "Chiba 20220515 113526",
+          "description": "The father carried his daughter on his shoulders for a better view.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Chiba_20220515_113526.jpg/960px-Chiba_20220515_113526.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_20220515_113526.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.747673,
+            "lng": 140.212118
+          }
+        },
+        {
+          "title": "Chiba 20220515 122345",
+          "description": "Recreational horse riding in Chiba Prefecture, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Chiba_20220515_122345.jpg/960px-Chiba_20220515_122345.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_20220515_122345.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.746783,
+            "lng": 140.212998
+          }
+        },
+        {
+          "title": "Chicks 20220515 122537",
+          "description": "Chicks in Chiba, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Chicks_20220515_122537.jpg/960px-Chicks_20220515_122537.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chicks_20220515_122537.jpg",
+          "credit": "Ka23 13",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.746783,
+            "lng": 140.212998
+          }
+        },
+        {
+          "title": "Uchigō Elementary School, Sakura 05",
+          "description": "佐倉市立内郷小学校",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Uchig%C5%8D_Elementary_School%2C_Sakura_05.jpg/960px-Uchig%C5%8D_Elementary_School%2C_Sakura_05.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uchig%C5%8D_Elementary_School,_Sakura_05.jpg",
+          "credit": "Higa4",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.737953,
+            "lng": 140.223861
+          }
+        },
+        {
+          "title": "Koide Yoshio Memorial Athletics Stadium 01",
+          "description": "小出義雄記念陸上競技場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Koide_Yoshio_Memorial_Athletics_Stadium_01.jpg/960px-Koide_Yoshio_Memorial_Athletics_Stadium_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koide_Yoshio_Memorial_Athletics_Stadium_01.jpg",
+          "credit": "Higa4",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.738206,
+            "lng": 140.223786
+          }
+        },
+        {
+          "title": "Koide Yoshio Memorial Athletics Stadium 02",
+          "description": "小出義雄記念陸上競技場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Koide_Yoshio_Memorial_Athletics_Stadium_02.jpg/960px-Koide_Yoshio_Memorial_Athletics_Stadium_02.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koide_Yoshio_Memorial_Athletics_Stadium_02.jpg",
+          "credit": "Higa4",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.738431,
+            "lng": 140.223786
+          }
+        },
+        {
+          "title": "Sports Museum (Sakura) 01",
+          "description": "スポーツ資料館（佐倉市）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sports_Museum_%28Sakura%29_01.jpg/960px-Sports_Museum_%28Sakura%29_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sports_Museum_(Sakura)_01.jpg",
+          "credit": "Higa4",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.739558,
+            "lng": 140.225219
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 35.77029472760826,
+        "lng": 140.21427825475467,
+        "ele": 2.5
+      },
+      "stations": [
+        {
+          "name": "印旛日本医大",
+          "prefecture": "千葉県",
+          "line": "京成成田空港線",
+          "x": 140.203112,
+          "y": 35.787512,
+          "postal": "2701609",
+          "distance": "2170m",
+          "prev": "千葉ニュータウン中央",
+          "next": "成田湯川"
+        },
+        {
+          "name": "京成佐倉",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.229633,
+          "y": 35.725205,
+          "postal": "2850014",
+          "distance": "5210m",
+          "prev": "京成臼井",
+          "next": "大佐倉"
+        },
+        {
+          "name": "京成臼井",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.180796,
+          "y": 35.730017,
+          "postal": "2850864",
+          "distance": "5410m",
+          "prev": "ユーカリが丘",
+          "next": "京成佐倉"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Hokuso-inba-nihon-idai-station",
+          "description": "The building of the Imba Nihon-Idai Station on the Hokusō Line in Imba village, Chiba prefecture, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Hokuso-inba-nihon-idai-station.jpg/960px-Hokuso-inba-nihon-idai-station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hokuso-inba-nihon-idai-station.jpg",
+          "credit": "LERK",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 35.787194,
+            "lng": 140.20361
+          }
+        },
+        {
+          "title": "Inba Nihon-idai Station & Apartment - panoramio",
+          "description": "Inba Nihon-idai Station & Apartment",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Inba_Nihon-idai_Station_%26_Apartment_-_panoramio.jpg/960px-Inba_Nihon-idai_Station_%26_Apartment_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inba_Nihon-idai_Station_%26_Apartment_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.786233,
+            "lng": 140.204572
+          }
+        },
+        {
+          "title": "緑に埋もれる建設予定地 - panoramio",
+          "description": "緑に埋もれる建設予定地",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg/960px-%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.777078,
+            "lng": 140.200722
+          }
+        },
+        {
+          "title": "大学の敷地 - panoramio",
+          "description": "大学の敷地",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg/960px-%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.776127,
+            "lng": 140.200228
+          }
+        },
+        {
+          "title": "イノシシ注意あじさい通り - panoramio",
+          "description": "イノシシ注意あじさい通り",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg/960px-%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.77861,
+            "lng": 140.20172
+          }
+        },
+        {
+          "title": "東京湾を股にかける - panoramio",
+          "description": "東京湾を股にかける",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg/960px-%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.779222,
+            "lng": 140.201963
+          }
+        },
+        {
+          "title": "印旛村への道 - panoramio",
+          "description": "印旛村への道",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg/960px-%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.774927,
+            "lng": 140.197883
+          }
+        },
+        {
+          "title": "ゴミすて禁止 - panoramio",
+          "description": "ゴミすて禁止",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg/960px-%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.772703,
+            "lng": 140.196995
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 35.771125222259876,
+        "lng": 140.1861322715323,
+        "ele": 30.75
+      },
+      "stations": [
+        {
+          "name": "印旛日本医大",
+          "prefecture": "千葉県",
+          "line": "北総鉄道",
+          "x": 140.203112,
+          "y": 35.787512,
+          "postal": "2701609",
+          "distance": "2380m",
+          "prev": "印西牧の原",
+          "next": null
+        },
+        {
+          "name": "印西牧の原",
+          "prefecture": "千葉県",
+          "line": "北総鉄道",
+          "x": 140.166911,
+          "y": 35.803608,
+          "postal": "2701337",
+          "distance": "4010m",
+          "prev": "千葉ニュータウン中央",
+          "next": "印旛日本医大"
+        },
+        {
+          "name": "京成臼井",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.180796,
+          "y": 35.730017,
+          "postal": "2850864",
+          "distance": "4600m",
+          "prev": "ユーカリが丘",
+          "next": "京成佐倉"
+        }
+      ],
+      "photos": [
+        {
+          "title": "緑に埋もれる建設予定地 - panoramio",
+          "description": "緑に埋もれる建設予定地",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg/960px-%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%B7%91%E3%81%AB%E5%9F%8B%E3%82%82%E3%82%8C%E3%82%8B%E5%BB%BA%E8%A8%AD%E4%BA%88%E5%AE%9A%E5%9C%B0_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.777078,
+            "lng": 140.200722
+          }
+        },
+        {
+          "title": "大学の敷地 - panoramio",
+          "description": "大学の敷地",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg/960px-%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%95%B7%E5%9C%B0_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.776127,
+            "lng": 140.200228
+          }
+        },
+        {
+          "title": "イノシシ注意あじさい通り - panoramio",
+          "description": "イノシシ注意あじさい通り",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg/960px-%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7%E6%B3%A8%E6%84%8F%E3%81%82%E3%81%98%E3%81%95%E3%81%84%E9%80%9A%E3%82%8A_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.77861,
+            "lng": 140.20172
+          }
+        },
+        {
+          "title": "東京湾を股にかける - panoramio",
+          "description": "東京湾を股にかける",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg/960px-%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E4%BA%AC%E6%B9%BE%E3%82%92%E8%82%A1%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.779222,
+            "lng": 140.201963
+          }
+        },
+        {
+          "title": "印旛村への道 - panoramio",
+          "description": "印旛村への道",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg/960px-%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.774927,
+            "lng": 140.197883
+          }
+        },
+        {
+          "title": "ゴミすて禁止 - panoramio",
+          "description": "ゴミすて禁止",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg/960px-%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%B4%E3%83%9F%E3%81%99%E3%81%A6%E7%A6%81%E6%AD%A2_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.772703,
+            "lng": 140.196995
+          }
+        },
+        {
+          "title": "印旛村への道 - panoramio (1)",
+          "description": "印旛村への道",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio_%281%29.jpg/960px-%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%B0%E6%97%9B%E6%9D%91%E3%81%B8%E3%81%AE%E9%81%93_-_panoramio_(1).jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.774927,
+            "lng": 140.197883
+          }
+        },
+        {
+          "title": "欠けた月讀大神 - panoramio",
+          "description": "欠けた月讀大神",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/%E6%AC%A0%E3%81%91%E3%81%9F%E6%9C%88%E8%AE%80%E5%A4%A7%E7%A5%9E_-_panoramio.jpg/960px-%E6%AC%A0%E3%81%91%E3%81%9F%E6%9C%88%E8%AE%80%E5%A4%A7%E7%A5%9E_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AC%A0%E3%81%91%E3%81%9F%E6%9C%88%E8%AE%80%E5%A4%A7%E7%A5%9E_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.77137,
+            "lng": 140.195683
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 35.751384573004074,
+        "lng": 140.1781353046056,
+        "ele": 2
+      },
+      "stations": [
+        {
+          "name": "京成臼井",
+          "prefecture": "千葉県",
+          "line": "京成本線",
+          "x": 140.180796,
+          "y": 35.730017,
+          "postal": "2850864",
+          "distance": "2390m",
+          "prev": "ユーカリが丘",
+          "next": "京成佐倉"
+        },
+        {
+          "name": "女子大",
+          "prefecture": "千葉県",
+          "line": "山万ユーカリが丘線",
+          "x": 140.155054,
+          "y": 35.738357,
+          "postal": "2850858",
+          "distance": "2540m",
+          "prev": "公園",
+          "next": "中学校"
+        },
+        {
+          "name": "中学校",
+          "prefecture": "千葉県",
+          "line": "山万ユーカリが丘線",
+          "x": 140.14841,
+          "y": 35.740123,
+          "postal": "2850852",
+          "distance": "2960m",
+          "prev": "女子大",
+          "next": "井野"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Inbanuma Marsh (Funato bridge) - panoramio",
+          "description": "Inbanuma Marsh (Funato bridge)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Inbanuma_Marsh_%28Funato_bridge%29_-_panoramio.jpg/960px-Inbanuma_Marsh_%28Funato_bridge%29_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inbanuma_Marsh_(Funato_bridge)_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.746667,
+            "lng": 140.179372
+          }
+        },
+        {
+          "title": "Inbanuma Marsh - panoramio",
+          "description": "Inbanuma Marsh",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Inbanuma_Marsh_-_panoramio.jpg/960px-Inbanuma_Marsh_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inbanuma_Marsh_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.746414,
+            "lng": 140.179346
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 - panoramio (2)",
+          "description": "Sakura Furusato Square",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%282%29.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_-_panoramio_(2).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.741428,
+            "lng": 140.198929
+          }
+        },
+        {
+          "title": "Pink flower in Inzai, Chiba; September 2016",
+          "description": "Pink flower in Inzai, Chiba.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pink_flower_in_Inzai%2C_Chiba%3B_September_2016.jpg/960px-Pink_flower_in_Inzai%2C_Chiba%3B_September_2016.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pink_flower_in_Inzai,_Chiba;_September_2016.jpg",
+          "credit": "t.kunikuni from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.753025,
+            "lng": 140.188025
+          }
+        },
+        {
+          "title": "佐倉ふるさと広場 01",
+          "description": "千葉県佐倉市、佐倉ふるさと広場、菜の花、風車",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_01.jpg/960px-%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%80%89%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%BA%83%E5%A0%B4_01.jpg",
+          "credit": "くろふね",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.741428,
+            "lng": 140.198929
+          }
+        },
+        {
+          "title": "R296-2021-210",
+          "description": "国道296号 佐倉市",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R296-2021-210.jpg/960px-R296-2021-210.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:R296-2021-210.jpg",
+          "credit": "Puchi-masashi",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.735124,
+            "lng": 140.18605
+          }
+        },
+        {
+          "title": "Senpuku-ji Temple (Inzai City, Chiba Prefecture) 01",
+          "description": "泉福寺山門（千葉県印西市）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Senpuku-ji_Temple_%28Inzai_City%2C_Chiba_Prefecture%29_01.jpg/960px-Senpuku-ji_Temple_%28Inzai_City%2C_Chiba_Prefecture%29_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Senpuku-ji_Temple_(Inzai_City,_Chiba_Prefecture)_01.jpg",
+          "credit": "小石川人晃",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.7635,
+            "lng": 140.169
+          }
+        },
+        {
+          "title": "Senpuku-ji Temple (Inzai City, Chiba Prefecture) 02",
+          "description": "泉福寺本堂（千葉県印西市）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Senpuku-ji_Temple_%28Inzai_City%2C_Chiba_Prefecture%29_02.jpg/960px-Senpuku-ji_Temple_%28Inzai_City%2C_Chiba_Prefecture%29_02.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Senpuku-ji_Temple_(Inzai_City,_Chiba_Prefecture)_02.jpg",
+          "credit": "小石川人晃",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.7638,
+            "lng": 140.1691
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

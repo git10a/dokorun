@@ -1,0 +1,754 @@
+{
+  "slug": "yashima-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "屋島西町から屋島の裾を反時計回りに一周する約13.6kmのロード周回。西海岸を北上して浦生の集落を過ぎ、最北端の長崎ノ鼻まで足を延ばして折り返し、北の鞍部を越えて東海岸へ。相引川沿いを回って戻る。信号がほとんどなく交通量も少なめで、北部の峠越えを中心に獲得標高約200mのアップダウンがある。途中から屋島北嶺への登山道に取り付くこともできる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: ことでん屋島駅・潟元駅から徒歩圏。周辺に入浴施設あり 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "潟元駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.341363,
+      "destinationLng": 134.098231,
+      "routeAnchorLat": 34.361817,
+      "routeAnchorLng": 134.09174,
+      "routeMode": "loop",
+      "accessText": "潟元駅からコースまで約2350m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.361817,
+      "routeLng": 134.09174,
+      "elevationM": 8.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2721,
+        "section-3": 5431,
+        "section-4": 8187,
+        "section-5": 10940
+      },
+      "gpxHref": "/gpx/yashima-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "八栗駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.344582,
+      "destinationLng": 134.122439,
+      "routeAnchorLat": 34.353865,
+      "routeAnchorLng": 134.114002,
+      "routeMode": "loop",
+      "accessText": "八栗駅からコースまで約1290m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 357,
+      "routeDistanceM": 8187,
+      "routeLat": 34.353865,
+      "routeLng": 134.114002,
+      "elevationM": 36.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 5457,
+        "section-2": 8178,
+        "section-3": 10888,
+        "section-4": 0,
+        "section-5": 2753
+      },
+      "gpxHref": "/gpx/yashima-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.361817,
+      "anchorLng": 134.09174,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 香川県高松市にある屋島山頂の展望台「獅子の霊巌」から眺める市内の夜景。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Takamatsu_night_view_from_Yashima.jpg/960px-Takamatsu_night_view_from_Yashima.jpg",
+        "alt": "屋島のスタート周辺付近",
+        "caption": "屋島の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takamatsu_night_view_from_Yashima.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.361817,
+      "routeLng": 134.09174,
+      "elevationM": 8.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.382371,
+      "anchorLng": 134.09281,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 香川県高松市にある屋島山頂の展望台「獅子の霊巌」から眺める市内の夜景。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Takamatsu_night_view_from_Yashima.jpg/960px-Takamatsu_night_view_from_Yashima.jpg",
+        "alt": "屋島の序盤区間付近",
+        "caption": "屋島の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takamatsu_night_view_from_Yashima.jpg"
+      },
+      "routePointIndex": 120,
+      "routeDistanceM": 2721,
+      "routeLat": 34.382371,
+      "routeLng": 134.09281,
+      "elevationM": 29.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.374731,
+      "anchorLng": 134.103984,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 香川県高松市にある屋島山頂の展望台「獅子の霊巌」から眺める市内の夜景。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Takamatsu_night_view_from_Yashima.jpg/960px-Takamatsu_night_view_from_Yashima.jpg",
+        "alt": "屋島の中盤区間付近",
+        "caption": "屋島の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takamatsu_night_view_from_Yashima.jpg"
+      },
+      "routePointIndex": 252,
+      "routeDistanceM": 5431,
+      "routeLat": 34.374731,
+      "routeLng": 134.103984,
+      "elevationM": 30,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.353865,
+      "anchorLng": 134.114002,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 香川県高松市屋島",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/%E9%A6%99%E5%B7%9D%E7%9C%8C%E9%AB%98%E6%9D%BE%E5%B8%82%E5%B1%8B%E5%B3%B6_-_panoramio.jpg/960px-%E9%A6%99%E5%B7%9D%E7%9C%8C%E9%AB%98%E6%9D%BE%E5%B8%82%E5%B1%8B%E5%B3%B6_-_panoramio.jpg",
+        "alt": "屋島の後半区間付近",
+        "caption": "屋島の走路近隣で撮影された風景",
+        "credit": "iPhone修理/カスタマイズパーツ販売…",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%A6%99%E5%B7%9D%E7%9C%8C%E9%AB%98%E6%9D%BE%E5%B8%82%E5%B1%8B%E5%B3%B6_-_panoramio.jpg"
+      },
+      "routePointIndex": 357,
+      "routeDistanceM": 8187,
+      "routeLat": 34.353865,
+      "routeLng": 134.114002,
+      "elevationM": 36.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.34306,
+      "anchorLng": 134.100813,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 香川県 三木町 及び 高松市 を流れる 新川 の高松市春日町新川橋付近。背景は 屋島 。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shinkawa_river%2C_Kagawa.jpg/960px-Shinkawa_river%2C_Kagawa.jpg",
+        "alt": "屋島の終盤区間付近",
+        "caption": "屋島の走路近隣で撮影された風景",
+        "credit": "ラハール",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinkawa_river,_Kagawa.jpg"
+      },
+      "routePointIndex": 505,
+      "routeDistanceM": 10940,
+      "routeLat": 34.34306,
+      "routeLng": 134.100813,
+      "elevationM": 4.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 13644,
+  "elevationGainM": 205,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 8.7
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 896,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 16.8
+    },
+    {
+      "distanceM": 1195,
+      "elevationM": 26
+    },
+    {
+      "distanceM": 1295,
+      "elevationM": 35.4
+    },
+    {
+      "distanceM": 1394,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 1494,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 1593,
+      "elevationM": 35.5
+    },
+    {
+      "distanceM": 1693,
+      "elevationM": 33.5
+    },
+    {
+      "distanceM": 1793,
+      "elevationM": 38.6
+    },
+    {
+      "distanceM": 1892,
+      "elevationM": 39.5
+    },
+    {
+      "distanceM": 1992,
+      "elevationM": 33.1
+    },
+    {
+      "distanceM": 2091,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 2191,
+      "elevationM": 41.3
+    },
+    {
+      "distanceM": 2291,
+      "elevationM": 41.7
+    },
+    {
+      "distanceM": 2390,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 2490,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 2589,
+      "elevationM": 38.3
+    },
+    {
+      "distanceM": 2689,
+      "elevationM": 27.6
+    },
+    {
+      "distanceM": 2789,
+      "elevationM": 33
+    },
+    {
+      "distanceM": 2888,
+      "elevationM": 28.2
+    },
+    {
+      "distanceM": 2988,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 3087,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 3187,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 3287,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 3386,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 3486,
+      "elevationM": 30.7
+    },
+    {
+      "distanceM": 3585,
+      "elevationM": 35.1
+    },
+    {
+      "distanceM": 3685,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 3784,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 3884,
+      "elevationM": 39.7
+    },
+    {
+      "distanceM": 3984,
+      "elevationM": 42.9
+    },
+    {
+      "distanceM": 4083,
+      "elevationM": 50.2
+    },
+    {
+      "distanceM": 4183,
+      "elevationM": 52.6
+    },
+    {
+      "distanceM": 4282,
+      "elevationM": 52
+    },
+    {
+      "distanceM": 4382,
+      "elevationM": 45.5
+    },
+    {
+      "distanceM": 4482,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 4581,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 4681,
+      "elevationM": 40.5
+    },
+    {
+      "distanceM": 4780,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 4880,
+      "elevationM": 40.1
+    },
+    {
+      "distanceM": 4980,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 5079,
+      "elevationM": 37
+    },
+    {
+      "distanceM": 5179,
+      "elevationM": 34.3
+    },
+    {
+      "distanceM": 5278,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 5378,
+      "elevationM": 31.4
+    },
+    {
+      "distanceM": 5478,
+      "elevationM": 28.7
+    },
+    {
+      "distanceM": 5577,
+      "elevationM": 26.1
+    },
+    {
+      "distanceM": 5677,
+      "elevationM": 23
+    },
+    {
+      "distanceM": 5776,
+      "elevationM": 26.8
+    },
+    {
+      "distanceM": 5876,
+      "elevationM": 26.4
+    },
+    {
+      "distanceM": 5976,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 6075,
+      "elevationM": 27.5
+    },
+    {
+      "distanceM": 6175,
+      "elevationM": 27.9
+    },
+    {
+      "distanceM": 6274,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 6374,
+      "elevationM": 27.7
+    },
+    {
+      "distanceM": 6473,
+      "elevationM": 28.9
+    },
+    {
+      "distanceM": 6573,
+      "elevationM": 27.7
+    },
+    {
+      "distanceM": 6673,
+      "elevationM": 30.2
+    },
+    {
+      "distanceM": 6772,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 6872,
+      "elevationM": 28.5
+    },
+    {
+      "distanceM": 6971,
+      "elevationM": 22.7
+    },
+    {
+      "distanceM": 7071,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 7171,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 7270,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 7370,
+      "elevationM": 17.2
+    },
+    {
+      "distanceM": 7469,
+      "elevationM": 24.5
+    },
+    {
+      "distanceM": 7569,
+      "elevationM": 32.1
+    },
+    {
+      "distanceM": 7669,
+      "elevationM": 39.2
+    },
+    {
+      "distanceM": 7768,
+      "elevationM": 37.3
+    },
+    {
+      "distanceM": 7868,
+      "elevationM": 37.5
+    },
+    {
+      "distanceM": 7967,
+      "elevationM": 35.9
+    },
+    {
+      "distanceM": 8067,
+      "elevationM": 36.7
+    },
+    {
+      "distanceM": 8167,
+      "elevationM": 39
+    },
+    {
+      "distanceM": 8266,
+      "elevationM": 37.7
+    },
+    {
+      "distanceM": 8366,
+      "elevationM": 30.6
+    },
+    {
+      "distanceM": 8465,
+      "elevationM": 30.4
+    },
+    {
+      "distanceM": 8565,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 8665,
+      "elevationM": 23.9
+    },
+    {
+      "distanceM": 8764,
+      "elevationM": 18
+    },
+    {
+      "distanceM": 8864,
+      "elevationM": 20.6
+    },
+    {
+      "distanceM": 8963,
+      "elevationM": 31.8
+    },
+    {
+      "distanceM": 9063,
+      "elevationM": 33.4
+    },
+    {
+      "distanceM": 9162,
+      "elevationM": 26.4
+    },
+    {
+      "distanceM": 9262,
+      "elevationM": 25.5
+    },
+    {
+      "distanceM": 9362,
+      "elevationM": 25.3
+    },
+    {
+      "distanceM": 9461,
+      "elevationM": 24.6
+    },
+    {
+      "distanceM": 9561,
+      "elevationM": 31.5
+    },
+    {
+      "distanceM": 9660,
+      "elevationM": 30.7
+    },
+    {
+      "distanceM": 9760,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 9860,
+      "elevationM": 19.4
+    },
+    {
+      "distanceM": 9959,
+      "elevationM": 16.2
+    },
+    {
+      "distanceM": 10059,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 10158,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 10258,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 10358,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 10457,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 10557,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 10656,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 10756,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 10856,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 10955,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 11055,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 11154,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 11254,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 11353,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 11453,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 11553,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 11652,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 11752,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 11851,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 11951,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 12051,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 12150,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 12250,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 12349,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 12449,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 12549,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 12648,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 12748,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 12847,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 12947,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 13047,
+      "elevationM": 12.3
+    },
+    {
+      "distanceM": 13146,
+      "elevationM": 10.1
+    },
+    {
+      "distanceM": 13246,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 13345,
+      "elevationM": 13.6
+    },
+    {
+      "distanceM": 13445,
+      "elevationM": 9.6
+    },
+    {
+      "distanceM": 13545,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 13644,
+      "elevationM": 8
+    }
+  ]
+}

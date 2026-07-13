@@ -1,0 +1,377 @@
+{
+  "slug": "toyosu-gururi-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "豊洲ふ頭の外周を囲む江東区立公園で、全長4.5kmの園路が整備されています。区公式も散歩やランニング利用を明記し、公園名を冠したマラソン大会も継続開催される湾岸ランの定番です。代表コースはレインボーブリッジや都心のビル群を望みながらふ頭外周をぐるりと巡る1周約4.8kmで、信号に止まらず海沿いの開放的な景色の中を走れます。路面は舗装中心でフラット、夜景ランにも人気があります。園内に公衆トイレと駐車場があり、ゆりかもめ市場前駅から徒歩圏とアクセスも良好です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "登録GPXの始点と終点が離れています",
+      "body": "周回表記ですが、現在の登録GPXは始点まで戻り切らない形です。ダウンロードしたGPXの終点から始点までの移動経路は、現地の通行案内を確認してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "GPXの使い方と注意点"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: ゆりかもめ 市場前駅から徒歩約4分。豊洲駅からも徒歩圏。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "豊洲駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.653792,
+      "destinationLng": 139.795414,
+      "routeAnchorLat": 35.653580000000005,
+      "routeAnchorLng": 139.79215000000002,
+      "routeMode": "forward",
+      "accessText": "豊洲駅からコースまで約300m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.653580000000005,
+      "routeLng": 139.79215000000002,
+      "elevationM": 6.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 978,
+        "section-3": 1902,
+        "section-4": 2850,
+        "section-5": 3835
+      },
+      "gpxHref": "/gpx/toyosu-gururi-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.653580000000005,
+      "anchorLng": 139.79215000000002,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: ユナイテッド・シネマ豊洲 （東京都江東区豊洲2-4-9）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/United_Cinemas_Toyosu_at_night_20111203.jpg/960px-United_Cinemas_Toyosu_at_night_20111203.jpg",
+        "alt": "豊洲ぐるり公園のスタート周辺付近",
+        "caption": "豊洲ぐるり公園の走路近隣で撮影された風景",
+        "credit": "Uploader; Vantey",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:United_Cinemas_Toyosu_at_night_20111203.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.653580000000005,
+      "routeLng": 139.79215000000002,
+      "elevationM": 6.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.64836697916567,
+      "anchorLng": 139.7850291158159,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 豊洲より",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/%E8%B1%8A%E6%B4%B2%E3%82%88%E3%82%8A_-_panoramio.jpg/960px-%E8%B1%8A%E6%B4%B2%E3%82%88%E3%82%8A_-_panoramio.jpg",
+        "alt": "豊洲ぐるり公園の序盤区間付近",
+        "caption": "豊洲ぐるり公園の走路近隣で撮影された風景",
+        "credit": "tinbotu",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%B1%8A%E6%B4%B2%E3%82%88%E3%82%8A_-_panoramio.jpg"
+      },
+      "routePointIndex": 21,
+      "routeDistanceM": 978,
+      "routeLat": 35.64836697916567,
+      "routeLng": 139.7850291158159,
+      "elevationM": 3.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.64305156906878,
+      "anchorLng": 139.77717532194316,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 晴海客船ターミナル 1階屋外通路 （東京都中央区晴海5-7-1）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Passage_of_Harumi_Ship_Terminal.jpg/960px-Passage_of_Harumi_Ship_Terminal.jpg",
+        "alt": "豊洲ぐるり公園の中盤区間付近",
+        "caption": "豊洲ぐるり公園の走路近隣で撮影された風景",
+        "credit": "Uploader; Vantey",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Passage_of_Harumi_Ship_Terminal.jpg"
+      },
+      "routePointIndex": 31,
+      "routeDistanceM": 1902,
+      "routeLat": 35.64305156906878,
+      "routeLng": 139.77717532194316,
+      "elevationM": 3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.640902007548455,
+      "anchorLng": 139.78286040783834,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: （2014年12月27日撮影）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Toyosu_market-1.JPG/960px-Toyosu_market-1.JPG",
+        "alt": "豊洲ぐるり公園の後半区間付近",
+        "caption": "豊洲ぐるり公園の走路近隣で撮影された風景",
+        "credit": "江戸村のとくぞう (Edomura no Tokuzo)",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyosu_market-1.JPG"
+      },
+      "routePointIndex": 45,
+      "routeDistanceM": 2850,
+      "routeLat": 35.640902007548455,
+      "routeLng": 139.78286040783834,
+      "elevationM": 3.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.64580825756951,
+      "anchorLng": 139.7919291578405,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 江東区 豊洲 、 首都高速10号晴海線 と 新交通ゆりかもめ との交差部分",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Shutoko_Route10%2C_Yurikamome_crossing.jpg/960px-Shutoko_Route10%2C_Yurikamome_crossing.jpg",
+        "alt": "豊洲ぐるり公園の終盤区間付近",
+        "caption": "豊洲ぐるり公園の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shutoko_Route10,_Yurikamome_crossing.jpg"
+      },
+      "routePointIndex": 55,
+      "routeDistanceM": 3835,
+      "routeLat": 35.64580825756951,
+      "routeLng": 139.7919291578405,
+      "elevationM": 3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 4778,
+  "elevationGainM": 4,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 597,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 796,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 896,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 995,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 1095,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 1194,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 1294,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 1393,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 1493,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 1593,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 1692,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 1792,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 1891,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 1991,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 2090,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 2190,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 2289,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 2389,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 2488,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 2588,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 2687,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 2787,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 2886,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 2986,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 3086,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 3185,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 3285,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 3384,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 3484,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 3583,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 3683,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 3782,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 3882,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 3981,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 4081,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 4180,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 4280,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 4379,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 4479,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 4579,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 4678,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 4778,
+      "elevationM": 5.9
+    }
+  ]
+}

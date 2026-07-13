@@ -1,0 +1,735 @@
+{
+  "slug": "yokote-park",
+  "spot": {
+    "slug": "yokote-park",
+    "name": "横手公園",
+    "prefecture": "秋田県",
+    "city": "横手市",
+    "access": "JR横手駅から徒歩すぐが起点。駅周辺にコインパーキングあり",
+    "course_type": "loop",
+    "distance_m": 5056,
+    "elevation_gain_m": 70,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 297,
+    "gpxDistanceM": 5056,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:23:32.035Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 39.310342,
+        "lng": 140.560839,
+        "ele": 67.75
+      },
+      "stations": [
+        {
+          "name": "横手",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.5604,
+          "y": 39.310146,
+          "postal": "0130036",
+          "distance": "40m",
+          "prev": "柳田",
+          "next": "後三年"
+        },
+        {
+          "name": "柳田",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.553856,
+          "y": 39.276385,
+          "postal": "0130054",
+          "distance": "3830m",
+          "prev": "醍醐",
+          "next": "横手"
+        },
+        {
+          "name": "相野々",
+          "prefecture": "秋田県",
+          "line": "JR北上線",
+          "x": 140.619067,
+          "y": 39.27805,
+          "postal": "0191108",
+          "distance": "6170m",
+          "prev": "小松川",
+          "next": "横手"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Hokuto Bank 062-Yokote ekimae branch",
+          "description": "北都銀行横手駅前支店",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hokuto_Bank_062-Yokote_ekimae_branch.jpg/960px-Hokuto_Bank_062-Yokote_ekimae_branch.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hokuto_Bank_062-Yokote_ekimae_branch.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310687,
+            "lng": 140.561357
+          }
+        },
+        {
+          "title": "Yokote Interchange Center 'Y2-Plaza'",
+          "description": "横手市交流センター「Y2（わいわい）ぷらざ」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yokote_Interchange_Center_%27Y2-Plaza%27.jpg/960px-Yokote_Interchange_Center_%27Y2-Plaza%27.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Interchange_Center_%27Y2-Plaza%27.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310747,
+            "lng": 140.561378
+          }
+        },
+        {
+          "title": "Mailbox in Yokote, Akita",
+          "description": "秋田県横手市の郵便ポスト。ポストの上にかまくらが乗せられている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mailbox_in_Yokote%2C_Akita.jpg/960px-Mailbox_in_Yokote%2C_Akita.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mailbox_in_Yokote,_Akita.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.31062,
+            "lng": 140.560682
+          }
+        },
+        {
+          "title": "Yokote Station gate",
+          "description": "横手駅改札",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Yokote_Station_gate.jpg/960px-Yokote_Station_gate.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Station_gate.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310162,
+            "lng": 140.560468
+          }
+        },
+        {
+          "title": "Yokote Station ticket office",
+          "description": "横手駅みどりの窓口",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Yokote_Station_ticket_office.jpg/960px-Yokote_Station_ticket_office.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Station_ticket_office.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.31018,
+            "lng": 140.560467
+          }
+        },
+        {
+          "title": "Yokote Police Station Yokote-ekimae Koban",
+          "description": "横手警察署横手駅前交番",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Yokote_Police_Station_Yokote-ekimae_Koban.jpg/960px-Yokote_Police_Station_Yokote-ekimae_Koban.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Police_Station_Yokote-ekimae_Koban.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310649,
+            "lng": 140.560824
+          }
+        },
+        {
+          "title": "Ugo-Kotsu-253",
+          "description": "羽後交通、秋田ふるさと村へのシャトルバスに使用される専用カラー車。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ugo-Kotsu-253.jpg/960px-Ugo-Kotsu-253.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ugo-Kotsu-253.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310585,
+            "lng": 140.56131
+          }
+        },
+        {
+          "title": "Yokote Station Hotel",
+          "description": "横手ステーションホテル",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Yokote_Station_Hotel.jpg/960px-Yokote_Station_Hotel.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Station_Hotel.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.310528,
+            "lng": 140.561467
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 39.31586631544209,
+        "lng": 140.56673166082044,
+        "ele": 66
+      },
+      "stations": [
+        {
+          "name": "横手",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.5604,
+          "y": 39.310146,
+          "postal": "0130036",
+          "distance": "840m",
+          "prev": "柳田",
+          "next": "後三年"
+        },
+        {
+          "name": "柳田",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.553856,
+          "y": 39.276385,
+          "postal": "0130054",
+          "distance": "4530m",
+          "prev": "醍醐",
+          "next": "横手"
+        },
+        {
+          "name": "後三年",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.538397,
+          "y": 39.364891,
+          "postal": "0191234",
+          "distance": "5980m",
+          "prev": "横手",
+          "next": "飯詰"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Zyanosaki-bashi",
+          "description": "Zyanosaki-bashi bridge, Akita prefecture ,Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Zyanosaki-bashi.JPG/960px-Zyanosaki-bashi.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zyanosaki-bashi.JPG",
+          "credit": "アラツク",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 39.317361,
+            "lng": 140.565
+          }
+        },
+        {
+          "title": "Yokote Municipal Yokote Library",
+          "description": "横手市立横手図書館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Yokote_Municipal_Yokote_Library.jpg/960px-Yokote_Municipal_Yokote_Library.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Yokote_Library.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Hokuto Bank 061-Yokote branch",
+          "description": "北都銀行横手支店",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Hokuto_Bank_061-Yokote_branch.jpg/960px-Hokuto_Bank_061-Yokote_branch.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hokuto_Bank_061-Yokote_branch.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Kamakara-kan hall",
+          "description": "横手市かまくら館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kamakara-kan_hall.jpg/960px-Kamakara-kan_hall.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamakara-kan_hall.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.313361,
+            "lng": 140.566062
+          }
+        },
+        {
+          "title": "Yokote Castle and Yokote River",
+          "description": "横手川と横手城模擬天守、蛇の崎橋より",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yokote_Castle_and_Yokote_River.jpg/960px-Yokote_Castle_and_Yokote_River.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_and_Yokote_River.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.317617,
+            "lng": 140.565427
+          }
+        },
+        {
+          "title": "Yokote Chamber of Commerce and Industry",
+          "description": "横手商工会議所",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Yokote_Chamber_of_Commerce_and_Industry.jpg/960px-Yokote_Chamber_of_Commerce_and_Industry.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Chamber_of_Commerce_and_Industry.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Monument of Kimimachi Bridge",
+          "description": "かまくら館の前にあるきみまち橋の遺構",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Monument_of_Kimimachi_Bridge.jpg/960px-Monument_of_Kimimachi_Bridge.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Kimimachi_Bridge.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.313672,
+            "lng": 140.56596
+          }
+        },
+        {
+          "title": "Yokote Castle mock keep tower 20130828",
+          "description": "蛇の崎橋から見上げた横手城",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Yokote_Castle_mock_keep_tower_20130828.jpg/960px-Yokote_Castle_mock_keep_tower_20130828.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_mock_keep_tower_20130828.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.317617,
+            "lng": 140.565427
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 39.31908442690135,
+        "lng": 140.57186146973348,
+        "ele": 85
+      },
+      "stations": [
+        {
+          "name": "横手",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.5604,
+          "y": 39.310146,
+          "postal": "0130036",
+          "distance": "1400m",
+          "prev": "柳田",
+          "next": "後三年"
+        },
+        {
+          "name": "柳田",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.553856,
+          "y": 39.276385,
+          "postal": "0130054",
+          "distance": "5000m",
+          "prev": "醍醐",
+          "next": "横手"
+        },
+        {
+          "name": "後三年",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.538397,
+          "y": 39.364891,
+          "postal": "0191234",
+          "distance": "5860m",
+          "prev": "横手",
+          "next": "飯詰"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Yokote Municipal Hospital",
+          "description": "横手市立横手病院",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Yokote_Municipal_Hospital.jpg/960px-Yokote_Municipal_Hospital.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Hospital.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.318062,
+            "lng": 140.568943
+          }
+        },
+        {
+          "title": "Akita-jinja in Yokote Castle Honmaru ruins 20130816",
+          "description": "横手城本丸内、秋田神社",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg/960px-Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akita-jinja_in_Yokote_Castle_Honmaru_ruins_20130816.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.319982,
+            "lng": 140.57027
+          }
+        },
+        {
+          "title": "Graves of Honda Masazumi and Honda Masakatsu",
+          "description": "本多正純 とその子本多正勝の墓。本多正純は宇都宮吊天井事件の後の改易の後、配流先の出羽国横手で生涯を終えた。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Graves_of_Honda_Masazumi_and_Honda_Masakatsu.jpg/960px-Graves_of_Honda_Masazumi_and_Honda_Masakatsu.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Graves_of_Honda_Masazumi_and_Honda_Masakatsu.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.318755,
+            "lng": 140.574038
+          }
+        },
+        {
+          "title": "Monument of Honda Masazumi",
+          "description": "本多正純 とその子本多正勝の石碑。本多正純は宇都宮吊天井事件の後の改易の後、配流先の出羽国横手で生涯を終えた。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Monument_of_Honda_Masazumi.jpg/960px-Monument_of_Honda_Masazumi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Honda_Masazumi.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.318755,
+            "lng": 140.574038
+          }
+        },
+        {
+          "title": "Nisshin-kan in Yokote",
+          "description": "旧日新館。旧横手中学に赴任した英語教師チャールス・チャンプリンの住居として1902年に建てられたもので、後の1914年同校に赴任した別の英語教師、マルチン・M・スマイザーが1955年にその生涯を閉じるまで暮らした。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Nisshin-kan_in_Yokote.jpg/960px-Nisshin-kan_in_Yokote.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nisshin-kan_in_Yokote.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.318178,
+            "lng": 140.572122
+          }
+        },
+        {
+          "title": "Ushinuma pond and Horai bridge in Yokote Park",
+          "description": "横手公園内の牛沼と蓬莱橋",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ushinuma_pond_and_Horai_bridge_in_Yokote_Park.jpg/960px-Ushinuma_pond_and_Horai_bridge_in_Yokote_Park.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ushinuma_pond_and_Horai_bridge_in_Yokote_Park.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.320262,
+            "lng": 140.571645
+          }
+        },
+        {
+          "title": "View from Yokote Castle 20130816",
+          "description": "横手城から見た眺め",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/View_from_Yokote_Castle_20130816.jpg/960px-View_from_Yokote_Castle_20130816.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_Yokote_Castle_20130816.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.319982,
+            "lng": 140.57027
+          }
+        },
+        {
+          "title": "Yokote Castle mock keep tower 20130816-1",
+          "description": "横手城模擬天守。内部は郷土資料館となっている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Yokote_Castle_mock_keep_tower_20130816-1.jpg/960px-Yokote_Castle_mock_keep_tower_20130816-1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_mock_keep_tower_20130816-1.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.320353,
+            "lng": 140.569493
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 39.321920180478614,
+        "lng": 140.56934555440296,
+        "ele": 99
+      },
+      "stations": [
+        {
+          "name": "横手",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.5604,
+          "y": 39.310146,
+          "postal": "0130036",
+          "distance": "1520m",
+          "prev": "柳田",
+          "next": "後三年"
+        },
+        {
+          "name": "柳田",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.553856,
+          "y": 39.276385,
+          "postal": "0130054",
+          "distance": "5240m",
+          "prev": "醍醐",
+          "next": "横手"
+        },
+        {
+          "name": "後三年",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.538397,
+          "y": 39.364891,
+          "postal": "0191234",
+          "distance": "5480m",
+          "prev": "横手",
+          "next": "飯詰"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Akita Prefectural Yokote-Jonan High school",
+          "description": "秋田県立横手城南高等学校",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Akita_Prefectural_Yokote-Jonan_High_school.jpg/960px-Akita_Prefectural_Yokote-Jonan_High_school.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akita_Prefectural_Yokote-Jonan_High_school.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.321553,
+            "lng": 140.567107
+          }
+        },
+        {
+          "title": "Domajin Yokote",
+          "description": "和風レストラン「土間人」横手店",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Domajin_Yokote.jpg/960px-Domajin_Yokote.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Domajin_Yokote.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.321553,
+            "lng": 140.567107
+          }
+        },
+        {
+          "title": "Memorial of Boshin War in Yokote Castle",
+          "description": "横手場内にある、戊辰戦争の石碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Memorial_of_Boshin_War_in_Yokote_Castle.jpg/960px-Memorial_of_Boshin_War_in_Yokote_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memorial_of_Boshin_War_in_Yokote_Castle.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.321377,
+            "lng": 140.569305
+          }
+        },
+        {
+          "title": "Monument of Asari Yuukichi",
+          "description": "浅利勇吉記念碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Monument_of_Asari_Yuukichi.jpg/960px-Monument_of_Asari_Yuukichi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Asari_Yuukichi.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.323458,
+            "lng": 140.570792
+          }
+        },
+        {
+          "title": "Monument of honor of Onodera Family",
+          "description": "江戸時代以前に横手地方を領していた小野寺氏の彰德碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Monument_of_honor_of_Onodera_Family.jpg/960px-Monument_of_honor_of_Onodera_Family.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_honor_of_Onodera_Family.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.32118,
+            "lng": 140.569513
+          }
+        },
+        {
+          "title": "Monument of Yamashita Kyusuke",
+          "description": "山下九助翁之碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Monument_of_Yamashita_Kyusuke.jpg/960px-Monument_of_Yamashita_Kyusuke.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Yamashita_Kyusuke.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.321377,
+            "lng": 140.569305
+          }
+        },
+        {
+          "title": "Monument of Ito Gennosuke",
+          "description": "伊藤源之助頌德碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Monument_of_Ito_Gennosuke.jpg/960px-Monument_of_Ito_Gennosuke.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Ito_Gennosuke.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.321255,
+            "lng": 140.569202
+          }
+        },
+        {
+          "title": "Yokote Castle mock keep tower 20130816-1",
+          "description": "横手城模擬天守。内部は郷土資料館となっている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Yokote_Castle_mock_keep_tower_20130816-1.jpg/960px-Yokote_Castle_mock_keep_tower_20130816-1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_mock_keep_tower_20130816-1.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.320353,
+            "lng": 140.569493
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 39.31650597164489,
+        "lng": 140.56585007856455,
+        "ele": 65
+      },
+      "stations": [
+        {
+          "name": "横手",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.5604,
+          "y": 39.310146,
+          "postal": "0130036",
+          "distance": "850m",
+          "prev": "柳田",
+          "next": "後三年"
+        },
+        {
+          "name": "柳田",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.553856,
+          "y": 39.276385,
+          "postal": "0130054",
+          "distance": "4580m",
+          "prev": "醍醐",
+          "next": "横手"
+        },
+        {
+          "name": "後三年",
+          "prefecture": "秋田県",
+          "line": "JR奥羽本線",
+          "x": 140.538397,
+          "y": 39.364891,
+          "postal": "0191234",
+          "distance": "5880m",
+          "prev": "横手",
+          "next": "飯詰"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Zyanosaki-bashi",
+          "description": "Zyanosaki-bashi bridge, Akita prefecture ,Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Zyanosaki-bashi.JPG/960px-Zyanosaki-bashi.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zyanosaki-bashi.JPG",
+          "credit": "アラツク",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 39.317361,
+            "lng": 140.565
+          }
+        },
+        {
+          "title": "Yokote Municipal Yokote Library",
+          "description": "横手市立横手図書館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Yokote_Municipal_Yokote_Library.jpg/960px-Yokote_Municipal_Yokote_Library.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Yokote_Library.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Hokuto Bank 061-Yokote branch",
+          "description": "北都銀行横手支店",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Hokuto_Bank_061-Yokote_branch.jpg/960px-Hokuto_Bank_061-Yokote_branch.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hokuto_Bank_061-Yokote_branch.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Yokote Municipal Hospital",
+          "description": "横手市立横手病院",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Yokote_Municipal_Hospital.jpg/960px-Yokote_Municipal_Hospital.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Municipal_Hospital.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.318062,
+            "lng": 140.568943
+          }
+        },
+        {
+          "title": "Yokote Castle and Yokote River",
+          "description": "横手川と横手城模擬天守、蛇の崎橋より",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yokote_Castle_and_Yokote_River.jpg/960px-Yokote_Castle_and_Yokote_River.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_and_Yokote_River.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.317617,
+            "lng": 140.565427
+          }
+        },
+        {
+          "title": "Yokote Chamber of Commerce and Industry",
+          "description": "横手商工会議所",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Yokote_Chamber_of_Commerce_and_Industry.jpg/960px-Yokote_Chamber_of_Commerce_and_Industry.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Chamber_of_Commerce_and_Industry.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.314357,
+            "lng": 140.5675
+          }
+        },
+        {
+          "title": "Monument of Kimimachi Bridge",
+          "description": "かまくら館の前にあるきみまち橋の遺構",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Monument_of_Kimimachi_Bridge.jpg/960px-Monument_of_Kimimachi_Bridge.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_Kimimachi_Bridge.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.313672,
+            "lng": 140.56596
+          }
+        },
+        {
+          "title": "Yokote Castle mock keep tower 20130828",
+          "description": "蛇の崎橋から見上げた横手城",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Yokote_Castle_mock_keep_tower_20130828.jpg/960px-Yokote_Castle_mock_keep_tower_20130828.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokote_Castle_mock_keep_tower_20130828.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 39.317617,
+            "lng": 140.565427
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

@@ -1,0 +1,646 @@
+{
+  "slug": "okushizu-long",
+  "spot": {
+    "slug": "okushizu-long",
+    "name": "奥静ロングコース",
+    "prefecture": "静岡県",
+    "city": "静岡市",
+    "access": "スタートはJR静岡駅。ゴールの梅ヶ島温泉から静岡駅行きのバスがあります。",
+    "course_type": "one_way",
+    "distance_m": 48543,
+    "elevation_gain_m": 2538,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 1735,
+    "gpxDistanceM": 48543,
+    "distanceDifferencePct": 0,
+    "closureGapM": 35069,
+    "hasGpxElevation": true,
+    "detectedCourseType": "out_and_back",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:18:40.638Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki",
+    "photoSearch": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 34.97174,
+        "lng": 138.389101,
+        "ele": 26.75
+      },
+      "stations": [
+        {
+          "name": "静岡",
+          "prefecture": "静岡県",
+          "line": "JR東海道本線",
+          "x": 138.388579,
+          "y": 34.971629,
+          "postal": "4200851",
+          "distance": "50m",
+          "prev": "東静岡",
+          "next": "安倍川"
+        },
+        {
+          "name": "新静岡",
+          "prefecture": "静岡県",
+          "line": "静岡鉄道静岡清水線",
+          "x": 138.387423,
+          "y": 34.975823,
+          "postal": "4200839",
+          "distance": "480m",
+          "prev": null,
+          "next": "日吉町"
+        },
+        {
+          "name": "日吉町",
+          "prefecture": "静岡県",
+          "line": "静岡鉄道静岡清水線",
+          "x": 138.391114,
+          "y": 34.977017,
+          "postal": "4200839",
+          "distance": "620m",
+          "prev": "新静岡",
+          "next": "音羽町"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Electronic signage of Shizuoka Station (local lines)",
+          "description": "静岡駅(在来線)の発車標",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Electronic_signage_of_Shizuoka_Station_%28local_lines%29.JPG/960px-Electronic_signage_of_Shizuoka_Station_%28local_lines%29.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Electronic_signage_of_Shizuoka_Station_(local_lines).JPG",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.971744,
+            "lng": 138.389253
+          }
+        },
+        {
+          "title": "Platform of Shizuoka Station and train bounding for Hamamatsu Station",
+          "description": "静岡駅のホームと浜松行き普通列車",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Platform_of_Shizuoka_Station_and_train_bounding_for_Hamamatsu_Station.jpg/960px-Platform_of_Shizuoka_Station_and_train_bounding_for_Hamamatsu_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Platform_of_Shizuoka_Station_and_train_bounding_for_Hamamatsu_Station.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.971672,
+            "lng": 138.388656
+          }
+        },
+        {
+          "title": "Ticket machines of Shizuoka Station (local lines)",
+          "description": "静岡駅の自動券売機",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ticket_machines_of_Shizuoka_Station_%28local_lines%29.JPG/960px-Ticket_machines_of_Shizuoka_Station_%28local_lines%29.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ticket_machines_of_Shizuoka_Station_(local_lines).JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.971725,
+            "lng": 138.389175
+          }
+        },
+        {
+          "title": "Platform of Shizuoka Station and train bounding for Atami Station",
+          "description": "静岡駅のホームと熱海行き普通列車",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Platform_of_Shizuoka_Station_and_train_bounding_for_Atami_Station.jpg/960px-Platform_of_Shizuoka_Station_and_train_bounding_for_Atami_Station.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Platform_of_Shizuoka_Station_and_train_bounding_for_Atami_Station.jpg",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.972114,
+            "lng": 138.389419
+          }
+        },
+        {
+          "title": "Platform of Shizuoka Station and train of Tokaido Shinkansen",
+          "description": "静岡駅のホームと東海道新幹線の列車",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Platform_of_Shizuoka_Station_and_train_of_Tokaido_Shinkansen.JPG/960px-Platform_of_Shizuoka_Station_and_train_of_Tokaido_Shinkansen.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Platform_of_Shizuoka_Station_and_train_of_Tokaido_Shinkansen.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.971786,
+            "lng": 138.389283
+          }
+        },
+        {
+          "title": "Train of Tokaido Shinkansen from platform of Shizuoka Station at night",
+          "description": "夜の静岡駅を通過する東海道新幹線の列車",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Train_of_Tokaido_Shinkansen_from_platform_of_Shizuoka_Station_at_night.JPG/960px-Train_of_Tokaido_Shinkansen_from_platform_of_Shizuoka_Station_at_night.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Train_of_Tokaido_Shinkansen_from_platform_of_Shizuoka_Station_at_night.JPG",
+          "credit": "そらみみ (Soramimi)",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 34.971547,
+            "lng": 138.389497
+          }
+        },
+        {
+          "title": "静岡駅 - panoramio",
+          "description": "静岡駅",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%E9%9D%99%E5%B2%A1%E9%A7%85_-_panoramio.jpg/960px-%E9%9D%99%E5%B2%A1%E9%A7%85_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%99%E5%B2%A1%E9%A7%85_-_panoramio.jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 34.971285,
+            "lng": 138.389137
+          }
+        },
+        {
+          "title": "電話 2014 (15088513985)",
+          "description": "IMG_9981",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/%E9%9B%BB%E8%A9%B1_2014_%2815088513985%29.jpg/960px-%E9%9B%BB%E8%A9%B1_2014_%2815088513985%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9B%BB%E8%A9%B1_2014_(15088513985).jpg",
+          "credit": "oddstranger from Tokyo, Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 34.971292,
+            "lng": 138.388855
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "point": {
+        "lat": 35.06816314922056,
+        "lng": 138.3699329151239,
+        "ele": 104.25
+      },
+      "stations": [
+        {
+          "name": "古庄",
+          "prefecture": "静岡県",
+          "line": "静岡鉄道静岡清水線",
+          "x": 138.419581,
+          "y": 34.992855,
+          "postal": "4200812",
+          "distance": "9530m",
+          "prev": "長沼",
+          "next": "県総合運動場"
+        },
+        {
+          "name": "長沼",
+          "prefecture": "静岡県",
+          "line": "静岡鉄道静岡清水線",
+          "x": 138.412884,
+          "y": 34.989069,
+          "postal": "4200813",
+          "distance": "9640m",
+          "prev": "柚木",
+          "next": "古庄"
+        },
+        {
+          "name": "草薙",
+          "prefecture": "静岡県",
+          "line": "JR東海道本線",
+          "x": 138.442025,
+          "y": 35.002854,
+          "postal": "4240888",
+          "distance": "9800m",
+          "prev": "清水",
+          "next": "東静岡"
+        }
+      ],
+      "photos": [
+        {
+          "title": "2015 Comic Exhibition, Great Sunway Enterprise 20150811",
+          "description": "Great Sunway Enterprise booth at 2015 Comic Exhibition. Great Sunway Enterprise is the official distributor in Taiwan of Aoshima Bunka Kyozai and Good Smile Company.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2015_Comic_Exhibition%2C_Great_Sunway_Enterprise_20150811.jpg/960px-2015_Comic_Exhibition%2C_Great_Sunway_Enterprise_20150811.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Comic_Exhibition,_Great_Sunway_Enterprise_20150811.jpg",
+          "credit": "玄史生",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.017372,
+            "lng": 138.407465
+          }
+        },
+        {
+          "title": "静清バイパス 昭府IC前 - panoramio",
+          "description": "静清バイパス 昭府IC前",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E6%98%AD%E5%BA%9CIC%E5%89%8D_-_panoramio.jpg/960px-%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E6%98%AD%E5%BA%9CIC%E5%89%8D_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E6%98%AD%E5%BA%9CIC%E5%89%8D_-_panoramio.jpg",
+          "credit": "浅野ます道",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.00158,
+            "lng": 138.372588
+          }
+        },
+        {
+          "title": "静清バイパス 千代田上土I.C - panoramio",
+          "description": "静清バイパス 千代田上土I.C",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%8D%83%E4%BB%A3%E7%94%B0%E4%B8%8A%E5%9C%9FI.C_-_panoramio.jpg/960px-%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%8D%83%E4%BB%A3%E7%94%B0%E4%B8%8A%E5%9C%9FI.C_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%8D%83%E4%BB%A3%E7%94%B0%E4%B8%8A%E5%9C%9FI.C_-_panoramio.jpg",
+          "credit": "浅野ます道",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.007494,
+            "lng": 138.406792
+          }
+        },
+        {
+          "title": "静清バイパス 唐瀬I.C - panoramio",
+          "description": "静清バイパス 唐瀬I.C",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%94%90%E7%80%ACI.C_-_panoramio.jpg/960px-%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%94%90%E7%80%ACI.C_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E5%94%90%E7%80%ACI.C_-_panoramio.jpg",
+          "credit": "浅野ます道",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.007028,
+            "lng": 138.394035
+          }
+        },
+        {
+          "title": "静清バイパス 賎機山トンネル - panoramio",
+          "description": "静清バイパス 賎機山トンネル",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E8%B3%8E%E6%A9%9F%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg/960px-%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E8%B3%8E%E6%A9%9F%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%99%E6%B8%85%E3%83%90%E3%82%A4%E3%83%91%E3%82%B9_%E8%B3%8E%E6%A9%9F%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg",
+          "credit": "浅野ます道",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.003012,
+            "lng": 138.37916
+          }
+        },
+        {
+          "title": "鯨ヶ池 - panoramio",
+          "description": "鯨ヶ池",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%E9%AF%A8%E3%83%B6%E6%B1%A0_-_panoramio.jpg/960px-%E9%AF%A8%E3%83%B6%E6%B1%A0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%AF%A8%E3%83%B6%E6%B1%A0_-_panoramio.jpg",
+          "credit": "浅野ます道",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.041926,
+            "lng": 138.386536
+          }
+        },
+        {
+          "title": "Shimo, Aoi Ward, Shizuoka, Shizuoka Prefecture 421-2108, Japan - panoramio",
+          "description": "Shimo, Aoi Ward, Shizuoka, Shizuoka Prefecture 421-2108, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Shimo%2C_Aoi_Ward%2C_Shizuoka%2C_Shizuoka_Prefecture_421-2108%2C_Japan_-_panoramio.jpg/960px-Shimo%2C_Aoi_Ward%2C_Shizuoka%2C_Shizuoka_Prefecture_421-2108%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shimo,_Aoi_Ward,_Shizuoka,_Shizuoka_Prefecture_421-2108,_Japan_-_panoramio.jpg",
+          "credit": "sazideten",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.031382,
+            "lng": 138.377167
+          }
+        },
+        {
+          "title": "Shimo, Aoi Ward, Shizuoka, Shizuoka Prefecture 421-2108, Japan - panoramio (1)",
+          "description": "Shimo, Aoi Ward, Shizuoka, Shizuoka Prefecture 421-2108, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Shimo%2C_Aoi_Ward%2C_Shizuoka%2C_Shizuoka_Prefecture_421-2108%2C_Japan_-_panoramio_%281%29.jpg/960px-Shimo%2C_Aoi_Ward%2C_Shizuoka%2C_Shizuoka_Prefecture_421-2108%2C_Japan_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shimo,_Aoi_Ward,_Shizuoka,_Shizuoka_Prefecture_421-2108,_Japan_-_panoramio_(1).jpg",
+          "credit": "sazideten",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.031584,
+            "lng": 138.37813
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "point": {
+        "lat": 35.142748292685525,
+        "lng": 138.33612255939929,
+        "ele": 372
+      },
+      "stations": [],
+      "photos": [
+        {
+          "title": "自販機 購入 2010 (4826585216)",
+          "description": "Cigarette - just one?",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_%284826585216%29.jpg/960px-%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_%284826585216%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_(4826585216).jpg",
+          "credit": "Gwydion M. Williams",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.191766,
+            "lng": 138.361816
+          }
+        },
+        {
+          "title": "安倍川 - panoramio - Yobito KAYANUMA (1)",
+          "description": "安倍川",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg/960px-%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_(1).jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.197783,
+            "lng": 138.361733
+          }
+        },
+        {
+          "title": "堰堤 - panoramio",
+          "description": "堰堤",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/%E5%A0%B0%E5%A0%A4_-_panoramio.jpg/960px-%E5%A0%B0%E5%A0%A4_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A0%B0%E5%A0%A4_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.217777,
+            "lng": 138.350403
+          }
+        },
+        {
+          "title": "県道29号線 下渡バス停 - panoramio",
+          "description": "県道29号線 下渡バス停",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E4%B8%8B%E6%B8%A1%E3%83%90%E3%82%B9%E5%81%9C_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E4%B8%8B%E6%B8%A1%E3%83%90%E3%82%B9%E5%81%9C_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E4%B8%8B%E6%B8%A1%E3%83%90%E3%82%B9%E5%81%9C_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.183937,
+            "lng": 138.362594
+          }
+        },
+        {
+          "title": "県道29号線 静岡市葵区渡 - panoramio",
+          "description": "県道29号線 静岡市葵区渡",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%9D%99%E5%B2%A1%E5%B8%82%E8%91%B5%E5%8C%BA%E6%B8%A1_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%9D%99%E5%B2%A1%E5%B8%82%E8%91%B5%E5%8C%BA%E6%B8%A1_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%9D%99%E5%B2%A1%E5%B8%82%E8%91%B5%E5%8C%BA%E6%B8%A1_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.186414,
+            "lng": 138.361478
+          }
+        },
+        {
+          "title": "たこ焼 2010 (4824652426)",
+          "description": "Fast food",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%E3%81%9F%E3%81%93%E7%84%BC_2010_%284824652426%29.jpg/960px-%E3%81%9F%E3%81%93%E7%84%BC_2010_%284824652426%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%9F%E3%81%93%E7%84%BC_2010_(4824652426).jpg",
+          "credit": "Gwydion M. Williams from Coventry, Great Britain",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.191766,
+            "lng": 138.361816
+          }
+        },
+        {
+          "title": "ほうじ茶 緑茶 (4879330244)",
+          "description": "We stayed at a hotel in a little town on a steep slope",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/%E3%81%BB%E3%81%86%E3%81%98%E8%8C%B6_%E7%B7%91%E8%8C%B6_%284879330244%29.jpg/960px-%E3%81%BB%E3%81%86%E3%81%98%E8%8C%B6_%E7%B7%91%E8%8C%B6_%284879330244%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%BB%E3%81%86%E3%81%98%E8%8C%B6_%E7%B7%91%E8%8C%B6_(4879330244).jpg",
+          "credit": "Gwydion M. Williams from Coventry, Great Britain",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.191766,
+            "lng": 138.361816
+          }
+        },
+        {
+          "title": "日韓交流 新時代 (4847136854)",
+          "description": "Rest Free",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/%E6%97%A5%E9%9F%93%E4%BA%A4%E6%B5%81_%E6%96%B0%E6%99%82%E4%BB%A3_%284847136854%29.jpg/960px-%E6%97%A5%E9%9F%93%E4%BA%A4%E6%B5%81_%E6%96%B0%E6%99%82%E4%BB%A3_%284847136854%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E9%9F%93%E4%BA%A4%E6%B5%81_%E6%96%B0%E6%99%82%E4%BB%A3_(4847136854).jpg",
+          "credit": "Gwydion M. Williams from Coventry, Great Britain",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.191766,
+            "lng": 138.361816
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "point": {
+        "lat": 35.20699584726228,
+        "lng": 138.3172761121785,
+        "ele": 758.25
+      },
+      "stations": [
+        {
+          "name": "井川",
+          "prefecture": "静岡県",
+          "line": "大井川鉄道井川線",
+          "x": 138.221111,
+          "y": 35.212242,
+          "postal": "4280504",
+          "distance": "8770m",
+          "prev": "閑蔵",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "自販機 購入 2010 (4826585216)",
+          "description": "Cigarette - just one?",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_%284826585216%29.jpg/960px-%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_%284826585216%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%87%AA%E8%B2%A9%E6%A9%9F_%E8%B3%BC%E5%85%A5_2010_(4826585216).jpg",
+          "credit": "Gwydion M. Williams",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.191766,
+            "lng": 138.361816
+          }
+        },
+        {
+          "title": "県道29号線 - panoramio - Yobito KAYANUMA (1)",
+          "description": "県道29号線",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio_-_Yobito_KAYANUMA_(1).jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.2514,
+            "lng": 138.3394
+          }
+        },
+        {
+          "title": "梅ケ島大橋 - panoramio",
+          "description": "梅ケ島大橋",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/%E6%A2%85%E3%82%B1%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg/960px-%E6%A2%85%E3%82%B1%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%A2%85%E3%82%B1%E5%B3%B6%E5%A4%A7%E6%A9%8B_-_panoramio.jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.236883,
+            "lng": 138.34215
+          }
+        },
+        {
+          "title": "安倍川 - panoramio - Yobito KAYANUMA",
+          "description": "Abe River and Mount Jumai. Looking ENE.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA.jpg/960px-%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA.jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.236217,
+            "lng": 138.34235
+          }
+        },
+        {
+          "title": "安倍川 - panoramio - Yobito KAYANUMA (1)",
+          "description": "安倍川",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg/960px-%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E5%B7%9D_-_panoramio_-_Yobito_KAYANUMA_(1).jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.197783,
+            "lng": 138.361733
+          }
+        },
+        {
+          "title": "堰堤 - panoramio",
+          "description": "堰堤",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/%E5%A0%B0%E5%A0%A4_-_panoramio.jpg/960px-%E5%A0%B0%E5%A0%A4_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A0%B0%E5%A0%A4_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.217777,
+            "lng": 138.350403
+          }
+        },
+        {
+          "title": "県道29号線 関の沢橋 - panoramio",
+          "description": "県道29号線 関の沢橋旧橋（新・関の沢橋の竣工により撤去）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%96%A2%E3%81%AE%E6%B2%A2%E6%A9%8B_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%96%A2%E3%81%AE%E6%B2%A2%E6%A9%8B_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%96%A2%E3%81%AE%E6%B2%A2%E6%A9%8B_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.243516,
+            "lng": 138.343561
+          }
+        },
+        {
+          "title": "県道29号線 金山トンネル - panoramio",
+          "description": "県道29号線 金山トンネル",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%87%91%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%87%91%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_%E9%87%91%E5%B1%B1%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB_-_panoramio.jpg",
+          "credit": "kizitora",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.250687,
+            "lng": 138.339493
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 1,
+      "point": {
+        "lat": 35.283009,
+        "lng": 138.327003,
+        "ele": 772.5
+      },
+      "stations": [],
+      "photos": [
+        {
+          "title": "安倍の大滝002 MG 0085",
+          "description": "Abe Great Falls ( Abe-no-Otaki ) in Aoi-ku, Shizuoka , Shizuoka Prefecture , Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/%E5%AE%89%E5%80%8D%E3%81%AE%E5%A4%A7%E6%BB%9D002_MG_0085.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E3%81%AE%E5%A4%A7%E6%BB%9D002_MG_0085.jpg",
+          "credit": "Kuropiso",
+          "license": "Public domain",
+          "gps": {
+            "lat": 35.299722,
+            "lng": 138.351667
+          }
+        },
+        {
+          "title": "Mount Shichimensan",
+          "description": "Mount Shichimen ( Shichimen-san ) as seen from the south. Taken from Mount Ōpikkari ( Ōpikkari-yama ).",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mount_Shichimensan.jpg/960px-Mount_Shichimensan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Shichimensan.jpg",
+          "credit": "Oyama no taisho",
+          "license": "Public domain",
+          "gps": {
+            "lat": 35.280556,
+            "lng": 138.365444
+          }
+        },
+        {
+          "title": "Mount Kenashi",
+          "description": "The southwest side of Mount Kenashi seen from Mount Ooppikari, Yamanashi Prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Mount_Kenashi.jpg/960px-Mount_Kenashi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Kenashi.jpg",
+          "credit": "Oyama no taisho",
+          "license": "Public domain",
+          "gps": {
+            "lat": 35.281111,
+            "lng": 138.366944
+          }
+        },
+        {
+          "title": "Mount Hakkorei",
+          "description": "Mount Hakkorei (1914m) from Mount Opikkari, Shizuoka Pref., Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Mount_Hakkorei.jpg/960px-Mount_Hakkorei.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Hakkorei.jpg",
+          "credit": "Oyama no taisho",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.2805,
+            "lng": 138.365333
+          }
+        },
+        {
+          "title": "安倍峠 - panoramio - Yobito KAYANUMA (1)",
+          "description": "安倍峠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg/960px-%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_(1).jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.308467,
+            "lng": 138.350267
+          }
+        },
+        {
+          "title": "安倍峠 - panoramio - Yobito KAYANUMA (2)",
+          "description": "安倍峠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_%282%29.jpg/960px-%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%89%E5%80%8D%E5%B3%A0_-_panoramio_-_Yobito_KAYANUMA_(2).jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.301867,
+            "lng": 138.355717
+          }
+        },
+        {
+          "title": "県道26号線 - panoramio",
+          "description": "静岡県道29号梅ケ島温泉昭和線",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%E7%9C%8C%E9%81%9326%E5%8F%B7%E7%B7%9A_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9326%E5%8F%B7%E7%B7%9A_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9326%E5%8F%B7%E7%B7%9A_-_panoramio.jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.29715,
+            "lng": 138.337867
+          }
+        },
+        {
+          "title": "県道29号線 - panoramio",
+          "description": "県道29号線",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio.jpg/960px-%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E9%81%9329%E5%8F%B7%E7%B7%9A_-_panoramio.jpg",
+          "credit": "Yobito KAYANUMA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.288533,
+            "lng": 138.340017
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

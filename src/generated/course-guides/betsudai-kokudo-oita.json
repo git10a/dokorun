@@ -1,0 +1,787 @@
+{
+  "slug": "betsudai-kokudo-oita",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "大分港近くのかんたん港園を起点に、別府大分毎日マラソンの舞台として知られる別大国道(国道10号)沿いの歩道を西進し、西大分・白木海岸・田ノ浦ビーチを経て東別府駅前で折り返す約15.5kmの往復コース。左手に別府湾、正面に高崎山を望みながら信号がほとんどない広い歩道を走れるため、ペース走やロング走に向く。中間の田ノ浦ビーチにトイレと自販機があり補給しやすい。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR西大分駅から約1km / 大分駅から約2.5km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "西大分駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 33.245184,
+      "destinationLng": 131.582758,
+      "routeAnchorLat": 33.246631,
+      "routeAnchorLng": 131.584377,
+      "routeMode": "forward",
+      "accessText": "西大分駅からコースまで約220m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.246631,
+      "routeLng": 131.584377,
+      "elevationM": 2.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3111,
+        "section-3": 6249,
+        "section-4": 6249,
+        "section-5": 3111
+      },
+      "gpxHref": "/gpx/betsudai-kokudo-oita-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 33.246631,
+      "anchorLng": 131.584377,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 大分市立王子中学校の校門",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%E5%A4%A7%E5%88%86%E5%B8%82%E7%AB%8B%E7%8E%8B%E5%AD%90%E4%B8%AD%E5%AD%A6%E6%A0%A1.jpg/960px-%E5%A4%A7%E5%88%86%E5%B8%82%E7%AB%8B%E7%8E%8B%E5%AD%90%E4%B8%AD%E5%AD%A6%E6%A0%A1.jpg",
+        "alt": "かんたん港園〜別大国道(大分側)のスタート周辺付近",
+        "caption": "かんたん港園〜別大国道(大分側)の走路近隣で撮影された風景",
+        "credit": "ygxt2003",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E5%88%86%E5%B8%82%E7%AB%8B%E7%8E%8B%E5%AD%90%E4%B8%AD%E5%AD%A6%E6%A0%A1.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 33.246631,
+      "routeLng": 131.584377,
+      "elevationM": 2.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 33.25706,
+      "anchorLng": 131.554175,
+      "description": "序盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "routePointIndex": 70,
+      "routeDistanceM": 3111,
+      "routeLat": 33.25706,
+      "routeLng": 131.554175,
+      "elevationM": 5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 33.264998,
+      "anchorLng": 131.525764,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: ja:高崎山自然動物園 の小型 ja:モノレール (さるっこレール）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Takasakiyama_sarukkorail_1.jpg/960px-Takasakiyama_sarukkorail_1.jpg",
+        "alt": "かんたん港園〜別大国道(大分側)の中盤区間付近",
+        "caption": "かんたん港園〜別大国道(大分側)の走路近隣で撮影された風景",
+        "credit": "Kamakura",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takasakiyama_sarukkorail_1.jpg"
+      },
+      "routePointIndex": 167,
+      "routeDistanceM": 6249,
+      "routeLat": 33.264998,
+      "routeLng": 131.525764,
+      "elevationM": 1.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 33.264998,
+      "anchorLng": 131.525764,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: ja:高崎山自然動物園 の小型 ja:モノレール (さるっこレール）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Takasakiyama_sarukkorail_1.jpg/960px-Takasakiyama_sarukkorail_1.jpg",
+        "alt": "かんたん港園〜別大国道(大分側)の後半区間付近",
+        "caption": "かんたん港園〜別大国道(大分側)の走路近隣で撮影された風景",
+        "credit": "Kamakura",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takasakiyama_sarukkorail_1.jpg"
+      },
+      "routePointIndex": 167,
+      "routeDistanceM": 6249,
+      "routeLat": 33.264998,
+      "routeLng": 131.525764,
+      "elevationM": 1.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 33.25706,
+      "anchorLng": 131.554175,
+      "description": "終盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "routePointIndex": 70,
+      "routeDistanceM": 3111,
+      "routeLat": 33.25706,
+      "routeLng": 131.554175,
+      "elevationM": 5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  },
+  "distanceM": 15542,
+  "elevationGainM": 26,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 5.9
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 1295,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 1494,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 1594,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 1694,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 1793,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 1893,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 1993,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 2092,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 2192,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 2291,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 2391,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2491,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2590,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 2690,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2790,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2889,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 2989,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3088,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3188,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3288,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 3387,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 3487,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 3587,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 3686,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 3786,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 3885,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 3985,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 4085,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 4184,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 4284,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 4384,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 4483,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 4583,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 4683,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 4782,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 4882,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 4981,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5081,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5181,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5280,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 5380,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 5480,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 5579,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 5679,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 5778,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 5878,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 5978,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 6077,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 6177,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 6277,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 6376,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 6476,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 6575,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 6675,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 6775,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 6874,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 6974,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 7074,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 7173,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 7273,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 7372,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 7472,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 7572,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 7671,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 7771,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 7871,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 7970,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 8070,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 8169,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 8269,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 8369,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 8468,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 8568,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 8668,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 8767,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 8867,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 8967,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 9066,
+      "elevationM": 1.8
+    },
+    {
+      "distanceM": 9166,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 9265,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 9365,
+      "elevationM": 1.5
+    },
+    {
+      "distanceM": 9465,
+      "elevationM": 1.7
+    },
+    {
+      "distanceM": 9564,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 9664,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 9764,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 9863,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 9963,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 10062,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 10162,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 10262,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 10361,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 10461,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 10561,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 10660,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 10760,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 10859,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 10959,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 11059,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 11158,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 11258,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 11358,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 11457,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 11557,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 11656,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 11756,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 11856,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 11955,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 12055,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 12155,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 12254,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 12354,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 12453,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 12553,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 12653,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 12752,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 12852,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 12952,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 13051,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 13151,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 13251,
+      "elevationM": 6.5
+    },
+    {
+      "distanceM": 13350,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 13450,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 13549,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 13649,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 13749,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 13848,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 13948,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 14048,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 14147,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 14247,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 14346,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 14446,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 14546,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 14645,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 14745,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 14845,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 14944,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 15044,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 15143,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 15243,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 15343,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 15442,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 15542,
+      "elevationM": 3.3
+    }
+  ]
+}

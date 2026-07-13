@@ -1,0 +1,140 @@
+{
+  "slug": "hatonosu-otake-seoto",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR青梅線鳩ノ巣駅から尾根を登って御岳山(929m)へ、綾広の滝の脇を抜けて奥多摩三山の大岳山(1,266m)に立ち、馬頭刈尾根を馬頭刈山(884m)経由で秋川渓谷まで下るワンウェイ縦走。獲得標高約1,600mの本格トレイルで、大岳山頂直下には岩場もある。ゴールは温泉施設「秋川渓谷 瀬音の湯」で、汗を流してからバスで武蔵五日市駅へ戻れる。御岳山の宿坊集落に売店とトイレあり。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: スタートはJR青梅線鳩ノ巣駅。ゴールの瀬音の湯からは西東京バスで武蔵五日市駅へ約20分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "鳩ノ巣駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.815127,
+      "destinationLng": 139.128932,
+      "routeAnchorLat": 35.815029,
+      "routeAnchorLng": 139.128929,
+      "routeMode": "forward",
+      "accessText": "鳩ノ巣駅からコースまで約10m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "コース終点側",
+      "badge": "コース起点",
+      "destinationLat": 35.727345,
+      "destinationLng": 139.187841,
+      "routeAnchorLat": 35.727345,
+      "routeAnchorLng": 139.187841,
+      "routeMode": "reverse",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.815029,
+      "anchorLng": 139.128929,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 鳩ノ巣駅 (Hatonosu Station)",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Hatonosu_Station_-_Aug_2020_-_various_20_12_44_504000.jpeg/960px-Hatonosu_Station_-_Aug_2020_-_various_20_12_44_504000.jpeg",
+        "alt": "大岳山縦走(鳩ノ巣〜瀬音の湯)のスタート周辺付近",
+        "caption": "大岳山縦走(鳩ノ巣〜瀬音の湯)の走路近隣で撮影された風景",
+        "credit": "Nesnad",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hatonosu_Station_-_Aug_2020_-_various_20_12_44_504000.jpeg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.787006,
+      "anchorLng": 139.137139,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Top of Mount Nabewari in Okutama Town, Tokyo, Japan",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Nabewariyama_okutama.jpg/960px-Nabewariyama_okutama.jpg",
+        "alt": "大岳山縦走(鳩ノ巣〜瀬音の湯)の序盤区間付近",
+        "caption": "大岳山縦走(鳩ノ巣〜瀬音の湯)の走路近隣で撮影された風景",
+        "credit": "Yagitakeshi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nabewariyama_okutama.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.773946,
+      "anchorLng": 139.141353,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Mount Hinode as seen from the due west. Taken from Mount Mitake , in Tokyo, Japan.",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Mt.Hinode.jpg",
+        "alt": "大岳山縦走(鳩ノ巣〜瀬音の湯)の中盤区間付近",
+        "caption": "大岳山縦走(鳩ノ巣〜瀬音の湯)の走路近隣で撮影された風景",
+        "credit": "Ans_jpn",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mt.Hinode.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.750933,
+      "anchorLng": 139.152498,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 三ツ合鍾乳洞",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/%E4%B8%89%E3%83%84%E5%90%88%E9%8D%BE%E4%B9%B3%E6%B4%9E_-_panoramio.jpg/960px-%E4%B8%89%E3%83%84%E5%90%88%E9%8D%BE%E4%B9%B3%E6%B4%9E_-_panoramio.jpg",
+        "alt": "大岳山縦走(鳩ノ巣〜瀬音の湯)の後半区間付近",
+        "caption": "大岳山縦走(鳩ノ巣〜瀬音の湯)の走路近隣で撮影された風景",
+        "credit": "珈琲牛乳",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E3%83%84%E5%90%88%E9%8D%BE%E4%B9%B3%E6%B4%9E_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.727345,
+      "anchorLng": 139.187841,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 石舟橋",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/%E7%9F%B3%E8%88%9F%E6%A9%8B_-_panoramio.jpg/960px-%E7%9F%B3%E8%88%9F%E6%A9%8B_-_panoramio.jpg",
+        "alt": "大岳山縦走(鳩ノ巣〜瀬音の湯)の終盤区間付近",
+        "caption": "大岳山縦走(鳩ノ巣〜瀬音の湯)の走路近隣で撮影された風景",
+        "credit": "nobuto_m",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9F%B3%E8%88%9F%E6%A9%8B_-_panoramio.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { rotateElevationProfile, shiftRouteDistance } from "@/lib/course-guide-profile";
+import { reverseElevationProfile, rotateElevationProfile, shiftRouteDistance } from "@/lib/course-guide-profile";
 
 describe("course guide profile", () => {
   it("shifts canonical route distances around the selected loop start", () => {
@@ -18,5 +18,17 @@ describe("course guide profile", () => {
     expect(rotated[0]).toEqual({ distanceM: 0, elevationM: 30 });
     expect(rotated.at(-1)).toEqual({ distanceM: 20_000, elevationM: 30 });
     expect(rotated.map((sample) => sample.distanceM)).toEqual([0, 5_000, 10_000, 15_000, 20_000]);
+  });
+
+  it("reverses a one-way elevation profile", () => {
+    expect(reverseElevationProfile([
+      { distanceM: 0, elevationM: 10 },
+      { distanceM: 400, elevationM: 30 },
+      { distanceM: 1_000, elevationM: 20 },
+    ], 1_000)).toEqual([
+      { distanceM: 0, elevationM: 20 },
+      { distanceM: 600, elevationM: 30 },
+      { distanceM: 1_000, elevationM: 10 },
+    ]);
   });
 });

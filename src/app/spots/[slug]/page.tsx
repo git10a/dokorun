@@ -91,7 +91,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
     description: spot.description,
     address: { "@type": "PostalAddress", addressRegion: spot.prefecture, addressLocality: spot.city, addressCountry: "JP" },
     geo: { "@type": "GeoCoordinates", latitude: spot.lat, longitude: spot.lng },
-    image: [...spot.photos.map((photo) => photo.url), ...(courseGuide?.checkpoints.map((checkpoint) => checkpoint.photo.url) ?? [])],
+    image: [...spot.photos.map((photo) => photo.url), ...(courseGuide?.checkpoints.flatMap((checkpoint) => checkpoint.photo ? [checkpoint.photo.url] : []) ?? [])],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "コース距離", value: `${(spot.distanceM / 1000).toFixed(1)}km` },
       { "@type": "LocationFeatureSpecification", name: "トイレ", value: spot.hasToilet },

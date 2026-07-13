@@ -1,0 +1,473 @@
+{
+  "slug": "inuyama-castle-kisogawa",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "国宝犬山城の麓から木曽川河畔、城下町の本町通り周辺をつないで一周する約6kmのコースです。現存天守と木曽川の景色、歴史ある町並みを一度に楽しめます。犬山市の公式ウォーキングマップでも城下町散策と木曽川河畔のコースが案内されています。城下町の混雑時は歩行者を優先してください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 名鉄 犬山遊園駅から徒歩約15分。犬山駅から城下町経由で徒歩約20分 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "犬山遊園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.390331,
+      "destinationLng": 136.946894,
+      "routeAnchorLat": 35.388022,
+      "routeAnchorLng": 136.938358,
+      "routeMode": "loop",
+      "accessText": "犬山遊園駅からコースまで約820m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.388022,
+      "routeLng": 136.938358,
+      "elevationM": 53.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1220,
+        "section-3": 2405,
+        "section-4": 3587,
+        "section-5": 3341
+      },
+      "gpxHref": "/gpx/inuyama-castle-kisogawa-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "犬山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.379871,
+      "destinationLng": 136.945536,
+      "routeAnchorLat": 35.381981,
+      "routeAnchorLng": 136.943823,
+      "routeMode": "loop",
+      "accessText": "犬山駅からコースまで約300m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 62,
+      "routeDistanceM": 1220,
+      "routeLat": 35.381981,
+      "routeLng": 136.943823,
+      "elevationM": 55.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 4757,
+        "section-2": 0,
+        "section-3": 1185,
+        "section-4": 2367,
+        "section-5": 2121
+      },
+      "gpxHref": "/gpx/inuyama-castle-kisogawa-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "犬山口駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.374212,
+      "destinationLng": 136.939945,
+      "routeAnchorLat": 35.375361,
+      "routeAnchorLng": 136.938179,
+      "routeMode": "loop",
+      "accessText": "犬山口駅からコースまで約200m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 112,
+      "routeDistanceM": 2405,
+      "routeLat": 35.375361,
+      "routeLng": 136.938179,
+      "elevationM": 49.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 3572,
+        "section-2": 4792,
+        "section-3": 0,
+        "section-4": 1182,
+        "section-5": 936
+      },
+      "gpxHref": "/gpx/inuyama-castle-kisogawa-start-3.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.388022,
+      "anchorLng": 136.938358,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 犬山城から望む日本ライン",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/View_of_Japan_Rhine_from_Inuyama_Castle_1.jpg/960px-View_of_Japan_Rhine_from_Inuyama_Castle_1.jpg",
+        "alt": "犬山城・木曽川周回のスタート周辺付近",
+        "caption": "犬山城・木曽川周回の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Japan_Rhine_from_Inuyama_Castle_1.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.388022,
+      "routeLng": 136.938358,
+      "elevationM": 53.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.381981,
+      "anchorLng": 136.943823,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 犬山城 本丸門",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Inuyama_Castle_Honmaru-mon.jpg/960px-Inuyama_Castle_Honmaru-mon.jpg",
+        "alt": "犬山城・木曽川周回の序盤区間付近",
+        "caption": "犬山城・木曽川周回の走路近隣で撮影された風景",
+        "credit": "Yanajin33",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inuyama_Castle_Honmaru-mon.jpg"
+      },
+      "routePointIndex": 62,
+      "routeDistanceM": 1220,
+      "routeLat": 35.381981,
+      "routeLng": 136.943823,
+      "elevationM": 55.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.375361,
+      "anchorLng": 136.938179,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 犬山城天守閣",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tenshu_of_Inuyama_Castle.jpg/960px-Tenshu_of_Inuyama_Castle.jpg",
+        "alt": "犬山城・木曽川周回の中盤区間付近",
+        "caption": "犬山城・木曽川周回の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tenshu_of_Inuyama_Castle.jpg"
+      },
+      "routePointIndex": 112,
+      "routeDistanceM": 2405,
+      "routeLat": 35.375361,
+      "routeLng": 136.938179,
+      "elevationM": 49.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.381981,
+      "anchorLng": 136.931215,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 犬山城天守閣",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tenshu_of_Inuyama_Castle.jpg/960px-Tenshu_of_Inuyama_Castle.jpg",
+        "alt": "犬山城・木曽川周回の後半区間付近",
+        "caption": "犬山城・木曽川周回の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tenshu_of_Inuyama_Castle.jpg"
+      },
+      "routePointIndex": 158,
+      "routeDistanceM": 3587,
+      "routeLat": 35.381981,
+      "routeLng": 136.931215,
+      "elevationM": 35.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.379996,
+      "anchorLng": 136.930888,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 犬山城天守閣",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tenshu_of_Inuyama_Castle.jpg/960px-Tenshu_of_Inuyama_Castle.jpg",
+        "alt": "犬山城・木曽川周回の終盤区間付近",
+        "caption": "犬山城・木曽川周回の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tenshu_of_Inuyama_Castle.jpg"
+      },
+      "routePointIndex": 146,
+      "routeDistanceM": 3341,
+      "routeLat": 35.379996,
+      "routeLng": 136.930888,
+      "elevationM": 34.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 5977,
+  "elevationGainM": 47,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 53.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 50.1
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 57
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 62.4
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 61.5
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 54
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 52.1
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 52.3
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 896,
+      "elevationM": 52.5
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 54
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 54.8
+    },
+    {
+      "distanceM": 1195,
+      "elevationM": 55.1
+    },
+    {
+      "distanceM": 1295,
+      "elevationM": 56
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 57
+    },
+    {
+      "distanceM": 1494,
+      "elevationM": 56.5
+    },
+    {
+      "distanceM": 1594,
+      "elevationM": 55
+    },
+    {
+      "distanceM": 1693,
+      "elevationM": 53.5
+    },
+    {
+      "distanceM": 1793,
+      "elevationM": 52.2
+    },
+    {
+      "distanceM": 1893,
+      "elevationM": 51
+    },
+    {
+      "distanceM": 1992,
+      "elevationM": 53.4
+    },
+    {
+      "distanceM": 2092,
+      "elevationM": 56
+    },
+    {
+      "distanceM": 2191,
+      "elevationM": 57.7
+    },
+    {
+      "distanceM": 2291,
+      "elevationM": 56.1
+    },
+    {
+      "distanceM": 2391,
+      "elevationM": 50.2
+    },
+    {
+      "distanceM": 2490,
+      "elevationM": 50.3
+    },
+    {
+      "distanceM": 2590,
+      "elevationM": 49.5
+    },
+    {
+      "distanceM": 2689,
+      "elevationM": 47.6
+    },
+    {
+      "distanceM": 2789,
+      "elevationM": 43.9
+    },
+    {
+      "distanceM": 2889,
+      "elevationM": 43.9
+    },
+    {
+      "distanceM": 2988,
+      "elevationM": 43.6
+    },
+    {
+      "distanceM": 3088,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 3188,
+      "elevationM": 42
+    },
+    {
+      "distanceM": 3287,
+      "elevationM": 37
+    },
+    {
+      "distanceM": 3387,
+      "elevationM": 33.6
+    },
+    {
+      "distanceM": 3486,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 3586,
+      "elevationM": 35.7
+    },
+    {
+      "distanceM": 3686,
+      "elevationM": 36
+    },
+    {
+      "distanceM": 3785,
+      "elevationM": 34.5
+    },
+    {
+      "distanceM": 3885,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 3984,
+      "elevationM": 36.1
+    },
+    {
+      "distanceM": 4084,
+      "elevationM": 35.5
+    },
+    {
+      "distanceM": 4184,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 4283,
+      "elevationM": 34.4
+    },
+    {
+      "distanceM": 4383,
+      "elevationM": 35.1
+    },
+    {
+      "distanceM": 4482,
+      "elevationM": 36.6
+    },
+    {
+      "distanceM": 4582,
+      "elevationM": 34.3
+    },
+    {
+      "distanceM": 4682,
+      "elevationM": 34.5
+    },
+    {
+      "distanceM": 4781,
+      "elevationM": 34.2
+    },
+    {
+      "distanceM": 4881,
+      "elevationM": 37.9
+    },
+    {
+      "distanceM": 4980,
+      "elevationM": 37
+    },
+    {
+      "distanceM": 5080,
+      "elevationM": 38.5
+    },
+    {
+      "distanceM": 5180,
+      "elevationM": 39.9
+    },
+    {
+      "distanceM": 5279,
+      "elevationM": 41
+    },
+    {
+      "distanceM": 5379,
+      "elevationM": 41.5
+    },
+    {
+      "distanceM": 5479,
+      "elevationM": 41.1
+    },
+    {
+      "distanceM": 5578,
+      "elevationM": 41.3
+    },
+    {
+      "distanceM": 5678,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 5777,
+      "elevationM": 47.1
+    },
+    {
+      "distanceM": 5877,
+      "elevationM": 50.1
+    },
+    {
+      "distanceM": 5977,
+      "elevationM": 56.3
+    }
+  ]
+}

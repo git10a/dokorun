@@ -1,0 +1,127 @@
+{
+  "slug": "odaka-ryokuchi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "名古屋南東部の大規模緑地で、公式ウォーキングマップでは約2.5kmのエンジョイコースが案内されています。ウォーキングからマラソンまで楽しめると明示されており、距離短めの反復にも、園内の高低差を使った変化走にも応用できます。駐車場とアクセス情報は公式で確認でき、観光公式でも無料駐車場約1300台が案内されています。代表距離は公式マップ優先で2.5kmを採用しました。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 名鉄左京山駅徒歩約5分、JR南大高駅からもアクセス可。無料駐車場あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "南大高駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.055403,
+      "destinationLng": 136.948244,
+      "routeAnchorLat": 35.048845,
+      "routeAnchorLng": 136.948906,
+      "routeMode": "loop",
+      "accessText": "南大高駅からコースまで約730m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.048845,
+      "anchorLng": 136.948906,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 名古屋グランドボウル（グランドボウル本社所在地）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg/960px-GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg",
+        "alt": "大高緑地のスタート周辺付近",
+        "caption": "大高緑地の走路近隣で撮影された風景",
+        "credit": "八幡鏡太郎",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.046493,
+      "anchorLng": 136.951056,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 名古屋グランドボウル（グランドボウル本社所在地）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg/960px-GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg",
+        "alt": "大高緑地の序盤区間付近",
+        "caption": "大高緑地の走路近隣で撮影された風景",
+        "credit": "八幡鏡太郎",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.045729,
+      "anchorLng": 136.949342,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 名古屋グランドボウル（グランドボウル本社所在地）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg/960px-GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg",
+        "alt": "大高緑地の中盤区間付近",
+        "caption": "大高緑地の走路近隣で撮影された風景",
+        "credit": "八幡鏡太郎",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GRAND_BOWL_in_Nagoya_Aichi_Japan.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.046424,
+      "anchorLng": 136.94587,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 名古屋市緑区",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Midori_20160504-01.jpg/960px-Midori_20160504-01.jpg",
+        "alt": "大高緑地の後半区間付近",
+        "caption": "大高緑地の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Midori_20160504-01.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.047934,
+      "anchorLng": 136.946662,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 水主ケ池公園（名古屋市緑区忠治山、2020年（令和2年）7月）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kakogaike_Park_%283%29%2C_Chujiyama_Midori_Ward_Nagoya_2020.jpg/960px-Kakogaike_Park_%283%29%2C_Chujiyama_Midori_Ward_Nagoya_2020.jpg",
+        "alt": "大高緑地の終盤区間付近",
+        "caption": "大高緑地の走路近隣で撮影された風景",
+        "credit": "Tomio344456",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kakogaike_Park_(3),_Chujiyama_Midori_Ward_Nagoya_2020.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

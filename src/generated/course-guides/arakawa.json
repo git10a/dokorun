@@ -1,0 +1,639 @@
+{
+  "slug": "arakawa",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "広い空と川沿いの景色を楽しみながら、信号なしで長く走れる河川敷コースです。ほぼフラットな舗装路が続き、折り返し位置を変えるだけで距離を自在に設定できます。ロング走や一定ペースの練習に好相性。風の影響を受けやすく、夜は暗い区間が多いため、天候と時間帯を確認して明るいうちに走るのがおすすめです。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR赤羽駅から徒歩約20分、または東京メトロ赤羽岩淵駅から徒歩約15分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "赤羽駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.778026,
+      "destinationLng": 139.720928,
+      "routeAnchorLat": 35.779476,
+      "routeAnchorLng": 139.719771,
+      "routeMode": "forward",
+      "accessText": "赤羽駅からコースまで約190m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.779476,
+      "routeLng": 139.719771,
+      "elevationM": 15.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2308,
+        "section-3": 4621,
+        "section-4": 4621,
+        "section-5": 2308
+      },
+      "gpxHref": "/gpx/arakawa-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.779476,
+      "anchorLng": 139.719771,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 赤羽",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/%E8%B5%A4%E7%BE%BD_-_panoramio.jpg/960px-%E8%B5%A4%E7%BE%BD_-_panoramio.jpg",
+        "alt": "荒川河川敷（赤羽）のスタート周辺付近",
+        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
+        "credit": "kcomiida",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%B5%A4%E7%BE%BD_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.779476,
+      "routeLng": 139.719771,
+      "elevationM": 15.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.768026,
+      "anchorLng": 139.735378,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: The headquarters of the Educational Foundation Tokyo Seitoku Gakuen located in Kita, Tokyo, Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg",
+        "alt": "荒川河川敷（赤羽）の序盤区間付近",
+        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
+        "credit": "Hasec",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg"
+      },
+      "routePointIndex": 103,
+      "routeDistanceM": 2308,
+      "routeLat": 35.768026,
+      "routeLng": 139.735378,
+      "elevationM": 9.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.762195,
+      "anchorLng": 139.757462,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: The Sumida-gawa . View from Miyagi in Adachi , Tokyo , Japan .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sumidagawa_-04.jpg/960px-Sumidagawa_-04.jpg",
+        "alt": "荒川河川敷（赤羽）の中盤区間付近",
+        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
+        "credit": "Aimaimyi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sumidagawa_-04.jpg"
+      },
+      "routePointIndex": 205,
+      "routeDistanceM": 4621,
+      "routeLat": 35.762195,
+      "routeLng": 139.757462,
+      "elevationM": 6.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.762195,
+      "anchorLng": 139.757462,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: The Sumida-gawa . View from Miyagi in Adachi , Tokyo , Japan .",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sumidagawa_-04.jpg/960px-Sumidagawa_-04.jpg",
+        "alt": "荒川河川敷（赤羽）の後半区間付近",
+        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
+        "credit": "Aimaimyi",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sumidagawa_-04.jpg"
+      },
+      "routePointIndex": 205,
+      "routeDistanceM": 4621,
+      "routeLat": 35.762195,
+      "routeLng": 139.757462,
+      "elevationM": 6.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.768026,
+      "anchorLng": 139.735378,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: The headquarters of the Educational Foundation Tokyo Seitoku Gakuen located in Kita, Tokyo, Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg",
+        "alt": "荒川河川敷（赤羽）の終盤区間付近",
+        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
+        "credit": "Hasec",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg"
+      },
+      "routePointIndex": 103,
+      "routeDistanceM": 2308,
+      "routeLat": 35.768026,
+      "routeLng": 139.735378,
+      "elevationM": 9.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 11459,
+  "elevationGainM": 78,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 18.2
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 498,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 598,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 697,
+      "elevationM": 11.9
+    },
+    {
+      "distanceM": 797,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 897,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 996,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 1096,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 1295,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 1395,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 1495,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 1594,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 1694,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 1794,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 1893,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 1993,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 2092,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 2192,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 2292,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 2391,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 2491,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 2591,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 2690,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 2790,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 2890,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 2989,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 3089,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 3189,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 3288,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3388,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 3487,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3587,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 3687,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 3786,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 3886,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 3986,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 4085,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 4185,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 4285,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 4384,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 4484,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 4583,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 4683,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 4783,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 4882,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 4982,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 5082,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 5181,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 5281,
+      "elevationM": 16.7
+    },
+    {
+      "distanceM": 5381,
+      "elevationM": 16.9
+    },
+    {
+      "distanceM": 5480,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 5580,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 5680,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 5779,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 5879,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 5978,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 6078,
+      "elevationM": 16.9
+    },
+    {
+      "distanceM": 6178,
+      "elevationM": 16.7
+    },
+    {
+      "distanceM": 6277,
+      "elevationM": 13
+    },
+    {
+      "distanceM": 6377,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 6477,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 6576,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 6676,
+      "elevationM": 8.1
+    },
+    {
+      "distanceM": 6776,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 6875,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 6975,
+      "elevationM": 5.7
+    },
+    {
+      "distanceM": 7074,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 7174,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 7274,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 7373,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 7473,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 7573,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 7672,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 7772,
+      "elevationM": 7.7
+    },
+    {
+      "distanceM": 7872,
+      "elevationM": 5.3
+    },
+    {
+      "distanceM": 7971,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 8071,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 8171,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 8270,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 8370,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 8469,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 8569,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 8669,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 8768,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 8868,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 8968,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 9067,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 9167,
+      "elevationM": 10.2
+    },
+    {
+      "distanceM": 9267,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 9366,
+      "elevationM": 6.1
+    },
+    {
+      "distanceM": 9466,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 9566,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 9665,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 9765,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 9864,
+      "elevationM": 6.2
+    },
+    {
+      "distanceM": 9964,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 10064,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 10163,
+      "elevationM": 7.4
+    },
+    {
+      "distanceM": 10263,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 10363,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 10462,
+      "elevationM": 9.2
+    },
+    {
+      "distanceM": 10562,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 10662,
+      "elevationM": 13.3
+    },
+    {
+      "distanceM": 10761,
+      "elevationM": 11.9
+    },
+    {
+      "distanceM": 10861,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 10960,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 11060,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 11160,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 11259,
+      "elevationM": 18.2
+    },
+    {
+      "distanceM": 11359,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 11459,
+      "elevationM": 15.3
+    }
+  ]
+}

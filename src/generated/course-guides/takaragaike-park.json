@@ -1,0 +1,270 @@
+{
+  "slug": "takaragaike-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "京都市が公式ランニングコースとして掲載する、検証性の高い公園です。宝が池を囲む1周1500mの周回で、池と森、比叡山を背景に走れることが市の説明に明記されています。地下鉄国際会館駅から徒歩15分で、公園内駐車場の存在や駅外ロッカー、公園内トイレも確認可能です。都市近接ながら自然感が強く、周回距離が明快で、ハシリニイキタイ向けの構造化データにしやすい候補です。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京都市営地下鉄国際会館駅から徒歩約15分。子どもの楽園駐車場あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "国際会館駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.062942,
+      "destinationLng": 135.785216,
+      "routeAnchorLat": 35.060767,
+      "routeAnchorLng": 135.778585,
+      "routeMode": "loop",
+      "accessText": "国際会館駅からコースまで約650m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.060767,
+      "routeLng": 135.778585,
+      "elevationM": 117.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 299,
+        "section-3": 596,
+        "section-4": 896,
+        "section-5": 1192
+      },
+      "gpxHref": "/gpx/takaragaike-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "松ヶ崎駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.051657,
+      "destinationLng": 135.777114,
+      "routeAnchorLat": 35.057847,
+      "routeAnchorLng": 135.779824,
+      "routeMode": "loop",
+      "accessText": "松ヶ崎駅からコースまで約730m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 171,
+      "routeDistanceM": 596,
+      "routeLat": 35.057847,
+      "routeLng": 135.779824,
+      "elevationM": 107.1,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 904,
+        "section-2": 1203,
+        "section-3": 0,
+        "section-4": 300,
+        "section-5": 596
+      },
+      "gpxHref": "/gpx/takaragaike-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.060767,
+      "anchorLng": 135.778585,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 宝が池公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "宝が池公園のスタート周辺付近",
+        "caption": "宝が池公園の走路近隣で撮影された風景",
+        "credit": "SunkistSun",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.060767,
+      "routeLng": 135.778585,
+      "elevationM": 117.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.058697,
+      "anchorLng": 135.77932,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 宝が池公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "宝が池公園の序盤区間付近",
+        "caption": "宝が池公園の走路近隣で撮影された風景",
+        "credit": "SunkistSun",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 82,
+      "routeDistanceM": 299,
+      "routeLat": 35.058697,
+      "routeLng": 135.77932,
+      "elevationM": 97.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.057847,
+      "anchorLng": 135.779824,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 宝が池公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "宝が池公園の中盤区間付近",
+        "caption": "宝が池公園の走路近隣で撮影された風景",
+        "credit": "SunkistSun",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AE%9D%E3%81%8C%E6%B1%A0%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 171,
+      "routeDistanceM": 596,
+      "routeLat": 35.057847,
+      "routeLng": 135.779824,
+      "elevationM": 107.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.058068,
+      "anchorLng": 135.781366,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Two Chinese geese in Kyoto, Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Chinese_goose_-Kyoto%2C_Japan-two-8.jpg/960px-Chinese_goose_-Kyoto%2C_Japan-two-8.jpg",
+        "alt": "宝が池公園の後半区間付近",
+        "caption": "宝が池公園の走路近隣で撮影された風景",
+        "credit": "U-ichiro Murakami from Kyoto, JPN",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_goose_-Kyoto,_Japan-two-8.jpg"
+      },
+      "routePointIndex": 267,
+      "routeDistanceM": 896,
+      "routeLat": 35.058068,
+      "routeLng": 135.781366,
+      "elevationM": 96.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.060198,
+      "anchorLng": 135.781623,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: \"Used for Adoption of the Kyoto Protocol COP3 President, Minister Hiroshi Ohki Kyoto International Conference Hall December 11, 1997\"",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%E4%BA%AC%E9%83%BD%E8%AD%B0%E5%AE%9A%E6%9B%B8%E6%8E%A1%E6%8A%9E%E6%99%82%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%95%E3%82%8C%E3%81%9F%E6%9C%A8%E6%A7%8C_%287029228521%29.jpg/960px-%E4%BA%AC%E9%83%BD%E8%AD%B0%E5%AE%9A%E6%9B%B8%E6%8E%A1%E6%8A%9E%E6%99%82%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%95%E3%82%8C%E3%81%9F%E6%9C%A8%E6%A7%8C_%287029228521%29.jpg",
+        "alt": "宝が池公園の終盤区間付近",
+        "caption": "宝が池公園の走路近隣で撮影された風景",
+        "credit": "Jason Riedy",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%AC%E9%83%BD%E8%AD%B0%E5%AE%9A%E6%9B%B8%E6%8E%A1%E6%8A%9E%E6%99%82%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%95%E3%82%8C%E3%81%9F%E6%9C%A8%E6%A7%8C_(7029228521).jpg"
+      },
+      "routePointIndex": 361,
+      "routeDistanceM": 1192,
+      "routeLat": 35.060198,
+      "routeLng": 135.781623,
+      "elevationM": 92.9,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1500,
+  "elevationGainM": 68,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 117.8
+    },
+    {
+      "distanceM": 94,
+      "elevationM": 119.5
+    },
+    {
+      "distanceM": 188,
+      "elevationM": 104
+    },
+    {
+      "distanceM": 281,
+      "elevationM": 96.2
+    },
+    {
+      "distanceM": 375,
+      "elevationM": 100.9
+    },
+    {
+      "distanceM": 469,
+      "elevationM": 100.7
+    },
+    {
+      "distanceM": 563,
+      "elevationM": 105.2
+    },
+    {
+      "distanceM": 656,
+      "elevationM": 115.7
+    },
+    {
+      "distanceM": 750,
+      "elevationM": 113.5
+    },
+    {
+      "distanceM": 844,
+      "elevationM": 101.9
+    },
+    {
+      "distanceM": 938,
+      "elevationM": 93.7
+    },
+    {
+      "distanceM": 1031,
+      "elevationM": 96.4
+    },
+    {
+      "distanceM": 1125,
+      "elevationM": 94.6
+    },
+    {
+      "distanceM": 1219,
+      "elevationM": 93
+    },
+    {
+      "distanceM": 1313,
+      "elevationM": 93.4
+    },
+    {
+      "distanceM": 1407,
+      "elevationM": 105.8
+    },
+    {
+      "distanceM": 1500,
+      "elevationM": 117.8
+    }
+  ]
+}

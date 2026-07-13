@@ -1,0 +1,140 @@
+{
+  "slug": "mishima-shuzenji",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "三島駅・三嶋大社を起点に、狩野川沿いの田園地帯を南下して伊豆の名湯・修善寺温泉まで走る片道約19.5kmのロング走コースです。伊豆箱根鉄道の沿線を走るため、疲れたら途中の駅から電車に乗れる安心感が魅力。緩やかな起伏で景色も変化に富み、観光ランとしても楽しめます。ゴールの修善寺温泉で入浴して電車で帰る、ご褒美ランに最適です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: スタートはJR・伊豆箱根鉄道 三島駅。ゴールから修善寺駅経由で戻れます。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "三島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.125946,
+      "destinationLng": 138.911369,
+      "routeAnchorLat": 35.125508,
+      "routeAnchorLng": 138.911809,
+      "routeMode": "forward",
+      "accessText": "三島駅からコースまで約60m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "修善寺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.979091,
+      "destinationLng": 138.950545,
+      "routeAnchorLat": 34.972321,
+      "routeAnchorLng": 138.927185,
+      "routeMode": "reverse",
+      "accessText": "修善寺駅からコースまで約2260m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "GPXの終点側から逆向きに走ります。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.125508,
+      "anchorLng": 138.911809,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 三島駅前",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/%E4%B8%89%E5%B3%B6%E9%A7%85%E5%89%8D_-_panoramio.jpg/960px-%E4%B8%89%E5%B3%B6%E9%A7%85%E5%89%8D_-_panoramio.jpg",
+        "alt": "三嶋大社〜修善寺温泉コースのスタート周辺付近",
+        "caption": "三嶋大社〜修善寺温泉コースの走路近隣で撮影された風景",
+        "credit": "くろふね",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E5%B3%B6%E9%A7%85%E5%89%8D_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.086769,
+      "anchorLng": 138.935706,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 185系C5編成、大場駅にて",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Series_185_C5_in_Daiba_Station_01.jpg/960px-Series_185_C5_in_Daiba_Station_01.jpg",
+        "alt": "三嶋大社〜修善寺温泉コースの序盤区間付近",
+        "caption": "三嶋大社〜修善寺温泉コースの走路近隣で撮影された風景",
+        "credit": "Wikimizuki",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Series_185_C5_in_Daiba_Station_01.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.042815,
+      "anchorLng": 138.943449,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: The grave of Ashikaga Chachamaru , in Izunokuni , Shizuoka Prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Grave_of_Ashikaga_Chachamaru.jpg/960px-Grave_of_Ashikaga_Chachamaru.jpg",
+        "alt": "三嶋大社〜修善寺温泉コースの中盤区間付近",
+        "caption": "三嶋大社〜修善寺温泉コースの走路近隣で撮影された風景",
+        "credit": "文屋将監",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grave_of_Ashikaga_Chachamaru.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.997351,
+      "anchorLng": 138.93634,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Joyama ( Mount Jo ) as seen from the southeast in Izunokuni , Shizuoka Prefecture , Honshu , Japan. Kano River in the foreground.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mount_Joyama_20100426_%28a%29.jpg/960px-Mount_Joyama_20100426_%28a%29.jpg",
+        "alt": "三嶋大社〜修善寺温泉コースの後半区間付近",
+        "caption": "三嶋大社〜修善寺温泉コースの走路近隣で撮影された風景",
+        "credit": "Batholith",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Joyama_20100426_(a).jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.972321,
+      "anchorLng": 138.927185,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Hie-jinja in Izu , Shizuoka Prefecture , Japan.",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hie-jinja_%28Shuzenji%29_2011-09-19_%28A%29.jpg/960px-Hie-jinja_%28Shuzenji%29_2011-09-19_%28A%29.jpg",
+        "alt": "三嶋大社〜修善寺温泉コースの終盤区間付近",
+        "caption": "三嶋大社〜修善寺温泉コースの走路近隣で撮影された風景",
+        "credit": "Batholith",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hie-jinja_(Shuzenji)_2011-09-19_(A).jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

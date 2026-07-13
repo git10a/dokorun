@@ -1,0 +1,735 @@
+{
+  "slug": "nanakita-park",
+  "spot": {
+    "slug": "nanakita-park",
+    "name": "七北田公園",
+    "prefecture": "宮城県",
+    "city": "仙台市泉区",
+    "access": "仙台市地下鉄南北線泉中央駅から徒歩約5分。駐車場あり。",
+    "course_type": "loop",
+    "distance_m": 3252,
+    "elevation_gain_m": 35,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 148,
+    "gpxDistanceM": 3252,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:17:48.683Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 38.328015,
+        "lng": 140.882793,
+        "ele": 48.5
+      },
+      "stations": [
+        {
+          "name": "泉中央",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.880796,
+          "y": 38.323167,
+          "postal": "9813133",
+          "distance": "570m",
+          "prev": null,
+          "next": "八乙女"
+        },
+        {
+          "name": "八乙女",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.884037,
+          "y": 38.312899,
+          "postal": "9813135",
+          "distance": "1690m",
+          "prev": "泉中央",
+          "next": "黒松"
+        },
+        {
+          "name": "黒松",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.886285,
+          "y": 38.303142,
+          "postal": "9818006",
+          "distance": "2790m",
+          "prev": "八乙女",
+          "next": "旭ヶ丘"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Izumity21 SEview",
+          "description": "通称イズミティ21の建物の南東角。隣接するスーパー「セルバ」の駐車場屋上階より、北西方向にレンズを向けて撮影。背景に見える山は泉ヶ岳。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Izumity21_SEview.jpg/960px-Izumity21_SEview.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumity21_SEview.jpg",
+          "credit": "Wkatsuhiro at Japanese Wikipedia",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.32511,
+            "lng": 140.88157
+          }
+        },
+        {
+          "title": "Shogen Numa in 2008-11",
+          "description": "Shogen Pond. Izumi ward , Sendai , Miyagi prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Shogen_Numa_in_2008-11.jpg/960px-Shogen_Numa_in_2008-11.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shogen_Numa_in_2008-11.jpg",
+          "credit": "Kinori",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.331086,
+            "lng": 140.877858
+          }
+        },
+        {
+          "title": "Shogen Numa 2008-11b",
+          "description": "Shogen Pond. Izumi ward , Sendai , Miyagi prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Shogen_Numa_2008-11b.jpg/960px-Shogen_Numa_2008-11b.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shogen_Numa_2008-11b.jpg",
+          "credit": "Kinori",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.330043,
+            "lng": 140.879059
+          }
+        },
+        {
+          "title": "SELVA viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "SELVA",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322203,
+            "lng": 140.881244
+          }
+        },
+        {
+          "title": "Izumi-chuo viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Izumi-Chuo terminal, newly developed city center in northern Sendai.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322211,
+            "lng": 140.881253
+          }
+        },
+        {
+          "title": "Night view of Izumi-chuo seen from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Night view of Izumi-Chuo terminal, a newly developed city center in northern Sendai, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG/960px-Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322186,
+            "lng": 140.881242
+          }
+        },
+        {
+          "title": "SELVA Terrace",
+          "description": "仙台市泉区にある商業施設「セルバテラス」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg",
+          "credit": "広瀬川",
+          "license": "CC0",
+          "gps": {
+            "lat": 38.323842,
+            "lng": 140.881592
+          }
+        },
+        {
+          "title": "Niimichi Ichinazaka, Izumi-ku, Sendai-shi, Miyagi-ken 981-3117, Japan - panoramio",
+          "description": "Niimichi Ichinazaka, Izumi-ku, Sendai-shi, Miyagi-ken 981-3117, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Niimichi_Ichinazaka%2C_Izumi-ku%2C_Sendai-shi%2C_Miyagi-ken_981-3117%2C_Japan_-_panoramio.jpg/960px-Niimichi_Ichinazaka%2C_Izumi-ku%2C_Sendai-shi%2C_Miyagi-ken_981-3117%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niimichi_Ichinazaka,_Izumi-ku,_Sendai-shi,_Miyagi-ken_981-3117,_Japan_-_panoramio.jpg",
+          "credit": "Idawriter",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.327877,
+            "lng": 140.892984
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 38.325667208836215,
+        "lng": 140.8866655661708,
+        "ele": 42
+      },
+      "stations": [
+        {
+          "name": "泉中央",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.880796,
+          "y": 38.323167,
+          "postal": "9813133",
+          "distance": "580m",
+          "prev": null,
+          "next": "八乙女"
+        },
+        {
+          "name": "八乙女",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.884037,
+          "y": 38.312899,
+          "postal": "9813135",
+          "distance": "1440m",
+          "prev": "泉中央",
+          "next": "黒松"
+        },
+        {
+          "name": "黒松",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.886285,
+          "y": 38.303142,
+          "postal": "9818006",
+          "distance": "2510m",
+          "prev": "八乙女",
+          "next": "旭ヶ丘"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Izumity21 SEview",
+          "description": "通称イズミティ21の建物の南東角。隣接するスーパー「セルバ」の駐車場屋上階より、北西方向にレンズを向けて撮影。背景に見える山は泉ヶ岳。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Izumity21_SEview.jpg/960px-Izumity21_SEview.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumity21_SEview.jpg",
+          "credit": "Wkatsuhiro at Japanese Wikipedia",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.32511,
+            "lng": 140.88157
+          }
+        },
+        {
+          "title": "Shogen Numa 2008-11b",
+          "description": "Shogen Pond. Izumi ward , Sendai , Miyagi prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Shogen_Numa_2008-11b.jpg/960px-Shogen_Numa_2008-11b.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shogen_Numa_2008-11b.jpg",
+          "credit": "Kinori",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.330043,
+            "lng": 140.879059
+          }
+        },
+        {
+          "title": "SELVA viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "SELVA",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322203,
+            "lng": 140.881244
+          }
+        },
+        {
+          "title": "Izumi-chuo viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Izumi-Chuo terminal, newly developed city center in northern Sendai.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322211,
+            "lng": 140.881253
+          }
+        },
+        {
+          "title": "Night view of Izumi-chuo seen from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Night view of Izumi-Chuo terminal, a newly developed city center in northern Sendai, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG/960px-Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322186,
+            "lng": 140.881242
+          }
+        },
+        {
+          "title": "Yurtec STADIUM SENDAI viewed from Kamuri-Oohashi bridge",
+          "description": "night view of Yurtec STADIUM SENDAI, formerly known as SENDAI Stadium",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.318242,
+            "lng": 140.8829
+          }
+        },
+        {
+          "title": "SELVA Terrace",
+          "description": "仙台市泉区にある商業施設「セルバテラス」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg",
+          "credit": "広瀬川",
+          "license": "CC0",
+          "gps": {
+            "lat": 38.323842,
+            "lng": 140.881592
+          }
+        },
+        {
+          "title": "Niimichi Ichinazaka, Izumi-ku, Sendai-shi, Miyagi-ken 981-3117, Japan - panoramio",
+          "description": "Niimichi Ichinazaka, Izumi-ku, Sendai-shi, Miyagi-ken 981-3117, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Niimichi_Ichinazaka%2C_Izumi-ku%2C_Sendai-shi%2C_Miyagi-ken_981-3117%2C_Japan_-_panoramio.jpg/960px-Niimichi_Ichinazaka%2C_Izumi-ku%2C_Sendai-shi%2C_Miyagi-ken_981-3117%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niimichi_Ichinazaka,_Izumi-ku,_Sendai-shi,_Miyagi-ken_981-3117,_Japan_-_panoramio.jpg",
+          "credit": "Idawriter",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.327877,
+            "lng": 140.892984
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 38.321748121047264,
+        "lng": 140.88541244131602,
+        "ele": 26.75
+      },
+      "stations": [
+        {
+          "name": "泉中央",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.880796,
+          "y": 38.323167,
+          "postal": "9813133",
+          "distance": "430m",
+          "prev": null,
+          "next": "八乙女"
+        },
+        {
+          "name": "八乙女",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.884037,
+          "y": 38.312899,
+          "postal": "9813135",
+          "distance": "990m",
+          "prev": "泉中央",
+          "next": "黒松"
+        },
+        {
+          "name": "黒松",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.886285,
+          "y": 38.303142,
+          "postal": "9818006",
+          "distance": "2070m",
+          "prev": "八乙女",
+          "next": "旭ヶ丘"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Izumity21 SEview",
+          "description": "通称イズミティ21の建物の南東角。隣接するスーパー「セルバ」の駐車場屋上階より、北西方向にレンズを向けて撮影。背景に見える山は泉ヶ岳。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Izumity21_SEview.jpg/960px-Izumity21_SEview.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumity21_SEview.jpg",
+          "credit": "Wkatsuhiro at Japanese Wikipedia",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.32511,
+            "lng": 140.88157
+          }
+        },
+        {
+          "title": "SELVA viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "SELVA",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322203,
+            "lng": 140.881244
+          }
+        },
+        {
+          "title": "Izumi-chuo viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Izumi-Chuo terminal, newly developed city center in northern Sendai.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322211,
+            "lng": 140.881253
+          }
+        },
+        {
+          "title": "Night view of Izumi-chuo seen from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Night view of Izumi-Chuo terminal, a newly developed city center in northern Sendai, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG/960px-Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322186,
+            "lng": 140.881242
+          }
+        },
+        {
+          "title": "Yurtec STADIUM SENDAI viewed from Kamuri-Oohashi bridge",
+          "description": "night view of Yurtec STADIUM SENDAI, formerly known as SENDAI Stadium",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.318242,
+            "lng": 140.8829
+          }
+        },
+        {
+          "title": "SELVA Terrace",
+          "description": "仙台市泉区にある商業施設「セルバテラス」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg",
+          "credit": "広瀬川",
+          "license": "CC0",
+          "gps": {
+            "lat": 38.323842,
+            "lng": 140.881592
+          }
+        },
+        {
+          "title": "Yurtecスタジアム内部 - panoramio",
+          "description": "Yurtecスタジアム内部",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg/960px-Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg",
+          "credit": "suzune konoo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.318349,
+            "lng": 140.882066
+          }
+        },
+        {
+          "title": "七北田公園と二口山塊 Futakuchi Mountain Group from Nanakita Park - panoramio",
+          "description": "七北田公園と二口山塊 Futakuchi Mountain Group from Nanakita Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92%E3%81%A8%E4%BA%8C%E5%8F%A3%E5%B1%B1%E5%A1%8A_Futakuchi_Mountain_Group_from_Nanakita_Park_-_panoramio.jpg/960px-%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92%E3%81%A8%E4%BA%8C%E5%8F%A3%E5%B1%B1%E5%A1%8A_Futakuchi_Mountain_Group_from_Nanakita_Park_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92%E3%81%A8%E4%BA%8C%E5%8F%A3%E5%B1%B1%E5%A1%8A_Futakuchi_Mountain_Group_from_Nanakita_Park_-_panoramio.jpg",
+          "credit": "Tomofumi Sato",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.319149,
+            "lng": 140.880285
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 38.322295512919176,
+        "lng": 140.88122303538748,
+        "ele": 25.75
+      },
+      "stations": [
+        {
+          "name": "泉中央",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.880796,
+          "y": 38.323167,
+          "postal": "9813133",
+          "distance": "100m",
+          "prev": null,
+          "next": "八乙女"
+        },
+        {
+          "name": "八乙女",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.884037,
+          "y": 38.312899,
+          "postal": "9813135",
+          "distance": "1070m",
+          "prev": "泉中央",
+          "next": "黒松"
+        },
+        {
+          "name": "黒松",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.886285,
+          "y": 38.303142,
+          "postal": "9818006",
+          "distance": "2180m",
+          "prev": "八乙女",
+          "next": "旭ヶ丘"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Izumity21 SEview",
+          "description": "通称イズミティ21の建物の南東角。隣接するスーパー「セルバ」の駐車場屋上階より、北西方向にレンズを向けて撮影。背景に見える山は泉ヶ岳。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Izumity21_SEview.jpg/960px-Izumity21_SEview.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumity21_SEview.jpg",
+          "credit": "Wkatsuhiro at Japanese Wikipedia",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.32511,
+            "lng": 140.88157
+          }
+        },
+        {
+          "title": "SELVA viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "SELVA",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322203,
+            "lng": 140.881244
+          }
+        },
+        {
+          "title": "Izumi-chuo viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Izumi-Chuo terminal, newly developed city center in northern Sendai.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322211,
+            "lng": 140.881253
+          }
+        },
+        {
+          "title": "Night view of Izumi-chuo seen from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Night view of Izumi-Chuo terminal, a newly developed city center in northern Sendai, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG/960px-Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322186,
+            "lng": 140.881242
+          }
+        },
+        {
+          "title": "Yurtec STADIUM SENDAI viewed from Kamuri-Oohashi bridge",
+          "description": "night view of Yurtec STADIUM SENDAI, formerly known as SENDAI Stadium",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yurtec_STADIUM_SENDAI_viewed_from_Kamuri-Oohashi_bridge.JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.318242,
+            "lng": 140.8829
+          }
+        },
+        {
+          "title": "SELVA Terrace",
+          "description": "仙台市泉区にある商業施設「セルバテラス」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg",
+          "credit": "広瀬川",
+          "license": "CC0",
+          "gps": {
+            "lat": 38.323842,
+            "lng": 140.881592
+          }
+        },
+        {
+          "title": "Yurtecスタジアム内部 - panoramio",
+          "description": "Yurtecスタジアム内部",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg/960px-Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yurtec%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E5%86%85%E9%83%A8_-_panoramio.jpg",
+          "credit": "suzune konoo",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.318349,
+            "lng": 140.882066
+          }
+        },
+        {
+          "title": "七北田公園 Nanakita Park - panoramio",
+          "description": "七北田公園 Nanakita Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92_Nanakita_Park_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92_Nanakita_Park_-_panoramio.jpg",
+          "credit": "Tomofumi Sato",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.319689,
+            "lng": 140.875666
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 38.325255093078106,
+        "lng": 140.87921086222607,
+        "ele": 38.75
+      },
+      "stations": [
+        {
+          "name": "泉中央",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.880796,
+          "y": 38.323167,
+          "postal": "9813133",
+          "distance": "270m",
+          "prev": null,
+          "next": "八乙女"
+        },
+        {
+          "name": "八乙女",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.884037,
+          "y": 38.312899,
+          "postal": "9813135",
+          "distance": "1440m",
+          "prev": "泉中央",
+          "next": "黒松"
+        },
+        {
+          "name": "黒松",
+          "prefecture": "宮城県",
+          "line": "仙台市南北線",
+          "x": 140.886285,
+          "y": 38.303142,
+          "postal": "9818006",
+          "distance": "2540m",
+          "prev": "八乙女",
+          "next": "旭ヶ丘"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Izumity21 SEview",
+          "description": "通称イズミティ21の建物の南東角。隣接するスーパー「セルバ」の駐車場屋上階より、北西方向にレンズを向けて撮影。背景に見える山は泉ヶ岳。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Izumity21_SEview.jpg/960px-Izumity21_SEview.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumity21_SEview.jpg",
+          "credit": "Wkatsuhiro at Japanese Wikipedia",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.32511,
+            "lng": 140.88157
+          }
+        },
+        {
+          "title": "Shogen Numa in 2008-11",
+          "description": "Shogen Pond. Izumi ward , Sendai , Miyagi prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Shogen_Numa_in_2008-11.jpg/960px-Shogen_Numa_in_2008-11.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shogen_Numa_in_2008-11.jpg",
+          "credit": "Kinori",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.331086,
+            "lng": 140.877858
+          }
+        },
+        {
+          "title": "Shogen Numa 2008-11b",
+          "description": "Shogen Pond. Izumi ward , Sendai , Miyagi prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Shogen_Numa_2008-11b.jpg/960px-Shogen_Numa_2008-11b.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shogen_Numa_2008-11b.jpg",
+          "credit": "Kinori",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.330043,
+            "lng": 140.879059
+          }
+        },
+        {
+          "title": "SELVA viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "SELVA",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322203,
+            "lng": 140.881244
+          }
+        },
+        {
+          "title": "Izumi-chuo viewed from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Izumi-Chuo terminal, newly developed city center in northern Sendai.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Izumi-chuo_viewed_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322211,
+            "lng": 140.881253
+          }
+        },
+        {
+          "title": "Night view of Izumi-chuo seen from the multi-story parking garage of Izumi-chuo Sta.",
+          "description": "Night view of Izumi-Chuo terminal, a newly developed city center in northern Sendai, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG/960px-Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Night_view_of_Izumi-chuo_seen_from_the_multi-story_parking_garage_of_Izumi-chuo_Sta..JPG",
+          "credit": "neuropower",
+          "license": "Public domain",
+          "gps": {
+            "lat": 38.322186,
+            "lng": 140.881242
+          }
+        },
+        {
+          "title": "SELVA Terrace",
+          "description": "仙台市泉区にある商業施設「セルバテラス」",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg",
+          "credit": "広瀬川",
+          "license": "CC0",
+          "gps": {
+            "lat": 38.323842,
+            "lng": 140.881592
+          }
+        },
+        {
+          "title": "七北田公園 Nanakita Park - panoramio",
+          "description": "七北田公園 Nanakita Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92_Nanakita_Park_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92_Nanakita_Park_-_panoramio.jpg",
+          "credit": "Tomofumi Sato",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 38.319689,
+            "lng": 140.875666
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

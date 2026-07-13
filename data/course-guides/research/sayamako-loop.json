@@ -1,0 +1,735 @@
+{
+  "slug": "sayamako-loop",
+  "spot": {
+    "slug": "sayamako-loop",
+    "name": "狭山湖一周",
+    "prefecture": "埼玉県",
+    "city": "所沢市",
+    "access": "西武狭山線・山口線西武球場前駅から約1.5km",
+    "course_type": "loop",
+    "distance_m": 17833,
+    "elevation_gain_m": 287,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 860,
+    "gpxDistanceM": 17833,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:19:51.051Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 35.770297,
+        "lng": 139.418611,
+        "ele": 105
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武狭山線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "120m",
+          "prev": "下山口",
+          "next": null
+        },
+        {
+          "name": "西武園ゆうえんち",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.440166,
+          "y": 35.769042,
+          "postal": "3591145",
+          "distance": "1950m",
+          "prev": "多摩湖",
+          "next": "西武球場前"
+        },
+        {
+          "name": "多摩湖",
+          "prefecture": "東京都",
+          "line": "西武山口線",
+          "x": 139.442747,
+          "y": 35.765881,
+          "postal": "1890026",
+          "distance": "2230m",
+          "prev": null,
+          "next": "西武園ゆうえんち"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Sayamasanfudoji sekichu",
+          "description": "狭山山不動寺 石柱",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sayamasanfudoji_sekichu.JPG/960px-Sayamasanfudoji_sekichu.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_sekichu.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770167,
+            "lng": 139.417
+          }
+        },
+        {
+          "title": "SEIBU DOME (西武ドーム） - panoramio",
+          "description": "SEIBU DOME (西武ドーム）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/SEIBU_DOME_%28%E8%A5%BF%E6%AD%A6%E3%83%89%E3%83%BC%E3%83%A0%EF%BC%89_-_panoramio.jpg/960px-SEIBU_DOME_%28%E8%A5%BF%E6%AD%A6%E3%83%89%E3%83%BC%E3%83%A0%EF%BC%89_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:SEIBU_DOME_(%E8%A5%BF%E6%AD%A6%E3%83%89%E3%83%BC%E3%83%A0%EF%BC%89_-_panoramio.jpg",
+          "credit": "yamagen1701",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770011,
+            "lng": 139.41836
+          }
+        },
+        {
+          "title": "Seibu 8500 V3 at Seibu-kyujomae 20160322b",
+          "description": "西武鉄道8500系「レオライナー」、西武山口線・西武球場前にて",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seibu_8500_V3_at_Seibu-kyujomae_20160322b.jpg/960px-Seibu_8500_V3_at_Seibu-kyujomae_20160322b.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu_8500_V3_at_Seibu-kyujomae_20160322b.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.770719,
+            "lng": 139.420107
+          }
+        },
+        {
+          "title": "Seibu 8500 V3 at Seibu-kyujomae 20160322a",
+          "description": "西武鉄道8500系「レオライナー」、西武山口線・西武球場前にて",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Seibu_8500_V3_at_Seibu-kyujomae_20160322a.jpg/960px-Seibu_8500_V3_at_Seibu-kyujomae_20160322a.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu_8500_V3_at_Seibu-kyujomae_20160322a.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.770719,
+            "lng": 139.420107
+          }
+        },
+        {
+          "title": "Seibu 8500 V1 at Seibu-kyujomae 20160322",
+          "description": "西武鉄道8500系「レオライナー」、西武山口線・西武球場前にて",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Seibu_8500_V1_at_Seibu-kyujomae_20160322.jpg/960px-Seibu_8500_V1_at_Seibu-kyujomae_20160322.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu_8500_V1_at_Seibu-kyujomae_20160322.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.770719,
+            "lng": 139.420107
+          }
+        },
+        {
+          "title": "Seibu-Kyujo-mae Station Feb 23 2020 various",
+          "description": "Seibu-Kyūjō-mae Station (西武球場前駅)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seibu-Kyujo-mae_Station_Feb_23_2020_various.jpeg/960px-Seibu-Kyujo-mae_Station_Feb_23_2020_various.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu-Kyujo-mae_Station_Feb_23_2020_various.jpeg",
+          "credit": "Nesnad",
+          "license": "CC BY 4.0",
+          "gps": {
+            "lat": 35.770133,
+            "lng": 139.418944
+          }
+        },
+        {
+          "title": "Seibu-Kyujo-mae Station Feb 23 2020 various 19 49 46 476000",
+          "description": "Seibu-Kyūjō-mae Station (西武球場前駅)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_49_46_476000.jpeg/960px-Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_49_46_476000.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_49_46_476000.jpeg",
+          "credit": "Nesnad",
+          "license": "CC BY 4.0",
+          "gps": {
+            "lat": 35.770133,
+            "lng": 139.418961
+          }
+        },
+        {
+          "title": "Seibu-Kyujo-mae Station Feb 23 2020 various 19 50 11 556000",
+          "description": "Seibu-Kyūjō-mae Station (西武球場前駅)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_50_11_556000.jpeg/960px-Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_50_11_556000.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu-Kyujo-mae_Station_Feb_23_2020_various_19_50_11_556000.jpeg",
+          "credit": "Nesnad",
+          "license": "CC BY 4.0",
+          "gps": {
+            "lat": 35.770122,
+            "lng": 139.418961
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 35.7643180589915,
+        "lng": 139.3880004535071,
+        "ele": 151.75
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "2950m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        },
+        {
+          "name": "上北台",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.415822,
+          "y": 35.745824,
+          "postal": "2070021",
+          "distance": "3250m",
+          "prev": null,
+          "next": "桜街道"
+        },
+        {
+          "name": "箱根ヶ崎",
+          "prefecture": "東京都",
+          "line": "JR八高線",
+          "x": 139.346805,
+          "y": 35.771158,
+          "postal": "1901221",
+          "distance": "3800m",
+          "prev": "東福生",
+          "next": "金子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "1 Chome Kishi, Musashimurayama-shi, Tōkyō-to 208-0031, Japan - panoramio",
+          "description": "1 Chome Kishi, Musashimurayama-shi, Tōkyō-to 208-0031, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/1_Chome_Kishi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0031%2C_Japan_-_panoramio.jpg/960px-1_Chome_Kishi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0031%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_Chome_Kishi,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0031,_Japan_-_panoramio.jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.760204,
+            "lng": 139.364832
+          }
+        },
+        {
+          "title": "Flower - panoramio (24)",
+          "description": "flower",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flower_-_panoramio_%2824%29.jpg/960px-Flower_-_panoramio_%2824%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flower_-_panoramio_(24).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.764614,
+            "lng": 139.364188
+          }
+        },
+        {
+          "title": "Green - panoramio (21)",
+          "description": "green",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Green_-_panoramio_%2821%29.jpg/960px-Green_-_panoramio_%2821%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_-_panoramio_(21).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.765941,
+            "lng": 139.364558
+          }
+        },
+        {
+          "title": "Green - panoramio (22)",
+          "description": "東京都 瑞穂町 の 阿豆佐味天神社 （あずさみてんじんじゃ Azusami-Tenjinja）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Green_-_panoramio_%2822%29.jpg/960px-Green_-_panoramio_%2822%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_-_panoramio_(22).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.766477,
+            "lng": 139.364778
+          }
+        },
+        {
+          "title": "4 Chome Honmachi, Musashimurayama-shi, Tōkyō-to 208-0004, Japan - panoramio",
+          "description": "4 Chome Honmachi, Musashimurayama-shi, Tōkyō-to 208-0004, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/4_Chome_Honmachi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0004%2C_Japan_-_panoramio.jpg/960px-4_Chome_Honmachi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0004%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:4_Chome_Honmachi,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0004,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.758689,
+            "lng": 139.387324
+          }
+        },
+        {
+          "title": "4 Chome Chūō, Musashimurayama-shi, Tōkyō-to 208-0003, Japan - panoramio",
+          "description": "4 Chome Chūō, Musashimurayama-shi, Tōkyō-to 208-0003, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/4_Chome_Ch%C5%AB%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0003%2C_Japan_-_panoramio.jpg/960px-4_Chome_Ch%C5%AB%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0003%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:4_Chome_Ch%C5%AB%C5%8D,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0003,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.75945,
+            "lng": 139.390838
+          }
+        },
+        {
+          "title": "3 Chome Mitsugi, Musashimurayama-shi, Tōkyō-to 208-0032, Japan - panoramio",
+          "description": "3 Chome Mitsugi, Musashimurayama-shi, Tōkyō-to 208-0032, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/3_Chome_Mitsugi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0032%2C_Japan_-_panoramio.jpg/960px-3_Chome_Mitsugi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0032%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:3_Chome_Mitsugi,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0032,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.759316,
+            "lng": 139.373844
+          }
+        },
+        {
+          "title": "2 Chome Nakatō, Musashimurayama-shi, Tōkyō-to 208-0001, Japan - panoramio",
+          "description": "2 Chome Nakatō, Musashimurayama-shi, Tōkyō-to 208-0001, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg/960px-2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2_Chome_Nakat%C5%8D,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0001,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.760613,
+            "lng": 139.394709
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 35.774231426430056,
+        "lng": 139.36880271921177,
+        "ele": 185
+      },
+      "stations": [
+        {
+          "name": "箱根ヶ崎",
+          "prefecture": "東京都",
+          "line": "JR八高線",
+          "x": 139.346805,
+          "y": 35.771158,
+          "postal": "1901221",
+          "distance": "2020m",
+          "prev": "東福生",
+          "next": "金子"
+        },
+        {
+          "name": "東福生",
+          "prefecture": "東京都",
+          "line": "JR八高線",
+          "x": 139.33594,
+          "y": 35.745811,
+          "postal": "1970011",
+          "distance": "4340m",
+          "prev": "拝島",
+          "next": "箱根ヶ崎"
+        },
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "4610m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "LakeTama and SayamaMap",
+          "description": "Photo of part of the large maps posted on outdoor signs around Tama ko and Sayama ko public hiking trails in Tokyo and Saitama, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LakeTama_and_SayamaMap.jpg/960px-LakeTama_and_SayamaMap.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:LakeTama_and_SayamaMap.jpg",
+          "credit": "Bruce Carrick",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.776833,
+            "lng": 139.363667
+          }
+        },
+        {
+          "title": "江戸街道（旧青梅街道）・一本榎の庚申塔 - panoramio",
+          "description": "江戸街道（旧青梅街道）・一本榎の庚申塔",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/%E6%B1%9F%E6%88%B8%E8%A1%97%E9%81%93%EF%BC%88%E6%97%A7%E9%9D%92%E6%A2%85%E8%A1%97%E9%81%93%EF%BC%89%E3%83%BB%E4%B8%80%E6%9C%AC%E6%A6%8E%E3%81%AE%E5%BA%9A%E7%94%B3%E5%A1%94_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B1%9F%E6%88%B8%E8%A1%97%E9%81%93%EF%BC%88%E6%97%A7%E9%9D%92%E6%A2%85%E8%A1%97%E9%81%93%EF%BC%89%E3%83%BB%E4%B8%80%E6%9C%AC%E6%A6%8E%E3%81%AE%E5%BA%9A%E7%94%B3%E5%A1%94_-_panoramio.jpg",
+          "credit": "dosankosaty",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.761323,
+            "lng": 139.360322
+          }
+        },
+        {
+          "title": "Sunset - panoramio (235)",
+          "description": "sunset",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sunset_-_panoramio_%28235%29.jpg/960px-Sunset_-_panoramio_%28235%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunset_-_panoramio_(235).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.761463,
+            "lng": 139.357782
+          }
+        },
+        {
+          "title": "Fuji - panoramio (1)",
+          "description": "Fuji",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Fuji_-_panoramio_%281%29.jpg/960px-Fuji_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fuji_-_panoramio_(1).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.760796,
+            "lng": 139.363732
+          }
+        },
+        {
+          "title": "1 Chome Kishi, Musashimurayama-shi, Tōkyō-to 208-0031, Japan - panoramio",
+          "description": "1 Chome Kishi, Musashimurayama-shi, Tōkyō-to 208-0031, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/1_Chome_Kishi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0031%2C_Japan_-_panoramio.jpg/960px-1_Chome_Kishi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0031%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_Chome_Kishi,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0031,_Japan_-_panoramio.jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.760204,
+            "lng": 139.364832
+          }
+        },
+        {
+          "title": "Flower - panoramio (24)",
+          "description": "flower",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flower_-_panoramio_%2824%29.jpg/960px-Flower_-_panoramio_%2824%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flower_-_panoramio_(24).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.764614,
+            "lng": 139.364188
+          }
+        },
+        {
+          "title": "Kanto Mounatains - panoramio",
+          "description": "Kanto Mounatains seen from the East. Shot at Mizuho , Tokyo.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Kanto_Mounatains_-_panoramio.jpg/960px-Kanto_Mounatains_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanto_Mounatains_-_panoramio.jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.761584,
+            "lng": 139.357546
+          }
+        },
+        {
+          "title": "Green - panoramio (21)",
+          "description": "green",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Green_-_panoramio_%2821%29.jpg/960px-Green_-_panoramio_%2821%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_-_panoramio_(21).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.765941,
+            "lng": 139.364558
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 35.78994413370287,
+        "lng": 139.38078917599273,
+        "ele": 125.25
+      },
+      "stations": [
+        {
+          "name": "箱根ヶ崎",
+          "prefecture": "東京都",
+          "line": "JR八高線",
+          "x": 139.346805,
+          "y": 35.771158,
+          "postal": "1901221",
+          "distance": "3710m",
+          "prev": "東福生",
+          "next": "金子"
+        },
+        {
+          "name": "狭山ヶ丘",
+          "prefecture": "埼玉県",
+          "line": "西武池袋線",
+          "x": 139.416975,
+          "y": 35.810445,
+          "postal": "3591106",
+          "distance": "3990m",
+          "prev": "小手指",
+          "next": "武蔵藤沢"
+        },
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "4100m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "中氷川神社(二）",
+          "description": "Naka-hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map 。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%8C%EF%BC%89.jpg/960px-%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%8C%EF%BC%89.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE(%E4%BA%8C%EF%BC%89.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.78958,
+            "lng": 139.39788
+          }
+        },
+        {
+          "title": "中氷川神社(五）",
+          "description": "Naka-hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map 。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%94%EF%BC%89.jpg/960px-%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%94%EF%BC%89.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE(%E4%BA%94%EF%BC%89.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.790943,
+            "lng": 139.398994
+          }
+        },
+        {
+          "title": "Naka-Hikawa-jinja (Tokorozawa Mikajima) 01",
+          "description": "Naka-Hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Naka-Hikawa-jinja_%28Tokorozawa_Mikajima%29_01.jpg/960px-Naka-Hikawa-jinja_%28Tokorozawa_Mikajima%29_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naka-Hikawa-jinja_(Tokorozawa_Mikajima)_01.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.790943,
+            "lng": 139.398994
+          }
+        },
+        {
+          "title": "TokorozawaCity Fire DepartmentNishi Substation",
+          "description": "所沢市消防本部 中央消防署西分署庁舎",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/TokorozawaCity_Fire_DepartmentNishi_Substation.JPG/960px-TokorozawaCity_Fire_DepartmentNishi_Substation.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:TokorozawaCity_Fire_DepartmentNishi_Substation.JPG",
+          "credit": "Ebiebi2",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.7917,
+            "lng": 139.41537
+          }
+        },
+        {
+          "title": "LakeTama and SayamaMap",
+          "description": "Photo of part of the large maps posted on outdoor signs around Tama ko and Sayama ko public hiking trails in Tokyo and Saitama, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LakeTama_and_SayamaMap.jpg/960px-LakeTama_and_SayamaMap.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:LakeTama_and_SayamaMap.jpg",
+          "credit": "Bruce Carrick",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.776833,
+            "lng": 139.363667
+          }
+        },
+        {
+          "title": "IrumaWakakusaSSHS",
+          "description": "Saitama Prefectural, Iruma Wakakusa Special Support High School, in Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/IrumaWakakusaSSHS.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:IrumaWakakusaSSHS.jpg",
+          "credit": "KY0NG-alfa",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.8169,
+            "lng": 139.3741
+          }
+        },
+        {
+          "title": "Flower - panoramio (24)",
+          "description": "flower",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flower_-_panoramio_%2824%29.jpg/960px-Flower_-_panoramio_%2824%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flower_-_panoramio_(24).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.764614,
+            "lng": 139.364188
+          }
+        },
+        {
+          "title": "Green - panoramio (21)",
+          "description": "green",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Green_-_panoramio_%2821%29.jpg/960px-Green_-_panoramio_%2821%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_-_panoramio_(21).jpg",
+          "credit": "TMC48",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.765941,
+            "lng": 139.364558
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 35.78188338001415,
+        "lng": 139.40418819422686,
+        "ele": 136.25
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "1850m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        },
+        {
+          "name": "下山口",
+          "prefecture": "埼玉県",
+          "line": "西武狭山線",
+          "x": 139.441097,
+          "y": 35.77941,
+          "postal": "3591145",
+          "distance": "3340m",
+          "prev": "西所沢",
+          "next": "西武球場前"
+        },
+        {
+          "name": "狭山ヶ丘",
+          "prefecture": "埼玉県",
+          "line": "西武池袋線",
+          "x": 139.416975,
+          "y": 35.810445,
+          "postal": "3591106",
+          "distance": "3380m",
+          "prev": "小手指",
+          "next": "武蔵藤沢"
+        }
+      ],
+      "photos": [
+        {
+          "title": "中氷川神社(二）",
+          "description": "Naka-hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map 。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%8C%EF%BC%89.jpg/960px-%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%8C%EF%BC%89.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE(%E4%BA%8C%EF%BC%89.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.78958,
+            "lng": 139.39788
+          }
+        },
+        {
+          "title": "中氷川神社(五）",
+          "description": "Naka-hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map 。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%94%EF%BC%89.jpg/960px-%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%28%E4%BA%94%EF%BC%89.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE(%E4%BA%94%EF%BC%89.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.790943,
+            "lng": 139.398994
+          }
+        },
+        {
+          "title": "Naka-Hikawa-jinja (Tokorozawa Mikajima) 01",
+          "description": "Naka-Hikawa-jinja in Mikajima, Tokorozawa , Japan. See the map .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Naka-Hikawa-jinja_%28Tokorozawa_Mikajima%29_01.jpg/960px-Naka-Hikawa-jinja_%28Tokorozawa_Mikajima%29_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naka-Hikawa-jinja_(Tokorozawa_Mikajima)_01.jpg",
+          "credit": "007 Tanuki",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.790943,
+            "lng": 139.398994
+          }
+        },
+        {
+          "title": "Sayamako-dori",
+          "description": "ウチノ看板株式会社 ( 所沢市 三ヶ島 一丁目23番地の2)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Sayamako-dori.jpg/960px-Sayamako-dori.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamako-dori.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.786067,
+            "lng": 139.416397
+          }
+        },
+        {
+          "title": "Sayamako-dori 2",
+          "description": "Sayamako-dori",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sayamako-dori_2.jpg/960px-Sayamako-dori_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamako-dori_2.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.786056,
+            "lng": 139.416556
+          }
+        },
+        {
+          "title": "Sayamako-dori 7",
+          "description": "Sayamako-dori",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Sayamako-dori_7.jpg/960px-Sayamako-dori_7.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamako-dori_7.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.785756,
+            "lng": 139.416444
+          }
+        },
+        {
+          "title": "Sayamako-dori 8",
+          "description": "Sayamako-dori",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Sayamako-dori_8.jpg/960px-Sayamako-dori_8.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamako-dori_8.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.785756,
+            "lng": 139.416444
+          }
+        },
+        {
+          "title": "Sayamako-dori 9",
+          "description": "建設埼玉・西埼玉地区本部 ( 所沢市 北野南 三丁目20番地の34)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sayamako-dori_9.jpg/960px-Sayamako-dori_9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamako-dori_9.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.785756,
+            "lng": 139.416444
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

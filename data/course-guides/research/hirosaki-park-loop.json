@@ -1,0 +1,737 @@
+{
+  "slug": "hirosaki-park-loop",
+  "spot": {
+    "slug": "hirosaki-park-loop",
+    "name": "弘前公園(弘前城)",
+    "prefecture": "青森県",
+    "city": "弘前市",
+    "description": "JR弘前駅から広い歩道の続く市街地を約2km走り、弘前公園を園内経由でめぐって戻る周回コース。追手門から入り、弘前城本丸の下を抜けて北門(亀甲門)へ、帰りは外濠沿いを走れる。園内には約2,600本の桜があり、4月下旬は濠を花びらが埋める花筏や桜のトンネルが圧巻。観光客が少ない早朝が走りやすい。",
+    "access": "JR弘前駅中央口から弘前公園追手門まで約2km",
+    "course_type": "loop",
+    "distance_m": 3261,
+    "elevation_gain_m": 15,
+    "surface": "asphalt",
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 37,
+    "gpxDistanceM": 3239,
+    "distanceDifferencePct": 0.67,
+    "closureGapM": 5,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:24:45.435Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 40.60331,
+        "lng": 140.46736,
+        "ele": 47
+      },
+      "stations": [
+        {
+          "name": "中央弘前",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.472203,
+          "y": 40.599144,
+          "postal": "0368188",
+          "distance": "620m",
+          "prev": "弘高下",
+          "next": null
+        },
+        {
+          "name": "弘高下",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.468212,
+          "y": 40.593078,
+          "postal": "0368222",
+          "distance": "1140m",
+          "prev": "弘前学院大前",
+          "next": "中央弘前"
+        },
+        {
+          "name": "弘前",
+          "prefecture": "青森県",
+          "line": "JR奥羽本線",
+          "x": 140.485016,
+          "y": 40.599723,
+          "postal": "0368096",
+          "distance": "1540m",
+          "prev": "石川",
+          "next": "撫牛子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Aomori bank memorial build. 青森銀行記念館 (2471726522)",
+          "description": "弘前城と弘前駅の間にある明治期の建物で、旧第五十九銀行本店だった建物。現在は青森銀行記念館として一般公開されている。時間がなかったので素通り。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Aomori_bank_memorial_build._%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_%282471726522%29.jpg/960px-Aomori_bank_memorial_build._%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_%282471726522%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aomori_bank_memorial_build._%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_(2471726522).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 40.603666,
+            "lng": 140.468566
+          }
+        },
+        {
+          "title": "Botanical Garden - panoramio (2)",
+          "description": "Botanical Garden",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Botanical_Garden_-_panoramio_%282%29.jpg/960px-Botanical_Garden_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_-_panoramio_(2).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.603848,
+            "lng": 140.466797
+          }
+        },
+        {
+          "title": "大石武学流庭園 - panoramio",
+          "description": "大石武学流庭園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%E5%A4%A7%E7%9F%B3%E6%AD%A6%E5%AD%A6%E6%B5%81%E5%BA%AD%E5%9C%92_-_panoramio.jpg/960px-%E5%A4%A7%E7%9F%B3%E6%AD%A6%E5%AD%A6%E6%B5%81%E5%BA%AD%E5%9C%92_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%9F%B3%E6%AD%A6%E5%AD%A6%E6%B5%81%E5%BA%AD%E5%9C%92_-_panoramio.jpg",
+          "credit": "岩浪陸",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.604048,
+            "lng": 140.466514
+          }
+        },
+        {
+          "title": "旧弘前市立図書館 - panoramio",
+          "description": "旧弘前市立図書館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/%E6%97%A7%E5%BC%98%E5%89%8D%E5%B8%82%E7%AB%8B%E5%9B%B3%E6%9B%B8%E9%A4%A8_-_panoramio.jpg/960px-%E6%97%A7%E5%BC%98%E5%89%8D%E5%B8%82%E7%AB%8B%E5%9B%B3%E6%9B%B8%E9%A4%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%97%A7%E5%BC%98%E5%89%8D%E5%B8%82%E7%AB%8B%E5%9B%B3%E6%9B%B8%E9%A4%A8_-_panoramio.jpg",
+          "credit": "iloverjoa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.602755,
+            "lng": 140.465626
+          }
+        },
+        {
+          "title": "青森銀行記念館 - panoramio",
+          "description": "青森銀行記念館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_-_panoramio.jpg/960px-%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%9D%92%E6%A3%AE%E9%8A%80%E8%A1%8C%E8%A8%98%E5%BF%B5%E9%A4%A8_-_panoramio.jpg",
+          "credit": "iloverjoa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.603091,
+            "lng": 140.468606
+          }
+        },
+        {
+          "title": "旧東奥義塾外人教師館 - panoramio",
+          "description": "旧東奥義塾外人教師館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%E6%97%A7%E6%9D%B1%E5%A5%A5%E7%BE%A9%E5%A1%BE%E5%A4%96%E4%BA%BA%E6%95%99%E5%B8%AB%E9%A4%A8_-_panoramio.jpg/960px-%E6%97%A7%E6%9D%B1%E5%A5%A5%E7%BE%A9%E5%A1%BE%E5%A4%96%E4%BA%BA%E6%95%99%E5%B8%AB%E9%A4%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%97%A7%E6%9D%B1%E5%A5%A5%E7%BE%A9%E5%A1%BE%E5%A4%96%E4%BA%BA%E6%95%99%E5%B8%AB%E9%A4%A8_-_panoramio.jpg",
+          "credit": "iloverjoa",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.602828,
+            "lng": 140.466186
+          }
+        },
+        {
+          "title": "191207 Too Gijyuku Gaijin Kyoshikan Hirosaki Aomori pref Japan01bs5",
+          "description": "Old Too Gijyuku Gaijin Kyoshikan in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan01bs5.jpg/960px-191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan01bs5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan01bs5.jpg",
+          "credit": "663highland",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.602722,
+            "lng": 140.466194
+          }
+        },
+        {
+          "title": "191207 Too Gijyuku Gaijin Kyoshikan Hirosaki Aomori pref Japan02bs5",
+          "description": "Old Too Gijyuku Gaijin Kyoshikan in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan02bs5.jpg/960px-191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan02bs5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:191207_Too_Gijyuku_Gaijin_Kyoshikan_Hirosaki_Aomori_pref_Japan02bs5.jpg",
+          "credit": "663highland",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.602722,
+            "lng": 140.466194
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 40.60885097479732,
+        "lng": 140.46823696901333,
+        "ele": 42
+      },
+      "stations": [
+        {
+          "name": "中央弘前",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.472203,
+          "y": 40.599144,
+          "postal": "0368188",
+          "distance": "1130m",
+          "prev": "弘高下",
+          "next": null
+        },
+        {
+          "name": "弘前",
+          "prefecture": "青森県",
+          "line": "JR奥羽本線",
+          "x": 140.485016,
+          "y": 40.599723,
+          "postal": "0368096",
+          "distance": "1740m",
+          "prev": "石川",
+          "next": "撫牛子"
+        },
+        {
+          "name": "弘高下",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.468212,
+          "y": 40.593078,
+          "postal": "0368222",
+          "distance": "1760m",
+          "prev": "弘前学院大前",
+          "next": "中央弘前"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Hirosaki cherry 弘前桜 (2470902583)",
+          "description": "弘前公園内の枝垂れ桜。この桜と横浜緋桜はまだ花がありましたが、ソメイヨシノ系は葉っぱばかりでした。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Hirosaki_cherry_%E5%BC%98%E5%89%8D%E6%A1%9C_%282470902583%29.jpg/960px-Hirosaki_cherry_%E5%BC%98%E5%89%8D%E6%A1%9C_%282470902583%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_cherry_%E5%BC%98%E5%89%8D%E6%A1%9C_(2470902583).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 40.60735,
+            "lng": 140.46625
+          }
+        },
+        {
+          "title": "Hirosaki Park in autumn - panoramio",
+          "description": "Hirosaki Park in autumn",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hirosaki_Park_in_autumn_-_panoramio.jpg/960px-Hirosaki_Park_in_autumn_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_in_autumn_-_panoramio.jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.609405,
+            "lng": 140.465917
+          }
+        },
+        {
+          "title": "Autumn in the Hirosaki Park - panoramio (1)",
+          "description": "Autumn in the Hirosaki Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Autumn_in_the_Hirosaki_Park_-_panoramio_%281%29.jpg/960px-Autumn_in_the_Hirosaki_Park_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autumn_in_the_Hirosaki_Park_-_panoramio_(1).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.608691,
+            "lng": 140.465776
+          }
+        },
+        {
+          "title": "津軽為信 - panoramio",
+          "description": "津軽為信",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/%E6%B4%A5%E8%BB%BD%E7%82%BA%E4%BF%A1_-_panoramio.jpg/960px-%E6%B4%A5%E8%BB%BD%E7%82%BA%E4%BF%A1_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B4%A5%E8%BB%BD%E7%82%BA%E4%BF%A1_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.607094,
+            "lng": 140.468482
+          }
+        },
+        {
+          "title": "弘前城公園 - panoramio (6)",
+          "description": "弘前城公園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/%E5%BC%98%E5%89%8D%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio_%286%29.jpg/960px-%E5%BC%98%E5%89%8D%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio_%286%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%BC%98%E5%89%8D%E5%9F%8E%E5%85%AC%E5%9C%92_-_panoramio_(6).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.607243,
+            "lng": 140.467438
+          }
+        },
+        {
+          "title": "弘前城 - panoramio (1)",
+          "description": "弘前城",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_%281%29.jpg/960px-%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_(1).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.607379,
+            "lng": 140.467861
+          }
+        },
+        {
+          "title": "弘前城 - panoramio (5)",
+          "description": "弘前城",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_%285%29.jpg/960px-%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_%285%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%BC%98%E5%89%8D%E5%9F%8E_-_panoramio_(5).jpg",
+          "credit": "くろふね",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.607203,
+            "lng": 140.467184
+          }
+        },
+        {
+          "title": "通路が混雑しています。 (29992096277)",
+          "description": "弘前櫻花祭, 櫻花, 弘前城, 鷹岡城, 高岡城, 弘前, 青森, 東北, 日本, Sakura, Cherry Blossom, Hirosaki Castle, Hirosaki-jo, Hirosaki, Aomori, Tohoku, Japan, Nippon, Nihon, 桜花, おうか, ひろさきじょう, ひろさきし, あおもりけん, とうほく, にっぽん, にほん",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/%E9%80%9A%E8%B7%AF%E3%81%8C%E6%B7%B7%E9%9B%91%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82_%2829992096277%29.jpg/960px-%E9%80%9A%E8%B7%AF%E3%81%8C%E6%B7%B7%E9%9B%91%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82_%2829992096277%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%80%9A%E8%B7%AF%E3%81%8C%E6%B7%B7%E9%9B%91%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82_(29992096277).jpg",
+          "credit": "bryan... from Taipei, Taiwan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 40.609977,
+            "lng": 140.466513
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 40.61226667637936,
+        "lng": 140.4654066002444,
+        "ele": 30
+      },
+      "stations": [
+        {
+          "name": "中央弘前",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.472203,
+          "y": 40.599144,
+          "postal": "0368188",
+          "distance": "1570m",
+          "prev": "弘高下",
+          "next": null
+        },
+        {
+          "name": "弘高下",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.468212,
+          "y": 40.593078,
+          "postal": "0368222",
+          "distance": "2150m",
+          "prev": "弘前学院大前",
+          "next": "中央弘前"
+        },
+        {
+          "name": "弘前",
+          "prefecture": "青森県",
+          "line": "JR奥羽本線",
+          "x": 140.485016,
+          "y": 40.599723,
+          "postal": "0368096",
+          "distance": "2170m",
+          "prev": "石川",
+          "next": "撫牛子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Tsugaruhan Neputamura Hirosaki Aomori pref Japan01s5",
+          "description": "Tsugaruhan_Neputamura in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan01s5.jpg/960px-Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan01s5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan01s5.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 40.61126,
+            "lng": 140.469077
+          }
+        },
+        {
+          "title": "Tsugaruhan Neputamura Hirosaki Aomori pref Japan02s5",
+          "description": "Tsugaruhan_Neputamura in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan02s5.jpg/960px-Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan02s5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan02s5.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 40.61126,
+            "lng": 140.469077
+          }
+        },
+        {
+          "title": "Tsugaruhan Neputamura Hirosaki Aomori pref Japan03s5",
+          "description": "Tsugaruhan_Neputamura in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan03s5.jpg/960px-Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan03s5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan03s5.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 40.61126,
+            "lng": 140.469077
+          }
+        },
+        {
+          "title": "Tsugaruhan Neputamura Hirosaki Aomori pref Japan09s3",
+          "description": "Tsugaruhan_Neputamura in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan09s3.jpg/960px-Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan09s3.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan09s3.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 40.611038,
+            "lng": 140.468838
+          }
+        },
+        {
+          "title": "Tsugaruhan Neputamura Hirosaki Aomori pref Japan10s5",
+          "description": "Tsugaruhan_Neputamura in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan10s5.jpg/960px-Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan10s5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsugaruhan_Neputamura_Hirosaki_Aomori_pref_Japan10s5.jpg",
+          "credit": "663highland",
+          "license": "CC BY 2.5",
+          "gps": {
+            "lat": 40.611275,
+            "lng": 140.469075
+          }
+        },
+        {
+          "title": "Hirosaki Park - panoramio",
+          "description": "Hirosaki Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Hirosaki_Park_-_panoramio.jpg/960px-Hirosaki_Park_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_-_panoramio.jpg",
+          "credit": "Ocavis Leechroot",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.609416,
+            "lng": 140.464411
+          }
+        },
+        {
+          "title": "A old house of Ishiba - panoramio",
+          "description": "A old house of Ishiba",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/A_old_house_of_Ishiba_-_panoramio.jpg/960px-A_old_house_of_Ishiba_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_old_house_of_Ishiba_-_panoramio.jpg",
+          "credit": "MAKIKO OMOKAWA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 40.612258,
+            "lng": 140.467072
+          }
+        },
+        {
+          "title": "Hirosaki Snow Festival - Panoramio 47936461",
+          "description": "Hirosaki Snow Festival",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hirosaki_Snow_Festival_-_Panoramio_47936461.jpg/960px-Hirosaki_Snow_Festival_-_Panoramio_47936461.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Snow_Festival_-_Panoramio_47936461.jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.611281,
+            "lng": 140.466578
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 40.608743969242504,
+        "lng": 140.4606494730033,
+        "ele": 32
+      },
+      "stations": [
+        {
+          "name": "中央弘前",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.472203,
+          "y": 40.599144,
+          "postal": "0368188",
+          "distance": "1450m",
+          "prev": "弘高下",
+          "next": null
+        },
+        {
+          "name": "弘高下",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.468212,
+          "y": 40.593078,
+          "postal": "0368222",
+          "distance": "1860m",
+          "prev": "弘前学院大前",
+          "next": "中央弘前"
+        },
+        {
+          "name": "弘前",
+          "prefecture": "青森県",
+          "line": "JR奥羽本線",
+          "x": 140.485016,
+          "y": 40.599723,
+          "postal": "0368096",
+          "distance": "2290m",
+          "prev": "石川",
+          "next": "撫牛子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Hirosaki Castle 弘前城 (2492018839)",
+          "description": "本丸広場から西方の濠を見下ろしました。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_%282492018839%29.jpg/960px-Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_%282492018839%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_(2492018839).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 40.608216,
+            "lng": 140.463216
+          }
+        },
+        {
+          "title": "Hirosaki Castle 弘前城 (2492837538)",
+          "description": "弘前城の本丸広場の桜。後ろは天守。ソメイヨシノなどはほとんど散って葉が出ていましたが、枝垂れ桜はまだ見頃でした。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_%282492837538%29.jpg/960px-Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_%282492837538%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Castle_%E5%BC%98%E5%89%8D%E5%9F%8E_(2492837538).jpg",
+          "credit": "Yamaguchi Yoshiaki from Japan",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 40.60815,
+            "lng": 140.463416
+          }
+        },
+        {
+          "title": "Hirosaki - panoramio",
+          "description": "Hirosaki",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hirosaki_-_panoramio.jpg/960px-Hirosaki_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_-_panoramio.jpg",
+          "credit": "thor hestnes",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.609852,
+            "lng": 140.463003
+          }
+        },
+        {
+          "title": "Hirosaki Park - panoramio (1)",
+          "description": "Hirosaki Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Hirosaki_Park_-_panoramio_%281%29.jpg/960px-Hirosaki_Park_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_-_panoramio_(1).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.607361,
+            "lng": 140.463113
+          }
+        },
+        {
+          "title": "Hirosaki Park (during the sakura) - panoramio (6)",
+          "description": "Hirosaki Park (during the sakura)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%286%29.jpg/960px-Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%286%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_(during_the_sakura)_-_panoramio_(6).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.609855,
+            "lng": 140.462388
+          }
+        },
+        {
+          "title": "Hirosaki Park (during the sakura) - panoramio (7)",
+          "description": "Hirosaki Park (during the sakura)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%287%29.jpg/960px-Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%287%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_(during_the_sakura)_-_panoramio_(7).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.608897,
+            "lng": 140.463619
+          }
+        },
+        {
+          "title": "Hirosaki Park (during the sakura) - panoramio (9)",
+          "description": "Hirosaki Park (during the sakura)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%289%29.jpg/960px-Hirosaki_Park_%28during_the_sakura%29_-_panoramio_%289%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_Park_(during_the_sakura)_-_panoramio_(9).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.608011,
+            "lng": 140.459702
+          }
+        },
+        {
+          "title": "Hirosaki castle , Aomori - panoramio",
+          "description": "Hirosaki castle , Aomori",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hirosaki_castle_%2C_Aomori_-_panoramio.jpg/960px-Hirosaki_castle_%2C_Aomori_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_castle_,_Aomori_-_panoramio.jpg",
+          "credit": "Kaz Ish",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 40.608308,
+            "lng": 140.463263
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 40.60487241141988,
+        "lng": 140.46103132381677,
+        "ele": 36
+      },
+      "stations": [
+        {
+          "name": "中央弘前",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.472203,
+          "y": 40.599144,
+          "postal": "0368188",
+          "distance": "1140m",
+          "prev": "弘高下",
+          "next": null
+        },
+        {
+          "name": "弘高下",
+          "prefecture": "青森県",
+          "line": "弘南鉄道大鰐線",
+          "x": 140.468212,
+          "y": 40.593078,
+          "postal": "0368222",
+          "distance": "1450m",
+          "prev": "弘前学院大前",
+          "next": "中央弘前"
+        },
+        {
+          "name": "弘前",
+          "prefecture": "青森県",
+          "line": "JR奥羽本線",
+          "x": 140.485016,
+          "y": 40.599723,
+          "postal": "0368096",
+          "distance": "2110m",
+          "prev": "石川",
+          "next": "撫牛子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Fujita Memorial Japanese Garden - panoramio",
+          "description": "Fujita Memorial Japanese Garden",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Fujita_Memorial_Japanese_Garden_-_panoramio.jpg/960px-Fujita_Memorial_Japanese_Garden_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fujita_Memorial_Japanese_Garden_-_panoramio.jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.603767,
+            "lng": 140.460033
+          }
+        },
+        {
+          "title": "Fujita Memorial Japanese Garden - panoramio (1)",
+          "description": "Fujita Memorial Japanese Garden",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Fujita_Memorial_Japanese_Garden_-_panoramio_%281%29.jpg/960px-Fujita_Memorial_Japanese_Garden_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fujita_Memorial_Japanese_Garden_-_panoramio_(1).jpg",
+          "credit": "Feri88",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 40.604165,
+            "lng": 140.459817
+          }
+        },
+        {
+          "title": "Hirosaki park ,Hirosaki, Aomori, Japan April 2016 - panoramio",
+          "description": "Hirosaki park ,Hirosaki, Aomori, Japan April 2016",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hirosaki_park_%2CHirosaki%2C_Aomori%2C_Japan_April_2016_-_panoramio.jpg/960px-Hirosaki_park_%2CHirosaki%2C_Aomori%2C_Japan_April_2016_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_park_,Hirosaki,_Aomori,_Japan_April_2016_-_panoramio.jpg",
+          "credit": "::::=UT=::::",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 40.60584,
+            "lng": 140.46337
+          }
+        },
+        {
+          "title": "Hirosaki City Museum 20160423",
+          "description": "弘前市立博物館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hirosaki_City_Museum_20160423.jpg/960px-Hirosaki_City_Museum_20160423.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirosaki_City_Museum_20160423.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.605526,
+            "lng": 140.463123
+          }
+        },
+        {
+          "title": "191207 Hirosaki City Museum Hirosaki Aomori pref Japan01s",
+          "description": "Hirosaki City Museum in Hirosaki , Aomori prefecture , Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/191207_Hirosaki_City_Museum_Hirosaki_Aomori_pref_Japan01s.jpg/960px-191207_Hirosaki_City_Museum_Hirosaki_Aomori_pref_Japan01s.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:191207_Hirosaki_City_Museum_Hirosaki_Aomori_pref_Japan01s.jpg",
+          "credit": "663highland",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.605278,
+            "lng": 140.4625
+          }
+        },
+        {
+          "title": "Western style house of the Fujita Memorial Garden 20220618a",
+          "description": "青森県弘前市にある藤田記念庭園の洋館・1階内部には大正浪漫喫茶室があり、漫画『ふらいんぐうぃっち』作中で登場する「喫茶コンクルシオ」のモチーフとなっている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Western_style_house_of_the_Fujita_Memorial_Garden_20220618a.jpg/960px-Western_style_house_of_the_Fujita_Memorial_Garden_20220618a.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_style_house_of_the_Fujita_Memorial_Garden_20220618a.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.603766,
+            "lng": 140.461301
+          }
+        },
+        {
+          "title": "Western style house of the Fujita Memorial Garden 20220618c",
+          "description": "青森県弘前市にある藤田記念庭園の洋館・1階内部には大正浪漫喫茶室があり、漫画『ふらいんぐうぃっち』作中で登場する「喫茶コンクルシオ」のモチーフとなっている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Western_style_house_of_the_Fujita_Memorial_Garden_20220618c.jpg/960px-Western_style_house_of_the_Fujita_Memorial_Garden_20220618c.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_style_house_of_the_Fujita_Memorial_Garden_20220618c.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.603394,
+            "lng": 140.461233
+          }
+        },
+        {
+          "title": "Western style house of the Fujita Memorial Garden 20220618b",
+          "description": "青森県弘前市にある藤田記念庭園の洋館・1階内部には大正浪漫喫茶室があり、漫画『ふらいんぐうぃっち』作中で登場する「喫茶コンクルシオ」のモチーフとなっている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Western_style_house_of_the_Fujita_Memorial_Garden_20220618b.jpg/960px-Western_style_house_of_the_Fujita_Memorial_Garden_20220618b.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_style_house_of_the_Fujita_Memorial_Garden_20220618b.jpg",
+          "credit": "掬茶",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 40.603557,
+            "lng": 140.461174
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

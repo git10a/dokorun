@@ -1,0 +1,127 @@
+{
+  "slug": "onomichi-suido-run",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "サイクリストの聖地・しまなみ海道の本州側玄関口を走る街ラン周回。海運倉庫をリノベした複合施設ONOMICHI U2前のプロムナードから、向島を対岸に望む尾道水道沿いを東へ。国宝の本堂と多宝塔を持つ浄土寺まで行き、石段を上って参拝したら本通り商店街のアーケードと駅前を抜けて戻る。海風と坂のまち尾道のレトロな路地を一度に味わえる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR尾道駅から徒歩約5分(ONOMICHI U2前) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "尾道駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.404826,
+      "destinationLng": 133.192884,
+      "routeAnchorLat": 34.401815,
+      "routeAnchorLng": 133.190013,
+      "routeMode": "loop",
+      "accessText": "尾道駅からコースまで約430m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.401815,
+      "anchorLng": 133.190013,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 500px provided description: Onomichi U2 [#Hotel ,#Japan ,#Trip ,#Onomichi]",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Onomichi_U2_%28172199147%29.jpeg/960px-Onomichi_U2_%28172199147%29.jpeg",
+        "alt": "尾道水道・海岸通りのスタート周辺付近",
+        "caption": "尾道水道・海岸通りの走路近隣で撮影された風景",
+        "credit": "Takuya Matsuyama",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Onomichi_U2_(172199147).jpeg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.406902,
+      "anchorLng": 133.198129,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 福本渡船土堂渡し場と尾道渡船土堂渡し場付近の尾道水道。対岸は向島の岩屋山",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Onomichi_Channel_between_Tsuchido_Pier_of_Fukumoto_Ferry_and_Tsuchido_Pier_of_Onomichi_Ferry.jpg/960px-Onomichi_Channel_between_Tsuchido_Pier_of_Fukumoto_Ferry_and_Tsuchido_Pier_of_Onomichi_Ferry.jpg",
+        "alt": "尾道水道・海岸通りの序盤区間付近",
+        "caption": "尾道水道・海岸通りの走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Onomichi_Channel_between_Tsuchido_Pier_of_Fukumoto_Ferry_and_Tsuchido_Pier_of_Onomichi_Ferry.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.41012,
+      "anchorLng": 133.207292,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 尾道水道",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg/960px-%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg",
+        "alt": "尾道水道・海岸通りの中盤区間付近",
+        "caption": "尾道水道・海岸通りの走路近隣で撮影された風景",
+        "credit": "米田賢一",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.40931,
+      "anchorLng": 133.205129,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 尾道水道",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg/960px-%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg",
+        "alt": "尾道水道・海岸通りの後半区間付近",
+        "caption": "尾道水道・海岸通りの走路近隣で撮影された風景",
+        "credit": "米田賢一",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%BE%E9%81%93%E6%B0%B4%E9%81%93_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.406485,
+      "anchorLng": 133.197006,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 福本渡船土堂渡し場付近の尾道水道",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Onomichi_Channel_near_Tsuchido_Pier_of_Fukumoto_Ferry_7.jpg/960px-Onomichi_Channel_near_Tsuchido_Pier_of_Fukumoto_Ferry_7.jpg",
+        "alt": "尾道水道・海岸通りの終盤区間付近",
+        "caption": "尾道水道・海岸通りの走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Onomichi_Channel_near_Tsuchido_Pier_of_Fukumoto_Ferry_7.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

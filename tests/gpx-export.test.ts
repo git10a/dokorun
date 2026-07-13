@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { lineStringToGpx, pointsToGpx, rotateClosedLoopPoints } from "@/lib/gpx-export";
+import { lineStringToGpx, pointsToGpx, reversePoints, rotateClosedLoopPoints } from "@/lib/gpx-export";
 
 describe("lineStringToGpx", () => {
   it("exports longitude and latitude in GPX order", () => {
@@ -37,5 +37,14 @@ describe("lineStringToGpx", () => {
       { lat: 35, lng: 139.01, ele: null },
       { lat: 35.01, lng: 139.01, ele: null },
     ], { lat: 35, lng: 139 })).toThrow("閉じた周回コース");
+  });
+
+  it("reverses a one-way route without mutating the source", () => {
+    const points = [
+      { lat: 35, lng: 139, ele: 10 },
+      { lat: 36, lng: 140, ele: 20 },
+    ];
+    expect(reversePoints(points)).toEqual([points[1], points[0]]);
+    expect(points[0].lat).toBe(35);
   });
 });

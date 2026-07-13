@@ -1,0 +1,615 @@
+{
+  "slug": "irozaki-seaside-trail",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "伊豆半島最南端、石廊崎の遊覧船乗り場駐車場を起点に石廊崎灯台へ往復したあと、海を見下ろすハイキング道で中木集落方面へ抜け、帰路はあいあい岬・ユウスゲ公園を通る県道16号の絶景シーサイドロードで戻る約10.9kmの周回。累積約390mとアップダウンは多めだが、断崖と青い海の景色が続く。駐車場とあいあい岬に売店・自販機・トイレあり。山道区間は夏場に草が茂るため肌の露出を抑えた服装が安心。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 車:石廊崎オーシャンパーク駐車場/バス:伊豆急下田駅から石廊崎方面行き 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "周回コース起点",
+      "badge": "コース起点",
+      "destinationLat": 34.609587,
+      "destinationLng": 138.842313,
+      "routeAnchorLat": 34.609587,
+      "routeAnchorLng": 138.842313,
+      "routeMode": "loop",
+      "accessText": "登録されているコース起点へ移動",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.609587,
+      "routeLng": 138.842313,
+      "elevationM": 20.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 201,
+        "section-3": 4345,
+        "section-4": 6508,
+        "section-5": 8678
+      },
+      "gpxHref": "/gpx/irozaki-seaside-trail-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.609587,
+      "anchorLng": 138.842313,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: [静岡県] 伊豆-伊豆半島の南端、石廊崎を少し過ぎたとこにある奥石廊の展望台より。天気はいいが少しガス。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%28%E9%9D%99%E5%B2%A1%E7%9C%8C%29_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg/960px-thumbnail.jpg",
+        "alt": "石廊崎・奥石廊トレイルのスタート周辺付近",
+        "caption": "石廊崎・奥石廊トレイルの走路近隣で撮影された風景",
+        "credit": "Shift",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:(%E9%9D%99%E5%B2%A1%E7%9C%8C)_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.609587,
+      "routeLng": 138.842313,
+      "elevationM": 20.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.607878,
+      "anchorLng": 138.8423,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: [静岡県] 伊豆-伊豆半島の南端、石廊崎を少し過ぎたとこにある奥石廊の展望台より。天気はいいが少しガス。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%28%E9%9D%99%E5%B2%A1%E7%9C%8C%29_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg/960px-thumbnail.jpg",
+        "alt": "石廊崎・奥石廊トレイルの序盤区間付近",
+        "caption": "石廊崎・奥石廊トレイルの走路近隣で撮影された風景",
+        "credit": "Shift",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:(%E9%9D%99%E5%B2%A1%E7%9C%8C)_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 11,
+      "routeDistanceM": 201,
+      "routeLat": 34.607878,
+      "routeLng": 138.8423,
+      "elevationM": 45.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.610997,
+      "anchorLng": 138.836552,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: [静岡県] 伊豆-伊豆半島の南端、石廊崎を少し過ぎたとこにある奥石廊の展望台より。天気はいいが少しガス。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%28%E9%9D%99%E5%B2%A1%E7%9C%8C%29_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg/960px-thumbnail.jpg",
+        "alt": "石廊崎・奥石廊トレイルの中盤区間付近",
+        "caption": "石廊崎・奥石廊トレイルの走路近隣で撮影された風景",
+        "credit": "Shift",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:(%E9%9D%99%E5%B2%A1%E7%9C%8C)_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 255,
+      "routeDistanceM": 4345,
+      "routeLat": 34.610997,
+      "routeLng": 138.836552,
+      "elevationM": 81,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.6158,
+      "anchorLng": 138.822506,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: [静岡県] 伊豆-伊豆半島の南端、石廊崎を少し過ぎたとこにある奥石廊の展望台より。天気はいいが少しガス。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%28%E9%9D%99%E5%B2%A1%E7%9C%8C%29_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg/960px-thumbnail.jpg",
+        "alt": "石廊崎・奥石廊トレイルの後半区間付近",
+        "caption": "石廊崎・奥石廊トレイルの走路近隣で撮影された風景",
+        "credit": "Shift",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:(%E9%9D%99%E5%B2%A1%E7%9C%8C)_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 369,
+      "routeDistanceM": 6508,
+      "routeLat": 34.6158,
+      "routeLng": 138.822506,
+      "elevationM": 15.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.608568,
+      "anchorLng": 138.831959,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: [静岡県] 伊豆-伊豆半島の南端、石廊崎を少し過ぎたとこにある奥石廊の展望台より。天気はいいが少しガス。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/%28%E9%9D%99%E5%B2%A1%E7%9C%8C%29_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg/960px-thumbnail.jpg",
+        "alt": "石廊崎・奥石廊トレイルの終盤区間付近",
+        "caption": "石廊崎・奥石廊トレイルの走路近隣で撮影された風景",
+        "credit": "Shift",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:(%E9%9D%99%E5%B2%A1%E7%9C%8C)_%E4%BC%8A%E8%B1%86-%E4%BC%8A%E8%B1%86%E5%8D%8A%E5%B3%B6%E3%81%AE%E5%8D%97%E7%AB%AF%E3%80%81%E7%9F%B3%E5%BB%8A%E5%B4%8E%E3%82%92%E5%B0%91%E3%81%97%E9%81%8E%E3%81%8E%E3%81%9F%E3%81%A8%E3%81%93%E3%81%AB%E3%81%82%E3%82%8B%E5%A5%A5%E7%9F%B3%E5%BB%8A%E3%81%AE%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A%E3%80%82%E5%A4%A9%E6%B0%97%E3%81%AF%E3%81%84%E3%81%84%E3%81%8C%E5%B0%91%E3%81%97%E3%82%AC%E3%82%B9%E3%80%82_-_panoramio.jpg"
+      },
+      "routePointIndex": 477,
+      "routeDistanceM": 8678,
+      "routeLat": 34.608568,
+      "routeLng": 138.831959,
+      "elevationM": 87,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 10875,
+  "elevationGainM": 389,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 45.1
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 499,
+      "elevationM": 58
+    },
+    {
+      "distanceM": 599,
+      "elevationM": 56.8
+    },
+    {
+      "distanceM": 698,
+      "elevationM": 52.4
+    },
+    {
+      "distanceM": 798,
+      "elevationM": 46.9
+    },
+    {
+      "distanceM": 898,
+      "elevationM": 35.3
+    },
+    {
+      "distanceM": 998,
+      "elevationM": 20.3
+    },
+    {
+      "distanceM": 1097,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 1197,
+      "elevationM": 47.3
+    },
+    {
+      "distanceM": 1297,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 1397,
+      "elevationM": 56.2
+    },
+    {
+      "distanceM": 1496,
+      "elevationM": 58.8
+    },
+    {
+      "distanceM": 1596,
+      "elevationM": 52.1
+    },
+    {
+      "distanceM": 1696,
+      "elevationM": 43
+    },
+    {
+      "distanceM": 1796,
+      "elevationM": 44.4
+    },
+    {
+      "distanceM": 1896,
+      "elevationM": 34.9
+    },
+    {
+      "distanceM": 1995,
+      "elevationM": 20.8
+    },
+    {
+      "distanceM": 2095,
+      "elevationM": 35.5
+    },
+    {
+      "distanceM": 2195,
+      "elevationM": 46.2
+    },
+    {
+      "distanceM": 2295,
+      "elevationM": 44.3
+    },
+    {
+      "distanceM": 2394,
+      "elevationM": 53.7
+    },
+    {
+      "distanceM": 2494,
+      "elevationM": 61
+    },
+    {
+      "distanceM": 2594,
+      "elevationM": 68.5
+    },
+    {
+      "distanceM": 2694,
+      "elevationM": 75
+    },
+    {
+      "distanceM": 2793,
+      "elevationM": 87
+    },
+    {
+      "distanceM": 2893,
+      "elevationM": 83.7
+    },
+    {
+      "distanceM": 2993,
+      "elevationM": 77.1
+    },
+    {
+      "distanceM": 3093,
+      "elevationM": 75.3
+    },
+    {
+      "distanceM": 3193,
+      "elevationM": 78.4
+    },
+    {
+      "distanceM": 3292,
+      "elevationM": 76.5
+    },
+    {
+      "distanceM": 3392,
+      "elevationM": 65.7
+    },
+    {
+      "distanceM": 3492,
+      "elevationM": 70
+    },
+    {
+      "distanceM": 3592,
+      "elevationM": 53.6
+    },
+    {
+      "distanceM": 3691,
+      "elevationM": 55.1
+    },
+    {
+      "distanceM": 3791,
+      "elevationM": 70.9
+    },
+    {
+      "distanceM": 3891,
+      "elevationM": 65.9
+    },
+    {
+      "distanceM": 3991,
+      "elevationM": 76.5
+    },
+    {
+      "distanceM": 4090,
+      "elevationM": 78.5
+    },
+    {
+      "distanceM": 4190,
+      "elevationM": 78.3
+    },
+    {
+      "distanceM": 4290,
+      "elevationM": 76.9
+    },
+    {
+      "distanceM": 4390,
+      "elevationM": 86
+    },
+    {
+      "distanceM": 4489,
+      "elevationM": 84.4
+    },
+    {
+      "distanceM": 4589,
+      "elevationM": 92.4
+    },
+    {
+      "distanceM": 4689,
+      "elevationM": 110.4
+    },
+    {
+      "distanceM": 4789,
+      "elevationM": 107
+    },
+    {
+      "distanceM": 4889,
+      "elevationM": 107.5
+    },
+    {
+      "distanceM": 4988,
+      "elevationM": 109.7
+    },
+    {
+      "distanceM": 5088,
+      "elevationM": 112.4
+    },
+    {
+      "distanceM": 5188,
+      "elevationM": 115.9
+    },
+    {
+      "distanceM": 5288,
+      "elevationM": 127.6
+    },
+    {
+      "distanceM": 5387,
+      "elevationM": 120.9
+    },
+    {
+      "distanceM": 5487,
+      "elevationM": 117.9
+    },
+    {
+      "distanceM": 5587,
+      "elevationM": 111.7
+    },
+    {
+      "distanceM": 5687,
+      "elevationM": 85.3
+    },
+    {
+      "distanceM": 5786,
+      "elevationM": 69.4
+    },
+    {
+      "distanceM": 5886,
+      "elevationM": 63.8
+    },
+    {
+      "distanceM": 5986,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 6086,
+      "elevationM": 19.2
+    },
+    {
+      "distanceM": 6185,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 6285,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 6385,
+      "elevationM": 10.4
+    },
+    {
+      "distanceM": 6485,
+      "elevationM": 16.8
+    },
+    {
+      "distanceM": 6585,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 6684,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 6784,
+      "elevationM": 15.3
+    },
+    {
+      "distanceM": 6884,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 6984,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 7083,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 7183,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 7283,
+      "elevationM": 17.4
+    },
+    {
+      "distanceM": 7383,
+      "elevationM": 35.7
+    },
+    {
+      "distanceM": 7482,
+      "elevationM": 63.4
+    },
+    {
+      "distanceM": 7582,
+      "elevationM": 63.5
+    },
+    {
+      "distanceM": 7682,
+      "elevationM": 65.7
+    },
+    {
+      "distanceM": 7782,
+      "elevationM": 86.5
+    },
+    {
+      "distanceM": 7882,
+      "elevationM": 86.3
+    },
+    {
+      "distanceM": 7981,
+      "elevationM": 76.5
+    },
+    {
+      "distanceM": 8081,
+      "elevationM": 66.7
+    },
+    {
+      "distanceM": 8181,
+      "elevationM": 76.8
+    },
+    {
+      "distanceM": 8281,
+      "elevationM": 85
+    },
+    {
+      "distanceM": 8380,
+      "elevationM": 89.9
+    },
+    {
+      "distanceM": 8480,
+      "elevationM": 85.7
+    },
+    {
+      "distanceM": 8580,
+      "elevationM": 83
+    },
+    {
+      "distanceM": 8680,
+      "elevationM": 87.1
+    },
+    {
+      "distanceM": 8779,
+      "elevationM": 97.7
+    },
+    {
+      "distanceM": 8879,
+      "elevationM": 106.5
+    },
+    {
+      "distanceM": 8979,
+      "elevationM": 108
+    },
+    {
+      "distanceM": 9079,
+      "elevationM": 108.3
+    },
+    {
+      "distanceM": 9178,
+      "elevationM": 97.5
+    },
+    {
+      "distanceM": 9278,
+      "elevationM": 84.2
+    },
+    {
+      "distanceM": 9378,
+      "elevationM": 87.3
+    },
+    {
+      "distanceM": 9478,
+      "elevationM": 78.8
+    },
+    {
+      "distanceM": 9578,
+      "elevationM": 74.8
+    },
+    {
+      "distanceM": 9677,
+      "elevationM": 78.5
+    },
+    {
+      "distanceM": 9777,
+      "elevationM": 75.3
+    },
+    {
+      "distanceM": 9877,
+      "elevationM": 77.2
+    },
+    {
+      "distanceM": 9977,
+      "elevationM": 83.8
+    },
+    {
+      "distanceM": 10076,
+      "elevationM": 87.2
+    },
+    {
+      "distanceM": 10176,
+      "elevationM": 73.7
+    },
+    {
+      "distanceM": 10276,
+      "elevationM": 68.4
+    },
+    {
+      "distanceM": 10376,
+      "elevationM": 60.8
+    },
+    {
+      "distanceM": 10475,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 10575,
+      "elevationM": 43.7
+    },
+    {
+      "distanceM": 10675,
+      "elevationM": 45.1
+    },
+    {
+      "distanceM": 10775,
+      "elevationM": 35
+    },
+    {
+      "distanceM": 10875,
+      "elevationM": 19.3
+    }
+  ]
+}

@@ -1,0 +1,964 @@
+{
+  "slug": "kamakura-kiridoshi-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "鎌倉駅東口から鎌倉宮を経て天園ハイキングコースに入り、鎌倉市最高点の大平山(159m)から市境の尾根で大丸山(157m)へ立ち寄り、鎌倉七口のひとつ朝夷奈切通を下る。逗子側の久木大池から名越切通を抜けて駅へ戻る約17.6kmの周回。中世の切通しの岩壁と照葉樹の森が続き、急登が少ないためトレイル初級者のステップアップに向く。途中の熊野神社や天園休憩所が目印。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR横須賀線・江ノ島電鉄鎌倉駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "鎌倉駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.318793,
+      "destinationLng": 139.550428,
+      "routeAnchorLat": 35.318584,
+      "routeAnchorLng": 139.551197,
+      "routeMode": "loop",
+      "accessText": "鎌倉駅からコースまで約70m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.318584,
+      "routeLng": 139.551197,
+      "elevationM": 12.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 3503,
+        "section-3": 7020,
+        "section-4": 10561,
+        "section-5": 14061
+      },
+      "gpxHref": "/gpx/kamakura-kiridoshi-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "北鎌倉駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.337198,
+      "destinationLng": 139.545134,
+      "routeAnchorLat": 35.33337,
+      "routeAnchorLng": 139.57025,
+      "routeMode": "loop",
+      "accessText": "北鎌倉駅からコースまで約2320m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 179,
+      "routeDistanceM": 3503,
+      "routeLat": 35.33337,
+      "routeLng": 139.57025,
+      "elevationM": 89.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 14066,
+        "section-2": 0,
+        "section-3": 3517,
+        "section-4": 7058,
+        "section-5": 10558
+      },
+      "gpxHref": "/gpx/kamakura-kiridoshi-loop-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "六浦駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.32269,
+      "destinationLng": 139.611532,
+      "routeAnchorLat": 35.326599,
+      "routeAnchorLng": 139.588654,
+      "routeMode": "loop",
+      "accessText": "六浦駅からコースまで約2110m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 524,
+      "routeDistanceM": 10561,
+      "routeLat": 35.326599,
+      "routeLng": 139.588654,
+      "elevationM": 92.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 7008,
+        "section-2": 10511,
+        "section-3": 14028,
+        "section-4": 0,
+        "section-5": 3500
+      },
+      "gpxHref": "/gpx/kamakura-kiridoshi-loop-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "逗子駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.297392,
+      "destinationLng": 139.578292,
+      "routeAnchorLat": 35.31237,
+      "routeAnchorLng": 139.571877,
+      "routeMode": "loop",
+      "accessText": "逗子駅からコースまで約1760m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 677,
+      "routeDistanceM": 14061,
+      "routeLat": 35.31237,
+      "routeLng": 139.571877,
+      "elevationM": 76.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 3508,
+        "section-2": 7011,
+        "section-3": 10528,
+        "section-4": 14069,
+        "section-5": 0
+      },
+      "gpxHref": "/gpx/kamakura-kiridoshi-loop-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.318584,
+      "anchorLng": 139.551197,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: JR鎌倉駅",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/JR%E9%8E%8C%E5%80%89%E9%A7%85_-_panoramio.jpg/960px-JR%E9%8E%8C%E5%80%89%E9%A7%85_-_panoramio.jpg",
+        "alt": "鎌倉切通し巡りトレイルのスタート周辺付近",
+        "caption": "鎌倉切通し巡りトレイルの走路近隣で撮影された風景",
+        "credit": "comachiangel",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR%E9%8E%8C%E5%80%89%E9%A7%85_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.318584,
+      "routeLng": 139.551197,
+      "elevationM": 12.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.33337,
+      "anchorLng": 139.57025,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: ShiShi-Mai",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/ShiShi-Mai_-_panoramio.jpg/960px-ShiShi-Mai_-_panoramio.jpg",
+        "alt": "鎌倉切通し巡りトレイルの序盤区間付近",
+        "caption": "鎌倉切通し巡りトレイルの走路近隣で撮影された風景",
+        "credit": "Koichi Shibata",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ShiShi-Mai_-_panoramio.jpg"
+      },
+      "routePointIndex": 179,
+      "routeDistanceM": 3503,
+      "routeLat": 35.33337,
+      "routeLng": 139.57025,
+      "elevationM": 89.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.345653,
+      "anchorLng": 139.589068,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 神奈川県横浜市金沢区、大丸山山頂。奥は東京湾と、このように晴れていれば房総半島が見える。手前の三角形建物は八景島。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Oomaruyama2.jpg/960px-Oomaruyama2.jpg",
+        "alt": "鎌倉切通し巡りトレイルの中盤区間付近",
+        "caption": "鎌倉切通し巡りトレイルの走路近隣で撮影された風景",
+        "credit": "Yoshi Canopus",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oomaruyama2.jpg"
+      },
+      "routePointIndex": 382,
+      "routeDistanceM": 7020,
+      "routeLat": 35.345653,
+      "routeLng": 139.589068,
+      "elevationM": 148.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.326599,
+      "anchorLng": 139.588654,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 神奈川県道204号 鎌倉市十二所（じゅうにそ）。2004年11月9日、本人撮影。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%81%93204%E5%8F%B7%E5%8D%81%E4%BA%8C%E6%89%80%E4%BB%98%E8%BF%91.jpg",
+        "alt": "鎌倉切通し巡りトレイルの後半区間付近",
+        "caption": "鎌倉切通し巡りトレイルの走路近隣で撮影された風景",
+        "credit": "S.fukasawa",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%81%93204%E5%8F%B7%E5%8D%81%E4%BA%8C%E6%89%80%E4%BB%98%E8%BF%91.jpg"
+      },
+      "routePointIndex": 524,
+      "routeDistanceM": 10561,
+      "routeLat": 35.326599,
+      "routeLng": 139.588654,
+      "elevationM": 92.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.31237,
+      "anchorLng": 139.571877,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: オニシバリ（鎌倉市子ども自然ふれあいの森）",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Onishibari_20170602.jpg/960px-Onishibari_20170602.jpg",
+        "alt": "鎌倉切通し巡りトレイルの終盤区間付近",
+        "caption": "鎌倉切通し巡りトレイルの走路近隣で撮影された風景",
+        "credit": "Kaba-maru",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Onishibari_20170602.jpg"
+      },
+      "routePointIndex": 677,
+      "routeDistanceM": 14061,
+      "routeLat": 35.31237,
+      "routeLng": 139.571877,
+      "elevationM": 76.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 17569,
+  "elevationGainM": 477,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 12.3
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 11.1
+    },
+    {
+      "distanceM": 299,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 399,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 499,
+      "elevationM": 12.9
+    },
+    {
+      "distanceM": 599,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 699,
+      "elevationM": 12.3
+    },
+    {
+      "distanceM": 799,
+      "elevationM": 12.8
+    },
+    {
+      "distanceM": 898,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 998,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 1098,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1198,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1298,
+      "elevationM": 14.8
+    },
+    {
+      "distanceM": 1398,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1497,
+      "elevationM": 14.6
+    },
+    {
+      "distanceM": 1597,
+      "elevationM": 17
+    },
+    {
+      "distanceM": 1697,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 1797,
+      "elevationM": 17.6
+    },
+    {
+      "distanceM": 1897,
+      "elevationM": 18.9
+    },
+    {
+      "distanceM": 1996,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 2096,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 2196,
+      "elevationM": 20.8
+    },
+    {
+      "distanceM": 2296,
+      "elevationM": 22.2
+    },
+    {
+      "distanceM": 2396,
+      "elevationM": 32.4
+    },
+    {
+      "distanceM": 2496,
+      "elevationM": 22.5
+    },
+    {
+      "distanceM": 2595,
+      "elevationM": 25.8
+    },
+    {
+      "distanceM": 2695,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 2795,
+      "elevationM": 39.6
+    },
+    {
+      "distanceM": 2895,
+      "elevationM": 41.4
+    },
+    {
+      "distanceM": 2995,
+      "elevationM": 44.6
+    },
+    {
+      "distanceM": 3095,
+      "elevationM": 45
+    },
+    {
+      "distanceM": 3194,
+      "elevationM": 51.6
+    },
+    {
+      "distanceM": 3294,
+      "elevationM": 64.1
+    },
+    {
+      "distanceM": 3394,
+      "elevationM": 80.3
+    },
+    {
+      "distanceM": 3494,
+      "elevationM": 88.1
+    },
+    {
+      "distanceM": 3594,
+      "elevationM": 98.2
+    },
+    {
+      "distanceM": 3694,
+      "elevationM": 108.6
+    },
+    {
+      "distanceM": 3793,
+      "elevationM": 119.9
+    },
+    {
+      "distanceM": 3893,
+      "elevationM": 116.9
+    },
+    {
+      "distanceM": 3993,
+      "elevationM": 119.7
+    },
+    {
+      "distanceM": 4093,
+      "elevationM": 127.5
+    },
+    {
+      "distanceM": 4193,
+      "elevationM": 138.8
+    },
+    {
+      "distanceM": 4292,
+      "elevationM": 135.9
+    },
+    {
+      "distanceM": 4392,
+      "elevationM": 136.4
+    },
+    {
+      "distanceM": 4492,
+      "elevationM": 135.3
+    },
+    {
+      "distanceM": 4592,
+      "elevationM": 142.3
+    },
+    {
+      "distanceM": 4692,
+      "elevationM": 149
+    },
+    {
+      "distanceM": 4792,
+      "elevationM": 136.7
+    },
+    {
+      "distanceM": 4891,
+      "elevationM": 122.9
+    },
+    {
+      "distanceM": 4991,
+      "elevationM": 119.9
+    },
+    {
+      "distanceM": 5091,
+      "elevationM": 114.7
+    },
+    {
+      "distanceM": 5191,
+      "elevationM": 116.5
+    },
+    {
+      "distanceM": 5291,
+      "elevationM": 125.7
+    },
+    {
+      "distanceM": 5391,
+      "elevationM": 118.1
+    },
+    {
+      "distanceM": 5490,
+      "elevationM": 116.5
+    },
+    {
+      "distanceM": 5590,
+      "elevationM": 117.3
+    },
+    {
+      "distanceM": 5690,
+      "elevationM": 108.7
+    },
+    {
+      "distanceM": 5790,
+      "elevationM": 108.7
+    },
+    {
+      "distanceM": 5890,
+      "elevationM": 108
+    },
+    {
+      "distanceM": 5989,
+      "elevationM": 119.9
+    },
+    {
+      "distanceM": 6089,
+      "elevationM": 126.4
+    },
+    {
+      "distanceM": 6189,
+      "elevationM": 134.5
+    },
+    {
+      "distanceM": 6289,
+      "elevationM": 134.1
+    },
+    {
+      "distanceM": 6389,
+      "elevationM": 131.7
+    },
+    {
+      "distanceM": 6489,
+      "elevationM": 129.9
+    },
+    {
+      "distanceM": 6588,
+      "elevationM": 139
+    },
+    {
+      "distanceM": 6688,
+      "elevationM": 144
+    },
+    {
+      "distanceM": 6788,
+      "elevationM": 142.3
+    },
+    {
+      "distanceM": 6888,
+      "elevationM": 142.9
+    },
+    {
+      "distanceM": 6988,
+      "elevationM": 145.5
+    },
+    {
+      "distanceM": 7088,
+      "elevationM": 147.1
+    },
+    {
+      "distanceM": 7187,
+      "elevationM": 147.5
+    },
+    {
+      "distanceM": 7287,
+      "elevationM": 142.4
+    },
+    {
+      "distanceM": 7387,
+      "elevationM": 139.4
+    },
+    {
+      "distanceM": 7487,
+      "elevationM": 144.6
+    },
+    {
+      "distanceM": 7587,
+      "elevationM": 143.9
+    },
+    {
+      "distanceM": 7686,
+      "elevationM": 133.9
+    },
+    {
+      "distanceM": 7786,
+      "elevationM": 128.8
+    },
+    {
+      "distanceM": 7886,
+      "elevationM": 133.9
+    },
+    {
+      "distanceM": 7986,
+      "elevationM": 136
+    },
+    {
+      "distanceM": 8086,
+      "elevationM": 130.8
+    },
+    {
+      "distanceM": 8186,
+      "elevationM": 122.9
+    },
+    {
+      "distanceM": 8285,
+      "elevationM": 123.7
+    },
+    {
+      "distanceM": 8385,
+      "elevationM": 121.4
+    },
+    {
+      "distanceM": 8485,
+      "elevationM": 108.3
+    },
+    {
+      "distanceM": 8585,
+      "elevationM": 93.8
+    },
+    {
+      "distanceM": 8685,
+      "elevationM": 80.9
+    },
+    {
+      "distanceM": 8785,
+      "elevationM": 69
+    },
+    {
+      "distanceM": 8884,
+      "elevationM": 65.2
+    },
+    {
+      "distanceM": 8984,
+      "elevationM": 58.7
+    },
+    {
+      "distanceM": 9084,
+      "elevationM": 57.7
+    },
+    {
+      "distanceM": 9184,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 9284,
+      "elevationM": 47.4
+    },
+    {
+      "distanceM": 9383,
+      "elevationM": 49.6
+    },
+    {
+      "distanceM": 9483,
+      "elevationM": 47
+    },
+    {
+      "distanceM": 9583,
+      "elevationM": 37.5
+    },
+    {
+      "distanceM": 9683,
+      "elevationM": 30.4
+    },
+    {
+      "distanceM": 9783,
+      "elevationM": 30.2
+    },
+    {
+      "distanceM": 9883,
+      "elevationM": 42.3
+    },
+    {
+      "distanceM": 9982,
+      "elevationM": 57.5
+    },
+    {
+      "distanceM": 10082,
+      "elevationM": 76.8
+    },
+    {
+      "distanceM": 10182,
+      "elevationM": 86.7
+    },
+    {
+      "distanceM": 10282,
+      "elevationM": 104.8
+    },
+    {
+      "distanceM": 10382,
+      "elevationM": 112.7
+    },
+    {
+      "distanceM": 10482,
+      "elevationM": 104.8
+    },
+    {
+      "distanceM": 10581,
+      "elevationM": 88.5
+    },
+    {
+      "distanceM": 10681,
+      "elevationM": 79.5
+    },
+    {
+      "distanceM": 10781,
+      "elevationM": 66.3
+    },
+    {
+      "distanceM": 10881,
+      "elevationM": 60.1
+    },
+    {
+      "distanceM": 10981,
+      "elevationM": 67.8
+    },
+    {
+      "distanceM": 11081,
+      "elevationM": 78.3
+    },
+    {
+      "distanceM": 11180,
+      "elevationM": 87
+    },
+    {
+      "distanceM": 11280,
+      "elevationM": 98.9
+    },
+    {
+      "distanceM": 11380,
+      "elevationM": 113.2
+    },
+    {
+      "distanceM": 11480,
+      "elevationM": 119.1
+    },
+    {
+      "distanceM": 11580,
+      "elevationM": 118.5
+    },
+    {
+      "distanceM": 11679,
+      "elevationM": 110.3
+    },
+    {
+      "distanceM": 11779,
+      "elevationM": 100.5
+    },
+    {
+      "distanceM": 11879,
+      "elevationM": 98.8
+    },
+    {
+      "distanceM": 11979,
+      "elevationM": 92.4
+    },
+    {
+      "distanceM": 12079,
+      "elevationM": 91.3
+    },
+    {
+      "distanceM": 12179,
+      "elevationM": 84.7
+    },
+    {
+      "distanceM": 12278,
+      "elevationM": 78.3
+    },
+    {
+      "distanceM": 12378,
+      "elevationM": 73.9
+    },
+    {
+      "distanceM": 12478,
+      "elevationM": 70.2
+    },
+    {
+      "distanceM": 12578,
+      "elevationM": 72.2
+    },
+    {
+      "distanceM": 12678,
+      "elevationM": 69
+    },
+    {
+      "distanceM": 12778,
+      "elevationM": 63.8
+    },
+    {
+      "distanceM": 12877,
+      "elevationM": 56.3
+    },
+    {
+      "distanceM": 12977,
+      "elevationM": 59
+    },
+    {
+      "distanceM": 13077,
+      "elevationM": 52.9
+    },
+    {
+      "distanceM": 13177,
+      "elevationM": 50.3
+    },
+    {
+      "distanceM": 13277,
+      "elevationM": 44.9
+    },
+    {
+      "distanceM": 13376,
+      "elevationM": 43.9
+    },
+    {
+      "distanceM": 13476,
+      "elevationM": 44.7
+    },
+    {
+      "distanceM": 13576,
+      "elevationM": 51.2
+    },
+    {
+      "distanceM": 13676,
+      "elevationM": 57
+    },
+    {
+      "distanceM": 13776,
+      "elevationM": 59.9
+    },
+    {
+      "distanceM": 13876,
+      "elevationM": 65
+    },
+    {
+      "distanceM": 13975,
+      "elevationM": 70.3
+    },
+    {
+      "distanceM": 14075,
+      "elevationM": 77.9
+    },
+    {
+      "distanceM": 14175,
+      "elevationM": 84.2
+    },
+    {
+      "distanceM": 14275,
+      "elevationM": 84.7
+    },
+    {
+      "distanceM": 14375,
+      "elevationM": 85.8
+    },
+    {
+      "distanceM": 14475,
+      "elevationM": 85.6
+    },
+    {
+      "distanceM": 14574,
+      "elevationM": 91.7
+    },
+    {
+      "distanceM": 14674,
+      "elevationM": 90.2
+    },
+    {
+      "distanceM": 14774,
+      "elevationM": 72.6
+    },
+    {
+      "distanceM": 14874,
+      "elevationM": 70.9
+    },
+    {
+      "distanceM": 14974,
+      "elevationM": 76.7
+    },
+    {
+      "distanceM": 15073,
+      "elevationM": 82.5
+    },
+    {
+      "distanceM": 15173,
+      "elevationM": 79.8
+    },
+    {
+      "distanceM": 15273,
+      "elevationM": 78.3
+    },
+    {
+      "distanceM": 15373,
+      "elevationM": 74.7
+    },
+    {
+      "distanceM": 15473,
+      "elevationM": 79.7
+    },
+    {
+      "distanceM": 15573,
+      "elevationM": 70.6
+    },
+    {
+      "distanceM": 15672,
+      "elevationM": 52.5
+    },
+    {
+      "distanceM": 15772,
+      "elevationM": 31.6
+    },
+    {
+      "distanceM": 15872,
+      "elevationM": 22.6
+    },
+    {
+      "distanceM": 15972,
+      "elevationM": 22.4
+    },
+    {
+      "distanceM": 16072,
+      "elevationM": 22.2
+    },
+    {
+      "distanceM": 16172,
+      "elevationM": 17.4
+    },
+    {
+      "distanceM": 16271,
+      "elevationM": 16.6
+    },
+    {
+      "distanceM": 16371,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 16471,
+      "elevationM": 10.8
+    },
+    {
+      "distanceM": 16571,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 16671,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 16771,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 16870,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 16970,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 17070,
+      "elevationM": 7.3
+    },
+    {
+      "distanceM": 17170,
+      "elevationM": 7.5
+    },
+    {
+      "distanceM": 17270,
+      "elevationM": 6.9
+    },
+    {
+      "distanceM": 17369,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 17469,
+      "elevationM": 10.9
+    },
+    {
+      "distanceM": 17569,
+      "elevationM": 12.8
+    }
+  ]
+}

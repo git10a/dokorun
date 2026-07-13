@@ -1,0 +1,262 @@
+{
+  "slug": "negishi-forest-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "根岸森林公園は旧競馬場跡の広い芝地と外周園路を生かした有名スポットで、代表周回は約1.3kmです。距離表示はないものの、適度なアップダウンがあり、木立の間を抜ける気持ち良さと脚への刺激を両立できます。レストハウスのシャワー付きロッカーも使いやすく、遠方からでも寄りやすい公園です。ジョグだけでなく、起伏を利用したテンポ走や脚づくり、レース後半の粘りを意識した練習に向いています。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR根岸線 根岸駅からバス利用、旭台下車徒歩3分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "根岸駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.415887,
+      "destinationLng": 139.636034,
+      "routeAnchorLat": 35.422843,
+      "routeAnchorLng": 139.638651,
+      "routeMode": "loop",
+      "accessText": "根岸駅からコースまで約810m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.422843,
+      "routeLng": 139.638651,
+      "elevationM": 45.6,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 265,
+        "section-3": 523,
+        "section-4": 786,
+        "section-5": 1061
+      },
+      "gpxHref": "/gpx/negishi-forest-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "山手駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.426891,
+      "destinationLng": 139.646425,
+      "routeAnchorLat": 35.424776,
+      "routeAnchorLng": 139.639858,
+      "routeMode": "loop",
+      "accessText": "山手駅からコースまで約640m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 14,
+      "routeDistanceM": 265,
+      "routeLat": 35.424776,
+      "routeLng": 139.639858,
+      "elevationM": 40.2,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1065,
+        "section-2": 0,
+        "section-3": 258,
+        "section-4": 521,
+        "section-5": 796
+      },
+      "gpxHref": "/gpx/negishi-forest-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.422843,
+      "anchorLng": 139.638651,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 横浜市中区 根岸台 、 根岸住宅地区 にある米軍消防署",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Negishi_%EF%BC%A6irestation_No.5.jpg/960px-Negishi_%EF%BC%A6irestation_No.5.jpg",
+        "alt": "根岸森林公園のスタート周辺付近",
+        "caption": "根岸森林公園の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Negishi_%EF%BC%A6irestation_No.5.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.422843,
+      "routeLng": 139.638651,
+      "elevationM": 45.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.424776,
+      "anchorLng": 139.639858,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 根岸森林公園にある、旧横濱競馬場一等馬見所跡を見てきました。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_%284574723996%29.jpg/960px-Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_%284574723996%29.jpg",
+        "alt": "根岸森林公園の序盤区間付近",
+        "caption": "根岸森林公園の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_(4574723996).jpg"
+      },
+      "routePointIndex": 14,
+      "routeDistanceM": 265,
+      "routeLat": 35.424776,
+      "routeLng": 139.639858,
+      "elevationM": 40.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.423829,
+      "anchorLng": 139.637798,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 根岸森林公園にある、旧横濱競馬場一等馬見所跡を見てきました。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_%284574723996%29.jpg/960px-Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_%284574723996%29.jpg",
+        "alt": "根岸森林公園の中盤区間付近",
+        "caption": "根岸森林公園の走路近隣で撮影された風景",
+        "credit": "Yamaguchi Yoshiaki from Japan",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Negishi_forest_park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_(4574723996).jpg"
+      },
+      "routePointIndex": 31,
+      "routeDistanceM": 523,
+      "routeLat": 35.423829,
+      "routeLng": 139.637798,
+      "elevationM": 45.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.422162,
+      "anchorLng": 139.635839,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 横浜市中区 根岸台 、 根岸住宅地区 にある米軍消防署",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Negishi_%EF%BC%A6irestation_No.5.jpg/960px-Negishi_%EF%BC%A6irestation_No.5.jpg",
+        "alt": "根岸森林公園の後半区間付近",
+        "caption": "根岸森林公園の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Negishi_%EF%BC%A6irestation_No.5.jpg"
+      },
+      "routePointIndex": 49,
+      "routeDistanceM": 786,
+      "routeLat": 35.422162,
+      "routeLng": 139.635839,
+      "elevationM": 52.6,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.420924,
+      "anchorLng": 139.637314,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 横浜市中区 根岸台 、 根岸住宅地区 にある米軍消防署",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Negishi_%EF%BC%A6irestation_No.5.jpg/960px-Negishi_%EF%BC%A6irestation_No.5.jpg",
+        "alt": "根岸森林公園の終盤区間付近",
+        "caption": "根岸森林公園の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Negishi_%EF%BC%A6irestation_No.5.jpg"
+      },
+      "routePointIndex": 68,
+      "routeDistanceM": 1061,
+      "routeLat": 35.420924,
+      "routeLng": 139.637314,
+      "elevationM": 46.9,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1330,
+  "elevationGainM": 17,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 45.6
+    },
+    {
+      "distanceM": 95,
+      "elevationM": 41.8
+    },
+    {
+      "distanceM": 190,
+      "elevationM": 40.2
+    },
+    {
+      "distanceM": 285,
+      "elevationM": 40.9
+    },
+    {
+      "distanceM": 380,
+      "elevationM": 46.5
+    },
+    {
+      "distanceM": 475,
+      "elevationM": 43.5
+    },
+    {
+      "distanceM": 570,
+      "elevationM": 47.8
+    },
+    {
+      "distanceM": 665,
+      "elevationM": 50.2
+    },
+    {
+      "distanceM": 760,
+      "elevationM": 53.4
+    },
+    {
+      "distanceM": 855,
+      "elevationM": 52.8
+    },
+    {
+      "distanceM": 950,
+      "elevationM": 51.8
+    },
+    {
+      "distanceM": 1045,
+      "elevationM": 47.6
+    },
+    {
+      "distanceM": 1140,
+      "elevationM": 47.2
+    },
+    {
+      "distanceM": 1235,
+      "elevationM": 47.5
+    },
+    {
+      "distanceM": 1330,
+      "elevationM": 45.6
+    }
+  ]
+}

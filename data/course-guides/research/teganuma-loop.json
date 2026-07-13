@@ -1,0 +1,735 @@
+{
+  "slug": "teganuma-loop",
+  "spot": {
+    "slug": "teganuma-loop",
+    "name": "手賀沼一周コース",
+    "prefecture": "千葉県",
+    "city": "柏市",
+    "access": "道の駅しょうなんに駐車場あり。東武野田線からバスでもアクセス可能です。",
+    "course_type": "loop",
+    "distance_m": 17236,
+    "elevation_gain_m": 114,
+    "hasGpx": true,
+    "hasGuide": true,
+    "pointCount": 3810,
+    "gpxDistanceM": 17236,
+    "distanceDifferencePct": 0,
+    "closureGapM": 11,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:22:02.942Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 35.866813,
+        "lng": 139.989848,
+        "ele": -6
+      },
+      "stations": [
+        {
+          "name": "北柏",
+          "prefecture": "千葉県",
+          "line": "JR常磐線各駅停車",
+          "x": 139.988035,
+          "y": 35.875623,
+          "postal": "2770831",
+          "distance": "990m",
+          "prev": "柏",
+          "next": "我孫子"
+        },
+        {
+          "name": "柏",
+          "prefecture": "千葉県",
+          "line": "東武野田線",
+          "x": 139.971148,
+          "y": 35.862316,
+          "postal": "2770842",
+          "distance": "1760m",
+          "prev": "豊四季",
+          "next": "新柏"
+        },
+        {
+          "name": "我孫子",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.010466,
+          "y": 35.87279,
+          "postal": "2701151",
+          "distance": "1980m",
+          "prev": "東我孫子",
+          "next": null
+        }
+      ],
+      "photos": [
+        {
+          "title": "Ballerina バレリーナ (5410694641)",
+          "description": "Ballerina バレリーナ",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Ballerina_%E3%83%90%E3%83%AC%E3%83%AA%E3%83%BC%E3%83%8A_%285410694641%29.jpg/960px-Ballerina_%E3%83%90%E3%83%AC%E3%83%AA%E3%83%BC%E3%83%8A_%285410694641%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ballerina_%E3%83%90%E3%83%AC%E3%83%AA%E3%83%BC%E3%83%8A_(5410694641).jpg",
+          "credit": "Urawa Zero",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.861399,
+            "lng": 139.977846
+          }
+        },
+        {
+          "title": "Visitor center (Tega marsh) - panoramio",
+          "description": "Visitor center (Tega marsh)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Visitor_center_%28Tega_marsh%29_-_panoramio.jpg/960px-Visitor_center_%28Tega_marsh%29_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Visitor_center_(Tega_marsh)_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.864737,
+            "lng": 139.994582
+          }
+        },
+        {
+          "title": "北千葉導水路ビジターセンターと北千葉第二機場",
+          "description": "北千葉導水路ビジターセンターと北千葉第二機場。画面右手前が手賀沼。左の道の脇の地下を埋設管として北千葉導水路が通っている。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%A8%E5%8C%97%E5%8D%83%E8%91%89%E7%AC%AC%E4%BA%8C%E6%A9%9F%E5%A0%B4.jpg/960px-%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%A8%E5%8C%97%E5%8D%83%E8%91%89%E7%AC%AC%E4%BA%8C%E6%A9%9F%E5%A0%B4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%A8%E5%8C%97%E5%8D%83%E8%91%89%E7%AC%AC%E4%BA%8C%E6%A9%9F%E5%A0%B4.jpg",
+          "credit": "Kenlo Nasahara",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.86523,
+            "lng": 139.995813
+          }
+        },
+        {
+          "title": "マンション？ - panoramio",
+          "description": "マンション？",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%9F_-_panoramio.jpg/960px-%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%9F_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%9F_-_panoramio.jpg",
+          "credit": "Mamusi Taka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.875835,
+            "lng": 139.984963
+          }
+        },
+        {
+          "title": "Nedo Castle Ruin In Abiko City Chiba Japan",
+          "description": "Nedo Castle ruin in Abiko city, Chiba, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nedo_Castle_Ruin_In_Abiko_City_Chiba_Japan.jpg/960px-Nedo_Castle_Ruin_In_Abiko_City_Chiba_Japan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nedo_Castle_Ruin_In_Abiko_City_Chiba_Japan.jpg",
+          "credit": "Tmv",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.872755,
+            "lng": 139.9938
+          }
+        },
+        {
+          "title": "マスコット",
+          "description": "心尾の駆け込み寺ぼんじりマスコットキャラクター",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88.jpg/960px-%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88.jpg",
+          "credit": "Bonjiri1208",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.873937,
+            "lng": 139.992297
+          }
+        },
+        {
+          "title": "Kashiwa Daigo Elementary School Jan 13 2021 01-48PM",
+          "description": "柏第五小学校 (Kashiwa Daigo Elementary School)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kashiwa_Daigo_Elementary_School_Jan_13_2021_01-48PM.jpeg/960px-Kashiwa_Daigo_Elementary_School_Jan_13_2021_01-48PM.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kashiwa_Daigo_Elementary_School_Jan_13_2021_01-48PM.jpeg",
+          "credit": "Nesnad",
+          "license": "CC BY 4.0",
+          "gps": {
+            "lat": 35.861533,
+            "lng": 139.983764
+          }
+        },
+        {
+          "title": "Chozen-ji temple kashiwa 2025 March 25 15 38 44 919000",
+          "description": "Chozen-ji, Kashiwa (長全寺、柏市にて)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Chozen-ji_temple_kashiwa_2025_March_25_15_38_44_919000.jpeg/960px-Chozen-ji_temple_kashiwa_2025_March_25_15_38_44_919000.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chozen-ji_temple_kashiwa_2025_March_25_15_38_44_919000.jpeg",
+          "credit": "Nesnad",
+          "license": "CC BY 4.0",
+          "gps": {
+            "lat": 35.861858,
+            "lng": 139.976775
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 35.85859115337323,
+        "lng": 140.02126253373234,
+        "ele": -7
+      },
+      "stations": [
+        {
+          "name": "我孫子",
+          "prefecture": "千葉県",
+          "line": "JR常磐線快速",
+          "x": 140.010466,
+          "y": 35.87279,
+          "postal": "2701151",
+          "distance": "1860m",
+          "prev": "柏",
+          "next": "天王台"
+        },
+        {
+          "name": "天王台",
+          "prefecture": "千葉県",
+          "line": "JR常磐線快速",
+          "x": 140.04121,
+          "y": 35.872558,
+          "postal": "2701176",
+          "distance": "2380m",
+          "prev": "我孫子",
+          "next": "取手"
+        },
+        {
+          "name": "東我孫子",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.047754,
+          "y": 35.868945,
+          "postal": "2701138",
+          "distance": "2650m",
+          "prev": "湖北",
+          "next": "我孫子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Tega marsh - panoramio",
+          "description": "Tega marsh",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Tega_marsh_-_panoramio.jpg/960px-Tega_marsh_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tega_marsh_-_panoramio.jpg",
+          "credit": "jofutsu",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.85832,
+            "lng": 140.024266
+          }
+        },
+        {
+          "title": "Ferry berth at Tega pond - panoramio",
+          "description": "Ferry berth at Tega pond",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ferry_berth_at_Tega_pond_-_panoramio.jpg/960px-Ferry_berth_at_Tega_pond_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ferry_berth_at_Tega_pond_-_panoramio.jpg",
+          "credit": "Masato OTA",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.862075,
+            "lng": 140.026831
+          }
+        },
+        {
+          "title": "手賀沼 - panoramio",
+          "description": "手賀沼",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio.jpg/960px-%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.862022,
+            "lng": 140.026245
+          }
+        },
+        {
+          "title": "手賀沼 - panoramio (2)",
+          "description": "手賀沼",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio_%282%29.jpg/960px-%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC_-_panoramio_(2).jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.861797,
+            "lng": 140.025177
+          }
+        },
+        {
+          "title": "手賀沼護岸工事 - panoramio",
+          "description": "手賀沼護岸工事",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/%E6%89%8B%E8%B3%80%E6%B2%BC%E8%AD%B7%E5%B2%B8%E5%B7%A5%E4%BA%8B_-_panoramio.jpg/960px-%E6%89%8B%E8%B3%80%E6%B2%BC%E8%AD%B7%E5%B2%B8%E5%B7%A5%E4%BA%8B_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC%E8%AD%B7%E5%B2%B8%E5%B7%A5%E4%BA%8B_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.862087,
+            "lng": 140.02356
+          }
+        },
+        {
+          "title": "根強い - panoramio",
+          "description": "根強い",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%E6%A0%B9%E5%BC%B7%E3%81%84_-_panoramio.jpg/960px-%E6%A0%B9%E5%BC%B7%E3%81%84_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%A0%B9%E5%BC%B7%E3%81%84_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.862732,
+            "lng": 140.023224
+          }
+        },
+        {
+          "title": "根木 - panoramio",
+          "description": "根木",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/%E6%A0%B9%E6%9C%A8_-_panoramio.jpg/960px-%E6%A0%B9%E6%9C%A8_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%A0%B9%E6%9C%A8_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.862732,
+            "lng": 140.023224
+          }
+        },
+        {
+          "title": "Wakamatsu, Abiko, Chiba Prefecture 270-1147, Japan - panoramio",
+          "description": "Wakamatsu, Abiko, Chiba Prefecture 270-1147, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Wakamatsu%2C_Abiko%2C_Chiba_Prefecture_270-1147%2C_Japan_-_panoramio.jpg/960px-Wakamatsu%2C_Abiko%2C_Chiba_Prefecture_270-1147%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wakamatsu,_Abiko,_Chiba_Prefecture_270-1147,_Japan_-_panoramio.jpg",
+          "credit": "shikabane taro",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.861778,
+            "lng": 140.024017
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 35.849453357067446,
+        "lng": 140.05150979532354,
+        "ele": -6
+      },
+      "stations": [
+        {
+          "name": "東我孫子",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.047754,
+          "y": 35.868945,
+          "postal": "2701138",
+          "distance": "2200m",
+          "prev": "湖北",
+          "next": "我孫子"
+        },
+        {
+          "name": "天王台",
+          "prefecture": "千葉県",
+          "line": "JR常磐線各駅停車",
+          "x": 140.04121,
+          "y": 35.872558,
+          "postal": "2701176",
+          "distance": "2730m",
+          "prev": "我孫子",
+          "next": "取手"
+        },
+        {
+          "name": "湖北",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.077959,
+          "y": 35.867165,
+          "postal": "2701121",
+          "distance": "3100m",
+          "prev": "新木",
+          "next": "東我孫子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Abiko City ABIKO Junior HighSchool",
+          "description": "This is the Abiko city Abiko junior high school, which is located in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Abiko_City_ABIKO_Junior_HighSchool.jpg/960px-Abiko_City_ABIKO_Junior_HighSchool.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_City_ABIKO_Junior_HighSchool.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.865243,
+            "lng": 140.039045
+          }
+        },
+        {
+          "title": "Sageto in Abiko",
+          "description": "This is a landscape of Sageto, Abiko, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sageto_in_Abiko.jpg/960px-Sageto_in_Abiko.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sageto_in_Abiko.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868947,
+            "lng": 140.047317
+          }
+        },
+        {
+          "title": "Higashiabiko 1 chome in Abiko",
+          "description": "This is a landscape of Higashiabiko 1 chome, Abiko, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Higashiabiko_1_chome_in_Abiko.jpg/960px-Higashiabiko_1_chome_in_Abiko.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Higashiabiko_1_chome_in_Abiko.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868989,
+            "lng": 140.047697
+          }
+        },
+        {
+          "title": "Higashiabiko Post Office 2012",
+          "description": "This is the Higashiabiko Post Office, which is located in front of Higashiabiko station, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Higashiabiko_Post_Office_2012.jpg/960px-Higashiabiko_Post_Office_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Higashiabiko_Post_Office_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868586,
+            "lng": 140.047
+          }
+        },
+        {
+          "title": "Abiko post 2012",
+          "description": "This is the Abiko post office in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Abiko_post_2012.jpg/960px-Abiko_post_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_post_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.867056,
+            "lng": 140.041544
+          }
+        },
+        {
+          "title": "Kohokudi Junior High School 2012",
+          "description": "This is the Abiko city Kohokudai junior high school in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Kohokudi_Junior_High_School_2012.jpg/960px-Kohokudi_Junior_High_School_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kohokudi_Junior_High_School_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.861361,
+            "lng": 140.071124
+          }
+        },
+        {
+          "title": "北千葉導水路埋設管の地表部",
+          "description": "北千葉導水路はこのに2本の埋設管として通っている。手賀沼岸から手賀沼を背にして撮影。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E5%9F%8B%E8%A8%AD%E7%AE%A1%E3%81%AE%E5%9C%B0%E8%A1%A8%E9%83%A8.jpg/960px-%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E5%9F%8B%E8%A8%AD%E7%AE%A1%E3%81%AE%E5%9C%B0%E8%A1%A8%E9%83%A8.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E5%8D%83%E8%91%89%E5%B0%8E%E6%B0%B4%E8%B7%AF%E5%9F%8B%E8%A8%AD%E7%AE%A1%E3%81%AE%E5%9C%B0%E8%A1%A8%E9%83%A8.jpg",
+          "credit": "Kenlo Nasahara",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.852613,
+            "lng": 140.047975
+          }
+        },
+        {
+          "title": "手賀沼のハス - panoramio",
+          "description": "手賀沼のハス",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E6%89%8B%E8%B3%80%E6%B2%BC%E3%81%AE%E3%83%8F%E3%82%B9_-_panoramio.jpg/960px-%E6%89%8B%E8%B3%80%E6%B2%BC%E3%81%AE%E3%83%8F%E3%82%B9_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC%E3%81%AE%E3%83%8F%E3%82%B9_-_panoramio.jpg",
+          "credit": "松浦党",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.854127,
+            "lng": 140.030107
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 35.85743799717674,
+        "lng": 140.05026714188185,
+        "ele": -4
+      },
+      "stations": [
+        {
+          "name": "東我孫子",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.047754,
+          "y": 35.868945,
+          "postal": "2701138",
+          "distance": "1300m",
+          "prev": "湖北",
+          "next": "我孫子"
+        },
+        {
+          "name": "天王台",
+          "prefecture": "千葉県",
+          "line": "JR常磐線快速",
+          "x": 140.04121,
+          "y": 35.872558,
+          "postal": "2701176",
+          "distance": "1870m",
+          "prev": "我孫子",
+          "next": "取手"
+        },
+        {
+          "name": "湖北",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.077959,
+          "y": 35.867165,
+          "postal": "2701121",
+          "distance": "2720m",
+          "prev": "新木",
+          "next": "東我孫子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Abiko City ABIKO Junior HighSchool",
+          "description": "This is the Abiko city Abiko junior high school, which is located in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Abiko_City_ABIKO_Junior_HighSchool.jpg/960px-Abiko_City_ABIKO_Junior_HighSchool.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_City_ABIKO_Junior_HighSchool.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.865243,
+            "lng": 140.039045
+          }
+        },
+        {
+          "title": "Sageto in Abiko",
+          "description": "This is a landscape of Sageto, Abiko, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sageto_in_Abiko.jpg/960px-Sageto_in_Abiko.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sageto_in_Abiko.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868947,
+            "lng": 140.047317
+          }
+        },
+        {
+          "title": "Higashiabiko 1 chome in Abiko",
+          "description": "This is a landscape of Higashiabiko 1 chome, Abiko, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Higashiabiko_1_chome_in_Abiko.jpg/960px-Higashiabiko_1_chome_in_Abiko.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Higashiabiko_1_chome_in_Abiko.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868989,
+            "lng": 140.047697
+          }
+        },
+        {
+          "title": "Higashiabiko Post Office 2012",
+          "description": "This is the Higashiabiko Post Office, which is located in front of Higashiabiko station, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Higashiabiko_Post_Office_2012.jpg/960px-Higashiabiko_Post_Office_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Higashiabiko_Post_Office_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.868586,
+            "lng": 140.047
+          }
+        },
+        {
+          "title": "Tennodai 1 chome in Abiko",
+          "description": "This is a landscape of Tennodai 1 chome, Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tennodai_1_chome_in_Abiko.jpg/960px-Tennodai_1_chome_in_Abiko.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennodai_1_chome_in_Abiko.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.87084,
+            "lng": 140.041037
+          }
+        },
+        {
+          "title": "Abiko post 2012",
+          "description": "This is the Abiko post office in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Abiko_post_2012.jpg/960px-Abiko_post_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_post_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.867056,
+            "lng": 140.041544
+          }
+        },
+        {
+          "title": "Kohokudai West Elementary School 01",
+          "description": "This is the Abiko City Kohokudai West Elementary School in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Kohokudai_West_Elementary_School_01.jpg/960px-Kohokudai_West_Elementary_School_01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kohokudai_West_Elementary_School_01.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.865526,
+            "lng": 140.069075
+          }
+        },
+        {
+          "title": "Kohokudi Junior High School 2012",
+          "description": "This is the Abiko city Kohokudai junior high school in Abiko, Chiba, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Kohokudi_Junior_High_School_2012.jpg/960px-Kohokudi_Junior_High_School_2012.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kohokudi_Junior_High_School_2012.jpg",
+          "credit": "Miyuki Meinaka",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.861361,
+            "lng": 140.071124
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 35.86341398749803,
+        "lng": 140.01836967748065,
+        "ele": -2
+      },
+      "stations": [
+        {
+          "name": "我孫子",
+          "prefecture": "千葉県",
+          "line": "JR常磐線各駅停車",
+          "x": 140.010466,
+          "y": 35.87279,
+          "postal": "2701151",
+          "distance": "1260m",
+          "prev": "北柏",
+          "next": "天王台"
+        },
+        {
+          "name": "天王台",
+          "prefecture": "千葉県",
+          "line": "JR常磐線各駅停車",
+          "x": 140.04121,
+          "y": 35.872558,
+          "postal": "2701176",
+          "distance": "2300m",
+          "prev": "我孫子",
+          "next": "取手"
+        },
+        {
+          "name": "東我孫子",
+          "prefecture": "千葉県",
+          "line": "JR成田線我孫子支線",
+          "x": 140.047754,
+          "y": 35.868945,
+          "postal": "2701138",
+          "distance": "2720m",
+          "prev": "湖北",
+          "next": "我孫子"
+        }
+      ],
+      "photos": [
+        {
+          "title": "工事中 - panoramio (4)",
+          "description": "工事中",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/%E5%B7%A5%E4%BA%8B%E4%B8%AD_-_panoramio_%284%29.jpg/960px-%E5%B7%A5%E4%BA%8B%E4%B8%AD_-_panoramio_%284%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B7%A5%E4%BA%8B%E4%B8%AD_-_panoramio_(4).jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863761,
+            "lng": 140.017222
+          }
+        },
+        {
+          "title": "文学の広場 - panoramio",
+          "description": "文学の広場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio.jpg/960px-%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio.jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863683,
+            "lng": 140.017303
+          }
+        },
+        {
+          "title": "文学の広場 看板 - panoramio",
+          "description": "文学の広場 看板",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg/960px-%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863531,
+            "lng": 140.017444
+          }
+        },
+        {
+          "title": "文学の広場 - panoramio (1)",
+          "description": "文学の広場",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio_%281%29.jpg/960px-%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio_%281%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%87%E5%AD%A6%E3%81%AE%E5%BA%83%E5%A0%B4_-_panoramio_(1).jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863736,
+            "lng": 140.017144
+          }
+        },
+        {
+          "title": "手賀沼公園から200m - panoramio",
+          "description": "手賀沼公園から200m",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92%E3%81%8B%E3%82%89200m_-_panoramio.jpg/960px-%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92%E3%81%8B%E3%82%89200m_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92%E3%81%8B%E3%82%89200m_-_panoramio.jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863556,
+            "lng": 140.017328
+          }
+        },
+        {
+          "title": "堤防工事中 看板 - panoramio",
+          "description": "堤防工事中 看板",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%E5%A0%A4%E9%98%B2%E5%B7%A5%E4%BA%8B%E4%B8%AD_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg/960px-%E5%A0%A4%E9%98%B2%E5%B7%A5%E4%BA%8B%E4%B8%AD_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A0%A4%E9%98%B2%E5%B7%A5%E4%BA%8B%E4%B8%AD_%E7%9C%8B%E6%9D%BF_-_panoramio.jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863506,
+            "lng": 140.017417
+          }
+        },
+        {
+          "title": "杉村楚人冠 - panoramio",
+          "description": "杉村楚人冠",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E6%9D%89%E6%9D%91%E6%A5%9A%E4%BA%BA%E5%86%A0_-_panoramio.jpg/960px-%E6%9D%89%E6%9D%91%E6%A5%9A%E4%BA%BA%E5%86%A0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%89%E6%9D%91%E6%A5%9A%E4%BA%BA%E5%86%A0_-_panoramio.jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.863492,
+            "lng": 140.017278
+          }
+        },
+        {
+          "title": "Wakamatsu, Abiko, Chiba Prefecture 270-1147, Japan - panoramio (8)",
+          "description": "Wakamatsu, Abiko, Chiba Prefecture 270-1147, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wakamatsu%2C_Abiko%2C_Chiba_Prefecture_270-1147%2C_Japan_-_panoramio_%288%29.jpg/960px-Wakamatsu%2C_Abiko%2C_Chiba_Prefecture_270-1147%2C_Japan_-_panoramio_%288%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wakamatsu,_Abiko,_Chiba_Prefecture_270-1147,_Japan_-_panoramio_(8).jpg",
+          "credit": "運転太郎",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.864047,
+            "lng": 140.017531
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

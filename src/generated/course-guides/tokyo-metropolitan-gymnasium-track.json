@@ -1,0 +1,218 @@
+{
+  "slug": "tokyo-metropolitan-gymnasium-track",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "東京体育館に併設された屋外の1周200m・直線100mの全天候型トラックです。一般開放されており、2時間200円（中学生以下100円）で利用できます。更衣室・シャワー完備で、平日は夜遅くまで利用可能。混雑時は整理券方式で順次利用となることがあります。ランニングステーションとしても利用でき、仕事帰りのトラック練習やドリルに使いやすい都心の貴重な施設です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR千駄ヶ谷駅・都営地下鉄国立競技場駅から徒歩5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "国立競技場駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.679831,
+      "destinationLng": 139.714932,
+      "routeAnchorLat": 35.6784093,
+      "routeAnchorLng": 139.7120678,
+      "routeMode": "loop",
+      "accessText": "国立競技場駅からコースまで約300m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.6784093,
+      "routeLng": 139.7120678,
+      "elevationM": 32,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 41,
+        "section-3": 85,
+        "section-4": 129,
+        "section-5": 171
+      },
+      "gpxHref": "/gpx/tokyo-metropolitan-gymnasium-track-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "千駄ケ谷駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.681231,
+      "destinationLng": 139.711644,
+      "routeAnchorLat": 35.6788506,
+      "routeAnchorLng": 139.7120918,
+      "routeMode": "loop",
+      "accessText": "千駄ケ谷駅からコースまで約270m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 44,
+      "routeDistanceM": 129,
+      "routeLat": 35.6788506,
+      "routeLng": 139.7120918,
+      "elevationM": 32,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 85,
+        "section-2": 126,
+        "section-3": 170,
+        "section-4": 0,
+        "section-5": 42
+      },
+      "gpxHref": "/gpx/tokyo-metropolitan-gymnasium-track-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.6784093,
+      "anchorLng": 139.7120678,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 夜の東京体育館陸上競技場。後方に見えるのが国立競技場。",
+      "surfaceLabel": "トラック",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Running_track_near_Japan_National_Stadium_2.jpg/960px-Running_track_near_Japan_National_Stadium_2.jpg",
+        "alt": "東京体育館 陸上競技場のスタート周辺付近",
+        "caption": "東京体育館 陸上競技場の走路近隣で撮影された風景",
+        "credit": "Syced",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Running_track_near_Japan_National_Stadium_2.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.6784093,
+      "routeLng": 139.7120678,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.6784897,
+      "anchorLng": 139.7125129,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: and taxi smoker",
+      "surfaceLabel": "トラック",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Tokyo_2020_Olympics_stadium_construction.jpg/960px-Tokyo_2020_Olympics_stadium_construction.jpg",
+        "alt": "東京体育館 陸上競技場の序盤区間付近",
+        "caption": "東京体育館 陸上競技場の走路近隣で撮影された風景",
+        "credit": "Syced",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_2020_Olympics_stadium_construction.jpg"
+      },
+      "routePointIndex": 15,
+      "routeDistanceM": 41,
+      "routeLat": 35.6784897,
+      "routeLng": 139.7125129,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.6788305,
+      "anchorLng": 139.7125496,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 新国立競技場 工事写真",
+      "surfaceLabel": "トラック",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kokuritsu_Kasumigaoka_Rikujo_Kyogijo-1.jpg/960px-Kokuritsu_Kasumigaoka_Rikujo_Kyogijo-1.jpg",
+        "alt": "東京体育館 陸上競技場の中盤区間付近",
+        "caption": "東京体育館 陸上競技場の走路近隣で撮影された風景",
+        "credit": "江戸村のとくぞう",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kokuritsu_Kasumigaoka_Rikujo_Kyogijo-1.jpg"
+      },
+      "routePointIndex": 29,
+      "routeDistanceM": 85,
+      "routeLat": 35.6788305,
+      "routeLng": 139.7125496,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.6788506,
+      "anchorLng": 139.7120918,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 東京体育館",
+      "surfaceLabel": "トラック",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%E6%9D%B1%E4%BA%AC%E4%BD%93%E8%82%B2%E9%A4%A8_-_panoramio.jpg/960px-%E6%9D%B1%E4%BA%AC%E4%BD%93%E8%82%B2%E9%A4%A8_-_panoramio.jpg",
+        "alt": "東京体育館 陸上競技場の後半区間付近",
+        "caption": "東京体育館 陸上競技場の走路近隣で撮影された風景",
+        "credit": "福原邦展",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E4%BA%AC%E4%BD%93%E8%82%B2%E9%A4%A8_-_panoramio.jpg"
+      },
+      "routePointIndex": 44,
+      "routeDistanceM": 129,
+      "routeLat": 35.6788506,
+      "routeLng": 139.7120918,
+      "elevationM": 32,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.6786404,
+      "anchorLng": 139.7117573,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 夜の東京体育館陸上競技場。後方に見えるのが国立競技場。",
+      "surfaceLabel": "トラック",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Running_track_near_Japan_National_Stadium_2.jpg/960px-Running_track_near_Japan_National_Stadium_2.jpg",
+        "alt": "東京体育館 陸上競技場の終盤区間付近",
+        "caption": "東京体育館 陸上競技場の走路近隣で撮影された風景",
+        "credit": "Syced",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Running_track_near_Japan_National_Stadium_2.jpg"
+      },
+      "routePointIndex": 58,
+      "routeDistanceM": 171,
+      "routeLat": 35.6786404,
+      "routeLng": 139.7117573,
+      "elevationM": 32,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 214,
+  "elevationGainM": 0,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 71,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 143,
+      "elevationM": 32
+    },
+    {
+      "distanceM": 214,
+      "elevationM": 32
+    }
+  ]
+}

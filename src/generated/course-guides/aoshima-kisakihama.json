@@ -1,0 +1,535 @@
+{
+  "slug": "aoshima-kisakihama",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "JR青島駅を起点に日向灘沿いを北上し、サーフポイントとして名高い木崎浜の松林を抜ける自転車道を通って、実業団や強豪校が合宿で走ることで知られる宮崎県総合運動公園のクロスカントリーコース入口まで行って戻る約8.9kmの往復。青島太平洋マラソンのコースとも重なる海沿いの平坦路で、朝日を浴びながらのモーニングランが気持ちいい。青島側では「鬼の洗濯板」で知られる青島観光も組み合わせられる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR日南線 青島駅すぐ / 運動公園駅(折返し側) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "青島駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 31.799801,
+      "destinationLng": 131.467121,
+      "routeAnchorLat": 31.799654,
+      "routeAnchorLng": 131.466908,
+      "routeMode": "forward",
+      "accessText": "青島駅からコースまで約30m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 31.799654,
+      "routeLng": 131.466908,
+      "elevationM": 4,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 1724,
+        "section-3": 3543,
+        "section-4": 3543,
+        "section-5": 1724
+      },
+      "gpxHref": "/gpx/aoshima-kisakihama-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 31.799654,
+      "anchorLng": 131.466908,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 青島駅発行の日南線普通列車の整理券",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Numbered_ticket_of_Nichinan_Line_%28Aoshima_Station%29.jpg/960px-Numbered_ticket_of_Nichinan_Line_%28Aoshima_Station%29.jpg",
+        "alt": "青島〜木崎浜・県総合運動公園のスタート周辺付近",
+        "caption": "青島〜木崎浜・県総合運動公園の走路近隣で撮影された風景",
+        "credit": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Numbered_ticket_of_Nichinan_Line_(Aoshima_Station).jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 31.799654,
+      "routeLng": 131.466908,
+      "elevationM": 4,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 31.807834,
+      "anchorLng": 131.460508,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Aoshima palm beach hotel , 青島パームビーチホテル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg/960px-Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg",
+        "alt": "青島〜木崎浜・県総合運動公園の序盤区間付近",
+        "caption": "青島〜木崎浜・県総合運動公園の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aoshima_palm_beach_hotel_,_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 55,
+      "routeDistanceM": 1724,
+      "routeLat": 31.807834,
+      "routeLng": 131.460508,
+      "elevationM": 3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 31.818249,
+      "anchorLng": 131.449265,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Aoshima palm beach hotel , 青島パームビーチホテル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg/960px-Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg",
+        "alt": "青島〜木崎浜・県総合運動公園の中盤区間付近",
+        "caption": "青島〜木崎浜・県総合運動公園の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aoshima_palm_beach_hotel_,_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 92,
+      "routeDistanceM": 3543,
+      "routeLat": 31.818249,
+      "routeLng": 131.449265,
+      "elevationM": 2.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 31.818249,
+      "anchorLng": 131.449265,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Aoshima palm beach hotel , 青島パームビーチホテル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg/960px-Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg",
+        "alt": "青島〜木崎浜・県総合運動公園の後半区間付近",
+        "caption": "青島〜木崎浜・県総合運動公園の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aoshima_palm_beach_hotel_,_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 92,
+      "routeDistanceM": 3543,
+      "routeLat": 31.818249,
+      "routeLng": 131.449265,
+      "elevationM": 2.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 31.807834,
+      "anchorLng": 131.460508,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Aoshima palm beach hotel , 青島パームビーチホテル",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg/960px-Aoshima_palm_beach_hotel_%2C_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg",
+        "alt": "青島〜木崎浜・県総合運動公園の終盤区間付近",
+        "caption": "青島〜木崎浜・県総合運動公園の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aoshima_palm_beach_hotel_,_%E9%9D%92%E5%B3%B6%E3%83%91%E3%83%BC%E3%83%A0%E3%83%93%E3%83%BC%E3%83%81%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg"
+      },
+      "routePointIndex": 55,
+      "routeDistanceM": 1724,
+      "routeLat": 31.807834,
+      "routeLng": 131.460508,
+      "elevationM": 3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 8897,
+  "elevationGainM": 20,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 300,
+      "elevationM": 6.4
+    },
+    {
+      "distanceM": 400,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 500,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 600,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 700,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 800,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 900,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 1000,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 1100,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 1200,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 1300,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 1400,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 1500,
+      "elevationM": 3.2
+    },
+    {
+      "distanceM": 1600,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 1699,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 1799,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 1899,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 1999,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 2099,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 2199,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 2299,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 2399,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 2499,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 2599,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 2699,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 2799,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 2899,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 2999,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 3099,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 3199,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 3299,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 3399,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 3499,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 3599,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 3699,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 3799,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 3899,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 3999,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 4099,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 4199,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 4299,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 4399,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 4499,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 4599,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 4699,
+      "elevationM": 5.6
+    },
+    {
+      "distanceM": 4799,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 4898,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 4998,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 5098,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 5198,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 5298,
+      "elevationM": 2.3
+    },
+    {
+      "distanceM": 5398,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 5498,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 5598,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 5698,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 5798,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 5898,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 5998,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 6098,
+      "elevationM": 2.8
+    },
+    {
+      "distanceM": 6198,
+      "elevationM": 2.5
+    },
+    {
+      "distanceM": 6298,
+      "elevationM": 2.1
+    },
+    {
+      "distanceM": 6398,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 6498,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 6598,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 6698,
+      "elevationM": 2.2
+    },
+    {
+      "distanceM": 6798,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 6898,
+      "elevationM": 2.6
+    },
+    {
+      "distanceM": 6998,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 7098,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 7198,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 7298,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 7398,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 7498,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 7598,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 7698,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 7798,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 7898,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 7998,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 8097,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 8197,
+      "elevationM": 4.5
+    },
+    {
+      "distanceM": 8297,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 8397,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 8497,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 8597,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 8697,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 8797,
+      "elevationM": 4
+    },
+    {
+      "distanceM": 8897,
+      "elevationM": 4
+    }
+  ]
+}

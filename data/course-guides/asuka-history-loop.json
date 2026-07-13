@@ -1,0 +1,153 @@
+{
+  "slug": "asuka-history-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "橿原公苑を起点に明日香村を反時計回りに巡る約14.7kmの周回コース。前半は飛鳥寺や飛鳥宮跡を通る平坦な里道、中盤は石舞台古墳から棚田の広がる稲渕地区へ登る起伏区間、終盤は高松塚古墳のある国営飛鳥歴史公園を抜けて飛鳥駅前から戻る。田園と史跡が連続する明日香らしい景観をまとめて味わえる。観光地のため自販機・トイレは各所にあり、石舞台や飛鳥駅周辺で補給できる。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 近鉄 橿原神宮前駅から約1km(橿原公苑) / 飛鳥駅(コース終盤) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "畝傍御陵前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.492758,
+      "destinationLng": 135.794254,
+      "routeAnchorLat": 34.488879,
+      "routeAnchorLng": 135.791607,
+      "routeMode": "loop",
+      "accessText": "畝傍御陵前駅からコースまで約500m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "岡寺駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.473963,
+      "destinationLng": 135.796088,
+      "routeAnchorLat": 34.481446,
+      "routeAnchorLng": 135.816443,
+      "routeMode": "loop",
+      "accessText": "岡寺駅からコースまで約2040m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-3",
+      "name": "飛鳥駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.464928,
+      "destinationLng": 135.79816,
+      "routeAnchorLat": 34.460856,
+      "routeAnchorLng": 135.816262,
+      "routeMode": "loop",
+      "accessText": "飛鳥駅からコースまで約1730m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.488879,
+      "anchorLng": 135.791607,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 橿原神宮 第一鳥居",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Kashihara-jingu_Daiichi_Torii.jpg/960px-Kashihara-jingu_Daiichi_Torii.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)のスタート周辺付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "Yanajin33",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kashihara-jingu_Daiichi_Torii.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.481446,
+      "anchorLng": 135.816443,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: The legendary ruins of Empress Suiko 's Palace “Toyura-no-Miya”, in Asuka , Nara Prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Toyura-no-Miya.jpg/960px-Toyura-no-Miya.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の序盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "Takanuka",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyura-no-Miya.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.464469,
+      "anchorLng": 135.82688,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: ishibutai kofun(megalithic tombs),石舞台古墳 Wikipedia &lt;a rel=\"nofollow\" href=\" http://ja.wikipedia.org/wiki/%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Ishibutai_kofun%28megalithic_tombs%29%2C%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg/960px-Ishibutai_kofun%28megalithic_tombs%29%2C%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の中盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ishibutai_kofun(megalithic_tombs),%E7%9F%B3%E8%88%9E%E5%8F%B0%E5%8F%A4%E5%A2%B3_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.460856,
+      "anchorLng": 135.816262,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Rock bridge of Asuka, Nara prefecture ,Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Asuka_no_iwahashi.JPG/960px-Asuka_no_iwahashi.JPG",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の後半区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "アラツク",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asuka_no_iwahashi.JPG"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.467157,
+      "anchorLng": 135.799114,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 欽明天皇陵",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg/960px-%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg",
+        "alt": "飛鳥周遊(橿原公苑〜石舞台古墳)の終盤区間付近",
+        "caption": "飛鳥周遊(橿原公苑〜石舞台古墳)の走路近隣で撮影された風景",
+        "credit": "z tanuki",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AC%BD%E6%98%8E%E5%A4%A9%E7%9A%87%E9%99%B5_-_panoramio.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

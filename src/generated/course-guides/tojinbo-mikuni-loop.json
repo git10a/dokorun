@@ -1,0 +1,714 @@
+{
+  "slug": "tojinbo-mikuni-loop",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "三国温泉ゆあぽーと前を起点に、九頭竜川河口の三国湊の町並みを抜けて北上し、東尋坊の断崖上を小さく周回、雄島橋で折り返して越前海岸沿いに戻る約12.6kmの周回コース。東尋坊は柱状節理の岩壁が続く景勝地で、商店街にトイレ・売店・自販機がある。アップダウンは緩やかで獲得標高は約140m。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: えちぜん鉄道三国港駅から約500m。東尋坊・三国サンセットビーチに駐車場あり 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "三国港駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.220264,
+      "destinationLng": 136.140049,
+      "routeAnchorLat": 36.221234,
+      "routeAnchorLng": 136.136224,
+      "routeMode": "loop",
+      "accessText": "三国港駅からコースまで約360m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.221234,
+      "routeLng": 136.136224,
+      "elevationM": 5.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 2525,
+        "section-3": 5054,
+        "section-4": 7584,
+        "section-5": 6867
+      },
+      "gpxHref": "/gpx/tojinbo-mikuni-loop-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "三国駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.217012,
+      "destinationLng": 136.149615,
+      "routeAnchorLat": 36.215977,
+      "routeAnchorLng": 136.150308,
+      "routeMode": "loop",
+      "accessText": "三国駅からコースまで約130m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 98,
+      "routeDistanceM": 2525,
+      "routeLat": 36.215977,
+      "routeLng": 136.150308,
+      "elevationM": 7.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 10099,
+        "section-2": 0,
+        "section-3": 2529,
+        "section-4": 5059,
+        "section-5": 4342
+      },
+      "gpxHref": "/gpx/tojinbo-mikuni-loop-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 36.221234,
+      "anchorLng": 136.136224,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 坂井市三国町宿にある宿排水樋門。",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shuku_Drainage_Gutter_Gate_20210504_01.jpg/960px-Shuku_Drainage_Gutter_Gate_20210504_01.jpg",
+        "alt": "東尋坊・三国湊のスタート周辺付近",
+        "caption": "東尋坊・三国湊の走路近隣で撮影された風景",
+        "credit": "先従隗始",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shuku_Drainage_Gutter_Gate_20210504_01.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.221234,
+      "routeLng": 136.136224,
+      "elevationM": 5.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 36.215977,
+      "anchorLng": 136.150308,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 三国駅",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%E4%B8%89%E5%9B%BD%E9%A7%85_-_panoramio.jpg/960px-%E4%B8%89%E5%9B%BD%E9%A7%85_-_panoramio.jpg",
+        "alt": "東尋坊・三国湊の序盤区間付近",
+        "caption": "東尋坊・三国湊の走路近隣で撮影された風景",
+        "credit": "くろふね This photo was taken with Canon EOS 500D",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E5%9B%BD%E9%A7%85_-_panoramio.jpg"
+      },
+      "routePointIndex": 98,
+      "routeDistanceM": 2525,
+      "routeLat": 36.215977,
+      "routeLng": 136.150308,
+      "elevationM": 7.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 36.231145,
+      "anchorLng": 136.132964,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 東尋坊（福井県）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg/960px-%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg",
+        "alt": "東尋坊・三国湊の中盤区間付近",
+        "caption": "東尋坊・三国湊の走路近隣で撮影された風景",
+        "credit": "Kerakon",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg"
+      },
+      "routePointIndex": 177,
+      "routeDistanceM": 5054,
+      "routeLat": 36.231145,
+      "routeLng": 136.132964,
+      "elevationM": 26,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 36.245181,
+      "anchorLng": 136.128382,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 東尋坊",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/%E6%9D%B1%E5%B0%8B%E5%9D%8A_-_panoramio.jpg/960px-%E6%9D%B1%E5%B0%8B%E5%9D%8A_-_panoramio.jpg",
+        "alt": "東尋坊・三国湊の後半区間付近",
+        "caption": "東尋坊・三国湊の走路近隣で撮影された風景",
+        "credit": "くろふね",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E5%B0%8B%E5%9D%8A_-_panoramio.jpg"
+      },
+      "routePointIndex": 289,
+      "routeDistanceM": 7584,
+      "routeLat": 36.245181,
+      "routeLng": 136.128382,
+      "elevationM": 21,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 36.240099,
+      "anchorLng": 136.132495,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 東尋坊（福井県）",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg/960px-%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg",
+        "alt": "東尋坊・三国湊の終盤区間付近",
+        "caption": "東尋坊・三国湊の走路近隣で撮影された風景",
+        "credit": "Kerakon",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E5%B0%8B%E5%9D%8A1.jpg"
+      },
+      "routePointIndex": 271,
+      "routeDistanceM": 6867,
+      "routeLat": 36.240099,
+      "routeLng": 136.132495,
+      "elevationM": 35.3,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 12624,
+  "elevationGainM": 144,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 4.1
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 696,
+      "elevationM": 3.1
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 895,
+      "elevationM": 2.4
+    },
+    {
+      "distanceM": 994,
+      "elevationM": 5.2
+    },
+    {
+      "distanceM": 1093,
+      "elevationM": 5.4
+    },
+    {
+      "distanceM": 1193,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 1292,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 1392,
+      "elevationM": 8.5
+    },
+    {
+      "distanceM": 1491,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 1590,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 1690,
+      "elevationM": 8.3
+    },
+    {
+      "distanceM": 1789,
+      "elevationM": 8.4
+    },
+    {
+      "distanceM": 1889,
+      "elevationM": 9.1
+    },
+    {
+      "distanceM": 1988,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 2087,
+      "elevationM": 11.2
+    },
+    {
+      "distanceM": 2187,
+      "elevationM": 8.6
+    },
+    {
+      "distanceM": 2286,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 2386,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 2485,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 2584,
+      "elevationM": 7.1
+    },
+    {
+      "distanceM": 2684,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 2783,
+      "elevationM": 8.8
+    },
+    {
+      "distanceM": 2883,
+      "elevationM": 7.2
+    },
+    {
+      "distanceM": 2982,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 3081,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 3181,
+      "elevationM": 6.3
+    },
+    {
+      "distanceM": 3280,
+      "elevationM": 6.7
+    },
+    {
+      "distanceM": 3380,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 3479,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 3578,
+      "elevationM": 10.6
+    },
+    {
+      "distanceM": 3678,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 3777,
+      "elevationM": 14.5
+    },
+    {
+      "distanceM": 3877,
+      "elevationM": 19
+    },
+    {
+      "distanceM": 3976,
+      "elevationM": 23.5
+    },
+    {
+      "distanceM": 4075,
+      "elevationM": 27.1
+    },
+    {
+      "distanceM": 4175,
+      "elevationM": 29.2
+    },
+    {
+      "distanceM": 4274,
+      "elevationM": 31.1
+    },
+    {
+      "distanceM": 4374,
+      "elevationM": 32.3
+    },
+    {
+      "distanceM": 4473,
+      "elevationM": 34.4
+    },
+    {
+      "distanceM": 4572,
+      "elevationM": 35.9
+    },
+    {
+      "distanceM": 4672,
+      "elevationM": 33.9
+    },
+    {
+      "distanceM": 4771,
+      "elevationM": 31.7
+    },
+    {
+      "distanceM": 4871,
+      "elevationM": 28
+    },
+    {
+      "distanceM": 4970,
+      "elevationM": 25
+    },
+    {
+      "distanceM": 5069,
+      "elevationM": 26.7
+    },
+    {
+      "distanceM": 5169,
+      "elevationM": 34.7
+    },
+    {
+      "distanceM": 5268,
+      "elevationM": 36
+    },
+    {
+      "distanceM": 5368,
+      "elevationM": 39.7
+    },
+    {
+      "distanceM": 5467,
+      "elevationM": 42.1
+    },
+    {
+      "distanceM": 5566,
+      "elevationM": 38
+    },
+    {
+      "distanceM": 5666,
+      "elevationM": 36
+    },
+    {
+      "distanceM": 5765,
+      "elevationM": 42.6
+    },
+    {
+      "distanceM": 5865,
+      "elevationM": 44
+    },
+    {
+      "distanceM": 5964,
+      "elevationM": 37.1
+    },
+    {
+      "distanceM": 6063,
+      "elevationM": 25.3
+    },
+    {
+      "distanceM": 6163,
+      "elevationM": 25.7
+    },
+    {
+      "distanceM": 6262,
+      "elevationM": 32.4
+    },
+    {
+      "distanceM": 6362,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 6461,
+      "elevationM": 33.4
+    },
+    {
+      "distanceM": 6560,
+      "elevationM": 27.8
+    },
+    {
+      "distanceM": 6660,
+      "elevationM": 33.2
+    },
+    {
+      "distanceM": 6759,
+      "elevationM": 35.4
+    },
+    {
+      "distanceM": 6859,
+      "elevationM": 35.6
+    },
+    {
+      "distanceM": 6958,
+      "elevationM": 36.9
+    },
+    {
+      "distanceM": 7057,
+      "elevationM": 38.7
+    },
+    {
+      "distanceM": 7157,
+      "elevationM": 34
+    },
+    {
+      "distanceM": 7256,
+      "elevationM": 33
+    },
+    {
+      "distanceM": 7356,
+      "elevationM": 33.8
+    },
+    {
+      "distanceM": 7455,
+      "elevationM": 29.9
+    },
+    {
+      "distanceM": 7555,
+      "elevationM": 22.2
+    },
+    {
+      "distanceM": 7654,
+      "elevationM": 19.5
+    },
+    {
+      "distanceM": 7753,
+      "elevationM": 20.8
+    },
+    {
+      "distanceM": 7853,
+      "elevationM": 16.8
+    },
+    {
+      "distanceM": 7952,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 8052,
+      "elevationM": 14.9
+    },
+    {
+      "distanceM": 8151,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8250,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8350,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8449,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8549,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8648,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8747,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8847,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 8946,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 9046,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 9145,
+      "elevationM": 17.6
+    },
+    {
+      "distanceM": 9244,
+      "elevationM": 20.4
+    },
+    {
+      "distanceM": 9344,
+      "elevationM": 19.4
+    },
+    {
+      "distanceM": 9443,
+      "elevationM": 21
+    },
+    {
+      "distanceM": 9543,
+      "elevationM": 26.8
+    },
+    {
+      "distanceM": 9642,
+      "elevationM": 34.3
+    },
+    {
+      "distanceM": 9741,
+      "elevationM": 32.8
+    },
+    {
+      "distanceM": 9841,
+      "elevationM": 32.5
+    },
+    {
+      "distanceM": 9940,
+      "elevationM": 37.2
+    },
+    {
+      "distanceM": 10040,
+      "elevationM": 37.5
+    },
+    {
+      "distanceM": 10139,
+      "elevationM": 35.6
+    },
+    {
+      "distanceM": 10238,
+      "elevationM": 37.7
+    },
+    {
+      "distanceM": 10338,
+      "elevationM": 43.2
+    },
+    {
+      "distanceM": 10437,
+      "elevationM": 42.3
+    },
+    {
+      "distanceM": 10537,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 10636,
+      "elevationM": 35.6
+    },
+    {
+      "distanceM": 10735,
+      "elevationM": 39.5
+    },
+    {
+      "distanceM": 10835,
+      "elevationM": 42.2
+    },
+    {
+      "distanceM": 10934,
+      "elevationM": 38.2
+    },
+    {
+      "distanceM": 11034,
+      "elevationM": 36.2
+    },
+    {
+      "distanceM": 11133,
+      "elevationM": 32.6
+    },
+    {
+      "distanceM": 11232,
+      "elevationM": 25.5
+    },
+    {
+      "distanceM": 11332,
+      "elevationM": 24.7
+    },
+    {
+      "distanceM": 11431,
+      "elevationM": 13.4
+    },
+    {
+      "distanceM": 11531,
+      "elevationM": 13.1
+    },
+    {
+      "distanceM": 11630,
+      "elevationM": 15.9
+    },
+    {
+      "distanceM": 11729,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 11829,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 11928,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 12028,
+      "elevationM": 11
+    },
+    {
+      "distanceM": 12127,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 12226,
+      "elevationM": 7.6
+    },
+    {
+      "distanceM": 12326,
+      "elevationM": 7.8
+    },
+    {
+      "distanceM": 12425,
+      "elevationM": 8
+    },
+    {
+      "distanceM": 12525,
+      "elevationM": 6.6
+    },
+    {
+      "distanceM": 12624,
+      "elevationM": 5.5
+    }
+  ]
+}

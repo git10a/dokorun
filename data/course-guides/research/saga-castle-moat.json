@@ -1,0 +1,735 @@
+{
+  "slug": "saga-castle-moat",
+  "spot": {
+    "slug": "saga-castle-moat",
+    "name": "佐賀城公園(お堀周回)",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "access": "JR佐賀駅から南へ約2km / 佐賀駅バスセンターから博物館前バス停",
+    "course_type": "loop",
+    "distance_m": 3561,
+    "elevation_gain_m": 20,
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 154,
+    "gpxDistanceM": 3561,
+    "distanceDifferencePct": 0,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:19:17.648Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 33.249288,
+        "lng": 130.295487,
+        "ele": 3.5
+      },
+      "stations": [
+        {
+          "name": "佐賀",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.297608,
+          "y": 33.264212,
+          "postal": "8400801",
+          "distance": "1670m",
+          "prev": "伊賀屋",
+          "next": "鍋島"
+        },
+        {
+          "name": "鍋島",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.265702,
+          "y": 33.259062,
+          "postal": "8490932",
+          "distance": "2980m",
+          "prev": "佐賀",
+          "next": "バルーンさが"
+        },
+        {
+          "name": "バルーンさが",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.248942,
+          "y": 33.257795,
+          "postal": "8400864",
+          "distance": "4440m",
+          "prev": "鍋島",
+          "next": "久保田"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Yoka-jinja Shrine Front",
+          "description": "The third Torii(San-no Torii), an arched bridge and the tower gate in the front of Yoka-jinja Shrine, in Yoka-machi, Saga city, Saga prefecture.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Yoka-jinja_Shrine_Front.JPG/960px-Yoka-jinja_Shrine_Front.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoka-jinja_Shrine_Front.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24875,
+            "lng": 130.29421
+          }
+        },
+        {
+          "title": "Yoka-jinja Shrine Bridge",
+          "description": "Front bridge of Yoka-jinja Shrine, Saga city, Saga prefecture.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Yoka-jinja_Shrine_Bridge.JPG/960px-Yoka-jinja_Shrine_Bridge.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoka-jinja_Shrine_Bridge.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24871,
+            "lng": 130.29435
+          }
+        },
+        {
+          "title": "Yoka-jinja Shrine haiden",
+          "description": "Worship Hall(Haiden) of Yoka-jinja Shrine, Saga city, Saga prefecture. It built in 1759.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Yoka-jinja_Shrine_haiden.JPG/960px-Yoka-jinja_Shrine_haiden.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoka-jinja_Shrine_haiden.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.2488,
+            "lng": 130.29462
+          }
+        },
+        {
+          "title": "Yoka-jinja Shrine camphor tree",
+          "description": "A camphor tree in Yoka-jinja Shrine, Saga city, Saga prefecture. Its age is about 1,400. It is designed prefectural natural monument of Saga prefecture.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Yoka-jinja_Shrine_camphor_tree.JPG/960px-Yoka-jinja_Shrine_camphor_tree.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoka-jinja_Shrine_camphor_tree.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24866,
+            "lng": 130.29462
+          }
+        },
+        {
+          "title": "Snowy gate and bridge of Yoka Shrine",
+          "description": "A snowy day at Yoka Shrine in Saga City. There is a front gate and a bridge.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Snowy_gate_and_bridge_of_Yoka_Shrine.jpeg/960px-Snowy_gate_and_bridge_of_Yoka_Shrine.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_gate_and_bridge_of_Yoka_Shrine.jpeg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24892,
+            "lng": 130.29435
+          }
+        },
+        {
+          "title": "Snowy Torii and approaching path of Yoka Shrine Saga",
+          "description": "A snowy day at Yoka Shrine, Saga City. There is a Torii (gateway) and an approaching path.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Snowy_Torii_and_approaching_path_of_Yoka_Shrine_Saga.jpeg/960px-Snowy_Torii_and_approaching_path_of_Yoka_Shrine_Saga.jpeg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_Torii_and_approaching_path_of_Yoka_Shrine_Saga.jpeg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24878,
+            "lng": 130.29448
+          }
+        },
+        {
+          "title": "Hotel New Otani Saga and moat of Saga Castle",
+          "description": "Hotel New Otani Saga and a moat of Saga Castle .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hotel_New_Otani_Saga_and_moat_of_Saga_Castle.jpg/960px-Hotel_New_Otani_Saga_and_moat_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hotel_New_Otani_Saga_and_moat_of_Saga_Castle.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24995,
+            "lng": 130.29685
+          }
+        },
+        {
+          "title": "Saga Prefectural Assembly Building 20171112",
+          "description": "佐賀県議会議事堂",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Saga_Prefectural_Assembly_Building_20171112.jpg/960px-Saga_Prefectural_Assembly_Building_20171112.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Prefectural_Assembly_Building_20171112.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.249836,
+            "lng": 130.297806
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 33.24931237906007,
+        "lng": 130.30033843312285,
+        "ele": 7
+      },
+      "stations": [
+        {
+          "name": "佐賀",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.297608,
+          "y": 33.264212,
+          "postal": "8400801",
+          "distance": "1680m",
+          "prev": "伊賀屋",
+          "next": "鍋島"
+        },
+        {
+          "name": "鍋島",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.265702,
+          "y": 33.259062,
+          "postal": "8490932",
+          "distance": "3400m",
+          "prev": "佐賀",
+          "next": "バルーンさが"
+        },
+        {
+          "name": "バルーンさが",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.248942,
+          "y": 33.257795,
+          "postal": "8400864",
+          "distance": "4880m",
+          "prev": "鍋島",
+          "next": "久保田"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Saga cityscape eastward wide",
+          "description": "佐賀市 中心部の遠景。佐賀県庁屋上展望台より東側を望む。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Saga_cityscape_eastward_wide.JPG/960px-Saga_cityscape_eastward_wide.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_cityscape_eastward_wide.JPG",
+          "credit": "Pekachu",
+          "license": "CC0",
+          "gps": {
+            "lat": 33.24934,
+            "lng": 130.29916
+          }
+        },
+        {
+          "title": "Ichimura Memorial Gymnasium west side",
+          "description": "Ichimura Memorial Gymnasium(Ichimura Kinen Taiikukan), in Saga city, Saga prefecture, Japan.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ichimura_Memorial_Gymnasium_west_side.JPG/960px-Ichimura_Memorial_Gymnasium_west_side.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ichimura_Memorial_Gymnasium_west_side.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24948,
+            "lng": 130.30138
+          }
+        },
+        {
+          "title": "Path - panoramio (3)",
+          "description": "Path",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Path_-_panoramio_%283%29.jpg/960px-Path_-_panoramio_%283%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Path_-_panoramio_(3).jpg",
+          "credit": "Yasushi HASHIGUCHI",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.250211,
+            "lng": 130.300445
+          }
+        },
+        {
+          "title": "Prefecture goverment office and public library - panoramio",
+          "description": "prefecture goverment office and public library",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Prefecture_goverment_office_and_public_library_-_panoramio.jpg/960px-Prefecture_goverment_office_and_public_library_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prefecture_goverment_office_and_public_library_-_panoramio.jpg",
+          "credit": "Yasushi HASHIGUCHI",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.249726,
+            "lng": 130.301234
+          }
+        },
+        {
+          "title": "Park tree - panoramio",
+          "description": "park tree",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Park_tree_-_panoramio.jpg/960px-Park_tree_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Park_tree_-_panoramio.jpg",
+          "credit": "Yasushi HASHIGUCHI",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.249324,
+            "lng": 130.301209
+          }
+        },
+        {
+          "title": "Saga prefectural government office buildings 201703",
+          "description": "佐賀県庁舎 本館（左）と新行政棟（右）。佐賀市城内。Saga prefectural government office buildings, in Jōnai, Saga city.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Saga_prefectural_government_office_buildings_201703.jpg/960px-Saga_prefectural_government_office_buildings_201703.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_prefectural_government_office_buildings_201703.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.250203,
+            "lng": 130.30047
+          }
+        },
+        {
+          "title": "Saga Prefectural Library 20171112",
+          "description": "佐賀県立図書館",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Saga_Prefectural_Library_20171112.jpg/960px-Saga_Prefectural_Library_20171112.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Prefectural_Library_20171112.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.250081,
+            "lng": 130.300506
+          }
+        },
+        {
+          "title": "Kusunosakaebashi Bridge on moat of Saga Castle 2",
+          "description": "佐賀城の堀に架かるくすの栄橋",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kusunosakaebashi_Bridge_on_moat_of_Saga_Castle_2.jpg/960px-Kusunosakaebashi_Bridge_on_moat_of_Saga_Castle_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kusunosakaebashi_Bridge_on_moat_of_Saga_Castle_2.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.250103,
+            "lng": 130.299981
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 33.24631174759439,
+        "lng": 130.30258079094355,
+        "ele": 7.5
+      },
+      "stations": [
+        {
+          "name": "佐賀",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.297608,
+          "y": 33.264212,
+          "postal": "8400801",
+          "distance": "2050m",
+          "prev": "伊賀屋",
+          "next": "鍋島"
+        },
+        {
+          "name": "鍋島",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.265702,
+          "y": 33.259062,
+          "postal": "8490932",
+          "distance": "3710m",
+          "prev": "佐賀",
+          "next": "バルーンさが"
+        },
+        {
+          "name": "バルーンさが",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.248942,
+          "y": 33.257795,
+          "postal": "8400864",
+          "distance": "5150m",
+          "prev": "鍋島",
+          "next": "久保田"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Sagajyou shachinomon",
+          "description": "佐賀城 鯱の門 撮影者/著者/著作権保有者 : MK Products (本人がアップロード) 撮影日 : 2005/4/23 佐賀城 用にアップロードした画像です。良い画像があれば別の画像に変えてください。",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Sagajyou_shachinomon.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sagajyou_shachinomon.jpg",
+          "credit": "ja:User:MK Products",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.2461,
+            "lng": 130.3023
+          }
+        },
+        {
+          "title": "Saga castle shachinomon gate",
+          "description": "Shachinomon gate of Saga Castle, Saga city.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Saga_castle_shachinomon_gate.jpg/960px-Saga_castle_shachinomon_gate.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_castle_shachinomon_gate.jpg",
+          "credit": "misijp",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 33.246,
+            "lng": 130.3027
+          }
+        },
+        {
+          "title": "Saga castle syatimon",
+          "description": "佐賀城の鯱門",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Saga_castle_syatimon.JPG/960px-Saga_castle_syatimon.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_castle_syatimon.JPG",
+          "credit": "上条ジョー",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.2461,
+            "lng": 130.3023
+          }
+        },
+        {
+          "title": "Saga castle isigaki",
+          "description": "佐賀城の石垣",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Saga_castle_isigaki.jpg/960px-Saga_castle_isigaki.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_castle_isigaki.jpg",
+          "credit": "上条ジョー",
+          "license": "Public domain",
+          "gps": {
+            "lat": 33.2464,
+            "lng": 130.3031
+          }
+        },
+        {
+          "title": "Saga Castle Shachinomon bullet holes on doors",
+          "description": "Bullet holes for Saga Rebellion (1874), on Shachinomon Gate doors of Saga Castle .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Saga_Castle_Shachinomon_bullet_holes_on_doors.jpg/960px-Saga_Castle_Shachinomon_bullet_holes_on_doors.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Castle_Shachinomon_bullet_holes_on_doors.jpg",
+          "credit": "Masahiko Satoh",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 33.2459,
+            "lng": 130.3029
+          }
+        },
+        {
+          "title": "Saga Joint Goverment Office",
+          "description": "Saga Joint Goverment Office in Jōnai, Saga City.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Saga_Joint_Goverment_Office.JPG/960px-Saga_Joint_Goverment_Office.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Joint_Goverment_Office.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.2466,
+            "lng": 130.30302
+          }
+        },
+        {
+          "title": "佐賀合同庁舎 - panoramio",
+          "description": "佐賀合同庁舎",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/%E4%BD%90%E8%B3%80%E5%90%88%E5%90%8C%E5%BA%81%E8%88%8E_-_panoramio.jpg/960px-%E4%BD%90%E8%B3%80%E5%90%88%E5%90%8C%E5%BA%81%E8%88%8E_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%B3%80%E5%90%88%E5%90%8C%E5%BA%81%E8%88%8E_-_panoramio.jpg",
+          "credit": "OS6",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.246817,
+            "lng": 130.302755
+          }
+        },
+        {
+          "title": "佐賀城本丸歴史館2 - panoramio",
+          "description": "佐賀城本丸歴史館2",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/%E4%BD%90%E8%B3%80%E5%9F%8E%E6%9C%AC%E4%B8%B8%E6%AD%B4%E5%8F%B2%E9%A4%A82_-_panoramio.jpg/960px-%E4%BD%90%E8%B3%80%E5%9F%8E%E6%9C%AC%E4%B8%B8%E6%AD%B4%E5%8F%B2%E9%A4%A82_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%B3%80%E5%9F%8E%E6%9C%AC%E4%B8%B8%E6%AD%B4%E5%8F%B2%E9%A4%A82_-_panoramio.jpg",
+          "credit": "sk01",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.245768,
+            "lng": 130.302496
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 33.243487506592764,
+        "lng": 130.3016741448705,
+        "ele": 2.75
+      },
+      "stations": [
+        {
+          "name": "佐賀",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.297608,
+          "y": 33.264212,
+          "postal": "8400801",
+          "distance": "2340m",
+          "prev": "伊賀屋",
+          "next": "鍋島"
+        },
+        {
+          "name": "鍋島",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.265702,
+          "y": 33.259062,
+          "postal": "8490932",
+          "distance": "3770m",
+          "prev": "佐賀",
+          "next": "バルーンさが"
+        },
+        {
+          "name": "バルーンさが",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.248942,
+          "y": 33.257795,
+          "postal": "8400864",
+          "distance": "5160m",
+          "prev": "鍋島",
+          "next": "久保田"
+        }
+      ],
+      "photos": [
+        {
+          "title": "24 pounds cannon replica Saga Prefectural Museum",
+          "description": "A replica of 24 pounds cannon by Saga Domain in late Edo era, at Saga Prefectural Museum.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/24_pounds_cannon_replica_Saga_Prefectural_Museum.JPG/960px-24_pounds_cannon_replica_Saga_Prefectural_Museum.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:24_pounds_cannon_replica_Saga_Prefectural_Museum.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24522,
+            "lng": 130.30082
+          }
+        },
+        {
+          "title": "Moat - panoramio (2)",
+          "description": "moat",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Moat_-_panoramio_%282%29.jpg/960px-Moat_-_panoramio_%282%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moat_-_panoramio_(2).jpg",
+          "credit": "Yasushi HASHIGUCHI",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.243713,
+            "lng": 130.302919
+          }
+        },
+        {
+          "title": "Stone wall of Saga Castle",
+          "description": "佐賀城の石垣",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Stone_wall_of_Saga_Castle.jpg/960px-Stone_wall_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stone_wall_of_Saga_Castle.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.245433,
+            "lng": 130.301514
+          }
+        },
+        {
+          "title": "West gate of Hommaru of Saga Castle",
+          "description": "佐賀城本丸の西門",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/West_gate_of_Hommaru_of_Saga_Castle.jpg/960px-West_gate_of_Hommaru_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:West_gate_of_Hommaru_of_Saga_Castle.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.245483,
+            "lng": 130.301606
+          }
+        },
+        {
+          "title": "Hommaru of Saga Castle",
+          "description": "佐賀城本丸",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Hommaru_of_Saga_Castle.jpg/960px-Hommaru_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hommaru_of_Saga_Castle.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.245425,
+            "lng": 130.301942
+          }
+        },
+        {
+          "title": "View near Saga Castle History Museum",
+          "description": "佐賀城本丸歴史館の裏側",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/View_near_Saga_Castle_History_Museum.jpg/960px-View_near_Saga_Castle_History_Museum.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_near_Saga_Castle_History_Museum.jpg",
+          "credit": "そらみみ",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.245147,
+            "lng": 130.302431
+          }
+        },
+        {
+          "title": "Gozanoma and Kan'nindokoro of Saga Castle outside",
+          "description": "Outside of the original \"Gozanoma\"(living room of the lord) and \"Kan'nin-dokoro\"(guardroom) of Saga Castle . see : [3] .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gozanoma_and_Kan%27nindokoro_of_Saga_Castle_outside.jpg/960px-Gozanoma_and_Kan%27nindokoro_of_Saga_Castle_outside.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gozanoma_and_Kan%27nindokoro_of_Saga_Castle_outside.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24502,
+            "lng": 130.30267
+          }
+        },
+        {
+          "title": "Gozanoma room of Saga Castle",
+          "description": "The original \"Gozanoma\"(living room of the lord) of Saga Castle .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Gozanoma_room_of_Saga_Castle.jpg/960px-Gozanoma_room_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gozanoma_room_of_Saga_Castle.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24502,
+            "lng": 130.30267
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 33.243351068795015,
+        "lng": 130.29617247890266,
+        "ele": 1.25
+      },
+      "stations": [
+        {
+          "name": "佐賀",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.297608,
+          "y": 33.264212,
+          "postal": "8400801",
+          "distance": "2330m",
+          "prev": "伊賀屋",
+          "next": "鍋島"
+        },
+        {
+          "name": "鍋島",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.265702,
+          "y": 33.259062,
+          "postal": "8490932",
+          "distance": "3330m",
+          "prev": "佐賀",
+          "next": "バルーンさが"
+        },
+        {
+          "name": "バルーンさが",
+          "prefecture": "佐賀県",
+          "line": "JR長崎本線",
+          "x": 130.248942,
+          "y": 33.257795,
+          "postal": "8400864",
+          "distance": "4680m",
+          "prev": "鍋島",
+          "next": "久保田"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Saga Castle Park moat west",
+          "description": "Western Moat of Saga Castle and camphor trees in the Park, Saga City.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Saga_Castle_Park_moat_west.JPG/960px-Saga_Castle_Park_moat_west.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Castle_Park_moat_west.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.2463,
+            "lng": 130.2959
+          }
+        },
+        {
+          "title": "Saga Prefectural Saga-nishi High School front",
+          "description": "A front gate of Saga Prefectural Saga-nishi High School.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Saga_Prefectural_Saga-nishi_High_School_front.JPG/960px-Saga_Prefectural_Saga-nishi_High_School_front.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Prefectural_Saga-nishi_High_School_front.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24598,
+            "lng": 130.29839
+          }
+        },
+        {
+          "title": "Saga University Art Museum 2016",
+          "description": "Saga University Art Museum",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Saga_University_Art_Museum_2016.JPG/960px-Saga_University_Art_Museum_2016.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_University_Art_Museum_2016.JPG",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24463,
+            "lng": 130.29234
+          }
+        },
+        {
+          "title": "Lotus at south moat of Saga Castle",
+          "description": "Lotus at south moat of Saga Castle.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Lotus_at_south_moat_of_Saga_Castle.jpg/960px-Lotus_at_south_moat_of_Saga_Castle.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lotus_at_south_moat_of_Saga_Castle.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24366,
+            "lng": 130.29832
+          }
+        },
+        {
+          "title": "Dig (May 2010) - panoramio",
+          "description": "dig (May 2010)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Dig_%28May_2010%29_-_panoramio.jpg/960px-Dig_%28May_2010%29_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dig_(May_2010)_-_panoramio.jpg",
+          "credit": "Yasushi HASHIGUCHI",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 33.24593,
+            "lng": 130.297067
+          }
+        },
+        {
+          "title": "Saga Castle south moat stone wall sample",
+          "description": "A sample of stone wall for protection of moat around Saga Castle.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Saga_Castle_south_moat_stone_wall_sample.jpg/960px-Saga_Castle_south_moat_stone_wall_sample.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Castle_south_moat_stone_wall_sample.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.24318,
+            "lng": 130.29866
+          }
+        },
+        {
+          "title": "Saga Prefectural Road 260 in Yokamachi",
+          "description": "Street between Akamatsu-machi and Honjo, Saga city. It is part of Saga prefectural road No.260.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Saga_Prefectural_Road_260_in_Yokamachi.jpg/960px-Saga_Prefectural_Road_260_in_Yokamachi.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saga_Prefectural_Road_260_in_Yokamachi.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.244,
+            "lng": 130.29379
+          }
+        },
+        {
+          "title": "Cityscape around Saga Castle western moat",
+          "description": "The cityscape around western moat of Saga Castle.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cityscape_around_Saga_Castle_western_moat.jpg/960px-Cityscape_around_Saga_Castle_western_moat.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cityscape_around_Saga_Castle_western_moat.jpg",
+          "credit": "Pekachu",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 33.2463,
+            "lng": 130.2959
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

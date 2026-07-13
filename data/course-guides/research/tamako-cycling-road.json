@@ -1,0 +1,737 @@
+{
+  "slug": "tamako-cycling-road",
+  "spot": {
+    "slug": "tamako-cycling-road",
+    "name": "多摩湖サイクリングロード一周コース",
+    "prefecture": "東京都",
+    "city": "東村山市",
+    "description": "武蔵大和駅そばを起点に多摩湖(村山貯水池)の湖畔を一周する約11.8kmのコースです。大部分が自転車歩行者専用道のため車を気にせず走ることができ、湖と森の景色の変化を楽しみながら距離を踏めます。起伏はわずかで安定したペース走にも好適。途中にトイレや自動販売機があり、補給ポイントを確認しながら走れば安心です。",
+    "access": "西武多摩湖線 武蔵大和駅から徒歩すぐ。狭山公園経由で湖畔に出られます。",
+    "course_type": "loop",
+    "distance_m": 11832,
+    "elevation_gain_m": 80,
+    "surface": "asphalt",
+    "hasGpx": true,
+    "hasGuide": false,
+    "pointCount": 174,
+    "gpxDistanceM": 11760,
+    "distanceDifferencePct": 0.61,
+    "closureGapM": 0,
+    "hasGpxElevation": true,
+    "detectedCourseType": "loop",
+    "issues": []
+  },
+  "collectedAt": "2026-07-13T09:24:55.931Z",
+  "sources": {
+    "stations": "https://express.heartrails.com/api.html",
+    "photos": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+  },
+  "samples": [
+    {
+      "fraction": 0,
+      "point": {
+        "lat": 35.75985,
+        "lng": 139.43946000000003,
+        "ele": 111
+      },
+      "stations": [
+        {
+          "name": "武蔵大和",
+          "prefecture": "東京都",
+          "line": "西武多摩湖線",
+          "x": 139.444008,
+          "y": 35.756427,
+          "postal": "1890025",
+          "distance": "560m",
+          "prev": "八坂",
+          "next": "多摩湖"
+        },
+        {
+          "name": "多摩湖",
+          "prefecture": "東京都",
+          "line": "西武山口線",
+          "x": 139.442747,
+          "y": 35.765881,
+          "postal": "1890026",
+          "distance": "730m",
+          "prev": null,
+          "next": "西武園ゆうえんち"
+        },
+        {
+          "name": "西武園ゆうえんち",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.440166,
+          "y": 35.769042,
+          "postal": "3591145",
+          "distance": "1030m",
+          "prev": "多摩湖",
+          "next": "西武球場前"
+        }
+      ],
+      "photos": [
+        {
+          "title": "都立狭山自然公園・宅ちゃん池 - panoramio",
+          "description": "都立狭山自然公園・宅ちゃん池",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E7%8B%AD%E5%B1%B1%E8%87%AA%E7%84%B6%E5%85%AC%E5%9C%92%E3%83%BB%E5%AE%85%E3%81%A1%E3%82%83%E3%82%93%E6%B1%A0_-_panoramio.jpg",
+          "credit": "Adachi Masayuki",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.760392,
+            "lng": 139.440864
+          }
+        },
+        {
+          "title": "かっこいい取水塔 - panoramio",
+          "description": "かっこいい取水塔",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/%E3%81%8B%E3%81%A3%E3%81%93%E3%81%84%E3%81%84%E5%8F%96%E6%B0%B4%E5%A1%94_-_panoramio.jpg/960px-%E3%81%8B%E3%81%A3%E3%81%93%E3%81%84%E3%81%84%E5%8F%96%E6%B0%B4%E5%A1%94_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%8B%E3%81%A3%E3%81%93%E3%81%84%E3%81%84%E5%8F%96%E6%B0%B4%E5%A1%94_-_panoramio.jpg",
+          "credit": "heriheri",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.761058,
+            "lng": 139.439385
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339916493)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Toritsu_Sayama_Natural_Park_%2811339916493%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339916493%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339916493).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339919793)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Toritsu_Sayama_Natural_Park_%2811339919793%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339919793%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339919793).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339923273)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Toritsu_Sayama_Natural_Park_%2811339923273%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339923273%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339923273).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339787655)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Toritsu_Sayama_Natural_Park_%2811339787655%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339787655%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339787655).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339891164)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Toritsu_Sayama_Natural_Park_%2811339891164%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339891164%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339891164).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        },
+        {
+          "title": "Toritsu Sayama Natural Park (11339789295)",
+          "description": "Toritsu Sayama Natural Park",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Toritsu_Sayama_Natural_Park_%2811339789295%29.jpg/960px-Toritsu_Sayama_Natural_Park_%2811339789295%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toritsu_Sayama_Natural_Park_(11339789295).jpg",
+          "credit": "Guilhem Vellut from Annecy, France",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.759398,
+            "lng": 139.441137
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "point": {
+        "lat": 35.766772709519756,
+        "lng": 139.42750771460643,
+        "ele": 109
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武狭山線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "850m",
+          "prev": "下山口",
+          "next": null
+        },
+        {
+          "name": "西武園ゆうえんち",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.440166,
+          "y": 35.769042,
+          "postal": "3591145",
+          "distance": "1170m",
+          "prev": "多摩湖",
+          "next": "西武球場前"
+        },
+        {
+          "name": "多摩湖",
+          "prefecture": "東京都",
+          "line": "西武山口線",
+          "x": 139.442747,
+          "y": 35.765881,
+          "postal": "1890026",
+          "distance": "1380m",
+          "prev": null,
+          "next": "西武園ゆうえんち"
+        }
+      ],
+      "photos": [
+        {
+          "title": "田植え - panoramio",
+          "description": "田植え",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg/960px-%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%B0%E6%A4%8D%E3%81%88_-_panoramio.jpg",
+          "credit": "nekoneko",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770254,
+            "lng": 139.427874
+          }
+        },
+        {
+          "title": "渡邊靖彬 (51003080248)",
+          "description": "IMG_8898",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/%E6%B8%A1%E9%82%8A%E9%9D%96%E5%BD%AC_%2851003080248%29.jpg/960px-%E6%B8%A1%E9%82%8A%E9%9D%96%E5%BD%AC_%2851003080248%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B8%A1%E9%82%8A%E9%9D%96%E5%BD%AC_(51003080248).jpg",
+          "credit": "Jeffrey Hayes",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.76896,
+            "lng": 139.421405
+          }
+        },
+        {
+          "title": "Very straight path from Totoro Forest -6 to 狭山湖畔霊園 reception office",
+          "description": "Very straight path from Totoro Forest #6 to 狭山湖畔霊園 reception office",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Very_straight_path_from_Totoro_Forest_-6_to_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_reception_office.jpg/960px-Very_straight_path_from_Totoro_Forest_-6_to_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_reception_office.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Very_straight_path_from_Totoro_Forest_-6_to_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_reception_office.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771564,
+            "lng": 139.430536
+          }
+        },
+        {
+          "title": "View from 狭山湖畔霊園",
+          "description": "View from 狭山湖畔霊園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92.jpg/960px-View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771228,
+            "lng": 139.423961
+          }
+        },
+        {
+          "title": "View from 狭山湖畔霊園 2",
+          "description": "View from 狭山湖畔霊園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_2.jpg/960px-View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_2.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771228,
+            "lng": 139.423964
+          }
+        },
+        {
+          "title": "View from 狭山湖畔霊園 3",
+          "description": "View from 狭山湖畔霊園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_3.jpg/960px-View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_3.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_3.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771228,
+            "lng": 139.423969
+          }
+        },
+        {
+          "title": "View from 狭山湖畔霊園 4",
+          "description": "View from 狭山湖畔霊園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_4.jpg/960px-View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_4.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771231,
+            "lng": 139.423969
+          }
+        },
+        {
+          "title": "View from 狭山湖畔霊園 5",
+          "description": "View from 狭山湖畔霊園",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_5.jpg/960px-View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_%E7%8B%AD%E5%B1%B1%E6%B9%96%E7%95%94%E9%9C%8A%E5%9C%92_5.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.771231,
+            "lng": 139.423972
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "point": {
+        "lat": 35.7687621901005,
+        "lng": 139.4065431116583,
+        "ele": 148
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "1210m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        },
+        {
+          "name": "上北台",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.415822,
+          "y": 35.745824,
+          "postal": "2070021",
+          "distance": "2690m",
+          "prev": null,
+          "next": "桜街道"
+        },
+        {
+          "name": "西武園ゆうえんち",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.440166,
+          "y": 35.769042,
+          "postal": "3591145",
+          "distance": "3040m",
+          "prev": "多摩湖",
+          "next": "西武球場前"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Giants nakazato63",
+          "description": "Atsushi Nakazato, pitcher of the Yomiuri Giants .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giants_nakazato63.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giants_nakazato63.jpg",
+          "credit": "Ship1231",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.76807,
+            "lng": 139.417848
+          }
+        },
+        {
+          "title": "Sayamasanfudoji noboribata",
+          "description": "狭山山不動寺 幟旗",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sayamasanfudoji_noboribata.JPG/960px-Sayamasanfudoji_noboribata.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_noboribata.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.769667,
+            "lng": 139.4155
+          }
+        },
+        {
+          "title": "Sayamasanfudoji hondohengaku",
+          "description": "狭山山不動寺 本堂扁額",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sayamasanfudoji_hondohengaku.JPG/960px-Sayamasanfudoji_hondohengaku.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_hondohengaku.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770167,
+            "lng": 139.416
+          }
+        },
+        {
+          "title": "Sayamasanfudoji sekichu",
+          "description": "狭山山不動寺 石柱",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sayamasanfudoji_sekichu.JPG/960px-Sayamasanfudoji_sekichu.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_sekichu.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770167,
+            "lng": 139.417
+          }
+        },
+        {
+          "title": "山口観音の八角五重塔（所沢市上山口） - panoramio",
+          "description": "山口観音 の八角五重塔（所沢市上山口）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg/960px-%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg",
+          "credit": "Yoshio Kohara",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.768196,
+            "lng": 139.414369
+          }
+        },
+        {
+          "title": "Tokorozawa Konjoin Hondo 1",
+          "description": "金乗院 （山口観音） 本堂（ 埼玉県 所沢市 ）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tokorozawa_Konjoin_Hondo_1.JPG/960px-Tokorozawa_Konjoin_Hondo_1.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokorozawa_Konjoin_Hondo_1.JPG",
+          "credit": "京浜にけ",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.768793,
+            "lng": 139.41484
+          }
+        },
+        {
+          "title": "狭山湖 9",
+          "description": "「五風十雨の味わい」の碑",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%E7%8B%AD%E5%B1%B1%E6%B9%96_9.jpg/960px-%E7%8B%AD%E5%B1%B1%E6%B9%96_9.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8B%AD%E5%B1%B1%E6%B9%96_9.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.775125,
+            "lng": 139.414764
+          }
+        },
+        {
+          "title": "狭山湖 10",
+          "description": "狭山湖",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%E7%8B%AD%E5%B1%B1%E6%B9%96_10.jpg/960px-%E7%8B%AD%E5%B1%B1%E6%B9%96_10.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8B%AD%E5%B1%B1%E6%B9%96_10.jpg",
+          "credit": "Syced",
+          "license": "CC0",
+          "gps": {
+            "lat": 35.775119,
+            "lng": 139.4147
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "point": {
+        "lat": 35.762579008376065,
+        "lng": 139.39767732041514,
+        "ele": 155
+      },
+      "stations": [
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武山口線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "2190m",
+          "prev": "西武園ゆうえんち",
+          "next": null
+        },
+        {
+          "name": "上北台",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.415822,
+          "y": 35.745824,
+          "postal": "2070021",
+          "distance": "2480m",
+          "prev": null,
+          "next": "桜街道"
+        },
+        {
+          "name": "桜街道",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.416653,
+          "y": 35.739,
+          "postal": "2070021",
+          "distance": "3140m",
+          "prev": "上北台",
+          "next": "玉川上水"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Giants nakazato63",
+          "description": "Atsushi Nakazato, pitcher of the Yomiuri Giants .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giants_nakazato63.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giants_nakazato63.jpg",
+          "credit": "Ship1231",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.76807,
+            "lng": 139.417848
+          }
+        },
+        {
+          "title": "Sybra ordinata Bates 1873 female (5491888209)",
+          "description": "Familie: Cerambycidae Groesse: 9,8 mm Fundort: Japan leg. G.Lewis, 1910 Type, Coll. Museum London Photo: U.Schmidt, 2011",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sybra_ordinata_Bates_1873_female_%285491888209%29.jpg/960px-Sybra_ordinata_Bates_1873_female_%285491888209%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sybra_ordinata_Bates_1873_female_(5491888209).jpg",
+          "credit": "Udo Schmidt from Deutschland",
+          "license": "CC BY-SA 2.0",
+          "gps": {
+            "lat": 35.746512,
+            "lng": 139.405517
+          }
+        },
+        {
+          "title": "Sayamasanfudoji noboribata",
+          "description": "狭山山不動寺 幟旗",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sayamasanfudoji_noboribata.JPG/960px-Sayamasanfudoji_noboribata.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_noboribata.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.769667,
+            "lng": 139.4155
+          }
+        },
+        {
+          "title": "Sayamasanfudoji hondohengaku",
+          "description": "狭山山不動寺 本堂扁額",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sayamasanfudoji_hondohengaku.JPG/960px-Sayamasanfudoji_hondohengaku.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sayamasanfudoji_hondohengaku.JPG",
+          "credit": "田島飛松",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.770167,
+            "lng": 139.416
+          }
+        },
+        {
+          "title": "山口観音の八角五重塔（所沢市上山口） - panoramio",
+          "description": "山口観音 の八角五重塔（所沢市上山口）",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg/960px-%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E5%8F%A3%E8%A6%B3%E9%9F%B3%E3%81%AE%E5%85%AB%E8%A7%92%E4%BA%94%E9%87%8D%E5%A1%94%EF%BC%88%E6%89%80%E6%B2%A2%E5%B8%82%E4%B8%8A%E5%B1%B1%E5%8F%A3%EF%BC%89_-_panoramio.jpg",
+          "credit": "Yoshio Kohara",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.768196,
+            "lng": 139.414369
+          }
+        },
+        {
+          "title": "4 Chome Honmachi, Musashimurayama-shi, Tōkyō-to 208-0004, Japan - panoramio",
+          "description": "4 Chome Honmachi, Musashimurayama-shi, Tōkyō-to 208-0004, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/4_Chome_Honmachi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0004%2C_Japan_-_panoramio.jpg/960px-4_Chome_Honmachi%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0004%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:4_Chome_Honmachi,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0004,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.758689,
+            "lng": 139.387324
+          }
+        },
+        {
+          "title": "4 Chome Chūō, Musashimurayama-shi, Tōkyō-to 208-0003, Japan - panoramio",
+          "description": "4 Chome Chūō, Musashimurayama-shi, Tōkyō-to 208-0003, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/4_Chome_Ch%C5%AB%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0003%2C_Japan_-_panoramio.jpg/960px-4_Chome_Ch%C5%AB%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0003%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:4_Chome_Ch%C5%AB%C5%8D,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0003,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.75945,
+            "lng": 139.390838
+          }
+        },
+        {
+          "title": "2 Chome Nakatō, Musashimurayama-shi, Tōkyō-to 208-0001, Japan - panoramio",
+          "description": "2 Chome Nakatō, Musashimurayama-shi, Tōkyō-to 208-0001, Japan",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg/960px-2_Chome_Nakat%C5%8D%2C_Musashimurayama-shi%2C_T%C5%8Dky%C5%8D-to_208-0001%2C_Japan_-_panoramio.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2_Chome_Nakat%C5%8D,_Musashimurayama-shi,_T%C5%8Dky%C5%8D-to_208-0001,_Japan_-_panoramio.jpg",
+          "credit": "ESU",
+          "license": "CC BY 3.0",
+          "gps": {
+            "lat": 35.760613,
+            "lng": 139.394709
+          }
+        }
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "point": {
+        "lat": 35.758197865832265,
+        "lng": 139.41899092805036,
+        "ele": 134
+      },
+      "stations": [
+        {
+          "name": "上北台",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.415822,
+          "y": 35.745824,
+          "postal": "2070021",
+          "distance": "1410m",
+          "prev": null,
+          "next": "桜街道"
+        },
+        {
+          "name": "西武球場前",
+          "prefecture": "埼玉県",
+          "line": "西武狭山線",
+          "x": 139.41966,
+          "y": 35.77093,
+          "postal": "3591153",
+          "distance": "1420m",
+          "prev": "下山口",
+          "next": null
+        },
+        {
+          "name": "桜街道",
+          "prefecture": "東京都",
+          "line": "多摩モノレール",
+          "x": 139.416653,
+          "y": 35.739,
+          "postal": "2070021",
+          "distance": "2150m",
+          "prev": "上北台",
+          "next": "玉川上水"
+        }
+      ],
+      "photos": [
+        {
+          "title": "Giants nakazato63",
+          "description": "Atsushi Nakazato, pitcher of the Yomiuri Giants .",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giants_nakazato63.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giants_nakazato63.jpg",
+          "credit": "Ship1231",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.76807,
+            "lng": 139.417848
+          }
+        },
+        {
+          "title": "2016-09-04 Amanita kitamagotake N. Endo & A. Yamada 656211",
+          "description": "For more information about this, see the observation page at Mushroom Observer.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/2016-09-04_Amanita_kitamagotake_N._Endo_%26_A._Yamada_656211.jpg/960px-2016-09-04_Amanita_kitamagotake_N._Endo_%26_A._Yamada_656211.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016-09-04_Amanita_kitamagotake_N._Endo_%26_A._Yamada_656211.jpg",
+          "credit": "This image was created by user lxjfx at Mushroom Observer , a source for mycological images. You can contact this user here .",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.7561,
+            "lng": 139.4288
+          }
+        },
+        {
+          "title": "2017-08-17 Ophiocordyceps sobolifera (Hill ex Watson) G.H. Sung, J.M. Sung, Hywel-Jones & Spatafora 773113",
+          "description": "For more information about this, see the observation page at Mushroom Observer.",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2017-08-17_Ophiocordyceps_sobolifera_%28Hill_ex_Watson%29_G.H._Sung%2C_J.M._Sung%2C_Hywel-Jones_%26_Spatafora_773113.jpg/960px-2017-08-17_Ophiocordyceps_sobolifera_%28Hill_ex_Watson%29_G.H._Sung%2C_J.M._Sung%2C_Hywel-Jones_%26_Spatafora_773113.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017-08-17_Ophiocordyceps_sobolifera_(Hill_ex_Watson)_G.H._Sung,_J.M._Sung,_Hywel-Jones_%26_Spatafora_773113.jpg",
+          "credit": "This image was created by user lxjfx at Mushroom Observer , a source for mycological images. You can contact this user here .",
+          "license": "CC BY-SA 3.0",
+          "gps": {
+            "lat": 35.7487,
+            "lng": 139.4185
+          }
+        },
+        {
+          "title": "Seibu Dome 20210904 160747",
+          "description": "Seibu Dome メットライフドーム 肉丼専門店 3連覇/ご当地グルメ埼玉食堂",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Seibu_Dome_20210904_160747.jpg/960px-Seibu_Dome_20210904_160747.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu_Dome_20210904_160747.jpg",
+          "credit": "Bject",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.767778,
+            "lng": 139.42
+          }
+        },
+        {
+          "title": "Seibu Dome 20210904 160752",
+          "description": "Seibu Dome メットライフドーム クレイジーポテト",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Seibu_Dome_20210904_160752.jpg/960px-Seibu_Dome_20210904_160752.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seibu_Dome_20210904_160752.jpg",
+          "credit": "Bject",
+          "license": "CC BY-SA 4.0",
+          "gps": {
+            "lat": 35.767778,
+            "lng": 139.42
+          }
+        },
+        {
+          "title": "山川穂高 (51003905512)",
+          "description": "IMG_9088",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_%2851003905512%29.jpg/960px-%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_%2851003905512%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_(51003905512).jpg",
+          "credit": "Jeffrey Hayes",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.767942,
+            "lng": 139.420532
+          }
+        },
+        {
+          "title": "山川穂高 (51003905512) (cropped)",
+          "description": "IMG_9088",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_%2851003905512%29_%28cropped%29.jpg/960px-%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_%2851003905512%29_%28cropped%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E5%B7%9D%E7%A9%82%E9%AB%98_(51003905512)_(cropped).jpg",
+          "credit": "Jeffrey Hayes",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.767942,
+            "lng": 139.420532
+          }
+        },
+        {
+          "title": "黒田哲史 (51003905512) (cropped)",
+          "description": "IMG_9088",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%E9%BB%92%E7%94%B0%E5%93%B2%E5%8F%B2_%2851003905512%29_%28cropped%29.jpg/960px-%E9%BB%92%E7%94%B0%E5%93%B2%E5%8F%B2_%2851003905512%29_%28cropped%29.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%BB%92%E7%94%B0%E5%93%B2%E5%8F%B2_(51003905512)_(cropped).jpg",
+          "credit": "Jeffrey Hayes",
+          "license": "CC BY 2.0",
+          "gps": {
+            "lat": 35.767942,
+            "lng": 139.420532
+          }
+        }
+      ]
+    }
+  ],
+  "reviewStatus": "needs_review"
+}

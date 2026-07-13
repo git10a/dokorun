@@ -1,0 +1,388 @@
+{
+  "slug": "toyama-castle-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "富山城址公園の南側から松川沿い、市役所周辺、県庁前公園をつないで一周する約3.2kmの市街地コースです。富山城の天守、石垣、堀と松川の水辺を眺められ、富山駅周辺のホテルから朝ランでアクセスできます。桜の季節は松川沿いが混雑するため早朝を選び、横断部では信号と歩行者に注意してください。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 富山地方鉄道 国際会議場前電停からすぐ。JR富山駅から約1km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "大手モール駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.689388,
+      "destinationLng": 137.211334,
+      "routeAnchorLat": 36.690291,
+      "routeAnchorLng": 137.210467,
+      "routeMode": "loop",
+      "accessText": "大手モール駅からコースまで約130m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.690291,
+      "routeLng": 137.210467,
+      "elevationM": 11.8,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 661,
+        "section-3": 1160,
+        "section-4": 1905,
+        "section-5": 2520
+      },
+      "gpxHref": "/gpx/toyama-castle-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "荒町駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.691513,
+      "destinationLng": 137.215805,
+      "routeAnchorLat": 36.692322,
+      "routeAnchorLng": 137.214842,
+      "routeMode": "loop",
+      "accessText": "荒町駅からコースまで約110m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 29,
+      "routeDistanceM": 661,
+      "routeLat": 36.692322,
+      "routeLng": 137.214842,
+      "elevationM": 13,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2536,
+        "section-2": 0,
+        "section-3": 499,
+        "section-4": 1244,
+        "section-5": 1859
+      },
+      "gpxHref": "/gpx/toyama-castle-park-start-2.gpx"
+    },
+    {
+      "id": "start-3",
+      "name": "電気ビル前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.697432,
+      "destinationLng": 137.216105,
+      "routeAnchorLat": 36.696646,
+      "routeAnchorLng": 137.213982,
+      "routeMode": "loop",
+      "accessText": "電気ビル前駅からコースまで約230m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 44,
+      "routeDistanceM": 1160,
+      "routeLat": 36.696646,
+      "routeLng": 137.213982,
+      "elevationM": 15,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 2037,
+        "section-2": 2698,
+        "section-3": 0,
+        "section-4": 745,
+        "section-5": 1360
+      },
+      "gpxHref": "/gpx/toyama-castle-park-start-3.gpx"
+    },
+    {
+      "id": "start-4",
+      "name": "県庁前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 36.695728,
+      "destinationLng": 137.20984,
+      "routeAnchorLat": 36.696646,
+      "routeAnchorLng": 137.208609,
+      "routeMode": "loop",
+      "accessText": "県庁前駅からコースまで約160m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 87,
+      "routeDistanceM": 1905,
+      "routeLat": 36.696646,
+      "routeLng": 137.208609,
+      "elevationM": 11.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 1292,
+        "section-2": 1953,
+        "section-3": 2452,
+        "section-4": 0,
+        "section-5": 615
+      },
+      "gpxHref": "/gpx/toyama-castle-park-start-4.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 36.690291,
+      "anchorLng": 137.210467,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 富山市民プラザホール 富山県富山市大手町6番14号",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Toyama_Shimin_Plaza.JPG/960px-Toyama_Shimin_Plaza.JPG",
+        "alt": "富山城址公園周回のスタート周辺付近",
+        "caption": "富山城址公園周回の走路近隣で撮影された風景",
+        "credit": "Triglav",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyama_Shimin_Plaza.JPG"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 36.690291,
+      "routeLng": 137.210467,
+      "elevationM": 11.8,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 36.692322,
+      "anchorLng": 137.214842,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 富山県富山市、 日医工 本社",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Nichi-Iko_Headquarter.jpg/960px-Nichi-Iko_Headquarter.jpg",
+        "alt": "富山城址公園周回の序盤区間付近",
+        "caption": "富山城址公園周回の走路近隣で撮影された風景",
+        "credit": "妖精書士",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nichi-Iko_Headquarter.jpg"
+      },
+      "routePointIndex": 29,
+      "routeDistanceM": 661,
+      "routeLat": 36.692322,
+      "routeLng": 137.214842,
+      "elevationM": 13,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 36.696646,
+      "anchorLng": 137.213982,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 富山市役所前",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E5%AF%8C%E5%B1%B1%E5%B8%82%E5%BD%B9%E6%89%80%E5%89%8D_-_panoramio.jpg/960px-%E5%AF%8C%E5%B1%B1%E5%B8%82%E5%BD%B9%E6%89%80%E5%89%8D_-_panoramio.jpg",
+        "alt": "富山城址公園周回の中盤区間付近",
+        "caption": "富山城址公園周回の走路近隣で撮影された風景",
+        "credit": "alonfloc",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%AF%8C%E5%B1%B1%E5%B8%82%E5%BD%B9%E6%89%80%E5%89%8D_-_panoramio.jpg"
+      },
+      "routePointIndex": 44,
+      "routeDistanceM": 1160,
+      "routeLat": 36.696646,
+      "routeLng": 137.213982,
+      "elevationM": 15,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 36.696646,
+      "anchorLng": 137.208609,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 富山市立図書館 旧本館 富山県富山市丸ノ内1丁目4-50",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Toyama_City_Library_Marunouchi.JPG/960px-Toyama_City_Library_Marunouchi.JPG",
+        "alt": "富山城址公園周回の後半区間付近",
+        "caption": "富山城址公園周回の走路近隣で撮影された風景",
+        "credit": "Triglav",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyama_City_Library_Marunouchi.JPG"
+      },
+      "routePointIndex": 87,
+      "routeDistanceM": 1905,
+      "routeLat": 36.696646,
+      "routeLng": 137.208609,
+      "elevationM": 11.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 36.693152,
+      "anchorLng": 137.206399,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Funahashiminamicho, Toyama, Toyama Prefecture 930-0095, Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Funahashiminamicho%2C_Toyama%2C_Toyama_Prefecture_930-0095%2C_Japan_-_panoramio.jpg/960px-Funahashiminamicho%2C_Toyama%2C_Toyama_Prefecture_930-0095%2C_Japan_-_panoramio.jpg",
+        "alt": "富山城址公園周回の終盤区間付近",
+        "caption": "富山城址公園周回の走路近隣で撮影された風景",
+        "credit": "kiwa dokokano",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Funahashiminamicho,_Toyama,_Toyama_Prefecture_930-0095,_Japan_-_panoramio.jpg"
+      },
+      "routePointIndex": 108,
+      "routeDistanceM": 2520,
+      "routeLat": 36.693152,
+      "routeLng": 137.206399,
+      "elevationM": 9.5,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 3197,
+  "elevationGainM": 15,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 11.8
+    },
+    {
+      "distanceM": 100,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 200,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 300,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 400,
+      "elevationM": 12.6
+    },
+    {
+      "distanceM": 500,
+      "elevationM": 12.1
+    },
+    {
+      "distanceM": 600,
+      "elevationM": 12.2
+    },
+    {
+      "distanceM": 699,
+      "elevationM": 13.8
+    },
+    {
+      "distanceM": 799,
+      "elevationM": 15.7
+    },
+    {
+      "distanceM": 899,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 999,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 1099,
+      "elevationM": 16
+    },
+    {
+      "distanceM": 1199,
+      "elevationM": 15.4
+    },
+    {
+      "distanceM": 1299,
+      "elevationM": 15
+    },
+    {
+      "distanceM": 1399,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 1499,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 1599,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 1699,
+      "elevationM": 11.7
+    },
+    {
+      "distanceM": 1799,
+      "elevationM": 15.1
+    },
+    {
+      "distanceM": 1898,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 1998,
+      "elevationM": 9.5
+    },
+    {
+      "distanceM": 2098,
+      "elevationM": 9.9
+    },
+    {
+      "distanceM": 2198,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 2298,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 2398,
+      "elevationM": 10.5
+    },
+    {
+      "distanceM": 2498,
+      "elevationM": 9.7
+    },
+    {
+      "distanceM": 2598,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 2698,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 2798,
+      "elevationM": 10.3
+    },
+    {
+      "distanceM": 2898,
+      "elevationM": 11.6
+    },
+    {
+      "distanceM": 2998,
+      "elevationM": 10
+    },
+    {
+      "distanceM": 3097,
+      "elevationM": 11.5
+    },
+    {
+      "distanceM": 3197,
+      "elevationM": 11.3
+    }
+  ]
+}

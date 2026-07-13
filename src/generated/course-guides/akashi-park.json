@@ -1,0 +1,267 @@
+{
+  "slug": "akashi-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "明石城跡を核とする県立公園で、JR明石駅から徒歩5分という交通利便性が大きい候補です。公式では園内マップとアクセス、駐車場2か所が確認でき、コース紹介では剛ノ池周辺を回る約2kmの周回ルートが案内されています。樹木が多く、城跡と水辺の景観要素が明確で、春は桜の文脈とも相性が良い一方、距離の一次ソース明示は限定的なのでコース寸法表示の現地確認を残します。掲載時は代表起点とコース表示の現地写真をあわせて取得すると、距離・路面・設備の再検証がしやすくなります。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR・山陽明石駅北口から徒歩約5分。第二神明大蔵谷ICから車約10分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "明石駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 34.649084,
+      "destinationLng": 134.992512,
+      "routeAnchorLat": 34.655105,
+      "routeAnchorLng": 134.993902,
+      "routeMode": "loop",
+      "accessText": "明石駅からコースまで約680m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.655105,
+      "routeLng": 134.993902,
+      "elevationM": 28.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 429,
+        "section-3": 853,
+        "section-4": 1280,
+        "section-5": 1709
+      },
+      "gpxHref": "/gpx/akashi-park-start-1.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 34.655105,
+      "anchorLng": 134.993902,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 明石公園",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+        "alt": "明石公園のスタート周辺付近",
+        "caption": "明石公園の走路近隣で撮影された風景",
+        "credit": "kcomiida",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92_-_panoramio.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 34.655105,
+      "routeLng": 134.993902,
+      "elevationM": 28.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 34.657677,
+      "anchorLng": 134.993763,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 兵庫県神戸市西区櫨谷町谷口 兵庫県道52号小部明石線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG/960px-Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG",
+        "alt": "明石公園の序盤区間付近",
+        "caption": "明石公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG"
+      },
+      "routePointIndex": 101,
+      "routeDistanceM": 429,
+      "routeLat": 34.657677,
+      "routeLng": 134.993763,
+      "elevationM": 12.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 34.655467,
+      "anchorLng": 134.990253,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 兵庫県神戸市西区櫨谷町谷口 兵庫県道52号小部明石線",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG/960px-Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG",
+        "alt": "明石公園の中盤区間付近",
+        "caption": "明石公園の走路近隣で撮影された風景",
+        "credit": "Mti",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hazetanitown_Taniguchi_Nishi-ku_Kobeicity_Hyogopref_Hyogoprefectural_road_52_Obe_Akashi_line.JPG"
+      },
+      "routePointIndex": 207,
+      "routeDistanceM": 853,
+      "routeLat": 34.655467,
+      "routeLng": 134.990253,
+      "elevationM": 14.7,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 34.652255,
+      "anchorLng": 134.990711,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 明石公園入口",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92%E5%85%A5%E5%8F%A3_-_panoramio_-_kcomiida.jpg/960px-%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92%E5%85%A5%E5%8F%A3_-_panoramio_-_kcomiida.jpg",
+        "alt": "明石公園の後半区間付近",
+        "caption": "明石公園の走路近隣で撮影された風景",
+        "credit": "kcomiida",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%92%E5%85%A5%E5%8F%A3_-_panoramio_-_kcomiida.jpg"
+      },
+      "routePointIndex": 314,
+      "routeDistanceM": 1280,
+      "routeLat": 34.652255,
+      "routeLng": 134.990711,
+      "elevationM": 4.2,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 34.652296,
+      "anchorLng": 134.994301,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Akashi City Museum of Culture in Akashi , Hyogo prefecture , Japan",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Akashi_City_Museum_of_Culture_Hyogo_pref_Japan01s3.jpg/960px-Akashi_City_Museum_of_Culture_Hyogo_pref_Japan01s3.jpg",
+        "alt": "明石公園の終盤区間付近",
+        "caption": "明石公園の走路近隣で撮影された風景",
+        "credit": "663highland",
+        "license": "CC BY 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akashi_City_Museum_of_Culture_Hyogo_pref_Japan01s3.jpg"
+      },
+      "routePointIndex": 420,
+      "routeDistanceM": 1709,
+      "routeLat": 34.652296,
+      "routeLng": 134.994301,
+      "elevationM": 11.8,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 2146,
+  "elevationGainM": 54,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 28.3
+    },
+    {
+      "distanceM": 98,
+      "elevationM": 28.2
+    },
+    {
+      "distanceM": 195,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 293,
+      "elevationM": 14
+    },
+    {
+      "distanceM": 390,
+      "elevationM": 12
+    },
+    {
+      "distanceM": 488,
+      "elevationM": 13.5
+    },
+    {
+      "distanceM": 585,
+      "elevationM": 13.7
+    },
+    {
+      "distanceM": 683,
+      "elevationM": 14.1
+    },
+    {
+      "distanceM": 780,
+      "elevationM": 15.5
+    },
+    {
+      "distanceM": 878,
+      "elevationM": 13.1
+    },
+    {
+      "distanceM": 975,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 1073,
+      "elevationM": 6.8
+    },
+    {
+      "distanceM": 1171,
+      "elevationM": 5.1
+    },
+    {
+      "distanceM": 1268,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 1366,
+      "elevationM": 9.8
+    },
+    {
+      "distanceM": 1463,
+      "elevationM": 13.2
+    },
+    {
+      "distanceM": 1561,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 1658,
+      "elevationM": 9.3
+    },
+    {
+      "distanceM": 1756,
+      "elevationM": 16.4
+    },
+    {
+      "distanceM": 1853,
+      "elevationM": 23.1
+    },
+    {
+      "distanceM": 1951,
+      "elevationM": 21.3
+    },
+    {
+      "distanceM": 2048,
+      "elevationM": 26
+    },
+    {
+      "distanceM": 2146,
+      "elevationM": 28.3
+    }
+  ]
+}

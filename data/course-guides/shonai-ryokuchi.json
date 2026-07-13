@@ -1,0 +1,140 @@
+{
+  "slug": "shonai-ryokuchi",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "名古屋西部の人気練習地で、園内には約2.3kmのジョギングコースが整備されています。高低差が少なくフラットで、距離表示もあり、周回ペースを合わせやすいのが特長です。周辺の庄内川側へつなげて距離を延ばすこともでき、一本調子になりません。駅直結で入りやすく、駐車場やトイレも使えるため、ジョグからペース走、マラソン向けの距離調整まで対応しやすい定番です。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "warnings": [
+    {
+      "title": "一般利用者と交通ルールを優先してください",
+      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
+      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
+      "linkLabel": "警察庁の交通安全情報"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 名古屋市営地下鉄鶴舞線 庄内緑地公園駅2番出口すぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "庄内緑地公園駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.215186,
+      "destinationLng": 136.886963,
+      "routeAnchorLat": 35.214088,
+      "routeAnchorLng": 136.885732,
+      "routeMode": "loop",
+      "accessText": "庄内緑地公園駅からコースまで約170m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "中小田井駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.214647,
+      "destinationLng": 136.876772,
+      "routeAnchorLat": 35.211518,
+      "routeAnchorLng": 136.879001,
+      "routeMode": "loop",
+      "accessText": "中小田井駅からコースまで約400m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.214088,
+      "anchorLng": 136.885732,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Shonai ryokuchi (Shonai green). Loc: Nagoya city, Aichi Prefecture, Japan. ja: 庄内緑地 撮影場所 愛知県名古屋市西区",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Shonai-ryokuchi01.jpg/960px-Shonai-ryokuchi01.jpg",
+        "alt": "庄内緑地のスタート周辺付近",
+        "caption": "庄内緑地の走路近隣で撮影された風景",
+        "credit": "KAMUI",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shonai-ryokuchi01.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.214414,
+      "anchorLng": 136.882459,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 名古屋市西区上小田井の臨済宗妙心寺派 江北山法源寺",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Hogen-ji_Temple_20170830-02.jpg/960px-Hogen-ji_Temple_20170830-02.jpg",
+        "alt": "庄内緑地の序盤区間付近",
+        "caption": "庄内緑地の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hogen-ji_Temple_20170830-02.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.211518,
+      "anchorLng": 136.879001,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 名古屋市西区中小田井の五所社",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gosho-sha_20170830-03.jpg/960px-Gosho-sha_20170830-03.jpg",
+        "alt": "庄内緑地の中盤区間付近",
+        "caption": "庄内緑地の走路近隣で撮影された風景",
+        "credit": "円周率３パーセント",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gosho-sha_20170830-03.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.210737,
+      "anchorLng": 136.881716,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Shōnai river's Araizeki (deversoir). Loc: Nagoya city, Aichi Prefecture, Japan. ja: 庄内川 右岸の洗堰遠景。堰の向こう側が 庄内緑地 撮影場所 愛知県名古屋市西区・庄内川右岸",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Shonai-river_araizeki01.jpg/960px-Shonai-river_araizeki01.jpg",
+        "alt": "庄内緑地の後半区間付近",
+        "caption": "庄内緑地の走路近隣で撮影された風景",
+        "credit": "KAMUI",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shonai-river_araizeki01.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.211901,
+      "anchorLng": 136.886451,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Shonai ryokuchi (Shonai green). Loc: Nagoya city, Aichi Prefecture, Japan. ja: 庄内緑地 撮影場所 愛知県名古屋市西区",
+      "surfaceLabel": "舗装路",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Shonai-ryokuchi01.jpg/960px-Shonai-ryokuchi01.jpg",
+        "alt": "庄内緑地の終盤区間付近",
+        "caption": "庄内緑地の走路近隣で撮影された風景",
+        "credit": "KAMUI",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shonai-ryokuchi01.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

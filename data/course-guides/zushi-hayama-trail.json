@@ -1,0 +1,140 @@
+{
+  "slug": "zushi-hayama-trail",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "京急逗子・葉山駅を発着し、南郷上ノ山公園からトレイルへ。二子山(208m)から乳頭山・茅塚・観音塚と三浦アルプスの主稜線をつなぎ、最後は仙元山(118m)から相模湾と江の島、晴れれば富士山を望んで葉山の街へ下る周回。標高は低いが細かいアップダウンが延々と続き、距離以上に脚にくる。稜線は分岐が非常に多いので地図アプリ必携。トイレは南郷上ノ山公園と仙元山のみで、トレイル中に自販機はない。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 京急逗子線逗子・葉山駅からすぐ(南口周辺にコンビニ・コインロッカーあり) 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "逗子・葉山駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.294189,
+      "destinationLng": 139.580359,
+      "routeAnchorLat": 35.295278,
+      "routeAnchorLng": 139.580731,
+      "routeMode": "loop",
+      "accessText": "逗子・葉山駅からコースまで約130m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    },
+    {
+      "id": "start-2",
+      "name": "東逗子駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.298781,
+      "destinationLng": 139.601768,
+      "routeAnchorLat": 35.282455,
+      "routeAnchorLng": 139.598142,
+      "routeMode": "loop",
+      "accessText": "東逗子駅からコースまで約1850m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.295278,
+      "anchorLng": 139.580731,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: JR逗子駅前(Zushi)(2001/01/11)",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/JR%E9%80%97%E5%AD%90%E9%A7%85%E5%89%8D%28Zushi%29%282001-01-11%29_-_panoramio.jpg/960px-JR%E9%80%97%E5%AD%90%E9%A7%85%E5%89%8D%28Zushi%29%282001-01-11%29_-_panoramio.jpg",
+        "alt": "三浦アルプス縦走(二子山〜仙元山)のスタート周辺付近",
+        "caption": "三浦アルプス縦走(二子山〜仙元山)の走路近隣で撮影された風景",
+        "credit": "kcomiida",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR%E9%80%97%E5%AD%90%E9%A7%85%E5%89%8D(Zushi)(2001-01-11)_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.282455,
+      "anchorLng": 139.598142,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 神奈川県葉山町、 逗葉新道 料金所・パーキングエリア。奥が逗子インター方面。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Zuyo_Toll_Road.jpg/960px-Zuyo_Toll_Road.jpg",
+        "alt": "三浦アルプス縦走(二子山〜仙元山)の序盤区間付近",
+        "caption": "三浦アルプス縦走(二子山〜仙元山)の走路近隣で撮影された風景",
+        "credit": "妖精書士 This photo was taken with Fujifilm FinePix JX200",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zuyo_Toll_Road.jpg"
+      }
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.282267,
+      "anchorLng": 139.61444,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 神奈川県葉山町、 逗葉新道 料金所・パーキングエリア。奥が逗子インター方面。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Zuyo_Toll_Road.jpg/960px-Zuyo_Toll_Road.jpg",
+        "alt": "三浦アルプス縦走(二子山〜仙元山)の中盤区間付近",
+        "caption": "三浦アルプス縦走(二子山〜仙元山)の走路近隣で撮影された風景",
+        "credit": "妖精書士 This photo was taken with Fujifilm FinePix JX200",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zuyo_Toll_Road.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.276944,
+      "anchorLng": 139.610966,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 神奈川県葉山町、 逗葉新道 料金所・パーキングエリア。奥が逗子インター方面。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Zuyo_Toll_Road.jpg/960px-Zuyo_Toll_Road.jpg",
+        "alt": "三浦アルプス縦走(二子山〜仙元山)の後半区間付近",
+        "caption": "三浦アルプス縦走(二子山〜仙元山)の走路近隣で撮影された風景",
+        "credit": "妖精書士 This photo was taken with Fujifilm FinePix JX200",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zuyo_Toll_Road.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.276904,
+      "anchorLng": 139.582314,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: はやま三ヶ岡山緑地の山頂広場より富士山方面を望む(神奈川県葉山町)",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sangaokayama_01.jpg/960px-Sangaokayama_01.jpg",
+        "alt": "三浦アルプス縦走(二子山〜仙元山)の終盤区間付近",
+        "caption": "三浦アルプス縦走(二子山〜仙元山)の走路近隣で撮影された風景",
+        "credit": "Quercus acuta",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sangaokayama_01.jpg"
+      }
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  }
+}

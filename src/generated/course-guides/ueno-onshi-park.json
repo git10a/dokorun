@@ -1,0 +1,270 @@
+{
+  "slug": "ueno-onshi-park",
+  "heroCheckpointId": "section-1",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "上野恩賜公園は美術館や不忍池を結びながら走ることができる都内屈指の観光型ランスポットです。代表設定は約1.8kmで、広場や園路、池周辺をつなぐため景色の変化が大きく、早朝は特に気持ちよく走れます。専用ラン路ではないものの、道幅が取れる区間が多く、ゆったりしたジョグに使いやすいです。観光客が少ない時間帯なら、旅ランやリフレッシュ目的の周回、花見シーズンの景色重視ランに向いています。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: JR・東京メトロ 上野駅から徒歩5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "鶯谷駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.721484,
+      "destinationLng": 139.778015,
+      "routeAnchorLat": 35.719944,
+      "routeAnchorLng": 139.774475,
+      "routeMode": "loop",
+      "accessText": "鶯谷駅からコースまで約360m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.719944,
+      "routeLng": 139.774475,
+      "elevationM": 17.3,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 0,
+        "section-2": 318,
+        "section-3": 634,
+        "section-4": 952,
+        "section-5": 1271
+      },
+      "gpxHref": "/gpx/ueno-onshi-park-start-1.gpx"
+    },
+    {
+      "id": "start-2",
+      "name": "上野駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.71379,
+      "destinationLng": 139.777043,
+      "routeAnchorLat": 35.716545,
+      "routeAnchorLng": 139.777557,
+      "routeMode": "loop",
+      "accessText": "上野駅からコースまで約310m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。",
+      "routePointIndex": 174,
+      "routeDistanceM": 634,
+      "routeLat": 35.716545,
+      "routeLng": 139.777557,
+      "elevationM": 20.5,
+      "snapGapM": 0,
+      "checkpointDistances": {
+        "section-1": 957,
+        "section-2": 1275,
+        "section-3": 0,
+        "section-4": 318,
+        "section-5": 637
+      },
+      "gpxHref": "/gpx/ueno-onshi-park-start-2.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.719944,
+      "anchorLng": 139.774475,
+      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: The International Library of Children's Literature in Japan (former Imperial Library), at Ueno Tokyo Japan.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/International_Library_of_Children%27s_Literature.jpg/960px-International_Library_of_Children%27s_Literature.jpg",
+        "alt": "上野恩賜公園のスタート周辺付近",
+        "caption": "上野恩賜公園の走路近隣で撮影された風景",
+        "credit": "Wiiii",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:International_Library_of_Children%27s_Literature.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.719944,
+      "routeLng": 139.774475,
+      "elevationM": 17.3,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.717972,
+      "anchorLng": 139.774582,
+      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 東京国立博物館 表慶館、東京都台東区、片山東熊設計、1909年。",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Hyokeikan_of_Tokyo_National_Museum_2010.jpg/960px-Hyokeikan_of_Tokyo_National_Museum_2010.jpg",
+        "alt": "上野恩賜公園の序盤区間付近",
+        "caption": "上野恩賜公園の走路近隣で撮影された風景",
+        "credit": "Wiiii",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyokeikan_of_Tokyo_National_Museum_2010.jpg"
+      },
+      "routePointIndex": 86,
+      "routeDistanceM": 318,
+      "routeLat": 35.717972,
+      "routeLng": 139.774582,
+      "elevationM": 18.9,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.716545,
+      "anchorLng": 139.777557,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: The western end of the Platforms of Ueno Station in W:Tokyo . Modern urban buildings can be seen in the background",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ueno_Station_20130810_2.jpg/960px-Ueno_Station_20130810_2.jpg",
+        "alt": "上野恩賜公園の中盤区間付近",
+        "caption": "上野恩賜公園の走路近隣で撮影された風景",
+        "credit": "DXR",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ueno_Station_20130810_2.jpg"
+      },
+      "routePointIndex": 174,
+      "routeDistanceM": 634,
+      "routeLat": 35.716545,
+      "routeLng": 139.777557,
+      "elevationM": 20.5,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.718563,
+      "anchorLng": 139.779312,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Tokyo, Ueno.",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Tokyo%2C_Ueno._-_panoramio.jpg/960px-Tokyo%2C_Ueno._-_panoramio.jpg",
+        "alt": "上野恩賜公園の後半区間付近",
+        "caption": "上野恩賜公園の走路近隣で撮影された風景",
+        "credit": "jeienne",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo,_Ueno._-_panoramio.jpg"
+      },
+      "routePointIndex": 260,
+      "routeDistanceM": 952,
+      "routeLat": 35.718563,
+      "routeLng": 139.779312,
+      "elevationM": 23.1,
+      "snapGapM": 0
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.720299,
+      "anchorLng": 139.776703,
+      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Chokugaku-mon (Gate with an imperial inscription), Mausoleum of Gen'yuin(Tokugawa Ietsuna) (Japan's national important cultural property), K",
+      "surfaceLabel": "舗装・未舗装",
+      "caution": "歩行者と交差点を優先",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kaneiji_Genyuin_Mausoleum_Gate.JPG/960px-Kaneiji_Genyuin_Mausoleum_Gate.JPG",
+        "alt": "上野恩賜公園の終盤区間付近",
+        "caption": "上野恩賜公園の走路近隣で撮影された風景",
+        "credit": "Reggaeman",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaneiji_Genyuin_Mausoleum_Gate.JPG"
+      },
+      "routePointIndex": 343,
+      "routeDistanceM": 1271,
+      "routeLat": 35.720299,
+      "routeLng": 139.776703,
+      "elevationM": 21.9,
+      "snapGapM": 0
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "automated_review_passed"
+  },
+  "distanceM": 1591,
+  "elevationGainM": 20,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": 17.3
+    },
+    {
+      "distanceM": 99,
+      "elevationM": 18.1
+    },
+    {
+      "distanceM": 199,
+      "elevationM": 18.5
+    },
+    {
+      "distanceM": 298,
+      "elevationM": 18.7
+    },
+    {
+      "distanceM": 398,
+      "elevationM": 20.9
+    },
+    {
+      "distanceM": 497,
+      "elevationM": 22.6
+    },
+    {
+      "distanceM": 596,
+      "elevationM": 22.8
+    },
+    {
+      "distanceM": 696,
+      "elevationM": 17.5
+    },
+    {
+      "distanceM": 795,
+      "elevationM": 17.7
+    },
+    {
+      "distanceM": 895,
+      "elevationM": 20.2
+    },
+    {
+      "distanceM": 994,
+      "elevationM": 23.4
+    },
+    {
+      "distanceM": 1094,
+      "elevationM": 22.3
+    },
+    {
+      "distanceM": 1193,
+      "elevationM": 20.6
+    },
+    {
+      "distanceM": 1292,
+      "elevationM": 22.9
+    },
+    {
+      "distanceM": 1392,
+      "elevationM": 22.1
+    },
+    {
+      "distanceM": 1491,
+      "elevationM": 20.1
+    },
+    {
+      "distanceM": 1591,
+      "elevationM": 17.1
+    }
+  ]
+}

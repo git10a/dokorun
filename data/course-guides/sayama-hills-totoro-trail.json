@@ -1,0 +1,103 @@
+{
+  "slug": "sayama-hills-totoro-trail",
+  "heroCheckpointId": "section-3",
+  "checkpointsTitle": "コースの雰囲気",
+  "intro": "早稲田大学所沢キャンパス西側から狭山丘陵の尾根道に入り、都県境の雑木林を縫って瑞穂町の六道山公園まで往復する約8.7kmのトレイル。砂利と土の路面で起伏は緩やかなのでトレイル入門にも向く。六道山公園の展望台は関東の富士見百景に選ばれ、晴れた日には富士山が見える。公園にトイレ・自販機あり。一帯は『となりのトトロ』の舞台モデルと言われる「トトロの森」の保全地域で、四季の里山風景が楽しめる。",
+  "warnings": [
+    {
+      "title": "天候と現地の通行情報を確認してください",
+      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
+      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
+      "linkLabel": "環境省の自然歩道初心者ガイド"
+    },
+    {
+      "title": "コースデータは出発前にも確認してください",
+      "body": "アクセス情報: 西武池袋線 小手指駅からバス「早稲田大学」下車すぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
+      "url": "https://dokorun.com/guide/gpx",
+      "linkLabel": "どこランのGPX利用ガイド"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "start-1",
+      "name": "西武球場前駅側",
+      "badge": "電車でアクセス",
+      "destinationLat": 35.77093,
+      "destinationLng": 139.41966,
+      "routeAnchorLat": 35.78499,
+      "routeAnchorLng": 139.397177,
+      "routeMode": "forward",
+      "accessText": "西武球場前駅からコースまで約2560m",
+      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
+      "firstSection": "地図とGPXで最初の分岐を確認してから走り始めます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "section-1",
+      "name": "スタート周辺",
+      "anchorLat": 35.78499,
+      "anchorLng": 139.397177,
+      "description": "スタート周辺です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認"
+    },
+    {
+      "id": "section-2",
+      "name": "序盤区間",
+      "anchorLat": 35.78394,
+      "anchorLng": 139.384896,
+      "description": "序盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認"
+    },
+    {
+      "id": "section-3",
+      "name": "中盤区間",
+      "anchorLat": 35.78,
+      "anchorLng": 139.369765,
+      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Photo of part of the large maps posted on outdoor signs around Tama ko and Sayama ko public hiking trails in Tokyo and Saitama, Japan.",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LakeTama_and_SayamaMap.jpg/960px-LakeTama_and_SayamaMap.jpg",
+        "alt": "狭山丘陵・六道山公園トレイルの中盤区間付近",
+        "caption": "狭山丘陵・六道山公園トレイルの走路近隣で撮影された風景",
+        "credit": "Bruce Carrick",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:LakeTama_and_SayamaMap.jpg"
+      }
+    },
+    {
+      "id": "section-4",
+      "name": "後半区間",
+      "anchorLat": 35.78,
+      "anchorLng": 139.369765,
+      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Photo of part of the large maps posted on outdoor signs around Tama ko and Sayama ko public hiking trails in Tokyo and Saitama, Japan.",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認",
+      "photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LakeTama_and_SayamaMap.jpg/960px-LakeTama_and_SayamaMap.jpg",
+        "alt": "狭山丘陵・六道山公園トレイルの後半区間付近",
+        "caption": "狭山丘陵・六道山公園トレイルの走路近隣で撮影された風景",
+        "credit": "Bruce Carrick",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:LakeTama_and_SayamaMap.jpg"
+      }
+    },
+    {
+      "id": "section-5",
+      "name": "終盤区間",
+      "anchorLat": 35.78394,
+      "anchorLng": 139.384896,
+      "description": "終盤区間です。写真候補は位置・内容・ライセンスの条件を満たさなかったため、地図と高低図で路面の変化を確認してください。",
+      "surfaceLabel": "トレイル",
+      "caution": "天候と足元を確認"
+    }
+  ],
+  "dataProvenance": {
+    "stations": "HeartRails Express",
+    "photos": "Wikimedia Commons geotagged media",
+    "status": "partial_photo_coverage"
+  }
+}
