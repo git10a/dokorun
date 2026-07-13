@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
 import { getDb, withTxDb, type Database } from "@/db";
-import { courses, photos, runs, spots, spotTags, tags } from "@/db/schema";
+import { courses, feedback, photos, runs, spots, spotTags, tags } from "@/db/schema";
 import { createSessionToken, isAdmin, sessionCookieName } from "@/lib/auth";
 import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import type { LineString } from "@/lib/types";
@@ -119,4 +119,12 @@ export async function deleteRunAsAdmin(formData: FormData) {
     const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, target[0].spotId)).limit(1);
     if (spot[0]) revalidatePath(`/spots/${spot[0].slug}`);
   }
+}
+
+export async function deleteFeedbackAsAdmin(formData: FormData) {
+  await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  if (!z.string().uuid().safeParse(id).success) return;
+  await getDb().delete(feedback).where(eq(feedback.id, id));
+  revalidatePath("/admin/feedback");
 }

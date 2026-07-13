@@ -73,6 +73,8 @@
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
     "BETTER_AUTH_URL": "https://dokorun.com",
+    // Cloudflare Turnstileの公開sitekey。秘密鍵はTURNSTILE_SECRET_KEYとしてsecretに保存する
+    "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD1UPCOAcXoQltIT",
     // Google OAuthのクライアントID(公開値。SECRETはwrangler secretで管理)
     "GOOGLE_CLIENT_ID": "848225370732-m6j4ipj6569scq521koqgnhd4i23pj6r.apps.googleusercontent.com",
     // Cloudflare Web Analyticsの手動ビーコン用トークン。現在はダッシュボードの
@@ -83,5 +85,5 @@
     "R2_PUBLIC_URL": "https://pub-fc0224cb93ca446f82093a8eea37e3a8.r2.dev"
   }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET / BETTER_AUTH_SECRET /
-  // GOOGLE_CLIENT_SECRET は `wrangler secret put <NAME>` で設定する
+  // GOOGLE_CLIENT_SECRET / TURNSTILE_SECRET_KEY は `wrangler secret put <NAME>` で設定する
 }

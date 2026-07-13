@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { desc } from "drizzle-orm";
+import { deleteFeedbackAsAdmin } from "@/app/admin/actions";
+import { DeleteButton } from "@/components/admin/delete-button";
 import { getDb } from "@/db";
 import { feedback } from "@/db/schema";
 
@@ -23,6 +25,7 @@ export default async function AdminFeedbackPage() {
               <span className="rounded-full bg-cream px-3 py-1 font-bold">{categoryLabels[item.category] ?? item.category}</span>
               <time className="text-sub">{formatDate.format(item.createdAt)}</time>
               {item.contact && <span className="text-sub">連絡先: {item.contact}</span>}
+              <form action={deleteFeedbackAsAdmin} className="ml-auto"><input type="hidden" name="id" value={item.id} /><DeleteButton confirmMessage="このリクエストを削除しますか？" /></form>
             </div>
             <p className="mt-3 whitespace-pre-line leading-7">{item.message}</p>
           </article>

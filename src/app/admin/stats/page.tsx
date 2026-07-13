@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { and, count, desc, eq, gte, inArray, sql } from "drizzle-orm";
 import { getDb } from "@/db";
-import { events, hashiritai, spots } from "@/db/schema";
+import { events, hashiritai, runs, sessions, spots, users } from "@/db/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +21,25 @@ const eventLabels: Record<string, string> = {
   feedback: "フォーム送信",
 };
 
+const dateTimeFormatter = new Intl.DateTimeFormat("ja-JP", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+function timestamp(value: Date | number | null | undefined) {
+  if (value instanceof Date) return value.getTime();
+  return typeof value === "number" ? value : 0;
+}
+
+function formatDate(value: Date | number | null | undefined) {
+  const time = timestamp(value);
+  return time ? dateTimeFormatter.format(new Date(time)) : "—";
+}
+
 export default async function AdminStatsPage() {
   const db = getDb();
   // force-dynamicページなのでレンダー時点の現在時刻で集計してよい
@@ -29,7 +48,7 @@ export default async function AdminStatsPage() {
   const externalTraffic = sql`coalesce(json_extract(${events.meta}, '$.internal'), 0) = 0`;
   // created_atはUNIXミリ秒なので、JSTオフセット(+9h)を足してから日付文字列にする
   const day = sql<string>`strftime('%Y-%m-%d', (${events.createdAt} + 32400000) / 1000, 'unixepoch')`;
-  const [daily, topViews, topHashiritai, visitorSummary] = await Promise.all([
+  const [daily, topViews, topHashiritai, visitorSummary, userSummary, recentUsers, runActivity, hashiritaiActivity, sessionActivity] = await Promise.all([
     db.select({ day, name: events.name, count: count() }).from(events)
       .where(and(gte(events.createdAt, since), externalTraffic)).groupBy(day, events.name),
     db.select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() }).from(events)
@@ -46,7 +65,46 @@ export default async function AdminStatsPage() {
       externalTraffic,
       inArray(events.name, ["spot_view", "search_results", "route_start", "gpx_download"]),
     )),
+    db.select({
+      total: count(),
+      recent: sql<number>`sum(case when ${users.createdAt} >= ${since} then 1 else 0 end)`,
+    }).from(users),
+    db.select({
+      id: users.id,
+      name: users.name,
+      handle: users.handle,
+      createdAt: users.createdAt,
+      updatedAt: users.updatedAt,
+    }).from(users).orderBy(desc(users.createdAt)).limit(50),
+    db.select({
+      userId: runs.userId,
+      count: count(),
+      latestAt: sql<number>`max(${runs.createdAt})`,
+    }).from(runs).groupBy(runs.userId),
+    db.select({
+      userId: hashiritai.userId,
+      count: count(),
+      latestAt: sql<number>`max(${hashiritai.createdAt})`,
+    }).from(hashiritai).where(sql`${hashiritai.userId} is not null`).groupBy(hashiritai.userId),
+    db.select({
+      userId: sessions.userId,
+      latestAt: sql<number>`max(${sessions.updatedAt})`,
+    }).from(sessions).groupBy(sessions.userId),
   ]);
+  const runByUser = new Map(runActivity.map((row) => [row.userId, row]));
+  const hashiritaiByUser = new Map(hashiritaiActivity.map((row) => [row.userId, row]));
+  const sessionByUser = new Map(sessionActivity.map((row) => [row.userId, row]));
+  const registeredUsers = recentUsers.map((user) => {
+    const run = runByUser.get(user.id);
+    const wish = hashiritaiByUser.get(user.id);
+    const session = sessionByUser.get(user.id);
+    return {
+      ...user,
+      runCount: run?.count ?? 0,
+      hashiritaiCount: wish?.count ?? 0,
+      lastRecordedAt: Math.max(timestamp(user.updatedAt), timestamp(run?.latestAt), timestamp(wish?.latestAt), timestamp(session?.latestAt)),
+    };
+  });
   const days = [...new Set(daily.map((row) => row.day))].sort().reverse();
   const names = Object.keys(eventLabels).filter((name) => daily.some((row) => row.name === name));
   const cell = new Map(daily.map((row) => [`${row.day}:${row.name}`, row.count]));
@@ -56,10 +114,28 @@ export default async function AdminStatsPage() {
         <div><p className="text-sm font-bold text-sub">ADMIN</p><h1 className="text-3xl font-bold">統計(直近14日)</h1></div>
         <Link href="/admin" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">スポット管理へ</Link>
       </div>
-      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">登録ユーザー</p><p className="mt-1 text-3xl font-black">{userSummary[0]?.total ?? 0}</p></div>
+        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">14日間の新規登録</p><p className="mt-1 text-3xl font-black">{userSummary[0]?.recent ?? 0}</p></div>
         <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">ユニーク利用者</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.visitors ?? 0}</p></div>
         <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">セッション</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.sessions ?? 0}</p></div>
       </div>
+      <section className="mt-8">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+          <div><h2 className="text-xl font-bold">登録ユーザー</h2><p className="mt-1 text-xs leading-6 text-sub">最新50人。最終利用はログインセッション・投稿・走りたいなど、サーバーに残った最新記録です。</p></div>
+          <p className="text-xs text-sub">セッションが有効でも、現在オンラインとは限りません。</p>
+        </div>
+        {registeredUsers.length ? (
+          <div className="overflow-x-auto rounded-xl border border-line">
+            <table className="w-full min-w-[680px] text-left text-sm">
+              <thead className="bg-cream"><tr><th className="p-3">表示名</th><th className="p-3">登録日</th><th className="p-3">最終利用記録</th><th className="p-3 text-right">ランログ</th><th className="p-3 text-right">走りたい</th></tr></thead>
+              <tbody className="divide-y divide-line">
+                {registeredUsers.map((user) => <tr key={user.id}><td className="p-3"><Link href={`/u/${user.handle}`} className="font-bold underline underline-offset-4">{user.name}</Link><p className="mt-0.5 text-xs text-sub">@{user.handle}</p></td><td className="whitespace-nowrap p-3">{formatDate(user.createdAt)}</td><td className="whitespace-nowrap p-3">{formatDate(user.lastRecordedAt)}</td><td className="p-3 text-right tabular-nums">{user.runCount}</td><td className="p-3 text-right tabular-nums">{user.hashiritaiCount}</td></tr>)}
+              </tbody>
+            </table>
+          </div>
+        ) : <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだ登録ユーザーがいません</p>}
+      </section>
       <p className="mt-3 text-xs leading-6 text-sub">内部トラフィックは集計から除外します。運営端末では<Link href="/spots?dokorun_internal=1" className="mx-1 font-bold text-accent underline">内部トラフィックに設定</Link>してください。解除は<Link href="/spots?dokorun_internal=0" className="mx-1 font-bold text-accent underline">こちら</Link>。</p>
       <section className="mt-8">
         <h2 className="mb-4 text-xl font-bold">日別イベント数</h2>

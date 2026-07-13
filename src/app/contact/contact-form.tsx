@@ -2,13 +2,20 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import Script from "next/script";
 import { submitFeedback, type FeedbackState } from "./actions";
 import { track } from "@/lib/track";
 
 const inputClass = "w-full rounded-lg border border-line bg-paper px-3 py-2.5";
 type FeedbackCategory = "spot_request" | "contact";
 
-export function ContactForm() {
+declare global {
+  interface Window {
+    turnstile?: { reset: () => void };
+  }
+}
+
+export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) {
   const searchParams = useSearchParams();
   const initialCategory: FeedbackCategory = searchParams.get("category") === "contact" ? "contact" : "spot_request";
   const initialMessage = searchParams.get("message") ?? undefined;
@@ -17,6 +24,7 @@ export function ContactForm() {
 
   useEffect(() => {
     if (state.status === "sent") track("feedback", { category: categoryRef.current });
+    if (state.status === "error") window.turnstile?.reset();
   }, [state.status]);
 
   if (state.status === "sent") {
@@ -53,8 +61,14 @@ export function ContactForm() {
         <p className="mt-2 text-sm leading-6 text-sub">内容の確認のため、折り返し連絡をすることがあります。</p>
       </div>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
+      {turnstileSiteKey ? (
+        <>
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
+          <div className="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="contact" data-theme="light" />
+        </>
+      ) : <p role="alert" className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-[#B3261E]">セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。</p>}
       {state.status === "error" && <p role="alert" className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-[#B3261E]">{state.message}</p>}
-      <button type="submit" disabled={pending} className="rounded-lg bg-brand px-6 py-3 font-bold disabled:opacity-60">{pending ? "送信中…" : "送信する"}</button>
+      <button type="submit" disabled={pending || !turnstileSiteKey} className="rounded-lg bg-brand px-6 py-3 font-bold disabled:opacity-60">{pending ? "送信中…" : "送信する"}</button>
     </form>
   );
 }
