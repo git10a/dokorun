@@ -124,5 +124,9 @@ export async function deleteRun(formData: FormData) {
   await db.delete(runs).where(and(eq(runs.id, id), eq(runs.userId, user.id)));
   revalidatePath("/me/logs");
   const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, current[0].spotId)).limit(1);
-  if (spot[0]) revalidatePath(`/spots/${spot[0].slug}`);
+  if (spot[0]) {
+    revalidatePath(`/spots/${spot[0].slug}`);
+    if (formData.get("returnTo") === "spot") redirect(`/spots/${spot[0].slug}?posted=deleted#dokolog`);
+  }
+  redirect("/me/logs?success=deleted");
 }
