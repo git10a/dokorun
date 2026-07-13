@@ -13,10 +13,45 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check homepage
-        run: curl --fail-with-body --silent --show-error --location --retry 2 --retry-delay 5 --max-time 20 https://dokorun.com/ --output /dev/null
-
-      - name: Check database-backed spot page
+      - name: Check production without retries
+        id: primary
+        continue-on-error: true
         run: |
-          body="$(curl --fail-with-body --silent --show-error --location --retry 2 --retry-delay 5 --max-time 20 https://dokorun.com/spots/kokyo)"
-          grep -Fq "皇居" <<< "$body"
+          set -euo pipefail
+
+          check() {
+            local path="$1"
+            local marker="${2:-}"
+            local headers body status
+            headers="$(mktemp)"
+            body="$(mktemp)"
+            status="$(curl --silent --show-error --location --max-time 20 \
+              --dump-header "$headers" --output "$body" --write-out '%{http_code}' \
+              "https://dokorun.com${path}")"
+            if [[ "$status" -lt 200 || "$status" -ge 400 ]] || { [[ -n "$marker" ]] && ! grep -Fq "$marker" "$body"; }; then
+              echo "FAILED ${path} status=${status}"
+              cat "$headers"
+              head -c 2000 "$body"
+              exit 1
+            fi
+            echo "OK ${path} status=${status}"
+          }
+
+          check "/healthz.txt" "ok"
+          check "/api/health" '"ok":true'
+          check "/api/auth/get-session"
+          check "/" "どこラン"
+          check "/spots/kokyo" "皇居"
+          check "/spot-gpx/kokyo.gpx" "<gpx"
+          check "/api/spots/kokyo/gpx" "<gpx"
+
+      - name: Diagnostic recovery check
+        if: steps.primary.outcome == 'failure'
+        run: |
+          sleep 5
+          curl --silent --show-error --location --max-time 20 \
+            --dump-header - https://dokorun.com/api/health | head -c 3000
+
+      - name: Keep first-request failure visible
+        if: steps.primary.outcome == 'failure'
+        run: exit 1
