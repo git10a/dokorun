@@ -67,7 +67,7 @@ export default async function AdminStatsPage() {
     )),
     db.select({
       total: count(),
-      recent: sql<number>`sum(case when ${users.createdAt} >= ${since} then 1 else 0 end)`,
+      recent: sql<number>`sum(case when ${users.createdAt} >= ${since.getTime()} then 1 else 0 end)`,
     }).from(users),
     db.select({
       id: users.id,
