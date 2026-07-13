@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { getPublicRuns, getSpotCommunities, getSpotDetailWithNearby, getUserSpotState } from "@/db/data";
 import { CourseMap } from "@/components/map/course-map";
 import { CheckInButton } from "@/components/checkin-button";
-import { DeleteRunButton } from "@/components/delete-run-button";
+import { DeleteRunForm } from "@/components/delete-run-button";
 import { DirectionsLink } from "@/components/directions-link";
 import { FacilityIcons } from "@/components/facility-icons";
 import { TrackView } from "@/components/track-view";
@@ -25,7 +25,6 @@ import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { avatarUrl } from "@/lib/avatars";
 import { getUser } from "@/lib/user";
 import { getSiteUrl } from "@/lib/site";
-import { deleteRun } from "@/app/me/logs/actions";
 
 export const dynamic = "force-dynamic";
 
@@ -117,7 +116,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
         {query.posted === "deleted" && <p className="mt-5 rounded-lg bg-paper px-4 py-3 text-sm font-bold">ランログを削除しました</p>}
         <div className="mt-6 space-y-4">{publicRuns.map((run) => {
           const userImage = avatarUrl({ id: run.userId, image: run.userImage, customAvatarAt: run.userCustomAvatarAt });
-          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div></div>{user?.id === run.userId && <div className="flex gap-3 text-sm font-bold"><Link href={`/me/logs/${run.id}/edit?returnTo=spot`} className="text-accent">編集</Link><form action={deleteRun}><input type="hidden" name="id" value={run.id} /><input type="hidden" name="returnTo" value="spot" /><DeleteRunButton /></form></div>}</div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>;
+          return <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div className="flex items-center gap-3">{userImage ? <img src={userImage} alt="" referrerPolicy="no-referrer" className="size-9 rounded-full object-cover" /> : <span className="grid size-9 place-items-center rounded-full bg-brand font-bold">{run.userName.slice(0, 1)}</span>}<div><Link href={`/u/${run.userHandle}`} className="font-bold hover:text-accent">{run.userName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div></div>{user?.id === run.userId && <div className="flex gap-3 text-sm font-bold"><Link href={`/me/logs/${run.id}/edit?returnTo=spot`} className="text-accent">編集</Link><DeleteRunForm id={run.id} returnTo="spot" /></div>}</div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>;
         })}</div>
         {!publicRuns.length && <p className="mt-6 text-sub">まだランログはありません。最初の記録を残してみませんか 🏃</p>}
         {query.logs !== "all" && spot.runsCount > 10 && <Link href={`/spots/${spot.slug}?logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}

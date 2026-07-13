@@ -116,17 +116,17 @@ export async function updateRun(_: RunFormState, formData: FormData): Promise<Ru
 export async function deleteRun(formData: FormData) {
   const user = await requireUser("/me/logs");
   const id = String(formData.get("id") ?? "");
-  if (!z.string().uuid().safeParse(id).success) return;
+  if (!z.string().uuid().safeParse(id).success) return null;
   const db = getDb();
   const current = await db.select({ userId: runs.userId, spotId: runs.spotId }).from(runs).where(eq(runs.id, id)).limit(1);
-  if (!current[0]) return;
+  if (!current[0]) return null;
   assertRunOwnership(current[0].userId, user.id);
   await db.delete(runs).where(and(eq(runs.id, id), eq(runs.userId, user.id)));
   revalidatePath("/me/logs");
   const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, current[0].spotId)).limit(1);
   if (spot[0]) {
     revalidatePath(`/spots/${spot[0].slug}`);
-    if (formData.get("returnTo") === "spot") redirect(`/spots/${spot[0].slug}?posted=deleted#dokolog`);
+    if (formData.get("returnTo") === "spot") return `/spots/${spot[0].slug}?posted=deleted#dokolog`;
   }
-  redirect("/me/logs?success=deleted");
+  return "/me/logs?success=deleted";
 }
