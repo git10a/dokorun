@@ -4,6 +4,7 @@ import { isAdmin } from "@/lib/auth";
 
 const allowedTypes: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 const maxSizeInBytes = 10 * 1024 * 1024;
+type ImageBucket = { put(key: string, value: ArrayBuffer, options: { httpMetadata: { contentType: string } }): Promise<unknown> };
 
 export async function POST(request: Request) {
   if (!await isAdmin()) return NextResponse.json({ error: "認証が必要です" }, { status: 401 });
@@ -19,7 +20,7 @@ export async function POST(request: Request) {
     const key = `spots/${crypto.randomUUID()}.${extension}`;
     const { env } = getCloudflareContext();
     // R2は現在wrangler.jsonc未バインディング(未有効化)。有効化時はIMAGE_BUCKETがCloudflareEnvに現れる
-    const bucket = (env as CloudflareEnv & { IMAGE_BUCKET: R2Bucket }).IMAGE_BUCKET;
+    const bucket = (env as CloudflareEnv & { IMAGE_BUCKET: ImageBucket }).IMAGE_BUCKET;
     await bucket.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: file.type } });
     return NextResponse.json({ url: `${publicBase.replace(/\/+$/, "")}/${key}` });
   } catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : "アップロードできませんでした" }, { status: 400 }); }
