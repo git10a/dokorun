@@ -72,6 +72,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   const todayRunId = userState?.todayRunId ?? null;
   const destinations = getNearbyDestinations(spot.slug);
   const courseGuide = getCourseGuide(spot.slug);
+  const guideHeroPhoto = courseGuide?.checkpoints.find((checkpoint) => checkpoint.id === courseGuide.heroCheckpointId)?.photo ?? courseGuide?.checkpoints[0]?.photo;
   const baseUrl = getSiteUrl();
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -103,8 +104,8 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbData, structuredData]).replace(/</g, "\\u003c") }} />
       <TrackView name="spot_view" meta={{ slug: spot.slug }} />
       {query.posted === "info" && <p className="rounded-lg bg-cream px-4 py-3 text-sm font-bold">スポット情報を修正しました。ご協力ありがとうございます ✏️</p>}
-      {courseGuide ? <header className="relative -mx-4 -mt-8 overflow-hidden sm:mx-0 sm:mt-0 sm:rounded-2xl">
-        <SpotImage src={courseGuide.checkpoints.find((checkpoint) => checkpoint.id === "tenen")?.photo.url ?? courseGuide.checkpoints[0].photo.url} alt="鎌倉トレイル大周回の尾根道" width={1280} height={720} sizes="(min-width: 768px) 1024px, 100vw" priority unoptimized className="aspect-video min-h-[270px] w-full object-cover" />
+      {courseGuide && guideHeroPhoto ? <header className="relative -mx-4 -mt-8 overflow-hidden sm:mx-0 sm:mt-0 sm:rounded-2xl">
+        <SpotImage src={guideHeroPhoto.url} alt={guideHeroPhoto.alt} width={1280} height={720} sizes="(min-width: 768px) 1024px, 100vw" priority unoptimized className="aspect-video min-h-[270px] w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-5 text-paper sm:p-8"><p className="text-sm font-bold">{spot.prefecture} {spot.city}</p><h1 className="mt-2 text-3xl font-black sm:text-5xl">{spot.name}</h1><p className="mt-1 text-xs text-paper/80">{spot.nameKana}</p></div>
         <Link href={`/spots/${spot.slug}/edit`} className="absolute right-3 top-3 rounded-lg bg-paper/90 px-3 py-1.5 text-xs font-bold text-ink backdrop-blur">✏️ 情報修正</Link>

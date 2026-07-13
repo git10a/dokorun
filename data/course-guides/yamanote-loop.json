@@ -1,0 +1,173 @@
+{
+  "slug": "yamanote-loop",
+  "heroCheckpointId": "tokyo",
+  "intro": "東京・上野・池袋・新宿・渋谷・品川をつなぎ、山手線の外周を自分の脚でたどる約36kmの都市型ロング走です。専用コースではなく一般の歩道を走るため、距離だけでなく混雑しやすい区間と補給しやすい街の切り替わりを確認してから出発できます。",
+  "warnings": [
+    {
+      "title": "一般の歩道をつなぐコースです",
+      "body": "ランニング専用路ではありません。信号を守り、駅前や商店街など混雑する区間では歩行者を優先して歩いて通過してください。工事や通行状況に応じて安全な歩道へ迂回してください。",
+      "url": "https://www.keishicho.metro.tokyo.lg.jp/kotsu/jikoboshi/hokoujiko.html",
+      "linkLabel": "警視庁の歩行者向け交通安全情報"
+    },
+    {
+      "title": "山手線そのものの線路沿いではありません",
+      "body": "線路に沿えない場所では周辺道路をつなぎます。駅数や位置関係の確認にはJR東日本の路線図を併用し、GPXから外れた場合は無理に戻らず安全な経路を選んでください。",
+      "url": "https://www.jreast.co.jp/map/",
+      "linkLabel": "JR東日本の路線図"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "tokyo",
+      "name": "東京駅側",
+      "badge": "東側から",
+      "destinationLat": 35.6814188,
+      "destinationLng": 139.7659957,
+      "routeAnchorLat": 35.681451,
+      "routeAnchorLng": 139.765737,
+      "accessText": "JR東京駅丸の内口からコース線まで徒歩数分",
+      "facilitiesText": "駅周辺でトイレ・コンビニ・飲食店を利用しやすい",
+      "firstSection": "神田・秋葉原を経て上野方面へ。比較的平坦ですが信号が多く、序盤からペースを上げすぎない区間です。"
+    },
+    {
+      "id": "ueno",
+      "name": "上野駅側",
+      "badge": "北東側から",
+      "destinationLat": 35.7133704,
+      "destinationLng": 139.7770574,
+      "routeAnchorLat": 35.713327,
+      "routeAnchorLng": 139.776792,
+      "accessText": "JR上野駅広小路口からコース線へすぐ",
+      "facilitiesText": "駅・上野公園周辺でトイレと補給場所が多い",
+      "firstSection": "日暮里・田端方面へ北上します。住宅地と幹線道路が切り替わるため、交差点でGPXを確認してください。"
+    },
+    {
+      "id": "shinjuku",
+      "name": "新宿駅側",
+      "badge": "西側から",
+      "destinationLat": 35.6899729,
+      "destinationLng": 139.6999891,
+      "routeAnchorLat": 35.690837,
+      "routeAnchorLng": 139.701369,
+      "accessText": "JR新宿駅東口からコース線まで徒歩数分",
+      "facilitiesText": "駅周辺でトイレ・コンビニ・飲食店を利用しやすい",
+      "firstSection": "代々木・原宿を経て渋谷へ。人通りが多いため、早朝など混雑の少ない時間帯に向く区間です。"
+    },
+    {
+      "id": "shinagawa",
+      "name": "品川駅側",
+      "badge": "南側から",
+      "destinationLat": 35.628692,
+      "destinationLng": 139.7388691,
+      "routeAnchorLat": 35.628821,
+      "routeAnchorLng": 139.738804,
+      "accessText": "JR品川駅高輪口からコース線へすぐ",
+      "facilitiesText": "駅周辺でトイレと補給を済ませやすい",
+      "firstSection": "高輪・田町を経て東京駅方面へ。大きな幹線道路沿いが中心で、交差点ごとの停止が多い区間です。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "tokyo",
+      "name": "東京駅・丸の内",
+      "anchorLat": 35.681451,
+      "anchorLng": 139.765737,
+      "description": "赤レンガ駅舎と丸の内のビル街が見える東側の基準点。広い歩道がある一方、通勤時間帯は人の流れが速くなります。",
+      "surfaceLabel": "舗装路・広い歩道",
+      "caution": "通勤時間帯は歩行者を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/230303_Views_of_the_Tokyo_Station_Marunouchi_Building.jpg?width=960",
+        "alt": "東京駅丸の内駅舎",
+        "caption": "東京駅丸の内駅舎。山手線一周の東側の目印です。",
+        "credit": "名古屋太郎",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:230303_Views_of_the_Tokyo_Station_Marunouchi_Building.jpg"
+      }
+    },
+    {
+      "id": "ueno",
+      "name": "上野公園・上野駅",
+      "anchorLat": 35.713327,
+      "anchorLng": 139.776792,
+      "description": "公園と文化施設の緑が近い区間。駅周辺は補給しやすく、北側へ向かう前後の休憩ポイントにできます。",
+      "surfaceLabel": "舗装路・公園周辺",
+      "caution": "公園内と駅前は歩行者が多い",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ueno_Park_%28218675053%29.jpeg?width=960",
+        "alt": "上野公園の緑と園路",
+        "caption": "上野公園。市街地の中で緑を感じられる区間です。",
+        "credit": "Francisco Anzola",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ueno_Park_(218675053).jpeg"
+      }
+    },
+    {
+      "id": "ikebukuro",
+      "name": "池袋駅東口",
+      "anchorLat": 35.729517,
+      "anchorLng": 139.710218,
+      "description": "北側から西側へ回り込む大きな街の節目。駅周辺で補給できますが、繁華街では走らず抜ける判断が必要です。",
+      "surfaceLabel": "舗装路・駅前",
+      "caution": "駅前の混雑区間は歩く",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ikebukuro-STA_East.jpg?width=960",
+        "alt": "池袋駅東口の駅前",
+        "caption": "池袋駅東口。北側から西側へ移る大きな節目です。",
+        "credit": "MaedaAkihiko",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ikebukuro-STA_East.jpg"
+      }
+    },
+    {
+      "id": "shinjuku",
+      "name": "新宿駅",
+      "anchorLat": 35.690837,
+      "anchorLng": 139.701369,
+      "description": "高層ビルと繁華街が続く西側の大きな節目。人通りと信号が多く、距離以上に進みにくい時間帯があります。",
+      "surfaceLabel": "舗装路・繁華街",
+      "caution": "早朝以外は歩行者優先でゆっくり",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/JRE-Shinjuku-STA_South-entrance.jpg?width=960",
+        "alt": "新宿駅南口の駅舎と駅前",
+        "caption": "新宿駅周辺。信号と人通りの多い都市区間です。",
+        "credit": "MaedaAkihiko",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JRE-Shinjuku-STA_South-entrance.jpg"
+      }
+    },
+    {
+      "id": "shibuya",
+      "name": "渋谷スクランブル交差点",
+      "anchorLat": 35.659659,
+      "anchorLng": 139.700633,
+      "description": "南西側の代表的な混雑地点。ロング走の通過点としては走り続ける場所ではなく、信号と人の流れに合わせて歩きます。",
+      "surfaceLabel": "舗装路・大交差点",
+      "caution": "交差点と駅前では必ず減速・歩行",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shibuya_Crossing_in_Tokyo.jpg?width=960",
+        "alt": "渋谷スクランブル交差点と歩行者",
+        "caption": "渋谷スクランブル交差点。混雑時は歩いて通過します。",
+        "credit": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_in_Tokyo.jpg"
+      }
+    },
+    {
+      "id": "shinagawa",
+      "name": "品川駅",
+      "anchorLat": 35.628821,
+      "anchorLng": 139.738804,
+      "description": "南側の大きな補給・離脱ポイント。ここから東京方面は比較的平坦な幹線道路沿いが続きます。",
+      "surfaceLabel": "舗装路・幹線道路沿い",
+      "caution": "工事と歩道の付け替えに注意",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shinagawa-STA_East.jpg?width=960",
+        "alt": "品川駅港南口の駅前",
+        "caption": "品川駅港南口。南側の補給・離脱ポイントです。",
+        "credit": "MaedaAkihiko",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinagawa-STA_East.jpg"
+      }
+    }
+  ]
+}

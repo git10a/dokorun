@@ -1,0 +1,895 @@
+{
+  "slug": "teganuma-loop",
+  "heroCheckpointId": "greenway",
+  "intro": "手賀沼の北岸と南岸をつなぐ約17kmのフラットな周回です。湖畔の遊歩道と自転車道が中心で、一定ペースのロング走に向きます。南岸の緑道、北岸の公園、補給しやすい道の駅という区間の違いを確認してから出発できます。",
+  "warnings": [
+    {
+      "title": "歩行者と自転車が同じ緑道を利用します",
+      "body": "南岸の手賀沼自然ふれあい緑道は遊歩道と自転車道で構成されています。並走を避け、見通しの悪い場所や混雑時は減速して、歩行者と自転車を優先してください。",
+      "url": "https://tegaryoku.com/information/",
+      "linkLabel": "緑道の利用上の注意"
+    },
+    {
+      "title": "道の駅の営業時間を補給計画に入れる",
+      "body": "道の駅しょうなんの営業時間は9:00〜18:00で、施設ごとに異なる場合があります。早朝や夕方に走る場合は、飲み物を事前に用意してください。",
+      "url": "https://www.michinoeki-shonan.jp/",
+      "linkLabel": "道の駅しょうなん公式サイト"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "abiko",
+      "name": "我孫子駅側",
+      "badge": "電車ならここ",
+      "destinationLat": 35.87279,
+      "destinationLng": 140.010466,
+      "routeAnchorLat": 35.865628,
+      "routeAnchorLng": 140.012682,
+      "accessText": "JR我孫子駅南口から手賀沼公園のコース線まで約1km",
+      "facilitiesText": "駅周辺と手賀沼公園でトイレ・コンビニを利用しやすい",
+      "firstSection": "手賀沼公園から北岸を東へ進みます。公園利用者が多い場所ではペースを落として通過してください。",
+      "routePointIndex": 3197,
+      "routeDistanceM": 14435,
+      "routeLat": 35.865628,
+      "routeLng": 140.012682,
+      "elevationM": -1,
+      "snapGapM": 0,
+      "gpxHref": "/gpx/teganuma-loop-abiko.gpx"
+    },
+    {
+      "id": "kitakashiwa",
+      "name": "北柏駅側",
+      "badge": "西側から",
+      "destinationLat": 35.875623,
+      "destinationLng": 139.988035,
+      "routeAnchorLat": 35.869807,
+      "routeAnchorLng": 139.992242,
+      "accessText": "JR北柏駅南口から北柏ふるさと公園のコース線まで約800m",
+      "facilitiesText": "駅周辺で補給し、公園でトイレを利用しやすい",
+      "firstSection": "北柏ふるさと公園から手賀沼公園方面へ。北岸の公園と市街地寄りの遊歩道をつなぎます。",
+      "routePointIndex": 3625,
+      "routeDistanceM": 16371,
+      "routeLat": 35.869807,
+      "routeLng": 139.992242,
+      "elevationM": 2,
+      "snapGapM": 0,
+      "gpxHref": "/gpx/teganuma-loop-kitakashiwa.gpx"
+    },
+    {
+      "id": "shonan",
+      "name": "道の駅しょうなん側",
+      "badge": "車ならここ",
+      "destinationLat": 35.866813,
+      "destinationLng": 139.989848,
+      "routeAnchorLat": 35.866813,
+      "routeAnchorLng": 139.989848,
+      "accessText": "道の駅しょうなんの前がコース線。駐車場は施設利用ルールを確認",
+      "facilitiesText": "営業時間内はトイレ・飲食・売店を利用しやすい",
+      "firstSection": "手賀大橋付近から南岸の自然ふれあい緑道へ。湖面を見ながら平坦路を進みます。",
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.866813,
+      "routeLng": 139.989848,
+      "elevationM": -6,
+      "snapGapM": 0,
+      "gpxHref": "/gpx/teganuma-loop-shonan.gpx"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "shonan",
+      "name": "道の駅しょうなん",
+      "anchorLat": 35.866813,
+      "anchorLng": 139.989848,
+      "description": "トイレ・飲食・売店がまとまる最大の補給ポイント。車で来る場合の分かりやすいスタート地点でもあります。",
+      "surfaceLabel": "舗装路・施設前",
+      "caution": "営業時間外の補給を事前に用意",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E9%81%93%E3%81%AE%E9%A7%85%E3%81%97%E3%82%87%E3%81%86%E3%81%AA%E3%82%93%E3%83%BB%E3%81%A4%E3%81%B0%E3%81%95.jpg?width=960",
+        "alt": "道の駅しょうなんのつばさ棟",
+        "caption": "道の駅しょうなん。周回中でもっとも補給しやすい場所です。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%81%93%E3%81%AE%E9%A7%85%E3%81%97%E3%82%87%E3%81%86%E3%81%AA%E3%82%93%E3%83%BB%E3%81%A4%E3%81%B0%E3%81%95.jpg"
+      },
+      "routePointIndex": 0,
+      "routeDistanceM": 0,
+      "routeLat": 35.866813,
+      "routeLng": 139.989848,
+      "elevationM": -6,
+      "snapGapM": 0
+    },
+    {
+      "id": "kitakashiwa-park",
+      "name": "北柏ふるさと公園",
+      "anchorLat": 35.869807,
+      "anchorLng": 139.992242,
+      "description": "大堀川と手賀沼がつながる西端の公園。北柏駅側から入る場合のスタート・休憩地点にできます。",
+      "surfaceLabel": "舗装路・公園",
+      "caution": "散歩や遊具利用の人を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%8C%97%E6%9F%8F%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%85%AC%E5%9C%92.jpg?width=960",
+        "alt": "北柏ふるさと公園の芝生と園路",
+        "caption": "北柏ふるさと公園。周回の西端にある休憩ポイントです。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%9F%8F%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%85%AC%E5%9C%92.jpg"
+      },
+      "routePointIndex": 3625,
+      "routeDistanceM": 16371,
+      "routeLat": 35.869807,
+      "routeLng": 139.992242,
+      "elevationM": 2,
+      "snapGapM": 0
+    },
+    {
+      "id": "teganuma-park",
+      "name": "手賀沼公園",
+      "anchorLat": 35.865401,
+      "anchorLng": 140.013892,
+      "description": "我孫子駅側から最も入りやすい湖畔公園。ボート乗り場と開けた湖面が見え、北岸の基準点になります。",
+      "surfaceLabel": "舗装路・湖畔公園",
+      "caution": "休日の日中は利用者が多い",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92_%E3%83%9C%E3%83%BC%E3%83%88%E4%B9%97%E3%82%8A%E5%A0%B4_-_panoramio.jpg?width=960",
+        "alt": "手賀沼公園のボート乗り場と湖面",
+        "caption": "手賀沼公園のボート乗り場。北岸の開けた湖畔です。",
+        "credit": "運転太郎",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92_%E3%83%9C%E3%83%BC%E3%83%88%E4%B9%97%E3%82%8A%E5%A0%B4_-_panoramio.jpg"
+      },
+      "routePointIndex": 3166,
+      "routeDistanceM": 14304,
+      "routeLat": 35.865401,
+      "routeLng": 140.013892,
+      "elevationM": -3,
+      "snapGapM": 0
+    },
+    {
+      "id": "bird-museum",
+      "name": "鳥の博物館・親水広場",
+      "anchorLat": 35.860785,
+      "anchorLng": 140.028403,
+      "description": "水の館や鳥の博物館が集まる北岸東部。野鳥の多い手賀沼らしさを感じる区間で、建物周辺では歩いて通過します。",
+      "surfaceLabel": "舗装路・施設周辺",
+      "caution": "施設利用者と野鳥観察者を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abiko_City_Museum_of_Birds.JPG?width=960",
+        "alt": "我孫子市鳥の博物館の建物",
+        "caption": "我孫子市鳥の博物館。北岸東部の目印です。",
+        "credit": "あばさー",
+        "license": "Public Domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_City_Museum_of_Birds.JPG"
+      },
+      "routePointIndex": 2796,
+      "routeDistanceM": 12639,
+      "routeLat": 35.860785,
+      "routeLng": 140.028403,
+      "elevationM": -3,
+      "snapGapM": 0
+    },
+    {
+      "id": "greenway",
+      "name": "手賀沼自然ふれあい緑道",
+      "anchorLat": 35.861143,
+      "anchorLng": 140.04389,
+      "description": "南岸に続く平坦な緑道。田園と湖面が近く、一定ペースで走りやすい一方、自転車とのすれ違いに注意が必要です。",
+      "surfaceLabel": "舗装路・湖畔緑道",
+      "caution": "並走を避け、すれ違い時は減速",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E7%9C%8C%E7%AB%8B%E6%89%8B%E8%B3%80%E6%B2%BC%E8%87%AA%E7%84%B6%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84%E7%B7%91%E9%81%93.jpg?width=960",
+        "alt": "手賀沼自然ふれあい緑道と湖畔の景色",
+        "caption": "手賀沼自然ふれあい緑道。南岸の平坦なメイン区間です。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E7%AB%8B%E6%89%8B%E8%B3%80%E6%B2%BC%E8%87%AA%E7%84%B6%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84%E7%B7%91%E9%81%93.jpg"
+      },
+      "routePointIndex": 2447,
+      "routeDistanceM": 11061,
+      "routeLat": 35.861143,
+      "routeLng": 140.04389,
+      "elevationM": -4,
+      "snapGapM": 0
+    }
+  ],
+  "distanceM": 17248,
+  "elevationGainM": 114,
+  "elevationProfile": [
+    {
+      "distanceM": 0,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 100,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 199,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 299,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 399,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 498,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 598,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 698,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 798,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 897,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 997,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 1097,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 1196,
+      "elevationM": -6.1
+    },
+    {
+      "distanceM": 1296,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 1396,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 1495,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 1595,
+      "elevationM": -6.2
+    },
+    {
+      "distanceM": 1695,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 1795,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 1894,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 1994,
+      "elevationM": -6.2
+    },
+    {
+      "distanceM": 2094,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 2193,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 2293,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 2393,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 2492,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 2592,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 2692,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 2792,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 2891,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 2991,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 3091,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 3190,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 3290,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 3390,
+      "elevationM": -9
+    },
+    {
+      "distanceM": 3489,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 3589,
+      "elevationM": -5.1
+    },
+    {
+      "distanceM": 3689,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 3789,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 3888,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 3988,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 4088,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 4187,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 4287,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 4387,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 4486,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 4586,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 4686,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 4786,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 4885,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 4985,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 5085,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 5184,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 5284,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 5384,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 5483,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 5583,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 5683,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 5782,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 5882,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 5982,
+      "elevationM": -9
+    },
+    {
+      "distanceM": 6082,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 6181,
+      "elevationM": -7.1
+    },
+    {
+      "distanceM": 6281,
+      "elevationM": -9
+    },
+    {
+      "distanceM": 6381,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 6480,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 6580,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 6680,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 6779,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 6879,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 6979,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 7079,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 7178,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 7278,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 7378,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 7477,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 7577,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 7677,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 7776,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 7876,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 7976,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8076,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 8175,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8275,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 8375,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8474,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8574,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8674,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 8773,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 8873,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 8973,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 9073,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 9172,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 9272,
+      "elevationM": -7
+    },
+    {
+      "distanceM": 9372,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 9471,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 9571,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 9671,
+      "elevationM": -8
+    },
+    {
+      "distanceM": 9770,
+      "elevationM": -6.4
+    },
+    {
+      "distanceM": 9870,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 9970,
+      "elevationM": -7.6
+    },
+    {
+      "distanceM": 10069,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10169,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 10269,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10369,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 10468,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 10568,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10668,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10767,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10867,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 10967,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 11066,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 11166,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 11266,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 11366,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 11465,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 11565,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 11665,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 11764,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 11864,
+      "elevationM": -6
+    },
+    {
+      "distanceM": 11964,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 12063,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 12163,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 12263,
+      "elevationM": -5
+    },
+    {
+      "distanceM": 12363,
+      "elevationM": -3
+    },
+    {
+      "distanceM": 12462,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 12562,
+      "elevationM": -3
+    },
+    {
+      "distanceM": 12662,
+      "elevationM": -3
+    },
+    {
+      "distanceM": 12761,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 12861,
+      "elevationM": -4
+    },
+    {
+      "distanceM": 12961,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13060,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13160,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13260,
+      "elevationM": -3
+    },
+    {
+      "distanceM": 13360,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13459,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 13559,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13659,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13758,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13858,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 13958,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 14057,
+      "elevationM": -1
+    },
+    {
+      "distanceM": 14157,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 14257,
+      "elevationM": -2
+    },
+    {
+      "distanceM": 14357,
+      "elevationM": -3
+    },
+    {
+      "distanceM": 14456,
+      "elevationM": -0.2
+    },
+    {
+      "distanceM": 14556,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 14656,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 14755,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 14855,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 14955,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 15054,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 15154,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 15254,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 15353,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 15453,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 15553,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 15653,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 15752,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 15852,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 15952,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 16051,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 16151,
+      "elevationM": 0
+    },
+    {
+      "distanceM": 16251,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 16350,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 16450,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 16550,
+      "elevationM": 1
+    },
+    {
+      "distanceM": 16650,
+      "elevationM": 2
+    },
+    {
+      "distanceM": 16749,
+      "elevationM": 3
+    },
+    {
+      "distanceM": 16849,
+      "elevationM": 2.9
+    },
+    {
+      "distanceM": 16949,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 17048,
+      "elevationM": 9
+    },
+    {
+      "distanceM": 17148,
+      "elevationM": 7
+    },
+    {
+      "distanceM": 17248,
+      "elevationM": -6
+    }
+  ]
+}

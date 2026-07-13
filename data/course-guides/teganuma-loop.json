@@ -1,0 +1,144 @@
+{
+  "slug": "teganuma-loop",
+  "heroCheckpointId": "greenway",
+  "intro": "手賀沼の北岸と南岸をつなぐ約17kmのフラットな周回です。湖畔の遊歩道と自転車道が中心で、一定ペースのロング走に向きます。南岸の緑道、北岸の公園、補給しやすい道の駅という区間の違いを確認してから出発できます。",
+  "warnings": [
+    {
+      "title": "歩行者と自転車が同じ緑道を利用します",
+      "body": "南岸の手賀沼自然ふれあい緑道は遊歩道と自転車道で構成されています。並走を避け、見通しの悪い場所や混雑時は減速して、歩行者と自転車を優先してください。",
+      "url": "https://tegaryoku.com/information/",
+      "linkLabel": "緑道の利用上の注意"
+    },
+    {
+      "title": "道の駅の営業時間を補給計画に入れる",
+      "body": "道の駅しょうなんの営業時間は9:00〜18:00で、施設ごとに異なる場合があります。早朝や夕方に走る場合は、飲み物を事前に用意してください。",
+      "url": "https://www.michinoeki-shonan.jp/",
+      "linkLabel": "道の駅しょうなん公式サイト"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "abiko",
+      "name": "我孫子駅側",
+      "badge": "電車ならここ",
+      "destinationLat": 35.87279,
+      "destinationLng": 140.010466,
+      "routeAnchorLat": 35.865628,
+      "routeAnchorLng": 140.012682,
+      "accessText": "JR我孫子駅南口から手賀沼公園のコース線まで約1km",
+      "facilitiesText": "駅周辺と手賀沼公園でトイレ・コンビニを利用しやすい",
+      "firstSection": "手賀沼公園から北岸を東へ進みます。公園利用者が多い場所ではペースを落として通過してください。"
+    },
+    {
+      "id": "kitakashiwa",
+      "name": "北柏駅側",
+      "badge": "西側から",
+      "destinationLat": 35.875623,
+      "destinationLng": 139.988035,
+      "routeAnchorLat": 35.869807,
+      "routeAnchorLng": 139.992242,
+      "accessText": "JR北柏駅南口から北柏ふるさと公園のコース線まで約800m",
+      "facilitiesText": "駅周辺で補給し、公園でトイレを利用しやすい",
+      "firstSection": "北柏ふるさと公園から手賀沼公園方面へ。北岸の公園と市街地寄りの遊歩道をつなぎます。"
+    },
+    {
+      "id": "shonan",
+      "name": "道の駅しょうなん側",
+      "badge": "車ならここ",
+      "destinationLat": 35.866813,
+      "destinationLng": 139.989848,
+      "routeAnchorLat": 35.866813,
+      "routeAnchorLng": 139.989848,
+      "accessText": "道の駅しょうなんの前がコース線。駐車場は施設利用ルールを確認",
+      "facilitiesText": "営業時間内はトイレ・飲食・売店を利用しやすい",
+      "firstSection": "手賀大橋付近から南岸の自然ふれあい緑道へ。湖面を見ながら平坦路を進みます。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "shonan",
+      "name": "道の駅しょうなん",
+      "anchorLat": 35.866813,
+      "anchorLng": 139.989848,
+      "description": "トイレ・飲食・売店がまとまる最大の補給ポイント。車で来る場合の分かりやすいスタート地点でもあります。",
+      "surfaceLabel": "舗装路・施設前",
+      "caution": "営業時間外の補給を事前に用意",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E9%81%93%E3%81%AE%E9%A7%85%E3%81%97%E3%82%87%E3%81%86%E3%81%AA%E3%82%93%E3%83%BB%E3%81%A4%E3%81%B0%E3%81%95.jpg?width=960",
+        "alt": "道の駅しょうなんのつばさ棟",
+        "caption": "道の駅しょうなん。周回中でもっとも補給しやすい場所です。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%81%93%E3%81%AE%E9%A7%85%E3%81%97%E3%82%87%E3%81%86%E3%81%AA%E3%82%93%E3%83%BB%E3%81%A4%E3%81%B0%E3%81%95.jpg"
+      }
+    },
+    {
+      "id": "kitakashiwa-park",
+      "name": "北柏ふるさと公園",
+      "anchorLat": 35.869807,
+      "anchorLng": 139.992242,
+      "description": "大堀川と手賀沼がつながる西端の公園。北柏駅側から入る場合のスタート・休憩地点にできます。",
+      "surfaceLabel": "舗装路・公園",
+      "caution": "散歩や遊具利用の人を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%8C%97%E6%9F%8F%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%85%AC%E5%9C%92.jpg?width=960",
+        "alt": "北柏ふるさと公園の芝生と園路",
+        "caption": "北柏ふるさと公園。周回の西端にある休憩ポイントです。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%9F%8F%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E5%85%AC%E5%9C%92.jpg"
+      }
+    },
+    {
+      "id": "teganuma-park",
+      "name": "手賀沼公園",
+      "anchorLat": 35.865401,
+      "anchorLng": 140.013892,
+      "description": "我孫子駅側から最も入りやすい湖畔公園。ボート乗り場と開けた湖面が見え、北岸の基準点になります。",
+      "surfaceLabel": "舗装路・湖畔公園",
+      "caution": "休日の日中は利用者が多い",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92_%E3%83%9C%E3%83%BC%E3%83%88%E4%B9%97%E3%82%8A%E5%A0%B4_-_panoramio.jpg?width=960",
+        "alt": "手賀沼公園のボート乗り場と湖面",
+        "caption": "手賀沼公園のボート乗り場。北岸の開けた湖畔です。",
+        "credit": "運転太郎",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%89%8B%E8%B3%80%E6%B2%BC%E5%85%AC%E5%9C%92_%E3%83%9C%E3%83%BC%E3%83%88%E4%B9%97%E3%82%8A%E5%A0%B4_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "bird-museum",
+      "name": "鳥の博物館・親水広場",
+      "anchorLat": 35.860785,
+      "anchorLng": 140.028403,
+      "description": "水の館や鳥の博物館が集まる北岸東部。野鳥の多い手賀沼らしさを感じる区間で、建物周辺では歩いて通過します。",
+      "surfaceLabel": "舗装路・施設周辺",
+      "caution": "施設利用者と野鳥観察者を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abiko_City_Museum_of_Birds.JPG?width=960",
+        "alt": "我孫子市鳥の博物館の建物",
+        "caption": "我孫子市鳥の博物館。北岸東部の目印です。",
+        "credit": "あばさー",
+        "license": "Public Domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abiko_City_Museum_of_Birds.JPG"
+      }
+    },
+    {
+      "id": "greenway",
+      "name": "手賀沼自然ふれあい緑道",
+      "anchorLat": 35.861143,
+      "anchorLng": 140.04389,
+      "description": "南岸に続く平坦な緑道。田園と湖面が近く、一定ペースで走りやすい一方、自転車とのすれ違いに注意が必要です。",
+      "surfaceLabel": "舗装路・湖畔緑道",
+      "caution": "並走を避け、すれ違い時は減速",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E7%9C%8C%E7%AB%8B%E6%89%8B%E8%B3%80%E6%B2%BC%E8%87%AA%E7%84%B6%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84%E7%B7%91%E9%81%93.jpg?width=960",
+        "alt": "手賀沼自然ふれあい緑道と湖畔の景色",
+        "caption": "手賀沼自然ふれあい緑道。南岸の平坦なメイン区間です。",
+        "credit": "Souka Kinmei",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%9C%8C%E7%AB%8B%E6%89%8B%E8%B3%80%E6%B2%BC%E8%87%AA%E7%84%B6%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84%E7%B7%91%E9%81%93.jpg"
+      }
+    }
+  ]
+}

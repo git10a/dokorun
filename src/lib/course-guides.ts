@@ -1,4 +1,4 @@
-import kamakuraGuide from "@/generated/course-guides/kamakura-issyu-trail.json";
+import { generatedCourseGuides } from "@/generated/course-guides";
 import type { ElevationSample } from "@/lib/gpx";
 
 export type CourseGuideWarning = { title: string; body: string; url: string; linkLabel: string };
@@ -31,6 +31,7 @@ export type CourseGuideCheckpoint = {
 };
 export type CourseGuide = {
   slug: string;
+  heroCheckpointId: string;
   intro: string;
   distanceM: number;
   elevationGainM: number | null;
@@ -40,9 +41,7 @@ export type CourseGuide = {
   checkpoints: CourseGuideCheckpoint[];
 };
 
-const guides: Record<string, CourseGuide> = {
-  [kamakuraGuide.slug]: kamakuraGuide as CourseGuide,
-};
+const guides = Object.fromEntries(generatedCourseGuides.map((guide) => [guide.slug, guide as CourseGuide])) as Record<string, CourseGuide>;
 
 export function getCourseGuide(slug: string) {
   return guides[slug] ?? null;
