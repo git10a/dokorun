@@ -25,16 +25,12 @@
       "database_id": "7e8b11a6-036e-410f-994a-877a672c8a5c"
     }
   ],
-  // R2はアカウントで未有効化のため一時的にバインディングを外している。
-  // 画像アップロードを有効にする場合: ダッシュボードでR2を有効化 →
-  // `npx wrangler r2 bucket create dokorun-images` → 以下を復活させ、
-  // vars に R2_PUBLIC_URL(公開バケットのベースURL)を追加して再デプロイ。
-  // "r2_buckets": [
-  //   {
-  //     "binding": "IMAGE_BUCKET",
-  //     "bucket_name": "dokorun-images"
-  //   }
-  // ],
+  "r2_buckets": [
+    {
+      "binding": "IMAGE_BUCKET",
+      "bucket_name": "dokorun-images"
+    }
+  ],
   "routes": [
     { "pattern": "dokorun.com", "custom_domain": true },
     { "pattern": "www.dokorun.com", "custom_domain": true }
@@ -48,7 +44,8 @@
     // Automatic setup(自動注入)で計測中のため**空のままにする**。設定すると二重計測になる。
     // 手動方式に切り替える場合のみ、ダッシュボードでRUMを
     // 「Enable with JS Snippet installation」に変更してからトークンを貼る。
-    "CF_BEACON_TOKEN": ""
+    "CF_BEACON_TOKEN": "",
+    "R2_PUBLIC_URL": "https://pub-fc0224cb93ca446f82093a8eea37e3a8.r2.dev"
   }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET / BETTER_AUTH_SECRET /
   // GOOGLE_CLIENT_SECRET は `wrangler secret put <NAME>` で設定する

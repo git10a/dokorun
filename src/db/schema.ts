@@ -191,6 +191,15 @@ export const runs = sqliteTable("runs", {
   index("runs_ran_at_idx").on(t.ranAt),
 ]);
 
+// ランログの写真はスポット写真と分け、将来的な複数枚対応もできるようにする。
+// 現在のUIは1投稿1枚なので run_id をユニークにしている。
+export const runPhotos = sqliteTable("run_photos", {
+  id: uuidPk("id"),
+  runId: text("run_id").notNull().references(() => runs.id, { onDelete: "cascade" }),
+  key: text("key").notNull().unique(),
+  createdAt: createdNow("created_at"),
+}, (t) => [uniqueIndex("run_photos_run_unique").on(t.runId)]);
+
 // ログイン不要のハシリタイ。clientId はブラウザごとに localStorage で発行する匿名ID
 export const hashiritai = sqliteTable("hashiritai", {
   clientId: text("client_id").notNull(),

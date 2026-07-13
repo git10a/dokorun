@@ -1,6 +1,6 @@
 import { and, asc, count, desc, eq, inArray, like, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
-import { communities, courses, favoriteSpots, hashiritai, photos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
+import { communities, courses, favoriteSpots, hashiritai, photos, runPhotos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
 import { jstDayBounds } from "@/lib/jst";
 import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
@@ -474,8 +474,9 @@ export async function getSpotCourses(spotId: string) {
 export async function getPublicRuns(spotId: string, limit = 10) {
   return getDb().select({
     id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
+    photoKey: runPhotos.key,
     userId: users.id, userName: users.name, userHandle: users.handle, userImage: users.image, userCustomAvatarAt: users.customAvatarAt, courseName: courses.name,
-  }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId))
+  }).from(runs).innerJoin(users, eq(users.id, runs.userId)).leftJoin(courses, eq(courses.id, runs.courseId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
     .where(and(eq(runs.spotId, spotId), eq(runs.visibility, "public"))).orderBy(desc(runs.ranAt), desc(runs.createdAt)).limit(limit);
 }
 
@@ -548,12 +549,13 @@ export async function getPublicRunsByUser(userId: string, limit = 10) {
     distanceM: runs.distanceM,
     durationS: runs.durationS,
     comment: runs.comment,
+    photoKey: runPhotos.key,
     spotName: spots.name,
     spotSlug: spots.slug,
     courseName: courses.name,
   }).from(runs)
     .innerJoin(spots, eq(spots.id, runs.spotId))
-    .leftJoin(courses, eq(courses.id, runs.courseId))
+    .leftJoin(courses, eq(courses.id, runs.courseId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
     .where(and(eq(runs.userId, userId), eq(runs.visibility, "public"), eq(spots.isPublished, true)))
     .orderBy(desc(runs.ranAt), desc(runs.createdAt))
     .limit(limit);
@@ -562,8 +564,9 @@ export async function getPublicRunsByUser(userId: string, limit = 10) {
 export async function getUserRuns(userId: string) {
   return getDb().select({
     id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
+    photoKey: runPhotos.key,
     visibility: runs.visibility, spotName: spots.name, spotSlug: spots.slug, courseName: courses.name,
-  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).leftJoin(courses, eq(courses.id, runs.courseId))
+  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).leftJoin(courses, eq(courses.id, runs.courseId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
     .where(eq(runs.userId, userId)).orderBy(desc(runs.ranAt), desc(runs.createdAt));
 }
 
@@ -571,8 +574,9 @@ export async function getUserRun(id: string, userId: string) {
   const rows = await getDb().select({
     id: runs.id, userId: runs.userId, spotId: runs.spotId, courseId: runs.courseId, ranAt: runs.ranAt,
     distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment, visibility: runs.visibility,
+    photoKey: runPhotos.key,
     spotName: spots.name, spotSlug: spots.slug,
-  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).where(and(eq(runs.id, id), eq(runs.userId, userId))).limit(1);
+  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id)).where(and(eq(runs.id, id), eq(runs.userId, userId))).limit(1);
   return rows[0] ?? null;
 }
 

@@ -5,6 +5,9 @@ import bundleAnalyzer from "@next/bundle-analyzer";
 initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
+  experimental: {
+    serverActions: { bodySizeLimit: "3mb" },
+  },
   // Turbopackはルートごとのサーバーチャンクに依存を複製するため、OpenNextが全ルートを
   // 1つのWorkerに束ねると重い依存が最大7〜19回重複し、無料プランの3MiB制限を超える。
   // ここで外部化した依存はOpenNext(esbuild)がnext/react-domと同様に1回だけ同梱する。

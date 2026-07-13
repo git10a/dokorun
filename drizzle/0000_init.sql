@@ -124,6 +124,16 @@ CREATE TABLE `runs` (
 CREATE INDEX `runs_spot_idx` ON `runs` (`spot_id`);--> statement-breakpoint
 CREATE INDEX `runs_user_idx` ON `runs` (`user_id`);--> statement-breakpoint
 CREATE INDEX `runs_ran_at_idx` ON `runs` (`ran_at`);--> statement-breakpoint
+CREATE TABLE `run_photos` (
+	`id` text PRIMARY KEY NOT NULL,
+	`run_id` text NOT NULL,
+	`key` text NOT NULL,
+	`created_at` integer DEFAULT (unixepoch() * 1000) NOT NULL,
+	FOREIGN KEY (`run_id`) REFERENCES `runs`(`id`) ON UPDATE no action ON DELETE cascade
+);
+--> statement-breakpoint
+CREATE UNIQUE INDEX `run_photos_run_unique` ON `run_photos` (`run_id`);--> statement-breakpoint
+CREATE UNIQUE INDEX `run_photos_key_unique` ON `run_photos` (`key`);--> statement-breakpoint
 CREATE TABLE `sessions` (
 	`id` text PRIMARY KEY NOT NULL,
 	`expires_at` integer NOT NULL,
