@@ -9,7 +9,7 @@ const eventLabels: Record<string, string> = {
   spot_view: "詳細閲覧",
   search: "検索実行",
   search_results: "検索結果表示",
-  hashiritai: "ハシリタイ",
+  hashiritai: "走りたい",
   share: "シェア",
   directions: "行き方クリック",
   route_start: "スタート地点へ",
@@ -80,7 +80,7 @@ export default async function AdminStatsPage() {
           <ol className="space-y-2 text-sm">{topViews.map((row) => <li key={row.slug} className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"><Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">{row.slug}</Link><span>{row.count}</span></li>)}{!topViews.length && <li className="text-sub">まだデータがありません</li>}</ol>
         </section>
         <section>
-          <h2 className="mb-4 text-xl font-bold">ハシリタイ累計</h2>
+          <h2 className="mb-4 text-xl font-bold">走りたい累計</h2>
           <ol className="space-y-2 text-sm">{topHashiritai.map((row) => <li key={row.slug} className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"><Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">{row.name}</Link><span>{row.count}</span></li>)}{!topHashiritai.length && <li className="text-sub">まだデータがありません</li>}</ol>
         </section>
       </div>

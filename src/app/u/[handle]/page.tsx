@@ -143,7 +143,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           <p className="mt-3 text-sm text-sub">スポットで「走ったよ 🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)</p>
         </section>
       )}
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">好きなコース</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">好きなコースはまだ登録されていません</p>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">おすすめ</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">おすすめはまだ登録されていません</p>}</section>
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
     </div>
   );

@@ -58,7 +58,7 @@ export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, 
 
   return (
     <button type="button" onClick={toggle} disabled={pending} aria-pressed={liked} className={`flex items-center gap-2 rounded-lg border-2 border-brand px-4 py-2.5 font-bold transition-colors ${liked ? "bg-brand" : "bg-paper"} disabled:opacity-70`}>
-      <Heart size={18} fill={liked ? "currentColor" : "none"} />ハシリタイ {count}
+      <Heart size={18} fill={liked ? "currentColor" : "none"} />走りたい {count}
     </button>
   );
 }

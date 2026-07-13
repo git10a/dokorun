@@ -21,7 +21,7 @@ export function FavoriteButton({ spotId, slug, loggedIn, initialFavorite }: { sp
   };
   return (
     <button type="button" onClick={onClick} disabled={pending} aria-pressed={favorite} className={`flex items-center gap-2 rounded-lg border-2 border-line px-4 py-2.5 font-bold transition-colors ${favorite ? "bg-brand" : "bg-paper hover:bg-cream"} disabled:opacity-70`}>
-      <Star size={18} fill={favorite ? "currentColor" : "none"} />お気に入り
+      <Star size={18} fill={favorite ? "currentColor" : "none"} />おすすめ
     </button>
   );
 }
