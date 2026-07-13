@@ -74,7 +74,7 @@ export function LongCourseGuide({ guide, geojson, courseType, surface }: { guide
 
   return <div className="space-y-10 pb-20">
     <section id="overview" className="space-y-4 scroll-mt-28">
-      <div className="grid grid-cols-4 divide-x divide-line border-y border-line py-4">{[["距離", `${(guide.distanceM / 1000).toFixed(1)}km`], ["獲得標高", `${guide.elevationGainM ?? "—"}m`], ["形状", courseTypeLabels[courseType]], ["路面", surfaceLabels[surface]]].map(([label, value]) => <div key={label} className="px-1 text-center"><p className="text-[10px] font-bold text-sub sm:text-xs">{label}</p><p className="mt-1 text-lg font-black sm:text-2xl">{value}</p></div>)}</div>
+      <div className="grid grid-cols-4 divide-x divide-line border-y border-line py-4">{[["距離", `${(guide.distanceM / 1000).toFixed(1)}km`], ["獲得標高", `${guide.elevationGainM ?? "—"}m`], ["形状", courseTypeLabels[courseType]], ["路面", surfaceLabels[surface]]].map(([label, value]) => <div key={label} className="min-w-0 px-1 text-center"><p className="text-[10px] font-bold text-sub sm:text-xs">{label}</p><p className="mt-1 break-words text-base font-black leading-tight sm:text-2xl">{value}</p></div>)}</div>
       <p className="max-w-3xl leading-7">{guide.intro}</p>
     </section>
 
