@@ -26,7 +26,7 @@ const slugs = requestedSlugs.length ? requestedSlugs : allSlugs;
 function buildGuide(slug: string) {
   const sourcePath = resolve(sourceDirectory, `${slug}.json`);
   const gpxPath = resolve("data/gpx", `${slug}.gpx`);
-  const outputPath = resolve("src/generated/course-guides", `${slug}.json`);
+  const outputPath = resolve("public/course-guides", `${slug}.json`);
   const source = JSON.parse(readFileSync(sourcePath, "utf8")) as GuideSource & Record<string, unknown>;
   if (source.slug !== slug || !/^[a-z0-9-]+$/.test(source.slug)) throw new Error(`不正なslugです: ${source.slug}`);
 
@@ -79,6 +79,3 @@ for (const slug of slugs) {
   if (!allSlugs.includes(slug)) throw new Error(`ガイドデータが見つかりません: ${slug}`);
   buildGuide(slug);
 }
-
-const registry = `${allSlugs.map((slug, index) => `import guide${index} from "./${slug}.json";`).join("\n")}\n\nexport const generatedCourseGuides = [${allSlugs.map((_, index) => `guide${index}`).join(", ")}];\n`;
-writeFileSync(resolve("src/generated/course-guides/index.ts"), registry);

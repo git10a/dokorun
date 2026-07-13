@@ -71,7 +71,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
   const initialFavorite = userState?.isFavorite ?? false;
   const todayRunId = userState?.todayRunId ?? null;
   const destinations = getNearbyDestinations(spot.slug);
-  const courseGuide = getCourseGuide(spot.slug);
+  const courseGuide = await getCourseGuide(spot.slug);
   const guideHeroPhoto = courseGuide?.checkpoints.find((checkpoint) => checkpoint.id === courseGuide.heroCheckpointId)?.photo ?? courseGuide?.checkpoints[0]?.photo;
   const baseUrl = getSiteUrl();
   const breadcrumbData = {

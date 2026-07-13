@@ -1,14 +1,22 @@
 import { describe, expect, it } from "vitest";
 import { getCourseGuide } from "../src/lib/course-guides";
-import { generatedCourseGuides } from "../src/generated/course-guides";
+import { readdirSync } from "node:fs";
 
 const guideSlugs = ["kamakura-issyu-trail", "teganuma-loop", "yamanote-loop"];
 
 describe("course guides", () => {
   it("covers every published spot with a generated guide", () => {
-    expect(generatedCourseGuides).toHaveLength(250);
-    expect(new Set(generatedCourseGuides.map((guide) => guide.slug)).size).toBe(250);
-    for (const guide of generatedCourseGuides) {
+    const slugs = readdirSync("public/course-guides").filter((name) => name.endsWith(".json")).map((name) => name.replace(/\.json$/, ""));
+    expect(slugs).toHaveLength(250);
+    expect(new Set(slugs).size).toBe(250);
+  });
+
+  it("validates every generated guide and its source attribution", async () => {
+    const slugs = readdirSync("public/course-guides").filter((name) => name.endsWith(".json")).map((name) => name.replace(/\.json$/, ""));
+    for (const slug of slugs) {
+      const guide = await getCourseGuide(slug);
+      expect(guide, slug).not.toBeNull();
+      if (!guide) continue;
       expect(guide.startPoints.length, guide.slug).toBeGreaterThanOrEqual(1);
       expect(guide.checkpoints.length, guide.slug).toBeGreaterThanOrEqual(5);
       expect(guide.elevationProfile.length, guide.slug).toBeGreaterThanOrEqual(2);
@@ -22,8 +30,8 @@ describe("course guides", () => {
     }
   });
 
-  it.each(guideSlugs)("registers generated guide data for %s", (slug) => {
-    const guide = getCourseGuide(slug);
+  it.each(guideSlugs)("registers generated guide data for %s", async (slug) => {
+    const guide = await getCourseGuide(slug);
     expect(guide?.heroCheckpointId).toBeTruthy();
     expect(guide?.startPoints.length).toBeGreaterThanOrEqual(2);
     expect(guide?.checkpoints.length).toBeGreaterThanOrEqual(5);
