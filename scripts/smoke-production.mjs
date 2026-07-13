@@ -41,8 +41,11 @@ for (let iteration = 0; iteration < iterations; iteration += 1) {
   for (const testCase of cases) console.log(await check(testCase));
 }
 
+// Static Assetsは0% deploymentのVersion Overrideが常に適用されるとは限らないため、
+// 並列負荷試験は必ずWorkerを通る経路だけに限定する。静的経路は上の逐次確認で検証する。
+const concurrentCases = cases.filter(({ path }) => path !== "/healthz.txt" && path !== "/spot-gpx/kokyo.gpx");
 await Promise.all(Array.from({ length: Math.min(20, iterations * 2) }, async (_, index) => {
-  const result = await check(cases[index % cases.length]);
+  const result = await check(concurrentCases[index % concurrentCases.length]);
   console.log(`concurrent ${result}`);
 }));
 
