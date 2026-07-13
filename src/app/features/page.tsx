@@ -8,7 +8,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "条件からランニングコースをさがす",
-  description: "夜ラン向き、信号なし、ロング走向き、トラック開放など、こだわり条件別に日本全国のランニングコースをまとめています。",
+  description: "朝ラン・夜ラン向き、信号なし、ロング走向き、トラック開放など、こだわり条件別に日本全国のランニングコースをまとめています。",
   alternates: { canonical: "/features" },
   openGraph: { url: "/features" },
 };
@@ -19,7 +19,7 @@ export default async function FeaturesPage() {
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
       <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 条件からさがす</nav>
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl">条件からランニングコースをさがす</h1>
-      <p className="mb-8 leading-7 text-sub">「夜でも走れる場所」「信号なしでロング走できる場所」など、ランナーのこだわり条件別にスポットをまとめています。</p>
+      <p className="mb-8 leading-7 text-sub">「日の出がきれいな朝ラン」「夜でも走れる場所」「信号なしでロング走できる場所」など、ランナーのこだわり条件別にスポットをまとめています。</p>
       <div className="grid gap-5 sm:grid-cols-2">
         {features.map((feature) => (
           <Link key={feature.slug} href={`/features/${feature.slug}`} className="group rounded-xl border border-line bg-paper p-5 transition-all hover:-translate-y-0.5 hover:shadow-md">

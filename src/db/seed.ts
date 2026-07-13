@@ -12,6 +12,7 @@ const tagSeed = [
   ["no-signals", "信号ゼロ", "terrain"], ["flat", "フラット", "terrain"], ["hilly", "坂練向き", "terrain"],
   ["dirt-path", "土の路面", "terrain"], ["dedicated-lane", "専用レーンあり", "terrain"], ["track", "トラックあり", "terrain"],
   ["cross-country", "クロカンコース", "terrain"], ["bright-at-night", "夜も明るい", "environment"], ["shaded", "木陰が多い", "environment"],
+  ["sunrise-view", "日の出がきれい", "scenery"],
   ["less-crowded", "混みにくい", "environment"], ["water-refill", "給水しやすい", "environment"], ["waterside", "湖畔・水辺", "scenery"],
   ["riverside", "河川敷", "scenery"], ["park", "公園", "scenery"], ["scenic", "景色が良い", "scenery"], ["cherry-blossoms", "桜の名所", "scenery"],
 ] as const;

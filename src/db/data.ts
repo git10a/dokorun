@@ -209,6 +209,14 @@ export async function getPrefectureCounts() {
 
 const hashiritaiCountExpr = sql`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`;
 
+function spotHasTag(tagSlug: string): SQL {
+  return sql`exists (
+    select 1 from ${spotTags}
+    inner join ${tags} on ${tags.id} = ${spotTags.tagId}
+    where ${spotTags.spotId} = ${spots.id} and ${tags.slug} = ${tagSlug}
+  )`;
+}
+
 // エリアハブページ用: 都道府県内の全スポットをハシリタイ数順で返す
 export async function getSpotsByPrefecture(prefecture: string) {
   const rows = await getDb().select(summarySelection).from(spots)
@@ -221,6 +229,7 @@ export async function getSpotsByPrefecture(prefecture: string) {
 // 特集ページ(/features/{slug})の絞り込み条件。スラッグは src/lib/features.ts の定義と対応する
 function featureCondition(featureSlug: string): SQL | null {
   switch (featureSlug) {
+    case "morning-run": return spotHasTag("sunrise-view");
     case "night-run": return eq(spots.nightLighting, "bright");
     case "no-signals": return eq(courses.signalsCount, 0);
     case "long-run": return sql`${courses.distanceM} >= ${longRunDistanceM}`;
@@ -245,6 +254,7 @@ export async function getFeatureSpots(featureSlug: string) {
 // 特集一覧ページ用: 各特集の該当件数を1クエリでまとめて取得
 export async function getFeatureCounts(): Promise<Record<string, number>> {
   const rows = await getDb().select({
+    morningRun: sql<number>`count(*) filter (where ${spotHasTag("sunrise-view")})`,
     nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')`,
     noSignals: sql<number>`count(*) filter (where ${courses.signalsCount} = 0)`,
     longRun: sql<number>`count(*) filter (where ${courses.distanceM} >= ${longRunDistanceM})`,
@@ -257,6 +267,7 @@ export async function getFeatureCounts(): Promise<Record<string, number>> {
     .where(eq(spots.isPublished, true));
   const row = rows[0];
   return {
+    "morning-run": row?.morningRun ?? 0,
     "night-run": row?.nightRun ?? 0,
     "no-signals": row?.noSignals ?? 0,
     "long-run": row?.longRun ?? 0,

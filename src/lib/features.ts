@@ -11,6 +11,14 @@ export type FeatureDef = {
 
 export const features: FeatureDef[] = [
   {
+    slug: "morning-run",
+    name: "朝ラン",
+    emoji: "🌅",
+    title: "日の出がきれいな朝ランコース",
+    description: "日の出や朝日に照らされた水辺・山並みを楽しめる朝ランコースのまとめ。コースマップ・距離・設備つきで探せます。",
+    lead: "日の出そのものや、朝日に照らされた水辺・山並みを楽しめるスポットを集めました。早起きして走りたくなる景色を探してみてください。",
+  },
+  {
     slug: "night-run",
     name: "夜ラン",
     emoji: "🌙",
