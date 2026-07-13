@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import Link from "next/link";
-import { AlertTriangle, CheckCircle2, Download, ExternalLink, LoaderCircle, MapPin, Navigation, Search } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Download, ExternalLink, LoaderCircle, MapPin, Navigation, Search, X } from "lucide-react";
 import { CourseGuideMap } from "@/components/map/course-guide-map";
 import { ElevationProfile } from "@/components/elevation-profile";
 import { SpotImage } from "@/components/spot-image";
@@ -21,6 +21,7 @@ export function LongCourseGuide({ guide, geojson, courseType, surface }: { guide
   const [recommendation, setRecommendation] = useState<Recommendation | null>(null);
   const [searchStatus, setSearchStatus] = useState<"idle" | "loading" | "error">("idle");
   const [searchError, setSearchError] = useState("");
+  const [sheetOpen, setSheetOpen] = useState(false);
   const selectedStart = guide.startPoints.find((start) => start.id === selectedStartId) ?? guide.startPoints[0];
   const recommendedStart = recommendation ? guide.startPoints.find((start) => start.id === recommendation.startId) : null;
   const profile = useMemo(() => rotateElevationProfile(guide.elevationProfile, selectedStart.routeDistanceM, guide.distanceM), [guide, selectedStart.routeDistanceM]);
@@ -71,61 +72,27 @@ export function LongCourseGuide({ guide, geojson, courseType, surface }: { guide
     }
   };
 
-  return (
-    <div className="space-y-10">
-      <section aria-labelledby="course-decision-heading" className="space-y-4">
-        <div><h2 id="course-decision-heading" className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">このコースを走る前に</h2><p className="mt-3 max-w-3xl leading-7 text-sub">{guide.intro}</p></div>
-        <div className="overflow-hidden rounded-2xl border border-line bg-paper">
-          <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x md:divide-line">
-            {[["距離", `${(guide.distanceM / 1000).toFixed(1)}km`], ["獲得標高", `${guide.elevationGainM ?? "—"}m`], ["形状", courseTypeLabels[courseType]], ["路面", surfaceLabels[surface]]].map(([label, value], index) => <div key={label} className={`px-3 py-5 text-center ${index < 2 ? "border-b border-line md:border-b-0" : ""} ${index % 2 ? "border-l border-line md:border-l-0" : ""}`}><p className="text-xs font-bold text-sub">{label}</p><p className="mt-1 text-2xl font-black sm:text-3xl">{value}</p></div>)}
-          </div>
-        </div>
-        <div className="grid gap-3 md:grid-cols-2">{guide.warnings.map((warning) => <div key={warning.title} className="rounded-xl border border-line bg-cream p-4"><h3 className="flex items-center gap-2 font-bold"><AlertTriangle size={18} />{warning.title}</h3><p className="mt-2 text-sm leading-6 text-sub">{warning.body}</p><a href={warning.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-accent underline underline-offset-4">{warning.linkLabel}<ExternalLink size={12} /></a></div>)}</div>
-      </section>
+  return <div className="space-y-10 pb-20">
+    <section id="overview" className="space-y-4 scroll-mt-28">
+      <div className="grid grid-cols-4 divide-x divide-line border-y border-line py-4">{[["距離", `${(guide.distanceM / 1000).toFixed(1)}km`], ["獲得標高", `${guide.elevationGainM ?? "—"}m`], ["形状", courseTypeLabels[courseType]], ["路面", surfaceLabels[surface]]].map(([label, value]) => <div key={label} className="px-1 text-center"><p className="text-[10px] font-bold text-sub sm:text-xs">{label}</p><p className="mt-1 text-lg font-black sm:text-2xl">{value}</p></div>)}</div>
+      <p className="max-w-3xl leading-7">{guide.intro}</p>
+    </section>
 
-      <section aria-labelledby="course-overview-heading" className="space-y-5">
-        <h2 id="course-overview-heading" className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コース全体</h2>
-        <CourseGuideMap geojson={geojson} checkpoints={guide.checkpoints} startPoints={guide.startPoints} selectedStartId={selectedStart.id} />
-        <ElevationProfile profile={profile} checkpoints={checkpoints} totalDistanceM={guide.distanceM} startName={selectedStart.name} />
-      </section>
+    <nav aria-label="ページ内ナビゲーション" className="sticky top-16 z-40 -mx-4 flex border-y border-line bg-paper/95 px-4 backdrop-blur sm:mx-0 sm:rounded-lg sm:border"><a href="#overview" className="flex-1 py-3 text-center text-sm font-bold">概要</a><a href="#route" className="flex-1 py-3 text-center text-sm font-bold">ルート</a><a href="#highlights" className="flex-1 py-3 text-center text-sm font-bold">見どころ</a><button onClick={() => setSheetOpen(true)} className="flex-1 py-3 text-center text-sm font-bold">アクセス</button></nav>
 
-      <section aria-labelledby="course-sections-heading" className="space-y-5">
-        <div><h2 id="course-sections-heading" className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">区間ごとの雰囲気</h2><p className="mt-3 text-sm text-sub">{selectedStart.name}から進行方向に並べています。</p></div>
-        <div className="grid gap-5 md:grid-cols-2">{checkpoints.map((checkpoint, index) => <article key={checkpoint.id} className="overflow-hidden rounded-xl border border-line bg-paper"><figure><div className="relative"><SpotImage src={checkpoint.photo.url} alt={checkpoint.photo.alt} width={960} height={540} sizes="(min-width: 768px) 50vw, 100vw" unoptimized className="aspect-video w-full object-cover" /><span className="absolute left-3 top-3 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">{index + 1}・{(checkpoint.displayDistanceM / 1000).toFixed(1)}km</span></div><figcaption className="px-4 pt-3 text-xs leading-5 text-sub">{checkpoint.photo.caption}</figcaption></figure><div className="p-4 pt-3"><h3 className="text-lg font-bold">{checkpoint.name}</h3><p className="mt-2 text-sm leading-6 text-sub">{checkpoint.description}</p><div className="mt-3 flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-cream px-2.5 py-1 font-bold">{checkpoint.surfaceLabel}</span><span className="rounded-full border border-line px-2.5 py-1">注意: {checkpoint.caution}</span></div><a href={checkpoint.photo.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-[11px] text-sub underline underline-offset-4">写真: {checkpoint.photo.credit} / {checkpoint.photo.license}<ExternalLink size={11} /></a></div></article>)}</div>
-      </section>
+    <section id="route" className="scroll-mt-32 space-y-4"><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">ルート確認</h2><div className="overflow-hidden rounded-2xl border border-line"><CourseGuideMap geojson={geojson} checkpoints={guide.checkpoints} startPoints={guide.startPoints} selectedStartId={selectedStart.id} /><div className="border-t border-line p-3 sm:p-5"><ElevationProfile profile={profile} checkpoints={checkpoints} totalDistanceM={guide.distanceM} startName={selectedStart.name} /></div></div>
+      <div className="rounded-xl bg-cream p-4"><p className="flex items-center gap-2 font-bold"><AlertTriangle size={18} />{guide.warnings[0].title}</p><p className="mt-2 text-sm leading-6 text-sub">{guide.warnings[0].body}</p><div className="mt-2 flex flex-wrap gap-4">{guide.warnings.map((warning) => <a key={warning.title} href={warning.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-accent underline underline-offset-4">{warning.linkLabel}<ExternalLink size={11} /></a>)}</div></div>
+    </section>
 
-      <section aria-labelledby="start-choice-heading" className="space-y-5">
-        <div><h2 id="start-choice-heading" className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">どこから走る？</h2><p className="mt-3 leading-7 text-sub">あなたの最寄駅から、位置の近いスタート地点をおすすめします。</p></div>
-        <div className="rounded-2xl border border-line bg-cream p-4 sm:p-6">
-          <form onSubmit={findRecommendedStart} className="max-w-xl">
-            <label htmlFor="course-origin" className="text-sm font-bold">あなたの最寄駅</label>
-            <div className="mt-2 flex items-center gap-2 rounded-lg border-2 border-ink bg-paper px-3 focus-within:ring-2 focus-within:ring-brand">
-              <MapPin size={20} className="shrink-0 text-sub" />
-              <input id="course-origin" value={origin} onChange={(event) => setOrigin(event.target.value)} placeholder="例：渋谷駅" autoComplete="off" className="min-w-0 flex-1 bg-transparent py-3.5 text-base outline-none" />
-            </div>
-            <button type="submit" disabled={searchStatus === "loading"} className="mt-3 flex min-h-14 w-full items-center justify-center gap-2 rounded-lg border-2 border-ink bg-brand px-5 py-3 font-black shadow-[3px_3px_0_#1A1A1A] transition-transform hover:-translate-y-0.5 hover:bg-brand-dark disabled:cursor-wait disabled:opacity-70">
-              {searchStatus === "loading" ? <LoaderCircle size={21} className="animate-spin" /> : <Search size={21} />}
-              {searchStatus === "loading" ? "駅を調べています…" : "最寄駅からおすすめを調べる"}
-            </button>
-            {searchStatus === "error" && <p role="alert" className="mt-3 text-sm font-bold text-danger">{searchError}</p>}
-            <p className="mt-3 text-xs leading-5 text-sub">入力内容は保存しません。駅情報は<a href="https://express.heartrails.com/" target="_blank" rel="noopener noreferrer" className="mx-1 underline underline-offset-4">HeartRails Express</a>を利用しています。</p>
-          </form>
+    <section id="highlights" className="scroll-mt-32 space-y-4"><div><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">見どころ</h2><p className="mt-2 text-sm text-sub">{selectedStart.name}からの順番。カードを開くと詳しく見られます。</p></div><div className="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0">{checkpoints.map((checkpoint, index) => <details key={checkpoint.id} className="group w-[82%] shrink-0 snap-center overflow-hidden rounded-xl border border-line bg-paper sm:w-[44%]"><summary className="cursor-pointer list-none"><div className="relative"><SpotImage src={checkpoint.photo.url} alt={checkpoint.photo.alt} width={640} height={360} sizes="(min-width: 768px) 44vw, 82vw" unoptimized className="aspect-video w-full object-cover" /><span className="absolute left-3 top-3 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">{index + 1}・{(checkpoint.displayDistanceM / 1000).toFixed(1)}km</span></div><div className="p-4"><h3 className="text-lg font-bold">{checkpoint.name}</h3><p className="mt-1 text-xs text-sub">タップして詳細を見る</p></div></summary><div className="border-t border-line p-4"><p className="text-sm leading-6 text-sub">{checkpoint.description}</p><div className="mt-3 flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-cream px-2.5 py-1 font-bold">{checkpoint.surfaceLabel}</span><span className="rounded-full border border-line px-2.5 py-1">{checkpoint.caution}</span></div><a href={checkpoint.photo.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-[11px] text-sub underline">写真: {checkpoint.photo.credit} / {checkpoint.photo.license}<ExternalLink size={11} /></a></div></details>)}</div></section>
 
-          {recommendation && recommendedStart && <div aria-live="polite" className="mt-6 rounded-xl border-2 border-ink bg-paper p-5 shadow-sm">
-            <p className="flex items-center gap-2 text-sm font-bold"><CheckCircle2 size={20} className="text-brand-dark" />{recommendation.station.name}駅からのおすすめ</p>
-            <h3 className="mt-2 text-2xl font-black">{recommendedStart.name}からスタート</h3>
-            <p className="mt-2 text-sm leading-6 text-sub">駅の位置で比べると、もう一方の始点より約{recommendation.differenceKm.toFixed(1)}km近いためおすすめします。実際の乗換や所要時間はGoogleマップで確認できます。</p>
-          </div>}
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-paper/95 p-3 backdrop-blur"><button onClick={() => setSheetOpen(true)} className="mx-auto flex min-h-14 w-full max-w-lg items-center justify-center gap-2 rounded-xl bg-ink px-5 font-black text-paper shadow-lg"><MapPin size={20} />最寄駅からスタートを決める</button></div>
 
-          <fieldset className="mt-6 border-t border-line pt-5">
-            <legend className="text-sm font-bold">自分で始点を選ぶ</legend>
-            <div className="mt-3 grid gap-3 md:grid-cols-2">{guide.startPoints.map((start) => { const selected = start.id === selectedStart.id; return <label key={start.id} className={`relative cursor-pointer rounded-xl bg-paper p-4 transition-colors ${selected ? "border-2 border-ink shadow-sm" : "border border-line hover:border-ink"}`}><input type="radio" name="course-start" value={start.id} checked={selected} onChange={() => chooseStart(start.id)} className="absolute right-4 top-4 size-5 accent-[#1A1A1A]" /><div className="pr-8"><span className="rounded-full bg-brand px-2.5 py-1 text-xs font-bold">{start.badge}</span><h3 className="mt-3 text-lg font-bold">{start.name}</h3><p className="mt-2 text-sm font-bold">{start.accessText}</p><p className="mt-1 text-xs leading-5 text-sub">{start.facilitiesText}</p><p className="mt-3 border-t border-line pt-3 text-sm leading-6">{start.firstSection}</p></div></label>; })}</div>
-          </fieldset>
-
-          <div className="mt-6 grid gap-3 sm:grid-cols-2"><a href={directionsUrl} target="_blank" rel="noopener noreferrer" onClick={() => track("route_start", { slug: guide.slug, startId: selectedStart.id, originMode: origin.trim() ? "typed" : "blank" })} className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-brand px-5 py-3 text-center font-bold hover:bg-brand-dark"><Navigation size={20} />{selectedStart.name}までの行き方</a><a href={selectedStart.gpxHref} download onClick={() => track("gpx_download", { slug: guide.slug, startId: selectedStart.id })} className="flex min-h-14 items-center justify-center gap-2 rounded-lg border-2 border-ink bg-paper px-5 py-3 text-center font-bold hover:bg-white"><Download size={20} />{selectedStart.name}から走るGPXをダウンロード</a></div>
-          <p className="mt-4 text-xs leading-5 text-sub">始点を選ぶと高低図とGPXのスタート位置も変わります。GPXの読み込み方は<Link href="/guide/gpx" className="ml-1 font-bold text-accent underline underline-offset-4">アプリ別ガイド</Link>をご覧ください。</p>
-        </div>
-      </section>
-    </div>
-  );
+    {sheetOpen && <div className="fixed inset-0 z-[60] bg-ink/45" role="presentation" onMouseDown={() => setSheetOpen(false)}><section role="dialog" aria-modal="true" aria-labelledby="start-sheet-title" onMouseDown={(event) => event.stopPropagation()} className="absolute inset-x-0 bottom-0 max-h-[88vh] overflow-y-auto rounded-t-3xl bg-paper p-5 shadow-2xl sm:left-1/2 sm:max-w-xl sm:-translate-x-1/2"><div className="flex items-center justify-between"><div><p className="text-xs font-bold text-sub">アクセス</p><h2 id="start-sheet-title" className="text-xl font-black">どこから走る？</h2></div><button onClick={() => setSheetOpen(false)} aria-label="閉じる" className="grid size-10 place-items-center rounded-full bg-cream"><X size={20} /></button></div>
+      <form onSubmit={findRecommendedStart} className="mt-5"><label htmlFor="course-origin" className="text-sm font-bold">あなたの最寄駅</label><div className="mt-2 flex items-center gap-2 rounded-lg border-2 border-ink px-3"><MapPin size={20} className="text-sub" /><input id="course-origin" value={origin} onChange={(event) => setOrigin(event.target.value)} placeholder="例：渋谷駅" className="min-w-0 flex-1 py-3.5 outline-none" /></div><button type="submit" disabled={searchStatus === "loading"} className="mt-3 flex min-h-14 w-full items-center justify-center gap-2 rounded-lg bg-brand px-5 font-black">{searchStatus === "loading" ? <LoaderCircle size={20} className="animate-spin" /> : <Search size={20} />}{searchStatus === "loading" ? "駅を調べています…" : "おすすめを調べる"}</button>{searchStatus === "error" && <p role="alert" className="mt-3 text-sm font-bold text-danger">{searchError}</p>}</form>
+      {recommendation && recommendedStart && <div aria-live="polite" className="mt-5 rounded-xl border-2 border-ink p-4"><p className="flex items-center gap-2 text-sm font-bold"><CheckCircle2 size={18} />{recommendation.station.name}駅からのおすすめ</p><h3 className="mt-2 text-xl font-black">{recommendedStart.name}からスタート</h3><p className="mt-2 text-sm leading-6 text-sub">もう一方の始点より位置が約{recommendation.differenceKm.toFixed(1)}km近い候補です。</p></div>}
+      <fieldset className="mt-5"><legend className="text-sm font-bold">始点を選ぶ</legend><div className="mt-2 grid grid-cols-2 gap-2">{guide.startPoints.map((start) => <label key={start.id} className={`cursor-pointer rounded-lg p-3 ${start.id === selectedStart.id ? "border-2 border-ink bg-cream" : "border border-line"}`}><input type="radio" name="course-start" checked={start.id === selectedStart.id} onChange={() => chooseStart(start.id)} className="mr-2 accent-[#1A1A1A]" /><span className="font-bold">{start.name}</span><p className="mt-1 text-xs text-sub">{start.accessText}</p></label>)}</div></fieldset>
+      <div className="mt-5 grid gap-2"><a href={directionsUrl} target="_blank" rel="noopener noreferrer" onClick={() => track("route_start", { slug: guide.slug, startId: selectedStart.id, originMode: origin.trim() ? "station" : "none" })} className="flex min-h-12 items-center justify-center gap-2 rounded-lg bg-brand font-bold"><Navigation size={18} />{selectedStart.name}までの行き方</a><a href={selectedStart.gpxHref} download onClick={() => track("gpx_download", { slug: guide.slug, startId: selectedStart.id })} className="flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-ink font-bold"><Download size={18} />{selectedStart.name}から走るGPXをダウンロード</a></div><p className="mt-3 text-xs leading-5 text-sub">入力内容は保存しません。駅情報は<a href="https://express.heartrails.com/" target="_blank" rel="noopener noreferrer" className="underline">HeartRails Express</a>を利用しています。<Link href="/guide/gpx" className="underline">GPXの使い方</Link></p>
+    </section></div>}
+  </div>;
 }
