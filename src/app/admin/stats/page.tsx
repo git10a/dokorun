@@ -14,6 +14,8 @@ const eventLabels: Record<string, string> = {
   directions: "行き方クリック",
   route_start: "スタート地点へ",
   gpx_download: "GPX取得",
+  course_guide_view: "コースガイド表示",
+  start_point_select: "スタート地点選択",
   sort_near: "近い順ソート",
   feedback: "フォーム送信",
 };

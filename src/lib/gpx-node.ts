@@ -16,7 +16,7 @@ function readPoint(value: Record<string, unknown>): GpxPoint | null {
   return { lat, lng, ele: rawEle === undefined ? null : Number(rawEle) };
 }
 
-export function parseGpx(xml: string): GpxResult {
+export function parseGpxPoints(xml: string): GpxPoint[] {
   let parsed: XmlNode;
   try {
     parsed = new XMLParser({ ignoreAttributes: false }).parse(xml);
@@ -35,5 +35,10 @@ export function parseGpx(xml: string): GpxResult {
   const points = (trackPoints.length ? trackPoints : routePoints)
     .map((point) => point && typeof point === "object" && !Array.isArray(point) ? readPoint(point as XmlNode) : null)
     .filter((point): point is GpxPoint => Boolean(point));
-  return gpxResultFromPoints(points);
+  if (points.length < 2) throw new Error("GPXファイルを解析できませんでした");
+  return points;
+}
+
+export function parseGpx(xml: string): GpxResult {
+  return gpxResultFromPoints(parseGpxPoints(xml));
 }

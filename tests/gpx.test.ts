@@ -23,6 +23,15 @@ describe("parseGpx", () => {
   it("returns null elevation when any elevation is missing", () => {
     const result = parseGpx(wrap('<trkpt lat="35" lon="139"><ele>0</ele></trkpt><trkpt lat="35.01" lon="139"/>'));
     expect(result.elevationGainM).toBeNull();
+    expect(result.elevationProfile).toBeNull();
+  });
+
+  it("creates a bounded elevation profile that keeps both endpoints", () => {
+    const points = Array.from({ length: 250 }, (_, index) => `<trkpt lat="${35 + index * 0.0001}" lon="139"><ele>${index % 20}</ele></trkpt>`).join("");
+    const result = parseGpx(wrap(points));
+    expect(result.elevationProfile?.length).toBeLessThanOrEqual(181);
+    expect(result.elevationProfile?.[0]).toEqual({ distanceM: 0, elevationM: 0 });
+    expect(result.elevationProfile?.at(-1)?.distanceM).toBe(result.distanceM);
   });
 
   it("rejects malformed input", () => {

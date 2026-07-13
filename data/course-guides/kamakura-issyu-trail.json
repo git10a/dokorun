@@ -1,0 +1,148 @@
+{
+  "slug": "kamakura-issyu-trail",
+  "intro": "大船から鎌倉を囲む尾根と切通しをつなぐ、ロードと土のトレイルが交互に現れる一周です。数字だけでは分かりにくい登りの位置と、区間ごとの雰囲気を確認してから出発できます。",
+  "warnings": [
+    {
+      "title": "建長寺を通過します",
+      "body": "建長寺の拝観時間は8:30〜16:30。ハイキングで入山する場合も拝観料（大人500円・現金）が必要です。境内では歩行者を優先し、走らず通行してください。",
+      "url": "https://www.kenchoji.com/access/",
+      "linkLabel": "建長寺の拝観案内"
+    },
+    {
+      "title": "出発前に通行状況を確認",
+      "body": "倒木や整備でハイキングコースが一時通行止めになることがあります。明るい時間帯に走り、混雑時や狭い区間では歩行者を優先してください。",
+      "url": "https://www.city.kamakura.kanagawa.jp/kankou/",
+      "linkLabel": "鎌倉市の観光情報"
+    }
+  ],
+  "startPoints": [
+    {
+      "id": "ofuna",
+      "name": "大船駅側",
+      "badge": "迷ったらここ",
+      "destinationLat": 35.3557816,
+      "destinationLng": 139.5331765,
+      "routeAnchorLat": 35.352889,
+      "routeAnchorLng": 139.531718,
+      "accessText": "JR大船駅からGPX起点まで徒歩数分",
+      "facilitiesText": "駅周辺でトイレ・コンビニを利用しやすい",
+      "firstSection": "市街地から六国見山へ入り、序盤から高度を上げます。建長寺には約4.7kmで到着します。"
+    },
+    {
+      "id": "hase",
+      "name": "長谷駅側",
+      "badge": "江ノ電方面から",
+      "destinationLat": 35.3112793,
+      "destinationLng": 139.5358725,
+      "routeAnchorLat": 35.3112793,
+      "routeAnchorLng": 139.5358725,
+      "accessText": "江ノ電長谷駅からコース線まで約50m",
+      "facilitiesText": "駅周辺でトイレ・コンビニを利用しやすい",
+      "firstSection": "市街地から葛原岡方面へ進みます。建長寺は約11.8km先になるため、拝観終了時刻から逆算してください。"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "rokkokukenzan",
+      "name": "六国見山",
+      "anchorLat": 35.342594,
+      "anchorLng": 139.5481362,
+      "description": "大船の市街地を離れ、階段と樹林の上りへ。ロングトレイルに入った実感が出る最初の山場です。",
+      "surfaceLabel": "階段・土の道",
+      "caution": "住宅地との境目で分岐を確認",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rokkokuken_san_01.JPG?width=960",
+        "alt": "六国見山森林公園へ上る石段",
+        "caption": "六国見山へ入る階段。序盤から上りが続きます。",
+        "credit": "Kamakura",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rokkokuken_san_01.JPG"
+      }
+    },
+    {
+      "id": "hansobo",
+      "name": "建長寺・半僧坊",
+      "anchorLat": 35.3348193,
+      "anchorLng": 139.5589101,
+      "description": "境内の石段を上がり、半僧坊から天園の尾根へ接続します。ここはランニングコースではなく寺院の境内です。",
+      "surfaceLabel": "境内・長い石段",
+      "caution": "拝観時間・拝観料あり。境内は歩く",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hansobo_Shrine%2C_Kencho-ji%2C_Kamakura_-_Mar_11%2C_2017_%281%29.jpg?width=960",
+        "alt": "建長寺半僧坊の境内と天狗像",
+        "caption": "建長寺の半僧坊。境内を抜けて天園方面へ進みます。",
+        "credit": "redlegsfan21",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hansobo_Shrine,_Kencho-ji,_Kamakura_-_Mar_11,_2017_(1).jpg"
+      }
+    },
+    {
+      "id": "tenen",
+      "name": "大平山・天園",
+      "anchorLat": 35.3375319,
+      "anchorLng": 139.5723389,
+      "description": "コース最高部を含む尾根道。岩が露出した場所もあり、数値以上に脚を使う区間です。",
+      "surfaceLabel": "尾根の土道・岩",
+      "caution": "狭い場所では歩行者を優先",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tenen_Hiking_Trail_%40_Kamakura_%2813897675352%29.jpg?width=960",
+        "alt": "天園ハイキングコースの岩が露出した尾根道",
+        "caption": "天園ハイキングコース。岩が露出する開けた区間もあります。",
+        "credit": "Guilhem Vellut",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tenen_Hiking_Trail_@_Kamakura_(13897675352).jpg"
+      }
+    },
+    {
+      "id": "kinuhariyama",
+      "name": "衣張山",
+      "anchorLat": 35.3156089,
+      "anchorLng": 139.5668283,
+      "description": "東側の山を越えながら鎌倉の市街地と海を見渡せる区間。上り下りを繰り返します。",
+      "surfaceLabel": "土の道・急な上り下り",
+      "caution": "雨後は足元が滑りやすい",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kinuhariyama-Kamakura_2010-7-18.JPG?width=960",
+        "alt": "衣張山から鎌倉市街と海を望む景色",
+        "caption": "衣張山から見下ろす鎌倉市街と海。",
+        "credit": "Arashiyama",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kinuhariyama-Kamakura_2010-7-18.JPG"
+      }
+    },
+    {
+      "id": "nagoe",
+      "name": "名越切通",
+      "anchorLat": 35.3082339,
+      "anchorLng": 139.5640912,
+      "description": "岩壁に挟まれた古道を通過します。景観は印象的ですが、道幅が狭く追い越しには向きません。",
+      "surfaceLabel": "岩・土の細道",
+      "caution": "狭い区間は歩いて通過",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nagoe_Kiritoushi_from_Zushi_%28Kamakura%2C_Japan%29_Japanese_old_road_of_mountain.JPG?width=960",
+        "alt": "岩壁に挟まれた名越切通の古道",
+        "caption": "名越切通。岩壁の間を抜ける狭い古道です。",
+        "credit": "ootahara",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagoe_Kiritoushi_from_Zushi_(Kamakura,_Japan)_Japanese_old_road_of_mountain.JPG"
+      }
+    },
+    {
+      "id": "kuzuharaoka",
+      "name": "葛原岡",
+      "anchorLat": 35.3288091,
+      "anchorLng": 139.5428744,
+      "description": "長谷側から再び高度を上げて葛原岡へ。終盤に入ってからもトレイルの上りが残ります。",
+      "surfaceLabel": "舗装路・土の道",
+      "caution": "疲労した終盤の上りに備える",
+      "photo": {
+        "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kuzuharaoka_Shrine.jpg?width=960",
+        "alt": "葛原岡神社の鳥居と入口",
+        "caption": "葛原岡神社付近。ここから大船方面へ戻ります。",
+        "credit": "Akonnchiroll",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kuzuharaoka_Shrine.jpg"
+      }
+    }
+  ]
+}

@@ -1,11 +1,13 @@
 import type { CourseType, LineString } from "./types";
 
 export type GpxPoint = { lat: number; lng: number; ele: number | null };
+export type ElevationSample = { distanceM: number; elevationM: number };
 
 export type GpxResult = {
   geojson: LineString;
   distanceM: number;
   elevationGainM: number | null;
+  elevationProfile: ElevationSample[] | null;
   suggestedCourseType: Extract<CourseType, "loop" | "out_and_back">;
   startPoint: { lat: number; lng: number };
 };
@@ -59,11 +61,26 @@ function pointAtDistance(points: GpxPoint[], cumulative: number[], distance: num
   if (index >= points.length) return points[points.length - 1];
   const segmentLength = cumulative[index] - cumulative[index - 1];
   const ratio = segmentLength === 0 ? 0 : (clamped - cumulative[index - 1]) / segmentLength;
+  const beforeEle = points[index - 1].ele;
+  const afterEle = points[index].ele;
   return {
     lat: points[index - 1].lat + (points[index].lat - points[index - 1].lat) * ratio,
     lng: points[index - 1].lng + (points[index].lng - points[index - 1].lng) * ratio,
-    ele: null,
+    ele: beforeEle === null || afterEle === null
+      ? null
+      : beforeEle + (afterEle - beforeEle) * ratio,
   };
+}
+
+function buildElevationProfile(points: GpxPoint[], cumulative: number[]): ElevationSample[] | null {
+  if (points.some((point) => point.ele === null || !Number.isFinite(point.ele))) return null;
+  const total = cumulative[cumulative.length - 1];
+  const sampleCount = Math.min(181, Math.max(2, Math.ceil(total / 100) + 1));
+  return Array.from({ length: sampleCount }, (_, index) => {
+    const distance = (total * index) / (sampleCount - 1);
+    const point = pointAtDistance(points, cumulative, distance);
+    return { distanceM: Math.round(distance), elevationM: Math.round((point.ele as number) * 10) / 10 };
+  });
 }
 
 function isOutAndBack(points: GpxPoint[]) {
@@ -83,7 +100,9 @@ function isOutAndBack(points: GpxPoint[]) {
 export function gpxResultFromPoints(points: GpxPoint[]): GpxResult {
   if (points.length < 2) throw new Error("GPXファイルを解析できませんでした");
 
-  const distanceM = Math.round(points.slice(1).reduce((sum, point, index) => sum + haversine(points[index], point), 0));
+  const cumulative = [0];
+  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  const distanceM = Math.round(cumulative[cumulative.length - 1]);
   let tolerance = 0.00005;
   let simplified = simplify(points, tolerance);
   while (simplified.length > 2000) { tolerance *= 2; simplified = simplify(points, tolerance); }
@@ -92,6 +111,7 @@ export function gpxResultFromPoints(points: GpxPoint[]): GpxResult {
     geojson: { type: "LineString", coordinates: simplified.map((point) => [point.lng, point.lat]) },
     distanceM,
     elevationGainM: elevationGain(points),
+    elevationProfile: buildElevationProfile(points, cumulative),
     suggestedCourseType: closed && !isOutAndBack(points) ? "loop" : "out_and_back",
     startPoint: { lat: points[0].lat, lng: points[0].lng },
   };

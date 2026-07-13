@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { lineStringToGpx } from "@/lib/gpx-export";
+import { lineStringToGpx, pointsToGpx, rotateClosedLoopPoints } from "@/lib/gpx-export";
 
 describe("lineStringToGpx", () => {
   it("exports longitude and latitude in GPX order", () => {
@@ -15,5 +15,27 @@ describe("lineStringToGpx", () => {
 
   it("rejects an empty route", () => {
     expect(() => lineStringToGpx("empty", { type: "LineString", coordinates: [] })).toThrow();
+  });
+
+  it("rotates a closed loop without changing direction or dropping elevation", () => {
+    const points = [
+      { lat: 35, lng: 139, ele: 10 },
+      { lat: 35, lng: 139.01, ele: 20 },
+      { lat: 35.01, lng: 139.01, ele: 30 },
+      { lat: 35, lng: 139, ele: 10 },
+    ];
+    const rotated = rotateClosedLoopPoints(points, points[1]);
+    expect(rotated[0]).toEqual(points[1]);
+    expect(rotated.at(-1)).toEqual(points[1]);
+    expect(rotated[1]).toEqual(points[2]);
+    expect(pointsToGpx("loop", rotated)).toContain("<ele>20</ele>");
+  });
+
+  it("rejects start rotation for an open course", () => {
+    expect(() => rotateClosedLoopPoints([
+      { lat: 35, lng: 139, ele: null },
+      { lat: 35, lng: 139.01, ele: null },
+      { lat: 35.01, lng: 139.01, ele: null },
+    ], { lat: 35, lng: 139 })).toThrow("閉じた周回コース");
   });
 });

@@ -8,13 +8,14 @@ export function imageTransformUrl(src: string, width: number) {
   return `https://dokorun.com/cdn-cgi/image/format=auto,quality=78,width=${width}/${source}`;
 }
 
-export function SpotImage({ src, alt, width, height, sizes, priority = false, className }: {
+export function SpotImage({ src, alt, width, height, sizes, priority = false, unoptimized = false, className }: {
   src: string;
   alt: string;
   width: number;
   height: number;
   sizes?: string;
   priority?: boolean;
+  unoptimized?: boolean;
   className?: string;
 }) {
   const widths = candidateWidths.filter((candidate) => candidate <= width);
@@ -22,8 +23,8 @@ export function SpotImage({ src, alt, width, height, sizes, priority = false, cl
   const largestWidth = effectiveWidths.at(-1)!;
   return (
     <img
-      src={imageTransformUrl(src, largestWidth)}
-      srcSet={effectiveWidths.map((candidate) => `${imageTransformUrl(src, candidate)} ${candidate}w`).join(", ")}
+      src={unoptimized ? src : imageTransformUrl(src, largestWidth)}
+      srcSet={unoptimized ? undefined : effectiveWidths.map((candidate) => `${imageTransformUrl(src, candidate)} ${candidate}w`).join(", ")}
       alt={alt}
       width={width}
       height={height}
