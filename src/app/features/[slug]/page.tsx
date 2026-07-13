@@ -37,8 +37,12 @@ export default async function FeaturePage({ params }: { params: Params }) {
   if (!feature) notFound();
   const featureSpots = await getSpots(slug);
   if (!featureSpots.length) notFound();
-  // 北から南の都道府県順でグループ化し、エリアページへの内部リンクも兼ねる
-  const grouped = prefectures
+  // 朝ランは利用者の多い東京を先頭に、それ以外は北から南の都道府県順で表示する。
+  const orderedPrefectures = feature.slug === "morning-run"
+    ? ["東京都", ...prefectures.filter((prefecture) => prefecture !== "東京都")]
+    : prefectures;
+  // 都道府県でグループ化し、エリアページへの内部リンクも兼ねる
+  const grouped = orderedPrefectures
     .map((prefecture) => ({ prefecture, spots: featureSpots.filter((spot) => spot.prefecture === prefecture) }))
     .filter((group) => group.spots.length > 0);
   const otherFeatures = features.filter((item) => item.slug !== feature.slug);
