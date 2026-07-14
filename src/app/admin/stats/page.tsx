@@ -48,7 +48,7 @@ export default async function AdminStatsPage() {
   const externalTraffic = sql`coalesce(json_extract(${events.meta}, '$.internal'), 0) = 0`;
   // created_atはUNIXミリ秒なので、JSTオフセット(+9h)を足してから日付文字列にする
   const day = sql<string>`strftime('%Y-%m-%d', (${events.createdAt} + 32400000) / 1000, 'unixepoch')`;
-  const [daily, topViews, topHashiritai, visitorSummary, userSummary, recentUsers, runActivity, hashiritaiActivity, sessionActivity] = await Promise.all([
+  const [daily, topViews, topHashiritai, visitorSummary, userTotal, userRecent, recentUsers, runActivity, hashiritaiActivity, sessionActivity] = await Promise.all([
     db.select({ day, name: events.name, count: count() }).from(events)
       .where(and(gte(events.createdAt, since), externalTraffic)).groupBy(day, events.name),
     db.select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() }).from(events)
@@ -65,10 +65,8 @@ export default async function AdminStatsPage() {
       externalTraffic,
       inArray(events.name, ["spot_view", "search_results", "route_start", "gpx_download"]),
     )),
-    db.select({
-      total: count(),
-      recent: sql<number>`sum(case when ${users.createdAt} >= ${since.getTime()} then 1 else 0 end)`,
-    }).from(users),
+    db.select({ total: count() }).from(users),
+    db.select({ total: count() }).from(users).where(gte(users.createdAt, since)),
     db.select({
       id: users.id,
       name: users.name,
@@ -115,8 +113,8 @@ export default async function AdminStatsPage() {
         <Link href="/admin" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">スポット管理へ</Link>
       </div>
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">登録ユーザー</p><p className="mt-1 text-3xl font-black">{userSummary[0]?.total ?? 0}</p></div>
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">14日間の新規登録</p><p className="mt-1 text-3xl font-black">{userSummary[0]?.recent ?? 0}</p></div>
+        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">登録ユーザー</p><p className="mt-1 text-3xl font-black">{userTotal[0]?.total ?? 0}</p></div>
+        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">14日間の新規登録</p><p className="mt-1 text-3xl font-black">{userRecent[0]?.total ?? 0}</p></div>
         <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">ユニーク利用者</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.visitors ?? 0}</p></div>
         <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">セッション</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.sessions ?? 0}</p></div>
       </div>
