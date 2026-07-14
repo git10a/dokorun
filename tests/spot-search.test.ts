@@ -11,6 +11,10 @@ describe("spot search helpers", () => {
     expect(toSearchFilters({ pref: "東京都", lat: "999", lng: "139" })).toMatchObject({ pref: "東京都", lat: undefined, lng: undefined });
   });
 
+  it("maps the 30-minute homepage choice to a 3–5km search", () => {
+    expect(toSearchFilters({ dist: "3-5" })).toMatchObject({ distMin: 3000, distMax: 5000 });
+  });
+
   it("builds pagination links without losing active filters", () => {
     expect(searchParamsHref("/spots", { pref: "東京都", page: "1" }, { page: "3" })).toBe("/spots?pref=%E6%9D%B1%E4%BA%AC%E9%83%BD&page=3");
   });

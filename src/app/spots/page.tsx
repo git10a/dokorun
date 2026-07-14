@@ -47,7 +47,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <TrackView name="search_results" meta={{ total: result.total, page, hasQuery: Boolean(params.q), pref: params.pref, tags: params.tags, type: params.type, dist: params.dist, sort: params.sort }} />
-      <h1 className="mb-6 text-2xl font-bold sm:text-3xl">{params.popular === "1" ? "人気スポット" : "ランニングスポットをさがす"}</h1>
+      <h1 className="mb-6 text-2xl font-bold sm:text-3xl">{params.popular === "1" ? "定番・走りたいスポット" : "ランニングスポットをさがす"}</h1>
       <div className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(340px,2fr)]">
         <div className="min-w-0 space-y-6">
           <SearchFilters tags={allTags} params={params} />

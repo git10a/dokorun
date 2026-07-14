@@ -147,41 +147,30 @@ export async function getSearchTags() {
   ];
 }
 
-// ハシリタイが集まるまでの初期表示用リスト
-const popularSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
+// ホームで迷ったときの入口として固定表示する定番スポット
+const classicSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
 
-// トップページ用に人気/新着の行取得とphotos/tagsのバッチ取得をまとめて行う
+// トップページ用に定番/新着の行取得とphotos/tagsのバッチ取得をまとめて行う
 export async function getHomeSpots(newestLimit = 8) {
   const db = getDb();
-  const counted = await db.select({ spotId: hashiritai.spotId, likes: count() }).from(hashiritai)
-    .innerJoin(spots, eq(spots.id, hashiritai.spotId))
-    .where(eq(spots.isPublished, true))
-    .groupBy(hashiritai.spotId).orderBy(desc(count())).limit(5);
-  const likedIds = counted.map((row) => row.spotId);
-  const condition = likedIds.length
-    ? or(inArray(spots.id, likedIds), inArray(spots.slug, popularSpotSlugs))!
-    : inArray(spots.slug, popularSpotSlugs);
-  const [popularRows, newestRows] = await Promise.all([
+  const [classicRows, newestRows] = await Promise.all([
     db.select(summarySelection).from(spots)
       .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
-      .where(and(eq(spots.isPublished, true), condition)),
+      .where(and(eq(spots.isPublished, true), inArray(spots.slug, classicSpotSlugs))),
     db.select(summarySelection).from(spots)
       .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
       .where(eq(spots.isPublished, true)).orderBy(desc(spots.createdAt)).limit(newestLimit),
   ]);
-  const ids = [...new Set([...popularRows, ...newestRows].map((row) => row.id))];
+  const ids = [...new Set([...classicRows, ...newestRows].map((row) => row.id))];
   const [photoRows, tagRows] = await Promise.all([
     db.select({ spotId: photos.spotId, url: photos.url, sortOrder: photos.sortOrder }).from(photos).where(inArray(photos.spotId, ids)).orderBy(photos.sortOrder),
     db.select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name }).from(spotTags).innerJoin(tags, eq(spotTags.tagId, tags.id)).where(inArray(spotTags.spotId, ids)).orderBy(tags.sortOrder),
   ]);
-  // ハシリタイ数の多い順を優先し、残り枠を初期リスト順で埋める
-  const likeRank = new Map(likedIds.map((id, index) => [id, index]));
-  const curatedRank = new Map(popularSpotSlugs.map((slug, index) => [slug, index]));
-  const rank = (spot: { id: string; slug: string }) =>
-    likeRank.get(spot.id) ?? likeRank.size + (curatedRank.get(spot.slug) ?? popularSpotSlugs.length);
-  const popular = decorateRows(popularRows, photoRows, tagRows).sort((a, b) => rank(a) - rank(b)).slice(0, 5);
+  const classicRank = new Map(classicSpotSlugs.map((slug, index) => [slug, index]));
+  const classic = decorateRows(classicRows, photoRows, tagRows)
+    .sort((a, b) => (classicRank.get(a.slug) ?? classicSpotSlugs.length) - (classicRank.get(b.slug) ?? classicSpotSlugs.length));
   const newest = decorateRows(newestRows, photoRows, tagRows);
-  return { popular, newest };
+  return { classic, newest };
 }
 
 export async function getUserHashiritai(userId: string) {
@@ -295,7 +284,7 @@ function searchConditions(filters: SearchFilters) {
   if (filters.toilet) conditions.push(eq(spots.hasToilet, true));
   if (filters.locker) conditions.push(eq(spots.hasLocker, true));
   if (filters.sento) conditions.push(eq(spots.hasSentoNearby, true));
-  if (filters.popular) conditions.push(or(sql`${hashiritaiCountExpr} > 0`, inArray(spots.slug, popularSpotSlugs))!);
+  if (filters.popular) conditions.push(or(sql`${hashiritaiCountExpr} > 0`, inArray(spots.slug, classicSpotSlugs))!);
   if (realTagSlugs.length) {
     const selectedTags = inArray(tags.slug, realTagSlugs);
     conditions.push(sql`(
@@ -324,7 +313,7 @@ export async function searchSpots(filters: SearchFilters) {
   const [rows, totalRows] = await Promise.all([
     db.select(summarySelection).from(spots)
       .innerJoin(courses, eq(courses.spotId, spots.id))
-      .where(and(...conditions)).orderBy(order).limit(limit).offset((page - 1) * limit),
+      .where(and(...conditions)).orderBy(order, asc(spots.nameKana)).limit(limit).offset((page - 1) * limit),
     db.select({ count: count() }).from(spots).innerJoin(courses, eq(courses.spotId, spots.id)).where(and(...conditions)),
   ]);
   return { spots: await addRelations(rows), total: totalRows[0]?.count ?? 0 };

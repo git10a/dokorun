@@ -64,7 +64,7 @@ export function toSearchFilters(params: SpotSearchParams): SearchFilters {
 
 export function selectedFilterDescriptions(params: SpotSearchParams, tagNames: string[]) {
   const descriptions: string[] = [];
-  if (params.popular === "1") descriptions.push("一覧: 人気スポット");
+  if (params.popular === "1") descriptions.push("一覧: 定番・走りたいがあるスポット");
   if (params.q) descriptions.push(`キーワード: ${params.q}`);
   if (params.pref) descriptions.push(`都道府県: ${params.pref}`);
   if (tagNames.length) descriptions.push(`特徴: ${tagNames.join("、")}`);
