@@ -1,14 +1,17 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { getStampBook } from "@/db/data";
 import { requireUser } from "@/lib/user";
 import { SpotStamp } from "@/components/spot-stamp";
-import { STAMP_SLUGS, STAMP_TIERS, nextStampTier, stampTier } from "@/lib/stamps";
+import { STAMP_BOOK_ENABLED, STAMP_SLUGS, STAMP_TIERS, nextStampTier, stampTier } from "@/lib/stamps";
 
 export const dynamic = "force-dynamic";
 
 export const metadata = { title: "スタンプ帳 - どこラン" };
 
 export default async function MyStampsPage() {
+  if (!STAMP_BOOK_ENABLED) notFound();
+
   const user = await requireUser("/me/stamps");
   const rows = await getStampBook(user.id, STAMP_SLUGS);
   // STAMP_SLUGSの並び順(=知名度順)で表示する

@@ -7,7 +7,7 @@ import { ProfileEditPanel } from "@/components/auth/profile-edit-panel";
 import { SocialLinks } from "@/components/social-links";
 import { SpotCard } from "@/components/spot-card";
 import { SpotStamp } from "@/components/spot-stamp";
-import { STAMP_SLUGS, stampTier } from "@/lib/stamps";
+import { STAMP_BOOK_ENABLED, STAMP_SLUGS, stampTier } from "@/lib/stamps";
 import { avatarUrl } from "@/lib/avatars";
 import { jstMonth, jstYear } from "@/lib/jst";
 import { formatDuration, formatPace, PB_EVENTS } from "@/lib/pb";
@@ -79,7 +79,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
     getUserFavorites(user.id),
     getPublicRunsByUser(user.id, 10),
     // スタンプは非公開ランの回数も含むため本人にのみ表示する
-    isOwner ? getStampBook(user.id, STAMP_SLUGS) : Promise.resolve([]),
+    isOwner && STAMP_BOOK_ENABLED ? getStampBook(user.id, STAMP_SLUGS) : Promise.resolve([]),
   ]);
   const stamps = STAMP_SLUGS.map((slug) => stampRows.find((row) => row.slug === slug)).filter((row) => row != null);
   const image = avatarUrl(user);
@@ -123,7 +123,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           )}
         </div>
       </header>
-      {isOwner && (
+      {isOwner && STAMP_BOOK_ENABLED && (
         <section>
           <div className="mb-5 flex items-end justify-between gap-4">
             <h2 className="border-l-4 border-brand pl-3 text-xl font-bold">スタンプ帳</h2>
@@ -145,7 +145,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
         </section>
       )}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">おすすめ</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">おすすめはまだ登録されていません</p>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}{run.photoKey && <img src={runPhotoUrl(run.photoKey)} alt={`${run.spotName}を走ったときの写真`} className="mt-3 aspect-video w-full rounded-xl object-cover" />}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}{run.photoKey && <img src={runPhotoUrl(run.photoKey)} alt={`${run.spotName}を走ったときの写真`} className="mt-3 aspect-video w-48 max-w-full rounded-xl object-cover" />}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
     </div>
   );
 }

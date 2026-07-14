@@ -3,6 +3,9 @@
 // 色は CSS mask + background で塗る(scripts/make-stamp-mask.mjs で生成)。
 // 新しいスポットのスタンプを追加したら STAMP_SLUGS に slug を足す。
 
+// 一時停止中。再開時は true に戻す。
+export const STAMP_BOOK_ENABLED = false;
+
 export const STAMP_SLUGS = [
   "kokyo",
   "osakajo",
