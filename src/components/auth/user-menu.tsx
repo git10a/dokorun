@@ -25,7 +25,7 @@ export function UserMenu() {
   }, [session?.user]);
 
   if (isPending) return <span className="h-9 w-14 animate-pulse rounded-lg bg-cream" aria-hidden />;
-  if (!session?.user) return <Link href="/login" className="rounded-lg border border-line px-3 py-2 text-xs font-bold sm:text-sm">ログイン</Link>;
+  if (!session?.user) return <Link href="/login" className="rounded-lg border border-line px-3 py-2 text-xs font-bold sm:text-sm">会員登録</Link>;
   const image = avatarFailed ? session.user.image : `/avatar/${session.user.id}`;
 
   return (

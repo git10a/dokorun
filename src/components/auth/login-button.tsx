@@ -23,10 +23,9 @@ export function LoginButton({ callbackURL, configured }: { callbackURL: string; 
   return (
     <div>
       <button type="button" onClick={login} disabled={pending} className="w-full rounded-lg bg-brand px-5 py-3.5 font-bold disabled:opacity-60">
-        {pending ? "Googleへ移動中…" : "Googleでログイン"}
+        {pending ? "Googleへ移動中…" : "Googleで会員登録・ログイン"}
       </button>
       {message && <p role="alert" className="mt-3 text-sm font-bold text-danger">{message}</p>}
     </div>
   );
 }
-

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Download, ExternalLink, Flag, MapPin, Route } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
+import { MemberGpxLink } from "@/components/member-gpx-link";
 import { RaceCourseMap } from "@/components/map/race-course-map";
 import { SpotCard } from "@/components/spot-card";
 import { TrackView } from "@/components/track-view";
@@ -97,9 +98,9 @@ export default async function RacePage({ params }: { params: Params }) {
         <section className="mt-10">
           <h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">大会コース{courseMeta.source === "map" && "(参考)"}</h2>
           <RaceCourseMap slug={slug} name={race.name} />
-          <a href={`/race-gpx/${slug}.gpx`} download={`${slug}.gpx`} className="mt-4 inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-3 font-bold transition hover:bg-cream">
+          <MemberGpxLink href={`/race-gpx/${slug}.gpx`} callbackURL={`/races/${slug}`} fileName={`${slug}.gpx`} slug={slug} meta={{ source: "race" }} className="mt-4 inline-flex items-center gap-2 rounded-lg border border-line bg-paper px-5 py-3 font-bold transition hover:bg-cream">
             <Download size={18} /> 大会コースのGPXをダウンロード
-          </a>
+          </MemberGpxLink>
           <p className="mt-3 text-xs leading-5 text-sub">
             {courseMeta.source === "gps"
               ? `大会当日にこのコースを走ったランナーの実走GPSデータをもとに描いています(約${(courseMeta.distanceM / 1000).toFixed(1)}km)。`

@@ -1,13 +1,10 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import { Heart } from "lucide-react";
 import { track } from "@/lib/track";
 
 const CLIENT_ID_KEY = "dokorun:client-id";
-const likedKey = (slug: string) => `dokorun:hashiritai:${slug}`;
-const emptySubscribe = () => () => {};
-
 function getClientId() {
   let id = localStorage.getItem(CLIENT_ID_KEY);
   if (!id) {
@@ -21,18 +18,14 @@ export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, 
   const [count, setCount] = useState(initialCount);
   const [override, setOverride] = useState<boolean | null>(null);
   const [pending, setPending] = useState(false);
-  // SSR時は未タップ扱い、クライアントではlocalStorageの記録を初期値にする
-  const stored = useSyncExternalStore(emptySubscribe, () => {
-    try {
-      return localStorage.getItem(likedKey(slug)) === "1";
-    } catch {
-      return false;
-    }
-  }, () => false);
-  const liked = override ?? (loggedIn ? initialLiked : stored);
+  const liked = override ?? initialLiked;
 
   const toggle = async () => {
     if (pending) return;
+    if (!loggedIn) {
+      window.location.href = `/login?callbackURL=${encodeURIComponent(`/spots/${slug}`)}`;
+      return;
+    }
     const next = !liked;
     setPending(true);
     setOverride(next);
@@ -47,7 +40,6 @@ export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, 
       if (!response.ok) throw new Error("request failed");
       const data = (await response.json()) as { count: number };
       setCount(data.count);
-      localStorage.setItem(likedKey(slug), next ? "1" : "0");
     } catch {
       setOverride(!next);
       setCount((value) => Math.max(0, value + (next ? -1 : 1)));
@@ -57,7 +49,7 @@ export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, 
   };
 
   return (
-    <button type="button" onClick={toggle} disabled={pending} aria-pressed={liked} className={`flex items-center gap-2 rounded-lg border-2 border-brand px-4 py-2.5 font-bold transition-colors ${liked ? "bg-brand" : "bg-paper"} disabled:opacity-70`}>
+    <button type="button" onClick={toggle} disabled={pending} aria-pressed={liked} title={loggedIn ? undefined : "会員登録・ログインすると保存できます"} className={`flex items-center gap-2 rounded-lg border-2 border-brand px-4 py-2.5 font-bold transition-colors ${liked ? "bg-brand" : "bg-paper"} disabled:opacity-70`}>
       <Heart size={18} fill={liked ? "currentColor" : "none"} />走りたい {count}
     </button>
   );
