@@ -47,6 +47,16 @@ describe("course guides", () => {
     expect(photoSources.some((source) => /Momoyamadai|station|駅/i.test(source))).toBe(false);
   });
 
+  it("uses actual Yoyogi Park photos for the trail guide hero and early section", async () => {
+    const guide = await getCourseGuide("yoyogi-park-trail");
+    const hero = guide?.checkpoints.find((checkpoint) => checkpoint.id === guide.heroCheckpointId);
+    const early = guide?.checkpoints.find((checkpoint) => checkpoint.id === "section-2");
+
+    expect(decodeURIComponent(hero?.photo?.sourceUrl ?? "")).toContain("代々木公園_Yoyogi_Park");
+    expect(early?.photo?.sourceUrl).toContain("Yoyogi_Park3");
+    expect(`${hero?.description} ${early?.description} ${hero?.photo?.sourceUrl} ${early?.photo?.sourceUrl}`).not.toMatch(/toilet|Puesto de comida|東京パークス/i);
+  });
+
   it("does not broadly remove otherwise usable course photos", async () => {
     const slugs = readdirSync("public/course-guides").filter((name) => name.endsWith(".json")).map((name) => name.replace(/\.json$/, ""));
     let photoCount = 0;
