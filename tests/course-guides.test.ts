@@ -47,6 +47,20 @@ describe("course guides", () => {
     expect(photoSources.some((source) => /Momoyamadai|station|駅/i.test(source))).toBe(false);
   });
 
+  it("does not broadly remove otherwise usable course photos", async () => {
+    const slugs = readdirSync("public/course-guides").filter((name) => name.endsWith(".json")).map((name) => name.replace(/\.json$/, ""));
+    let photoCount = 0;
+    let guidesWithPhotos = 0;
+    for (const slug of slugs) {
+      const guide = await getCourseGuide(slug);
+      const count = guide?.checkpoints.filter((checkpoint) => checkpoint.photo).length ?? 0;
+      photoCount += count;
+      if (count > 0) guidesWithPhotos += 1;
+    }
+    expect(photoCount).toBeGreaterThan(900);
+    expect(guidesWithPhotos).toBeGreaterThan(220);
+  });
+
   it.each(guideSlugs)("registers generated guide data for %s", async (slug) => {
     const guide = await getCourseGuide(slug);
     expect(guide?.heroCheckpointId).toBeTruthy();
