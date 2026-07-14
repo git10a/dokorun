@@ -9,6 +9,7 @@ const eventLabels: Record<string, string> = {
   spot_view: "詳細閲覧",
   search: "検索実行",
   search_results: "検索結果表示",
+  search_fallback: "0件時の近隣候補表示",
   hashiritai: "走りたい",
   share: "シェア",
   directions: "行き方クリック",
@@ -48,7 +49,7 @@ export default async function AdminStatsPage() {
   const externalTraffic = sql`coalesce(json_extract(${events.meta}, '$.internal'), 0) = 0`;
   // created_atはUNIXミリ秒なので、JSTオフセット(+9h)を足してから日付文字列にする
   const day = sql<string>`strftime('%Y-%m-%d', (${events.createdAt} + 32400000) / 1000, 'unixepoch')`;
-  const [daily, topViews, topHashiritai, visitorSummary, userTotal, userRecent, recentUsers, runActivity, hashiritaiActivity, sessionActivity] = await Promise.all([
+  const [daily, topViews, topHashiritai, visitorSummary, userTotal, userRecent, recentUsers, runActivity, hashiritaiActivity, sessionActivity, searchFallbacks] = await Promise.all([
     db.select({ day, name: events.name, count: count() }).from(events)
       .where(and(gte(events.createdAt, since), externalTraffic)).groupBy(day, events.name),
     db.select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() }).from(events)
@@ -88,6 +89,13 @@ export default async function AdminStatsPage() {
       userId: sessions.userId,
       latestAt: sql<number>`max(${sessions.updatedAt})`,
     }).from(sessions).groupBy(sessions.userId),
+    db.select({
+      area: sql<string>`coalesce(json_extract(${events.meta}, '$.fallbackArea'), '不明')`,
+      tags: sql<string | null>`json_extract(${events.meta}, '$.tags')`,
+      count: count(),
+    }).from(events).where(and(eq(events.name, "search_fallback"), gte(events.createdAt, since), externalTraffic))
+      .groupBy(sql`json_extract(${events.meta}, '$.fallbackArea')`, sql`json_extract(${events.meta}, '$.tags')`)
+      .orderBy(desc(count())).limit(10),
   ]);
   const runByUser = new Map(runActivity.map((row) => [row.userId, row]));
   const hashiritaiByUser = new Map(hashiritaiActivity.map((row) => [row.userId, row]));
@@ -147,6 +155,11 @@ export default async function AdminStatsPage() {
             </table>
           </div>
         ) : <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだイベントがありません</p>}
+      </section>
+      <section className="mt-8">
+        <h2 className="mb-1 text-xl font-bold">コースを増やしたいエリア</h2>
+        <p className="mb-4 text-xs leading-6 text-sub">現在地検索が0件になり、近隣候補へ切り替わった検索です。エリアはユーザー座標ではなく、最寄り候補の所在地です。</p>
+        {searchFallbacks.length ? <ol className="space-y-2 text-sm">{searchFallbacks.map((row) => <li key={`${row.area}:${row.tags ?? ""}`} className="flex items-center justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-3"><div><p className="font-bold">{row.area}</p><p className="mt-1 text-xs text-sub">条件: {row.tags || "指定なし"}</p></div><span className="font-bold tabular-nums">{row.count}回</span></li>)}</ol> : <p className="rounded-xl border border-line bg-cream p-8 text-center text-sub">まだ0件検索はありません</p>}
       </section>
       <div className="mt-10 grid gap-8 sm:grid-cols-2">
         <section>
