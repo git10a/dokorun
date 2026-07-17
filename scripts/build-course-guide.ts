@@ -4,6 +4,7 @@ import { gpxResultFromPoints, haversine } from "../src/lib/gpx";
 import { parseGpxPoints } from "../src/lib/gpx-node";
 import { shiftRouteDistance } from "../src/lib/course-guide-profile";
 import { pointsToGpx, reversePoints, rotateClosedLoopPoints } from "../src/lib/gpx-export";
+import { stripPrepublishSentences } from "../src/lib/public-description";
 
 type SourcePoint = { id: string; name: string; anchorLat: number; anchorLng: number };
 type SourceStart = { id: string; name: string; routeAnchorLat: number; routeAnchorLng: number; routeMode?: "loop" | "forward" | "reverse" };
@@ -69,7 +70,7 @@ function buildGuide(slug: string) {
     return { ...start, routeMode, ...snapped, checkpointDistances, gpxHref };
   });
 
-  const generated = { ...source, distanceM: result.distanceM, elevationGainM: result.elevationGainM, elevationProfile: result.elevationProfile, startPoints, checkpoints };
+  const generated = { ...source, intro: stripPrepublishSentences(source.intro), distanceM: result.distanceM, elevationGainM: result.elevationGainM, elevationProfile: result.elevationProfile, startPoints, checkpoints };
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, `${JSON.stringify(generated, null, 2)}\n`);
   console.log(JSON.stringify({ slug: source.slug, distanceKm: Number((result.distanceM / 1000).toFixed(2)), elevationGainM: result.elevationGainM, elevationSamples: result.elevationProfile.length, starts: startPoints.map(({ id, routeDistanceM, snapGapM, gpxHref }) => ({ id, routeDistanceM, snapGapM, gpxHref })), checkpoints: checkpoints.map(({ id, routeDistanceM, snapGapM }) => ({ id, routeDistanceM, snapGapM })) }, null, 2));

@@ -2,6 +2,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { haversine } from "../src/lib/gpx";
 import { parseGpxPoints } from "../src/lib/gpx-node";
+import { stripPrepublishSentences } from "../src/lib/public-description";
 
 type CoverageEntry = {
   slug: string;
@@ -118,7 +119,7 @@ for (const entry of coverage.entries) {
     slug: entry.slug,
     heroCheckpointId: hero.id,
     checkpointsTitle: "コースの雰囲気",
-    intro: entry.description,
+    intro: stripPrepublishSentences(entry.description),
     warnings: [
       {
         title: natureCourse ? "天候と現地の通行情報を確認してください" : "一般利用者と交通ルールを優先してください",

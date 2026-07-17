@@ -19,7 +19,7 @@ export type PublicSpotRun = {
 
 const runDateFormat = new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeZone: "Asia/Tokyo" });
 
-export function SpotRunFeed({ slug, spotName, initialRuns, totalCount }: { slug: string; spotName: string; initialRuns: PublicSpotRun[]; totalCount: number }) {
+export function SpotRunFeed({ slug, spotName, initialRuns, totalCount, tabbed = false }: { slug: string; spotName: string; initialRuns: PublicSpotRun[]; totalCount: number; tabbed?: boolean }) {
   const [runs, setRuns] = useState(initialRuns);
   const showAll = new URLSearchParams(useLocationSearch()).get("logs") === "all";
 
@@ -52,6 +52,6 @@ export function SpotRunFeed({ slug, spotName, initialRuns, totalCount }: { slug:
       </article>
     ))}</div>
     {!runs.length && <p className="mt-6 text-sub">まだランログはありません。最初の記録を残してみませんか 🏃</p>}
-    {!showAll && totalCount > 10 && <Link href={`/spots/${slug}?logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}
+    {!showAll && totalCount > 10 && <Link href={`/spots/${slug}?${tabbed ? "tab=logs&" : ""}logs=all#dokolog`} className="mt-5 inline-block font-bold text-accent">もっと見る</Link>}
   </>;
 }

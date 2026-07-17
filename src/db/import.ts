@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { inArray } from "drizzle-orm";
 import { config } from "dotenv";
 import { z } from "zod";
+import { stripPrepublishSentences } from "@/lib/public-description";
 import { getDb } from ".";
 import { courses, spots, spotTags, tags } from "./schema";
 import { prefectures } from "@/lib/prefectures";
@@ -127,7 +128,7 @@ async function run() {
     await db.transaction(async (tx) => {
       const [spot] = await tx.insert(spots).values({
         slug: entry.slug, name: entry.name, nameKana: entry.nameKana, prefecture: entry.prefecture, city: entry.city,
-        lat: entry.lat, lng: entry.lng, description: entry.description, access: entry.access ?? null,
+        lat: entry.lat, lng: entry.lng, description: stripPrepublishSentences(entry.description), access: entry.access ?? null,
         nightLighting: entry.nightLighting ?? null, trackUsage: entry.trackUsage ?? null, ...entry.facilities,
       }).returning({ id: spots.id });
       await tx.insert(courses).values({
