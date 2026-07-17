@@ -4,6 +4,7 @@ import { getPrefectureCounts, getSitemapSpots } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { features } from "@/lib/features";
 import { races } from "@/lib/races";
+import { getStationLines, getStations } from "@/lib/stations";
 
 // クローラーアクセスのたびのD1クエリを1日1回に抑える。新スポットの反映は最大1日遅れる
 export const revalidate = 86400;
@@ -16,6 +17,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: baseUrl, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/spots`, lastModified: contentUpdatedAt, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/areas`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/stations`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/stations/lines`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/features`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/races`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/guide/gpx`, lastModified: contentUpdatedAt, changeFrequency: "monthly", priority: 0.6 },
@@ -47,5 +50,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
     priority: 0.8,
   }));
-  return [...fixedPages, ...areaPages, ...featurePages, ...racePages, ...spotPages];
+  const stationPages: MetadataRoute.Sitemap = getStations().map((station) => ({
+    url: `${baseUrl}/stations/${station.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+  const stationLinePages: MetadataRoute.Sitemap = getStationLines().map((line) => ({
+    url: `${baseUrl}/stations/lines/${line.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+  return [...fixedPages, ...areaPages, ...featurePages, ...racePages, ...stationPages, ...stationLinePages, ...spotPages];
 }

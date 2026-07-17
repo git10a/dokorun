@@ -33,7 +33,8 @@
     "course-guide:generate": "tsx scripts/generate-course-guide-sources.ts",
     "course-guide:photos": "tsx scripts/supplement-course-guide-photos.ts",
     "race-gpx:apply": "tsx scripts/apply-race-gpx.ts",
-    "validate:spots": "tsx scripts/validate-spots.ts"
+    "validate:spots": "tsx scripts/validate-spots.ts",
+    "station-data:build": "node scripts/build-station-data.mjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.1",
@@ -58,6 +59,9 @@
     "eslint": "^9.39.2",
     "eslint-config-next": "16.2.10",
     "fast-xml-parser": "^5.9.3",
+    "hepburn": "^1.3.0",
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
     "postgres": "^3.4.9",
     "puppeteer-core": "^24.43.1",
     "tailwindcss": "^4.3.2",
