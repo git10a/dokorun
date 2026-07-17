@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, MapPin, TrainFront } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { getHomeSpots, getPrefectureCounts, getSearchTags } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { features } from "@/lib/features";
@@ -28,12 +28,7 @@ export default async function HomePage() {
     <>
       <section className="relative overflow-hidden bg-brand px-4 pb-10 pt-14 text-center sm:pb-12 sm:pt-20">
         <div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black tracking-tight sm:text-6xl">{siteConfig.question}</h1><p className="mt-4 text-sm font-medium sm:text-lg"><span className="inline-block">旅先でも、出張先でも、大会遠征でも。</span><span className="inline-block">知らない土地で走れるコースが地図つきで見つかる</span></p><p className="mt-3 inline-flex items-baseline gap-1 rounded-full bg-paper/85 px-4 py-1.5 text-xs font-bold shadow-sm sm:text-sm">全国<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{totalSpots}</span>スポット・<span className="mx-0.5 text-lg font-black text-brand-dark sm:text-xl">{countMap.size}</span>都道府県を掲載中</p></div>
-        <HeroSearch tags={tags} prefectureCounts={counts} />
-        <Link href="/stations/lines" className="mx-auto mt-4 flex w-fit items-center gap-2 rounded-lg border border-ink/10 bg-paper px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:text-base">
-          <TrainFront size={20} aria-hidden="true" />
-          駅・路線からさがす
-          <ArrowRight size={18} aria-hidden="true" />
-        </Link>
+        <HeroSearch tags={tags} />
       </section>
       <section className="mx-auto max-w-7xl px-4 pt-12 md:px-6">
         <div className="mb-6 space-y-2 sm:mb-8">

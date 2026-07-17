@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { ArrowRight, Route, Search, TrainFront } from "lucide-react";
 import { useRef, useState } from "react";
 import { TagChip } from "@/components/tag-chip";
-import { regionGroups } from "@/lib/prefectures";
 import { SearchInputClearButton } from "@/components/search-input-clear-button";
 
-type Tab = "keyword" | "pref" | "feature";
+type Tab = "keyword" | "station" | "feature";
 type TagCategory = "terrain" | "environment" | "scenery";
 
 type HeroSearchProps = {
@@ -17,15 +16,11 @@ type HeroSearchProps = {
     name: string;
     category: TagCategory;
   }>;
-  prefectureCounts: Array<{
-    prefecture: string;
-    count: number;
-  }>;
 };
 
 const tabs: Array<{ id: Tab; shortLabel: string; label: string }> = [
   { id: "keyword", shortLabel: "キーワード", label: "キーワードからさがす" },
-  { id: "pref", shortLabel: "都道府県", label: "都道府県からさがす" },
+  { id: "station", shortLabel: "駅・路線", label: "駅・路線からさがす" },
   { id: "feature", shortLabel: "特徴", label: "特徴からさがす" },
 ];
 
@@ -45,12 +40,11 @@ const extraFilters = [
 
 const chipClassName = "inline-flex items-center rounded-full bg-cream px-3 py-1.5 text-sm font-medium transition-colors hover:bg-brand/45";
 
-export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
+export function HeroSearch({ tags }: HeroSearchProps) {
   const [activeTab, setActiveTab] = useState<Tab>("keyword");
   // キャラの向き: 素材は左向きなので右向きは-scale-x-100。初期は2人とも右向き
   const [facing, setFacing] = useState<"left" | "right">("right");
   const prevTabIndexRef = useRef(0);
-  const countMap = new Map(prefectureCounts.map((item) => [item.prefecture, item.count]));
   const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
   const facingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -135,28 +129,29 @@ export function HeroSearch({ tags, prefectureCounts }: HeroSearchProps) {
         </div>
 
         <div
-          id="hero-search-panel-pref"
+          id="hero-search-panel-station"
           role="tabpanel"
-          aria-labelledby="hero-search-tab-pref"
-          hidden={activeTab !== "pref"}
-          className="space-y-4"
+          aria-labelledby="hero-search-tab-station"
+          hidden={activeTab !== "station"}
         >
-          {regionGroups.map((region) => {
-            const availablePrefectures = region.prefectures.filter((prefecture) => countMap.has(prefecture));
-            if (!availablePrefectures.length) return null;
-            return (
-              <section key={region.name} aria-labelledby={`hero-search-region-${region.name}`}>
-                <h2 id={`hero-search-region-${region.name}`} className="mb-1.5 text-xs font-bold text-sub">{region.name}</h2>
-                <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-                  {availablePrefectures.map((prefecture) => (
-                    <Link key={prefecture} href={`/spots?pref=${encodeURIComponent(prefecture)}`} className="font-medium text-accent hover:underline">
-                      {prefecture} ({countMap.get(prefecture)})
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Link href="/stations" className="group flex items-center gap-3 rounded-xl border border-line bg-cream p-4 transition-colors hover:border-ink/30 hover:bg-brand/20">
+              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-paper"><TrainFront size={21} aria-hidden="true" /></span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-bold">駅名からさがす</span>
+                <span className="mt-0.5 block text-xs text-sub">駅の近くで走れる場所を見る</span>
+              </span>
+              <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+            <Link href="/stations/lines" className="group flex items-center gap-3 rounded-xl border border-line bg-cream p-4 transition-colors hover:border-ink/30 hover:bg-brand/20">
+              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-paper"><Route size={21} aria-hidden="true" /></span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-bold">路線からさがす</span>
+                <span className="mt-0.5 block text-xs text-sub">路線沿いのスポットを順番に見る</span>
+              </span>
+              <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
 
         <div
