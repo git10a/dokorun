@@ -73,6 +73,8 @@
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
     "BETTER_AUTH_URL": "https://dokorun.com",
+    // OpenNextの再検証Queueを1つのDOへ集約し、無料枠のdurationを超えないようにする。
+    "MAX_REVALIDATE_CONCURRENCY": "1",
     // Cloudflare Turnstileの公開sitekey。秘密鍵はTURNSTILE_SECRET_KEYとしてsecretに保存する
     "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD1UPCOAcXoQltIT",
     // Google OAuthのクライアントID(公開値。SECRETはwrangler secretで管理)
