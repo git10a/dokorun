@@ -532,6 +532,24 @@ export async function getProfileUser(handle: string) {
   return rows[0] ?? null;
 }
 
+// プロフィール編集ページ用: セッションのuserIdから自分のプロフィールを引く
+export async function getProfileUserById(userId: string) {
+  const rows = await getDb().select({
+    id: users.id,
+    name: users.name,
+    handle: users.handle,
+    bio: users.bio,
+    image: users.image,
+    customAvatarAt: users.customAvatarAt,
+    instagram: users.instagram,
+    xHandle: users.xHandle,
+    strava: users.strava,
+    runningSinceYear: users.runningSinceYear,
+    runningSinceMonth: users.runningSinceMonth,
+  }).from(users).where(eq(users.id, userId)).limit(1);
+  return rows[0] ?? null;
+}
+
 export async function getUserPbs(userId: string) {
   return getDb().select({ event: userPbs.event, timeS: userPbs.timeS, competitionName: userPbs.competitionName }).from(userPbs)
     .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);

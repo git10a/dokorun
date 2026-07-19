@@ -2,7 +2,6 @@
 
 import { and, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { favoriteSpots, spots, userAvatars, userPbs, users } from "@/db/schema";
@@ -65,10 +64,7 @@ export async function updateProfile(_: ProfileState, formData: FormData): Promis
   }
   revalidatePath("/me");
   revalidatePath(`/u/${user.handle}`);
-  if (parsed.data.handle !== user.handle) {
-    revalidatePath(`/u/${parsed.data.handle}`);
-    redirect(`/u/${parsed.data.handle}`);
-  }
+  if (parsed.data.handle !== user.handle) revalidatePath(`/u/${parsed.data.handle}`);
   return { status: "saved", message: "プロフィールを保存しました" };
 }
 
