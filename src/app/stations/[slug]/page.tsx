@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { SpotCard } from "@/components/spot-card";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
+import { groupByMap } from "@/lib/collections";
 import { getSiteUrl } from "@/lib/site";
 import { getStation, getStations, stationJogMinutes } from "@/lib/stations";
 
@@ -45,8 +46,8 @@ export default async function StationPage({ params }: { params: Params }) {
   const data = await getPageData(slug);
   if (!data) notFound();
   const { station, spots } = data;
-  const oneStationGroups = Map.groupBy(station.oneStationSpots, (spot) => `${spot.stationCount}:${spot.lineName}:${spot.destinationStationName}`);
-  const adjacentGroups = Map.groupBy(station.adjacentStations, (item) => item.lineName);
+  const oneStationGroups = groupByMap(station.oneStationSpots, (spot) => `${spot.stationCount}:${spot.lineName}:${spot.destinationStationName}`);
+  const adjacentGroups = groupByMap(station.adjacentStations, (item) => item.lineName);
   const baseUrl = getSiteUrl();
   const areaPath = `/areas/${prefectureSlug(station.prefecture)}`;
   const breadcrumbData = {

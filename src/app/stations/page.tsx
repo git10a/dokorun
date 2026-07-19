@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { prefectureSlug } from "@/lib/areas";
+import { groupByMap } from "@/lib/collections";
 import { getStations } from "@/lib/stations";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function StationsPage() {
-  const groups = Map.groupBy(getStations(), (station) => station.prefecture);
+  const groups = groupByMap(getStations(), (station) => station.prefecture);
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
       <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 駅から探す</nav>

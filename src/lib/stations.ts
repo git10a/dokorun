@@ -74,6 +74,23 @@ export function getStationLine(slug: string) {
   return getStationLines().find((line) => line.slug === slug) ?? null;
 }
 
+// 「近くの路線」用の軽量インデックス。路線ごとにページのある駅の座標を等間隔に最大4点
+// サンプルする(小数2桁≒1km精度で十分、gzip後は数KB)。座標つき駅がない路線は対象外
+export function getNearbyLineIndex() {
+  const stationBySlug = new Map(getStations().map((station) => [station.slug, station]));
+  return getStationLines().flatMap((line) => {
+    const coords = line.stations
+      .map((station) => (station.pageSlug ? stationBySlug.get(station.pageSlug) : null))
+      .filter((station) => station != null)
+      .map((station) => [Number(station.lat.toFixed(2)), Number(station.lng.toFixed(2))] as [number, number]);
+    if (!coords.length) return [];
+    const sampleCount = Math.min(4, coords.length);
+    const points = Array.from({ length: sampleCount }, (_, index) =>
+      coords[Math.floor((index * (coords.length - 1)) / Math.max(1, sampleCount - 1))]);
+    return [{ slug: line.slug, name: line.name, stationCount: line.stations.length, points }];
+  });
+}
+
 export function stationJogMinutes(distanceM: number) {
   return Math.round((distanceM / 1000) * 6);
 }
