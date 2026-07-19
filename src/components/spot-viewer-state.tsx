@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { CheckInButton } from "@/components/checkin-button";
 import { FavoriteButton } from "@/components/favorite-button";
 import { HashiritaiButton } from "@/components/hashiritai-button";
@@ -60,6 +59,5 @@ export function SpotCheckInActions({ spotId, slug }: { spotId: string; slug: str
     {state
       ? <CheckInButton spotId={spotId} spotSlug={slug} loggedIn={state.loggedIn} todayRunId={state.todayRunId} />
       : <div className="h-10 w-28 animate-pulse rounded-lg bg-paper" aria-label="ユーザー情報を確認中" />}
-    <Link href={`/spots/${slug}/log/new`} className="rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold">ひとことつきで投稿</Link>
   </div>;
 }

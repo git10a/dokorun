@@ -27,7 +27,7 @@ export default async function MyStampsPage() {
         <Link href="/me" className="text-sm font-bold text-accent">マイページへ</Link>
       </div>
       <p className="mt-3 text-sm text-sub">
-        スポットで「走ったよ 🏃」を記録するとスタンプがもらえます。同じスポットを走り込むとインクの色が育ちます(
+        スポットで「この辺走ったよ 🏃」を記録するとスタンプがもらえます。同じスポットを走り込むとインクの色が育ちます(
         {STAMP_TIERS.map((tier) => `${tier.minRuns}回で${tier.label}色`).join("、")})。
       </p>
       <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm font-bold">集めたスタンプ: {collected} / {items.length}</p>

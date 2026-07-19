@@ -16,7 +16,10 @@ export function SpotDetailTabs({ tabs, activeTab, className }: { tabs: SpotDetai
   const queryTab = useSearchParams().get("tab") ?? "course";
 
   useEffect(() => {
-    scrollToTop();
+    // 「走ったよ」CTAなどアンカー付き遷移はタブ切替後にアンカー位置まで送る
+    const anchor = window.location.hash ? document.getElementById(window.location.hash.slice(1)) : null;
+    if (anchor) anchor.scrollIntoView({ behavior: "instant", block: "start" });
+    else scrollToTop();
   }, [pathname, queryTab]);
 
   return <nav aria-label="スポット詳細" className={className}>

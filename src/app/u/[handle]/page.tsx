@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProfileUser, getPublicRunsByUser, getStampBook, getUserFavorites, getUserPbs } from "@/db/data";
-import { ProfileEditPanel } from "@/components/auth/profile-edit-panel";
 import { SocialLinks } from "@/components/social-links";
 import { SpotCard } from "@/components/spot-card";
 import { SpotStamp } from "@/components/spot-stamp";
@@ -106,20 +105,7 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           </div>
           <PbSummary pbs={pbs} />
           {isOwner && (
-            <ProfileEditPanel
-              avatarUser={{ id: user.id, image: user.image, customAvatarAt: user.customAvatarAt }}
-              profileUser={{
-                name: user.name,
-                handle: user.handle,
-                bio: user.bio,
-                instagram: user.instagram,
-                xHandle: user.xHandle,
-                strava: user.strava,
-                runningSinceYear: user.runningSinceYear,
-                runningSinceMonth: user.runningSinceMonth,
-              }}
-              pbs={pbs}
-            />
+            <Link href="/me/profile" className="mt-4 inline-flex rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream">プロフィールを編集</Link>
           )}
         </div>
       </header>
@@ -141,11 +127,11 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
               );
             })}
           </div>
-          <p className="mt-3 text-sm text-sub">スポットで「走ったよ 🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)</p>
+          <p className="mt-3 text-sm text-sub">スポットで「この辺走ったよ 🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)</p>
         </section>
       )}
       <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">おすすめ</h2>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">おすすめはまだ登録されていません</p>}</section>
-      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}{run.photoKey && <img src={runPhotoUrl(run.photoKey)} alt={`${run.spotName}を走ったときの写真`} className="mt-3 aspect-video w-48 max-w-full rounded-xl object-cover" />}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
+      <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">公開ログ</h2><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">この辺走ったよ 🏃</p>}{run.photoKey && <img src={runPhotoUrl(run.photoKey)} alt={`${run.spotName}を走ったときの写真`} className="mt-3 aspect-video w-48 max-w-full rounded-xl object-cover" />}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
     </div>
   );
 }

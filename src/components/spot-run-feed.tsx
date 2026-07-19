@@ -47,7 +47,7 @@ export function SpotRunFeed({ slug, spotName, initialRuns, totalCount, tabbed = 
           </div>
           {run.canEdit && <div className="flex gap-3 text-sm font-bold"><Link href={`/me/logs/${run.id}/edit?returnTo=spot`} className="text-accent">編集</Link><DeleteRunForm id={run.id} returnTo="spot" /></div>}
         </div>
-        {run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">走ったよ 🏃</p>}
+        {run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">この辺走ったよ 🏃</p>}
         {run.photoUrl && <img src={run.photoUrl} alt={`${spotName}を走ったときの写真`} className="mt-3 aspect-video w-full rounded-xl object-cover" />}
       </article>
     ))}</div>

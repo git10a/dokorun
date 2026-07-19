@@ -24,13 +24,13 @@ export function CheckInButton({ spotId, spotSlug, loggedIn, todayRunId }: CheckI
     );
   }
   if (!loggedIn) {
-    return <Link href={`/login?callbackURL=${encodeURIComponent(`/spots/${spotSlug}#dokolog`)}`} className={buttonClass}>走ったよ 🏃</Link>;
+    return <Link href={`/login?callbackURL=${encodeURIComponent(`/spots/${spotSlug}?tab=logs#dokolog`)}`} className={buttonClass}>この辺走ったよ 🏃</Link>;
   }
   return (
     <form action={formAction} className="space-y-2">
       <input type="hidden" name="spotId" value={spotId} />
       <input type="hidden" name="spotSlug" value={spotSlug} />
-      <button disabled={pending} className={buttonClass}>{pending ? "記録中…" : "走ったよ 🏃"}</button>
+      <button disabled={pending} className={buttonClass}>{pending ? "記録中…" : "この辺走ったよ 🏃"}</button>
       {state.message && <p role="alert" className="text-xs font-bold text-danger">{state.message}</p>}
     </form>
   );

@@ -74,7 +74,7 @@ function runValues(data: z.infer<typeof runSchema>) {
 
 export async function checkInRun(_: CheckInState, formData: FormData): Promise<CheckInState> {
   const spotSlug = String(formData.get("spotSlug") ?? "");
-  const user = await requireUser(`/spots/${spotSlug}#dokolog`);
+  const user = await requireUser(`/spots/${spotSlug}?tab=logs#dokolog`);
   const parsed = checkInSchema.safeParse(Object.fromEntries(formData.entries()));
   if (!parsed.success) return { message: "スポットが見つかりません" };
   const db = getDb();
@@ -102,7 +102,7 @@ export async function checkInRun(_: CheckInState, formData: FormData): Promise<C
     updatedAt: new Date(),
   }).returning({ id: runs.id });
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
-  redirect(`/spots/${parsed.data.spotSlug}?posted=checkin&run=${inserted[0].id}#dokolog`);
+  redirect(`/spots/${parsed.data.spotSlug}?tab=logs&posted=checkin&run=${inserted[0].id}#dokolog`);
 }
 
 export async function createRun(_: RunFormState, formData: FormData): Promise<RunFormState> {
@@ -126,7 +126,7 @@ export async function createRun(_: RunFormState, formData: FormData): Promise<Ru
     return { message: error instanceof Error ? error.message : "投稿できませんでした" };
   }
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
-  redirect(`/spots/${parsed.data.spotSlug}?posted=1#dokolog`);
+  redirect(`/spots/${parsed.data.spotSlug}?tab=logs&posted=1#dokolog`);
 }
 
 export async function updateRun(_: RunFormState, formData: FormData): Promise<RunFormState> {
@@ -155,7 +155,7 @@ export async function updateRun(_: RunFormState, formData: FormData): Promise<Ru
     return { message: error instanceof Error ? error.message : "更新できませんでした" };
   }
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
-  if (parsed.data.returnTo === "spot") redirect(`/spots/${parsed.data.spotSlug}?posted=updated#dokolog`);
+  if (parsed.data.returnTo === "spot") redirect(`/spots/${parsed.data.spotSlug}?tab=logs&posted=updated#dokolog`);
   redirect("/me/logs?success=updated");
 }
 
@@ -174,7 +174,7 @@ export async function deleteRun(formData: FormData) {
   const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, current[0].spotId)).limit(1);
   if (spot[0]) {
     revalidatePath(`/spots/${spot[0].slug}`);
-    if (formData.get("returnTo") === "spot") return `/spots/${spot[0].slug}?posted=deleted#dokolog`;
+    if (formData.get("returnTo") === "spot") return `/spots/${spot[0].slug}?tab=logs&posted=deleted#dokolog`;
   }
   return "/me/logs?success=deleted";
 }

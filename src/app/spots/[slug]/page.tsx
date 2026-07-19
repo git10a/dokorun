@@ -132,7 +132,6 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
       <div className="flex flex-wrap items-center gap-3"><SpotViewerButtons spotId={spot.id} slug={spot.slug} count={spot.hashiritaiCount} /><ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - どこラン`} /></div>
       <SpotDetailTabs tabs={detailTabs} activeTab={activeTab} className="sticky top-16 z-40 hidden overflow-x-auto bg-paper/95 backdrop-blur sm:flex" />
       {activeTab === "course" && <>
-        <header><p className="text-xs font-bold text-sub">コース情報</p><h2 className="mt-1 text-2xl font-black sm:text-3xl">コースを知る</h2><p className="mt-2 text-sm text-sub">ルート、起伏、見どころを確認</p></header>
         {spot.photos.length > 0 && <section aria-label="写真" className="flex snap-x gap-4 overflow-x-auto pb-2">{spot.photos.map((photo, index) => <figure key={photo.id} className="w-[85%] shrink-0 snap-center sm:w-[60%]"><SpotImage src={photo.url} alt={photo.caption ?? `${spot.name}の写真`} width={1280} height={720} sizes="(min-width: 640px) 60vw, 85vw" priority={index === 0} className="aspect-video w-full rounded-2xl object-cover" />{photo.caption && <figcaption className="mt-2 text-sm text-sub">{photo.caption}</figcaption>}</figure>)}</section>}
         {courseGuide && spot.geojson ? <LongCourseGuide guide={courseGuide} geojson={spot.geojson} courseType={spot.courseType} surface={spot.surface} /> : <>
           <section><h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">代表コース</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><DirectionsLink lat={spot.lat} lng={spot.lng} name={spot.name} slug={spot.slug} /></section>
@@ -149,7 +148,7 @@ export default async function SpotDetailPage({ params, searchParams }: { params:
         {nearby.length > 0 && <section><div className="mb-5"><p className="text-xs font-bold text-sub">次に走るなら</p><h2 className="mt-1 text-2xl font-black sm:text-3xl">近くのランニングスポット</h2><p className="mt-2 text-sm text-sub">この場所の近くにある別のコース</p></div><div className="grid gap-5 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
       </>}
       {activeTab === "logs" && <section id="dokolog" className="scroll-mt-32 rounded-2xl bg-cream px-5 py-8 sm:px-7">
-        <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのランログ</h2><p className="mt-1 text-sm text-sub">このスポットで走った記録</p></div><SpotCheckInActions spotId={spot.id} slug={spot.slug} /></div>
+        <div className="flex flex-wrap items-center justify-between gap-4"><div><h2 className="text-xl font-bold">みんなのランログ</h2><p className="mt-1 text-sm text-sub">この辺で走った記録。コースぴったりじゃなくてOK</p></div><SpotCheckInActions spotId={spot.id} slug={spot.slug} /></div>
         <SpotFlashMessage placement="run" />
         <SpotRunFeed slug={spot.slug} spotName={spot.name} initialRuns={initialRuns} totalCount={spot.runsCount} tabbed />
       </section>
