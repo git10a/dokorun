@@ -485,6 +485,7 @@ export async function getSpotCommunities(spotId: string) {
     xHandle: communities.xHandle,
     strava: communities.strava,
     website: communities.website,
+    logoUrl: communities.logoUrl,
   }).from(spotCommunities)
     .innerJoin(communities, eq(communities.id, spotCommunities.communityId))
     .where(and(eq(spotCommunities.spotId, spotId), eq(communities.isPublished, true)))

@@ -33,6 +33,7 @@ const communitySchema = z.object({
   xHandle: optionalSocial(normalizeXHandle, "Xのユーザー名またはURLを入力してください"),
   strava: optionalSocial(normalizeStravaClub, "StravaクラブのslugまたはURLを入力してください"),
   website: optionalText.refine((value) => value === null || /^https?:\/\//.test(value), "WebサイトはURL(https://〜)で入力してください"),
+  logoUrl: optionalText.refine((value) => value === null || /^https?:\/\//.test(value), "ロゴは画像をアップロードして設定してください"),
 });
 
 type Tx = Database;
@@ -67,6 +68,7 @@ export async function createCommunity(_: FormState, formData: FormData): Promise
       const [community] = await tx.insert(communities).values({
         name: data.name, description: data.description, schedule: data.schedule,
         instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
+        logoUrl: data.logoUrl,
         isPublished: formData.get("isPublished") === "on",
       }).returning({ id: communities.id });
       communityId = community.id;
@@ -90,6 +92,7 @@ export async function updateCommunity(_: FormState, formData: FormData): Promise
       await tx.update(communities).set({
         name: data.name, description: data.description, schedule: data.schedule,
         instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
+        logoUrl: data.logoUrl,
         isPublished: formData.get("isPublished") === "on", updatedAt: new Date(),
       }).where(eq(communities.id, communityId));
       await tx.delete(spotCommunities).where(eq(spotCommunities.communityId, communityId));

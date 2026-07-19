@@ -1,13 +1,16 @@
 "use client";
 
-import { useActionState } from "react";
+/* eslint-disable @next/next/no-img-element */
+import { useActionState, useState } from "react";
 import { createCommunity, updateCommunity } from "@/app/admin/communities/actions";
+import { ImageUploader } from "@/components/admin/image-uploader";
 import type { FormState } from "@/app/admin/actions";
 
 type SpotOption = { id: string; name: string; prefecture: string };
 type Initial = {
   id?: string; name?: string; description?: string; schedule?: string | null;
   instagram?: string | null; xHandle?: string | null; strava?: string | null; website?: string | null;
+  logoUrl?: string | null;
   isPublished?: boolean; spotIds?: string[];
 };
 
@@ -16,6 +19,7 @@ const fieldClass = "mt-2 h-11 w-full rounded-lg border border-line bg-paper px-3
 
 export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "create" | "edit"; spotOptions: SpotOption[]; initial?: Initial }) {
   const [state, action, pending] = useActionState(mode === "edit" ? updateCommunity : createCommunity, initialState);
+  const [logoUrl, setLogoUrl] = useState(initial.logoUrl ?? "");
   const error = (name: string) => state.errors?.[name]?.[0];
   const prefectures = [...new Set(spotOptions.map((spot) => spot.prefecture))];
   return (
@@ -29,6 +33,18 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
           <Field label="活動日時" name="schedule" placeholder="毎週水曜 19:30〜" defaultValue={initial.schedule ?? ""} />
         </div>
         <label className="mt-5 block text-sm font-bold">紹介文<textarea name="description" required rows={5} defaultValue={initial.description} className="mt-2 w-full rounded-lg border border-line p-3 font-normal leading-7 outline-none focus:border-ink" />{error("description") && <span className="mt-1 block text-xs text-danger">{error("description")}</span>}</label>
+        <div className="mt-5">
+          <p className="text-sm font-bold">ロゴ</p>
+          <input type="hidden" name="logoUrl" value={logoUrl} />
+          <div className="mt-2 flex items-start gap-4">
+            {logoUrl && <img src={logoUrl} alt="コミュニティロゴ" width={64} height={64} className="size-16 shrink-0 rounded-full border border-line object-cover" />}
+            <div className="min-w-0 flex-1">
+              <ImageUploader onUploaded={setLogoUrl} />
+              {logoUrl && <button type="button" onClick={() => setLogoUrl("")} className="mt-2 text-xs font-bold text-danger underline">ロゴを外す</button>}
+              {error("logoUrl") && <span className="mt-1 block text-xs text-danger">{error("logoUrl")}</span>}
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h2 className="mb-2 text-xl font-bold">2. リンク</h2>

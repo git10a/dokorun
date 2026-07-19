@@ -223,6 +223,7 @@ export const communities = sqliteTable("communities", {
   xHandle: text("x_handle"),
   strava: text("strava"), // Stravaクラブのslug(個人のathletesではなくclubs)
   website: text("website"),
+  logoUrl: text("logo_url"), // R2(/api/upload)にアップロードしたロゴの公開URL
   isPublished: bool("is_published").notNull().default(true),
   createdAt: createdNow("created_at"),
   updatedAt: createdNow("updated_at"),

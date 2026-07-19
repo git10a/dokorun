@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { CalendarDays, Globe, Users } from "lucide-react";
 import { SocialLinks } from "@/components/social-links";
@@ -11,6 +12,7 @@ export type SpotCommunity = {
   xHandle: string | null;
   strava: string | null;
   website: string | null;
+  logoUrl: string | null;
 };
 
 export function SpotCommunities({ communities }: { communities: SpotCommunity[] }) {
@@ -26,7 +28,9 @@ export function SpotCommunities({ communities }: { communities: SpotCommunity[] 
         {communities.map((community) => (
           <article key={community.id} className="flex flex-col rounded-xl border border-line bg-paper p-5">
             <div className="flex items-start gap-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand"><Users size={18} aria-hidden="true" /></span>
+              {community.logoUrl
+                ? <img src={community.logoUrl} alt={`${community.name}のロゴ`} width={40} height={40} loading="lazy" className="size-10 shrink-0 rounded-full border border-line object-cover" />
+                : <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand"><Users size={18} aria-hidden="true" /></span>}
               <div className="min-w-0">
                 <h3 className="text-lg font-bold leading-snug">{community.name}</h3>
                 {community.schedule && (

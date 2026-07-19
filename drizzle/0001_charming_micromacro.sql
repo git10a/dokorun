@@ -1,0 +1,1 @@
+ALTER TABLE `communities` ADD `logo_url` text;
