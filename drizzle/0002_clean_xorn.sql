@@ -1,0 +1,1 @@
+CREATE INDEX `courses_spot_primary_idx` ON `courses` (`spot_id`,`is_primary`);

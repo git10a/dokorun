@@ -62,7 +62,7 @@ export const courses = sqliteTable("courses", {
   surface: text("surface", { enum: surfaces }).notNull(),
   signalsCount: integer("signals_count"),
   createdAt: createdNow("created_at"),
-});
+}, (t) => [index("courses_spot_primary_idx").on(t.spotId, t.isPrimary)]);
 
 export const tags = sqliteTable("tags", {
   id: uuidPk("id"),

@@ -8,7 +8,7 @@ import { TrackView } from "@/components/track-view";
 import { prefectureSlug, slugToPrefecture } from "@/lib/areas";
 import { regionGroups } from "@/lib/prefectures";
 import { features } from "@/lib/features";
-import { getStationsByPrefecture } from "@/lib/stations";
+import { getStationCountByPrefecture } from "@/lib/station-prefecture-counts";
 
 // スポットの追加・更新の反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
 export const revalidate = 3600;
@@ -48,7 +48,7 @@ export default async function AreaPage({ params }: { params: Params }) {
   if (!areaSpots.length) notFound();
   const region = regionGroups.find((group) => (group.prefectures as readonly string[]).includes(prefecture));
   const neighborPrefectures = region?.prefectures.filter((name) => name !== prefecture) ?? [];
-  const areaStations = getStationsByPrefecture(prefecture);
+  const areaStationCount = getStationCountByPrefecture(prefecture);
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -86,7 +86,7 @@ export default async function AreaPage({ params }: { params: Params }) {
       <div className="mt-4">
         <Link href={`/spots?pref=${encodeURIComponent(prefecture)}`} className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">距離やタグで絞り込む →</Link>
       </div>
-      {areaStations.length > 0 && <div className="mt-3"><Link href="/stations" className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">駅から探す（{areaStations.length}駅）→</Link></div>}
+      {areaStationCount > 0 && <div className="mt-3"><Link href="/stations" className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">駅から探す（{areaStationCount}駅）→</Link></div>}
       <div className="mt-8 grid gap-5 lg:grid-cols-2">
         {areaSpots.map((spot) => <SpotCard key={spot.id} spot={spot} />)}
       </div>

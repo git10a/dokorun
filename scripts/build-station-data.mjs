@@ -348,11 +348,18 @@ async function main() {
     .filter((line) => line.stations.length >= 2)
     .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
+  const stationPrefectureCounts = Object.fromEntries(
+    [...new Set(stations.map((station) => station.prefecture))]
+      .sort((a, b) => a.localeCompare(b, "ja"))
+      .map((prefecture) => [prefecture, stations.filter((station) => station.prefecture === prefecture).length]),
+  );
+
   await mkdir(OUTPUT_DIR, { recursive: true });
   await Promise.all([
     writeFile(path.join(OUTPUT_DIR, "stations.json"), JSON.stringify(stations)),
     writeFile(path.join(OUTPUT_DIR, "lines.json"), JSON.stringify(lines)),
     writeFile(path.join(OUTPUT_DIR, "spot-stations.json"), JSON.stringify(spotStations)),
+    writeFile(path.join(OUTPUT_DIR, "prefecture-counts.json"), `${JSON.stringify(stationPrefectureCounts, null, 2)}\n`),
     writeFile(path.join(OUTPUT_DIR, "slugs.json"), `${JSON.stringify(slugMap, null, 2)}\n`),
   ]);
   console.log(`station data ok: ${stations.length} station pages, ${lines.length} line pages, ${spots.length} published spots`);

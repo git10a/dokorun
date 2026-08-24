@@ -10,6 +10,7 @@ const cases = [
   { path: "/healthz.txt", marker: "ok" },
   { path: "/api/health", marker: '"ok":true' },
   { path: "/api/auth/get-session" },
+  { path: "/areas/tokyo", marker: "東京都のランニングコース" },
   { path: "/spots/kokyo", marker: "皇居" },
   { path: "/spot-gpx/kokyo.gpx", marker: "<gpx" },
   { path: "/api/spots/kokyo/gpx", marker: "<gpx" },
