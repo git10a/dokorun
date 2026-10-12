@@ -11,10 +11,9 @@ if [ "$node_major" -lt 22 ]; then
   exit 1
 fi
 
-# predeploy(package.json)でも実行されるが、deploy.sh単体実行にも備えてここでも取る
 node scripts/d1-snapshot.mjs .d1-build/prod.sqlite
-node scripts/sync-public-spot-gpx.mjs
 
+# opennextjs-cloudflare build は内部で `npm run build` を呼ぶため、GPX同期・高低図生成はそちらで走る
 D1_LOCAL_PATH=.d1-build/prod.sqlite NEXT_PUBLIC_SITE_URL=https://dokorun.com opennextjs-cloudflare build
 
 sha="$(git rev-parse --short=12 HEAD)"
