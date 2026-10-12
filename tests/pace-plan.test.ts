@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { buildPacePlan, canUseHills, formatDuration, gradeFactor, hillEffortLabel, pacePlanText, splitLabel } from "@/lib/pace-plan";
+import { buildPacePlan, canUseHills, gradeFactor, hillEffortLabel, pacePlanText, splitLabel } from "@/lib/pace-plan";
+import { formatDuration } from "@/lib/time-format";
 import type { RaceElevationPoint } from "@/lib/race-elevation";
 
 const flat = (lengthM: number): RaceElevationPoint[] => [0, lengthM].map((distanceM) => ({ distanceM, elevationM: 10, lat: 35, lng: 139 }));

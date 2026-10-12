@@ -9,7 +9,8 @@ import { SpotStamp } from "@/components/spot-stamp";
 import { STAMP_BOOK_ENABLED, STAMP_SLUGS, stampTier } from "@/lib/stamps";
 import { avatarUrl } from "@/lib/avatars";
 import { jstMonth, jstYear } from "@/lib/jst";
-import { formatDuration, formatPace, PB_EVENTS } from "@/lib/pb";
+import { formatPace, PB_EVENTS } from "@/lib/pb";
+import { formatDuration } from "@/lib/time-format";
 import { runPhotoUrl } from "@/lib/run-photos";
 import { getUser } from "@/lib/user";
 

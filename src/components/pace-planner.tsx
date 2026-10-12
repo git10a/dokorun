@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { Check, Copy, Minus, Plus, Printer } from "lucide-react";
-import { buildPacePlan, canUseHills, formatDuration, HILL_EFFORT_RANGE, hillEffortLabel, pacePlanCondition, pacePlanText, SPLIT_PERCENT_RANGE, splitLabel } from "@/lib/pace-plan";
+import { buildPacePlan, canUseHills, HILL_EFFORT_RANGE, hillEffortLabel, pacePlanCondition, pacePlanText, SPLIT_PERCENT_RANGE, splitLabel } from "@/lib/pace-plan";
+import { formatDuration } from "@/lib/time-format";
 import type { RaceElevation } from "@/lib/race-elevation";
 import { track } from "@/lib/track";
 

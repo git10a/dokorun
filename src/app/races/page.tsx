@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { RaceCard } from "@/components/race-card";
 import { RaceSearch } from "@/components/race-search";
-import { splitRacesBySchedule } from "@/lib/race-schedule";
+import { raceSearchOptions, splitRacesBySchedule } from "@/lib/race-schedule";
 
 // 開催前/開催済みの振り分けを日次で更新する(残り日数は閲覧時に再計算)
 export const revalidate = 86400;
@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function RacesPage() {
   const { upcoming, finished } = splitRacesBySchedule();
-  const searchOptions = [...upcoming, ...finished].map((race) => ({ slug: race.slug, name: race.name, prefecture: race.prefecture, date: race.timing.replace(/^\d{4}年(\d+)月(\d+)日/, "$1/$2") }));
+  const searchOptions = raceSearchOptions();
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
       <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 大会からさがす</nav>

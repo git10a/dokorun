@@ -1,3 +1,5 @@
+import { formatDuration } from "./time-format";
+
 export const PB_EVENTS = [
   { key: "1500m", label: "1500m", meters: 1500, minS: 120, maxS: 1800 },
   { key: "3000m", label: "3000m", meters: 3000, minS: 240, maxS: 3600 },
@@ -13,14 +15,6 @@ export type PbEventKey = (typeof PB_EVENTS)[number]["key"];
 
 export function secondsFromParts(hours: number, minutes: number, seconds: number) {
   return hours * 3600 + minutes * 60 + seconds;
-}
-
-export function formatDuration(totalSeconds: number) {
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
-  if (hours > 0) return `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-  return `${minutes}:${String(seconds).padStart(2, "0")}`;
 }
 
 export function formatPace(totalSeconds: number, meters: number) {

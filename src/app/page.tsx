@@ -4,7 +4,8 @@ import { openGraph, siteConfig } from "@/lib/site";
 import { ArrowRight } from "lucide-react";
 import { getPrefectureCounts, getSpotSummariesBySlugs } from "@/db/data";
 import { races } from "@/lib/races";
-import { splitRacesBySchedule } from "@/lib/race-schedule";
+import { raceShortDate } from "@/lib/race-date";
+import { raceSearchOptions, splitRacesBySchedule } from "@/lib/race-schedule";
 import { RaceCard } from "@/components/race-card";
 import { RaceSearch } from "@/components/race-search";
 import { RaceSpotCard } from "@/components/race-spot-card";
@@ -20,19 +21,18 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const { upcoming, finished } = splitRacesBySchedule();
-  const shortDate = (timing: string) => timing.replace(/^\d{4}年(\d+)月(\d+)日.*/, "$1/$2");
   // 開催が近い大会から、その街の代表スポットを1件ずつ(同じスポットは重複させない)
   const raceSpotPicks: { slug: string; raceName: string; raceDate: string }[] = [];
   for (const race of [...upcoming, ...finished]) {
     const pick = race.spots.find((item) => !raceSpotPicks.some((picked) => picked.slug === item.slug));
-    if (pick) raceSpotPicks.push({ slug: pick.slug, raceName: race.name, raceDate: shortDate(race.timing) });
+    if (pick) raceSpotPicks.push({ slug: pick.slug, raceName: race.name, raceDate: raceShortDate(race, false) });
     if (raceSpotPicks.length >= 8) break;
   }
   const [counts, raceSpotSummaries] = await Promise.all([getPrefectureCounts(), getSpotSummariesBySlugs(raceSpotPicks.map((item) => item.slug))]);
   const totalSpots = counts.reduce((sum, item) => sum + item.count, 0);
   const summaryBySlug = new Map(raceSpotSummaries.map((spot) => [spot.slug, spot]));
   const raceSpots = raceSpotPicks.flatMap((item) => { const spot = summaryBySlug.get(item.slug); return spot ? [{ ...item, spot }] : []; });
-  const searchOptions = [...upcoming, ...finished].map((race) => ({ slug: race.slug, name: race.name, prefecture: race.prefecture, date: race.timing.replace(/^\d{4}年(\d+)月(\d+)日/, "$1/$2") }));
+  const searchOptions = raceSearchOptions();
   return (
     <>
       <section className="bg-brand px-4 pb-10 pt-12 text-center sm:pb-14 sm:pt-20">

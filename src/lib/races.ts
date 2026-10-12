@@ -1,3 +1,5 @@
+import { raceDateKey } from "./race-date";
+
 // 大会試走ページ(/races/{slug})の定義。
 // 掲載スポットは spots.slug で紐付け、表示時に getSpotSummariesBySlugs で解決する。
 // 開催日は公式発表済みの当年日程を掲載し、毎年更新する。
@@ -361,11 +363,6 @@ export const races: RaceDef[] = [
 
 export const raceBySlug = new Map(races.map((race) => [race.slug, race]));
 
-function timingSortKey(timing: string) {
-  const match = timing.match(/^(\d{4})年(\d{1,2})月(\d{1,2})日/);
-  if (!match) return Number.MAX_SAFE_INTEGER;
-  return Number(match[1]) * 10_000 + Number(match[2]) * 100 + Number(match[3]);
-}
-
-// 公式発表済みの開催日順で並べる。同日開催は定義順を維持する。
-export const racesByCalendar = [...races].sort((a, b) => timingSortKey(a.timing) - timingSortKey(b.timing));
+// 公式発表済みの開催日順で並べる。同日開催は定義順を維持し、日付未定は末尾へ
+const calendarKey = (race: RaceDef) => raceDateKey(race) ?? "9999-99-99";
+export const racesByCalendar = [...races].sort((a, b) => calendarKey(a).localeCompare(calendarKey(b)));

@@ -1,5 +1,8 @@
 import { z } from "zod";
+import { jstYear } from "./jst";
+import { raceDateKey } from "./race-date";
 import type { RaceDef } from "./races";
+import { formatDuration } from "./time-format";
 
 export const raceReviewPrompt = "来年この大会を走るランナーへ、あなたが伝えておきたいことは？";
 export const reviewPageSize = 20;
@@ -29,20 +32,20 @@ export function parseFinishTime(value: string): number | null {
 }
 
 export function formatFinishTime(seconds: number) {
-  return `${Math.floor(seconds / 3600)}:${String(Math.floor(seconds / 60) % 60).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
+  return formatDuration(seconds, true);
 }
 
 export function raceReviewSchema(race: RaceDef, now = new Date()) {
-  const year = Number(new Intl.DateTimeFormat("en", { year: "numeric", timeZone: "Asia/Tokyo" }).format(now));
+  const year = jstYear(now);
   return z.object({
     raceYear: z.number().int().min(1900).max(year),
     finishTimeS: z.number().int().min(1200).max(86400),
     body: z.string().trim().min(1).max(1500),
     distanceKm: z.number().min(0).max(raceDistanceKm(race)).nullable(),
   }).strict().refine((value) => {
-    const date = /^(\d{4})年(\d+)月(\d+)日/.exec(race.timing);
-    if (!date || value.raceYear !== Number(date[1])) return true;
-    return now >= new Date(`${date[1]}-${date[2].padStart(2, "0")}-${date[3].padStart(2, "0")}T00:00:00+09:00`);
+    const dateKey = raceDateKey(race);
+    if (!dateKey || value.raceYear !== Number(dateKey.slice(0, 4))) return true;
+    return now >= new Date(`${dateKey}T00:00:00+09:00`);
   }, { message: "開催前の大会の体験は投稿できません", path: ["raceYear"] });
 }
 

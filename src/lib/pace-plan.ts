@@ -1,4 +1,5 @@
 import { elevationPointAtDistance, type RaceElevationPoint } from "./race-elevation";
+import { formatDuration } from "./time-format";
 
 export type PacePlanRow = { label: string; fromKm: number; toKm: number; splitS: number; cumulativeS: number; paceS: number };
 // splitPercent: 後半を前半より何%速くするか(-5〜+5。負なら前半を速く)
@@ -95,15 +96,6 @@ export function buildPacePlan({ targetS, distanceKm, splitPercent = 0, hillEffor
   });
 
   return { targetS, distanceKm, hills, splitPercent, hillEffort, km, fiveKm };
-}
-
-export function formatDuration(totalSeconds: number, alwaysHours = false) {
-  const rounded = Math.round(totalSeconds);
-  const hours = Math.floor(rounded / 3600);
-  const minutes = Math.floor((rounded % 3600) / 60);
-  const seconds = rounded % 60;
-  const mmss = `${String(minutes).padStart(hours || alwaysHours ? 2 : 1, "0")}:${String(seconds).padStart(2, "0")}`;
-  return hours || alwaysHours ? `${hours}:${mmss}` : mmss;
 }
 
 export function pacePlanCondition(plan: PacePlan) {
