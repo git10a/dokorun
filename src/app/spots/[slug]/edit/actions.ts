@@ -6,13 +6,12 @@ import { z } from "zod";
 import { getDb, runAtomically } from "@/db";
 import { courses, events, spots } from "@/db/schema";
 import { jstDayBounds } from "@/lib/jst";
+import { containsBlockedWord } from "@/lib/moderation";
 import { revalidateSpotCatalog } from "@/lib/revalidate";
 import { courseTypes, facilitiesFromForm, lightings, surfaces } from "@/lib/types";
 import { requireUser } from "@/lib/user";
 
 export type SpotEditState = { message?: string; errors?: Record<string, string[]> };
-
-const blockedWords = ["死ね", "殺す", "消えろ", "ばか"];
 
 const spotEditSchema = z.object({
   spotId: z.string().uuid(),
@@ -33,7 +32,7 @@ export async function updateSpotInfo(_: SpotEditState, formData: FormData): Prom
   const parsed = spotEditSchema.safeParse(Object.fromEntries(formData.entries()));
   if (!parsed.success) return { message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
   const data = parsed.data;
-  if ([data.name, data.nameKana, data.description, data.access].some((text) => blockedWords.some((word) => text.includes(word)))) {
+  if (containsBlockedWord(data.name, data.nameKana, data.description, data.access)) {
     return { message: "投稿できない表現が含まれています" };
   }
   const facilities = facilitiesFromForm(formData);

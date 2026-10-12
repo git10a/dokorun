@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LogOut, UserRound } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
-
-const CLIENT_ID_KEY = "dokorun:client-id";
+import { CLIENT_ID_KEY } from "@/lib/hashiritai-client";
 
 export function UserMenu() {
   const { data: session, isPending } = authClient.useSession();

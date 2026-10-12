@@ -23,5 +23,9 @@ export async function POST(request: Request) {
     const bucket = (env as CloudflareEnv & { IMAGE_BUCKET: ImageBucket }).IMAGE_BUCKET;
     await bucket.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: file.type } });
     return NextResponse.json({ url: `${publicBase.replace(/\/+$/, "")}/${key}` });
-  } catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : "アップロードできませんでした" }, { status: 400 }); }
+  } catch {
+    // R2 の内部エラー文は返さない
+    console.error("Admin image upload failed");
+    return NextResponse.json({ error: "アップロードできませんでした" }, { status: 500 });
+  }
 }

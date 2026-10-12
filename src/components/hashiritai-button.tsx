@@ -2,17 +2,8 @@
 
 import { useState } from "react";
 import { Heart } from "lucide-react";
+import { setHashiritai } from "@/lib/hashiritai-client";
 import { track } from "@/lib/track";
-
-const CLIENT_ID_KEY = "dokorun:client-id";
-function getClientId() {
-  let id = localStorage.getItem(CLIENT_ID_KEY);
-  if (!id) {
-    id = crypto.randomUUID();
-    localStorage.setItem(CLIENT_ID_KEY, id);
-  }
-  return id;
-}
 
 export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, initialLiked = false }: { slug: string; count: number; loggedIn?: boolean; initialLiked?: boolean }) {
   const [count, setCount] = useState(initialCount);
@@ -32,14 +23,7 @@ export function HashiritaiButton({ slug, count: initialCount, loggedIn = false, 
     setCount((value) => Math.max(0, value + (next ? 1 : -1)));
     if (next) track("hashiritai", { slug });
     try {
-      const response = await fetch("/api/hashiritai", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, clientId: getClientId(), on: next }),
-      });
-      if (!response.ok) throw new Error("request failed");
-      const data = (await response.json()) as { count: number };
-      setCount(data.count);
+      setCount(await setHashiritai(slug, next));
     } catch {
       setOverride(!next);
       setCount((value) => Math.max(0, value + (next ? -1 : 1)));

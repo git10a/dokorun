@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
-function getClientId() {
-  const key = "dokorun:client-id";
-  let value = localStorage.getItem(key);
-  if (!value) { value = crypto.randomUUID(); localStorage.setItem(key, value); }
-  return value;
-}
+import { setHashiritai } from "@/lib/hashiritai-client";
 
 export function HashiritaiRemoveButton({ slug }: { slug: string }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
-  return <button type="button" disabled={pending} onClick={async () => { setPending(true); const response = await fetch("/api/hashiritai", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ slug, clientId: getClientId(), on: false }) }); if (response.ok) router.refresh(); else setPending(false); }} className="rounded-lg border border-line px-4 py-2 text-sm font-bold disabled:opacity-60">{pending ? "解除中…" : "解除する"}</button>;
+  const remove = async () => {
+    setPending(true);
+    try {
+      await setHashiritai(slug, false);
+      router.refresh();
+    } catch {
+      // 通信失敗でもボタンが押せないまま固まらないよう戻す
+      setPending(false);
+    }
+  };
+  return <button type="button" disabled={pending} onClick={remove} className="rounded-lg border border-line px-4 py-2 text-sm font-bold disabled:opacity-60">{pending ? "解除中…" : "解除する"}</button>;
 }
-
