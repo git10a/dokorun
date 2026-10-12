@@ -1,6 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dokorun",
+  // 本番アカウント(hinode.run, 2026-09-26に移行)。別アカウントへ誤ってデプロイしないよう固定する
+  "account_id": "cd288c7e5f37d2adce330bd0aab52f6f",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -41,19 +43,19 @@
   ],
   // ISR/SSGのincremental cache受け皿。無料プランのKV write上限(1,000/日)に注意
   "kv_namespaces": [
-    { "binding": "NEXT_INC_CACHE_KV", "id": "b9e9e322ead943ed94dd740aa36def2c" }
+    { "binding": "NEXT_INC_CACHE_KV", "id": "e7e2706b6b1e414bada5fcfbf4497866" }
   ],
   // 本体DB(Neonから移行。無料枠: 読み500万行/日・書き10万行/日)
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "dokorun-db",
-      "database_id": "7e8b11a6-036e-410f-994a-877a672c8a5c"
+      "database_id": "cafb425e-efb9-4911-9f43-e7abf9a9beb1"
     },
     {
       "binding": "NEXT_TAG_CACHE_D1",
       "database_name": "dokorun-opennext-tag-cache",
-      "database_id": "48a88fe9-ef30-4204-b9b5-413638a4ca8a"
+      "database_id": "776af469-b8bf-4a75-a1a6-601859fae4d8"
     }
   ],
   "r2_buckets": [
@@ -84,7 +86,7 @@
     // 手動方式に切り替える場合のみ、ダッシュボードでRUMを
     // 「Enable with JS Snippet installation」に変更してからトークンを貼る。
     "CF_BEACON_TOKEN": "",
-    "R2_PUBLIC_URL": "https://pub-fc0224cb93ca446f82093a8eea37e3a8.r2.dev"
+    "R2_PUBLIC_URL": "https://pub-c598f7bd37324d98a1771a87633f82d0.r2.dev"
   }
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET / BETTER_AUTH_SECRET /
   // GOOGLE_CLIENT_SECRET / TURNSTILE_SECRET_KEY は `wrangler secret put <NAME>` で設定する
