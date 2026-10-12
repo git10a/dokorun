@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { createClient } from "@libsql/client";
 import { gpxResultFromPoints, haversine } from "../src/lib/gpx";
 import { parseGpxPoints } from "../src/lib/gpx-node";
+import { courseTypes, type CourseType } from "../src/lib/types";
 
 type CourseRow = {
   slug: string;
@@ -11,7 +12,7 @@ type CourseRow = {
   city: string;
   description: string;
   access: string;
-  course_type: "loop" | "out_and_back" | "one_way" | "track";
+  course_type: CourseType;
   distance_m: number;
   elevation_gain_m: number | null;
   surface: string;
@@ -73,7 +74,7 @@ const entries = (result.rows as unknown as CourseRow[]).map((row) => {
   }
 });
 
-const byCourseType = Object.fromEntries(["loop", "out_and_back", "one_way", "track"].map((courseType) => {
+const byCourseType = Object.fromEntries(courseTypes.map((courseType) => {
   const matching = entries.filter((entry) => entry.course_type === courseType);
   return [courseType, {
     total: matching.length,

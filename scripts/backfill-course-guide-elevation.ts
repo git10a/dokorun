@@ -4,9 +4,9 @@ import { createClient } from "@libsql/client";
 import { parseGpxPoints } from "../src/lib/gpx-node";
 import { pointsToGpx } from "../src/lib/gpx-export";
 import { cumulativeDistances, type GpxPoint } from "../src/lib/gpx";
+import type { LineString } from "../src/lib/types";
 
 type CoverageEntry = { slug: string; name: string; course_type: string; distanceDifferencePct?: number; issues: string[] };
-type LineString = { type: "LineString"; coordinates: Array<[number, number]> };
 const coverage = JSON.parse(readFileSync(resolve("data/course-guides/coverage.json"), "utf8")) as { entries: CoverageEntry[] };
 const requested = new Set(process.argv.slice(2));
 const entries = coverage.entries.filter((entry) =>
