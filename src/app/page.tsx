@@ -43,7 +43,8 @@ export default async function HomePage() {
       <section className="bg-brand px-4 pb-10 pt-12 text-center sm:pb-14 sm:pt-20">
         <div className="mx-auto max-w-2xl">
           <h1 className="text-2xl font-black leading-snug tracking-tight sm:text-4xl sm:leading-tight"><span className="inline-block">どこランは、</span><span className="inline-block">マラソン大会のコースを</span><span className="inline-block">予習できるサイトです。</span></h1>
-          <p className="mt-5 text-sm font-bold leading-7 sm:text-lg sm:leading-8"><span className="block">コースを知れば、ペースが変わる。</span><span className="block">ペースが変われば、タイムが変わる。</span><span className="block">タイムが変われば、ゴールで笑える。</span></p>
+          {/* 3行の締めでユーザーの得になる「ゴールで笑える」だけ、文字の足元に白いマーカーを重ねて立たせる */}
+          <p className="mt-5 text-sm font-bold leading-7 sm:text-lg sm:leading-8"><span className="block">コースを知れば、ペースが変わる。</span><span className="block">ペースが変われば、タイムが変わる。</span><span className="block">タイムが変われば、<span className="bg-[linear-gradient(transparent_72%,var(--color-paper)_72%)] px-0.5">ゴールで笑える</span>。</span></p>
           <div className="relative mt-14 sm:mt-16">
             {/* 素材は左向き。検索ボックスの上を右へ走らせるため2人とも反転する */}
             <div className="pointer-events-none absolute -top-11 left-4 flex items-end gap-1 sm:-top-14" aria-hidden="true">
