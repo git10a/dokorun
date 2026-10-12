@@ -8,8 +8,8 @@ import { splitRacesBySchedule } from "@/lib/race-schedule";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "大会のコースマップ・GPX・試走・前日ランをさがす",
-  description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会のコースマップ・GPXと、走った人の体験。試走・前日ラン・当日アップに使える周辺ランニングコースもまとめています。",
+  title: "マラソン大会のコースマップ・GPX・高低図をさがす",
+  description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会のコースマップ・GPX・高低図と、走った人の体験。目標タイムから坂を考えたペース表も作れます。",
   alternates: { canonical: "/races" },
   openGraph: { url: "/races" },
 };

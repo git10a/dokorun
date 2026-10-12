@@ -84,7 +84,6 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
 
   return <section id="pace" className="mt-12 scroll-mt-24">
     <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">ペース表をつくる</h2>
-    <p className="mt-3 text-sm leading-6 text-sub">目標タイムを選ぶと、1kmごと・5kmごとのラップができます。時計がなくても、メモアプリに貼ったり印刷したりして当日に使えます。</p>
     <div className="mt-4 rounded-2xl bg-cream p-4 sm:p-5">
       <p className="text-sm font-bold">目標タイム</p>
       <div className="mt-2 flex items-center justify-center gap-4">
@@ -99,25 +98,24 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
         <PaceSlider id={`${slug}-hill`} label="坂の頑張り具合" valueLabel={profile === undefined ? "読み込み中…" : hillsAvailable ? hillEffortLabel(hillEffort) : "このコースでは使えません"} min={-HILL_EFFORT_RANGE} max={HILL_EFFORT_RANGE} value={hillEffort} onChange={adjust(setHillEffort)} leftLabel="上りは抑える" rightLabel="上りもがんばる" disabled={!hillsAvailable} />
       </div>
       <PaceBars plan={plan} />
-      <p className="mt-4 text-xs leading-5 text-sub">{profile === undefined ? "コースの標高を読み込み中…" : hillsAvailable ? "コースの高低差に合わせて、上りは少しゆっくり、下りは少し速く配分します（目安）。「上りもがんばる」に寄せるほど、坂でもペースを落としません。" : "このコースは標高を確認中のため、坂を考慮せずに配分します。"}</p>
+      {profile !== undefined && !hillsAvailable && <p className="mt-4 text-xs leading-5 text-sub">このコースは標高を確認中のため、坂を考慮せずに配分します。</p>}
     </div>
 
     <div className="mt-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm"><span className="font-bold">目標 {formatDuration(plan.targetS, true)}</span><span className="ml-2 text-sub">平均 {formatDuration(plan.targetS / plan.distanceKm)}/km・{condition}</span></p>
+        <div className="inline-flex overflow-hidden rounded-lg border border-line text-sm font-bold" role="tablist" aria-label="ペース表の区切り">{(["5km", "1km"] as const).map((value) => <button key={value} type="button" role="tab" aria-selected={view === value} onClick={() => setView(value)} className={`px-4 py-2 ${view === value ? "bg-ink text-white" : "bg-paper"}`}>{value}ごと</button>)}</div>
         <div className="flex gap-2">
           <button type="button" onClick={copy} className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-paper px-3 py-2 text-sm font-bold hover:bg-cream">{copied ? <Check size={16} /> : <Copy size={16} />}{copied ? "コピーしました" : "コピー"}</button>
           <button type="button" onClick={print} className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-paper px-3 py-2 text-sm font-bold hover:bg-cream"><Printer size={16} />印刷</button>
         </div>
       </div>
-      <div className="mt-3 inline-flex overflow-hidden rounded-lg border border-line text-sm font-bold" role="tablist" aria-label="ペース表の区切り">{(["5km", "1km"] as const).map((value) => <button key={value} type="button" role="tab" aria-selected={view === value} onClick={() => setView(value)} className={`px-4 py-2 ${view === value ? "bg-ink text-white" : "bg-paper"}`}>{value}ごと</button>)}</div>
       <div className="mt-3 overflow-hidden rounded-xl border border-line">
         <table className="w-full text-sm tabular-nums">
           <thead className="bg-cream text-xs text-sub"><tr><th className="px-3 py-2 text-left font-bold">地点</th><th className="px-3 py-2 text-right font-bold">{view === "5km" ? "区間" : "ラップ"}</th><th className="px-3 py-2 text-right font-bold">ペース/km</th><th className="px-3 py-2 text-right font-bold">通過</th></tr></thead>
           <tbody className="divide-y divide-line">{rows.map((row) => <tr key={row.label} className={row.label === "中間点" || row.label === "ゴール" ? "font-bold" : undefined}><td className="px-3 py-2">{row.label}</td><td className="px-3 py-2 text-right">{row.label === "中間点" ? "–" : formatDuration(row.splitS)}</td><td className="px-3 py-2 text-right text-sub">{row.label === "中間点" ? "–" : formatDuration(row.paceS)}</td><td className="px-3 py-2 text-right font-bold">{formatDuration(row.cumulativeS, true)}</td></tr>)}</tbody>
         </table>
       </div>
-      <p className="mt-3 rounded-lg bg-brand/20 p-3 text-xs leading-5">印刷したペース表は汗で濡れやすいので、小さく折ってジップ付きの袋やカードケースに入れて持っていくと安心です。距離表示は大会の公式距離に合わせた目安です。</p>
+      <p className="mt-2 text-xs text-sub">距離は大会の公式距離に合わせた目安です。</p>
 
       {/* 印刷専用カード。body直下に出し、印刷時はこれ以外を隠す(globals.cssのprinting-pace) */}
       {mounted && createPortal(<div id="pace-print">

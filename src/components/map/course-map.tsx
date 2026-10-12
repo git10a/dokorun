@@ -45,8 +45,8 @@ export function CourseMap({ lat, lng, geojson, highlightedPoint, className = "h-
               selectedMarker.getElement().setAttribute("role", "img");
             }
             selectedMarker.setLngLat(point).addTo(map);
-            // Retain the map instance while scrubbing, with no animation lag behind the finger.
-            map.jumpTo({ center: point, zoom: Math.max(map.getZoom(), 14) });
+            // 拡大はせず印だけ動かす(戻す操作を不要にする)。手で拡大していて画面外に出たときだけ寄せる
+            if (!map.getBounds().contains(point)) map.jumpTo({ center: point });
           } else {
             selectedMarker?.remove();
             if (geojson) map.fitBounds(bounds, { padding: 48, maxZoom: 16, duration: 0 });

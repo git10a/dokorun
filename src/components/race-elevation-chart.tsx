@@ -9,9 +9,9 @@ const RIGHT = 20;
 const TOP = 22;
 const BOTTOM = 36;
 
-export function RaceElevationChart({ profile, selectedDistanceM, onSelect, onReset }: {
+export function RaceElevationChart({ profile, selectedDistanceM, onSelect }: {
   profile: RaceElevation; selectedDistanceM: number | null;
-  onSelect: (distanceM: number) => void; onReset: () => void;
+  onSelect: (distanceM: number) => void;
 }) {
   const hintId = useId();
   const chart = useRef<SVGSVGElement>(null);
@@ -47,11 +47,8 @@ export function RaceElevationChart({ profile, selectedDistanceM, onSelect, onRes
     onSelect(Math.max(0, Math.min(1, (graphX - LEFT) / (width - LEFT - RIGHT))) * total);
   };
   return <div className="mt-3 rounded-xl border border-line bg-paper px-3 py-4 sm:px-5">
-    <div className="flex items-center justify-between gap-2">
-      <h3 className="font-bold">コースの高低差</h3>
-      <button type="button" onClick={onReset} disabled={!selected} aria-label="コース全体に戻す" className="min-h-10 shrink-0 rounded-lg border border-line px-3 text-xs font-bold hover:bg-cream disabled:opacity-40">全体に戻す</button>
-    </div>
-    <p id={hintId} className="mt-1 text-xs leading-5 text-sub">気になる坂をタップすると、地図でその場所を確認できます。</p>
+    <h3 className="font-bold">コースの高低差</h3>
+    <p id={hintId} className="mt-1 text-xs leading-5 text-sub">グラフをタップすると、その地点を地図で確認できます。</p>
     {profile.routeReviewRequired && <p className="mt-3 rounded-lg border border-yellow bg-cream p-3 text-xs leading-5"><strong>コースの経路・標高を確認中です。</strong> この参考GPXは大会公式コースとの照合が必要です。ペース計画に使う前に、大会公式のコース図・高低図をご確認ください。</p>}
     <div className="mt-3 flex min-h-12 flex-wrap items-baseline gap-x-4 gap-y-1 rounded-lg bg-cream px-3 py-2 text-sm" aria-live="polite" aria-atomic="true">
       {selected ? <><span>スタートから <strong className="tabular-nums">{distanceLabel}</strong></span><span>標高 <strong className="tabular-nums">{elevationLabel}</strong></span></>
@@ -90,6 +87,6 @@ export function RaceElevationChart({ profile, selectedDistanceM, onSelect, onRes
           {selected.elevationM !== null && <circle cx={x(selected.distanceM)} cy={y(selected.elevationM)} r="6" fill="#FFD900" stroke="#1A1A1A" strokeWidth="2" />}</g>}
       </g>
     </svg>
-    <p className="mt-1 text-[11px] leading-5 text-sub">{profile.source === "gsi" ? <>地形の標高の目安です。橋・高架・トンネルなど、実際に走る路面の高さとは異なる場合があります。出典：<a className="underline" href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noreferrer">国土地理院の標高タイル</a>を加工して作成。</> : "GPXに記録された標高を表示しています。測定誤差を含み、公式の高低図とは異なる場合があります。"} 距離は参考コースから算出した目安です。{values.length < profile.points.length && " 標高データのない区間は線を表示していません。"}</p>
+    <p className="mt-1 text-[11px] leading-5 text-sub">{profile.source === "gsi" ? <>地形の高さの目安（橋・トンネルは路面と異なります）。出典：<a className="underline" href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noreferrer">国土地理院の標高タイル</a>を加工</> : "GPXに記録された標高（測定誤差を含みます）"}{values.length < profile.points.length && "。標高データのない区間は線を表示していません"}</p>
   </div>;
 }

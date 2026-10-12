@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, Download, ExternalLink, Flag, MapPin } from "lucide-react";
+import { CalendarDays, Download, MapPin } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { MemberGpxLink } from "@/components/member-gpx-link";
 import { RaceExperience } from "@/components/race-experience";
@@ -52,23 +52,20 @@ export default async function RacePage({ params }: { params: Params }) {
   // 非公開化などでDBから消えたスポットは黙って落とし、定義順を保って表示する
   const spotItems = race.spots.flatMap((item) => {
     const spot = summaryBySlug.get(item.slug);
-    return spot ? [{ spot, reason: item.reason }] : [];
+    return spot ? [{ spot }] : [];
   });
   const courseMeta = raceCourseMeta[slug];
   const schedule = splitRacesBySchedule();
-  const otherRaces = [...schedule.upcoming, ...schedule.finished].filter((item) => item.slug !== race.slug);
+  // 全大会を並べると長いので、開催が近い順に数件だけ見せて残りは一覧へ
+  const otherRaces = [...schedule.upcoming, ...schedule.finished].filter((item) => item.slug !== race.slug).slice(0, 6);
   const dateKey = raceDateKey(race);
-  // 当日の会場まわり: 参考コースの発着点の周辺をGoogleマップで検索する(独自の施設データは持たない)
-  const mapSearch = (query: string, point: number[]) => `https://www.google.com/maps/search/${encodeURIComponent(query)}/@${point[0]},${point[1]},16z`;
+  // 発着点はGoogleマップで開けるようにする(独自の施設データは持たない)
   const start = courseMeta?.start;
   const finish = courseMeta?.finish;
   const finishDiffers = Boolean(start && finish && Math.hypot(start[0] - finish[0], start[1] - finish[1]) > 0.003);
   const raceDayLinks = start ? [
     { kind: "start", label: finishDiffers ? "スタート地点" : "発着点", href: `https://www.google.com/maps/search/?api=1&query=${start[0]},${start[1]}` },
     ...(finishDiffers && finish ? [{ kind: "finish", label: "ゴール地点", href: `https://www.google.com/maps/search/?api=1&query=${finish[0]},${finish[1]}` }] : []),
-    { kind: "convenience", label: "コンビニ", href: mapSearch("コンビニ", start) },
-    { kind: "toilet", label: "トイレ", href: mapSearch("トイレ", start) },
-    { kind: "locker", label: "ロッカー", href: mapSearch("コインロッカー", start) },
   ] : [];
   const title = racePageTitle(race);
   const structuredData = [
@@ -84,7 +81,7 @@ export default async function RacePage({ params }: { params: Params }) {
     ...(spotItems.length ? [{
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: `${race.name}の試走・前日ランにおすすめのコース`,
+      name: `${race.name}の近くの有名ランニングスポット`,
       numberOfItems: spotItems.length,
       itemListElement: spotItems.map((item, index) => ({
         "@type": "ListItem",
@@ -102,54 +99,20 @@ export default async function RacePage({ params }: { params: Params }) {
         <Link href="/" className="hover:underline">ホーム</Link> / <Link href="/races" className="hover:underline">大会からさがす</Link> / {race.name}
       </nav>
       <h1 className="text-2xl font-bold sm:text-3xl">{race.name}のコースマップ・GPX</h1>
-      <div className="mt-3 space-y-1.5 text-sm">
-        <p className="flex flex-wrap items-center gap-x-2 gap-y-1"><CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" /><span className="font-bold">{race.timing}</span>{dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}</p>
-        <p className="flex items-start gap-2 text-sub"><Flag size={16} className="mt-0.5 shrink-0" aria-label="種目・発着" /><span>{race.distanceLabel}・{race.startFinish}<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex items-center gap-1 whitespace-nowrap font-bold text-accent hover:underline">公式サイト<ExternalLink size={13} /></a></span></p>
-      </div>
-      <nav aria-label="この大会の情報" className="-mx-4 mt-5 flex gap-2 overflow-x-auto px-4 text-sm font-bold [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 [&::-webkit-scrollbar]:hidden">
-        <a href="#course-map" className="shrink-0 rounded-full bg-brand px-4 py-2">コースマップ</a>
-        {courseMeta && <a href="#gpx" className="shrink-0 rounded-full border border-line px-4 py-2 hover:bg-cream">GPX</a>}
-        <a href="#pace" className="shrink-0 rounded-full border border-line px-4 py-2 hover:bg-cream">ペース表</a>
-        <a href="#reviews" className="shrink-0 rounded-full border border-line px-4 py-2 hover:bg-cream">走った人の体験</a>
-        {raceDayLinks.length > 0 && <a href="#race-day" className="shrink-0 rounded-full border border-line px-4 py-2 hover:bg-cream">当日の会場まわり</a>}
-        {spotItems.length > 0 && <a href="#nearby" className="shrink-0 rounded-full border border-line px-4 py-2 hover:bg-cream">前日ラン</a>}
-      </nav>
-      <RaceExperience slug={slug} name={race.name} distanceLabel={race.distanceLabel} maxKm={raceDistanceKm(race)} hasCourse={Boolean(courseMeta)} initialReviews={initialReviews} courseInfo={
-        <aside id="gpx" className="scroll-mt-24 rounded-2xl border border-line bg-cream p-5">
-          <h3 className="font-bold">GPXをダウンロード</h3>
-          {courseMeta ? <>
-            <MemberGpxLink href={`/race-gpx/${slug}.gpx`} callbackURL={`/races/${slug}`} fileName={`${slug}.gpx`} slug={slug} meta={{ source: "race", courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified" }} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-4 py-3 text-sm font-bold transition hover:bg-brand-dark"><Download size={17} />GPXをダウンロード（無料）</MemberGpxLink>
-            <p className="mt-2 text-xs text-sub">ダウンロードにはログインが必要です。</p>
-            <details className="group mt-3 text-sm">
-              <summary className="cursor-pointer list-none font-bold text-accent [&::-webkit-details-marker]:hidden">時計でペース計画を作るには<span className="ml-1 inline-block transition-transform group-open:rotate-90">›</span></summary>
-              <ol className="mt-2 space-y-1.5">
-                <li className="flex gap-2"><span className="font-black">1</span><span>Garmin Connect・COROSなどに取り込む（<Link href="/guide/gpx" className="font-bold text-accent underline underline-offset-4">取り込み方</Link>）</span></li>
-                <li className="flex gap-2"><span className="font-black">2</span><span>GarminのPaceProなどで目標タイムを設定すると、起伏に合わせた1kmごとの目標ラップを作れます</span></li>
-              </ol>
-            </details>
-            <a href="#pace" className="mt-2 block text-sm font-bold text-accent">時計がなくても、ペース表を作れます ↓</a>
-            <p className="mt-4 border-t border-line pt-3 text-xs leading-5 text-sub"><span className="font-bold text-ink">{courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図をもとに独自作成"}・約{(courseMeta.distanceM / 1000).toFixed(1)}km・{courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}{courseMeta.checkedAt ? `（${courseMeta.checkedAt}確認）` : ""}</span><br />主催者の公式GPXではありません。正式な距離・経路・交通規制は<a href={courseMeta.sourceUrl ?? race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式情報</a>をご確認ください。</p>
-          </> : <p className="mt-3 text-sm leading-6 text-sub">コースデータは準備中です。最新のコースは<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式サイト</a>でご確認ください。</p>}
-        </aside>
-      } />
-      {raceDayLinks.length > 0 && <section id="race-day" className="mt-12 scroll-mt-24">
-        <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">当日の会場まわり</h2>
-        <p className="mt-3 text-sm leading-6 text-sub">スタート前の仮設トイレは混みがち。近くのコンビニや駅のトイレ、ロッカーの場所を先に見ておくと安心です。手荷物預かり（クローク）は大会の案内で確認を。</p>
-        <ul className="mt-4 grid grid-cols-2 gap-2 lg:grid-cols-5">
-          {raceDayLinks.map((item) => <li key={item.label}><TrackedLink event="race_day_link" meta={{ race: slug, kind: item.kind }} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-2 rounded-xl border border-line bg-paper px-3 py-3 text-sm font-bold hover:bg-cream"><span className="flex items-center gap-2"><MapPin size={16} className="shrink-0 text-sub" />{item.label}</span><ExternalLink size={14} className="shrink-0 text-sub" /></TrackedLink></li>)}
-        </ul>
-        <p className="mt-2 text-xs text-sub">Googleマップが開きます。コンビニ・トイレ・ロッカーは参考コースの{finishDiffers ? "スタート地点" : "発着点"}周辺を表示します。</p>
-      </section>}
+      <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm"><CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" /><span className="font-bold">{race.timing}</span>{dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}</p>
+      <RaceExperience slug={slug} name={race.name} distanceLabel={race.distanceLabel} maxKm={raceDistanceKm(race)} hasCourse={Boolean(courseMeta)} initialReviews={initialReviews}
+        mapOverlay={courseMeta && <MemberGpxLink href={`/race-gpx/${slug}.gpx`} callbackURL={`/races/${slug}`} fileName={`${slug}.gpx`} slug={slug} meta={{ source: "race", courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified" }} className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"><Download size={16} />GPXをダウンロード</MemberGpxLink>}
+        courseNote={courseMeta ? <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
+          <p>{courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図をもとに独自作成"}・約{(courseMeta.distanceM / 1000).toFixed(1)}km・{courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}{courseMeta.checkedAt ? `（${courseMeta.checkedAt}確認）` : ""}。主催者の公式GPXではありません。正式な距離・経路は<a href={courseMeta.sourceUrl ?? race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式情報</a>で。GPXは無料（ログインが必要）。</p>
+          <p className="flex flex-wrap gap-x-4 gap-y-1">
+            {raceDayLinks.map((item) => <TrackedLink key={item.kind} event="race_day_link" meta={{ race: slug, kind: item.kind }} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-accent hover:underline"><MapPin size={13} />{item.label}をGoogleマップで見る</TrackedLink>)}
+            <Link href="/guide/gpx" className="font-bold text-accent hover:underline">GPXを時計に入れるには</Link>
+          </p>
+        </div> : <p className="rounded-xl bg-cream p-6 text-sm">コースデータは準備中です。最新のコースは<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式サイト</a>でご確認ください。</p>} />
       {spotItems.length > 0 && <section id="nearby" className="mt-12 scroll-mt-24">
-      <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">前日ラン・試走におすすめのスポット</h2>
-      <p className="mt-3 text-sm leading-6 text-sub">{race.lead}</p>
-      <div className="mt-5 space-y-6">
-        {spotItems.map((item) => (
-          <section key={item.spot.slug}>
-            <p className="mb-2 text-sm leading-6">{item.reason}</p>
-            <SpotCard spot={item.spot} />
-          </section>
-        ))}
+      <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くの有名ランニングスポット</h2>
+      <div className="mt-5 space-y-4">
+        {spotItems.map((item) => <SpotCard key={item.spot.slug} spot={item.spot} />)}
       </div>
       </section>}
       <section className="mt-14">
@@ -160,6 +123,7 @@ export default async function RacePage({ params }: { params: Params }) {
               {item.name}
             </Link>
           ))}
+          <Link href="/races" className="px-2 py-2 text-sm font-bold text-accent hover:underline">すべての大会 →</Link>
         </div>
       </section>
     </div>

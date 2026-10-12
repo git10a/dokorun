@@ -35,7 +35,7 @@ describe("race elevation map alignment", () => {
     const points = profile.points.map((point, index) => ({ ...point, elevationM: index === 1 ? null : point.elevationM }));
     expect(elevationPointAtDistance(points, 500)?.elevationM).toBeNull();
     expect(elevationSegments(points)).toHaveLength(2);
-    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, points }} selectedDistanceM={500} onSelect={() => {}} onReset={() => {}} />);
+    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, points }} selectedDistanceM={500} onSelect={() => {}} />);
     expect(markup).toContain("標高データなし");
     expect(markup).toContain("標高データのない区間は線を表示していません");
   });
@@ -44,7 +44,7 @@ describe("race elevation map alignment", () => {
     expect(points.map((point) => point.ele)).toEqual([null, null, null, 0]);
   });
   it("distinguishes missing elevation, GPX measurements and terrain estimates", () => {
-    const render = (value: typeof profile) => renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} onReset={() => {}} />);
+    const render = (value: typeof profile) => renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />);
     expect(render(profile)).toContain("GPXに記録された標高");
     expect(render({ ...profile, source: "gsi" })).toContain("国土地理院の標高タイル");
     const missing = render({ ...profile, points: profile.points.map((point) => ({ ...point, elevationM: null })) });
@@ -52,7 +52,7 @@ describe("race elevation map alignment", () => {
     expect(missing).not.toContain('role="slider"');
   });
   it("shows a review notice when the route needs verification", () => {
-    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, routeReviewRequired: true }} selectedDistanceM={null} onSelect={() => {}} onReset={() => {}} />);
+    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, routeReviewRequired: true }} selectedDistanceM={null} onSelect={() => {}} />);
     expect(markup).toContain("コースの経路・標高を確認中です。");
   });
   it("ships aligned elevation assets for every published race course", () => {

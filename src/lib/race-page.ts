@@ -6,8 +6,9 @@ import type { LineString } from "./types";
 // start/finishは参考コースの始点・終点 [lat, lng]
 export type RaceCourseMeta = { distanceM: number; elevationGainM: number | null; source: "gps" | "map"; courseYear?: number; checkedAt?: string; sourceUrl?: string; start?: number[]; finish?: number[] };
 export const raceCourseMeta = manifest as Record<string, RaceCourseMeta | undefined>;
-export const racePageTitle = (race: RaceDef) => `${race.name}のコースマップ・GPX・試走・前日ラン`;
-export const racePageDescription = (race: RaceDef) => `${race.name}のコースマップとGPX、完走者の体験を掲載。${race.description}`;
+export const racePageTitle = (race: RaceDef) => `${race.name}のコースマップ・GPX・高低図`;
+// races.tsのdescriptionは旧「試走・前日ラン」軸の文章なので使わない
+export const racePageDescription = (race: RaceDef) => `${race.name}（${race.distanceLabel}・${race.startFinish}）のコースマップ・GPX・高低図。目標タイムから坂を考えたペース表も作れます。走った人の体験や、近くの有名ランニングスポットも紹介。`;
 
 // Distances follow the reference geometry; they are not certified race kilometre markers.
 export function pointAlongCourse(geometry: LineString, km: number): [number, number] | null {

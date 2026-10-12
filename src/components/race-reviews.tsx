@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
-import { MessageSquare, Pencil, Flag, Trash2 } from "lucide-react";
+import { Pencil, Flag, Trash2 } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { formatFinishTime, parseFinishTime, raceReviewPrompt, type RaceReview, type RaceReviewPage } from "@/lib/race-reviews";
 import { track } from "@/lib/track";
@@ -27,6 +27,8 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
   const [reporting, setReporting] = useState<string | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
   const [draftVersion, setDraftVersion] = useState(0);
+  // 投稿フォームは「体験を書く」を押すまで畳んでおく。ログイン後の #write-review 戻りでは開く
+  const [writing, setWriting] = useState(false);
   const requestId = useRef(0);
   const formRef = useRef<HTMLFormElement>(null);
   const loginHref = `/login?callbackURL=${encodeURIComponent(`/races/${slug}#write-review`)}`;
@@ -72,14 +74,21 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
     });
     if (saved) {
       track("race_review_saved", { race: slug, edited: Boolean(editing) });
-      setEditing(null); setDraftVersion((value) => value + 1); setTargetInput("");
+      setEditing(null); setWriting(false); setDraftVersion((value) => value + 1); setTargetInput("");
       await load(null);
       setMessage("体験を保存しました。次に走るランナーへの共有、ありがとうございます。");
     }
   }
 
+  useEffect(() => {
+    const openFromHash = () => { if (window.location.hash === "#write-review") setWriting(true); };
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, []);
+
   function edit(review: RaceReview) {
-    setEditing(review); setDraftVersion((value) => value + 1); setMessage(""); setError("");
+    setWriting(true); setEditing(review); setDraftVersion((value) => value + 1); setMessage(""); setError("");
     document.getElementById("write-review")?.scrollIntoView({ block: "start" });
   }
 
@@ -88,9 +97,9 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
 
   return <section id="reviews" className="scroll-mt-24">
     <div className="flex flex-wrap items-start justify-between gap-4">
-      <div><h2 className="flex items-center gap-2 text-xl font-bold sm:text-2xl"><MessageSquare size={22} />走った人の体験</h2>
+      <div><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">走った人の体験</h2>
         <p className="mt-2 text-sm leading-6 text-sub">{empty ? "この大会の体験は、まだありません。" : "自分の目標タイムに近い完走者の経験を、レース計画の参考に。"}</p></div>
-      {!empty && <a href="#write-review" className="rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream">体験を残す</a>}
+      {!empty && <a href="#write-review" onClick={() => setWriting(true)} className="rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream">体験を残す</a>}
     </div>
     {!empty && <form onSubmit={(event) => {
       event.preventDefault();
@@ -125,10 +134,10 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
       </article>)}</div>}
     {page.nextOffset !== null && <button disabled={loading} onClick={() => void load(target, page.nextOffset!)} className="mb-5 w-full rounded-lg border border-line px-4 py-3 text-sm font-bold">さらに読む</button>}
     {!empty && <p className="text-xs leading-5 text-sub">コースや当日の状況は開催年によって異なります。体験の開催年と、出場する大会の公式情報をご確認ください。</p>}
-    <div id="write-review" className={`${empty ? "mt-5" : "mt-8"} scroll-mt-24 rounded-2xl border border-line bg-cream p-5 sm:p-7`}>
-      <h3 className="text-lg font-bold leading-8">{raceReviewPrompt}</h3>
-      <p className="mt-2 text-sm leading-6 text-sub">きつかった坂、ペースを上げられた場所、走る前に知っておきたかったこと。あなたの経験を残してください。</p>
-      {isPending ? <p className="mt-5 text-sm">ログイン状態を確認中…</p> : !session ? <Link href={loginHref} className="mt-5 inline-flex rounded-lg bg-brand px-5 py-3 text-sm font-bold">ログインして体験を残す</Link> : <form ref={formRef} key={draftVersion} onSubmit={submit} className="mt-5 space-y-4" onFocus={() => { if (formRef.current?.dataset.tracked !== "yes") { track("race_review_started", { race: slug }); if (formRef.current) formRef.current.dataset.tracked = "yes"; } }}>
+    <div id="write-review" className={`${empty ? "mt-4" : "mt-8"} scroll-mt-24 rounded-2xl border border-line bg-cream p-4 sm:p-5`}>
+      <h3 className="font-bold leading-7">{raceReviewPrompt}</h3>
+      <p className="mt-1 text-sm leading-6 text-sub">きつかった坂、ペースを上げられた場所、走る前に知っておきたかったこと。</p>
+      {isPending ? <p className="mt-4 text-sm">ログイン状態を確認中…</p> : !session ? <Link href={loginHref} className="mt-4 inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold">ログインして体験を残す</Link> : !writing ? <button type="button" onClick={() => setWriting(true)} className="mt-4 inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold">体験を書く</button> : <form ref={formRef} key={draftVersion} onSubmit={submit} className="mt-5 space-y-4" onFocus={() => { if (formRef.current?.dataset.tracked !== "yes") { track("race_review_started", { race: slug }); if (formRef.current) formRef.current.dataset.tracked = "yes"; } }}>
         <p className="text-sm font-bold">{distanceLabel}{editing ? ` · ${editing.raceYear}年の体験を編集` : "の体験"}</p>
         <div className="grid gap-4 sm:grid-cols-3">
           <label className="text-sm font-bold">走った年<input name="raceYear" type="number" required min={1900} max={new Date().getFullYear()} placeholder="例：2025" defaultValue={editing?.raceYear ?? ""} readOnly={Boolean(editing)} className={fieldClass} /></label>
@@ -138,7 +147,7 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
         <p id="review-time-help" className="text-xs text-sub">実際の完走タイムを「時:分:秒」で入力してください。同じ大会・開催年の投稿は上書きされます。</p>
         <label className="block text-sm font-bold">伝えておきたいこと<textarea name="body" required maxLength={1500} rows={4} defaultValue={editing?.body ?? ""} className={fieldClass} /></label>
         <p className="text-xs leading-5 text-sub">名前・開催年・完走タイム・本文は公開されます。個人の連絡先などは書かないでください。</p>
-        <div className="flex flex-wrap gap-3"><button disabled={saving || !page.available} className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark disabled:opacity-50">{saving ? "保存中…" : editing ? "変更を保存する" : "体験を残す"}</button>{editing && <button type="button" disabled={saving} onClick={() => { setEditing(null); setDraftVersion((value) => value + 1); }} className="px-3 text-sm underline">編集をやめる</button>}</div>
+        <div className="flex flex-wrap gap-3"><button disabled={saving || !page.available} className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark disabled:opacity-50">{saving ? "保存中…" : editing ? "変更を保存する" : "体験を残す"}</button><button type="button" disabled={saving} onClick={() => { setEditing(null); setWriting(false); setDraftVersion((value) => value + 1); }} className="px-3 text-sm underline">{editing ? "編集をやめる" : "閉じる"}</button></div>
       </form>}
     </div>
   </section>;

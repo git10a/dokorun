@@ -24,8 +24,8 @@ describe("race page SEO preservation", () => {
       const meta = await generateMetadata({ params: Promise.resolve({ slug: race.slug }) });
       expect(meta.alternates?.canonical).toBe(`https://dokorun.com/races/${race.slug}`);
       expect(meta.title).toContain(race.name);
-      expect(meta.title).toContain("試走・前日ラン");
-      expect(meta.description).toContain(race.description);
+      expect(meta.title).toContain("コースマップ・GPX");
+      expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();
     }

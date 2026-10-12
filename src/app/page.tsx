@@ -69,7 +69,7 @@ export default async function HomePage() {
       <section id="spot-search" className="mt-14 scroll-mt-20 bg-cream px-4 pb-12 pt-10 sm:mt-20 sm:pt-14">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-black sm:text-3xl">旅先・近所のランニングコース</h2>
-          <p className="mt-2 text-sm text-sub">遠征先の試走や前日ラン、ふだんのジョグに。全国{totalSpots}スポット</p>
+          <p className="mt-2 text-sm text-sub">大会で訪れる街の有名スポットから、ふだんのジョグまで。全国{totalSpots}スポット</p>
           <HeroSearch tags={tags} />
         </div>
         <div className="mx-auto mt-10 max-w-7xl md:px-2">
