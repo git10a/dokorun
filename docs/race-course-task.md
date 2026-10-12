@@ -25,7 +25,7 @@ curl -sL -A "Mozilla/5.0" "<公式コースページURL>" | grep -oE 'google\.co
 # 2. KMLを取得
 curl -sL -A "Mozilla/5.0" "https://www.google.com/maps/d/kml?mid=<MID>&forcekml=1" -o /tmp/course.kml
 # 3. GPXに変換(LineString名は --name なしで一度実行すると候補が出る)
-node scripts/kml-to-gpx.mjs /tmp/course.kml data/race-gpx/<slug>.gpx --name 走路
+npx tsx scripts/kml-to-gpx.ts /tmp/course.kml data/race-gpx/<slug>.gpx --name 走路
 ```
 
 - KMLの`<Document><name>`で**開催年が最新**であることを確認する(古いマップが残っていることがある。東京は2020と2026が併存していた)
