@@ -24,5 +24,8 @@ message="${message// /-}"
 opennextjs-cloudflare upload --tag "$sha" --message "$message"
 
 echo "Uploaded version tag: $sha"
-echo "Next: npm run release:smoke -- <version-id>"
-echo "Then: npm run release:promote -- <stable-version-id> <new-version-id> 0"
+# Version Overridesは「デプロイに含まれている版」にしか効かない。先に0%で含めないと、
+# smokeは旧版に当たって素通りしてしまう(2026-10-12に発生)
+echo "Next: npm run release:promote -- <stable-version-id> <new-version-id> 0"
+echo "Then: npm run release:smoke -- <version-id>   (/api/health の version.id が新版になることを確認)"
+echo "Then: release:promote ... 10 → 100"
