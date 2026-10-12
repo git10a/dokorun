@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { haversine, type GpxPoint } from "../src/lib/gpx";
+import { cumulativeDistances, pointAtDistance, type GpxPoint } from "../src/lib/gpx";
 import { parseGpxPoints } from "../src/lib/gpx-node";
 
 type CoverageEntry = {
@@ -47,20 +47,8 @@ function stripHtml(value: string | number | undefined) {
 }
 
 function pointAtFraction(points: GpxPoint[], fraction: number) {
-  const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
-  const target = cumulative.at(-1)! * fraction;
-  const index = cumulative.findIndex((distance) => distance >= target);
-  if (index <= 0) return points[0];
-  if (index < 0) return points.at(-1)!;
-  const before = cumulative[index - 1];
-  const segment = cumulative[index] - before;
-  const ratio = segment ? (target - before) / segment : 0;
-  return {
-    lat: points[index - 1].lat + (points[index].lat - points[index - 1].lat) * ratio,
-    lng: points[index - 1].lng + (points[index].lng - points[index - 1].lng) * ratio,
-    ele: points[index - 1].ele,
-  };
+  const cumulative = cumulativeDistances(points);
+  return pointAtDistance(points, cumulative, cumulative.at(-1)! * fraction);
 }
 
 async function fetchJson(url: string, attempts = 3): Promise<unknown> {

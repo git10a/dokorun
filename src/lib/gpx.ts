@@ -1,3 +1,4 @@
+import { simplifyLine } from "./simplify";
 import type { CourseType, LineString } from "./types";
 
 export type GpxPoint = { lat: number; lng: number; ele: number | null };
@@ -24,24 +25,11 @@ export function haversine(a: Pick<GpxPoint, "lat" | "lng">, b: Pick<GpxPoint, "l
   return 2 * earthRadiusM * Math.asin(Math.sqrt(h));
 }
 
-function perpendicularDistance(point: GpxPoint, start: GpxPoint, end: GpxPoint) {
-  const dx = end.lng - start.lng;
-  const dy = end.lat - start.lat;
-  if (dx === 0 && dy === 0) return Math.hypot(point.lng - start.lng, point.lat - start.lat);
-  const t = Math.max(0, Math.min(1, ((point.lng - start.lng) * dx + (point.lat - start.lat) * dy) / (dx * dx + dy * dy)));
-  return Math.hypot(point.lng - (start.lng + t * dx), point.lat - (start.lat + t * dy));
-}
-
-function simplify(points: GpxPoint[], tolerance: number): GpxPoint[] {
-  if (points.length <= 2) return points;
-  let maxDistance = 0;
-  let index = 0;
-  for (let i = 1; i < points.length - 1; i += 1) {
-    const distance = perpendicularDistance(points[i], points[0], points[points.length - 1]);
-    if (distance > maxDistance) { maxDistance = distance; index = i; }
-  }
-  if (maxDistance <= tolerance) return [points[0], points[points.length - 1]];
-  return [...simplify(points.slice(0, index + 1), tolerance).slice(0, -1), ...simplify(points.slice(index), tolerance)];
+// 各点までの累積距離(m)。cumulative[i] は points[0] から points[i] までの道のり
+export function cumulativeDistances(points: Pick<GpxPoint, "lat" | "lng">[]): number[] {
+  const cumulative = [0];
+  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  return cumulative;
 }
 
 function elevationGain(points: GpxPoint[]) {
@@ -54,7 +42,8 @@ function elevationGain(points: GpxPoint[]) {
   return Math.round(smoothed.slice(1).reduce((sum, value, index) => sum + Math.max(0, value - smoothed[index]), 0));
 }
 
-function pointAtDistance(points: GpxPoint[], cumulative: number[], distance: number): GpxPoint {
+// 道のり distance(m) の地点を線形補間で求める。cumulative は cumulativeDistances(points) の結果
+export function pointAtDistance(points: GpxPoint[], cumulative: number[], distance: number): GpxPoint {
   const clamped = Math.max(0, Math.min(distance, cumulative[cumulative.length - 1]));
   let index = 1;
   while (index < cumulative.length && cumulative[index] < clamped) index += 1;
@@ -84,10 +73,7 @@ function buildElevationProfile(points: GpxPoint[], cumulative: number[]): Elevat
 }
 
 function isOutAndBack(points: GpxPoint[]) {
-  const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) {
-    cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
-  }
+  const cumulative = cumulativeDistances(points);
   const total = cumulative[cumulative.length - 1];
   if (total < 300) return false;
   const distances = Array.from({ length: 19 }, (_, index) => ((index + 1) / 20) * (total / 2));
@@ -100,15 +86,15 @@ function isOutAndBack(points: GpxPoint[]) {
 export function gpxResultFromPoints(points: GpxPoint[]): GpxResult {
   if (points.length < 2) throw new Error("GPXファイルを解析できませんでした");
 
-  const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  const cumulative = cumulativeDistances(points);
   const distanceM = Math.round(cumulative[cumulative.length - 1]);
+  const coordinates = points.map((point): [number, number] => [point.lng, point.lat]);
   let tolerance = 0.00005;
-  let simplified = simplify(points, tolerance);
-  while (simplified.length > 2000) { tolerance *= 2; simplified = simplify(points, tolerance); }
+  let simplified = simplifyLine(coordinates, tolerance);
+  while (simplified.length > 2000) { tolerance *= 2; simplified = simplifyLine(coordinates, tolerance); }
   const closed = haversine(points[0], points[points.length - 1]) <= 150;
   return {
-    geojson: { type: "LineString", coordinates: simplified.map((point) => [point.lng, point.lat]) },
+    geojson: { type: "LineString", coordinates: simplified },
     distanceM,
     elevationGainM: elevationGain(points),
     elevationProfile: buildElevationProfile(points, cumulative),

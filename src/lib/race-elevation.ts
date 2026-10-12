@@ -1,4 +1,4 @@
-import { haversine, type GpxPoint } from "./gpx";
+import { cumulativeDistances, type GpxPoint } from "./gpx";
 
 export type RaceElevationPoint = { distanceM: number; elevationM: number | null; lat: number; lng: number };
 export type RaceElevation = {
@@ -10,10 +10,9 @@ export type RaceElevation = {
 
 // Keep coordinates and elevation on the same distance axis, including out-and-back routes.
 export function raceElevationFromPoints(points: GpxPoint[]): RaceElevation {
-  let distanceM = 0;
+  const cumulative = cumulativeDistances(points);
   return { version: 1, source: "gpx", points: points.map((point, index) => {
-    if (index) distanceM += haversine(points[index - 1], point);
-    return { distanceM: Math.round(distanceM * 100) / 100, lat: point.lat, lng: point.lng,
+    return { distanceM: Math.round(cumulative[index] * 100) / 100, lat: point.lat, lng: point.lng,
       elevationM: point.ele !== null && Number.isFinite(point.ele) ? point.ele : null };
   }) };
 }

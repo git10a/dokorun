@@ -1,3 +1,4 @@
+import { haversine } from "@/lib/gpx";
 import { courseTypeLabels } from "@/lib/types";
 
 export type SpotSearchParams = Record<string, string | undefined>;
@@ -71,13 +72,7 @@ export function nearbyFallbackFilters(filters: SearchFilters): SearchFilters | n
 }
 
 export function distanceBetweenKm(latA: number, lngA: number, latB: number, lngB: number) {
-  const earthRadiusKm = 6371;
-  const toRadians = (degrees: number) => (degrees * Math.PI) / 180;
-  const deltaLat = toRadians(latB - latA);
-  const deltaLng = toRadians(lngB - lngA);
-  const a = Math.sin(deltaLat / 2) ** 2
-    + Math.cos(toRadians(latA)) * Math.cos(toRadians(latB)) * Math.sin(deltaLng / 2) ** 2;
-  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return haversine({ lat: latA, lng: lngA }, { lat: latB, lng: lngB }) / 1000;
 }
 
 export function selectedFilterDescriptions(params: SpotSearchParams, tagNames: string[]) {

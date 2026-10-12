@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { basename, dirname, resolve } from "node:path";
-import { gpxResultFromPoints, haversine } from "../src/lib/gpx";
+import { cumulativeDistances, gpxResultFromPoints, haversine } from "../src/lib/gpx";
 import { parseGpxPoints } from "../src/lib/gpx-node";
 import { shiftRouteDistance } from "../src/lib/course-guide-profile";
 import { pointsToGpx, reversePoints, rotateClosedLoopPoints } from "../src/lib/gpx-export";
@@ -39,8 +39,7 @@ function buildGuide(slug: string) {
   const result = gpxResultFromPoints(points);
   if (!result.elevationProfile) throw new Error(`${slug}: 高低図を生成できる標高データがありません`);
 
-  const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  const cumulative = cumulativeDistances(points);
   function snap(target: { lat: number; lng: number }, label: string) {
     const index = points.reduce((best, point, pointIndex) => haversine(point, target) < haversine(points[best], target) ? pointIndex : best, 0);
     const gapM = Math.round(haversine(points[index], target));

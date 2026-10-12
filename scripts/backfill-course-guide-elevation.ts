@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { createClient } from "@libsql/client";
 import { parseGpxPoints } from "../src/lib/gpx-node";
 import { pointsToGpx } from "../src/lib/gpx-export";
-import { haversine, type GpxPoint } from "../src/lib/gpx";
+import { cumulativeDistances, type GpxPoint } from "../src/lib/gpx";
 
 type CoverageEntry = { slug: string; name: string; course_type: string; distanceDifferencePct?: number; issues: string[] };
 type LineString = { type: "LineString"; coordinates: Array<[number, number]> };
@@ -55,8 +55,7 @@ async function elevations(points: GpxPoint[]) {
     await new Promise((resolveDelay) => setTimeout(resolveDelay, 2_000));
   }
   if (samplePoints.length === points.length) return values;
-  const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  const cumulative = cumulativeDistances(points);
   return points.map((_, pointIndex) => {
     const afterSample = sampleIndices.findIndex((sampleIndex) => sampleIndex >= pointIndex);
     if (afterSample <= 0) return values[0];

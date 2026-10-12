@@ -5,7 +5,7 @@ import { communities, courses, favoriteSpots, hashiritai, photos, runPhotos, run
 import { jstDayBounds } from "@/lib/jst";
 import { prefectures } from "@/lib/prefectures";
 import { courseTypes, type CourseType, type Lighting, type LineString, type MapSpot, type SpotSummary, type Surface } from "@/lib/types";
-import { simplifyLine } from "@/lib/simplify";
+import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import type { SearchFilters } from "@/lib/spot-search";
 
 const longRunTag = { id: "virtual-long-run", slug: "long-run", name: "ロングラン", category: "terrain", sortOrder: 6 } as const;
@@ -356,9 +356,7 @@ function spotDetailSelection() {
 }
 
 function resolveGeojson(row: { geojson: LineString | null; isSimplified: boolean }) {
-  return row.geojson
-    ? (row.isSimplified ? row.geojson : { ...row.geojson, coordinates: simplifyLine(row.geojson.coordinates, 0.00005) } as LineString)
-    : null;
+  return row.isSimplified ? row.geojson : simplifyCourseGeojson(row.geojson);
 }
 
 export async function getSpotBySlug(slug: string) {

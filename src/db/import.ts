@@ -4,6 +4,7 @@ import { z } from "zod";
 import { stripPrepublishSentences } from "@/lib/public-description";
 import { getDb } from ".";
 import { courses, spots, spotTags, tags } from "./schema";
+import { haversine } from "@/lib/gpx";
 import { prefectures } from "@/lib/prefectures";
 import { courseTypes, lightings, surfaces } from "@/lib/types";
 
@@ -45,14 +46,6 @@ const importSpotSchema = z.object({
 });
 
 const importFileSchema = z.array(importSpotSchema).min(1);
-
-function distanceMeters(lat1: number, lng1: number, lat2: number, lng2: number) {
-  const toRad = (deg: number) => (deg * Math.PI) / 180;
-  const dLat = toRad(lat2 - lat1);
-  const dLng = toRad(lng2 - lng1);
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
-  return 6371000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
 
 async function run() {
   const args = process.argv.slice(2);
@@ -109,7 +102,7 @@ async function run() {
     for (const spot of allSpots) {
       if (spot.slug === entry.slug) continue;
       const sameName = spot.name === entry.name;
-      const distanceM = distanceMeters(entry.lat, entry.lng, spot.lat, spot.lng);
+      const distanceM = haversine(entry, spot);
       if (sameName || distanceM < 500) {
         warnings.push(`${entry.slug}: 既存の「${spot.name}」(${spot.slug})と重複の可能性(${sameName ? "同名" : `約${Math.round(distanceM)}m`})。重複ならJSONから削除を`);
       }
