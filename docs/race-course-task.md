@@ -75,7 +75,7 @@ npm run race-gpx:apply -- <race-slug> data/race-gpx/<race-slug>.gpx --source <gp
 ```
 
 - `public/race-courses/<slug>.json` と `src/lib/race-courses.json` が更新される
-- GPX原本は `data/race-gpx/<slug>.gpx` に必ず残す(原本保全)
+- GPX原本は `data/race-gpx/<slug>.gpx` に必ず残す(原本保全)。公開用の `public/race-gpx` と高低図 `public/race-elevation` は `npm run race-elevation:build`(dev・build時にも自動実行)で原本から生成され、git では管理しない
 - ローカルで http://localhost:3000/races/<slug> を開き、地図の形を最終確認する
 
 ### 5. 進捗表を更新する

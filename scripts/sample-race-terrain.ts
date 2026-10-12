@@ -8,7 +8,7 @@ import { raceElevationFromPoints, elevationPointAtDistance, type RaceElevation }
 async function main() {
   const slug = process.argv[2];
   if (!slug || !/^[a-z0-9-]+$/.test(slug)) throw new Error("Usage: npm run race-elevation:terrain -- <race-slug>");
-  const xml = readFileSync(`public/race-gpx/${slug}.gpx`, "utf8");
+  const xml = readFileSync(`data/race-gpx/${slug}.gpx`, "utf8");
   const route = raceElevationFromPoints(parseGpxPoints(xml));
   const reason = process.argv.includes("--unverified-elevation") ? "GPX elevation has suspicious peaks; display terrain estimate while keeping the original GPX unchanged" : "GPX has no elevation";
   if (route.points.some((point) => point.elevationM !== null) && !process.argv.includes("--unverified-elevation")) throw new Error("This GPX already has elevation. Review its provenance before replacing it; use --unverified-elevation for a terrain-only display override.");

@@ -1,7 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { parseGpx, parseGpxPoints } from "../src/lib/gpx-node";
-import { raceElevationFromPoints } from "../src/lib/race-elevation";
+import { parseGpx } from "../src/lib/gpx-node";
 import { simplifyCourseGeojson } from "../src/lib/course-geojson";
 import { raceBySlug } from "../src/lib/races";
 
@@ -42,10 +41,9 @@ function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   const outPath = join(OUT_DIR, `${slug}.json`);
   writeFileSync(outPath, JSON.stringify(simplified));
-  for (const directory of ["public/race-gpx", "data/race-gpx", "public/race-elevation"]) mkdirSync(directory, { recursive: true });
-  writeFileSync(join("public/race-gpx", `${slug}.gpx`), xml);
+  // GPX原本は data/race-gpx だけに置く。公開用GPXと高低図はビルド時(race-elevation:build)に生成される
+  mkdirSync("data/race-gpx", { recursive: true });
   writeFileSync(join("data/race-gpx", `${slug}.gpx`), xml);
-  writeFileSync(join("public/race-elevation", `${slug}.json`), JSON.stringify(raceElevationFromPoints(parseGpxPoints(xml))));
 
   const manifest: Record<string, { distanceM: number; elevationGainM: number | null; source: "gps" | "map"; start?: [number, number]; finish?: [number, number] }> = existsSync(MANIFEST_PATH)
     ? JSON.parse(readFileSync(MANIFEST_PATH, "utf8"))

@@ -6,7 +6,7 @@ import { RaceElevationChart } from "../src/components/race-elevation-chart";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import manifest from "../src/lib/race-courses.json";
-import type { RaceElevation } from "../src/lib/race-elevation";
+import { raceElevationProfile } from "../scripts/lib/race-assets";
 
 const profile = raceElevationFromPoints([
   { lat: 35, lng: 139, ele: 10 },
@@ -55,11 +55,11 @@ describe("race elevation map alignment", () => {
     const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, routeReviewRequired: true }} selectedDistanceM={null} onSelect={() => {}} />);
     expect(markup).toContain("コースの経路・標高を確認中です。");
   });
-  it("ships aligned elevation assets for every published race course", () => {
+  it("builds aligned elevation assets for every published race course", () => {
     for (const slug of Object.keys(manifest)) {
-      const xml = readFileSync(`public/race-gpx/${slug}.gpx`, "utf8");
+      const xml = readFileSync(`data/race-gpx/${slug}.gpx`, "utf8");
       const route = raceElevationFromPoints(parseGpxPoints(xml));
-      const generated = JSON.parse(readFileSync(`public/race-elevation/${slug}.json`, "utf8")) as RaceElevation;
+      const generated = raceElevationProfile(slug, xml);
       expect(generated.points.at(-1)?.distanceM).toBeCloseTo(route.points.at(-1)!.distanceM, 1);
       expect(generated.points.filter((point) => point.elevationM !== null).length).toBeGreaterThan(2);
       generated.points.forEach((point, index) => {
