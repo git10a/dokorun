@@ -10,6 +10,7 @@ import { pageMetadata } from "@/lib/site";
 import { getStation, getStations, stationJogMinutes } from "@/lib/stations";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
+import { SectionHeading } from "@/components/section-heading";
 
 export const dynamicParams = false;
 
@@ -62,7 +63,7 @@ export default async function StationPage({ params }: { params: Params }) {
       </header>
 
       {station.nearbySpots.length > 0 && <section>
-        <h2 className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">駅チカのランニングスポット</h2>
+        <SectionHeading className="mb-2">駅チカのランニングスポット</SectionHeading>
         <p className="mb-6 pl-4 text-sm leading-6 text-sub">{station.name}駅から2km以内。徒歩の近い順に掲載しています。</p>
         <div className="grid gap-6 lg:grid-cols-2">{station.nearbySpots.map((nearby) => {
           const spot = spots.get(nearby.slug);
@@ -71,7 +72,7 @@ export default async function StationPage({ params }: { params: Params }) {
       </section>}
 
       {station.oneStationSpots.length > 0 && <section>
-        <h2 className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">ひと駅ラン</h2>
+        <SectionHeading className="mb-2">ひと駅ラン</SectionHeading>
         <p className="mb-7 pl-4 text-sm leading-6 text-sub">同じ路線で3駅以内。少し足を伸ばしてから走る候補です。</p>
         <div className="space-y-9">{[...oneStationGroups].map(([key, items]) => {
           const first = items[0];

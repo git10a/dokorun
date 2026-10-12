@@ -7,6 +7,7 @@ import { AvatarUploader } from "@/components/auth/avatar-uploader";
 import { PbForm } from "@/components/auth/pb-form";
 import { ProfileForm } from "@/components/auth/profile-form";
 import { requireUser } from "@/lib/user";
+import { SectionHeading } from "@/components/section-heading";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +24,7 @@ export default async function ProfileEditPage() {
       <h1 className="mt-1 text-3xl font-black">プロフィールを編集</h1>
       <AvatarUploader user={{ id: user.id, image: user.image, customAvatarAt: user.customAvatarAt }} />
       <section className="mt-10">
-        <h2 className="border-l-4 border-brand pl-3 text-xl font-bold">基本情報</h2>
+        <SectionHeading>基本情報</SectionHeading>
         <ProfileForm user={{
           name: user.name,
           handle: user.handle,
@@ -36,7 +37,7 @@ export default async function ProfileEditPage() {
         }} />
       </section>
       <section className="mt-10">
-        <h2 className="border-l-4 border-brand pl-3 text-xl font-bold">自己ベスト</h2>
+        <SectionHeading>自己ベスト</SectionHeading>
         <PbForm pbs={pbs} />
       </section>
       <DeleteAccountForm />

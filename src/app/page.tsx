@@ -10,6 +10,7 @@ import { raceSearchOptions, splitRacesBySchedule } from "@/lib/race-schedule";
 import { RaceCard } from "@/components/race-card";
 import { RaceSearch } from "@/components/race-search";
 import { RaceSpotCard } from "@/components/race-spot-card";
+import { SectionHeading } from "@/components/section-heading";
 
 // cookies/headers/searchParamsを読まず表示は全ユーザー共通のためISR化。
 // 開催前の大会の並びの反映が最大1日遅れるのみ(残り日数は閲覧時に再計算)
@@ -56,12 +57,12 @@ export default async function HomePage() {
       </section>
       <div className="mx-auto max-w-7xl space-y-12 px-4 pt-10 sm:space-y-16 sm:pt-12 md:px-6">
         <section>
-          {upcoming.length > 0 && <><div className="mb-4 flex items-end justify-between gap-4 sm:mb-6"><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">もうすぐ開催の大会</h2><Link href="/races" className="flex shrink-0 items-center gap-1 text-sm font-bold text-accent">すべて見る <ArrowRight size={16} /></Link></div><div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">{upcoming.slice(0, 6).map((race) => <RaceCard key={race.slug} race={race} />)}</div></>}
+          {upcoming.length > 0 && <><div className="mb-4 flex items-end justify-between gap-4 sm:mb-6"><SectionHeading>もうすぐ開催の大会</SectionHeading><Link href="/races" className="flex shrink-0 items-center gap-1 text-sm font-bold text-accent">すべて見る <ArrowRight size={16} /></Link></div><div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">{upcoming.slice(0, 6).map((race) => <RaceCard key={race.slug} race={race} />)}</div></>}
           <div className="flex flex-col gap-3 rounded-xl border-2 border-dashed border-line px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><p className="text-sm"><span className="font-bold">出る大会が載っていない？</span><span className="ml-1 text-sub">コースを掲載してほしい大会を教えてください。</span></p><Link href={`/contact?${new URLSearchParams({ category: "spot_request", message: "掲載してほしい大会：\n\n大会の公式サイト（わかれば）：\n" })}`} className="shrink-0 self-start rounded-lg border border-ink bg-paper px-4 py-2 text-sm font-bold hover:bg-cream sm:self-auto">大会をリクエスト</Link></div>
         </section>
       </div>
       <section id="spot-search" className="mx-auto mt-12 max-w-7xl scroll-mt-20 px-4 pb-4 sm:mt-16 md:px-6">
-        <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:mb-6 sm:text-2xl">大会の街の有名ランニングスポット</h2>
+        <SectionHeading className="mb-4 sm:mb-6">大会の街の有名ランニングスポット</SectionHeading>
         {raceSpots.length > 0 && <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] md:-mx-6 md:px-6 [&::-webkit-scrollbar]:hidden">{raceSpots.map((item) => <RaceSpotCard key={item.slug} spot={item.spot} raceName={item.raceName} raceDate={item.raceDate} />)}</div>}
         <Link href="/spots" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline">全国{totalSpots}スポットからさがす <ArrowRight size={16} /></Link>
       </section>

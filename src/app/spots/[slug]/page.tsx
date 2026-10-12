@@ -27,6 +27,7 @@ import { getSiteUrl, openGraph } from "@/lib/site";
 import { getCourseGuide } from "@/lib/course-guides";
 import { stripPrepublishSentences } from "@/lib/public-description";
 import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
+import { SectionHeading } from "@/components/section-heading";
 
 export const revalidate = 3600;
 
@@ -115,17 +116,17 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
         {courseGuide && spot.geojson ? <LongCourseGuide guide={courseGuide} geojson={spot.geojson} courseType={spot.courseType} surface={spot.surface} /> : <>
           <SpecPanel distanceM={spot.distanceM} elevationGainM={spot.elevationGainM} signalsCount={spot.signalsCount} courseType={spot.courseType} surface={spot.surface} lighting={spot.nightLighting} />
           {publicSpotDescription && <p className="max-w-3xl leading-7">{publicSpotDescription}</p>}
-          <section className="space-y-4"><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コースマップ</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} canDownloadGpx={Boolean(spot.geojson)} /></section>
+          <section className="space-y-4"><SectionHeading>コースマップ</SectionHeading><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} canDownloadGpx={Boolean(spot.geojson)} /></section>
         </>}
         {nearbyRaces.length > 0 && <NearbyRaces items={nearbyRaces} spotSlug={spot.slug} />}
         <section className="space-y-6">
-          <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備・アクセス</h2>
+          <SectionHeading>設備・アクセス</SectionHeading>
           {spot.trackUsage && <div><h3 className="mb-3 font-bold">トラック利用情報</h3><TrackUsagePanel usage={spot.trackUsage} /></div>}
           <div><h3 className="mb-3 font-bold">設備</h3><FacilityIcons spot={spot} /></div>
           {spot.access && <div><h3 className="mb-2 font-bold">アクセス</h3><p className="text-sm leading-7 text-sub">{spot.access}</p></div>}
         </section>
         {destinations.length > 0 && <NearbyDestinations places={destinations} />}
-        {nearby.length > 0 && <section><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くのランニングスポット</h2><div className="grid gap-3 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
+        {nearby.length > 0 && <section><SectionHeading className="mb-4">近くのランニングスポット</SectionHeading><div className="grid gap-3 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}
         <p className="text-center text-sm text-sub">情報が古い・間違っている場合は<Link href={`/spots/${spot.slug}/edit`} className="ml-1 font-bold text-accent underline underline-offset-4">修正を提案</Link></p>
       </SpotDetailPanel>
       <SpotDetailPanel tab="logs"><section id="dokolog" className="scroll-mt-32 rounded-2xl bg-cream px-5 py-8 sm:px-7">
@@ -136,7 +137,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
       <SpotDetailPanel tab="communities">{spotCommunities.length > 0
         ? <SpotCommunities communities={spotCommunities} />
         : <section id="communities" className="rounded-2xl border border-line bg-cream px-5 py-8 sm:px-7"><h2 className="text-xl font-bold">ここで走ってるコミュニティ</h2><p className="mt-2 leading-7 text-sub">まだ登録されているコミュニティはありません。</p><Link href="/contact" className="mt-5 inline-flex rounded-lg border border-line bg-paper px-4 py-2.5 text-sm font-bold hover:bg-brand">この場所のコミュニティを掲載する</Link></section>}</SpotDetailPanel>
-      <SpotDetailPanel tab="not-course">{nearby.length > 0 && <section><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くのランニングスポット</h2><div className="grid gap-3 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}</SpotDetailPanel>
+      <SpotDetailPanel tab="not-course">{nearby.length > 0 && <section><SectionHeading className="mb-4">近くのランニングスポット</SectionHeading><div className="grid gap-3 lg:grid-cols-2">{nearby.map((item) => <SpotCard key={item.id} spot={item} />)}</div></section>}</SpotDetailPanel>
     </div>
   );
 }

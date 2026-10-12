@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { AlertTriangle, Download, ExternalLink, Search, Smartphone, Watch } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = pageMetadata({
   title: "コースをウォッチ・アプリに取り込む方法",
@@ -78,7 +79,7 @@ export default function GpxGuidePage() {
       </header>
 
       <section className="mt-12">
-        <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">まずは共通の3ステップ</h2>
+        <SectionHeading>まずは共通の3ステップ</SectionHeading>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[
             [Download, "1", "ダウンロード", "大会ページで対象年・出典を確認し、「コースをダウンロード」からログインして、ファイルをスマホやPCへ保存します。"],
@@ -98,7 +99,7 @@ export default function GpxGuidePage() {
       </section>
 
       <section className="mt-14">
-        <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">アプリ別の取り込み方</h2>
+        <SectionHeading>アプリ別の取り込み方</SectionHeading>
         <div className="mt-6 divide-y divide-line overflow-hidden rounded-2xl border border-line">
           {apps.map((app) => <section key={app.name} className="p-5 sm:p-7">
             <div className="flex items-center gap-3"><img src={app.iconUrl} alt={`${app.name}のアプリアイコン`} width={40} height={40} className="size-10 shrink-0 rounded-lg" /><h3 className="text-lg font-bold sm:text-xl">{app.name}</h3></div>

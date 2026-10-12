@@ -2,12 +2,13 @@ import { RaceDateLine, RaceThumb } from "./race-thumb";
 import { TrackedNextLink } from "./tracked-link";
 import { raceShortDate } from "@/lib/race-date";
 import type { NearbyRace } from "@/lib/nearby-races";
+import { SectionHeading } from "@/components/section-heading";
 
 // スポットページから大会ページへの導線。検索で来たスポット閲覧者に、近くの大会のコースを案内する
 export function NearbyRaces({ items, spotSlug }: { items: NearbyRace[]; spotSlug: string }) {
   return (
     <section>
-      <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">この近くの大会</h2>
+      <SectionHeading className="mb-4">この近くの大会</SectionHeading>
       <ul className="grid gap-3 lg:grid-cols-2">
         {items.map(({ race, finished, startDistanceKm }) => {
           return (

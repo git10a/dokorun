@@ -11,6 +11,7 @@ import { prefectures } from "@/lib/prefectures";
 import { features, featureBySlug } from "@/lib/features";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
+import { SectionHeading } from "@/components/section-heading";
 
 // 特集の対象は最大1時間の遅延を許容し、D1障害時も直前のHTMLを返せるようISR化する。
 export const revalidate = 86400;
@@ -62,9 +63,9 @@ export default async function FeaturePage({ params }: { params: Params }) {
       <div className="mt-8 space-y-10">
         {grouped.map((group) => (
           <section key={group.prefecture}>
-            <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold">
+            <SectionHeading className="mb-4">
               <Link href={`/areas/${prefectureSlug(group.prefecture)}`} className="hover:text-accent">{group.prefecture}</Link>
-            </h2>
+            </SectionHeading>
             <div className="grid gap-5 lg:grid-cols-2">
               {group.spots.map((spot) => <SpotCard key={spot.id} spot={spot} />)}
             </div>
@@ -72,7 +73,7 @@ export default async function FeaturePage({ params }: { params: Params }) {
         ))}
       </div>
       <section className="mt-14">
-        <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold">ほかの条件からさがす</h2>
+        <SectionHeading className="mb-4">ほかの条件からさがす</SectionHeading>
         <div className="flex flex-wrap gap-2.5">
           {otherFeatures.map((item) => (
             <Link key={item.slug} href={`/features/${item.slug}`} className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">

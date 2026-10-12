@@ -6,6 +6,7 @@ import { Pencil, Flag, Trash2 } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { formatFinishTime, parseFinishTime, raceReviewPrompt, type RaceReview, type RaceReviewPage } from "@/lib/race-reviews";
 import { track } from "@/lib/track";
+import { SectionHeading } from "@/components/section-heading";
 
 const fieldClass = "mt-2 w-full rounded-lg border border-line bg-paper px-3 py-2.5 text-sm focus:border-ink focus:outline-none focus:ring-2 focus:ring-brand";
 
@@ -97,7 +98,7 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
 
   return <section id="reviews" className="scroll-mt-24">
     <div className="flex flex-wrap items-start justify-between gap-4">
-      <div><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">走った人の体験</h2>
+      <div><SectionHeading>走った人の体験</SectionHeading>
         <p className="mt-2 text-sm leading-6 text-sub">{empty ? "この大会の体験は、まだありません。" : "自分の目標タイムに近い完走者の経験を、レース計画の参考に。"}</p></div>
       {!empty && <a href="#write-review" onClick={() => setWriting(true)} className="rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream">体験を残す</a>}
     </div>

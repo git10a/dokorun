@@ -4,6 +4,7 @@ import { prefectureSlug } from "@/lib/areas";
 import { groupByMap } from "@/lib/collections";
 import { getStations } from "@/lib/stations";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
   title: "駅から探すランニングスポット",
@@ -22,7 +23,7 @@ export default function StationsPage() {
         <p className="text-lg font-bold">路線から探す →</p>
         <p className="mt-1 text-sm text-sub">始点から終点まで、各駅のランニングスポットを順番に見る</p>
       </Link>
-      <h2 className="mt-12 border-l-4 border-brand pl-3 text-xl font-bold">駅名から探す</h2>
+      <SectionHeading className="mt-12">駅名から探す</SectionHeading>
       <div className="mt-10 space-y-5">
         {[...groups].map(([prefecture, stations]) => (
           <details key={prefecture} className="rounded-xl border border-line bg-paper" open={prefecture === "東京都"}>

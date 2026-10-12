@@ -7,6 +7,7 @@ import { prefectureSlug } from "@/lib/areas";
 import { regionGroups } from "@/lib/prefectures";
 import { features } from "@/lib/features";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SectionHeading } from "@/components/section-heading";
 
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
 export const revalidate = 86400;
@@ -43,7 +44,7 @@ export default async function AreasPage() {
         })}
       </div>
       <section className="mt-12">
-        <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold">条件からさがす</h2>
+        <SectionHeading className="mb-4">条件からさがす</SectionHeading>
         <div className="flex flex-wrap gap-2.5">
           {features.map((feature) => (
             <Link key={feature.slug} href={`/features/${feature.slug}`} className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">

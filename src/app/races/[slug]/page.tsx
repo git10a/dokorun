@@ -21,6 +21,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 import { getPublishedStories, raceStories } from "@/lib/race-stories";
 import { RaceStoryCard } from "@/components/race-story";
+import { SectionHeading } from "@/components/section-heading";
 
 // スポット情報の更新反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
 export const revalidate = 3600;
@@ -91,13 +92,13 @@ export default async function RacePage({ params }: { params: Params }) {
           </p>
         </div> : <p className="rounded-xl bg-cream p-6 text-sm">コースデータは準備中です。最新のコースは<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式サイト</a>でご確認ください。</p>} />
       {spotItems.length > 0 && <section id="nearby" className="mt-12 scroll-mt-24">
-      <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">近くの有名ランニングスポット</h2>
+      <SectionHeading>近くの有名ランニングスポット</SectionHeading>
       <div className="mt-5 grid snap-x snap-proximity auto-cols-[280px] grid-flow-col gap-5 overflow-x-auto p-1 pb-3 lg:grid-flow-row lg:grid-cols-3">
         {spotItems.map((item) => <SpotCard key={item.spot.slug} spot={item.spot} compact />)}
       </div>
       </section>}
       <section className="mt-14">
-        <h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold">ほかの大会</h2>
+        <SectionHeading className="mb-4">ほかの大会</SectionHeading>
         <div className="flex flex-wrap gap-2.5">
           {otherRaces.map((item) => (
             <Link key={item.slug} href={`/races/${item.slug}`} className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">

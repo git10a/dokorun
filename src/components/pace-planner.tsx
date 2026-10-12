@@ -7,6 +7,7 @@ import { buildPacePlan, canUseHills, HILL_EFFORT_RANGE, hillEffortLabel, pacePla
 import { formatDuration } from "@/lib/format";
 import type { RaceElevation } from "@/lib/race-elevation";
 import { track } from "@/lib/track";
+import { SectionHeading } from "@/components/section-heading";
 
 type Props = { slug: string; raceName: string; distanceKm: number; hasCourse: boolean; onTargetChange?: (targetS: number) => void };
 
@@ -84,7 +85,7 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
   const condition = pacePlanCondition(plan);
 
   return <section id="pace" className="mt-12 scroll-mt-24">
-    <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">ペース表をつくる</h2>
+    <SectionHeading>ペース表をつくる</SectionHeading>
     <div className="mt-4 rounded-2xl bg-cream p-4 sm:p-5">
       <p className="text-sm font-bold">目標タイム</p>
       <div className="mt-2 flex items-center justify-center gap-4">

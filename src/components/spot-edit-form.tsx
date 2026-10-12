@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useActionState } from "react";
 import { updateSpotInfo, type SpotEditState } from "@/app/spots/[slug]/edit/actions";
 import { courseTypeLabels, courseTypes, facilityKeys, facilityLabels, lightingLabels, lightings, surfaceLabels, surfaces, type CourseType, type Lighting, type Surface } from "@/lib/types";
+import { SectionHeading } from "@/components/section-heading";
 
 export type SpotEditValues = {
   id: string;
@@ -39,7 +40,7 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
       <input type="hidden" name="spotSlug" value={spot.slug} />
       {state.message && <div className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
       <section>
-        <h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">基本情報</h2>
+        <SectionHeading className="mb-5">基本情報</SectionHeading>
         <div className="grid gap-5 sm:grid-cols-2">
           <Field label="名前" name="name" required maxLength={80} defaultValue={spot.name} error={error("name")} />
           <Field label="かな" name="nameKana" required maxLength={120} defaultValue={spot.nameKana} error={error("nameKana")} />
@@ -48,7 +49,7 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
         <label className="mt-5 block text-sm font-bold">アクセス<textarea name="access" rows={3} maxLength={1000} defaultValue={spot.access ?? ""} placeholder="最寄り駅からの行き方、スタート地点の目印など" className="mt-2 w-full rounded-lg border border-line p-3 font-normal outline-none focus:border-ink" />{error("access") && <span className="mt-1 block text-xs text-danger">{error("access")}</span>}</label>
       </section>
       <section>
-        <h2 className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold">コース情報</h2>
+        <SectionHeading className="mb-2">コース情報</SectionHeading>
         <p className="mb-5 text-sm text-sub">距離・高低差はコースデータから自動計算しているため、このフォームからは修正できません。おかしい場合は<Link href="/contact" className="font-bold text-accent">お問い合わせ</Link>からご連絡ください。</p>
         <div className="grid gap-5 sm:grid-cols-3">
           <label className="text-sm font-bold">形状<select name="courseType" defaultValue={spot.courseType} className={fieldClass}>{courseTypes.map((value) => <option key={value} value={value}>{courseTypeLabels[value]}</option>)}</select></label>
