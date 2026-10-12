@@ -1,5 +1,5 @@
 // 切り口別まとめページ(/features/{slug})の定義。
-// 絞り込み条件は src/db/data.ts の featureCondition がスラッグに対応して持つ
+// 絞り込み条件は src/db/queries/catalog.ts の featureCondition がスラッグに対応して持つ
 export type FeatureDef = {
   slug: string;
   name: string;
