@@ -49,7 +49,7 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
       </section>
       <section>
         <h2 className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold">コース情報</h2>
-        <p className="mb-5 text-sm text-sub">距離・高低差はGPXから自動計算しているため、このフォームからは修正できません。おかしい場合は<Link href="/contact" className="font-bold text-accent">お問い合わせ</Link>からご連絡ください。</p>
+        <p className="mb-5 text-sm text-sub">距離・高低差はコースデータから自動計算しているため、このフォームからは修正できません。おかしい場合は<Link href="/contact" className="font-bold text-accent">お問い合わせ</Link>からご連絡ください。</p>
         <div className="grid gap-5 sm:grid-cols-3">
           <label className="text-sm font-bold">形状<select name="courseType" defaultValue={spot.courseType} className={fieldClass}>{courseTypes.map((value) => <option key={value} value={value}>{courseTypeLabels[value]}</option>)}</select></label>
           <label className="text-sm font-bold">路面<select name="surface" defaultValue={spot.surface} className={fieldClass}>{surfaces.map((value) => <option key={value} value={value}>{surfaceLabels[value]}</option>)}</select></label>

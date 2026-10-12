@@ -1,5 +1,5 @@
 #!/bin/bash
-# 本番D1のスナップショットを取ってからbuild+uploadする。
+# 公開カタログだけのスナップショットを取ってからbuild+uploadする。
 # ビルド時プリレンダ(トップ/sitemap)が本番データを参照するための入り口。
 # uploadは本番トラフィックを切り替えない。smoke後にrelease.mjsで段階配信する。
 set -euo pipefail
@@ -14,7 +14,7 @@ fi
 node scripts/d1-snapshot.mjs .d1-build/prod.sqlite
 
 # opennextjs-cloudflare build は内部で `npm run build` を呼ぶため、GPX同期・高低図生成はそちらで走る
-D1_LOCAL_PATH=.d1-build/prod.sqlite NEXT_PUBLIC_SITE_URL=https://dokorun.com opennextjs-cloudflare build
+D1_PUBLIC_SNAPSHOT=1 D1_LOCAL_PATH=.d1-build/prod.sqlite NEXT_PUBLIC_SITE_URL=https://dokorun.com opennextjs-cloudflare build
 
 sha="$(git rev-parse --short=12 HEAD)"
 message="${RELEASE_MESSAGE:-release ${sha}}"

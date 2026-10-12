@@ -6,7 +6,7 @@ import { userAvatars } from "@/db/schema";
 
 const userIdSchema = z.string().uuid();
 
-export async function GET(request: Request, { params }: { params: Promise<{ userId: string }> }) {
+export async function GET(_request: Request, { params }: { params: Promise<{ userId: string }> }) {
   const { userId } = await params;
   const parsed = userIdSchema.safeParse(userId);
   if (!parsed.success) return new NextResponse(null, { status: 404 });
@@ -14,9 +14,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ user
     .from(userAvatars).where(eq(userAvatars.userId, parsed.data)).limit(1);
   const row = rows[0];
   if (!row) return new NextResponse(null, { status: 404 });
-  const cacheControl = new URL(request.url).searchParams.has("v")
-    ? "public, max-age=31536000, immutable"
-    : "public, max-age=300";
+  const cacheControl = "private, no-store, max-age=0";
   const bytes = Buffer.from(row.data, "base64");
   return new NextResponse(bytes, { headers: { "Content-Type": row.contentType, "Cache-Control": cacheControl } });
 }

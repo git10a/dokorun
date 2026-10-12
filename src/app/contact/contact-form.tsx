@@ -31,7 +31,7 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
     return (
       <div className="rounded-2xl bg-cream px-5 py-12 text-center">
         <p className="text-xl font-bold">送信しました。ありがとうございます!</p>
-        <p className="mt-3 text-sub">いただいた内容はすべて運営が読んでいます。掲載リクエストは順次調査して追加していきます。</p>
+        <p className="mt-3 text-sub">いただいた内容を運営が確認します。掲載リクエストは、コース情報や作成できるデータを調べたうえで検討します。</p>
       </div>
     );
   }
@@ -53,7 +53,7 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
       </fieldset>
       <div>
         <label htmlFor="feedback-message" className="mb-2 block font-bold">本文 <span className="text-sm font-normal text-sub">(必須・2000文字まで)</span></label>
-        <textarea id="feedback-message" name="message" required maxLength={2000} rows={6} placeholder="例: 〇〇県の△△公園を掲載してほしいです。1周約2kmでトイレと駐車場があります。" defaultValue={initialMessage} className={inputClass} />
+        <textarea id="feedback-message" name="message" required maxLength={2000} rows={6} placeholder="例：〇〇マラソンのコースを掲載してほしいです。開催年・種目・公式サイトも、わかれば教えてください。" defaultValue={initialMessage} className={inputClass} />
       </div>
       <div>
         <label htmlFor="feedback-contact" className="mb-2 block font-bold">連絡先 <span className="text-sm font-normal text-sub">(任意・メールアドレスやXアカウントなど)</span></label>

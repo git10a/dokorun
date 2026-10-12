@@ -1,3 +1,4 @@
+import { analyticsPath, sanitizeAnalyticsMeta } from "./analytics-privacy";
 const VISITOR_ID_KEY = "dokorun:visitor-id";
 const SESSION_ID_KEY = "dokorun:session-id";
 const INTERNAL_TRAFFIC_KEY = "dokorun:internal-traffic";
@@ -17,6 +18,11 @@ function measurementContext() {
     const internalParam = query.get("dokorun_internal");
     if (internalParam === "1") localStorage.setItem(INTERNAL_TRAFFIC_KEY, "1");
     if (internalParam === "0") localStorage.removeItem(INTERNAL_TRAFFIC_KEY);
+    const created = Number(localStorage.getItem("dokorun:visitor-created"));
+    if (!created || Date.now() - created > 30 * 24 * 60 * 60 * 1000) {
+      localStorage.removeItem(VISITOR_ID_KEY);
+      localStorage.setItem("dokorun:visitor-created", String(Date.now()));
+    }
     const referrerHost = document.referrer ? new URL(document.referrer).hostname : undefined;
     return {
       visitorId: storedId(localStorage, VISITOR_ID_KEY),
@@ -34,7 +40,7 @@ function measurementContext() {
 export function track(name: string, meta?: Record<string, unknown>) {
   if (typeof window === "undefined") return;
   try {
-    const body = JSON.stringify({ name, path: window.location.pathname, meta: { ...meta, ...measurementContext() } });
+    const body = JSON.stringify({ name, path: analyticsPath(window.location.pathname), meta: sanitizeAnalyticsMeta({ ...meta, ...measurementContext() }) });
     if (navigator.sendBeacon?.("/api/track", new Blob([body], { type: "application/json" }))) return;
     void fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true }).catch(() => {});
   } catch {

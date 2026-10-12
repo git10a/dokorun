@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import { openGraph, siteConfig } from "@/lib/site";
 import { ArrowRight } from "lucide-react";
@@ -39,7 +40,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-2xl">
           <h1 className="text-2xl font-black leading-snug tracking-tight sm:text-4xl sm:leading-tight"><span className="inline-block">どこランは、</span><span className="inline-block">マラソン大会のコースを</span><span className="inline-block">予習できるサイトです。</span></h1>
           {/* 3行の締めでユーザーの得になる「ゴールで笑える」だけ、文字の足元に白いマーカーを重ねて立たせる */}
-          <p className="mt-5 text-sm font-bold leading-7 sm:text-lg sm:leading-8"><span className="block">コースを知れば、ペースが変わる。</span><span className="block">ペースが変われば、タイムが縮む。</span><span className="block">タイムが縮めば、<span className="bg-[linear-gradient(transparent_72%,var(--color-paper)_72%)] px-0.5">ゴールで笑える</span>。</span></p>
+          <p className="mt-5 text-sm font-bold leading-7 sm:text-lg sm:leading-8">{siteConfig.tagline.map((line) => <span key={line} className="block">{line.split("ゴールで笑える").map((part, index) => <Fragment key={index}>{index > 0 && <span className="bg-[linear-gradient(transparent_72%,var(--color-paper)_72%)] px-0.5">ゴールで笑える</span>}{part}</Fragment>)}</span>)}</p>
           <div className="relative mt-14 sm:mt-16">
             {/* 素材は左向き。検索ボックスの上を右へ走らせるため2人とも反転する */}
             <div className="pointer-events-none absolute -top-11 left-4 flex items-end gap-1 sm:-top-14" aria-hidden="true">
@@ -56,7 +57,7 @@ export default async function HomePage() {
       <div className="mx-auto max-w-7xl space-y-12 px-4 pt-10 sm:space-y-16 sm:pt-12 md:px-6">
         <section>
           {upcoming.length > 0 && <><div className="mb-4 flex items-end justify-between gap-4 sm:mb-6"><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">もうすぐ開催の大会</h2><Link href="/races" className="flex shrink-0 items-center gap-1 text-sm font-bold text-accent">すべて見る <ArrowRight size={16} /></Link></div><div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">{upcoming.slice(0, 6).map((race) => <RaceCard key={race.slug} race={race} />)}</div></>}
-          <div className="flex flex-col gap-3 rounded-xl border-2 border-dashed border-line px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><p className="text-sm"><span className="font-bold">出る大会が載っていない？</span><span className="ml-1 text-sub">コース・GPXを作ってほしい大会を教えてください。</span></p><Link href={`/contact?${new URLSearchParams({ category: "spot_request", message: "掲載してほしい大会：\n\n大会の公式サイト（わかれば）：\n" })}`} className="shrink-0 self-start rounded-lg border border-ink bg-paper px-4 py-2 text-sm font-bold hover:bg-cream sm:self-auto">大会をリクエスト</Link></div>
+          <div className="flex flex-col gap-3 rounded-xl border-2 border-dashed border-line px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><p className="text-sm"><span className="font-bold">出る大会が載っていない？</span><span className="ml-1 text-sub">コースを掲載してほしい大会を教えてください。</span></p><Link href={`/contact?${new URLSearchParams({ category: "spot_request", message: "掲載してほしい大会：\n\n大会の公式サイト（わかれば）：\n" })}`} className="shrink-0 self-start rounded-lg border border-ink bg-paper px-4 py-2 text-sm font-bold hover:bg-cream sm:self-auto">大会をリクエスト</Link></div>
         </section>
       </div>
       <section id="spot-search" className="mx-auto mt-12 max-w-7xl scroll-mt-20 px-4 pb-4 sm:mt-16 md:px-6">

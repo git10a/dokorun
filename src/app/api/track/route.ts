@@ -1,24 +1,28 @@
-import { NextResponse } from "next/server";
-import { z } from "zod";
 import { getDb } from "@/db";
 import { events } from "@/db/schema";
+import { analyticsEventNames, analyticsPath, sanitizeAnalyticsMeta } from "@/lib/analytics-privacy";
 
-const bodySchema = z.object({
-  name: z.string().regex(/^[a-z0-9_]{1,40}$/),
-  path: z.string().max(300).optional(),
-  meta: z.record(z.string(), z.unknown()).optional(),
-});
-
-// 計測エンドポイント。失敗してもクライアントに影響させないため常に204を返す
 export async function POST(request: Request) {
-  const parsed = bodySchema.safeParse(await request.json().catch(() => null));
-  if (parsed.success) {
-    const meta = parsed.data.meta && JSON.stringify(parsed.data.meta).length <= 1000 ? parsed.data.meta : null;
-    try {
-      await getDb().insert(events).values({ name: parsed.data.name, path: parsed.data.path ?? null, meta });
-    } catch {
-      // 書き込み失敗は握りつぶす
+  // Only bounded, explicitly selected fields are persisted. Never store arbitrary metadata.
+  const reader = request.body?.getReader();
+  let size = 0;
+  const chunks: Uint8Array[] = [];
+  if (!reader) return new Response(null, { status: 204 });
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > 4096) { await reader.cancel(); return new Response(null, { status: 204 }); }
+      chunks.push(value);
     }
-  }
-  return new NextResponse(null, { status: 204 });
+    const bytes = new Uint8Array(size);
+    let offset = 0;
+    for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
+    const body = JSON.parse(new TextDecoder().decode(bytes));
+    if (body && analyticsEventNames.has(body.name)) {
+      await getDb().insert(events).values({ name: body.name, path: analyticsPath(body.path), meta: sanitizeAnalyticsMeta(body.meta) });
+    }
+  } catch { /* Metrics must not affect the primary action. Do not log submitted data. */ }
+  return new Response(null, { status: 204 });
 }

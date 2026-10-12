@@ -16,7 +16,7 @@ import sitemap from "@/app/sitemap";
 afterEach(() => vi.unstubAllEnvs());
 
 describe("race page SEO preservation", () => {
-  it("keeps every existing race URL, a self-canonical, and the former search intent", async () => {
+  it("keeps every existing race URL, a self-canonical, and course search intent", async () => {
     vi.stubEnv("NEXT_PUBLIC_SITE_URL", "https://dokorun.com");
     expect(generateStaticParams().map((value) => value.slug).sort()).toEqual(races.map((race) => race.slug).sort());
     const sitemapUrls = new Set((await sitemap()).map((page) => page.url));
@@ -24,7 +24,7 @@ describe("race page SEO preservation", () => {
       const meta = await generateMetadata({ params: Promise.resolve({ slug: race.slug }) });
       expect(meta.alternates?.canonical).toBe(`https://dokorun.com/races/${race.slug}`);
       expect(meta.title).toContain(race.name);
-      expect(meta.title).toContain("コースマップ・GPX");
+      expect(meta.title).toContain("コースマップ・高低図");
       expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();
@@ -35,7 +35,7 @@ describe("race page SEO preservation", () => {
   it("renders a race with no nearby spots, while unknown races remain 404", async () => {
     const page = await RacePage({ params: Promise.resolve({ slug: "itabashi-city-marathon" }) });
     const html = renderToStaticMarkup(page);
-    expect(html).toContain("板橋Cityマラソンのコースマップ・GPX");
+    expect(html).toContain("板橋Cityマラソンのコースマップ");
     expect(html).toContain("BreadcrumbList");
     expect(html).not.toContain('"@type":"ItemList"');
     expect(html).not.toContain("AggregateRating");

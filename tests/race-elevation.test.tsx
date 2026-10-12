@@ -45,7 +45,7 @@ describe("race elevation map alignment", () => {
   });
   it("distinguishes missing elevation, GPX measurements and terrain estimates", () => {
     const render = (value: typeof profile) => renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />);
-    expect(render(profile)).toContain("GPXに記録された標高");
+    expect(render(profile)).toContain("コースデータに記録された標高");
     expect(render({ ...profile, source: "gsi" })).toContain("国土地理院の標高タイル");
     const missing = render({ ...profile, points: profile.points.map((point) => ({ ...point, elevationM: null })) });
     expect(missing).toContain("標高データは準備中");

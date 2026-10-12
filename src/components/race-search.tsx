@@ -36,7 +36,7 @@ export function RaceSearch({ races }: { races: RaceOption[] }) {
       </div>
       {normalized && <div id={listId} className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-2xl border border-line bg-paper shadow-xl">
         {matches.length > 0 ? <ul>{matches.map((race) => <li key={race.slug}><Link href={`/races/${race.slug}`} onClick={() => track("race_search", { hit: true })} className="flex items-center justify-between gap-3 border-b border-line px-4 py-3 last:border-0 hover:bg-cream"><span><span className="block font-bold">{race.name}</span><span className="text-xs text-sub">{race.date}・{race.prefecture}</span></span><ChevronRight size={18} className="shrink-0 text-sub" /></Link></li>)}</ul>
-          : <div className="px-4 py-4 text-sm"><p className="font-bold">「{query.trim()}」はまだ掲載していません</p><Link href={requestHref} className="mt-2 inline-flex items-center gap-1 font-bold text-accent underline underline-offset-4">この大会のコース・GPXをリクエストする</Link></div>}
+          : <div className="px-4 py-4 text-sm"><p className="font-bold">「{query.trim()}」はまだ掲載していません</p><Link href={requestHref} className="mt-2 inline-flex items-center gap-1 font-bold text-accent underline underline-offset-4">この大会の掲載をリクエストする</Link></div>}
       </div>}
     </form>
   );

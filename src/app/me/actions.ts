@@ -89,9 +89,9 @@ export async function deleteAvatar(): Promise<AvatarState> {
   if (!user) return { status: "error", message: "ログインしてください" };
   const db = getDb();
   await db.delete(userAvatars).where(eq(userAvatars.userId, user.id));
-  await db.update(users).set({ customAvatarAt: null }).where(eq(users.id, user.id));
+  await db.update(users).set({ customAvatarAt: null, image: null }).where(eq(users.id, user.id));
   revalidatePath(`/u/${user.handle}`);
-  return { status: "saved", message: "Googleの画像に戻しました" };
+  return { status: "saved", message: "アバターを削除しました" };
 }
 
 export async function updatePbs(_: PbState, formData: FormData): Promise<PbState> {

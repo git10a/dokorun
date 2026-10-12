@@ -117,7 +117,7 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
       <p id="review-filter-help" className="mt-2 text-xs leading-5 text-sub">掲載種目：{distanceLabel}。目標の前後15分で完走した人を表示します。記録は本人の申告です。</p>
     </form>}
     <div aria-live="polite" className="mt-3 text-sm">{loading && <p>読み込み中…</p>}{message && <p className="rounded-lg bg-brand/20 p-3">{message}</p>}{error && <p role="alert" className="rounded-lg border border-danger p-3 text-danger">{error}</p>}</div>
-    {!page.available ? <div className="py-8 text-sm text-sub"><p>現在、体験を読み込めません。コースとGPXは引き続きご利用いただけます。</p><button type="button" onClick={() => void load(target)} disabled={loading} className="mt-3 font-bold text-accent underline">もう一度読み込む</button></div>
+    {!page.available ? <div className="py-8 text-sm text-sub"><p>現在、体験を読み込めません。コースマップの閲覧やダウンロードは引き続きご利用いただけます。</p><button type="button" onClick={() => void load(target)} disabled={loading} className="mt-3 font-bold text-accent underline">もう一度読み込む</button></div>
       : empty ? null
       : !page.reviews.length ? <div className="py-9 text-center"><p className="font-bold">{target === null ? "この大会の体験は、まだありません。" : "このタイムに近い体験は、まだありません。"}</p><p className="mt-2 text-sm text-sub">{target === null ? "走ったことのある方は、覚えていることをひとつ残してみませんか。" : "「すべて見る」から、ほかの完走者の体験も読めます。"}</p></div>
       : <div className="mt-3 divide-y divide-line">{page.reviews.map((review) => <article key={review.id} className="py-6">
@@ -150,5 +150,6 @@ export function RaceReviews({ slug, distanceLabel, maxKm, initial, suggestedTarg
         <div className="flex flex-wrap gap-3"><button disabled={saving || !page.available} className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark disabled:opacity-50">{saving ? "保存中…" : editing ? "変更を保存する" : "体験を残す"}</button><button type="button" disabled={saving} onClick={() => { setEditing(null); setWriting(false); setDraftVersion((value) => value + 1); }} className="px-3 text-sm underline">{editing ? "編集をやめる" : "閉じる"}</button></div>
       </form>}
     </div>
+    {session && <Link href="/me/race-reviews" className="mt-4 inline-block text-sm font-bold text-accent underline underline-offset-4">自分が投稿した大会の体験を見る</Link>}
   </section>;
 }

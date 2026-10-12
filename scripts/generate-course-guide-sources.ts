@@ -45,7 +45,7 @@ function stationStart(sample: ResearchSample, index: number, routeMode: "loop" |
     routeMode,
     accessText: stationIsUseful ? `${station.name}駅からコースまで約${station.distance}` : "登録されているコース起点へ移動",
     facilitiesText: "設備欄と現地案内を出発前に確認してください",
-    firstSection: routeMode === "reverse" ? "GPXの終点側から逆向きに走ります。" : "地図とGPXで最初の分岐を確認してから走り始めます。",
+    firstSection: routeMode === "reverse" ? "掲載コースの終点側から逆向きに走ります。" : "コースマップで最初の分岐を確認してから走り始めます。",
   };
 }
 
@@ -130,16 +130,16 @@ for (const entry of coverage.entries) {
         linkLabel: natureCourse ? "環境省の自然歩道初心者ガイド" : "警察庁の交通安全情報",
       },
       ...(entry.issues.includes("loop_not_closed") ? [{
-        title: "登録GPXの始点と終点が離れています",
-        body: "周回表記ですが、現在の登録GPXは始点まで戻り切らない形です。ダウンロードしたGPXの終点から始点までの移動経路は、現地の通行案内を確認してください。",
+        title: "登録コースの始点と終点が離れています",
+        body: "周回表記ですが、現在の登録コースは始点まで戻り切らない形です。ダウンロードしたコースの終点から始点までの移動経路は、現地の通行案内を確認してください。",
         url: "https://dokorun.com/guide/gpx",
-        linkLabel: "GPXの使い方と注意点",
+        linkLabel: "コースデータの使い方と注意点",
       }] : []),
       {
         title: "コースデータは出発前にも確認してください",
         body: `アクセス情報: ${entry.access} 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。`,
         url: "https://dokorun.com/guide/gpx",
-        linkLabel: "どこランのGPX利用ガイド",
+        linkLabel: "ウォッチ・アプリへの取り込みガイド",
       },
     ],
     startPoints: startsFor(entry, research.samples),

@@ -1,4 +1,5 @@
 import { spawnSync } from "node:child_process";
+import { enforcePrivateRequestLogs } from "./cf-private-api.mjs";
 
 const [stableVersion, newVersion, newPercentageRaw, ...messageParts] = process.argv.slice(2);
 const newPercentage = Number(newPercentageRaw);
@@ -18,4 +19,6 @@ const result = spawnSync("npx", ["wrangler", "versions", "deploy", ...specs, "--
   stdio: "inherit",
 });
 if (result.error) throw result.error;
-process.exit(result.status ?? 1);
+if (result.status !== 0) process.exit(result.status ?? 1);
+// Wrangler 4.86 cannot express redact_query_string; enforce and read it back via the API.
+await enforcePrivateRequestLogs();

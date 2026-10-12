@@ -3,7 +3,7 @@ import { racesByCalendar, type RaceDef } from "./races";
 
 export { raceDateKey };
 
-// 掲載日程は当年分のみ。開催前(当日含む)を日付順に、開催済みは次回に向けて後ろへ回す
+// 掲載日程は年をまたぐ。開催前(当日含む)を日付順に、開催済みは次回に向けて後ろへ回す
 export function splitRacesBySchedule(todayKey = jstTodayKey()) {
   const upcoming: RaceDef[] = [];
   const finished: RaceDef[] = [];

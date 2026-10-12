@@ -49,7 +49,7 @@ export function RaceElevationChart({ profile, selectedDistanceM, onSelect }: {
   return <div className="mt-3 rounded-xl border border-line bg-paper px-3 py-4 sm:px-5">
     <h3 className="font-bold">コースの高低差</h3>
     <p id={hintId} className="mt-1 text-xs leading-5 text-sub">グラフをタップすると、その地点を地図で確認できます。</p>
-    {profile.routeReviewRequired && <p className="mt-3 rounded-lg border border-brand bg-cream p-3 text-xs leading-5"><strong>コースの経路・標高を確認中です。</strong> この参考GPXは大会公式コースとの照合が必要です。ペース計画に使う前に、大会公式のコース図・高低図をご確認ください。</p>}
+    {profile.routeReviewRequired && <p className="mt-3 rounded-lg border border-brand bg-cream p-3 text-xs leading-5"><strong>コースの経路・標高を確認中です。</strong> この参考コースデータは大会公式コースとの照合が必要です。ペース計画に使う前に、大会公式のコース図・高低図をご確認ください。</p>}
     <div className="mt-3 flex min-h-12 flex-wrap items-baseline gap-x-4 gap-y-1 rounded-lg bg-cream px-3 py-2 text-sm" aria-live="polite" aria-atomic="true">
       {selected ? <><span>スタートから <strong className="tabular-nums">{distanceLabel}</strong></span><span>標高 <strong className="tabular-nums">{elevationLabel}</strong></span></>
         : <><span>最低 <strong>約 {Math.round(minimum)} m</strong></span><span>最高 <strong>約 {Math.round(maximum)} m</strong></span><span className="text-xs text-sub">標高の差 {Math.round(maximum - minimum)} m</span></>}
@@ -87,6 +87,6 @@ export function RaceElevationChart({ profile, selectedDistanceM, onSelect }: {
           {selected.elevationM !== null && <circle cx={x(selected.distanceM)} cy={y(selected.elevationM)} r="6" fill="#FFD900" stroke="#1A1A1A" strokeWidth="2" />}</g>}
       </g>
     </svg>
-    <p className="mt-1 text-[11px] leading-5 text-sub">{profile.source === "gsi" ? <>地形の高さの目安（橋・トンネルは路面と異なります）。出典：<a className="underline" href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noreferrer">国土地理院の標高タイル</a>を加工</> : "GPXに記録された標高（測定誤差を含みます）"}{values.length < profile.points.length && "。標高データのない区間は線を表示していません"}</p>
+    <p className="mt-1 text-[11px] leading-5 text-sub">{profile.source === "gsi" ? <>地形の高さの目安（橋・トンネルは路面と異なります）。出典：<a className="underline" href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noreferrer">国土地理院の標高タイル</a>を加工</> : "コースデータに記録された標高（測定誤差を含みます）"}{values.length < profile.points.length && "。標高データのない区間は線を表示していません"}</p>
   </div>;
 }

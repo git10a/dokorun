@@ -61,6 +61,8 @@ function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
 // WorkersのD1バインディングはリクエストに紐づくため、モジュールスコープでは保持しない。
 // Nodeで動くビルド・CLI用のローカルsqliteだけは同一プロセス内で再利用してよい。
 export function getDb(): Database {
+  // An explicit build/test file must not be shadowed by Miniflare dev bindings.
+  if (!isWorkersRuntime && process.env.D1_LOCAL_PATH) return localFileDb ??= fromLocalFile();
   const boundDb = fromBinding();
   if (boundDb) return boundDb;
   localFileDb ??= fromLocalFile();

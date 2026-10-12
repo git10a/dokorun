@@ -15,7 +15,7 @@ export function RaceExperience({ slug, name, distanceLabel, maxKm, hasCourse, ma
   const [paceTargetS, setPaceTargetS] = useState<number | null>(null);
   return <>
     <section id="course-map" className="mt-6 scroll-mt-24">
-      <h2 className="sr-only">コースマップ・GPX</h2>
+      <h2 className="sr-only">コースマップ・ダウンロード</h2>
       {hasCourse ? <RaceCourseMap key={slug} slug={slug} name={name} selectedKm={selectedKm} onSelectKm={setSelectedKm} overlay={mapOverlay} note={courseNote} /> : courseNote}
     </section>
     <PacePlanner slug={slug} raceName={name} distanceKm={maxKm} hasCourse={hasCourse} onTargetChange={setPaceTargetS} />

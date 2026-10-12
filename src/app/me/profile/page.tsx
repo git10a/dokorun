@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProfileUserById, getUserPbs } from "@/db/data";
+import { DeleteAccountForm } from "@/components/auth/delete-account-form";
 import { AvatarUploader } from "@/components/auth/avatar-uploader";
 import { PbForm } from "@/components/auth/pb-form";
 import { ProfileForm } from "@/components/auth/profile-form";
@@ -38,6 +39,7 @@ export default async function ProfileEditPage() {
         <h2 className="border-l-4 border-brand pl-3 text-xl font-bold">自己ベスト</h2>
         <PbForm pbs={pbs} />
       </section>
+      <DeleteAccountForm />
     </div>
   );
 }
