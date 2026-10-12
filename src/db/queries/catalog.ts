@@ -7,12 +7,9 @@ import { prefectures } from "@/lib/prefectures";
 import type { SearchFilters } from "@/lib/spot-search";
 import { courseTypes, type CourseType, type MapSpot } from "@/lib/types";
 import { castleRunSpotSlugs, castleRunTag, longRunDistanceM, longRunTag, virtualTagSlugs } from "@/lib/virtual-tags";
-import { addRelations, hashiritaiCountExpr, primaryCourseJoin, spotHasTag, summarySelection } from "./spot-rows";
+import { addRelations, primaryCourseJoin, spotHasTag, summarySelection } from "./spot-rows";
 
 // 公開カタログ(検索・エリア・特集・サイトマップ)。ほとんどが unstable_cache で "public-catalog" タグにぶら下がる
-
-// ホームで迷ったときの入口として固定表示する定番スポット
-const classicSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
 
 async function loadTags() {
   return getDb().select().from(tags).orderBy(tags.category, tags.sortOrder);
@@ -36,14 +33,14 @@ async function loadPrefectureCounts() {
     .orderBy(spots.prefecture);
 }
 
-// エリアハブページ用: 都道府県内の全スポットをハシリタイ数順で返す
+// エリアハブページ用: 都道府県内の全スポットをかな順で返す
 async function loadSpotsByPrefecture(prefecture: string) {
   const rows = await getDb()
     .select(summarySelection)
     .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(spots.isPublished, true), eq(spots.prefecture, prefecture)))
-    .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
+    .orderBy(asc(spots.nameKana));
   return addRelations(rows);
 }
 
@@ -79,7 +76,7 @@ async function loadFeatureSpots(featureSlug: string) {
     .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(spots.isPublished, true), condition))
-    .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
+    .orderBy(asc(spots.nameKana));
   return addRelations(rows);
 }
 
@@ -124,7 +121,6 @@ function searchConditions(filters: SearchFilters) {
   if (filters.toilet) conditions.push(eq(spots.hasToilet, true));
   if (filters.locker) conditions.push(eq(spots.hasLocker, true));
   if (filters.sento) conditions.push(eq(spots.hasSentoNearby, true));
-  if (filters.popular) conditions.push(or(sql`${hashiritaiCountExpr} > 0`, inArray(spots.slug, classicSpotSlugs))!);
   if (realTagSlugs.length) {
     const selectedTags = inArray(tags.slug, realTagSlugs);
     conditions.push(sql`(
@@ -151,7 +147,6 @@ function searchOrder(filters: SearchFilters) {
   if (near) return near;
   if (filters.sort === "distance_asc") return asc(courses.distanceM);
   if (filters.sort === "distance_desc") return desc(courses.distanceM);
-  if (filters.sort === "popular" || (filters.popular && filters.sort !== "new")) return desc(hashiritaiCountExpr);
   return desc(spots.createdAt);
 }
 
@@ -232,7 +227,7 @@ export const getFeatureCounts = unstable_cache(
 );
 export const getSitemapSpots = unstable_cache(loadSitemapSpots, ["public-catalog-v1", "getSitemapSpots"], catalogCache);
 
-const cacheableSorts = new Set(["popular", "new", "distance_asc", "distance_desc"]);
+const cacheableSorts = new Set(["new", "distance_asc", "distance_desc"]);
 const cacheableDistanceBounds = new Set([undefined, 0, 3000, 5000, 10000]);
 const maxCacheablePage = 50;
 
@@ -259,7 +254,6 @@ async function catalogSearchFilters(filters: SearchFilters): Promise<SearchFilte
     toilet: Boolean(filters.toilet),
     locker: Boolean(filters.locker),
     sento: Boolean(filters.sento),
-    popular: Boolean(filters.popular),
     sort: filters.sort || undefined,
     page: Math.max(1, Math.floor(filters.page ?? 1)),
     limit: Math.min(100, Math.max(1, Math.floor(filters.limit ?? 20))),

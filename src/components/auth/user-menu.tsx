@@ -5,23 +5,20 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LogOut, UserRound } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
-import { CLIENT_ID_KEY } from "@/lib/hashiritai-client";
 
 export function UserMenu() {
   const { data: session, isPending } = authClient.useSession();
   const [open, setOpen] = useState(false);
   const [avatarFailed, setAvatarFailed] = useState(false);
 
+  // 廃止した「走りたい」の匿名用ブラウザIDが残っていれば消す
   useEffect(() => {
-    if (!session?.user) return;
-    const clientId = localStorage.getItem(CLIENT_ID_KEY);
-    if (!clientId) return;
-    fetch("/api/hashiritai/merge", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ clientId }),
-    }).catch(() => undefined);
-  }, [session?.user]);
+    try {
+      localStorage.removeItem("dokorun:client-id");
+    } catch {
+      // ストレージが使えない環境では何もしない
+    }
+  }, []);
 
   if (isPending) return <span className="h-9 w-14 animate-pulse rounded-lg bg-cream" aria-hidden />;
   if (!session?.user)

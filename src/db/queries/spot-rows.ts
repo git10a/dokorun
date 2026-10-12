@@ -37,11 +37,6 @@ export const summarySelection = {
 // 相関サブクエリ。drizzle は JOIN のないクエリで sql`` 内の列をテーブル名なしで出力し、
 // 外側の spots.id が内側テーブルの id に誤解決されるため、外側の列はテーブル名つきで直書きする
 const outerSpotId = sql.raw(`"spots"."id"`);
-// 公開用スナップショットでのビルド時は、個人データを含む hashiritai の代わりに集計済みの件数を使う
-export const hashiritaiCountExpr =
-  process.env.D1_PUBLIC_SNAPSHOT === "1"
-    ? sql<number>`coalesce((select m."wanted_count" from "build_spot_metrics" m where m."spot_id" = ${outerSpotId}), 0)`
-    : sql<number>`(select count(*) from "hashiritai" h where h."spot_id" = ${outerSpotId})`;
 export const publicRunsCountExpr = sql<number>`(select count(*) from "runs" r where r."spot_id" = ${outerSpotId} and r."visibility" = 'public')`;
 
 export function spotHasTag(tagSlug: string): SQL {

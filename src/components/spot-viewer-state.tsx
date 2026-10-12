@@ -3,11 +3,9 @@
 import { useEffect, useState } from "react";
 import { CheckInButton } from "@/components/checkin-button";
 import { FavoriteButton } from "@/components/favorite-button";
-import { HashiritaiButton } from "@/components/hashiritai-button";
 
 type ViewerState = {
   loggedIn: boolean;
-  isHashiritai: boolean;
   isFavorite: boolean;
   todayRunId: string | null;
 };
@@ -39,7 +37,7 @@ function useViewerState(slug: string) {
         if (active) setState(value);
       })
       .catch(() => {
-        if (active) setState({ loggedIn: false, isHashiritai: false, isFavorite: false, todayRunId: null });
+        if (active) setState({ loggedIn: false, isFavorite: false, todayRunId: null });
       });
     return () => {
       active = false;
@@ -48,12 +46,11 @@ function useViewerState(slug: string) {
   return state;
 }
 
-export function SpotViewerButtons({ spotId, slug, count }: { spotId: string; slug: string; count: number }) {
+export function SpotViewerButtons({ spotId, slug }: { spotId: string; slug: string }) {
   const state = useViewerState(slug);
   if (!state) return <div className="h-10 w-52 animate-pulse rounded-lg bg-cream" aria-label="ユーザー情報を確認中" />;
   return (
     <>
-      <HashiritaiButton slug={slug} count={count} loggedIn={state.loggedIn} initialLiked={state.isHashiritai} />
       <FavoriteButton spotId={spotId} slug={slug} loggedIn={state.loggedIn} initialFavorite={state.isFavorite} />
     </>
   );

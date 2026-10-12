@@ -5,6 +5,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { saveLocalLocation } from "@/lib/local-location";
 import { track } from "@/lib/track";
 
+// 旧URLの sort=popular など、選択肢にない値は新着順として扱う
+const sortOptions = new Set(["new", "near", "distance_asc", "distance_desc"]);
+
 export function SortSelect() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -21,12 +24,6 @@ export function SortSelect() {
     const next = new URLSearchParams(searchParams.toString());
     next.delete("lat");
     next.delete("lng");
-    if (value === "popular") {
-      next.delete("popular");
-      next.set("sort", "popular");
-      apply(next);
-      return;
-    }
     if (value === "near") {
       if (!("geolocation" in navigator)) {
         setError("この端末では位置情報を取得できません");
@@ -50,8 +47,7 @@ export function SortSelect() {
       );
       return;
     }
-    if (value === "new" && !next.has("popular")) next.delete("sort");
-    else if (value === "new") next.set("sort", "new");
+    if (value === "new") next.delete("sort");
     else next.set("sort", value);
     apply(next);
   };
@@ -60,12 +56,11 @@ export function SortSelect() {
     <div className="relative">
       <select
         aria-label="並び順"
-        value={searchParams.get("sort") ?? (searchParams.get("popular") === "1" ? "popular" : "new")}
+        value={sortOptions.has(searchParams.get("sort") ?? "") ? searchParams.get("sort")! : "new"}
         onChange={(event) => changeSort(event.target.value)}
         disabled={locating}
         className="h-10 rounded-lg border border-line bg-paper px-3 text-sm disabled:opacity-60"
       >
-        <option value="popular">走りたいが多い順</option>
         <option value="new">新着順</option>
         <option value="near">{locating ? "現在地を取得中…" : "現在地から近い順"}</option>
         <option value="distance_asc">距離が短い順</option>

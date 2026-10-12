@@ -73,7 +73,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
               <Bookmark size={18} className="mt-0.5 shrink-0" aria-hidden="true" />
               <div>
                 <p className="text-sm font-bold">気になるスポットを保存</p>
-                <p className="mt-1 text-xs leading-5 text-sub">「走りたい」「おすすめ」や、走った記録をまとめて。</p>
+                <p className="mt-1 text-xs leading-5 text-sub">「おすすめ」したスポットや、走った記録をまとめて。</p>
               </div>
             </li>
           </ul>

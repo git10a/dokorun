@@ -13,7 +13,6 @@ export type SearchFilters = {
   toilet?: boolean;
   locker?: boolean;
   sento?: boolean;
-  popular?: boolean;
   sort?: string;
   lat?: number;
   lng?: number;
@@ -50,7 +49,6 @@ export function toSearchFilters(params: SpotSearchParams): SearchFilters {
     toilet: params.toilet === "1",
     locker: params.locker === "1",
     sento: params.sento === "1",
-    popular: params.popular === "1",
     sort: params.sort,
     page: Math.max(1, Number(params.page) || 1),
     lat: validGeo ? lat : undefined,
@@ -75,7 +73,6 @@ export function distanceBetweenKm(latA: number, lngA: number, latB: number, lngB
 
 export function selectedFilterDescriptions(params: SpotSearchParams, tagNames: string[]) {
   const descriptions: string[] = [];
-  if (params.popular === "1") descriptions.push("一覧: 定番・走りたいがあるスポット");
   if (params.q) descriptions.push(`キーワード: ${params.q}`);
   if (params.pref) descriptions.push(`都道府県: ${params.pref}`);
   if (tagNames.length) descriptions.push(`特徴: ${tagNames.join("、")}`);

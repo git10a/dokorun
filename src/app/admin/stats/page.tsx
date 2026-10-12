@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { and, count, desc, eq, gte, inArray, sql } from "drizzle-orm";
 import { getDb } from "@/db";
-import { events, hashiritai, runs, sessions, spots, users } from "@/db/schema";
+import { events, runs, sessions, users } from "@/db/schema";
 import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
@@ -11,7 +11,6 @@ const eventLabels: Record<string, string> = {
   search: "検索実行",
   search_results: "検索結果表示",
   search_fallback: "0件時の近隣候補表示",
-  hashiritai: "走りたい",
   share: "シェア",
   directions: "行き方クリック",
   route_start: "スタート地点へ",
@@ -54,13 +53,11 @@ export default async function AdminStatsPage() {
   const [
     daily,
     topViews,
-    topHashiritai,
     visitorSummary,
     userTotal,
     userRecent,
     recentUsers,
     runActivity,
-    hashiritaiActivity,
     sessionActivity,
     searchFallbacks,
   ] = await Promise.all([
@@ -74,13 +71,6 @@ export default async function AdminStatsPage() {
       .from(events)
       .where(and(eq(events.name, "spot_view"), gte(events.createdAt, since), externalTraffic))
       .groupBy(sql`json_extract(${events.meta}, '$.slug')`)
-      .orderBy(desc(count()))
-      .limit(10),
-    db
-      .select({ name: spots.name, slug: spots.slug, count: count() })
-      .from(hashiritai)
-      .innerJoin(spots, eq(spots.id, hashiritai.spotId))
-      .groupBy(spots.id)
       .orderBy(desc(count()))
       .limit(10),
     db
@@ -119,15 +109,6 @@ export default async function AdminStatsPage() {
       .groupBy(runs.userId),
     db
       .select({
-        userId: hashiritai.userId,
-        count: count(),
-        latestAt: sql<number>`max(${hashiritai.createdAt})`,
-      })
-      .from(hashiritai)
-      .where(sql`${hashiritai.userId} is not null`)
-      .groupBy(hashiritai.userId),
-    db
-      .select({
         userId: sessions.userId,
         latestAt: sql<number>`max(${sessions.updatedAt})`,
       })
@@ -146,22 +127,14 @@ export default async function AdminStatsPage() {
       .limit(10),
   ]);
   const runByUser = new Map(runActivity.map((row) => [row.userId, row]));
-  const hashiritaiByUser = new Map(hashiritaiActivity.map((row) => [row.userId, row]));
   const sessionByUser = new Map(sessionActivity.map((row) => [row.userId, row]));
   const registeredUsers = recentUsers.map((user) => {
     const run = runByUser.get(user.id);
-    const wish = hashiritaiByUser.get(user.id);
     const session = sessionByUser.get(user.id);
     return {
       ...user,
       runCount: run?.count ?? 0,
-      hashiritaiCount: wish?.count ?? 0,
-      lastRecordedAt: Math.max(
-        timestamp(user.updatedAt),
-        timestamp(run?.latestAt),
-        timestamp(wish?.latestAt),
-        timestamp(session?.latestAt),
-      ),
+      lastRecordedAt: Math.max(timestamp(user.updatedAt), timestamp(run?.latestAt), timestamp(session?.latestAt)),
     };
   });
   const days = [...new Set(daily.map((row) => row.day))].sort().reverse();
@@ -201,7 +174,7 @@ export default async function AdminStatsPage() {
           <div>
             <h2 className="text-xl font-bold">登録ユーザー</h2>
             <p className="mt-1 text-xs leading-6 text-sub">
-              最新50人。最終利用はログインセッション・投稿・走りたいなど、サーバーに残った最新記録です。
+              最新50人。最終利用はログインセッション・投稿など、サーバーに残った最新記録です。
             </p>
           </div>
           <p className="text-xs text-sub">セッションが有効でも、現在オンラインとは限りません。</p>
@@ -215,7 +188,6 @@ export default async function AdminStatsPage() {
                   <th className="p-3">登録日</th>
                   <th className="p-3">最終利用記録</th>
                   <th className="p-3 text-right">ランログ</th>
-                  <th className="p-3 text-right">走りたい</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
@@ -230,7 +202,6 @@ export default async function AdminStatsPage() {
                     <td className="whitespace-nowrap p-3">{formatDate(user.createdAt)}</td>
                     <td className="whitespace-nowrap p-3">{formatDate(user.lastRecordedAt)}</td>
                     <td className="p-3 text-right tabular-nums">{user.runCount}</td>
-                    <td className="p-3 text-right tabular-nums">{user.hashiritaiCount}</td>
                   </tr>
                 ))}
               </tbody>
@@ -324,23 +295,6 @@ export default async function AdminStatsPage() {
               </li>
             ))}
             {!topViews.length && <li className="text-sub">まだデータがありません</li>}
-          </ol>
-        </section>
-        <section>
-          <h2 className="mb-4 text-xl font-bold">走りたい累計</h2>
-          <ol className="space-y-2 text-sm">
-            {topHashiritai.map((row) => (
-              <li
-                key={row.slug}
-                className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"
-              >
-                <Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">
-                  {row.name}
-                </Link>
-                <span>{row.count}</span>
-              </li>
-            ))}
-            {!topHashiritai.length && <li className="text-sub">まだデータがありません</li>}
           </ol>
         </section>
       </div>

@@ -1,24 +1,12 @@
 import { and, desc, eq, sql } from "drizzle-orm";
 import { getDb } from "..";
-import {
-  communities,
-  courses,
-  favoriteSpots,
-  hashiritai,
-  photos,
-  runPhotos,
-  runs,
-  spotCommunities,
-  spots,
-  users,
-} from "../schema";
+import { communities, courses, favoriteSpots, photos, runPhotos, runs, spotCommunities, spots, users } from "../schema";
 import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import { jstDayBounds } from "@/lib/jst";
 import type { LineString } from "@/lib/types";
 import { nearOrderExpr } from "./catalog";
 import {
   decorateRows,
-  hashiritaiCountExpr,
   loadPhotoRows,
   loadTagRows,
   primaryCourseJoin,
@@ -41,7 +29,6 @@ const detailSelection = {
     value ? (JSON.parse(value) as LineString) : null,
   ),
   isSimplified: sql`${courses.geojsonSimplified} is not null`.mapWith(Boolean),
-  hashiritaiCount: hashiritaiCountExpr,
   runsCount: publicRunsCountExpr,
 };
 
@@ -113,15 +100,11 @@ export async function getPublishedSpotIdBySlug(slug: string) {
   return rows[0]?.id ?? null;
 }
 
-// ログイン中ユーザーのハシリタイ/お気に入り/本日のチェックイン有無を1クエリで取得
+// ログイン中ユーザーのお気に入り/本日のチェックイン有無を1クエリで取得
 export async function getUserSpotState(spotId: string, userId: string) {
   const { start, end } = jstDayBounds();
   const rows = await getDb()
     .select({
-      isHashiritai:
-        sql`exists (select 1 from ${hashiritai} where ${hashiritai.spotId} = ${spotId} and ${hashiritai.userId} = ${userId})`.mapWith(
-          Boolean,
-        ),
       isFavorite:
         sql`exists (select 1 from ${favoriteSpots} where ${favoriteSpots.spotId} = ${spotId} and ${favoriteSpots.userId} = ${userId})`.mapWith(
           Boolean,
@@ -136,7 +119,6 @@ export async function getUserSpotState(spotId: string, userId: string) {
     .limit(1);
   const row = rows[0];
   return {
-    isHashiritai: row?.isHashiritai ?? false,
     isFavorite: row?.isFavorite ?? false,
     todayRunId: row?.todayRunId ?? null,
   };

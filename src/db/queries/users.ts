@@ -1,20 +1,9 @@
 import { and, count, desc, eq, inArray } from "drizzle-orm";
 import { getDb } from "..";
-import { courses, favoriteSpots, hashiritai, runPhotos, runs, spots, userPbs, users } from "../schema";
+import { courses, favoriteSpots, runPhotos, runs, spots, userPbs, users } from "../schema";
 import { addRelations, primaryCourseJoin, summarySelection } from "./spot-rows";
 
 // ユーザー単位のデータ(マイページ・公開プロフィール)
-
-export async function getUserHashiritai(userId: string) {
-  const rows = await getDb()
-    .select(summarySelection)
-    .from(hashiritai)
-    .innerJoin(spots, eq(spots.id, hashiritai.spotId))
-    .innerJoin(courses, primaryCourseJoin)
-    .where(and(eq(hashiritai.userId, userId), eq(spots.isPublished, true)))
-    .orderBy(desc(hashiritai.createdAt));
-  return addRelations(rows);
-}
 
 export async function getUserFavorites(userId: string) {
   const rows = await getDb()

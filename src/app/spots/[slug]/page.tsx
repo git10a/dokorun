@@ -168,7 +168,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
         </header>
       )}
       <div className="-mt-4 flex flex-wrap items-center gap-2">
-        <SpotViewerButtons spotId={spot.id} slug={spot.slug} count={spot.hashiritaiCount} />
+        <SpotViewerButtons spotId={spot.id} slug={spot.slug} />
         <ShareButtons url={`${baseUrl}/spots/${spot.slug}`} text={`${spot.name}のランニングコース - どこラン`} />
       </div>
       <SpotDetailTabs

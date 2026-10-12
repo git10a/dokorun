@@ -1,5 +1,5 @@
 export const analyticsEventNames = new Set(
-  "area_view checkin_detail_cta course_guide_view directions feature_view feedback footer_checkin_cta gpx_download gpx_guide gpx_help gpx_intent hashiritai lines_near_click lines_near_result pace_plan_copy pace_plan_create pace_plan_print race_day_link race_review_saved race_review_started race_review_view race_search race_view route_start search search_fallback search_results share sort_near spot_edit_view spot_race_link spot_view start_point_select start_recommendation today_location_result today_run_choice".split(
+  "area_view checkin_detail_cta course_guide_view directions feature_view feedback footer_checkin_cta gpx_download gpx_guide gpx_help gpx_intent lines_near_click lines_near_result pace_plan_copy pace_plan_create pace_plan_print pace_table_open race_day_link race_review_saved race_review_started race_review_view race_search race_view route_start search search_fallback search_results share sort_near spot_edit_view spot_race_link spot_view start_point_select start_recommendation today_location_result today_run_choice".split(
     " ",
   ),
 );
@@ -12,7 +12,7 @@ const enums: Record<string, string[]> = {
   result: ["success", "error"],
   category: ["contact", "spot_request"],
   channel: ["copy", "x", "line"],
-  sort: ["near", "new", "popular", "distance_asc", "distance_desc"],
+  sort: ["near", "new", "distance_asc", "distance_desc"],
   type: ["loop", "out_and_back", "one_way", "track"],
   dist: ["0-3", "3-5", "5-10", "10-"],
   destination: ["google_maps"],

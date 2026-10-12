@@ -17,13 +17,11 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
     params.toilet,
     params.locker,
     params.sento,
-    params.popular,
     ...selectedTags,
   ].filter(Boolean);
   return (
     <form action="/spots" className="space-y-4 rounded-xl border border-line bg-paper p-4 sm:p-5">
       {params.sort && <input type="hidden" name="sort" value={params.sort} />}
-      {params.popular === "1" && <input type="hidden" name="popular" value="1" />}
       <div className="grid gap-3 sm:grid-cols-[1fr_180px_auto]">
         <label className="relative">
           <span className="sr-only">キーワード</span>

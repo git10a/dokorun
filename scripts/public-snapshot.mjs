@@ -29,8 +29,6 @@ export function publicQuery(table, offset = 0) {
           : publishedSpot;
   return `SELECT ${fields} FROM ${table} WHERE ${condition} ORDER BY ${table === "spot_tags" ? "spot_id, tag_id" : table === "spot_communities" ? "spot_id, community_id" : "id"} LIMIT 200 OFFSET ${offset}`;
 }
-export const publicCountsQuery =
-  "SELECT spot_id, count(*) AS wanted_count FROM hashiritai WHERE spot_id IN (SELECT id FROM spots WHERE is_published = 1) GROUP BY spot_id";
 export async function fillPublicSnapshot(client, query) {
   // Table/index DDL contains no row values. User tables remain empty, allowing SSR schema checks.
   const schema = await query(
@@ -53,15 +51,5 @@ export async function fillPublicSnapshot(client, query) {
       if (rows.length < 200) break;
     }
   }
-  await client.execute("CREATE TABLE build_spot_metrics (spot_id TEXT PRIMARY KEY, wanted_count INTEGER NOT NULL)");
-  const counts = await query(publicCountsQuery);
-  if (counts.length)
-    await client.batch(
-      counts.map((row) => ({
-        sql: "INSERT INTO build_spot_metrics VALUES (?, ?)",
-        args: [row.spot_id, row.wanted_count],
-      })),
-      "write",
-    );
   return Number((await client.execute("SELECT count(*) AS n FROM spots")).rows[0].n);
 }

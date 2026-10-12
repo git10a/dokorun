@@ -4,7 +4,7 @@ import { createClient } from "@libsql/client";
 import { fillPublicSnapshot, publicQuery } from "../scripts/public-snapshot.mjs";
 import { fixtureDb, seedSpot } from "../scripts/privacy-test-helpers.mjs";
 
-test("build snapshot excludes all people, secrets, private rows and raw events; preserves public popularity", async () => {
+test("build snapshot excludes all people, secrets, private rows and raw events", async () => {
   const source = await fixtureDb(),
     target = createClient({ url: ":memory:" });
   try {
@@ -24,7 +24,6 @@ test("build snapshot excludes all people, secrets, private rows and raw events; 
     for (const table of ["users", "accounts", "sessions", "events", "feedback", "runs", "hashiritai"])
       assert.equal((await target.execute(`SELECT count(*) AS n FROM ${table}`)).rows[0].n, 0);
     assert.equal((await target.execute("SELECT count(*) AS n FROM courses")).rows[0].n, 1);
-    assert.equal((await target.execute("SELECT wanted_count FROM build_spot_metrics")).rows[0].wanted_count, 1);
     assert.throws(() => publicQuery("users"));
     assert.throws(() => publicQuery("spots", -1));
   } finally {

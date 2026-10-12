@@ -124,9 +124,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
           }}
         />
       ) : null}
-      <h1 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl">
-        {params.popular === "1" ? "定番・走りたいスポット" : "ランニングスポットをさがす"}
-      </h1>
+      <h1 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl">ランニングスポットをさがす</h1>
       <div className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(340px,2fr)]">
         <div className="min-w-0 space-y-6">
           <SearchFilters tags={allTags} params={params} />

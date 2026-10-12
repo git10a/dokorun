@@ -25,7 +25,6 @@ const server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "star
   env: {
     ...process.env,
     D1_LOCAL_PATH: file,
-    D1_PUBLIC_SNAPSHOT: "1",
     BETTER_AUTH_SECRET: secret,
     BETTER_AUTH_URL: base,
     NEXT_PUBLIC_SITE_URL: base,
