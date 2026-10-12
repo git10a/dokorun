@@ -3,10 +3,12 @@ import { notFound } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { getAdminCommunity, getSpotOptions } from "@/db/data";
 import { CommunityForm } from "@/components/admin/community-form";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
 export default async function EditCommunityPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdminPage();
   const { id } = await params;
   const [community, spotOptions] = await Promise.all([getAdminCommunity(id), getSpotOptions()]);
   if (!community) notFound();

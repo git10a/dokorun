@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 export const sessionCookieName = "dokorun_admin";
@@ -39,4 +40,14 @@ export async function verifySessionToken(token?: string) {
 export async function isAdmin() {
   const store = await cookies();
   return verifySessionToken(store.get(sessionCookieName)?.value);
+}
+
+// 管理画面の server action / ページ用。middleware に加えた二重チェック
+export async function requireAdmin() {
+  if (!await isAdmin()) throw new Error("認証が必要です");
+}
+
+// 管理ページ用。middleware が守っているが、middleware を迂回された場合に備えてページ側でも確認する
+export async function requireAdminPage() {
+  if (!await isAdmin()) redirect("/admin/login");
 }

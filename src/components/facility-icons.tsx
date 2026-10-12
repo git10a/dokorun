@@ -1,12 +1,13 @@
-import { Bath, Coffee, GlassWater, Lock, ShowerHead, SquareParking, Store, Toilet } from "lucide-react";
+import { Bath, Coffee, GlassWater, Lock, ShowerHead, SquareParking, Store, Toilet, type LucideIcon } from "lucide-react";
+import { facilityKeys, facilityLabels, type FacilityKey, type FacilityValues } from "@/lib/types";
 
-const facilities = [
-  ["hasToilet", "トイレ", Toilet], ["hasWaterFountain", "水飲み場", GlassWater], ["hasVendingMachine", "自販機", Coffee],
-  ["hasLocker", "ロッカー", Lock], ["hasShower", "ランステ", ShowerHead], ["hasSentoNearby", "銭湯・サウナ", Bath],
-  ["hasParking", "駐車場", SquareParking], ["hasConvenienceStore", "コンビニ", Store],
-] as const;
+export type { FacilityValues };
 
-export type FacilityValues = Record<(typeof facilities)[number][0], boolean>;
+const icons: Record<FacilityKey, LucideIcon> = {
+  hasToilet: Toilet, hasWaterFountain: GlassWater, hasVendingMachine: Coffee, hasLocker: Lock,
+  hasShower: ShowerHead, hasSentoNearby: Bath, hasParking: SquareParking, hasConvenienceStore: Store,
+};
+const facilities = facilityKeys.map((key) => [key, facilityLabels[key], icons[key]] as const);
 
 export function FacilityIcons({ spot, compact = false }: { spot: FacilityValues; compact?: boolean }) {
   if (compact) {

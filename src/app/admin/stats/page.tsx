@@ -2,6 +2,7 @@ import Link from "next/link";
 import { and, count, desc, eq, gte, inArray, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { events, hashiritai, runs, sessions, spots, users } from "@/db/schema";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -42,6 +43,7 @@ function formatDate(value: Date | number | null | undefined) {
 }
 
 export default async function AdminStatsPage() {
+  await requireAdminPage();
   const db = getDb();
   // force-dynamicページなのでレンダー時点の現在時刻で集計してよい
   // eslint-disable-next-line react-hooks/purity

@@ -7,12 +7,10 @@ import {
   uniqueIndex,
 } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
-import type { LineString, TrackUsage } from "@/lib/types";
+import { courseTypes, lightings, surfaces, type LineString, type TrackUsage } from "@/lib/types";
 
 // D1(SQLite)にはenum型がないため、text({enum})でアプリ層の型を担保する
-export const courseTypes = ["loop", "out_and_back", "one_way", "track"] as const;
-export const surfaces = ["asphalt", "dirt", "track", "trail", "mixed"] as const;
-export const lightings = ["bright", "partial", "dark"] as const;
+export { courseTypes, lightings, surfaces };
 export const tagCategories = ["terrain", "environment", "scenery"] as const;
 export const runVisibilities = ["public", "private"] as const;
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useActionState } from "react";
 import { updateSpotInfo, type SpotEditState } from "@/app/spots/[slug]/edit/actions";
-import type { CourseType, Lighting, Surface } from "@/lib/types";
+import { courseTypeLabels, courseTypes, facilityKeys, facilityLabels, lightingLabels, lightings, surfaceLabels, surfaces, type CourseType, type Lighting, type Surface } from "@/lib/types";
 
 export type SpotEditValues = {
   id: string;
@@ -28,10 +28,7 @@ export type SpotEditValues = {
 
 const initialState: SpotEditState = {};
 const fieldClass = "mt-2 h-11 w-full rounded-lg border border-line bg-paper px-3 outline-none focus:border-ink";
-const facilityFields = [
-  ["hasToilet", "トイレ"], ["hasWaterFountain", "水飲み場"], ["hasVendingMachine", "自販機"], ["hasLocker", "ロッカー"],
-  ["hasShower", "ランステ"], ["hasSentoNearby", "銭湯・サウナ近く"], ["hasParking", "駐車場"], ["hasConvenienceStore", "コンビニ"],
-] as const;
+const facilityFields = facilityKeys.map((key) => [key, facilityLabels[key]] as const);
 
 export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
   const [state, action, pending] = useActionState(updateSpotInfo, initialState);
@@ -54,8 +51,8 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
         <h2 className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold">コース情報</h2>
         <p className="mb-5 text-sm text-sub">距離・高低差はGPXから自動計算しているため、このフォームからは修正できません。おかしい場合は<Link href="/contact" className="font-bold text-accent">お問い合わせ</Link>からご連絡ください。</p>
         <div className="grid gap-5 sm:grid-cols-3">
-          <label className="text-sm font-bold">形状<select name="courseType" defaultValue={spot.courseType} className={fieldClass}><option value="loop">周回</option><option value="out_and_back">往復</option><option value="one_way">ワンウェイ</option><option value="track">トラック</option></select></label>
-          <label className="text-sm font-bold">路面<select name="surface" defaultValue={spot.surface} className={fieldClass}><option value="asphalt">舗装路</option><option value="dirt">土</option><option value="track">トラック</option><option value="trail">トレイル</option><option value="mixed">混合</option></select></label>
+          <label className="text-sm font-bold">形状<select name="courseType" defaultValue={spot.courseType} className={fieldClass}>{courseTypes.map((value) => <option key={value} value={value}>{courseTypeLabels[value]}</option>)}</select></label>
+          <label className="text-sm font-bold">路面<select name="surface" defaultValue={spot.surface} className={fieldClass}>{surfaces.map((value) => <option key={value} value={value}>{surfaceLabels[value]}</option>)}</select></label>
           <Field label="信号数" name="signalsCount" type="number" min={0} max={999} defaultValue={spot.signalsCount ?? ""} error={error("signalsCount")} />
         </div>
       </section>
@@ -67,7 +64,7 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
         </fieldset>
         <fieldset>
           <legend className="mb-3 font-bold">夜間の明るさ</legend>
-          <div className="flex flex-wrap gap-4">{([["", "わからない"], ["bright", "夜も明るい"], ["partial", "一部照明あり"], ["dark", "夜は暗い"]] as const).map(([value, label]) => <label key={value} className="flex items-center gap-2 text-sm"><input type="radio" name="nightLighting" value={value} defaultChecked={(spot.nightLighting ?? "") === value} className="accent-[#FFD900]" />{label}</label>)}</div>
+          <div className="flex flex-wrap gap-4">{([["", "わからない"], ...lightings.map((value) => [value, lightingLabels[value]] as const)] as const).map(([value, label]) => <label key={value} className="flex items-center gap-2 text-sm"><input type="radio" name="nightLighting" value={value} defaultChecked={(spot.nightLighting ?? "") === value} className="accent-[#FFD900]" />{label}</label>)}</div>
         </fieldset>
       </section>
       <div className="space-y-4 border-t border-line pt-6">

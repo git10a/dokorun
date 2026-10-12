@@ -6,6 +6,7 @@ import { stripPrepublishSentences } from "@/lib/public-description";
 import { getDb } from ".";
 import { courses, spots, spotTags, tags } from "./schema";
 import { prefectures } from "@/lib/prefectures";
+import { courseTypes, lightings, surfaces } from "@/lib/types";
 
 config({ path: ".env.local" });
 config();
@@ -30,7 +31,7 @@ const importSpotSchema = z.object({
   lng: z.number().min(122).max(154, "経度が日本の範囲外"),
   description: z.string().trim().min(50, "紹介文は50字以上"),
   access: z.string().trim().nullable().optional(),
-  nightLighting: z.enum(["bright", "partial", "dark"]).nullable().optional(),
+  nightLighting: z.enum(lightings).nullable().optional(),
   tags: z.array(z.string()).default([]),
   facilities: z.object({
     hasToilet: z.boolean().optional(), hasWaterFountain: z.boolean().optional(), hasVendingMachine: z.boolean().optional(),
@@ -39,8 +40,8 @@ const importSpotSchema = z.object({
   }).default({}),
   course: z.object({
     distanceM: z.number().int().positive(),
-    courseType: z.enum(["loop", "out_and_back", "one_way", "track"]),
-    surface: z.enum(["asphalt", "dirt", "track", "trail", "mixed"]),
+    courseType: z.enum(courseTypes),
+    surface: z.enum(surfaces),
     elevationGainM: optionalInt,
     signalsCount: optionalInt,
   }),

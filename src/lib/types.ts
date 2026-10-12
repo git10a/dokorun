@@ -1,6 +1,17 @@
-export type CourseType = "loop" | "out_and_back" | "one_way" | "track";
-export type Surface = "asphalt" | "dirt" | "track" | "trail" | "mixed";
-export type Lighting = "bright" | "partial" | "dark" | null;
+// コース形状・路面・夜間照明・設備の値はここが唯一の定義。DBスキーマ・zod・フォームの選択肢はすべてここから作る
+export const courseTypes = ["loop", "out_and_back", "one_way", "track"] as const;
+export const surfaces = ["asphalt", "dirt", "track", "trail", "mixed"] as const;
+export const lightings = ["bright", "partial", "dark"] as const;
+export const facilityKeys = [
+  "hasToilet", "hasWaterFountain", "hasVendingMachine", "hasLocker",
+  "hasShower", "hasSentoNearby", "hasParking", "hasConvenienceStore",
+] as const;
+
+export type CourseType = (typeof courseTypes)[number];
+export type Surface = (typeof surfaces)[number];
+export type Lighting = (typeof lightings)[number] | null;
+export type FacilityKey = (typeof facilityKeys)[number];
+export type FacilityValues = Record<FacilityKey, boolean>;
 export type LineString = { type: "LineString"; coordinates: [number, number][] };
 
 export type SpotSummary = {
@@ -61,3 +72,25 @@ export const surfaceLabels: Record<Surface, string> = {
   trail: "トレイル",
   mixed: "混合",
 };
+
+export const facilityLabels: Record<FacilityKey, string> = {
+  hasToilet: "トイレ",
+  hasWaterFountain: "水飲み場",
+  hasVendingMachine: "自販機",
+  hasLocker: "ロッカー",
+  hasShower: "ランステ",
+  hasSentoNearby: "銭湯・サウナ",
+  hasParking: "駐車場",
+  hasConvenienceStore: "コンビニ",
+};
+
+export const lightingLabels: Record<NonNullable<Lighting>, string> = {
+  bright: "夜も明るい",
+  partial: "一部照明あり",
+  dark: "夜は暗い",
+};
+
+// フォームの checkbox(on/未送信)から設備フラグを組み立てる
+export function facilitiesFromForm(formData: FormData): FacilityValues {
+  return Object.fromEntries(facilityKeys.map((key) => [key, formData.get(key) === "on"])) as FacilityValues;
+}

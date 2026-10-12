@@ -3,12 +3,14 @@ import { ChevronLeft, Plus } from "lucide-react";
 import { deleteCommunity } from "./actions";
 import { getAdminCommunities } from "@/db/data";
 import { DeleteButton } from "@/components/admin/delete-button";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
 const messages: Record<string, string> = { created: "コミュニティを登録しました", updated: "コミュニティを更新しました", deleted: "コミュニティを削除しました" };
 
 export default async function AdminCommunitiesPage({ searchParams }: { searchParams: Promise<{ success?: string }> }) {
+  await requireAdminPage();
   const [items, params] = await Promise.all([getAdminCommunities(), searchParams]);
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">

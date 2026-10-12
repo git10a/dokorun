@@ -4,9 +4,10 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
-import { getDb, withTxDb, type Database } from "@/db";
+import type { BatchItem } from "drizzle-orm/batch";
+import { getDb, runAtomically } from "@/db";
 import { communities, spotCommunities, spots } from "@/db/schema";
-import { isAdmin } from "@/lib/auth";
+import { requireAdmin } from "@/lib/auth";
 import { normalizeInstagram, normalizeStravaClub, normalizeXHandle } from "@/lib/social";
 import type { FormState } from "../actions";
 
@@ -36,17 +37,22 @@ const communitySchema = z.object({
   logoUrl: optionalText.refine((value) => value === null || /^https?:\/\//.test(value), "ロゴは画像をアップロードして設定してください"),
 });
 
-type Tx = Database;
-
-async function requireAdmin() {
-  if (!await isAdmin()) throw new Error("認証が必要です");
+// スポットとの紐付けの insert 文を組み立てる(実行は呼び出し側の batch でまとめて行う)
+async function spotLinkStatements(communityId: string, formData: FormData): Promise<BatchItem<"sqlite">[]> {
+  const spotIds = formData.getAll("spotIds").map(String).filter(Boolean);
+  if (!spotIds.length) return [];
+  const db = getDb();
+  const existing = await db.select({ id: spots.id }).from(spots).where(inArray(spots.id, spotIds));
+  return existing.length ? [db.insert(spotCommunities).values(existing.map((spot) => ({ spotId: spot.id, communityId })))] : [];
 }
 
-async function writeSpotLinks(tx: Tx, communityId: string, formData: FormData) {
-  const spotIds = formData.getAll("spotIds").map(String).filter(Boolean);
-  if (!spotIds.length) return;
-  const existing = await tx.select({ id: spots.id }).from(spots).where(inArray(spots.id, spotIds));
-  if (existing.length) await tx.insert(spotCommunities).values(existing.map((spot) => ({ spotId: spot.id, communityId })));
+function communityFields(data: z.infer<typeof communitySchema>, formData: FormData) {
+  return {
+    name: data.name, description: data.description, schedule: data.schedule,
+    instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
+    logoUrl: data.logoUrl,
+    isPublished: formData.get("isPublished") === "on",
+  };
 }
 
 async function revalidateLinkedSpots(communityId: string) {
@@ -61,19 +67,12 @@ export async function createCommunity(_: FormState, formData: FormData): Promise
   const parsed = communitySchema.safeParse(Object.fromEntries(formData.entries()));
   if (!parsed.success) return { message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
   const data = parsed.data;
-  let communityId = "";
+  const communityId = crypto.randomUUID();
   try {
-    // D1は対話的トランザクション非対応のため逐次実行(admin限定の低頻度操作)
-    await withTxDb(async (tx) => {
-      const [community] = await tx.insert(communities).values({
-        name: data.name, description: data.description, schedule: data.schedule,
-        instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
-        logoUrl: data.logoUrl,
-        isPublished: formData.get("isPublished") === "on",
-      }).returning({ id: communities.id });
-      communityId = community.id;
-      await writeSpotLinks(tx, community.id, formData);
-    });
+    await runAtomically([
+      getDb().insert(communities).values({ id: communityId, ...communityFields(data, formData) }),
+      ...await spotLinkStatements(communityId, formData),
+    ]);
   } catch { return { message: "保存できませんでした" }; }
   await revalidateLinkedSpots(communityId);
   redirect("/admin/communities?success=created");
@@ -88,16 +87,12 @@ export async function updateCommunity(_: FormState, formData: FormData): Promise
   // 紐付け解除されたスポットのページも更新するため、変更前のリンクを先に再検証対象へ含める
   await revalidateLinkedSpots(communityId);
   try {
-    await withTxDb(async (tx) => {
-      await tx.update(communities).set({
-        name: data.name, description: data.description, schedule: data.schedule,
-        instagram: data.instagram, xHandle: data.xHandle, strava: data.strava, website: data.website,
-        logoUrl: data.logoUrl,
-        isPublished: formData.get("isPublished") === "on", updatedAt: new Date(),
-      }).where(eq(communities.id, communityId));
-      await tx.delete(spotCommunities).where(eq(spotCommunities.communityId, communityId));
-      await writeSpotLinks(tx, communityId, formData);
-    });
+    const db = getDb();
+    await runAtomically([
+      db.update(communities).set({ ...communityFields(data, formData), updatedAt: new Date() }).where(eq(communities.id, communityId)),
+      db.delete(spotCommunities).where(eq(spotCommunities.communityId, communityId)),
+      ...await spotLinkStatements(communityId, formData),
+    ]);
   } catch { return { message: "更新できませんでした" }; }
   await revalidateLinkedSpots(communityId);
   redirect("/admin/communities?success=updated");

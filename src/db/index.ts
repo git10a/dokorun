@@ -1,4 +1,5 @@
 import { createRequire } from "node:module";
+import type { BatchItem } from "drizzle-orm/batch";
 import { drizzle as drizzleD1 } from "drizzle-orm/d1";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import * as schema from "./schema";
@@ -65,8 +66,15 @@ export function getDb(): Database {
   return localFileDb;
 }
 
-// D1は対話的トランザクション(BEGIN/COMMIT)非対応のため、逐次実行になる。
-// better-authのtransaction:falseと同じ割り切り(admin系の低頻度操作でのみ使用)。
-export async function withTxDb<T>(fn: (db: Database) => Promise<T>): Promise<T> {
-  return fn(getDb());
+// D1は対話的トランザクション(BEGIN/COMMIT)非対応。複数の書き込みを全部成功か全部失敗にしたいときは
+// 文を先に組み立てて batch で一度に送る(D1・libsqlともに batch は1トランザクションで実行される)。
+export async function runAtomically(statements: BatchItem<"sqlite">[]) {
+  if (!statements.length) return;
+  await getDb().batch(statements as [BatchItem<"sqlite">, ...BatchItem<"sqlite">[]]);
+}
+
+// drizzle はドライバのエラーを cause に包んで投げるため、両方を見て UNIQUE 制約違反か判定する
+export function isUniqueViolation(error: unknown): boolean {
+  const messages = [error, (error as { cause?: unknown })?.cause].map((value) => value instanceof Error ? value.message : String(value ?? ""));
+  return messages.some((message) => /UNIQUE constraint failed/i.test(message));
 }

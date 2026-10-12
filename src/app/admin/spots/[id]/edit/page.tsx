@@ -3,10 +3,12 @@ import { notFound } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { getAdminSpot, getTags } from "@/db/data";
 import { SpotForm } from "@/components/admin/spot-form";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
 export default async function EditSpotPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdminPage();
   const { id } = await params;
   const [spot, tags] = await Promise.all([getAdminSpot(id), getTags()]);
   if (!spot) notFound();

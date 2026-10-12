@@ -4,6 +4,7 @@ import { deleteFeedbackAsAdmin } from "@/app/admin/actions";
 import { DeleteButton } from "@/components/admin/delete-button";
 import { getDb } from "@/db";
 import { feedback } from "@/db/schema";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +12,7 @@ const categoryLabels: Record<string, string> = { spot_request: "掲載リクエ�
 const formatDate = new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Tokyo" });
 
 export default async function AdminFeedbackPage() {
+  await requireAdminPage();
   const items = await getDb().select().from(feedback).orderBy(desc(feedback.createdAt)).limit(200);
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 md:px-6">

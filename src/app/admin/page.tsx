@@ -3,12 +3,14 @@ import { Plus } from "lucide-react";
 import { deleteSpot, logout } from "./actions";
 import { getAdminSpots } from "@/db/data";
 import { DeleteButton } from "@/components/admin/delete-button";
+import { requireAdminPage } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
 const messages: Record<string, string> = { login: "ログインしました", created: "スポットを登録しました", updated: "スポットを更新しました", deleted: "スポットを削除しました" };
 
 export default async function AdminPage({ searchParams }: { searchParams: Promise<{ success?: string }> }) {
+  await requireAdminPage();
   const [items, params] = await Promise.all([getAdminSpots(), searchParams]);
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">

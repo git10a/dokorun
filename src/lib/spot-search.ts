@@ -1,3 +1,5 @@
+import { courseTypeLabels } from "@/lib/types";
+
 export type SpotSearchParams = Record<string, string | undefined>;
 
 export type SearchFilters = {
@@ -18,12 +20,7 @@ export type SearchFilters = {
   limit?: number;
 };
 
-const courseTypeRequestLabels: Record<string, string> = {
-  loop: "周回",
-  out_and_back: "往復",
-  one_way: "ワンウェイ",
-  track: "トラック",
-};
+const courseTypeRequestLabels: Record<string, string> = courseTypeLabels;
 
 const distanceRequestLabels: Record<string, string> = {
   "0-3": "〜3km",

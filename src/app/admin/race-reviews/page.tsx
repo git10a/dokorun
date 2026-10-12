@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { desc, eq, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { raceReviews, raceReviewReports, users } from "@/db/schema";
-import { isAdmin } from "@/lib/auth";
+import { requireAdmin, requireAdminPage } from "@/lib/auth";
 import { formatFinishTime } from "@/lib/race-reviews";
 import { raceBySlug } from "@/lib/races";
 
@@ -13,7 +12,7 @@ export const metadata = { title: "大会レビュー管理", robots: { index: fa
 
 async function moderate(form: FormData) {
   "use server";
-  if (!await isAdmin()) throw new Error("認証が必要です");
+  await requireAdmin();
   const id = String(form.get("id") ?? "");
   const hidden = form.get("hidden");
   if (!/^[0-9a-f-]{36}$/.test(id) || (hidden !== "1" && hidden !== "0")) throw new Error("入力を確認してください");
@@ -23,7 +22,7 @@ async function moderate(form: FormData) {
 }
 
 export default async function AdminRaceReviews() {
-  if (!await isAdmin()) redirect("/admin/login");
+  await requireAdminPage();
   const db = getDb();
   const items = await db.select({ review: raceReviews, name: users.name,
     reports: sql<number>`(select count(*) from race_review_reports where review_id = ${raceReviews.id})`,
