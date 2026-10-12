@@ -44,17 +44,18 @@ function fromLocalFile(): Database {
   return drizzle(createClient({ url: `file:${path}` }), { schema }) as unknown as Database;
 }
 
-// miniflareが管理するローカルD1のsqliteファイル(単一DB前提で最新のものを拾う)
+// miniflareが管理するローカルD1のsqliteファイル。
+// 同じディレクトリに OpenNext のタグキャッシュ用D1(NEXT_TAG_CACHE_D1)と metadata.sqlite も並ぶため、
+// 更新日時ではなくサイズで本体(数MB)を選ぶ。タグキャッシュは数十KB程度にしかならない
 function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
   const fs = nodeRequire("node:fs") as typeof import("node:fs");
   const dir = ".wrangler/state/v3/d1/miniflare-D1DatabaseObject";
   if (!fs.existsSync(dir)) return null;
-  const files = fs.readdirSync(dir).filter((file) => file.endsWith(".sqlite"));
-  if (!files.length) return null;
-  const newest = files
-    .map((file) => ({ file, mtime: fs.statSync(`${dir}/${file}`).mtimeMs }))
-    .sort((a, b) => b.mtime - a.mtime)[0];
-  return `${dir}/${newest.file}`;
+  const largest = fs.readdirSync(dir)
+    .filter((file) => file.endsWith(".sqlite") && file !== "metadata.sqlite")
+    .map((file) => ({ file, size: fs.statSync(`${dir}/${file}`).size }))
+    .sort((a, b) => b.size - a.size)[0];
+  return largest ? `${dir}/${largest.file}` : null;
 }
 
 // WorkersのD1バインディングはリクエストに紐づくため、モジュールスコープでは保持しない。

@@ -220,9 +220,10 @@ async function findLocalD1Path() {
     if (!file.endsWith(".sqlite") || file === "metadata.sqlite") continue;
     const fullPath = path.join(dir, file);
     const info = await stat(fullPath);
-    candidates.push({ fullPath, mtimeMs: info.mtimeMs });
+    candidates.push({ fullPath, size: info.size });
   }
-  candidates.sort((a, b) => b.mtimeMs - a.mtimeMs);
+  // タグキャッシュ用D1も同じディレクトリに並ぶため、本体(最大のファイル)を選ぶ(src/db/index.ts と同じ規則)
+  candidates.sort((a, b) => b.size - a.size);
   return candidates[0]?.fullPath ?? null;
 }
 

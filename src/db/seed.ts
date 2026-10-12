@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { count, eq } from "drizzle-orm";
 import { config } from "dotenv";
 import { getDb } from ".";
 import { courses, spotTags, spots, tags } from "./schema";
@@ -45,6 +45,12 @@ const seedSpots: SeedSpot[] = [
 
 async function seed() {
   const db = getDb();
+  // 空のDBを作るための初期データ。本番相当のデータが入ったDBで実行すると、
+  // 皇居・駒沢などの実コースをダミーの円形ルートで上書きしてしまうため止める
+  const [{ spotCount }] = await db.select({ spotCount: count() }).from(spots);
+  if (spotCount > seedSpots.length && process.env.SEED_FORCE !== "1") {
+    throw new Error(`スポットが${spotCount}件あるDBには seed できません(実データを上書きします)。空のDBで実行してください`);
+  }
   for (const [sortOrder, [slug, name, category]] of tagSeed.entries()) {
     await db.insert(tags).values({ slug, name, category, sortOrder }).onConflictDoUpdate({ target: tags.slug, set: { name, category, sortOrder } });
   }

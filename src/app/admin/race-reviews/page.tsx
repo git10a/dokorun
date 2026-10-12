@@ -21,13 +21,16 @@ async function moderate(form: FormData) {
   revalidatePath("/admin/race-reviews");
 }
 
+// 外側の列はテーブル名つきで直書きする(drizzle が JOIN 有無で修飾を変えるため)
+const reportsCount = sql<number>`(select count(*) from "race_review_reports" rr where rr."review_id" = "race_reviews"."id")`;
+
 export default async function AdminRaceReviews() {
   await requireAdminPage();
   const db = getDb();
   const items = await db.select({ review: raceReviews, name: users.name,
-    reports: sql<number>`(select count(*) from race_review_reports where review_id = ${raceReviews.id})`,
+    reports: reportsCount,
   }).from(raceReviews).innerJoin(users, eq(users.id, raceReviews.userId))
-    .orderBy(desc(sql`(select count(*) from race_review_reports where review_id = ${raceReviews.id})`), desc(raceReviews.createdAt)).limit(100);
+    .orderBy(desc(reportsCount), desc(raceReviews.createdAt)).limit(100);
   const reports = await db.select().from(raceReviewReports).orderBy(desc(raceReviewReports.createdAt)).limit(200);
   return <div className="mx-auto max-w-4xl px-4 py-10">
     <Link href="/admin" className="text-sm text-accent underline">管理画面へ</Link>

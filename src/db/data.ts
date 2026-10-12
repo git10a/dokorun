@@ -3,7 +3,8 @@ import { and, asc, count, desc, eq, inArray, like, or, sql, type SQL } from "dri
 import { getDb } from ".";
 import { communities, courses, favoriteSpots, hashiritai, photos, runPhotos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
 import { jstDayBounds } from "@/lib/jst";
-import type { CourseType, Lighting, LineString, MapSpot, SpotSummary, Surface } from "@/lib/types";
+import { prefectures } from "@/lib/prefectures";
+import { courseTypes, type CourseType, type Lighting, type LineString, type MapSpot, type SpotSummary, type Surface } from "@/lib/types";
 import { simplifyLine } from "@/lib/simplify";
 import type { SearchFilters } from "@/lib/spot-search";
 
@@ -197,7 +198,11 @@ async function loadPrefectureCounts() {
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
 }
 
-const hashiritaiCountExpr = sql`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`;
+// 相関サブクエリ。drizzle は JOIN のないクエリで sql`` 内の列をテーブル名なしで出力し、
+// 外側の spots.id が内側テーブルの id に誤解決されるため、外側の列はテーブル名つきで直書きする
+const outerSpotId = sql.raw(`"spots"."id"`);
+const hashiritaiCountExpr = sql<number>`(select count(*) from "hashiritai" h where h."spot_id" = ${outerSpotId})`;
+const publicRunsCountExpr = sql<number>`(select count(*) from "runs" r where r."spot_id" = ${outerSpotId} and r."visibility" = 'public')`;
 
 function spotHasTag(tagSlug: string): SQL {
   return sql`exists (
@@ -273,7 +278,7 @@ function searchConditions(filters: SearchFilters) {
   if (filters.pref) conditions.push(eq(spots.prefecture, filters.pref));
   // SQLiteのLIKEはASCIIに対して大文字小文字を区別しないため、ilike相当として使える
   if (filters.q) conditions.push(or(like(spots.name, `%${filters.q}%`), like(spots.nameKana, `%${filters.q}%`), like(spots.city, `%${filters.q}%`))!);
-  if (filters.type) conditions.push(eq(courses.courseType, filters.type as CourseType));
+  if (filters.type) conditions.push(eq(courses.courseType, filters.type as CourseType)); // 未知の値は0件になるだけ
   const selectedTagSlugs = filters.tags ?? [];
   const hasLongRunFilter = selectedTagSlugs.includes(longRunTag.slug);
   const hasCastleRunFilter = selectedTagSlugs.includes(castleRunTag.slug);
@@ -367,8 +372,8 @@ function spotDetailSelection() {
     geojson: sql`coalesce(${courses.geojsonSimplified}, ${courses.geojson})`
       .mapWith((value: string | null) => (value ? (JSON.parse(value) as LineString) : null)),
     isSimplified: sql`${courses.geojsonSimplified} is not null`.mapWith(Boolean),
-    hashiritaiCount: sql<number>`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`,
-    runsCount: sql<number>`(select count(*) from ${runs} where ${runs.spotId} = ${spots.id} and ${runs.visibility} = 'public')`,
+    hashiritaiCount: hashiritaiCountExpr,
+    runsCount: publicRunsCountExpr,
   };
 }
 
@@ -500,8 +505,11 @@ export async function getAdminCommunities() {
     name: communities.name,
     schedule: communities.schedule,
     isPublished: communities.isPublished,
-    spotCount: sql<number>`(select count(*) from ${spotCommunities} where ${spotCommunities.communityId} = ${communities.id})`,
-  }).from(communities).orderBy(desc(communities.updatedAt));
+    spotCount: count(spotCommunities.spotId),
+  }).from(communities)
+    .leftJoin(spotCommunities, eq(spotCommunities.communityId, communities.id))
+    .groupBy(communities.id)
+    .orderBy(desc(communities.updatedAt));
 }
 
 export async function getAdminCommunity(id: string) {
@@ -635,10 +643,24 @@ export const getFeatureCounts = unstable_cache(loadFeatureCounts, ["public-catal
 
 export const getSitemapSpots = unstable_cache(loadSitemapSpots, ["public-catalog-v1", "getSitemapSpots"], { revalidate: 86400, tags: ["public-catalog"] });
 
+const cacheableSorts = new Set(["popular", "new", "distance_asc", "distance_desc"]);
+const cacheableDistanceBounds = new Set([undefined, 0, 3000, 5000, 10000]);
+const maxCacheablePage = 50;
+
 // Arbitrary text and precise locations do not become shared persistent cache keys.
 // Canonical categorical filters let different callers reuse the same public result.
-function catalogSearchFilters(filters: SearchFilters): SearchFilters | null {
+// URL の値がそのままキーになるため、既知の値の組み合わせだけをキャッシュする(任意値でキャッシュを膨らませない)
+async function catalogSearchFilters(filters: SearchFilters): Promise<SearchFilters | null> {
   if (filters.q || filters.lat !== undefined || filters.lng !== undefined) return null;
+  if (filters.pref && !(prefectures as readonly string[]).includes(filters.pref)) return null;
+  if (filters.type && !(courseTypes as readonly string[]).includes(filters.type)) return null;
+  if (filters.sort && !cacheableSorts.has(filters.sort)) return null;
+  if (!cacheableDistanceBounds.has(filters.distMin) || !cacheableDistanceBounds.has(filters.distMax)) return null;
+  if ((filters.page ?? 1) > maxCacheablePage) return null;
+  if (filters.tags?.length) {
+    const knownTags = new Set((await getSearchTags()).map((tag) => tag.slug));
+    if (filters.tags.length > 5 || filters.tags.some((slug) => !knownTags.has(slug))) return null;
+  }
   return {
     pref: filters.pref || undefined, type: filters.type || undefined,
     tags: [...new Set(filters.tags ?? [])].sort(),
@@ -657,10 +679,10 @@ const cachedMapSearch = unstable_cache(loadSearchSpotsForMap, ["public-catalog-v
   revalidate: 3600, tags: ["public-catalog"],
 });
 export async function searchSpots(filters: SearchFilters) {
-  const canonical = catalogSearchFilters(filters);
+  const canonical = await catalogSearchFilters(filters);
   return canonical ? cachedSearch(canonical) : loadSearchSpots(filters);
 }
 export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
-  const canonical = catalogSearchFilters(filters);
+  const canonical = await catalogSearchFilters(filters);
   return canonical ? cachedMapSearch(canonical) : loadSearchSpotsForMap(filters);
 }
