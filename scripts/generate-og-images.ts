@@ -1,10 +1,12 @@
 import { mkdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { isNotNull, eq, and } from "drizzle-orm";
-import puppeteer, { type Browser } from "puppeteer-core";
+import type { Browser } from "puppeteer-core";
 import { getDb } from "../src/db";
 import { courses, spots } from "../src/db/schema";
+import { formatDistanceKm } from "../src/lib/format";
 import { courseTypeLabels, type CourseType, type LineString } from "../src/lib/types";
+import { launchBrowser, setupMapPage, waitForMapIdle } from "./lib/map-render";
 
 // 使い方: npx tsx scripts/generate-og-images.ts [slug...]
 // 公開スポットの代表コースを地図に描き、スポット名・距離・キャラクターを重ねた
@@ -16,7 +18,6 @@ import { courseTypeLabels, type CourseType, type LineString } from "../src/lib/t
 //   D1_LOCAL_PATH=.d1-build/prod.sqlite npx tsx scripts/generate-og-images.ts
 // 実行にはローカルの Google Chrome が必要(puppeteer-core で起動する)。
 
-const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const OUT_DIR = join(process.cwd(), "public", "og", "spots");
 const WIDTH = 1200;
 const HEIGHT = 630;
@@ -37,10 +38,6 @@ function characterFor(slug: string) {
   // スポットごとに固定でハシロー/ランを出し分ける(生成のたびに変わらないようハッシュで決める)
   const sum = [...slug].reduce((acc, char) => acc + char.charCodeAt(0), 0);
   return sum % 2 === 0 ? "hashiro-smile.png" : "ran-smile.png";
-}
-
-function distanceLabel(distanceM: number) {
-  return (distanceM / 1000).toFixed(distanceM % 1000 ? 1 : 0);
 }
 
 const characterDataUri = (file: string) =>
@@ -74,28 +71,7 @@ const PAGE_HTML = `<!doctype html><html><head><meta charset="utf-8">
 async function renderAll(browser: Browser, targets: Target[]) {
   const page = await browser.newPage();
   await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: 1 });
-  // フォントは後段の document.fonts.ready で読み込み完了を待つ
-  await page.setContent(PAGE_HTML, { waitUntil: "load" });
-  await page.addStyleTag({ path: join(process.cwd(), "node_modules/maplibre-gl/dist/maplibre-gl.css") });
-  await page.addScriptTag({ path: join(process.cwd(), "node_modules/maplibre-gl/dist/maplibre-gl.js") });
-  await page.evaluate(() => document.fonts.ready.then(() => undefined));
-
-  await page.evaluate(() => {
-    const maplibregl = (window as never as { maplibregl: typeof import("maplibre-gl") }).maplibregl;
-    const map = new maplibregl.Map({
-      container: "map",
-      style: "https://tiles.openfreemap.org/styles/liberty",
-      center: [139.7671, 35.6812],
-      zoom: 12,
-      interactive: false,
-      attributionControl: false,
-      fadeDuration: 0,
-    });
-    const w = window as never as { map: typeof map; mapReady: Promise<void> };
-    w.map = map;
-    w.mapReady = new Promise((resolve) => map.on("load", () => resolve()));
-  });
-  await page.evaluate(() => (window as never as { mapReady: Promise<void> }).mapReady);
+  await setupMapPage(page, { html: PAGE_HTML, style: "liberty", zoom: 12, waitForFonts: true });
 
   for (const target of targets) {
     await page.evaluate(
@@ -124,16 +100,11 @@ async function renderAll(browser: Browser, targets: Target[]) {
         padding: FIT_PADDING,
         name: target.name,
         meta: `${target.prefecture} ${target.city}・${courseTypeLabels[target.courseType]}コース`,
-        dist: distanceLabel(target.distanceM),
+        dist: formatDistanceKm(target.distanceM),
         chara: characterDataUri(characterFor(target.slug)),
       },
     );
-    // タイル・グリフの取得と描画が落ち着くまで待つ
-    await page.evaluate(() => new Promise<void>((resolve) => {
-      const map = (window as never as { map: import("maplibre-gl").Map }).map;
-      if (map.loaded() && map.areTilesLoaded()) { resolve(); return; }
-      map.once("idle", () => resolve());
-    }));
+    await waitForMapIdle(page);
     const path = join(OUT_DIR, `${target.slug}.jpg`) as `${string}.jpg`;
     await page.screenshot({ path, type: "jpeg", quality: 85 });
     console.log(`generated ${target.slug}.jpg`);
@@ -166,7 +137,7 @@ async function main() {
     process.exit(1);
   }
   mkdirSync(OUT_DIR, { recursive: true });
-  const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
+  const browser = await launchBrowser();
   try {
     await renderAll(browser, targets);
   } finally {

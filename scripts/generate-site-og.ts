@@ -1,8 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import puppeteer from "puppeteer-core";
+import { launchBrowser } from "./lib/map-render";
 
-const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const WIDTH = 1200;
 const HEIGHT = 630;
 
@@ -62,7 +61,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
 </body></html>`;
 
 async function main() {
-  const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
+  const browser = await launchBrowser();
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: 1 });

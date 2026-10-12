@@ -1,7 +1,7 @@
 import { mkdirSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
-import puppeteer from "puppeteer-core";
 import type { LineString } from "../src/lib/types";
+import { launchBrowser, setupMapPage, waitForMapIdle } from "./lib/map-render";
 
 // 使い方: npx tsx scripts/build-race-thumbnails.ts [slug...]
 // public/race-courses/<slug>.json(大会の参考コース)を OpenFreeMap(positron) + MapLibre で描画し、
@@ -10,7 +10,6 @@ import type { LineString } from "../src/lib/types";
 // 引数に slug を渡すとその大会だけ再生成する。race-gpx:apply でコースを更新したら再実行すること。
 // 実行にはローカルの Google Chrome と地図タイルへのネットワーク接続が必要(puppeteer-core で起動する)。
 
-const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const SOURCE_DIR = join(process.cwd(), "public", "race-courses");
 const OUT_DIR = join(process.cwd(), "public", "race-thumbs");
 // カードは16:10で、スマホでは幅160px前後まで縮む。地図を小さめのCSSサイズで描いて2倍密度で書き出し、
@@ -48,32 +47,12 @@ async function main() {
   }
   mkdirSync(OUT_DIR, { recursive: true });
 
-  const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
+  const browser = await launchBrowser();
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: SCALE });
-    await page.setContent(PAGE_HTML);
-    // tsx(esbuild)はevaluate内の名前付き関数に__nameヘルパーを差し込むため、ブラウザ側にも用意する
-    await page.addScriptTag({ content: "window.__name = (fn) => fn;" });
-    await page.addStyleTag({ path: join(process.cwd(), "node_modules/maplibre-gl/dist/maplibre-gl.css") });
-    await page.addScriptTag({ path: join(process.cwd(), "node_modules/maplibre-gl/dist/maplibre-gl.js") });
-    await page.evaluate(() => {
-      const maplibregl = (window as never as { maplibregl: typeof import("maplibre-gl") }).maplibregl;
-      const map = new maplibregl.Map({
-        container: "map",
-        style: "https://tiles.openfreemap.org/styles/positron",
-        center: [139.7671, 35.6812],
-        zoom: 11,
-        interactive: false,
-        attributionControl: false,
-        fadeDuration: 0,
-      });
-      const w = window as never as { map: typeof map; mapReady: Promise<void>; markers: InstanceType<typeof maplibregl.Marker>[] };
-      w.map = map;
-      w.markers = [];
-      w.mapReady = new Promise((resolve) => map.on("load", () => resolve()));
-    });
-    await page.evaluate(() => (window as never as { mapReady: Promise<void> }).mapReady);
+    await setupMapPage(page, { html: PAGE_HTML, style: "positron", zoom: 11 });
+    await page.evaluate(() => { (window as never as { markers: unknown[] }).markers = []; });
     // positronは全体がグレーで味気ないため、文字ラベルを消して水・緑・陸に色を付ける
     await page.evaluate(() => {
       const map = (window as never as { map: import("maplibre-gl").Map }).map;
@@ -116,12 +95,7 @@ async function main() {
         const camera = map.cameraForBounds(bounds, { padding, maxZoom: 15 });
         if (camera) map.jumpTo(camera);
       }, { data: geojson, padding: PADDING, loop });
-      // タイル・グリフの取得と描画が落ち着くまで待つ
-      await page.evaluate(() => new Promise<void>((resolve) => {
-        const map = (window as never as { map: import("maplibre-gl").Map }).map;
-        if (map.loaded() && map.areTilesLoaded()) { resolve(); return; }
-        map.once("idle", () => resolve());
-      }));
+      await waitForMapIdle(page);
       const path = join(OUT_DIR, `${slug}.webp`) as `${string}.webp`;
       await page.screenshot({ path, type: "webp", quality: 80 });
       console.log(`generated ${slug}.webp${loop ? " (S/G)" : ""}`);
