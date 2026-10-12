@@ -197,7 +197,9 @@ async function loadPrefectureCounts() {
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
 }
 
-const hashiritaiCountExpr = sql`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`;
+const hashiritaiCountExpr = process.env.D1_PUBLIC_SNAPSHOT === "1"
+  ? sql`coalesce((select wanted_count from build_spot_metrics where spot_id = ${spots.id}), 0)`
+  : sql`(select count(*) from ${hashiritai} where ${hashiritai.spotId} = ${spots.id})`;
 
 function spotHasTag(tagSlug: string): SQL {
   return sql`exists (
@@ -663,4 +665,16 @@ export async function searchSpots(filters: SearchFilters) {
 export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
   const canonical = catalogSearchFilters(filters);
   return canonical ? cachedMapSearch(canonical) : loadSearchSpotsForMap(filters);
+}
+
+// Browser-side distance sorting needs the whole filtered catalog, not just page one.
+export async function getNearbySpotCandidates(filters: SearchFilters) {
+  const query = { ...filters, sort: "new", lat: undefined, lng: undefined, page: 1, limit: 100 };
+  const first = await searchSpots(query);
+  const all = [...first.spots];
+  for (let page = 2; page <= Math.ceil(first.total / 100); page++) {
+    const next = await searchSpots({ ...query, page });
+    all.push(...next.spots);
+  }
+  return { spots: all, total: first.total };
 }

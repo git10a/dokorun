@@ -109,6 +109,14 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           )}
         </div>
       </header>
+      {isOwner && <section className="rounded-2xl border border-line bg-cream p-5 sm:p-7">
+        <h2 className="text-xl font-bold">次のレースの準備と、走った経験</h2>
+        <p className="mt-3 text-sm leading-7 text-sub">出る大会のコースを予習して、ペースを考える。走り終えたら、次に走る人へ経験を残せます。</p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link href="/races" className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark">大会のコースをさがす</Link>
+          <Link href="/me/race-reviews" className="rounded-lg border border-line bg-paper px-5 py-3 text-sm font-bold hover:border-ink">投稿した大会の体験</Link>
+        </div>
+      </section>}
       {isOwner && STAMP_BOOK_ENABLED && (
         <section>
           <div className="mb-5 flex items-end justify-between gap-4">

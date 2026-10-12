@@ -1,14 +1,46 @@
-# Routes
+# Current routes
 
-| URL | File | Layout | Summary |
-|---|---|---|---|
-| `/` | `src/app/page.tsx` | Root layout | Search hero, tags, newest cards, prefecture links |
-| `/spots` | `src/app/spots/page.tsx` | Root layout | Filters, paginated cards, all-result map |
-| `/spots/[slug]` | `src/app/spots/[slug]/page.tsx` | Root layout | Spot title, gallery, course map/specs, facilities, description, nearby cards |
-| `/about` | `src/app/about/page.tsx` | Root layout | Service explanation |
-| `/admin/login` | `src/app/admin/login/page.tsx` | Root layout | Admin login |
-| `/admin` | `src/app/admin/page.tsx` | Root layout, guarded | Admin spot list |
-| `/admin/spots/new` | `src/app/admin/spots/new/page.tsx` | Root layout, guarded | Spot creation form |
-| `/admin/spots/[id]/edit` | `src/app/admin/spots/[id]/edit/page.tsx` | Root layout, guarded | Spot editing form |
-| `/sitemap.xml` | `src/app/sitemap.ts` | Metadata route | Fixed and spot URLs |
-| `/robots.txt` | `src/app/robots.ts` | Metadata route | Crawl rules |
+現行の主導線とページの役割は [DESIGN.md](../../DESIGN.md) を参照。大会検索 → コース予習 → ペース準備 → 体験投稿を軸とする。
+
+- `/about` — `src/app/about/page.tsx`
+- `/admin/communities/[id]/edit` — `src/app/admin/communities/[id]/edit/page.tsx`
+- `/admin/communities/new` — `src/app/admin/communities/new/page.tsx`
+- `/admin/communities` — `src/app/admin/communities/page.tsx`
+- `/admin/feedback` — `src/app/admin/feedback/page.tsx`
+- `/admin/login` — `src/app/admin/login/page.tsx`
+- `/admin/logs` — `src/app/admin/logs/page.tsx`
+- `/admin` — `src/app/admin/page.tsx`
+- `/admin/race-reviews` — `src/app/admin/race-reviews/page.tsx`
+- `/admin/spots/[id]/edit` — `src/app/admin/spots/[id]/edit/page.tsx`
+- `/admin/spots/new` — `src/app/admin/spots/new/page.tsx`
+- `/admin/stats` — `src/app/admin/stats/page.tsx`
+- `/areas/[pref]` — `src/app/areas/[pref]/page.tsx`
+- `/areas` — `src/app/areas/page.tsx`
+- `/contact` — `src/app/contact/page.tsx`
+- `/destinations` — `src/app/destinations/page.tsx`
+- `/features/[slug]` — `src/app/features/[slug]/page.tsx`
+- `/features` — `src/app/features/page.tsx`
+- `/guide/gpx` — `src/app/guide/gpx/page.tsx`
+- `/login` — `src/app/login/page.tsx`
+- `/me/favorites` — `src/app/me/favorites/page.tsx`
+- `/me/hashiritai` — `src/app/me/hashiritai/page.tsx`
+- `/me/logs/[id]/edit` — `src/app/me/logs/[id]/edit/page.tsx`
+- `/me/logs` — `src/app/me/logs/page.tsx`
+- `/me` — `src/app/me/page.tsx`
+- `/me/profile` — `src/app/me/profile/page.tsx`
+- `/me/race-reviews` — `src/app/me/race-reviews/page.tsx`
+- `/me/stamps` — `src/app/me/stamps/page.tsx`
+- `/.` — `src/app/page.tsx`
+- `/privacy` — `src/app/privacy/page.tsx`
+- `/races/[slug]` — `src/app/races/[slug]/page.tsx`
+- `/races` — `src/app/races/page.tsx`
+- `/spots/[slug]/edit` — `src/app/spots/[slug]/edit/page.tsx`
+- `/spots/[slug]/log/new` — `src/app/spots/[slug]/log/new/page.tsx`
+- `/spots/[slug]` — `src/app/spots/[slug]/page.tsx`
+- `/spots` — `src/app/spots/page.tsx`
+- `/stations/[slug]` — `src/app/stations/[slug]/page.tsx`
+- `/stations/lines/[slug]` — `src/app/stations/lines/[slug]/page.tsx`
+- `/stations/lines` — `src/app/stations/lines/page.tsx`
+- `/stations` — `src/app/stations/page.tsx`
+- `/terms` — `src/app/terms/page.tsx`
+- `/u/[handle]` — `src/app/u/[handle]/page.tsx`

@@ -16,7 +16,7 @@
     "release:rollback": "node scripts/rollback.mjs",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "eslint .",
-    "test": "vitest run",
+    "test": "vitest run && node --test scripts/*.test.mjs",
     "db:generate": "drizzle-kit generate",
     "db:seed": "tsx src/db/seed.ts",
     "db:import": "tsx src/db/import.ts",

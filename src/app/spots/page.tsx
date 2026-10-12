@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { NearbySpotResults } from "@/components/nearby-spot-results";
 import { MessageCircleQuestion } from "lucide-react";
 import { SearchFilters } from "@/components/search-filters";
 import { SortSelect } from "@/components/sort-select";
 import { SpotCard } from "@/components/spot-card";
 import { SpotsMapShell } from "@/components/map/spots-map-shell";
 import { TrackView } from "@/components/track-view";
-import { getSearchTags, searchSpots } from "@/db/data";
+import { getNearbySpotCandidates, getSearchTags, searchSpots } from "@/db/data";
 import { buildSpotRequestHref, distanceBetweenKm, nearbyFallbackFilters, normalizeSearchParams, searchParamsHref, toSearchFilters } from "@/lib/spot-search";
 
 export const dynamic = "force-dynamic";
@@ -33,7 +35,27 @@ type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 export default async function SpotsPage({ searchParams }: { searchParams: SearchParams }) {
   const raw = await searchParams;
   const params = normalizeSearchParams(raw);
+  if (params.lat !== undefined || params.lng !== undefined) {
+    delete params.lat; delete params.lng;
+    redirect(searchParamsHref("/spots", params, {}));
+  }
   const filters = toSearchFilters(params);
+  if (filters.sort === "near") {
+    const [allTags, matching] = await Promise.all([getSearchTags(), getNearbySpotCandidates(filters)]);
+    const fallback = matching.total === 0;
+    const nearby = fallback ? await getNearbySpotCandidates({}) : matching;
+    const mapParams = new URLSearchParams(fallback ? {} : Object.fromEntries(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1]))));
+    mapParams.delete("sort"); mapParams.delete("page");
+    return <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
+      <TrackView name="search_results" meta={{ total: matching.total, hasQuery: Boolean(params.q), sort: "near" }} />
+      <h1 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl">ランニングスポットをさがす</h1>
+      <div className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(340px,2fr)]"><div className="min-w-0 space-y-6">
+        <SearchFilters tags={allTags} params={params} />
+        <div className="flex items-center justify-between gap-3"><p className="font-bold"><span className="text-2xl">{matching.total}</span>件</p><SortSelect /></div>
+        <NearbySpotResults key={JSON.stringify(params)} spots={nearby.spots} fallback={fallback} />
+      </div><SpotsMapShell key={mapParams.toString()} mapDataUrl={`/api/spots/map?${mapParams}`} /></div>
+    </div>;
+  }
   const page = filters.page ?? 1;
   const [allTags, result] = await Promise.all([getSearchTags(), searchSpots(filters)]);
   const fallbackFilters = result.total === 0 ? nearbyFallbackFilters(filters) : null;

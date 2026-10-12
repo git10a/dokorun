@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { runPhotos, runs, spots } from "@/db/schema";
-import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { storeRunPhoto as storePhoto, removeUnattachedRunPhoto } from "@/lib/run-photo-storage";
 import { jstDayBounds, jstNoon } from "@/lib/jst";
 import { assertRunOwnership } from "@/lib/run-auth";
 import { requireUser } from "@/lib/user";
@@ -30,27 +30,6 @@ const checkInSchema = z.object({
 });
 
 const blockedWords = ["死ね", "殺す", "消えろ", "ばか"];
-const allowedPhotoTypes = new Set(["image/webp"]);
-const maxPhotoBytes = 2 * 1024 * 1024;
-
-async function storePhoto(file: FormDataEntryValue | null, runId: string) {
-  if (!(file instanceof File) || !file.size) return null;
-  if (!allowedPhotoTypes.has(file.type) || file.size > maxPhotoBytes) throw new Error("写真を処理できませんでした");
-  const { env } = getCloudflareContext();
-  const bucket = (env as CloudflareEnv & { IMAGE_BUCKET?: R2Bucket }).IMAGE_BUCKET;
-  if (!bucket) throw new Error("写真投稿は準備中です");
-  const key = `runs/${runId}/${crypto.randomUUID()}.webp`;
-  await bucket.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: "image/webp", cacheControl: "public, max-age=31536000, immutable" } });
-  return key;
-}
-
-async function removePhoto(key: string | null | undefined) {
-  if (!key) return;
-  const { env } = getCloudflareContext();
-  const bucket = (env as CloudflareEnv & { IMAGE_BUCKET?: R2Bucket }).IMAGE_BUCKET;
-  await bucket?.delete(key);
-}
-
 function values(formData: FormData) {
   const parsed = runSchema.safeParse(Object.fromEntries(formData.entries()));
   if (parsed.success && blockedWords.some((word) => parsed.data.comment.includes(word))) {
@@ -119,11 +98,12 @@ export async function createRun(_: RunFormState, formData: FormData): Promise<Ru
   let photoKey: string | null = null;
   try {
     photoKey = await storePhoto(formData.get("photo"), id);
-    await db.insert(runs).values({ id, userId: user.id, ...runValues(parsed.data) });
-    if (photoKey) await db.insert(runPhotos).values({ runId: id, key: photoKey });
-  } catch (error) {
-    await removePhoto(photoKey);
-    return { message: error instanceof Error ? error.message : "投稿できませんでした" };
+    const insertRun = db.insert(runs).values({ id, userId: user.id, ...runValues(parsed.data) });
+    if (photoKey) await db.batch([insertRun, db.insert(runPhotos).values({ runId: id, key: photoKey })]);
+    else await insertRun;
+  } catch {
+    await removeUnattachedRunPhoto(photoKey);
+    return { message: "投稿できませんでした。時間をおいて再度お試しください" };
   }
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
   redirect(`/spots/${parsed.data.spotSlug}?tab=logs&posted=1#dokolog`);
@@ -141,18 +121,19 @@ export async function updateRun(_: RunFormState, formData: FormData): Promise<Ru
   let newPhotoKey: string | null = null;
   try {
     newPhotoKey = await storePhoto(formData.get("photo"), parsed.data.id);
-    await db.update(runs).set(runValues(parsed.data)).where(and(eq(runs.id, parsed.data.id), eq(runs.userId, user.id)));
+    const update = db.update(runs).set(runValues(parsed.data)).where(and(eq(runs.id, parsed.data.id), eq(runs.userId, user.id)));
     if (newPhotoKey) {
-      if (currentPhoto[0]) await db.update(runPhotos).set({ key: newPhotoKey }).where(eq(runPhotos.id, currentPhoto[0].id));
-      else await db.insert(runPhotos).values({ runId: parsed.data.id, key: newPhotoKey });
-      await removePhoto(currentPhoto[0]?.key);
+      const photoUpdate = currentPhoto[0]
+        ? db.update(runPhotos).set({ key: newPhotoKey }).where(eq(runPhotos.id, currentPhoto[0].id))
+        : db.insert(runPhotos).values({ runId: parsed.data.id, key: newPhotoKey });
+      await db.batch([update, photoUpdate]);
     } else if (formData.get("removePhoto") === "true" && currentPhoto[0]) {
-      await db.delete(runPhotos).where(eq(runPhotos.id, currentPhoto[0].id));
-      await removePhoto(currentPhoto[0].key);
-    }
-  } catch (error) {
-    await removePhoto(newPhotoKey);
-    return { message: error instanceof Error ? error.message : "更新できませんでした" };
+      await db.batch([update, db.delete(runPhotos).where(eq(runPhotos.id, currentPhoto[0].id))]);
+    } else await update;
+    // A DB trigger queues old objects in the same transaction; cleanup can retry safely.
+  } catch {
+    await removeUnattachedRunPhoto(newPhotoKey);
+    return { message: "更新できませんでした。時間をおいて再度お試しください" };
   }
   revalidatePath(`/spots/${parsed.data.spotSlug}`); revalidatePath("/me/logs");
   if (parsed.data.returnTo === "spot") redirect(`/spots/${parsed.data.spotSlug}?tab=logs&posted=updated#dokolog`);
@@ -167,9 +148,7 @@ export async function deleteRun(formData: FormData) {
   const current = await db.select({ userId: runs.userId, spotId: runs.spotId }).from(runs).where(eq(runs.id, id)).limit(1);
   if (!current[0]) return null;
   assertRunOwnership(current[0].userId, user.id);
-  const photo = await db.select({ key: runPhotos.key }).from(runPhotos).where(eq(runPhotos.runId, id)).limit(1);
   await db.delete(runs).where(and(eq(runs.id, id), eq(runs.userId, user.id)));
-  await removePhoto(photo[0]?.key);
   revalidatePath("/me/logs");
   const spot = await db.select({ slug: spots.slug }).from(spots).where(eq(spots.id, current[0].spotId)).limit(1);
   if (spot[0]) {

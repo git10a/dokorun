@@ -44,7 +44,7 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
   useEffect(() => {
     const clear = () => document.body.classList.remove("printing-pace");
     window.addEventListener("afterprint", clear);
-    return () => window.removeEventListener("afterprint", clear);
+    return () => { window.removeEventListener("afterprint", clear); clear(); };
   }, []);
 
   // 操作ごとには送らず、最初に触ったときだけ計測する
@@ -117,8 +117,20 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
       </div>
       <p className="mt-2 text-xs text-sub">距離は大会の公式距離に合わせた目安です。</p>
 
-      {/* 印刷専用カード。body直下に出し、印刷時はこれ以外を隠す(globals.cssのprinting-pace) */}
-      {mounted && createPortal(<div id="pace-print">
+      {/* 通常はinlineで隠す。印刷ルールもportalと一緒に読み込み、CSSの遅延で画面へ漏れないようにする。 */}
+      {mounted && createPortal(<div id="pace-print" style={{ display: "none" }}>
+        <style>{`
+          @media print {
+            body.printing-pace > *:not(#pace-print) { display: none !important; }
+            body.printing-pace #pace-print {
+              display: block !important;
+              width: 90mm;
+              padding: 4mm;
+              border: 0.3mm dashed #000;
+              color: #000;
+            }
+          }
+        `}</style>
         <p className="text-[11pt] font-bold">{raceName}　目標 {formatDuration(plan.targetS, true)}</p>
         <p className="text-[8pt]">{condition}・平均 {formatDuration(plan.targetS / plan.distanceKm)}/km</p>
         <table className="mt-[2mm] w-full text-[9pt] tabular-nums"><tbody>{plan.fiveKm.map((row) => <tr key={row.label}><td className="pr-[3mm] font-bold">{row.label}</td><td className="text-right">{formatDuration(row.cumulativeS, true)}</td></tr>)}</tbody></table>

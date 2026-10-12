@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { saveLocalLocation } from "@/lib/local-location";
 import { track } from "@/lib/track";
 
 export function SortSelect() {
@@ -37,8 +38,7 @@ export function SortSelect() {
         (position) => {
           setLocating(false);
           next.set("sort", "near");
-          next.set("lat", position.coords.latitude.toFixed(4));
-          next.set("lng", position.coords.longitude.toFixed(4));
+          saveLocalLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
           track("sort_near");
           apply(next);
         },

@@ -5,6 +5,9 @@ import bundleAnalyzer from "@next/bundle-analyzer";
 initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
+  async headers() {
+    return [{ source: "/:path*", headers: [{ key: "Referrer-Policy", value: "no-referrer" }] }];
+  },
   experimental: {
     serverActions: { bodySizeLimit: "3mb" },
     // ビルド用D1スナップショットは単一sqlite。複数workerから同時に開くと

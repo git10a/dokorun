@@ -60,6 +60,7 @@ export async function POST(request: Request, { params }: Context) {
         } });
     }
     revalidatePath(`/races/${slug}`);
+    revalidatePath("/me/race-reviews");
     return json({ ok: true });
   } catch {
     // Drizzle errors may contain bound user text; do not copy it into logs.

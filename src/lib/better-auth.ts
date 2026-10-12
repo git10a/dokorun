@@ -1,26 +1,9 @@
-import { and, eq } from "drizzle-orm";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { getDb, type Database } from "@/db";
 import * as schema from "@/db/schema";
 
-function handleBase(email: string) {
-  const normalized = email.split("@")[0]?.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") ?? "";
-  return (normalized || "runner").slice(0, 24);
-}
-
-async function availableHandle(db: Database, email: string) {
-  const base = handleBase(email);
-  const existing = await db.select({ id: schema.users.id }).from(schema.users).where(eq(schema.users.handle, base)).limit(1);
-  if (!existing[0]) return base;
-  for (let attempt = 0; attempt < 5; attempt += 1) {
-    const suffix = crypto.randomUUID().replaceAll("-", "").slice(0, 6);
-    const candidate = `${base.slice(0, 23)}-${suffix}`;
-    const conflict = await db.select({ id: schema.users.id }).from(schema.users).where(and(eq(schema.users.handle, candidate))).limit(1);
-    if (!conflict[0]) return candidate;
-  }
-  return `runner-${crypto.randomUUID().replaceAll("-", "").slice(0, 12)}`;
-}
+import { authSecret, discardedProviderCredentials, privateProfileDefaults } from "./auth-privacy";
 
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
@@ -31,7 +14,10 @@ export function buildAuth(db: Database) {
   return betterAuth({
     appName: "どこラン",
     baseURL: process.env.BETTER_AUTH_URL || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-    secret: process.env.BETTER_AUTH_SECRET || "dokorun-local-development-secret-change-me",
+    secret: authSecret(),
+    logger: { disabled: true },
+    disabledPaths: ["/get-access-token", "/refresh-token", "/account-info"],
+    account: { encryptOAuthTokens: true, storeAccountCookie: false, accountLinking: { updateUserInfoOnLink: false } },
     database: drizzleAdapter(db, {
       provider: "sqlite",
       schema,
@@ -40,10 +26,13 @@ export function buildAuth(db: Database) {
       transaction: false,
     }),
     session: {
-      // 署名付きcookieで5分だけセッションDB照会を省く。サインアウト後の他タブ反映は最大5分遅れる。
-      cookieCache: { enabled: true, maxAge: 300 },
+      // Revocation/account deletion must take effect on the very next request.
+      cookieCache: { enabled: false },
+      freshAge: 300,
     },
     advanced: {
+      disableOriginCheck: false,
+      disableCSRFCheck: false,
       database: { generateId: () => crypto.randomUUID() },
       cookiePrefix: "dokorun",
       ipAddress: { ipAddressHeaders: ["cf-connecting-ip"] },
@@ -55,6 +44,7 @@ export function buildAuth(db: Database) {
       },
     } : {},
     user: {
+      deleteUser: { enabled: true },
       additionalFields: {
         // required:true にするとソーシャルサインアップ時に databaseHooks で
         // handle を生成する前のバリデーションで handle_is_required になる。
@@ -64,10 +54,19 @@ export function buildAuth(db: Database) {
       },
     },
     databaseHooks: {
+      account: {
+        create: { before: async (account) => ({ data: { ...account, ...discardedProviderCredentials } }) },
+        update: { before: async (account) => ({ data: { ...account, ...discardedProviderCredentials } }) },
+      },
+      session: {
+        // Retain in-memory IP rate limiting, but do not persist IP or User-Agent.
+        create: { before: async (session) => ({ data: { ...session, ipAddress: null, userAgent: null } }) },
+        update: { before: async (session) => ({ data: { ...session, ipAddress: null, userAgent: null } }) },
+      },
       user: {
         create: {
           before: async (user) => ({
-            data: { ...user, handle: await availableHandle(db, user.email), bio: null },
+            data: { ...user, ...privateProfileDefaults() },
           }),
         },
       },

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "targets": {
+    "/stories/[slug]": {
+      "targetKind": "new-target-in-existing-codebase",
+      "projectId": "9611e4b0-7dd6-4c84-9369-708db1755432",
+      "activeDraftId": "9870e11c-73d0-45a5-ad89-406624e3fb95",
+      "designSystemPath": ".superdesign/design-system.md",
+      "referenceIds": [
+        "public-brand-dokorun-wordmark-header.png"
+      ],
+      "brandAssets": {
+        "logo": {
+          "assetKey": "public-brand-dokorun-wordmark-header.png",
+          "url": "https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/9611e4b0-7dd6-4c84-9369-708db1755432/brand-assets/public-brand-dokorun-wordmark-header.png/dokorun-wordmark-header.png",
+          "sourcePath": "public/brand/dokorun-wordmark-header.png"
+        }
+      },
+      "contextFiles": [
+        ".superdesign/design-system.md",
+        "src/app/globals.css",
+        "src/components/header.tsx",
+        "src/components/footer.tsx",
+        "src/app/guide/gpx/page.tsx"
+      ],
+      "fingerprints": {
+        ".superdesign/design-system.md": "237193ca44cf05e4d07112b89d95ce02730116fe5f6d3e637379696fcc0165b7",
+        "src/app/globals.css": "6caa234407fe8c91e8ac83b786097a5142c37cf937644133aac66eae6da9c802",
+        "src/components/header.tsx": "7cf70e3ac95a58e6485de1a13f0280c4cf68bdeef8ae2e2f083d72813fe707bd",
+        "src/components/footer.tsx": "670507f8bd31b312c7ec04063e8b45034f9d9b6301273a8dc603282ed7a4fc62",
+        "src/app/guide/gpx/page.tsx": "40fdd53add393fffcd1087ecfff451fb3291c1967a09f2084359a3203269588d"
+      },
+      "drafts": {
+        "9870e11c-73d0-45a5-ad89-406624e3fb95": {
+          "title": "どこラン 大会インタビュー＆攻略ガイド サンプル",
+          "visualDirection": "Japanese editorial article, free story followed by guide outline. Canvas is the initial layout; final responsive implementation is src/components/race-story.tsx. No real interview or checkout yet.",
+          "currentVersion": 2
+        }
+      },
+      "updatedAt": "2026-10-12T20:00:00+09:00"
+    }
+  }
+}

@@ -11,7 +11,7 @@ vi.mock("@/db", () => ({ getDb: mocks.getDb }));
 vi.mock("@/lib/user", () => ({ getUser: mocks.getUser }));
 vi.mock("next/cache", () => ({ revalidatePath: mocks.revalidatePath }));
 import { GET, POST } from "@/app/api/races/[slug]/reviews/route";
-import { getRaceReviews } from "@/db/race-reviews";
+import { getRaceReviews, getUserRaceReviews } from "@/db/race-reviews";
 
 const slug = "itabashi-city-marathon";
 const context = { params: Promise.resolve({ slug }) };
@@ -103,11 +103,38 @@ describe("race review persistence and authorization", () => {
     await POST(request({ action: "delete", id }), context);
     expect((await client.execute("SELECT * FROM race_review_reports")).rows).toHaveLength(0);
   });
+  it("lists only the owner's reviews, including their moderated posts, across races", async () => {
+    await POST(request(valid), context);
+    const id = (await getRaceReviews(slug)).reviews[0].id;
+    await client.execute({ sql: "UPDATE race_reviews SET is_hidden = 1 WHERE id = ?", args: [id] });
+    await POST(request(valid), { params: Promise.resolve({ slug: "tokyo-marathon" }) });
+    mocks.getUser.mockResolvedValue({ id: "runner-b" });
+    await POST(request(valid), context);
+    const mine = await getUserRaceReviews("runner-a");
+    expect(mine.available).toBe(true);
+    expect(mine.reviews).toHaveLength(2);
+    expect(mine.reviews.find((review) => review.id === id)?.isHidden).toBe(true);
+    expect(new Set(mine.reviews.map((review) => review.raceSlug))).toEqual(new Set([slug, "tokyo-marathon"]));
+    expect((await getUserRaceReviews("runner-b")).reviews).toHaveLength(1);
+    expect((await getRaceReviews(slug)).reviews.map((review) => review.userId)).toEqual(["runner-b"]);
+    expect((await getUserRaceReviews("nobody")).reviews).toHaveLength(0);
+  });
+  it("keeps older owner posts reachable beyond the first 20 entries", async () => {
+    for (let i = 0; i < 24; i++) await POST(request({ ...valid, raceYear: 2000 + i }), context);
+    const first = await getUserRaceReviews("runner-a");
+    const second = await getUserRaceReviews("runner-a", 20);
+    expect(first.reviews).toHaveLength(20);
+    expect(first.hasMore).toBe(true);
+    expect(second.reviews).toHaveLength(4);
+    expect(second.hasMore).toBe(false);
+    expect(new Set([...first.reviews, ...second.reviews].map((review) => review.id)).size).toBe(24);
+  });
   it("distinguishes unavailable storage from an empty review list", async () => {
     await client.execute("DROP TABLE race_review_reports");
     await client.execute("DROP TABLE race_reviews");
     const log = vi.spyOn(console, "error").mockImplementation(() => {});
     expect((await getRaceReviews(slug)).available).toBe(false);
+    expect((await getUserRaceReviews("runner-a")).available).toBe(false);
     expect((await GET(new Request(`https://dokorun.com/api/races/${slug}/reviews`), context)).status).toBe(503);
     log.mockRestore();
   });

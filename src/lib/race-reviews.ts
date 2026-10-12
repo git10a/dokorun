@@ -16,6 +16,10 @@ export type RaceReview = {
   createdAt: string;
 };
 export type RaceReviewPage = { reviews: RaceReview[]; nextOffset: number | null; available: boolean };
+export type OwnRaceReview = Pick<RaceReview, "id" | "raceYear" | "finishTimeS" | "body" | "distanceKm"> & {
+  raceSlug: string;
+  isHidden: boolean;
+};
 
 export function raceDistanceKm(race: Pick<RaceDef, "distanceLabel">) {
   return race.distanceLabel.includes("フル") ? 42.195 : 21.0975;

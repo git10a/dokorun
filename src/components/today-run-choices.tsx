@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Camera, Navigation, ShieldCheck, Timer } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { saveLocalLocation } from "@/lib/local-location";
 import { track } from "@/lib/track";
 
 const choices = [
@@ -32,11 +33,8 @@ export function TodayRunChoices() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         track("today_location_result", { choice, result: "success" });
-        const query = new URLSearchParams({
-          sort: "near",
-          lat: position.coords.latitude.toFixed(4),
-          lng: position.coords.longitude.toFixed(4),
-        });
+        saveLocalLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
+        const query = new URLSearchParams({ sort: "near" });
         if (choice === "no_signals") query.set("tags", "no-signals");
         router.push(`/spots?${query}`);
       },

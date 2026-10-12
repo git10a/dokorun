@@ -1,0 +1,15 @@
+{
+  "name": "dokorun-privacy-maintenance",
+  "account_id": "cd288c7e5f37d2adce330bd0aab52f6f",
+  "main": "privacy-maintenance.mjs",
+  "compatibility_date": "2026-05-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": true, "logs": { "enabled": true, "invocation_logs": false } },
+  "triggers": { "crons": ["15 * * * *"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "dokorun-db", "database_id": "cafb425e-efb9-4911-9f43-e7abf9a9beb1" }],
+  "r2_buckets": [
+    { "binding": "IMAGE_BUCKET", "bucket_name": "dokorun-images" },
+    { "binding": "PRIVATE_IMAGE_BUCKET", "bucket_name": "dokorun-private-images" }
+  ]
+}

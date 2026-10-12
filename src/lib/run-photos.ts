@@ -1,4 +1,5 @@
+export const runPhotoKeyPattern = /^runs\/[a-f0-9-]{36}\/[a-f0-9-]{36}\.webp$/;
+
 export function runPhotoUrl(key: string) {
-  const base = process.env.R2_PUBLIC_URL;
-  return base ? `${base.replace(/\/$/, "")}/${key}` : "";
+  return runPhotoKeyPattern.test(key) ? `/api/run-photos/${key}` : "";
 }

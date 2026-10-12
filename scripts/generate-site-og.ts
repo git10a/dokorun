@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import puppeteer from "puppeteer-core";
+import { siteConfig } from "../src/lib/site";
 
 const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const WIDTH = 1200;
@@ -11,9 +12,9 @@ const assetDataUri = (path: string, mime: string) =>
 
 // 大会カードは scripts/build-race-thumbnails.ts で生成したコースマップを使う
 const maps = [
-  { src: assetDataUri("public/race-thumbs/tokyo-marathon.webp", "image/webp"), name: "東京マラソン", meta: "コースマップ / GPX" },
+  { src: assetDataUri("public/race-thumbs/tokyo-marathon.webp", "image/webp"), name: "東京マラソン", meta: "コースマップ / ダウンロード" },
   { src: assetDataUri("public/race-thumbs/osaka-marathon.webp", "image/webp"), name: "大阪マラソン", meta: "高低図 / 完走者の体験" },
-  { src: assetDataUri("public/race-thumbs/kobe-marathon.webp", "image/webp"), name: "神戸マラソン", meta: "コースマップ / GPX" },
+  { src: assetDataUri("public/race-thumbs/kobe-marathon.webp", "image/webp"), name: "神戸マラソン", meta: "コースマップ / ダウンロード" },
 ];
 
 const ran = assetDataUri("public/characters/ran-happy.png", "image/png");
@@ -50,8 +51,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="screen">
     <div class="brand"><span class="mark">走</span><span>どこラン</span></div>
     <h1>マラソン大会のコースを<br>予習できる。</h1>
-    <p class="lead">コースを知れば、ペースが変わる。<br>ペースが変われば、タイムが変わる。<br>タイムが変われば、ゴールで笑える。</p>
-    <div class="chips"><span class="chip">コース地図</span><span class="chip">高低図</span><span class="chip">GPX</span><span class="chip">完走者の体験</span></div>
+    <p class="lead">${siteConfig.tagline.join("<br>")}</p>
+    <div class="chips"><span class="chip">コース地図</span><span class="chip">高低図</span><span class="chip">コース保存</span><span class="chip">完走者の体験</span></div>
     <div class="url">dokorun.com</div>
   </div>
   <div class="maps">
