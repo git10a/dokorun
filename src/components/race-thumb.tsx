@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element -- 生成済みの固定サイズwebpを直接配信する */
 import { RaceCountdown } from "./race-countdown";
 import { jstTodayKey, raceDateKey, raceShortDate } from "@/lib/race-date";
 import type { RaceDef } from "@/lib/races";
 
-// scripts/build-race-thumbnails.ts で生成済みの固定サイズwebpを直接配信する。開催済みはグレーにする
+// scripts/build-race-thumbnails.ts で生成済みの固定サイズwebpを直接配信する(next/image の変換を挟まない)。開催済みはグレーにする
 export function RaceThumb({ race, finished, alt, className = "" }: { race: Pick<RaceDef, "slug">; finished: boolean; alt: string; className?: string }) {
-  // eslint-disable-next-line @next/next/no-img-element
   return <img src={`/race-thumbs/${race.slug}.webp`} alt={alt} width={800} height={500} loading="lazy" decoding="async" className={`${className} ${finished ? "opacity-70 grayscale" : ""}`} />;
 }
 

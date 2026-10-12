@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- コース地図は生成済みの固定サイズwebpで、変換を挟まず直接配信する */
 import { SpotImage } from "./spot-image";
 import { SpotVisual } from "./spot-visual";
 import type { SpotSummary } from "@/lib/types";
@@ -14,8 +15,6 @@ export function SpotThumbnail({ spot, sizes, photoHeight }: Props) {
     return <SpotImage src={spot.photoUrl} alt={`${spot.name}の写真`} width={640} height={photoHeight} sizes={sizes} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />;
   }
   if (spot.hasCourse) {
-    // コース地図は生成済みの固定サイズwebpで、変換を挟まず直接配信する
-    // eslint-disable-next-line @next/next/no-img-element
     return <img src={`/course-maps/${spot.slug}.webp`} alt={`${spot.name}のコース地図`} width={512} height={512} loading="lazy" decoding="async" className="h-full w-full object-cover" />;
   }
   return <SpotVisual slug={spot.slug} distanceM={spot.distanceM} courseType={spot.courseType} tags={spot.tags} className="h-full w-full" />;
