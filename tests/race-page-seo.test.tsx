@@ -53,7 +53,9 @@ describe("race page SEO preservation", () => {
     expect(html).toContain("BreadcrumbList");
     expect(html).not.toContain('"@type":"ItemList"');
     expect(html).not.toContain("AggregateRating");
-    expect(html).toContain("来年この大会を走るランナーへ、あなたが伝えておきたいことは？");
+    // 体験がまだない大会でも、投稿への入口は出す
+    expect(html).toContain("まだ体験はありません");
+    expect(html).toContain("ログインして体験を残す");
     expect(html).toContain("/guide/gpx");
     await expect(RacePage({ params: Promise.resolve({ slug: "not-a-race" }) })).rejects.toThrow();
   });
