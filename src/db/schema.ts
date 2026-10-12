@@ -266,27 +266,6 @@ export const runPhotos = sqliteTable(
   (t) => [uniqueIndex("run_photos_run_unique").on(t.runId)],
 );
 
-// ログイン不要のハシリタイ。clientId はブラウザごとに localStorage で発行する匿名ID
-export const hashiritai = sqliteTable(
-  "hashiritai",
-  {
-    clientId: text("client_id").notNull(),
-    userId: text("user_id").references(() => users.id, { onDelete: "cascade" }),
-    spotId: text("spot_id")
-      .notNull()
-      .references(() => spots.id, { onDelete: "cascade" }),
-    createdAt: createdNow("created_at"),
-  },
-  (t) => [
-    uniqueIndex("hashiritai_pk").on(t.clientId, t.spotId),
-    uniqueIndex("hashiritai_user_spot_unique")
-      .on(t.userId, t.spotId)
-      .where(sql`${t.userId} is not null`),
-    index("hashiritai_spot_idx").on(t.spotId),
-    index("hashiritai_user_idx").on(t.userId),
-  ],
-);
-
 // この場所で活動しているランニングコミュニティ。プロフィールは薄く保ち、鮮度は外部リンク先に委ねる
 export const communities = sqliteTable("communities", {
   id: uuidPk("id"),

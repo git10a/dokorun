@@ -6,6 +6,7 @@ export async function fixtureDb() {
   await client.executeMultiple(readFileSync("drizzle/0001_charming_micromacro.sql", "utf8"));
   await client.executeMultiple(readFileSync("scripts/sql/2026-10-12-race-reviews.sql", "utf8"));
   await client.executeMultiple(readFileSync("scripts/sql/2026-10-12-privacy.sql", "utf8"));
+  await client.executeMultiple(readFileSync("scripts/sql/2026-10-13-drop-hashiritai.sql", "utf8"));
   await client.execute("PRAGMA foreign_keys=ON");
   return client;
 }

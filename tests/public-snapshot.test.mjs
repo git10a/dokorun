@@ -18,10 +18,9 @@ test("build snapshot excludes all people, secrets, private rows and raw events",
     await source.execute(
       "INSERT INTO feedback(id,category,message,contact) VALUES ('feedback','contact','Private message','private@example.com')",
     );
-    await source.execute("INSERT INTO hashiritai(client_id,user_id,spot_id) VALUES ('browser-id','user','spot')");
     const count = await fillPublicSnapshot(target, async (sql) => (await source.execute(sql)).rows);
     assert.equal(count, 1);
-    for (const table of ["users", "accounts", "sessions", "events", "feedback", "runs", "hashiritai"])
+    for (const table of ["users", "accounts", "sessions", "events", "feedback", "runs"])
       assert.equal((await target.execute(`SELECT count(*) AS n FROM ${table}`)).rows[0].n, 0);
     assert.equal((await target.execute("SELECT count(*) AS n FROM courses")).rows[0].n, 1);
     assert.throws(() => publicQuery("users"));
