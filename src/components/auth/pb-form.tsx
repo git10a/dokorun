@@ -3,7 +3,7 @@
 import { useActionState } from "react";
 import { updatePbs, type PbState } from "@/app/me/actions";
 import { PB_EVENTS } from "@/lib/pb";
-import { formatDuration } from "@/lib/time-format";
+import { formatDuration } from "@/lib/format";
 
 const inputClass = "w-full rounded-lg border border-line bg-paper px-2 py-2 text-center";
 const competitionInputClass = "w-full rounded-lg border border-line bg-paper px-3 py-2";

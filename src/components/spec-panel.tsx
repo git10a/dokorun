@@ -1,10 +1,11 @@
 import { courseTypeLabels, surfaceLabels, type CourseType, type Lighting, type Surface } from "@/lib/types";
+import { formatDistanceKm } from "@/lib/format";
 
 const lightingLabels: Record<Exclude<Lighting, null>, string> = { bright: "夜も明るい", partial: "一部照明あり", dark: "夜は暗い" };
 
 export function SpecPanel({ distanceM, elevationGainM, signalsCount, courseType, surface, lighting }: { distanceM: number; elevationGainM: number | null; signalsCount: number | null; courseType: CourseType; surface: Surface; lighting: Lighting }) {
   const specs = [
-    { label: "距離", value: (distanceM / 1000).toFixed(distanceM % 1000 ? 1 : 0), unit: "km" },
+    { label: "距離", value: formatDistanceKm(distanceM), unit: "km" },
     { label: "獲得標高", value: elevationGainM ?? "—", unit: elevationGainM === null ? "" : "m" },
     { label: "信号", value: signalsCount ?? "—", unit: signalsCount === null ? "" : "箇所" },
   ];

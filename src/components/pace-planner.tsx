@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import { createPortal } from "react-dom";
 import { Check, Copy, Minus, Plus, Printer } from "lucide-react";
 import { buildPacePlan, canUseHills, HILL_EFFORT_RANGE, hillEffortLabel, pacePlanCondition, pacePlanText, SPLIT_PERCENT_RANGE, splitLabel } from "@/lib/pace-plan";
-import { formatDuration } from "@/lib/time-format";
+import { formatDuration } from "@/lib/format";
 import type { RaceElevation } from "@/lib/race-elevation";
 import { track } from "@/lib/track";
 

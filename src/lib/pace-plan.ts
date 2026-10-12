@@ -1,5 +1,5 @@
 import { elevationPointAtDistance, type RaceElevationPoint } from "./race-elevation";
-import { formatDuration } from "./time-format";
+import { formatDuration } from "./format";
 
 export type PacePlanRow = { label: string; fromKm: number; toKm: number; splitS: number; cumulativeS: number; paceS: number };
 // splitPercent: 後半を前半より何%速くするか(-5〜+5。負なら前半を速く)

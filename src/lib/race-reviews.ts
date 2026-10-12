@@ -2,7 +2,7 @@ import { z } from "zod";
 import { jstYear } from "./jst";
 import { raceDateKey } from "./race-date";
 import type { RaceDef } from "./races";
-import { formatDuration } from "./time-format";
+import { formatDuration } from "./format";
 
 export const raceReviewPrompt = "来年この大会を走るランナーへ、あなたが伝えておきたいことは？";
 export const reviewPageSize = 20;

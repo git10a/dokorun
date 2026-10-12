@@ -1,4 +1,5 @@
 import type { CourseType } from "@/lib/types";
+import { formatDistanceKm } from "@/lib/format";
 
 /** slugから決定的なハッシュ(FNV-1a)。同一スポットは常に同じ見た目になる。 */
 function hashSlug(slug: string): number {
@@ -75,7 +76,7 @@ export function SpotVisual({
   const c1 = `hsl(${hue} 46% 86%)`;
   const c2 = `hsl(${(hue + 26) % 360} 54% 74%)`;
   const gradId = `sv-${hash.toString(36)}`;
-  const km = (distanceM / 1000).toFixed(distanceM % 1000 ? 1 : 0);
+  const km = formatDistanceKm(distanceM);
   return (
     <svg viewBox="0 0 320 180" className={className} preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
       <defs>

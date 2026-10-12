@@ -1,4 +1,4 @@
-import { formatDuration } from "./time-format";
+import { formatDuration } from "./format";
 
 export const PB_EVENTS = [
   { key: "1500m", label: "1500m", meters: 1500, minS: 120, maxS: 1800 },
