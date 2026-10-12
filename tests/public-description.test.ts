@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { stripPrepublishSentences } from "./public-description";
+import { stripPrepublishSentences } from "@/lib/public-description";
 
 describe("stripPrepublishSentences", () => {
   it("removes internal prepublish notes from public copy", () => {
