@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { SpotCard } from "@/components/spot-card";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { getStationLine, getStationLines, stationJogMinutes } from "@/lib/stations";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const dynamicParams = false;
 
@@ -43,7 +44,7 @@ export default async function StationLinePage({ params }: { params: Params }) {
   const lastStation = line.stations.at(-1);
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / <Link href="/stations" className="hover:underline">駅から探す</Link> / <Link href="/stations/lines" className="hover:underline">路線から探す</Link> / {line.name}</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "駅から探す", href: "/stations" }, { name: "路線から探す", href: "/stations/lines" }, { name: line.name }]} />
       <header>
         <p className="text-sm font-bold text-sub">{line.prefectures.join("・")}</p>
         <h1 className="mt-2 text-3xl font-black sm:text-5xl">{line.name}の駅別ランニングスポット</h1>

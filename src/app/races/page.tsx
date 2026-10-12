@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
-import Link from "next/link";
 import { RaceCard } from "@/components/race-card";
 import { RaceSearch } from "@/components/race-search";
 import { raceSearchOptions, splitRacesBySchedule } from "@/lib/race-schedule";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 // 開催前/開催済みの振り分けを日次で更新する(残り日数は閲覧時に再計算)
 export const revalidate = 86400;
@@ -19,7 +19,7 @@ export default function RacesPage() {
   const searchOptions = raceSearchOptions();
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 大会からさがす</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす" }]} />
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl">大会のコースマップ・GPXをさがす</h1>
       <p className="mb-5 text-sm leading-7 text-sub">コースマップ・高低図・GPXと、走った人の体験を大会ごとにまとめています。</p>
       <div className="mb-10 max-w-xl"><RaceSearch races={searchOptions} /></div>

@@ -6,8 +6,10 @@ import { SpotCard } from "@/components/spot-card";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { groupByMap } from "@/lib/collections";
-import { getSiteUrl, pageMetadata } from "@/lib/site";
+import { pageMetadata } from "@/lib/site";
 import { getStation, getStations, stationJogMinutes } from "@/lib/stations";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
 
 export const dynamicParams = false;
 
@@ -43,22 +45,16 @@ export default async function StationPage({ params }: { params: Params }) {
   const { station, spots } = data;
   const oneStationGroups = groupByMap(station.oneStationSpots, (spot) => `${spot.stationCount}:${spot.lineName}:${spot.destinationStationName}`);
   const adjacentGroups = groupByMap(station.adjacentStations, (item) => item.lineName);
-  const baseUrl = getSiteUrl();
-  const areaPath = `/areas/${prefectureSlug(station.prefecture)}`;
-  const breadcrumbData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: station.prefecture, item: `${baseUrl}${areaPath}` },
-      { "@type": "ListItem", position: 3, name: `${station.name}駅`, item: `${baseUrl}/stations/${station.slug}` },
-    ],
-  };
+  const crumbs = [
+    { name: "ホーム", path: "/" },
+    { name: station.prefecture, path: `/areas/${prefectureSlug(station.prefecture)}` },
+    { name: `${station.name}駅`, path: `/stations/${station.slug}` },
+  ];
   return (
     <div className="mx-auto max-w-5xl space-y-12 px-4 py-8 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c") }} />
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <header>
-        <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / <Link href={areaPath} className="hover:underline">{station.prefecture}</Link> / {station.name}駅</nav>
+        <Breadcrumb items={crumbs.map((crumb) => ({ name: crumb.name, href: crumb.path }))} />
         <p className="text-sm font-bold text-sub">{station.prefecture}</p>
         <h1 className="mt-2 text-3xl font-black sm:text-5xl">{station.name}駅から走れるランニングスポット</h1>
         <div className="mt-5 flex flex-wrap gap-2">{station.lines.map((line) => <Link key={line.slug} href={`/stations/lines/${line.slug}`} className="rounded-full bg-cream px-3 py-1.5 text-sm font-bold hover:bg-brand/20">{line.name}</Link>)}</div>

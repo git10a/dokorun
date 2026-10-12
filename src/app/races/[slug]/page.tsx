@@ -1,6 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
-import { getSiteUrl, pageMetadata } from "@/lib/site";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Download, MapPin } from "lucide-react";
@@ -17,6 +17,8 @@ import { raceDateKey, splitRacesBySchedule } from "@/lib/race-schedule";
 import { raceCourseMeta, racePageTitle, racePageDescription } from "@/lib/race-page";
 import { raceDistanceKm } from "@/lib/race-reviews";
 import { getRaceReviews } from "@/db/race-reviews";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 
 // スポット情報の更新反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
 export const revalidate = 3600;
@@ -65,35 +67,14 @@ export default async function RacePage({ params }: { params: Params }) {
   ] : [];
   const title = racePageTitle(race);
   const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: getSiteUrl() },
-        { "@type": "ListItem", position: 2, name: "大会からさがす", item: `${getSiteUrl()}/races` },
-        { "@type": "ListItem", position: 3, name: title, item: `${getSiteUrl()}/races/${slug}` },
-      ],
-    },
-    ...(spotItems.length ? [{
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      name: `${race.name}の近くの有名ランニングスポット`,
-      numberOfItems: spotItems.length,
-      itemListElement: spotItems.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: item.spot.name,
-        url: `${getSiteUrl()}/spots/${item.spot.slug}`,
-      })),
-    }] : []),
+    breadcrumbJsonLd([{ name: "ホーム", path: "/" }, { name: "大会からさがす", path: "/races" }, { name: title, path: `/races/${slug}` }]),
+    ...(spotItems.length ? [spotItemListJsonLd(`${race.name}の近くの有名ランニングスポット`, spotItems.map((item) => item.spot))] : []),
   ];
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <JsonLd data={structuredData} />
       <TrackView name="race_view" meta={{ race: slug }} />
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub">
-        <Link href="/" className="hover:underline">ホーム</Link> / <Link href="/races" className="hover:underline">大会からさがす</Link> / {race.name}
-      </nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす", href: "/races" }, { name: race.name }]} />
       <h1 className="text-2xl font-bold sm:text-3xl">{race.name}のコースマップ・GPX</h1>
       <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm"><CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" /><span className="font-bold">{race.timing}</span>{dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}</p>
       <RaceExperience slug={slug} name={race.name} distanceLabel={race.distanceLabel} maxKm={raceDistanceKm(race)} hasCourse={Boolean(courseMeta)} initialReviews={initialReviews}

@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { getFeatureCounts } from "@/db/data";
 import { features } from "@/lib/features";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
 export const revalidate = 86400;
@@ -17,7 +18,7 @@ export default async function FeaturesPage() {
   const counts = await getFeatureCounts();
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 条件からさがす</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "条件からさがす" }]} />
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl">条件からランニングコースをさがす</h1>
       <p className="mb-8 leading-7 text-sub">「日の出がきれいな朝ラン」「夜でも走れる場所」「信号なしでロング走できる場所」など、ランナーのこだわり条件別にスポットをまとめています。</p>
       <div className="grid gap-5 sm:grid-cols-2">

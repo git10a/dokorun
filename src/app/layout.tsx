@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { defaultOgImage, getSiteUrl, openGraph, siteConfig } from "@/lib/site";
 import "./globals.css";
+import { JsonLd } from "@/components/structured-data";
 
 const notoSansJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp", display: "swap" });
 
@@ -49,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ja" className="scroll-smooth">
       <body className={`${notoSansJp.variable} min-h-screen antialiased`}>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+        <JsonLd data={structuredData} />
         <Header />
         <main>{children}</main>
         <Footer />

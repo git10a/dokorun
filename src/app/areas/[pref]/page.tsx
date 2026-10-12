@@ -1,6 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
-import { getSiteUrl, pageMetadata } from "@/lib/site";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPrefectureCounts, getSpotsByPrefecture } from "@/db/data";
@@ -10,6 +10,8 @@ import { prefectureSlug, slugToPrefecture } from "@/lib/areas";
 import { regionGroups } from "@/lib/prefectures";
 import { features } from "@/lib/features";
 import { getStationCountByPrefecture } from "@/lib/station-prefecture-counts";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 
 // スポットの追加・更新の反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
 export const revalidate = 86400;
@@ -45,36 +47,13 @@ export default async function AreaPage({ params }: { params: Params }) {
   const region = regionGroups.find((group) => (group.prefectures as readonly string[]).includes(prefecture));
   const neighborPrefectures = region?.prefectures.filter((name) => name !== prefecture) ?? [];
   const areaStationCount = getStationCountByPrefecture(prefecture);
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: getSiteUrl() },
-        { "@type": "ListItem", position: 2, name: "エリアからさがす", item: `${getSiteUrl()}/areas` },
-        { "@type": "ListItem", position: 3, name: prefecture, item: `${getSiteUrl()}/areas/${pref}` },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      name: `${prefecture}のランニングコース・スポット一覧`,
-      numberOfItems: areaSpots.length,
-      itemListElement: areaSpots.map((spot, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: spot.name,
-        url: `${getSiteUrl()}/spots/${spot.slug}`,
-      })),
-    },
-  ];
+  const crumbs = [{ name: "ホーム", path: "/" }, { name: "エリアからさがす", path: "/areas" }, { name: prefecture, path: `/areas/${pref}` }];
+  const structuredData = [breadcrumbJsonLd(crumbs), spotItemListJsonLd(`${prefecture}のランニングコース・スポット一覧`, areaSpots)];
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <JsonLd data={structuredData} />
       <TrackView name="area_view" meta={{ pref: prefecture }} />
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub">
-        <Link href="/" className="hover:underline">ホーム</Link> / <Link href="/areas" className="hover:underline">エリアからさがす</Link> / {prefecture}
-      </nav>
+      <Breadcrumb items={crumbs.map((crumb) => ({ name: crumb.name, href: crumb.path }))} />
       <h1 className="text-2xl font-bold sm:text-3xl">{prefecture}のランニングコース・スポット一覧</h1>
       <p className="mt-3 leading-7 text-sub">
         {prefecture}のランニングスポットを<strong className="text-ink">{areaSpots.length}件</strong>掲載しています。すべてのスポットにコースマップと距離・高低差・信号の数、トイレや水飲み場などの設備情報つき。

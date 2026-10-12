@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prefectureSlug } from "@/lib/areas";
 import { groupByMap } from "@/lib/collections";
 import { getStations } from "@/lib/stations";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: "駅から探すランニングスポット",
@@ -14,7 +15,7 @@ export default function StationsPage() {
   const groups = groupByMap(getStations(), (station) => station.prefecture);
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 駅から探す</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "駅から探す" }]} />
       <h1 className="text-3xl font-black sm:text-4xl">駅からランニングスポットを探す</h1>
       <p className="mt-3 max-w-2xl leading-7 text-sub">駅の近くで走れる場所と、同じ路線で少し足を伸ばして走れる場所をまとめました。</p>
       <Link href="/stations/lines" className="mt-8 block rounded-2xl border border-line bg-cream px-6 py-5 transition hover:border-brand">

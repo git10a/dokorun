@@ -3,6 +3,7 @@ import Link from "next/link";
 import { NearbyLines } from "@/components/nearby-lines";
 import { groupByMap } from "@/lib/collections";
 import { getNearbyLineIndex, getStationLines } from "@/lib/stations";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: "路線からランニングスポットを探す",
@@ -14,7 +15,7 @@ export default function StationLinesPage() {
   const groups = groupByMap(getStationLines(), (line) => line.prefectures[0] ?? "その他");
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / <Link href="/stations" className="hover:underline">駅から探す</Link> / 路線から探す</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "駅から探す", href: "/stations" }, { name: "路線から探す" }]} />
       <h1 className="text-3xl font-black sm:text-4xl">路線からランニングスポットを探す</h1>
       <p className="mt-3 max-w-2xl leading-7 text-sub">路線を開くと、始点から終点までの駅と、各駅の近くで走れるスポットを順番に見られます。</p>
       <NearbyLines lines={getNearbyLineIndex()} />

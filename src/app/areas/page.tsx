@@ -6,6 +6,7 @@ import { getPrefectureCounts } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { regionGroups } from "@/lib/prefectures";
 import { features } from "@/lib/features";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
 export const revalidate = 86400;
@@ -21,7 +22,7 @@ export default async function AreasPage() {
   const countMap = new Map(counts.map((item) => [item.prefecture, item.count]));
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / エリアからさがす</nav>
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "エリアからさがす" }]} />
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl">都道府県からランニングコースをさがす</h1>
       <p className="mb-8 leading-7 text-sub">日本全国のランニングスポットを都道府県別にまとめています。エリアを選ぶと、コースマップ・距離・設備情報つきの一覧が見られます。</p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

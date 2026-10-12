@@ -26,6 +26,7 @@ import { getNearbyDestinations } from "@/lib/nearby-destinations";
 import { getSiteUrl, openGraph } from "@/lib/site";
 import { getCourseGuide } from "@/lib/course-guides";
 import { stripPrepublishSentences } from "@/lib/public-description";
+import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
 
 export const revalidate = 3600;
 
@@ -75,15 +76,11 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
     { id: "communities", label: "コミュニティ", count: spotCommunities.length, href: `/spots/${spot.slug}?tab=communities` },
   ];
   const baseUrl = getSiteUrl();
-  const breadcrumbData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl },
-      { "@type": "ListItem", position: 2, name: spot.prefecture, item: `${baseUrl}/areas/${prefectureSlug(spot.prefecture)}` },
-      { "@type": "ListItem", position: 3, name: spot.name, item: `${baseUrl}/spots/${spot.slug}` },
-    ],
-  };
+  const breadcrumbData = breadcrumbJsonLd([
+    { name: "ホーム", path: "/" },
+    { name: spot.prefecture, path: `/areas/${prefectureSlug(spot.prefecture)}` },
+    { name: spot.name, path: `/spots/${spot.slug}` },
+  ]);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
@@ -102,7 +99,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
   };
   return (
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-8 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbData, structuredData]).replace(/</g, "\\u003c") }} />
+      <JsonLd data={[breadcrumbData, structuredData]} />
       <TrackView name="spot_view" meta={{ slug: spot.slug }} />
       <SpotDetailTabs tabs={detailTabs} className="sticky top-16 z-40 -mx-4 -mt-8 flex overflow-x-auto bg-paper/95 backdrop-blur sm:hidden" />
       <SpotFlashMessage placement="info" />
