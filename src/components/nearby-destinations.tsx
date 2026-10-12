@@ -20,15 +20,14 @@ export function NearbyDestinations({ places }: { places: NearbyDestination[] }) 
 
   return (
     <section>
-      <div className="mb-5 border-l-4 border-brand pl-3">
+      <div className="mb-4 border-l-4 border-brand pl-3">
         <h2 className="text-xl font-bold sm:text-2xl">走ったあと、行ってみる？</h2>
-        <p className="mt-1 text-sm text-sub">この場所まで来たら、少し足を延ばしたい立ち寄り先</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {places.map((place) => {
           const direct = place.visitCondition === "direct_after_run";
           return (
-            <article key={place.placeSlug} className="flex flex-col rounded-xl border border-line bg-paper p-5">
+            <article key={place.placeSlug} className="flex flex-col rounded-xl border border-line bg-paper p-4">
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <span className="rounded-full bg-cream px-2.5 py-1 text-xs font-bold text-sub">
                   {nearbyDestinationCategoryLabels[place.category]}
@@ -49,7 +48,7 @@ export function NearbyDestinations({ places }: { places: NearbyDestination[] }) 
                   <ExternalLink size={15} aria-label="Googleマップで開く" />
                 </a>
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-7 text-sub">{place.whyWorthGoing}</p>
+              <p className="mt-2 flex-1 text-sm leading-6 text-sub">{place.whyWorthGoing}</p>
               <div className="mt-4 border-t border-line pt-3">
                 <p className="flex items-center gap-2 text-xs font-bold">
                   {direct ? <Footprints size={15} aria-hidden="true" /> : <ShowerHead size={15} aria-hidden="true" />}

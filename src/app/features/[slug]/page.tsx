@@ -10,7 +10,7 @@ import { prefectures } from "@/lib/prefectures";
 import { features, featureBySlug } from "@/lib/features";
 
 // 特集の対象は最大1時間の遅延を許容し、D1障害時も直前のHTMLを返せるようISR化する。
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type Params = Promise<{ slug: string }>;
 

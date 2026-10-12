@@ -10,7 +10,7 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
   const selectedTags = (params.tags ?? "").split(",").filter(Boolean);
   const active = [params.pref, params.type, params.dist, params.q, params.toilet, params.locker, params.sento, params.popular, ...selectedTags].filter(Boolean);
   return (
-    <form action="/spots" className="space-y-5 rounded-xl border border-line bg-paper p-4 sm:p-5">
+    <form action="/spots" className="space-y-4 rounded-xl border border-line bg-paper p-4 sm:p-5">
       {params.sort && <input type="hidden" name="sort" value={params.sort} />}
       {params.popular === "1" && <input type="hidden" name="popular" value="1" />}
       <div className="grid gap-3 sm:grid-cols-[1fr_180px_auto]">
@@ -19,7 +19,7 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
         <button className="h-11 rounded-lg bg-brand px-6 font-bold hover:bg-brand-dark">さがす</button>
       </div>
       <details className="group">
-        <summary className="flex cursor-pointer list-none items-center gap-1 font-bold [&::-webkit-details-marker]:hidden">絞り込み条件をすべて表示<ChevronDown size={18} className="transition-transform group-open:rotate-180" /></summary>
+        <summary className="flex cursor-pointer list-none items-center gap-1 text-sm font-bold [&::-webkit-details-marker]:hidden">詳しい条件で絞り込む<ChevronDown size={18} className="transition-transform group-open:rotate-180" /></summary>
         <div className="mt-4 space-y-5 border-t border-line pt-4">
           <fieldset><legend className="mb-2 text-sm font-bold">タグ（複数選択可）</legend><div className="flex flex-wrap gap-2">{tags.map((tag) => <label key={tag.id} className="cursor-pointer"><input type="checkbox" name="tag" value={tag.slug} defaultChecked={selectedTags.includes(tag.slug)} className="peer sr-only" /><span className="inline-flex rounded-full bg-cream px-3 py-1.5 text-sm peer-checked:bg-brand">{tag.name}</span></label>)}</div><input type="hidden" name="tags" value={selectedTags.join(",")} className="tag-output" /></fieldset>
           <div className="grid gap-4 sm:grid-cols-2">

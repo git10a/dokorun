@@ -11,8 +11,8 @@ export function Header() {
         </Link>
         <nav aria-label="メインナビゲーション" className="flex min-w-0 flex-1 items-center justify-end gap-1 sm:gap-4 md:gap-6">
           <div className="flex min-w-0 items-center gap-1 sm:gap-4">
-            <Link href="/spots" className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm">スポットをさがす</Link>
-            <Link href="/races" className="hidden whitespace-nowrap px-2 py-1 text-sm font-bold transition-colors hover:text-accent sm:inline">大会からさがす</Link>
+            <Link href="/races" className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"><span className="sm:hidden">大会</span><span className="hidden sm:inline">大会をさがす</span></Link>
+            <Link href="/spots" className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"><span className="sm:hidden">コース</span><span className="hidden sm:inline">スポットをさがす</span></Link>
           </div>
           <div className="ml-1 border-l border-line pl-2 sm:ml-0 sm:border-0 sm:pl-0">
             <UserMenu />

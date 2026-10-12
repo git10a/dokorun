@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 import { eq, inArray } from "drizzle-orm";
 import { z } from "zod";
 import { getDb, withTxDb, type Database } from "@/db";
@@ -82,6 +82,8 @@ export async function createSpot(_: FormState, formData: FormData): Promise<Form
       await writeRelations(tx, spot.id, data, formData);
     });
   } catch (error) { return { message: error instanceof Error && error.message.includes("unique") ? "このslugはすでに使われています" : "保存できませんでした" }; }
+  updateTag("public-catalog");
+  revalidatePath("/areas", "layout"); revalidatePath("/features", "layout");
   revalidatePath("/"); revalidatePath("/spots"); redirect("/admin?success=created");
 }
 
@@ -97,6 +99,8 @@ export async function updateSpot(_: FormState, formData: FormData): Promise<Form
       await writeRelations(tx, data.id!, data, formData);
     });
   } catch { return { message: "更新できませんでした" }; }
+  updateTag("public-catalog");
+  revalidatePath("/areas", "layout"); revalidatePath("/features", "layout");
   revalidatePath("/"); revalidatePath("/spots"); revalidatePath(`/spots/${data.slug}`); redirect("/admin?success=updated");
 }
 
@@ -104,6 +108,8 @@ export async function deleteSpot(formData: FormData) {
   await requireAdmin();
   const id = String(formData.get("id") ?? "");
   if (z.string().uuid().safeParse(id).success) await getDb().delete(spots).where(eq(spots.id, id));
+  updateTag("public-catalog");
+  revalidatePath("/areas", "layout"); revalidatePath("/features", "layout");
   revalidatePath("/"); revalidatePath("/spots"); redirect("/admin?success=deleted");
 }
 

@@ -18,6 +18,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           <form action={logout}><button className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">ログアウト</button></form>
           <Link href="/admin/communities" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">コミュニティ</Link>
           <Link href="/admin/logs" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">ランログ</Link>
+          <Link href="/admin/race-reviews" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">大会レビュー</Link>
           <Link href="/admin/feedback" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">お問い合わせ</Link>
           <Link href="/admin/stats" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">統計</Link>
           <Link href="/admin/spots/new" className="flex items-center gap-2 rounded-lg bg-brand px-4 py-2.5 font-bold"><Plus size={18} />新規登録</Link>

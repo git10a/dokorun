@@ -13,7 +13,8 @@ function readPoint(value: Record<string, unknown>): GpxPoint | null {
   const lng = Number(value["@_lon"]);
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
   const rawEle = value.ele;
-  return { lat, lng, ele: rawEle === undefined ? null : Number(rawEle) };
+  const ele = rawEle === undefined || rawEle === null || String(rawEle).trim() === "" ? null : Number(rawEle);
+  return { lat, lng, ele: ele !== null && Number.isFinite(ele) ? ele : null };
 }
 
 export function parseGpxPoints(xml: string): GpxPoint[] {

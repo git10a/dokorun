@@ -5,9 +5,9 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/sync-public-spot-gpx.mjs && next build",
+    "build": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next build",
     "start": "next start",
-    "preview": "node scripts/sync-public-spot-gpx.mjs && opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "preview": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "predeploy": "node scripts/d1-snapshot.mjs",
     "deploy": "bash scripts/deploy.sh",
     "release:upload": "bash scripts/deploy.sh",
@@ -32,6 +32,9 @@
     "course-guide:elevation": "tsx scripts/backfill-course-guide-elevation.ts",
     "course-guide:generate": "tsx scripts/generate-course-guide-sources.ts",
     "course-guide:photos": "tsx scripts/supplement-course-guide-photos.ts",
+    "race-elevation:build": "tsx scripts/build-race-elevation.ts",
+    "race-thumbs:build": "tsx scripts/build-race-thumbnails.ts",
+    "race-elevation:terrain": "tsx scripts/sample-race-terrain.ts",
     "race-gpx:apply": "tsx scripts/apply-race-gpx.ts",
     "validate:spots": "tsx scripts/validate-spots.ts",
     "station-data:build": "node scripts/build-station-data.mjs"

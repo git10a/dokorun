@@ -11,7 +11,7 @@ import { features } from "@/lib/features";
 import { getStationCountByPrefecture } from "@/lib/station-prefecture-counts";
 
 // スポットの追加・更新の反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type Params = Promise<{ pref: string }>;
 

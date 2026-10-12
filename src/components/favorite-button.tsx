@@ -20,8 +20,8 @@ export function FavoriteButton({ spotId, slug, loggedIn, initialFavorite }: { sp
     });
   };
   return (
-    <button type="button" onClick={onClick} disabled={pending} aria-pressed={favorite} title={loggedIn ? undefined : "会員登録・ログインすると保存できます"} className={`flex items-center gap-2 rounded-lg border-2 border-line px-4 py-2.5 font-bold transition-colors ${favorite ? "bg-brand" : "bg-paper hover:bg-cream"} disabled:opacity-70`}>
-      <Star size={18} fill={favorite ? "currentColor" : "none"} />おすすめ
+    <button type="button" onClick={onClick} disabled={pending} aria-pressed={favorite} title={loggedIn ? undefined : "会員登録・ログインすると保存できます"} className={`flex items-center gap-2 rounded-lg border-2 border-line px-3 py-2 text-sm font-bold transition-colors ${favorite ? "bg-brand" : "bg-paper hover:bg-cream"} disabled:opacity-70`}>
+      <Star size={16} fill={favorite ? "currentColor" : "none"} />おすすめ
     </button>
   );
 }

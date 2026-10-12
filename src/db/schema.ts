@@ -252,3 +252,27 @@ export const events = sqliteTable("events", {
   meta: text("meta", { mode: "json" }).$type<Record<string, unknown> | null>(),
   createdAt: createdNow("created_at"),
 }, (t) => [index("events_name_idx").on(t.name, t.createdAt)]);
+
+export const raceReviews = sqliteTable("race_reviews", {
+  id: uuidPk("id"),
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  raceSlug: text("race_slug").notNull(),
+  raceYear: integer("race_year").notNull(),
+  finishTimeS: integer("finish_time_s").notNull(),
+  body: text("body").notNull(),
+  distanceKm: real("distance_km"),
+  isHidden: bool("is_hidden").notNull().default(false),
+  createdAt: createdNow("created_at"),
+  updatedAt: createdNow("updated_at"),
+}, (t) => [
+  uniqueIndex("race_reviews_user_race_year").on(t.userId, t.raceSlug, t.raceYear),
+  index("race_reviews_public_time").on(t.raceSlug, t.isHidden, t.finishTimeS, t.createdAt),
+  index("race_reviews_public_recent").on(t.raceSlug, t.isHidden, t.createdAt, t.id),
+]);
+
+export const raceReviewReports = sqliteTable("race_review_reports", {
+  reviewId: text("review_id").notNull().references(() => raceReviews.id, { onDelete: "cascade" }),
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  reason: text("reason").notNull(),
+  createdAt: createdNow("created_at"),
+}, (t) => [uniqueIndex("race_review_reports_pk").on(t.reviewId, t.userId)]);

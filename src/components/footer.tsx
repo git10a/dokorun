@@ -13,16 +13,16 @@ export function Footer() {
               <img src="/characters/ran-happy.png" alt="" className="ml-2 h-7 w-auto -scale-x-100" />
               <img src="/characters/hashiro-smile.png" alt="" className="h-7 w-auto -scale-x-100" />
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-sub">「{siteConfig.question}」に答えるランニングコース検索。日本全国の走りやすい代表コースを、地図と走るための情報つきで紹介しています。</p>
+            <p className="max-w-sm text-sm leading-relaxed text-sub">大会のコースマップ・GPXと走った人の体験、全国のランニングコースを地図つきで紹介しています。</p>
           </div>
 
           <nav aria-label="フッターナビゲーション" className="grid grid-cols-2 gap-8 md:col-span-7 lg:col-span-6">
             <div>
               <h2 className="mb-4 border-l-2 border-brand pl-2 text-sm font-bold text-ink">探す</h2>
               <ul className="space-y-3 text-sm text-sub">
+                <li><Link href="/races" className="transition-colors hover:text-accent">大会から</Link></li>
                 <li><Link href="/areas" className="transition-colors hover:text-accent">エリアから</Link></li>
                 <li><Link href="/features" className="transition-colors hover:text-accent">条件から</Link></li>
-                <li><Link href="/races" className="transition-colors hover:text-accent">大会から</Link></li>
               </ul>
             </div>
             <div>

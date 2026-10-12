@@ -10,8 +10,8 @@ export function SpecPanel({ distanceM, elevationGainM, signalsCount, courseType,
   ];
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-paper">
-      <div className="grid grid-cols-3 divide-x divide-line">{specs.map((spec) => <div key={spec.label} className="px-2 py-6 text-center sm:px-5"><p className="mb-2 text-xs font-bold text-sub sm:text-sm">{spec.label}</p><p className="font-bold leading-none"><span className="text-3xl sm:text-4xl">{spec.value}</span> <span className="text-xs text-sub sm:text-sm">{spec.unit}</span></p></div>)}</div>
-      <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-line bg-cream px-5 py-4 text-sm"><span><b>形状:</b> {courseTypeLabels[courseType]}</span><span><b>路面:</b> {surfaceLabels[surface]}</span>{lighting && <span><b>夜間:</b> {lightingLabels[lighting]}</span>}</div>
+      <div className="grid grid-cols-3 divide-x divide-line">{specs.map((spec) => <div key={spec.label} className="px-2 py-4 text-center sm:px-5"><p className="mb-1.5 text-xs font-bold text-sub">{spec.label}</p><p className="font-bold leading-none"><span className="text-2xl sm:text-3xl">{spec.value}</span> <span className="text-xs text-sub sm:text-sm">{spec.unit}</span></p></div>)}</div>
+      <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-line bg-cream px-4 py-3 text-sm"><span><b>形状:</b> {courseTypeLabels[courseType]}</span><span><b>路面:</b> {surfaceLabels[surface]}</span>{lighting && <span><b>夜間:</b> {lightingLabels[lighting]}</span>}</div>
     </div>
   );
 }

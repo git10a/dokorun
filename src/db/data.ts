@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { and, asc, count, desc, eq, inArray, like, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from ".";
 import { communities, courses, favoriteSpots, hashiritai, photos, runPhotos, runs, spotCommunities, spots, spotTags, tags, userPbs, users } from "./schema";
@@ -134,7 +135,7 @@ const summarySelection = {
   hasCourse: sql`coalesce(json_array_length(${courses.geojson}, '$.coordinates') > 0, 0)`.mapWith(Boolean),
 };
 
-export async function getTags() {
+async function loadTags() {
   return getDb().select().from(tags).orderBy(tags.category, tags.sortOrder);
 }
 
@@ -151,7 +152,7 @@ export async function getSearchTags() {
 const classicSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
 
 // トップページ用に定番/新着の行取得とphotos/tagsのバッチ取得をまとめて行う
-export async function getHomeSpots(newestLimit = 8) {
+async function loadHomeSpots(newestLimit = 8) {
   const db = getDb();
   const [classicRows, newestRows] = await Promise.all([
     db.select(summarySelection).from(spots)
@@ -191,7 +192,7 @@ export async function getUserFavorites(userId: string) {
   return addRelations(rows);
 }
 
-export async function getPrefectureCounts() {
+async function loadPrefectureCounts() {
   return getDb().select({ prefecture: spots.prefecture, count: count() }).from(spots)
     .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
 }
@@ -207,7 +208,7 @@ function spotHasTag(tagSlug: string): SQL {
 }
 
 // エリアハブページ用: 都道府県内の全スポットをハシリタイ数順で返す
-export async function getSpotsByPrefecture(prefecture: string) {
+async function loadSpotsByPrefecture(prefecture: string) {
   const rows = await getDb().select(summarySelection).from(spots)
     .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
     .where(and(eq(spots.isPublished, true), eq(spots.prefecture, prefecture)))
@@ -230,7 +231,7 @@ function featureCondition(featureSlug: string): SQL | null {
   }
 }
 
-export async function getFeatureSpots(featureSlug: string) {
+async function loadFeatureSpots(featureSlug: string) {
   const condition = featureCondition(featureSlug);
   if (!condition) return [];
   const rows = await getDb().select(summarySelection).from(spots)
@@ -241,7 +242,7 @@ export async function getFeatureSpots(featureSlug: string) {
 }
 
 // 特集一覧ページ用: 各特集の該当件数を1クエリでまとめて取得
-export async function getFeatureCounts(): Promise<Record<string, number>> {
+async function loadFeatureCounts(): Promise<Record<string, number>> {
   const rows = await getDb().select({
     morningRun: sql<number>`count(*) filter (where ${spotHasTag("sunrise-view")})`,
     nightRun: sql<number>`count(*) filter (where ${spots.nightLighting} = 'bright')`,
@@ -304,7 +305,7 @@ function nearOrderExpr(filters: SearchFilters) {
   return asc(sql`(${spots.lat} - ${filters.lat}) * (${spots.lat} - ${filters.lat}) + ((${spots.lng} - ${filters.lng}) * ${cosLat}) * ((${spots.lng} - ${filters.lng}) * ${cosLat})`);
 }
 
-export async function searchSpots(filters: SearchFilters) {
+async function loadSearchSpots(filters: SearchFilters) {
   const db = getDb();
   const conditions = searchConditions(filters);
   const limit = filters.limit ?? 20;
@@ -329,7 +330,7 @@ export async function getSpotSummariesBySlugs(slugs: string[]) {
   return addRelations(rows);
 }
 
-export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
+async function loadSearchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
   return getDb().select({
     slug: spots.slug,
     name: spots.name,
@@ -340,7 +341,7 @@ export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot
     .limit(300);
 }
 
-export async function getSitemapSpots() {
+async function loadSitemapSpots() {
   return getDb().select({ slug: spots.slug, updatedAt: spots.updatedAt }).from(spots)
     .where(eq(spots.isPublished, true)).orderBy(spots.slug);
 }
@@ -407,6 +408,7 @@ export async function getSpotDetailWithNearby(slug: string) {
     db.select(summarySelection).from(spots)
       .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
       .where(and(eq(spots.isPublished, true), eq(spots.prefecture, row.prefecture), sql`${spots.id} <> ${row.id}`))
+      .orderBy(nearOrderExpr({ sort: "near", lat: row.lat, lng: row.lng })!)
       .limit(4),
     db.select().from(photos).where(eq(photos.spotId, row.id)).orderBy(photos.sortOrder),
   ]);
@@ -617,4 +619,48 @@ export async function getAdminSpot(id: string) {
     db.select().from(photos).where(eq(photos.spotId, id)).orderBy(photos.sortOrder),
   ]);
   return { ...row[0], course: course[0], tagIds: tagRows.map((tag) => tag.id), photos: photoRows };
+}
+
+export const getTags = unstable_cache(loadTags, ["public-catalog-v1", "getTags"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getHomeSpots = unstable_cache(loadHomeSpots, ["public-catalog-v1", "getHomeSpots"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getPrefectureCounts = unstable_cache(loadPrefectureCounts, ["public-catalog-v1", "getPrefectureCounts"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getSpotsByPrefecture = unstable_cache(loadSpotsByPrefecture, ["public-catalog-v1", "getSpotsByPrefecture"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getFeatureSpots = unstable_cache(loadFeatureSpots, ["public-catalog-v1", "getFeatureSpots"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getFeatureCounts = unstable_cache(loadFeatureCounts, ["public-catalog-v1", "getFeatureCounts"], { revalidate: 86400, tags: ["public-catalog"] });
+
+export const getSitemapSpots = unstable_cache(loadSitemapSpots, ["public-catalog-v1", "getSitemapSpots"], { revalidate: 86400, tags: ["public-catalog"] });
+
+// Arbitrary text and precise locations do not become shared persistent cache keys.
+// Canonical categorical filters let different callers reuse the same public result.
+function catalogSearchFilters(filters: SearchFilters): SearchFilters | null {
+  if (filters.q || filters.lat !== undefined || filters.lng !== undefined) return null;
+  return {
+    pref: filters.pref || undefined, type: filters.type || undefined,
+    tags: [...new Set(filters.tags ?? [])].sort(),
+    distMin: filters.distMin, distMax: filters.distMax,
+    toilet: Boolean(filters.toilet), locker: Boolean(filters.locker),
+    sento: Boolean(filters.sento), popular: Boolean(filters.popular),
+    sort: filters.sort || undefined,
+    page: Math.max(1, Math.floor(filters.page ?? 1)),
+    limit: Math.min(100, Math.max(1, Math.floor(filters.limit ?? 20))),
+  };
+}
+const cachedSearch = unstable_cache(loadSearchSpots, ["public-catalog-v1", "search"], {
+  revalidate: 3600, tags: ["public-catalog"],
+});
+const cachedMapSearch = unstable_cache(loadSearchSpotsForMap, ["public-catalog-v1", "map"], {
+  revalidate: 3600, tags: ["public-catalog"],
+});
+export async function searchSpots(filters: SearchFilters) {
+  const canonical = catalogSearchFilters(filters);
+  return canonical ? cachedSearch(canonical) : loadSearchSpots(filters);
+}
+export async function searchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
+  const canonical = catalogSearchFilters(filters);
+  return canonical ? cachedMapSearch(canonical) : loadSearchSpotsForMap(filters);
 }

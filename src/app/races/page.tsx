@@ -1,31 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarDays, MapPin } from "lucide-react";
-import { racesByCalendar } from "@/lib/races";
+import { RaceCard } from "@/components/race-card";
+import { RaceSearch } from "@/components/race-search";
+import { splitRacesBySchedule } from "@/lib/race-schedule";
+
+// 開催前/開催済みの振り分けを日次で更新する(残り日数は閲覧時に再計算)
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "大会からランニングコースをさがす(試走・前日ラン)",
-  description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会別に、試走・前日ラン・当日アップに使えるランニングコースをまとめています。遠征ランナーの調整にどうぞ。",
+  title: "大会のコースマップ・GPX・試走・前日ランをさがす",
+  description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会のコースマップ・GPXと、走った人の体験。試走・前日ラン・当日アップに使える周辺ランニングコースもまとめています。",
   alternates: { canonical: "/races" },
   openGraph: { url: "/races" },
 };
 
 export default function RacesPage() {
+  const { upcoming, finished } = splitRacesBySchedule();
+  const searchOptions = [...upcoming, ...finished].map((race) => ({ slug: race.slug, name: race.name, prefecture: race.prefecture, date: race.timing.replace(/^\d{4}年(\d+)月(\d+)日/, "$1/$2") }));
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
       <nav aria-label="パンくず" className="mb-4 text-sm text-sub"><Link href="/" className="hover:underline">ホーム</Link> / 大会からさがす</nav>
-      <h1 className="mb-3 text-2xl font-bold sm:text-3xl">大会からランニングコースをさがす</h1>
-      <p className="mb-8 leading-7 text-sub">マラソン大会の遠征先で「試走はどこでする？」「前日の刺激はどこで入れる？」に答えるページです。大会ごとに、コースと重なる区間や発着地近くで走れるスポットをまとめています。</p>
-      <div className="grid gap-5 sm:grid-cols-2">
-        {racesByCalendar.map((race) => (
-          <Link key={race.slug} href={`/races/${race.slug}`} className="group rounded-xl border border-line bg-paper p-5 transition-all hover:-translate-y-0.5 hover:shadow-md">
-            <p className="flex items-center gap-3 text-xs font-bold text-sub"><span className="inline-flex items-center gap-1"><CalendarDays size={14} className="text-brand-dark" />{race.timing}</span><span className="inline-flex items-center gap-1"><MapPin size={14} className="text-brand-dark" />{race.prefecture}</span></p>
-            <h2 className="mt-3 text-lg font-bold group-hover:text-accent">{race.name}</h2>
-            <p className="mt-2 text-sm leading-6 text-sub">{race.lead}</p>
-            <p className="mt-3 text-sm font-bold text-brand-dark">試走・前日ランのスポット{race.spots.length}件 →</p>
-          </Link>
-        ))}
-      </div>
+      <h1 className="mb-3 text-2xl font-bold sm:text-3xl">大会のコースマップ・GPXをさがす</h1>
+      <p className="mb-5 text-sm leading-7 text-sub">コースマップ・高低図・GPXと、走った人の体験を大会ごとにまとめています。</p>
+      <div className="mb-10 max-w-xl"><RaceSearch races={searchOptions} /></div>
+      {upcoming.length > 0 && <section className="mb-12"><h2 className="mb-4 border-l-4 border-brand pl-3 text-xl font-bold">開催前の大会</h2><div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">{upcoming.map((race) => <RaceCard key={race.slug} race={race} />)}</div></section>}
+      {finished.length > 0 && <section><h2 className="mb-1 border-l-4 border-line pl-3 text-xl font-bold">今年は開催済みの大会</h2><p className="mb-4 pl-4 text-sm text-sub">来年に向けたコース確認に</p><div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">{finished.map((race) => <RaceCard key={race.slug} race={race} finished />)}</div></section>}
     </div>
   );
 }

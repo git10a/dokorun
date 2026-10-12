@@ -30,6 +30,7 @@ export function MemberGpxLink({ href, callbackURL, slug, children, className, fi
           event.preventDefault();
           return;
         }
+        track("gpx_intent", { slug, ...meta, loggedIn });
         if (loggedIn) track("gpx_download", { slug, ...meta });
       }}
       className={`${className} ${isPending ? "pointer-events-none opacity-60" : ""}`}

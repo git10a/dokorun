@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { parseGpx } from "../src/lib/gpx-node";
+import { parseGpx, parseGpxPoints } from "../src/lib/gpx-node";
+import { raceElevationFromPoints } from "../src/lib/race-elevation";
 import { simplifyCourseGeojson } from "../src/lib/course-geojson";
 import { raceBySlug } from "../src/lib/races";
 
@@ -8,7 +9,7 @@ import { raceBySlug } from "../src/lib/races";
 // GPXを解析して大会コースの参考図を public/race-courses/<slug>.json に書き出し、
 // src/lib/race-courses.json のマニフェスト(距離・獲得標高・データ由来)を更新する。
 // geojsonをWorkerバンドルに含めない(3MiB制限)ため、静的アセットとして配信する構成。
-// - source=gps: 大会当日の実走GPSデータ由来(正確)
+// - source=gps: 大会当日の実走GPSデータ由来(測定誤差を含む)
 // - source=map: 公式コース図をもとにBRouter等で再現した参考図
 // GPX原本は data/race-gpx/<slug>.gpx に必ず残すこと(原本保全)。
 
@@ -30,7 +31,8 @@ function main() {
     process.exit(1);
   }
 
-  const gpx = parseGpx(readFileSync(gpxPath, "utf8"));
+  const xml = readFileSync(gpxPath, "utf8");
+  const gpx = parseGpx(xml);
   const simplified = simplifyCourseGeojson(gpx.geojson);
   if (!simplified) {
     console.error("GPXからコースを取得できませんでした");
@@ -40,11 +42,18 @@ function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   const outPath = join(OUT_DIR, `${slug}.json`);
   writeFileSync(outPath, JSON.stringify(simplified));
+  for (const directory of ["public/race-gpx", "data/race-gpx", "public/race-elevation"]) mkdirSync(directory, { recursive: true });
+  writeFileSync(join("public/race-gpx", `${slug}.gpx`), xml);
+  writeFileSync(join("data/race-gpx", `${slug}.gpx`), xml);
+  writeFileSync(join("public/race-elevation", `${slug}.json`), JSON.stringify(raceElevationFromPoints(parseGpxPoints(xml))));
 
-  const manifest: Record<string, { distanceM: number; elevationGainM: number | null; source: "gps" | "map" }> = existsSync(MANIFEST_PATH)
+  const manifest: Record<string, { distanceM: number; elevationGainM: number | null; source: "gps" | "map"; start?: [number, number]; finish?: [number, number] }> = existsSync(MANIFEST_PATH)
     ? JSON.parse(readFileSync(MANIFEST_PATH, "utf8"))
     : {};
-  manifest[slug] = { distanceM: Math.round(gpx.distanceM), elevationGainM: gpx.elevationGainM, source };
+  // 大会ページの「当日の会場まわり」で使う発着地点([lat, lng])
+  const roundCoord = (value: number) => Math.round(value * 1e5) / 1e5;
+  const [first, last] = [simplified.coordinates[0], simplified.coordinates[simplified.coordinates.length - 1]];
+  manifest[slug] = { ...manifest[slug], distanceM: Math.round(gpx.distanceM), elevationGainM: gpx.elevationGainM, source, start: [roundCoord(first[1]), roundCoord(first[0])], finish: [roundCoord(last[1]), roundCoord(last[0])] };
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(MANIFEST_PATH, `${JSON.stringify(sorted, null, 2)}\n`);
 

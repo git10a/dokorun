@@ -44,7 +44,7 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
       <fieldset>
         <legend className="mb-3 font-bold">内容の種類</legend>
         <div className="flex flex-wrap gap-3">
-          {[["spot_request", "スポットの掲載リクエスト"], ["contact", "その他のお問い合わせ"]].map(([value, label]) => (
+          {[["spot_request", "大会・スポットの掲載リクエスト"], ["contact", "その他のお問い合わせ"]].map(([value, label]) => (
             <label key={value} className="flex items-center gap-2 rounded-lg border border-line bg-paper px-4 py-2.5 font-bold has-checked:border-brand has-checked:bg-cream">
               <input type="radio" name="category" value={value} defaultChecked={value === initialCategory} className="accent-(--color-brand)" />{label}
             </label>

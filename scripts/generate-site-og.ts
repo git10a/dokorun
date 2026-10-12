@@ -9,10 +9,11 @@ const HEIGHT = 630;
 const assetDataUri = (path: string, mime: string) =>
   `data:${mime};base64,${readFileSync(join(process.cwd(), path)).toString("base64")}`;
 
+// 大会カードは scripts/build-race-thumbnails.ts で生成したコースマップを使う
 const maps = [
-  { src: assetDataUri("public/course-maps/kokyo.webp", "image/webp"), name: "皇居", meta: "5.0km / 信号ゼロ" },
-  { src: assetDataUri("public/course-maps/komazawa.webp", "image/webp"), name: "駒沢オリンピック公園", meta: "2.1km / 周回" },
-  { src: assetDataUri("public/course-maps/toyosu-gururi-park.webp", "image/webp"), name: "豊洲ぐるり公園", meta: "4.8km / 水辺" },
+  { src: assetDataUri("public/race-thumbs/tokyo-marathon.webp", "image/webp"), name: "東京マラソン", meta: "コースマップ / GPX" },
+  { src: assetDataUri("public/race-thumbs/osaka-marathon.webp", "image/webp"), name: "大阪マラソン", meta: "高低図 / 完走者の体験" },
+  { src: assetDataUri("public/race-thumbs/kobe-marathon.webp", "image/webp"), name: "神戸マラソン", meta: "コースマップ / GPX" },
 ];
 
 const ran = assetDataUri("public/characters/ran-happy.png", "image/png");
@@ -27,10 +28,10 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .screen{position:absolute;inset:0;padding:58px 70px}
   .brand{display:inline-flex;align-items:center;gap:14px;border:4px solid #1a1a1a;border-radius:999px;background:#fff;padding:12px 24px;font-size:32px;font-weight:900;box-shadow:8px 8px 0 #1a1a1a}
   .mark{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#ffd900;font-size:26px}
-  h1{margin:58px 0 0;font-size:78px;line-height:1.08;font-weight:900;letter-spacing:0}
-  .lead{width:620px;margin:24px 0 0;font-size:29px;line-height:1.48;font-weight:800}
-  .chips{position:absolute;left:70px;bottom:74px;display:flex;gap:14px}
-  .chip{border:3px solid #1a1a1a;border-radius:999px;background:#fff;padding:9px 17px;font-size:23px;font-weight:900}
+  h1{margin:44px 0 0;font-size:62px;line-height:1.08;font-weight:900;letter-spacing:0}
+  .lead{width:640px;margin:22px 0 0;font-size:27px;line-height:1.5;font-weight:800}
+  .chips{position:absolute;left:70px;bottom:74px;display:flex;gap:12px}
+  .chip{border:3px solid #1a1a1a;border-radius:999px;background:#fff;padding:8px 15px;font-size:21px;font-weight:900}
   .url{position:absolute;left:76px;bottom:30px;font-size:24px;font-weight:900}
   .maps{position:absolute;right:42px;top:42px;width:432px;height:520px}
   .map-card{position:absolute;z-index:2;width:312px;border:5px solid #1a1a1a;border-radius:18px;background:#fff;box-shadow:12px 12px 0 rgba(26,26,26,.95);overflow:hidden}
@@ -48,9 +49,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="corner"></div>
   <div class="screen">
     <div class="brand"><span class="mark">走</span><span>どこラン</span></div>
-    <h1>次はどこで<br>ランする？</h1>
-    <p class="lead">距離・信号・路面・設備で、<br>日本全国のランニングスポットを探せる。</p>
-    <div class="chips"><span class="chip">信号ゼロ</span><span class="chip">周回コース</span><span class="chip">シャワー</span></div>
+    <h1>マラソン大会のコースを<br>予習できる。</h1>
+    <p class="lead">コースを知れば、ペースが変わる。<br>ペースが変われば、タイムが変わる。<br>タイムが変われば、ゴールで笑える。</p>
+    <div class="chips"><span class="chip">コース地図</span><span class="chip">高低図</span><span class="chip">GPX</span><span class="chip">完走者の体験</span></div>
     <div class="url">dokorun.com</div>
   </div>
   <div class="maps">

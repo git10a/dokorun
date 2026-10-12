@@ -13,7 +13,7 @@ const choices = [
   { label: "現在地から", id: "near", icon: Navigation, kind: "location" },
 ] as const;
 
-const choiceClassName = "flex min-h-24 flex-col items-center justify-center gap-2 rounded-xl border border-line bg-paper p-4 text-center transition-all hover:bg-cream hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
+const choiceClassName = "flex min-h-14 items-center gap-2.5 rounded-xl border border-line bg-paper px-4 py-3 text-left sm:min-h-24 sm:flex-col sm:justify-center sm:gap-2 sm:text-center transition-all hover:bg-cream hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
 
 export function TodayRunChoices() {
   const router = useRouter();
@@ -56,13 +56,13 @@ export function TodayRunChoices() {
           const Icon = choice.icon;
           if (choice.kind === "link") return (
             <Link key={choice.id} href={choice.href} onClick={() => track("today_run_choice", { choice: choice.id })} className={choiceClassName}>
-              <Icon size={24} className="text-accent" aria-hidden="true" />
+              <Icon size={22} className="shrink-0 text-accent" aria-hidden="true" />
               <span className="text-sm font-bold">{choice.label}</span>
             </Link>
           );
           return (
             <button key={choice.id} type="button" onClick={() => locate(choice.id)} disabled={locatingChoice === choice.id} className={`${choiceClassName} disabled:cursor-wait disabled:opacity-60`}>
-              <Icon size={24} className="text-accent" aria-hidden="true" />
+              <Icon size={22} className="shrink-0 text-accent" aria-hidden="true" />
               <span className="text-sm font-bold">{locatingChoice === choice.id ? "現在地を取得中…" : choice.label}</span>
             </button>
           );

@@ -7,7 +7,7 @@ import { regionGroups } from "@/lib/prefectures";
 import { features } from "@/lib/features";
 
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "都道府県からランニングコースをさがす",

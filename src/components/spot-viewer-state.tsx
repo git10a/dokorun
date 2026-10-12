@@ -46,7 +46,7 @@ function useViewerState(slug: string) {
 
 export function SpotViewerButtons({ spotId, slug, count }: { spotId: string; slug: string; count: number }) {
   const state = useViewerState(slug);
-  if (!state) return <div className="h-12 w-64 animate-pulse rounded-lg bg-cream" aria-label="ユーザー情報を確認中" />;
+  if (!state) return <div className="h-10 w-52 animate-pulse rounded-lg bg-cream" aria-label="ユーザー情報を確認中" />;
   return <>
     <HashiritaiButton slug={slug} count={count} loggedIn={state.loggedIn} initialLiked={state.isHashiritai} />
     <FavoriteButton spotId={spotId} slug={slug} loggedIn={state.loggedIn} initialFavorite={state.isFavorite} />
