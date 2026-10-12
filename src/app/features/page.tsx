@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { getFeatureCounts } from "@/db/data";
 import { features } from "@/lib/features";
@@ -6,12 +7,11 @@ import { features } from "@/lib/features";
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "条件からランニングコースをさがす",
   description: "朝ラン・夜ラン向き、信号なし、ロング走向き、トラック開放など、こだわり条件別に日本全国のランニングコースをまとめています。",
-  alternates: { canonical: "/features" },
-  openGraph: { url: "/features" },
-};
+  path: "/features",
+});
 
 export default async function FeaturesPage() {
   const counts = await getFeatureCounts();

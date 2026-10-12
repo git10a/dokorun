@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraph, siteConfig } from "@/lib/site";
 import { ArrowRight } from "lucide-react";
 import { getPrefectureCounts, getSpotSummariesBySlugs } from "@/db/data";
 import { races } from "@/lib/races";
@@ -14,7 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  openGraph: { url: "/", type: "website" },
+  openGraph: openGraph({ title: siteConfig.title, description: siteConfig.description, url: "/" }),
 };
 
 export default async function HomePage() {

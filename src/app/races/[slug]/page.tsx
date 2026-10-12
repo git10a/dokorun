@@ -1,5 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import { getSiteUrl, pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Download, MapPin } from "lucide-react";
@@ -29,18 +30,13 @@ export function generateStaticParams() {
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getSpots = cache(getSpotSummariesBySlugs);
 
-function baseUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-}
-
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
   const race = raceBySlug.get(slug);
   if (!race) return { title: "ページが見つかりません" };
   const title = racePageTitle(race);
   const description = racePageDescription(race);
-  const canonical = `${baseUrl()}/races/${slug}`;
-  return { title, description, alternates: { canonical }, openGraph: { title, description, url: canonical } };
+  return pageMetadata({ title, description, path: `/races/${slug}` });
 }
 
 export default async function RacePage({ params }: { params: Params }) {
@@ -73,9 +69,9 @@ export default async function RacePage({ params }: { params: Params }) {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl() },
-        { "@type": "ListItem", position: 2, name: "大会からさがす", item: `${baseUrl()}/races` },
-        { "@type": "ListItem", position: 3, name: title, item: `${baseUrl()}/races/${slug}` },
+        { "@type": "ListItem", position: 1, name: "ホーム", item: getSiteUrl() },
+        { "@type": "ListItem", position: 2, name: "大会からさがす", item: `${getSiteUrl()}/races` },
+        { "@type": "ListItem", position: 3, name: title, item: `${getSiteUrl()}/races/${slug}` },
       ],
     },
     ...(spotItems.length ? [{
@@ -87,7 +83,7 @@ export default async function RacePage({ params }: { params: Params }) {
         "@type": "ListItem",
         position: index + 1,
         name: item.spot.name,
-        url: `${baseUrl()}/spots/${item.spot.slug}`,
+        url: `${getSiteUrl()}/spots/${item.spot.slug}`,
       })),
     }] : []),
   ];

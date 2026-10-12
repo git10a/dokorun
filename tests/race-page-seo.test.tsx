@@ -28,6 +28,8 @@ describe("race page SEO preservation", () => {
       expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();
+      // 子ページの openGraph が layout の既定画像・サイト名を消さないこと
+      expect(meta.openGraph).toMatchObject({ siteName: "どこラン", images: [expect.objectContaining({ url: "/og.png" })] });
     }
   });
   it("renders a race with no nearby spots, while unknown races remain 404", async () => {

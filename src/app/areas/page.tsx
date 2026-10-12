@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { getPrefectureCounts } from "@/db/data";
@@ -9,12 +10,11 @@ import { features } from "@/lib/features";
 // 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "都道府県からランニングコースをさがす",
   description: "日本全国のランニングコース・スポットを都道府県別にまとめています。コースマップ・距離・信号の数・設備情報つき。",
-  alternates: { canonical: "/areas" },
-  openGraph: { url: "/areas" },
-};
+  path: "/areas",
+});
 
 export default async function AreasPage() {
   const counts = await getPrefectureCounts();

@@ -6,7 +6,7 @@ import { SpotCard } from "@/components/spot-card";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { prefectureSlug } from "@/lib/areas";
 import { groupByMap } from "@/lib/collections";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, pageMetadata } from "@/lib/site";
 import { getStation, getStations, stationJogMinutes } from "@/lib/stations";
 
 export const dynamicParams = false;
@@ -33,12 +33,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const representative = data.spots.get(representativeSlug)?.name;
   const title = `${data.station.name}駅から走れるランニングスポット`;
   const description = `${data.station.name}駅チカのランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
-  return {
-    title,
-    description,
-    alternates: { canonical: `/stations/${slug}` },
-    openGraph: { title, description, url: `/stations/${slug}` },
-  };
+  return pageMetadata({ title, description, path: `/stations/${slug}` });
 }
 
 export default async function StationPage({ params }: { params: Params }) {

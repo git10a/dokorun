@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { AlertTriangle, Download, ExternalLink, Search, Smartphone, Watch } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "GPXの使い方・アプリへの取り込み方法",
   description: "どこランでダウンロードしたGPXをGarmin Connect、COROS、Suunto、Strava、Polar Flowへ取り込む方法を説明します。",
-  alternates: { canonical: "/guide/gpx" },
-  openGraph: { url: "/guide/gpx" },
-};
+  path: "/guide/gpx",
+});
 
 const apps = [
   {

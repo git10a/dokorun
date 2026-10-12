@@ -23,7 +23,7 @@ import { SpotCheckInActions, SpotViewerButtons } from "@/components/spot-viewer-
 import { SpotDetailTabs, SpotDetailPanel, type SpotDetailTabItem } from "@/components/spot-detail-tabs";
 import { prefectureSlug } from "@/lib/areas";
 import { getNearbyDestinations } from "@/lib/nearby-destinations";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, openGraph } from "@/lib/site";
 import { getCourseGuide } from "@/lib/course-guides";
 import { stripPrepublishSentences } from "@/lib/public-description";
 
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     : spot.photos[0]?.url
       ? imageTransformUrl(spot.photos[0].url, 1200)
       : "/og.png";
-  return { title: { absolute: title }, description, alternates: { canonical }, openGraph: { title, description, url: canonical, type: "website", images: [ogImage] }, twitter: { card: "summary_large_image", title, description, images: [ogImage] } };
+  return { title: { absolute: title }, description, alternates: { canonical }, openGraph: openGraph({ title, description, url: canonical, images: [ogImage] }), twitter: { card: "summary_large_image", title, description, images: [ogImage] } };
 }
 
 export default async function SpotDetailPage({ params }: { params: Params }) {

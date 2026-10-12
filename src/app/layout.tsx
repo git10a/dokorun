@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { defaultOgImage, getSiteUrl, openGraph, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp", display: "swap" });
@@ -13,13 +13,10 @@ export const metadata: Metadata = {
   title: { default: siteConfig.title, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
   // OG画像は静的PNG(public/og.png)。動的生成(next/og)はWorkersの3MiB制限に収まらないため使わない
-  openGraph: {
-    siteName: siteConfig.name,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.title }],
-  },
+  openGraph: openGraph({ title: siteConfig.title, description: siteConfig.description }),
   twitter: {
     card: "summary_large_image",
-    images: [{ url: "/og.png", alt: siteConfig.title }],
+    images: [{ url: defaultOgImage.url, alt: defaultOgImage.alt }],
   },
   verification: { google: "J_vRwsGfizZ2o3YgX7tYByh-hvw8jthPcr67XKhLHVc" },
 };

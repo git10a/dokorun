@@ -1,5 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import { getSiteUrl, pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getFeatureSpots } from "@/db/data";
@@ -21,18 +22,13 @@ export function generateStaticParams() {
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getSpots = cache(getFeatureSpots);
 
-function baseUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-}
-
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
   const feature = featureBySlug.get(slug);
   if (!feature) return { title: "ページが見つかりません" };
   const featureSpots = await getSpots(slug);
   const title = `${feature.title}【全国${featureSpots.length}件】`;
-  const canonical = `${baseUrl()}/features/${slug}`;
-  return { title, description: feature.description, alternates: { canonical }, openGraph: { title, description: feature.description, url: canonical } };
+  return pageMetadata({ title, description: feature.description, path: `/features/${slug}` });
 }
 
 export default async function FeaturePage({ params }: { params: Params }) {
@@ -55,9 +51,9 @@ export default async function FeaturePage({ params }: { params: Params }) {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl() },
-        { "@type": "ListItem", position: 2, name: "条件からさがす", item: `${baseUrl()}/features` },
-        { "@type": "ListItem", position: 3, name: feature.title, item: `${baseUrl()}/features/${slug}` },
+        { "@type": "ListItem", position: 1, name: "ホーム", item: getSiteUrl() },
+        { "@type": "ListItem", position: 2, name: "条件からさがす", item: `${getSiteUrl()}/features` },
+        { "@type": "ListItem", position: 3, name: feature.title, item: `${getSiteUrl()}/features/${slug}` },
       ],
     },
     {
@@ -69,7 +65,7 @@ export default async function FeaturePage({ params }: { params: Params }) {
         "@type": "ListItem",
         position: index + 1,
         name: spot.name,
-        url: `${baseUrl()}/spots/${spot.slug}`,
+        url: `${getSiteUrl()}/spots/${spot.slug}`,
       })),
     },
   ];

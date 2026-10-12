@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { MessageCircleQuestion } from "lucide-react";
 import { SearchFilters } from "@/components/search-filters";
@@ -20,10 +21,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
   const title = page > 1 && nonPaginationParams.length === 0 ? `ランニングスポットをさがす (${page}ページ目)` : "ランニングスポットをさがす";
   const description = "都道府県、距離、コース形状、タグ、設備から日本全国のランニングスポットを検索できます。";
   return {
-    title,
-    description,
-    alternates: { canonical },
-    openGraph: { title, description, url: canonical },
+    ...pageMetadata({ title, description, path: canonical }),
     robots: nonPaginationParams.length > 0 ? { index: false, follow: true } : undefined,
   };
 }

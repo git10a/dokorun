@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { RaceCard } from "@/components/race-card";
 import { RaceSearch } from "@/components/race-search";
@@ -7,12 +8,11 @@ import { splitRacesBySchedule } from "@/lib/race-schedule";
 // 開催前/開催済みの振り分けを日次で更新する(残り日数は閲覧時に再計算)
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "マラソン大会のコースマップ・GPX・高低図をさがす",
   description: "東京マラソン、大阪マラソンなど全国の主要マラソン大会のコースマップ・GPX・高低図と、走った人の体験。目標タイムから坂を考えたペース表も作れます。",
-  alternates: { canonical: "/races" },
-  openGraph: { url: "/races" },
-};
+  path: "/races",
+});
 
 export default function RacesPage() {
   const { upcoming, finished } = splitRacesBySchedule();

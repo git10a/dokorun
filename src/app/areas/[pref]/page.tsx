@@ -1,5 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import { getSiteUrl, pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPrefectureCounts, getSpotsByPrefecture } from "@/db/data";
@@ -23,10 +24,6 @@ export async function generateStaticParams() {
 // generateMetadataと本体で同一リクエスト内のフェッチを共有する
 const getAreaSpots = cache(getSpotsByPrefecture);
 
-function baseUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-}
-
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { pref } = await params;
   const prefecture = slugToPrefecture(pref);
@@ -36,8 +33,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const names = areaSpots.slice(0, 3).map((spot) => spot.name).join("、");
   const title = `${prefecture}のランニングコース・スポット一覧【${areaSpots.length}件】`;
   const description = `${prefecture}のランニングコースを${areaSpots.length}件掲載。${names}など、コースマップ・距離・信号の数・トイレなどの設備情報つきで走る場所を探せます。`;
-  const canonical = `${baseUrl()}/areas/${pref}`;
-  return { title, description, alternates: { canonical }, openGraph: { title, description, url: canonical } };
+  return pageMetadata({ title, description, path: `/areas/${pref}` });
 }
 
 export default async function AreaPage({ params }: { params: Params }) {
@@ -54,9 +50,9 @@ export default async function AreaPage({ params }: { params: Params }) {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: baseUrl() },
-        { "@type": "ListItem", position: 2, name: "エリアからさがす", item: `${baseUrl()}/areas` },
-        { "@type": "ListItem", position: 3, name: prefecture, item: `${baseUrl()}/areas/${pref}` },
+        { "@type": "ListItem", position: 1, name: "ホーム", item: getSiteUrl() },
+        { "@type": "ListItem", position: 2, name: "エリアからさがす", item: `${getSiteUrl()}/areas` },
+        { "@type": "ListItem", position: 3, name: prefecture, item: `${getSiteUrl()}/areas/${pref}` },
       ],
     },
     {
@@ -68,7 +64,7 @@ export default async function AreaPage({ params }: { params: Params }) {
         "@type": "ListItem",
         position: index + 1,
         name: spot.name,
-        url: `${baseUrl()}/spots/${spot.slug}`,
+        url: `${getSiteUrl()}/spots/${spot.slug}`,
       })),
     },
   ];

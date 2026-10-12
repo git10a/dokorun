@@ -1,5 +1,6 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SpotCard } from "@/components/spot-card";
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const last = data.line.stations.at(-1)?.name;
   const title = `${data.line.name}の駅別ランニングスポット`;
   const description = `${data.line.name}の${first}駅から${last}駅まで全${data.line.stations.length}駅を掲載。各駅の近くで走れるランニングスポットを探せます。`;
-  return { title, description, alternates: { canonical: `/stations/lines/${slug}` }, openGraph: { title, description, url: `/stations/lines/${slug}` } };
+  return pageMetadata({ title, description, path: `/stations/lines/${slug}` });
 }
 
 export default async function StationLinePage({ params }: { params: Params }) {
