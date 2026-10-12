@@ -4,6 +4,8 @@ import { DatabaseSync } from "node:sqlite";
 import KuroshiroModule from "kuroshiro";
 import KuromojiAnalyzer from "kuroshiro-analyzer-kuromoji";
 import Hepburn from "hepburn";
+// tsx で実行する(src/lib の TypeScript を直接読むため)
+import { haversine } from "../src/lib/gpx";
 
 const Kuroshiro = KuroshiroModule.default;
 
@@ -77,11 +79,7 @@ function prefectureFor(row, postalPrefectures) {
 }
 
 function haversineM(lat1, lng1, lat2, lng2) {
-  const radians = (degrees) => degrees * Math.PI / 180;
-  const dLat = radians(lat2 - lat1);
-  const dLng = radians(lng2 - lng1);
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos(radians(lat1)) * Math.cos(radians(lat2)) * Math.sin(dLng / 2) ** 2;
-  return Math.round(6_371_000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+  return Math.round(haversine({ lat: lat1, lng: lng1 }, { lat: lat2, lng: lng2 }));
 }
 
 function normalizedSlug(value) {

@@ -20,7 +20,7 @@
     "db:seed": "tsx src/db/seed.ts",
     "db:import": "tsx src/db/import.ts",
     "db:exclusions": "tsx src/db/exclusions.ts",
-    "research:runtrip": "node scripts/research/fetch-runtrip-popular.mjs",
+    "research:runtrip": "tsx scripts/research/fetch-runtrip-popular.mjs",
     "gpx:apply": "tsx scripts/apply-gpx.ts",
     "gpx:check": "tsx scripts/check-gpx.ts",
     "course-guide:build": "tsx scripts/build-course-guide.ts",
@@ -35,7 +35,7 @@
     "race-elevation:terrain": "tsx scripts/sample-race-terrain.ts",
     "race-gpx:apply": "tsx scripts/apply-race-gpx.ts",
     "validate:spots": "tsx scripts/validate-spots.ts",
-    "station-data:build": "node scripts/build-station-data.mjs"
+    "station-data:build": "tsx scripts/build-station-data.mjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.1",

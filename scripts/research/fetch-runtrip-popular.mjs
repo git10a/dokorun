@@ -1,8 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S npx tsx
 
 import { createClient } from "@libsql/client";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+// tsx で実行する(src/lib の TypeScript を直接読むため)
+import { haversine } from "../../src/lib/gpx";
 
 const BASE_URL = "https://runtrip.jp";
 const USER_AGENT = [
@@ -128,14 +130,7 @@ function inJapanBbox(lat, lng) {
 }
 
 function haversineKm(aLat, aLng, bLat, bLng) {
-  const radiusKm = 6371.0088;
-  const toRad = (degrees) => degrees * Math.PI / 180;
-  const dLat = toRad(bLat - aLat);
-  const dLng = toRad(bLng - aLng);
-  const lat1 = toRad(aLat);
-  const lat2 = toRad(bLat);
-  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-  return 2 * radiusKm * Math.asin(Math.sqrt(h));
+  return haversine({ lat: aLat, lng: aLng }, { lat: bLat, lng: bLng }) / 1000;
 }
 
 function markdownCell(value) {
