@@ -1,11 +1,7 @@
 import { asc } from "drizzle-orm";
-import { config } from "dotenv";
 import { getDb } from ".";
 import { spots } from "./schema";
 import { prefectures } from "@/lib/prefectures";
-
-config({ path: ".env.local" });
-config();
 
 // Deep Researchプロンプトの除外リストに貼る、登録済みスポット一覧を出力する
 async function run() {

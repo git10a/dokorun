@@ -1,14 +1,10 @@
 import { mkdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { config } from "dotenv";
 import { isNotNull, eq, and } from "drizzle-orm";
 import puppeteer, { type Browser } from "puppeteer-core";
 import { getDb } from "../src/db";
 import { courses, spots } from "../src/db/schema";
 import { courseTypeLabels, type CourseType, type LineString } from "../src/lib/types";
-
-config({ path: ".env.local" });
-config();
 
 // 使い方: npx tsx scripts/generate-og-images.ts [slug...]
 // 公開スポットの代表コースを地図に描き、スポット名・距離・キャラクターを重ねた

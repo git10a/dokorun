@@ -1,13 +1,9 @@
 import { readFileSync } from "node:fs";
 import { eq } from "drizzle-orm";
-import { config } from "dotenv";
 import { parseGpx } from "../src/lib/gpx-node";
 import { simplifyCourseGeojson } from "../src/lib/course-geojson";
 import { getDb } from "../src/db";
 import { courses, spots } from "../src/db/schema";
-
-config({ path: ".env.local" });
-config();
 
 // 使い方: npm run gpx:apply -- <slug> <gpxファイルパス> [--keep-latlng]
 // GPXを解析してスポットの代表コース(geojson・距離・獲得標高・形状)と代表点を更新する。

@@ -39,10 +39,6 @@ export const STAMP_SLUGS = [
   "izumo-taisha-run",
 ] as const;
 
-export function hasStamp(slug: string): boolean {
-  return (STAMP_SLUGS as readonly string[]).includes(slug);
-}
-
 export function stampImageUrl(slug: string): string {
   return `/stamps/${slug}.png`;
 }

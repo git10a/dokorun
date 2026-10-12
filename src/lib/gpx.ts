@@ -126,7 +126,7 @@ function readElementPoint(element: Element): GpxPoint | null {
   return { lat, lng, ele };
 }
 
-export function parseGpxDocument(document: Document): GpxResult {
+function parseGpxDocument(document: Document): GpxResult {
   const trackPoints = Array.from(document.querySelectorAll("trkpt"));
   const routePoints = Array.from(document.querySelectorAll("rtept"));
   const points = (trackPoints.length ? trackPoints : routePoints)

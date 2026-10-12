@@ -1,14 +1,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { config } from "dotenv";
 import { isNotNull, eq, and } from "drizzle-orm";
 import puppeteer, { type Browser } from "puppeteer-core";
 import { getDb } from "../src/db";
 import { courses, spots } from "../src/db/schema";
 import type { LineString } from "../src/lib/types";
-
-config({ path: ".env.local" });
-config();
 
 // 使い方: npx tsx scripts/generate-course-maps.ts [slug...]
 // 公開スポットの代表コースを OpenFreeMap(liberty) + MapLibre で描画し、

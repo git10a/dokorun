@@ -10,7 +10,7 @@ import { RaceSearch } from "@/components/race-search";
 import { RaceSpotCard } from "@/components/race-spot-card";
 
 // cookies/headers/searchParamsを読まず表示は全ユーザー共通のためISR化。
-// 定番/新着スポットや件数、開催前の大会の並びの反映が最大1日遅れるのみ(残り日数は閲覧時に再計算)
+// 開催前の大会の並びの反映が最大1日遅れるのみ(残り日数は閲覧時に再計算)
 export const revalidate = 86400;
 
 export const metadata: Metadata = {

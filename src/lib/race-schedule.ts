@@ -18,11 +18,3 @@ export function splitRacesBySchedule(todayKey = jstTodayKey()) {
   }
   return { upcoming, finished };
 }
-
-// 開催月ごとにまとめる。開催前の月から並べ、開催済みの月は後ろへ
-export function racesByMonth(todayKey = jstTodayKey()) {
-  const { upcoming, finished } = splitRacesBySchedule(todayKey);
-  const groups = new Map<number, RaceDef[]>();
-  for (const race of [...upcoming, ...finished]) groups.set(race.monthIndex, [...(groups.get(race.monthIndex) ?? []), race]);
-  return [...groups].map(([month, items]) => ({ month, races: items }));
-}

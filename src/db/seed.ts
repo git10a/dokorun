@@ -1,12 +1,8 @@
 import { count, eq } from "drizzle-orm";
-import { config } from "dotenv";
 import { getDb } from ".";
 import { courses, spotTags, spots, tags } from "./schema";
 import { simplifyCourseGeojson } from "@/lib/course-geojson";
 import type { CourseType, Lighting, LineString, Surface } from "@/lib/types";
-
-config({ path: ".env.local" });
-config();
 
 const tagSeed = [
   ["no-signals", "信号ゼロ", "terrain"], ["flat", "フラット", "terrain"], ["hilly", "坂練向き", "terrain"],

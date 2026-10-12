@@ -1,15 +1,11 @@
 import { readFileSync } from "node:fs";
 import { inArray } from "drizzle-orm";
-import { config } from "dotenv";
 import { z } from "zod";
 import { stripPrepublishSentences } from "@/lib/public-description";
 import { getDb } from ".";
 import { courses, spots, spotTags, tags } from "./schema";
 import { prefectures } from "@/lib/prefectures";
 import { courseTypes, lightings, surfaces } from "@/lib/types";
-
-config({ path: ".env.local" });
-config();
 
 const optionalInt = z.number().int().nullable().optional();
 const optionalText = z.string().trim().min(1).nullable().optional();

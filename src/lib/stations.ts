@@ -59,10 +59,6 @@ export function getStation(slug: string) {
   return getStations().find((station) => station.slug === slug) ?? null;
 }
 
-export function getStationsByPrefecture(prefecture: string) {
-  return getStations().filter((station) => station.prefecture === prefecture);
-}
-
 export function getStationLines(): StationLine[] {
   if (lineCache) return lineCache;
   const filePath = path.join(process.cwd(), "data", "stations", "lines.json");

@@ -11,10 +11,6 @@ export const PB_EVENTS = [
 
 export type PbEventKey = (typeof PB_EVENTS)[number]["key"];
 
-export function isPbEventKey(value: string): value is PbEventKey {
-  return PB_EVENTS.some((event) => event.key === value);
-}
-
 export function secondsFromParts(hours: number, minutes: number, seconds: number) {
   return hours * 3600 + minutes * 60 + seconds;
 }

@@ -153,28 +153,6 @@ export async function getSearchTags() {
 const classicSpotSlugs = ["kokyo", "komazawa", "osakajo", "oohori", "yoyogi"];
 
 // トップページ用に定番/新着の行取得とphotos/tagsのバッチ取得をまとめて行う
-async function loadHomeSpots(newestLimit = 8) {
-  const db = getDb();
-  const [classicRows, newestRows] = await Promise.all([
-    db.select(summarySelection).from(spots)
-      .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
-      .where(and(eq(spots.isPublished, true), inArray(spots.slug, classicSpotSlugs))),
-    db.select(summarySelection).from(spots)
-      .innerJoin(courses, and(eq(courses.spotId, spots.id), eq(courses.isPrimary, true)))
-      .where(eq(spots.isPublished, true)).orderBy(desc(spots.createdAt)).limit(newestLimit),
-  ]);
-  const ids = [...new Set([...classicRows, ...newestRows].map((row) => row.id))];
-  const [photoRows, tagRows] = await Promise.all([
-    db.select({ spotId: photos.spotId, url: photos.url, sortOrder: photos.sortOrder }).from(photos).where(inArray(photos.spotId, ids)).orderBy(photos.sortOrder),
-    db.select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name }).from(spotTags).innerJoin(tags, eq(spotTags.tagId, tags.id)).where(inArray(spotTags.spotId, ids)).orderBy(tags.sortOrder),
-  ]);
-  const classicRank = new Map(classicSpotSlugs.map((slug, index) => [slug, index]));
-  const classic = decorateRows(classicRows, photoRows, tagRows)
-    .sort((a, b) => (classicRank.get(a.slug) ?? classicSpotSlugs.length) - (classicRank.get(b.slug) ?? classicSpotSlugs.length));
-  const newest = decorateRows(newestRows, photoRows, tagRows);
-  return { classic, newest };
-}
-
 export async function getUserHashiritai(userId: string) {
   const rows = await getDb().select(summarySelection).from(hashiritai)
     .innerJoin(spots, eq(spots.id, hashiritai.spotId))
@@ -468,11 +446,6 @@ export async function getStampBook(userId: string, slugs: readonly string[]) {
   return spotRows.map(({ id, ...row }) => ({ ...row, runCount: countMap.get(id) ?? 0 }));
 }
 
-export async function getSpotCourses(spotId: string) {
-  return getDb().select({ id: courses.id, name: courses.name, distanceM: courses.distanceM }).from(courses)
-    .where(eq(courses.spotId, spotId)).orderBy(desc(courses.isPrimary), courses.createdAt);
-}
-
 export async function getPublicRuns(spotId: string, limit = 10) {
   return getDb().select({
     id: runs.id, ranAt: runs.ranAt, distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment,
@@ -630,8 +603,6 @@ export async function getAdminSpot(id: string) {
 }
 
 export const getTags = unstable_cache(loadTags, ["public-catalog-v1", "getTags"], { revalidate: 86400, tags: ["public-catalog"] });
-
-export const getHomeSpots = unstable_cache(loadHomeSpots, ["public-catalog-v1", "getHomeSpots"], { revalidate: 86400, tags: ["public-catalog"] });
 
 export const getPrefectureCounts = unstable_cache(loadPrefectureCounts, ["public-catalog-v1", "getPrefectureCounts"], { revalidate: 86400, tags: ["public-catalog"] });
 
