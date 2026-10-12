@@ -12,6 +12,8 @@ import { TrackUsagePanel } from "@/components/track-usage-panel";
 import { SpotCard } from "@/components/spot-card";
 import { imageTransformUrl, SpotImage } from "@/components/spot-image";
 import { NearbyDestinations } from "@/components/nearby-destinations";
+import { NearbyRaces } from "@/components/nearby-races";
+import { racesNearSpot } from "@/lib/nearby-races";
 import { SpotCommunities } from "@/components/spot-communities";
 import { RunCoursePanel } from "@/components/run-course-panel";
 import { LongCourseGuide } from "@/components/long-course-guide";
@@ -62,6 +64,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
   const { spot, nearby } = detail;
   const spotCommunities = await getSpotCommunities(spot.id);
   const destinations = getNearbyDestinations(spot.slug);
+  const nearbyRaces = racesNearSpot(spot);
   const courseGuide = await getCourseGuide(spot.slug);
   const guideHeroPhoto = courseGuide?.checkpoints.find((checkpoint) => checkpoint.id === courseGuide.heroCheckpointId)?.photo
     ?? courseGuide?.checkpoints.find((checkpoint) => checkpoint.photo)?.photo;
@@ -117,6 +120,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
           {publicSpotDescription && <p className="max-w-3xl leading-7">{publicSpotDescription}</p>}
           <section className="space-y-4"><h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">コースマップ</h2><CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} /><RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} canDownloadGpx={Boolean(spot.geojson)} /></section>
         </>}
+        {nearbyRaces.length > 0 && <NearbyRaces items={nearbyRaces} spotSlug={spot.slug} />}
         <section className="space-y-6">
           <h2 className="border-l-4 border-brand pl-3 text-xl font-bold sm:text-2xl">設備・アクセス</h2>
           {spot.trackUsage && <div><h3 className="mb-3 font-bold">トラック利用情報</h3><TrackUsagePanel usage={spot.trackUsage} /></div>}
