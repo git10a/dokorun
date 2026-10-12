@@ -25,7 +25,7 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
   return (
     <form action={action} className="space-y-10">
       {initial.id && <input type="hidden" name="id" value={initial.id} />}
-      {state.message && <div className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
+      {state.message && <div className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
       <section>
         <h2 className="mb-5 text-xl font-bold">1. 基本情報</h2>
         <div className="grid gap-5 sm:grid-cols-2">
@@ -76,7 +76,7 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
         </div>
       </section>
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-        <label className="flex items-center gap-2 font-bold"><input type="checkbox" name="isPublished" defaultChecked={initial.isPublished ?? true} className="size-5 accent-[#FFD900]" />公開する</label>
+        <label className="flex items-center gap-2 font-bold"><input type="checkbox" name="isPublished" defaultChecked={initial.isPublished ?? true} className="size-5 accent-brand" />公開する</label>
         <button disabled={pending} className="min-w-40 rounded-lg bg-brand px-7 py-3 font-bold hover:bg-brand-dark disabled:opacity-50">{pending ? "保存中…" : mode === "edit" ? "変更を保存" : "コミュニティを登録"}</button>
       </div>
     </form>

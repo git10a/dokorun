@@ -37,7 +37,7 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
     <form action={action} className="mt-8 space-y-10">
       <input type="hidden" name="spotId" value={spot.id} />
       <input type="hidden" name="spotSlug" value={spot.slug} />
-      {state.message && <div className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
+      {state.message && <div className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
       <section>
         <h2 className="mb-5 border-l-4 border-brand pl-3 text-xl font-bold">基本情報</h2>
         <div className="grid gap-5 sm:grid-cols-2">
@@ -60,11 +60,11 @@ export function SpotEditForm({ spot }: { spot: SpotEditValues }) {
         <fieldset>
           <legend className="mb-2 border-l-4 border-brand pl-3 text-xl font-bold">設備</legend>
           <p className="mb-4 text-sm text-sub">コース周辺で利用できるものにチェックしてください。</p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{facilityFields.map(([name, label]) => <label key={name} className="flex items-center gap-2 rounded-lg border border-line p-3 text-sm"><input type="checkbox" name={name} defaultChecked={spot[name]} className="size-4 accent-[#FFD900]" />{label}</label>)}</div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{facilityFields.map(([name, label]) => <label key={name} className="flex items-center gap-2 rounded-lg border border-line p-3 text-sm"><input type="checkbox" name={name} defaultChecked={spot[name]} className="size-4 accent-brand" />{label}</label>)}</div>
         </fieldset>
         <fieldset>
           <legend className="mb-3 font-bold">夜間の明るさ</legend>
-          <div className="flex flex-wrap gap-4">{([["", "わからない"], ...lightings.map((value) => [value, lightingLabels[value]] as const)] as const).map(([value, label]) => <label key={value} className="flex items-center gap-2 text-sm"><input type="radio" name="nightLighting" value={value} defaultChecked={(spot.nightLighting ?? "") === value} className="accent-[#FFD900]" />{label}</label>)}</div>
+          <div className="flex flex-wrap gap-4">{([["", "わからない"], ...lightings.map((value) => [value, lightingLabels[value]] as const)] as const).map(([value, label]) => <label key={value} className="flex items-center gap-2 text-sm"><input type="radio" name="nightLighting" value={value} defaultChecked={(spot.nightLighting ?? "") === value} className="accent-brand" />{label}</label>)}</div>
         </fieldset>
       </section>
       <div className="space-y-4 border-t border-line pt-6">

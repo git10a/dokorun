@@ -66,8 +66,8 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
           <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
           <div className="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="contact" data-theme="light" />
         </>
-      ) : <p role="alert" className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-[#B3261E]">セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。</p>}
-      {state.status === "error" && <p role="alert" className="rounded-lg bg-[#FDECEC] px-4 py-3 text-sm font-bold text-[#B3261E]">{state.message}</p>}
+      ) : <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。</p>}
+      {state.status === "error" && <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">{state.message}</p>}
       <button type="submit" disabled={pending || !turnstileSiteKey} className="rounded-lg bg-brand px-6 py-3 font-bold disabled:opacity-60">{pending ? "送信中…" : "送信する"}</button>
     </form>
   );
