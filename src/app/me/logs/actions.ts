@@ -8,6 +8,7 @@ import { getDb } from "@/db";
 import { runPhotos, runs, spots } from "@/db/schema";
 import { storeRunPhoto as storePhoto, removeUnattachedRunPhoto } from "@/lib/run-photo-storage";
 import { jstDayBounds, jstNoon } from "@/lib/jst";
+import { containsBlockedWord } from "@/lib/moderation";
 import { assertRunOwnership } from "@/lib/run-auth";
 import { requireUser } from "@/lib/user";
 
@@ -29,10 +30,9 @@ const checkInSchema = z.object({
   spotSlug: z.string().min(1).max(120),
 });
 
-const blockedWords = ["死ね", "殺す", "消えろ", "ばか"];
 function values(formData: FormData) {
   const parsed = runSchema.safeParse(Object.fromEntries(formData.entries()));
-  if (parsed.success && blockedWords.some((word) => parsed.data.comment.includes(word))) {
+  if (parsed.success && containsBlockedWord(parsed.data.comment)) {
     return { success: false as const, error: { flatten: () => ({ fieldErrors: { comment: ["投稿できない表現が含まれています"] } }) } };
   }
   return parsed;
