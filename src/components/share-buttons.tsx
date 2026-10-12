@@ -4,10 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import { Check, Link2, MessageCircle, Share2 } from "lucide-react";
 import { track } from "@/lib/track";
 
-const itemClass = "flex w-full items-center gap-3 px-4 py-3 text-left text-sm font-bold transition-colors hover:bg-cream focus-visible:bg-cream focus-visible:outline-none";
+const itemClass =
+  "flex w-full items-center gap-3 px-4 py-3 text-left text-sm font-bold transition-colors hover:bg-cream focus-visible:bg-cream focus-visible:outline-none";
 
 function XLogo({ size = 14 }: { size?: number }) {
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>;
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
 }
 
 export function ShareButtons({ url, text }: { url: string; text: string }) {
@@ -49,14 +54,56 @@ export function ShareButtons({ url, text }: { url: string; text: string }) {
   return (
     <div className="flex items-center" aria-label="このスポットをシェア">
       <div ref={rootRef} className="relative">
-        <button ref={triggerRef} type="button" aria-label="このコースを共有" aria-expanded={open} aria-controls="spot-share-menu" onClick={() => setOpen((value) => !value)} className="flex items-center gap-1.5 rounded-lg border-2 border-line bg-paper px-3 py-2 text-sm font-bold text-sub transition-colors hover:bg-cream hover:text-ink">
-          <Share2 size={16} /><span className="hidden min-[400px]:inline">共有</span>
+        <button
+          ref={triggerRef}
+          type="button"
+          aria-label="このコースを共有"
+          aria-expanded={open}
+          aria-controls="spot-share-menu"
+          onClick={() => setOpen((value) => !value)}
+          className="flex items-center gap-1.5 rounded-lg border-2 border-line bg-paper px-3 py-2 text-sm font-bold text-sub transition-colors hover:bg-cream hover:text-ink"
+        >
+          <Share2 size={16} />
+          <span className="hidden min-[400px]:inline">共有</span>
         </button>
-        {open && <div id="spot-share-menu" aria-label="共有方法" className="absolute right-0 top-full sm:left-0 sm:right-auto z-30 mt-2 w-52 overflow-hidden rounded-xl border border-line bg-paper shadow-lg">
-          <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer" onClick={() => { track("share", { channel: "x" }); setOpen(false); }} className={`${itemClass} border-b border-line`}><XLogo />Xでポスト</a>
-          <a href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer" onClick={() => { track("share", { channel: "line" }); setOpen(false); }} className={`${itemClass} border-b border-line`}><MessageCircle size={16} />LINEで送る</a>
-          <button type="button" onClick={copy} className={itemClass}>{copied ? <Check size={16} /> : <Link2 size={16} />}{copied ? "コピーしました" : "リンクをコピー"}</button>
-        </div>}
+        {open && (
+          <div
+            id="spot-share-menu"
+            aria-label="共有方法"
+            className="absolute right-0 top-full sm:left-0 sm:right-auto z-30 mt-2 w-52 overflow-hidden rounded-xl border border-line bg-paper shadow-lg"
+          >
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                track("share", { channel: "x" });
+                setOpen(false);
+              }}
+              className={`${itemClass} border-b border-line`}
+            >
+              <XLogo />
+              Xでポスト
+            </a>
+            <a
+              href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                track("share", { channel: "line" });
+                setOpen(false);
+              }}
+              className={`${itemClass} border-b border-line`}
+            >
+              <MessageCircle size={16} />
+              LINEで送る
+            </a>
+            <button type="button" onClick={copy} className={itemClass}>
+              {copied ? <Check size={16} /> : <Link2 size={16} />}
+              {copied ? "コピーしました" : "リンクをコピー"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

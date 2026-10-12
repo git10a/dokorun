@@ -24,27 +24,41 @@ export default async function MyStampsPage() {
           <p className="text-sm font-bold text-sub">MY PAGE</p>
           <h1 className="mt-1 text-3xl font-black">スタンプ帳</h1>
         </div>
-        <Link href="/me" className="text-sm font-bold text-accent">マイページへ</Link>
+        <Link href="/me" className="text-sm font-bold text-accent">
+          マイページへ
+        </Link>
       </div>
       <p className="mt-3 text-sm text-sub">
         スポットで「この辺走ったよ 🏃」を記録するとスタンプがもらえます。同じスポットを走り込むとインクの色が育ちます(
         {STAMP_TIERS.map((tier) => `${tier.minRuns}回で${tier.label}色`).join("、")})。
       </p>
-      <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm font-bold">集めたスタンプ: {collected} / {items.length}</p>
+      <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm font-bold">
+        集めたスタンプ: {collected} / {items.length}
+      </p>
       <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3">
         {items.map((item) => {
           const tier = stampTier(item.runCount);
           const next = nextStampTier(item.runCount);
           return (
-            <Link key={item.slug} href={`/spots/${item.slug}`} className="rounded-xl border border-line bg-paper p-4 text-center transition hover:border-brand">
+            <Link
+              key={item.slug}
+              href={`/spots/${item.slug}`}
+              className="rounded-xl border border-line bg-paper p-4 text-center transition hover:border-brand"
+            >
               <SpotStamp slug={item.slug} runCount={item.runCount} className="mx-auto size-28 sm:size-32" />
               <p className="mt-3 font-bold leading-tight">{item.name}</p>
               <p className="mt-1 text-xs text-sub">{item.prefecture}</p>
               <p className="mt-2 text-sm">
                 {tier ? (
                   <>
-                    <span className="font-bold">{item.runCount}回走破・{tier.label}色</span>
-                    {next && <span className="block text-xs text-sub">あと{next.minRuns - item.runCount}回で{next.label}色</span>}
+                    <span className="font-bold">
+                      {item.runCount}回走破・{tier.label}色
+                    </span>
+                    {next && (
+                      <span className="block text-xs text-sub">
+                        あと{next.minRuns - item.runCount}回で{next.label}色
+                      </span>
+                    )}
                   </>
                 ) : (
                   <span className="text-sub">未取得</span>

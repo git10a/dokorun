@@ -41,16 +41,22 @@ export function formatFinishTime(seconds: number) {
 
 export function raceReviewSchema(race: RaceDef, now = new Date()) {
   const year = jstYear(now);
-  return z.object({
-    raceYear: z.number().int().min(1900).max(year),
-    finishTimeS: z.number().int().min(1200).max(86400),
-    body: z.string().trim().min(1).max(1500),
-    distanceKm: z.number().min(0).max(raceDistanceKm(race)).nullable(),
-  }).strict().refine((value) => {
-    const dateKey = raceDateKey(race);
-    if (!dateKey || value.raceYear !== Number(dateKey.slice(0, 4))) return true;
-    return now >= new Date(`${dateKey}T00:00:00+09:00`);
-  }, { message: "開催前の大会の体験は投稿できません", path: ["raceYear"] });
+  return z
+    .object({
+      raceYear: z.number().int().min(1900).max(year),
+      finishTimeS: z.number().int().min(1200).max(86400),
+      body: z.string().trim().min(1).max(1500),
+      distanceKm: z.number().min(0).max(raceDistanceKm(race)).nullable(),
+    })
+    .strict()
+    .refine(
+      (value) => {
+        const dateKey = raceDateKey(race);
+        if (!dateKey || value.raceYear !== Number(dateKey.slice(0, 4))) return true;
+        return now >= new Date(`${dateKey}T00:00:00+09:00`);
+      },
+      { message: "開催前の大会の体験は投稿できません", path: ["raceYear"] },
+    );
 }
 
 export function reviewQuery(search: URLSearchParams) {

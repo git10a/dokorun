@@ -18,7 +18,10 @@ export function raceElevationProfile(slug: string, xml: string): RaceElevation {
     if (cached.gpxSha256 === gpxSha256) profile = cached.profile;
     else console.warn(`${slug}.gpx: GPX changed; terrain supplement skipped. Regenerate it.`);
   }
-  const routeReviews = JSON.parse(readFileSync("data/race-elevation/route-review.json", "utf8")) as Record<string, { gpxSha256: string }>;
+  const routeReviews = JSON.parse(readFileSync("data/race-elevation/route-review.json", "utf8")) as Record<
+    string,
+    { gpxSha256: string }
+  >;
   if (routeReviews[slug]?.gpxSha256 === gpxSha256) profile.routeReviewRequired = true;
   return profile;
 }

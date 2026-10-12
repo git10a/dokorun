@@ -51,53 +51,99 @@ export default async function AdminStatsPage() {
   const externalTraffic = sql`coalesce(json_extract(${events.meta}, '$.internal'), 0) = 0`;
   // created_atはUNIXミリ秒なので、JSTオフセット(+9h)を足してから日付文字列にする
   const day = sql<string>`strftime('%Y-%m-%d', (${events.createdAt} + 32400000) / 1000, 'unixepoch')`;
-  const [daily, topViews, topHashiritai, visitorSummary, userTotal, userRecent, recentUsers, runActivity, hashiritaiActivity, sessionActivity, searchFallbacks] = await Promise.all([
-    db.select({ day, name: events.name, count: count() }).from(events)
-      .where(and(gte(events.createdAt, since), externalTraffic)).groupBy(day, events.name),
-    db.select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() }).from(events)
+  const [
+    daily,
+    topViews,
+    topHashiritai,
+    visitorSummary,
+    userTotal,
+    userRecent,
+    recentUsers,
+    runActivity,
+    hashiritaiActivity,
+    sessionActivity,
+    searchFallbacks,
+  ] = await Promise.all([
+    db
+      .select({ day, name: events.name, count: count() })
+      .from(events)
+      .where(and(gte(events.createdAt, since), externalTraffic))
+      .groupBy(day, events.name),
+    db
+      .select({ slug: sql<string>`json_extract(${events.meta}, '$.slug')`, count: count() })
+      .from(events)
       .where(and(eq(events.name, "spot_view"), gte(events.createdAt, since), externalTraffic))
-      .groupBy(sql`json_extract(${events.meta}, '$.slug')`).orderBy(desc(count())).limit(10),
-    db.select({ name: spots.name, slug: spots.slug, count: count() }).from(hashiritai)
+      .groupBy(sql`json_extract(${events.meta}, '$.slug')`)
+      .orderBy(desc(count()))
+      .limit(10),
+    db
+      .select({ name: spots.name, slug: spots.slug, count: count() })
+      .from(hashiritai)
       .innerJoin(spots, eq(spots.id, hashiritai.spotId))
-      .groupBy(spots.id).orderBy(desc(count())).limit(10),
-    db.select({
-      visitors: sql<number>`count(distinct json_extract(${events.meta}, '$.visitorId'))`,
-      sessions: sql<number>`count(distinct json_extract(${events.meta}, '$.sessionId'))`,
-    }).from(events).where(and(
-      gte(events.createdAt, since),
-      externalTraffic,
-      inArray(events.name, ["spot_view", "search_results", "route_start", "gpx_download"]),
-    )),
+      .groupBy(spots.id)
+      .orderBy(desc(count()))
+      .limit(10),
+    db
+      .select({
+        visitors: sql<number>`count(distinct json_extract(${events.meta}, '$.visitorId'))`,
+        sessions: sql<number>`count(distinct json_extract(${events.meta}, '$.sessionId'))`,
+      })
+      .from(events)
+      .where(
+        and(
+          gte(events.createdAt, since),
+          externalTraffic,
+          inArray(events.name, ["spot_view", "search_results", "route_start", "gpx_download"]),
+        ),
+      ),
     db.select({ total: count() }).from(users),
     db.select({ total: count() }).from(users).where(gte(users.createdAt, since)),
-    db.select({
-      id: users.id,
-      name: users.name,
-      handle: users.handle,
-      createdAt: users.createdAt,
-      updatedAt: users.updatedAt,
-    }).from(users).orderBy(desc(users.createdAt)).limit(50),
-    db.select({
-      userId: runs.userId,
-      count: count(),
-      latestAt: sql<number>`max(${runs.createdAt})`,
-    }).from(runs).groupBy(runs.userId),
-    db.select({
-      userId: hashiritai.userId,
-      count: count(),
-      latestAt: sql<number>`max(${hashiritai.createdAt})`,
-    }).from(hashiritai).where(sql`${hashiritai.userId} is not null`).groupBy(hashiritai.userId),
-    db.select({
-      userId: sessions.userId,
-      latestAt: sql<number>`max(${sessions.updatedAt})`,
-    }).from(sessions).groupBy(sessions.userId),
-    db.select({
-      area: sql<string>`coalesce(json_extract(${events.meta}, '$.fallbackArea'), '不明')`,
-      tags: sql<string | null>`json_extract(${events.meta}, '$.tags')`,
-      count: count(),
-    }).from(events).where(and(eq(events.name, "search_fallback"), gte(events.createdAt, since), externalTraffic))
+    db
+      .select({
+        id: users.id,
+        name: users.name,
+        handle: users.handle,
+        createdAt: users.createdAt,
+        updatedAt: users.updatedAt,
+      })
+      .from(users)
+      .orderBy(desc(users.createdAt))
+      .limit(50),
+    db
+      .select({
+        userId: runs.userId,
+        count: count(),
+        latestAt: sql<number>`max(${runs.createdAt})`,
+      })
+      .from(runs)
+      .groupBy(runs.userId),
+    db
+      .select({
+        userId: hashiritai.userId,
+        count: count(),
+        latestAt: sql<number>`max(${hashiritai.createdAt})`,
+      })
+      .from(hashiritai)
+      .where(sql`${hashiritai.userId} is not null`)
+      .groupBy(hashiritai.userId),
+    db
+      .select({
+        userId: sessions.userId,
+        latestAt: sql<number>`max(${sessions.updatedAt})`,
+      })
+      .from(sessions)
+      .groupBy(sessions.userId),
+    db
+      .select({
+        area: sql<string>`coalesce(json_extract(${events.meta}, '$.fallbackArea'), '不明')`,
+        tags: sql<string | null>`json_extract(${events.meta}, '$.tags')`,
+        count: count(),
+      })
+      .from(events)
+      .where(and(eq(events.name, "search_fallback"), gte(events.createdAt, since), externalTraffic))
       .groupBy(sql`json_extract(${events.meta}, '$.fallbackArea')`, sql`json_extract(${events.meta}, '$.tags')`)
-      .orderBy(desc(count())).limit(10),
+      .orderBy(desc(count()))
+      .limit(10),
   ]);
   const runByUser = new Map(runActivity.map((row) => [row.userId, row]));
   const hashiritaiByUser = new Map(hashiritaiActivity.map((row) => [row.userId, row]));
@@ -110,7 +156,12 @@ export default async function AdminStatsPage() {
       ...user,
       runCount: run?.count ?? 0,
       hashiritaiCount: wish?.count ?? 0,
-      lastRecordedAt: Math.max(timestamp(user.updatedAt), timestamp(run?.latestAt), timestamp(wish?.latestAt), timestamp(session?.latestAt)),
+      lastRecordedAt: Math.max(
+        timestamp(user.updatedAt),
+        timestamp(run?.latestAt),
+        timestamp(wish?.latestAt),
+        timestamp(session?.latestAt),
+      ),
     };
   });
   const days = [...new Set(daily.map((row) => row.day))].sort().reverse();
@@ -119,58 +170,178 @@ export default async function AdminStatsPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 md:px-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <div><p className="text-sm font-bold text-sub">ADMIN</p><h1 className="text-3xl font-bold">統計(直近14日)</h1></div>
-        <Link href="/admin" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">スポット管理へ</Link>
+        <div>
+          <p className="text-sm font-bold text-sub">ADMIN</p>
+          <h1 className="text-3xl font-bold">統計(直近14日)</h1>
+        </div>
+        <Link href="/admin" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">
+          スポット管理へ
+        </Link>
       </div>
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">登録ユーザー</p><p className="mt-1 text-3xl font-black">{userTotal[0]?.total ?? 0}</p></div>
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">14日間の新規登録</p><p className="mt-1 text-3xl font-black">{userRecent[0]?.total ?? 0}</p></div>
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">ユニーク利用者</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.visitors ?? 0}</p></div>
-        <div className="rounded-xl border border-line bg-cream p-4"><p className="text-sm text-sub">セッション</p><p className="mt-1 text-3xl font-black">{visitorSummary[0]?.sessions ?? 0}</p></div>
+        <div className="rounded-xl border border-line bg-cream p-4">
+          <p className="text-sm text-sub">登録ユーザー</p>
+          <p className="mt-1 text-3xl font-black">{userTotal[0]?.total ?? 0}</p>
+        </div>
+        <div className="rounded-xl border border-line bg-cream p-4">
+          <p className="text-sm text-sub">14日間の新規登録</p>
+          <p className="mt-1 text-3xl font-black">{userRecent[0]?.total ?? 0}</p>
+        </div>
+        <div className="rounded-xl border border-line bg-cream p-4">
+          <p className="text-sm text-sub">ユニーク利用者</p>
+          <p className="mt-1 text-3xl font-black">{visitorSummary[0]?.visitors ?? 0}</p>
+        </div>
+        <div className="rounded-xl border border-line bg-cream p-4">
+          <p className="text-sm text-sub">セッション</p>
+          <p className="mt-1 text-3xl font-black">{visitorSummary[0]?.sessions ?? 0}</p>
+        </div>
       </div>
       <section className="mt-8">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
-          <div><h2 className="text-xl font-bold">登録ユーザー</h2><p className="mt-1 text-xs leading-6 text-sub">最新50人。最終利用はログインセッション・投稿・走りたいなど、サーバーに残った最新記録です。</p></div>
+          <div>
+            <h2 className="text-xl font-bold">登録ユーザー</h2>
+            <p className="mt-1 text-xs leading-6 text-sub">
+              最新50人。最終利用はログインセッション・投稿・走りたいなど、サーバーに残った最新記録です。
+            </p>
+          </div>
           <p className="text-xs text-sub">セッションが有効でも、現在オンラインとは限りません。</p>
         </div>
         {registeredUsers.length ? (
           <div className="overflow-x-auto rounded-xl border border-line">
             <table className="w-full min-w-[680px] text-left text-sm">
-              <thead className="bg-cream"><tr><th className="p-3">表示名</th><th className="p-3">登録日</th><th className="p-3">最終利用記録</th><th className="p-3 text-right">ランログ</th><th className="p-3 text-right">走りたい</th></tr></thead>
+              <thead className="bg-cream">
+                <tr>
+                  <th className="p-3">表示名</th>
+                  <th className="p-3">登録日</th>
+                  <th className="p-3">最終利用記録</th>
+                  <th className="p-3 text-right">ランログ</th>
+                  <th className="p-3 text-right">走りたい</th>
+                </tr>
+              </thead>
               <tbody className="divide-y divide-line">
-                {registeredUsers.map((user) => <tr key={user.id}><td className="p-3"><Link href={`/u/${user.handle}`} className="font-bold underline underline-offset-4">{user.name}</Link><p className="mt-0.5 text-xs text-sub">@{user.handle}</p></td><td className="whitespace-nowrap p-3">{formatDate(user.createdAt)}</td><td className="whitespace-nowrap p-3">{formatDate(user.lastRecordedAt)}</td><td className="p-3 text-right tabular-nums">{user.runCount}</td><td className="p-3 text-right tabular-nums">{user.hashiritaiCount}</td></tr>)}
+                {registeredUsers.map((user) => (
+                  <tr key={user.id}>
+                    <td className="p-3">
+                      <Link href={`/u/${user.handle}`} className="font-bold underline underline-offset-4">
+                        {user.name}
+                      </Link>
+                      <p className="mt-0.5 text-xs text-sub">@{user.handle}</p>
+                    </td>
+                    <td className="whitespace-nowrap p-3">{formatDate(user.createdAt)}</td>
+                    <td className="whitespace-nowrap p-3">{formatDate(user.lastRecordedAt)}</td>
+                    <td className="p-3 text-right tabular-nums">{user.runCount}</td>
+                    <td className="p-3 text-right tabular-nums">{user.hashiritaiCount}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-        ) : <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだ登録ユーザーがいません</p>}
+        ) : (
+          <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだ登録ユーザーがいません</p>
+        )}
       </section>
-      <p className="mt-3 text-xs leading-6 text-sub">内部トラフィックは集計から除外します。運営端末では<Link href="/spots?dokorun_internal=1" className="mx-1 font-bold text-accent underline">内部トラフィックに設定</Link>してください。解除は<Link href="/spots?dokorun_internal=0" className="mx-1 font-bold text-accent underline">こちら</Link>。</p>
+      <p className="mt-3 text-xs leading-6 text-sub">
+        内部トラフィックは集計から除外します。運営端末では
+        <Link href="/spots?dokorun_internal=1" className="mx-1 font-bold text-accent underline">
+          内部トラフィックに設定
+        </Link>
+        してください。解除は
+        <Link href="/spots?dokorun_internal=0" className="mx-1 font-bold text-accent underline">
+          こちら
+        </Link>
+        。
+      </p>
       <section className="mt-8">
         <h2 className="mb-4 text-xl font-bold">日別イベント数</h2>
         {days.length ? (
           <div className="overflow-x-auto rounded-xl border border-line">
             <table className="w-full min-w-[560px] text-left text-sm">
-              <thead className="bg-cream"><tr><th className="p-3">日付</th>{names.map((name) => <th key={name} className="p-3">{eventLabels[name]}</th>)}</tr></thead>
+              <thead className="bg-cream">
+                <tr>
+                  <th className="p-3">日付</th>
+                  {names.map((name) => (
+                    <th key={name} className="p-3">
+                      {eventLabels[name]}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
               <tbody className="divide-y divide-line">
-                {days.map((value) => <tr key={value}><td className="p-3 font-bold">{value.slice(5)}</td>{names.map((name) => <td key={name} className="p-3">{cell.get(`${value}:${name}`) ?? 0}</td>)}</tr>)}
+                {days.map((value) => (
+                  <tr key={value}>
+                    <td className="p-3 font-bold">{value.slice(5)}</td>
+                    {names.map((name) => (
+                      <td key={name} className="p-3">
+                        {cell.get(`${value}:${name}`) ?? 0}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-        ) : <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだイベントがありません</p>}
+        ) : (
+          <p className="rounded-xl border border-line bg-cream p-10 text-center text-sub">まだイベントがありません</p>
+        )}
       </section>
       <section className="mt-8">
         <h2 className="mb-1 text-xl font-bold">コースを増やしたいエリア</h2>
-        <p className="mb-4 text-xs leading-6 text-sub">現在地検索が0件になり、近隣候補へ切り替わった検索です。エリアはユーザー座標ではなく、最寄り候補の所在地です。</p>
-        {searchFallbacks.length ? <ol className="space-y-2 text-sm">{searchFallbacks.map((row) => <li key={`${row.area}:${row.tags ?? ""}`} className="flex items-center justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-3"><div><p className="font-bold">{row.area}</p><p className="mt-1 text-xs text-sub">条件: {row.tags || "指定なし"}</p></div><span className="font-bold tabular-nums">{row.count}回</span></li>)}</ol> : <p className="rounded-xl border border-line bg-cream p-8 text-center text-sub">まだ0件検索はありません</p>}
+        <p className="mb-4 text-xs leading-6 text-sub">
+          現在地検索が0件になり、近隣候補へ切り替わった検索です。エリアはユーザー座標ではなく、最寄り候補の所在地です。
+        </p>
+        {searchFallbacks.length ? (
+          <ol className="space-y-2 text-sm">
+            {searchFallbacks.map((row) => (
+              <li
+                key={`${row.area}:${row.tags ?? ""}`}
+                className="flex items-center justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-3"
+              >
+                <div>
+                  <p className="font-bold">{row.area}</p>
+                  <p className="mt-1 text-xs text-sub">条件: {row.tags || "指定なし"}</p>
+                </div>
+                <span className="font-bold tabular-nums">{row.count}回</span>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="rounded-xl border border-line bg-cream p-8 text-center text-sub">まだ0件検索はありません</p>
+        )}
       </section>
       <div className="mt-10 grid gap-8 sm:grid-cols-2">
         <section>
           <h2 className="mb-4 text-xl font-bold">よく見られたスポット</h2>
-          <ol className="space-y-2 text-sm">{topViews.map((row) => <li key={row.slug} className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"><Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">{row.slug}</Link><span>{row.count}</span></li>)}{!topViews.length && <li className="text-sub">まだデータがありません</li>}</ol>
+          <ol className="space-y-2 text-sm">
+            {topViews.map((row) => (
+              <li
+                key={row.slug}
+                className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"
+              >
+                <Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">
+                  {row.slug}
+                </Link>
+                <span>{row.count}</span>
+              </li>
+            ))}
+            {!topViews.length && <li className="text-sub">まだデータがありません</li>}
+          </ol>
         </section>
         <section>
           <h2 className="mb-4 text-xl font-bold">走りたい累計</h2>
-          <ol className="space-y-2 text-sm">{topHashiritai.map((row) => <li key={row.slug} className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"><Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">{row.name}</Link><span>{row.count}</span></li>)}{!topHashiritai.length && <li className="text-sub">まだデータがありません</li>}</ol>
+          <ol className="space-y-2 text-sm">
+            {topHashiritai.map((row) => (
+              <li
+                key={row.slug}
+                className="flex justify-between gap-3 rounded-lg border border-line bg-paper px-4 py-2.5"
+              >
+                <Link href={`/spots/${row.slug}`} className="font-bold underline underline-offset-4">
+                  {row.name}
+                </Link>
+                <span>{row.count}</span>
+              </li>
+            ))}
+            {!topHashiritai.length && <li className="text-sub">まだデータがありません</li>}
+          </ol>
         </section>
       </div>
     </div>

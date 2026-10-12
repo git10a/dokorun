@@ -21,17 +21,30 @@ describe("private race review page", () => {
     expect(mocks.getUserRaceReviews).not.toHaveBeenCalled();
   });
   it("uses the server session owner and exposes navigation to older posts", async () => {
-    mocks.getUserRaceReviews.mockResolvedValue({ available: true, hasMore: true, reviews: [{
-      id: "review-id", raceSlug: "tokyo-marathon", raceYear: 2025, finishTimeS: 13500,
-      body: '<script>alert("x")</script> 自分の体験', distanceKm: 30, isHidden: true,
-    }] });
-    const html = renderToStaticMarkup(await Page({ searchParams: Promise.resolve({ page: "2", userId: "other-user" } as { page: string }) }));
+    mocks.getUserRaceReviews.mockResolvedValue({
+      available: true,
+      hasMore: true,
+      reviews: [
+        {
+          id: "review-id",
+          raceSlug: "tokyo-marathon",
+          raceYear: 2025,
+          finishTimeS: 13500,
+          body: '<script>alert("x")</script> 自分の体験',
+          distanceKm: 30,
+          isHidden: true,
+        },
+      ],
+    });
+    const html = renderToStaticMarkup(
+      await Page({ searchParams: Promise.resolve({ page: "2", userId: "other-user" } as { page: string }) }),
+    );
     expect(mocks.getUserRaceReviews).toHaveBeenCalledWith("session-owner", 20);
     expect(html).toContain("&lt;script&gt;");
     expect(html).not.toContain('<script>alert("x")');
     expect(html).toContain("運営により公開停止中");
-    expect(html).toContain('/me/race-reviews?page=1');
-    expect(html).toContain('/me/race-reviews?page=3');
+    expect(html).toContain("/me/race-reviews?page=1");
+    expect(html).toContain("/me/race-reviews?page=3");
     expect(metadata.robots).toEqual({ index: false, follow: false });
   });
   it("shows storage failure separately from a first-time empty state", async () => {

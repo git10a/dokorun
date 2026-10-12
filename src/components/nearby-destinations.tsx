@@ -1,16 +1,9 @@
 import { ExternalLink, Footprints, MapPin, ShowerHead } from "lucide-react";
-import {
-  googleMapsPlaceUrl,
-  nearbyDestinationCategoryLabels,
-  type NearbyDestination,
-} from "@/lib/nearby-destinations";
+import { googleMapsPlaceUrl, nearbyDestinationCategoryLabels, type NearbyDestination } from "@/lib/nearby-destinations";
 
 function formatDistance(distanceM: number | null, walkingMinutes: number | null) {
-  const distance = distanceM === null
-    ? null
-    : distanceM >= 1000
-      ? `${(distanceM / 1000).toFixed(1)}km`
-      : `${distanceM}m`;
+  const distance =
+    distanceM === null ? null : distanceM >= 1000 ? `${(distanceM / 1000).toFixed(1)}km` : `${distanceM}m`;
   const walking = walkingMinutes === null ? null : `徒歩${walkingMinutes}分`;
   return [distance, walking].filter(Boolean).join("・") || "距離未確認";
 }

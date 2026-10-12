@@ -11,10 +11,18 @@ export type RaceElevation = {
 // Keep coordinates and elevation on the same distance axis, including out-and-back routes.
 export function raceElevationFromPoints(points: GpxPoint[]): RaceElevation {
   const cumulative = cumulativeDistances(points);
-  return { version: 1, source: "gpx", points: points.map((point, index) => {
-    return { distanceM: Math.round(cumulative[index] * 100) / 100, lat: point.lat, lng: point.lng,
-      elevationM: point.ele !== null && Number.isFinite(point.ele) ? point.ele : null };
-  }) };
+  return {
+    version: 1,
+    source: "gpx",
+    points: points.map((point, index) => {
+      return {
+        distanceM: Math.round(cumulative[index] * 100) / 100,
+        lat: point.lat,
+        lng: point.lng,
+        elevationM: point.ele !== null && Number.isFinite(point.ele) ? point.ele : null,
+      };
+    }),
+  };
 }
 
 export function elevationPointAtDistance(points: RaceElevationPoint[], distanceM: number): RaceElevationPoint | null {
@@ -32,19 +40,26 @@ export function elevationPointAtDistance(points: RaceElevationPoint[], distanceM
   const before = points[low - 1];
   const span = after.distanceM - before.distanceM;
   const ratio = span > 0 ? (distance - before.distanceM) / span : 0;
-  return { distanceM: distance,
+  return {
+    distanceM: distance,
     lat: before.lat + (after.lat - before.lat) * ratio,
     lng: before.lng + (after.lng - before.lng) * ratio,
     // Never bridge an elevation gap with an invented height.
-    elevationM: before.elevationM === null || after.elevationM === null ? null
-      : before.elevationM + (after.elevationM - before.elevationM) * ratio };
+    elevationM:
+      before.elevationM === null || after.elevationM === null
+        ? null
+        : before.elevationM + (after.elevationM - before.elevationM) * ratio,
+  };
 }
 
 export function elevationSegments(points: RaceElevationPoint[]): RaceElevationPoint[][] {
   const segments: RaceElevationPoint[][] = [];
   let current: RaceElevationPoint[] = [];
   for (const point of points) {
-    if (point.elevationM === null) { current = []; continue; }
+    if (point.elevationM === null) {
+      current = [];
+      continue;
+    }
     if (!current.length) segments.push(current);
     current.push(point);
   }

@@ -2,7 +2,12 @@ import { getSiteUrl } from "@/lib/site";
 
 // JSON-LD を埋め込む。"</script>" で抜けられないよう < をエスケープする
 export function JsonLd({ data }: { data: unknown }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+    />
+  );
 }
 
 export type Crumb = { name: string; path: string };

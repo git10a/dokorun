@@ -45,13 +45,20 @@ export type CourseGuide = {
   checkpoints: CourseGuideCheckpoint[];
 };
 
-const IRRELEVANT_PHOTO_PATTERN = /(?:station|ticket.?gate|school|supermarket|restaurant|clubhouse|foundation|highway|heliport|earthquake|liquefaction|gas.?station|public.?toilet|eneos|\bsta\b|駅|改札|学校|スーパー|飲食店|クラブハウス|高速道路|ヘリポート|地震|液状化|給油所|公衆トイレ)/i;
+const IRRELEVANT_PHOTO_PATTERN =
+  /(?:station|ticket.?gate|school|supermarket|restaurant|clubhouse|foundation|highway|heliport|earthquake|liquefaction|gas.?station|public.?toilet|eneos|\bsta\b|駅|改札|学校|スーパー|飲食店|クラブハウス|高速道路|ヘリポート|地震|液状化|給油所|公衆トイレ)/i;
 
 function normalizedPhotoText(value: string) {
   try {
-    return decodeURIComponent(value).normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ");
+    return decodeURIComponent(value)
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ");
   } catch {
-    return value.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ");
+    return value
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ");
   }
 }
 
@@ -62,19 +69,21 @@ export function isRelevantCoursePhoto(checkpoint: CourseGuideCheckpoint) {
 }
 
 export function preparePublicCourseGuide(guide: CourseGuide): CourseGuide {
-  const checkpoints = guide.checkpoints.map((checkpoint) => isRelevantCoursePhoto(checkpoint)
-    ? checkpoint
-    : {
-        id: checkpoint.id,
-        name: checkpoint.name,
-        description: `${checkpoint.name}の走行区間です。路面は${checkpoint.surfaceLabel}。注意点は「${checkpoint.caution}」です。地図と現地案内を確認しながら走ってください。`,
-        surfaceLabel: checkpoint.surfaceLabel,
-        caution: checkpoint.caution,
-        routeDistanceM: checkpoint.routeDistanceM,
-        routeLat: checkpoint.routeLat,
-        routeLng: checkpoint.routeLng,
-        elevationM: checkpoint.elevationM,
-      });
+  const checkpoints = guide.checkpoints.map((checkpoint) =>
+    isRelevantCoursePhoto(checkpoint)
+      ? checkpoint
+      : {
+          id: checkpoint.id,
+          name: checkpoint.name,
+          description: `${checkpoint.name}の走行区間です。路面は${checkpoint.surfaceLabel}。注意点は「${checkpoint.caution}」です。地図と現地案内を確認しながら走ってください。`,
+          surfaceLabel: checkpoint.surfaceLabel,
+          caution: checkpoint.caution,
+          routeDistanceM: checkpoint.routeDistanceM,
+          routeLat: checkpoint.routeLat,
+          routeLng: checkpoint.routeLng,
+          elevationM: checkpoint.elevationM,
+        },
+  );
   return {
     ...guide,
     checkpointsTitle: checkpoints.some((checkpoint) => checkpoint.photo) ? "コースの雰囲気" : "区間ごとの確認ポイント",
@@ -90,7 +99,7 @@ export async function getCourseGuide(slug: string): Promise<CourseGuide | null> 
     if (!assets) throw new Error("ASSETS binding is unavailable");
     const response = await assets.fetch(new Request(`https://assets.local/course-guides/${slug}.json`));
     if (!response.ok) return null;
-    return preparePublicCourseGuide(await response.json() as CourseGuide);
+    return preparePublicCourseGuide((await response.json()) as CourseGuide);
   } catch {
     try {
       const nodeRequire = createRequire(process.cwd() + "/");

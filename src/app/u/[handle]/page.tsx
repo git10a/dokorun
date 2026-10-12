@@ -53,12 +53,18 @@ function PbSummary({ pbs }: { pbs: { event: string; timeS: number; competitionNa
         {rows.map((row) => {
           const pb = row.pb!;
           return (
-            <span key={row.key} className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-paper px-3 py-1">
+            <span
+              key={row.key}
+              className="inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-paper px-3 py-1"
+            >
               <span className="shrink-0 font-bold">{row.label}</span>
               <span className="shrink-0">{formatDuration(pb.timeS)}</span>
               <span className="shrink-0 text-xs text-sub">{formatPace(pb.timeS, row.meters)}</span>
               {pb.competitionName && (
-                <span className="min-w-0 truncate border-l border-line pl-2 text-xs text-sub" title={pb.competitionName}>
+                <span
+                  className="min-w-0 truncate border-l border-line pl-2 text-xs text-sub"
+                  title={pb.competitionName}
+                >
                   {pb.competitionName}
                 </span>
               )}
@@ -85,12 +91,25 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
   const stamps = STAMP_SLUGS.map((slug) => stampRows.find((row) => row.slug === slug)).filter((row) => row != null);
   const image = avatarUrl(user);
   const years = runnerYears(user.runningSinceYear, user.runningSinceMonth);
-  const sinceLabel = user.runningSinceYear ? `${user.runningSinceYear}年${user.runningSinceMonth ? `${user.runningSinceMonth}月` : ""}〜` : null;
+  const sinceLabel = user.runningSinceYear
+    ? `${user.runningSinceYear}年${user.runningSinceMonth ? `${user.runningSinceMonth}月` : ""}〜`
+    : null;
   return (
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-10 md:px-6">
       <header className="flex flex-col gap-5 sm:flex-row sm:items-center">
         <span className="grid size-24 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-cream">
-          {image ? <img src={image} alt="" width={96} height={96} referrerPolicy="no-referrer" className="h-full w-full object-cover" /> : <span className="text-3xl font-black">走</span>}
+          {image ? (
+            <img
+              src={image}
+              alt=""
+              width={96}
+              height={96}
+              referrerPolicy="no-referrer"
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <span className="text-3xl font-black">走</span>
+          )}
         </span>
         <div className="min-w-0">
           <p className="text-sm font-bold text-sub">@{user.handle}</p>
@@ -107,29 +126,51 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
           </div>
           <PbSummary pbs={pbs} />
           {isOwner && (
-            <Link href="/me/profile" className="mt-4 inline-flex rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream">プロフィールを編集</Link>
+            <Link
+              href="/me/profile"
+              className="mt-4 inline-flex rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream"
+            >
+              プロフィールを編集
+            </Link>
           )}
         </div>
       </header>
-      {isOwner && <section className="rounded-2xl border border-line bg-cream p-5 sm:p-7">
-        <h2 className="text-xl font-bold">次のレースの準備と、走った経験</h2>
-        <p className="mt-3 text-sm leading-7 text-sub">出る大会のコースを予習して、ペースを考える。走り終えたら、次に走る人へ経験を残せます。</p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link href="/races" className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark">大会のコースをさがす</Link>
-          <Link href="/me/race-reviews" className="rounded-lg border border-line bg-paper px-5 py-3 text-sm font-bold hover:border-ink">投稿した大会の体験</Link>
-        </div>
-      </section>}
+      {isOwner && (
+        <section className="rounded-2xl border border-line bg-cream p-5 sm:p-7">
+          <h2 className="text-xl font-bold">次のレースの準備と、走った経験</h2>
+          <p className="mt-3 text-sm leading-7 text-sub">
+            出る大会のコースを予習して、ペースを考える。走り終えたら、次に走る人へ経験を残せます。
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/races" className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark">
+              大会のコースをさがす
+            </Link>
+            <Link
+              href="/me/race-reviews"
+              className="rounded-lg border border-line bg-paper px-5 py-3 text-sm font-bold hover:border-ink"
+            >
+              投稿した大会の体験
+            </Link>
+          </div>
+        </section>
+      )}
       {isOwner && STAMP_BOOK_ENABLED && (
         <section>
           <div className="mb-5 flex items-end justify-between gap-4">
             <SectionHeading>スタンプ帳</SectionHeading>
-            <Link href="/me/stamps" className="text-sm font-bold text-accent">くわしく見る →</Link>
+            <Link href="/me/stamps" className="text-sm font-bold text-accent">
+              くわしく見る →
+            </Link>
           </div>
           <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
             {stamps.map((stamp) => {
               const tier = stampTier(stamp.runCount);
               return (
-                <Link key={stamp.slug} href={`/spots/${stamp.slug}`} className="rounded-xl border border-line bg-paper p-3 text-center transition hover:border-brand">
+                <Link
+                  key={stamp.slug}
+                  href={`/spots/${stamp.slug}`}
+                  className="rounded-xl border border-line bg-paper p-3 text-center transition hover:border-brand"
+                >
                   <SpotStamp slug={stamp.slug} runCount={stamp.runCount} className="mx-auto size-16 sm:size-20" />
                   <p className="mt-2 truncate text-xs font-bold">{stamp.name}</p>
                   <p className="mt-0.5 text-xs text-sub">{tier ? `${stamp.runCount}回・${tier.label}色` : "未取得"}</p>
@@ -137,11 +178,52 @@ export default async function PublicProfilePage({ params }: { params: Params }) 
               );
             })}
           </div>
-          <p className="mt-3 text-sm text-sub">スポットで「この辺走ったよ 🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)</p>
+          <p className="mt-3 text-sm text-sub">
+            スポットで「この辺走ったよ
+            🏃」を記録するとスタンプがもらえます。走り込むと色が育ちます(スタンプ帳はあなたにだけ表示されています)
+          </p>
         </section>
       )}
-      <section><SectionHeading className="mb-5">おすすめ</SectionHeading>{favorites.length ? <div className="grid gap-5 md:grid-cols-2">{favorites.map((spot) => <SpotCard key={spot.id} spot={spot} />)}</div> : <p className="text-sub">おすすめはまだ登録されていません</p>}</section>
-      <section><SectionHeading className="mb-5">公開ログ</SectionHeading><div className="space-y-4">{runs.map((run) => <article key={run.id} className="rounded-xl border border-line bg-paper p-4"><div className="flex flex-wrap items-center justify-between gap-3"><Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">{run.spotName}</Link><p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p></div>{run.comment ? <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p> : <p className="mt-3 text-sm text-sub">この辺走ったよ 🏃</p>}{run.photoKey && <img src={runPhotoUrl(run.photoKey)} alt={`${run.spotName}を走ったときの写真`} className="mt-3 aspect-video w-48 max-w-full rounded-xl object-cover" />}</article>)}</div>{!runs.length && <p className="text-sub">公開ログはまだありません</p>}</section>
+      <section>
+        <SectionHeading className="mb-5">おすすめ</SectionHeading>
+        {favorites.length ? (
+          <div className="grid gap-5 md:grid-cols-2">
+            {favorites.map((spot) => (
+              <SpotCard key={spot.id} spot={spot} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-sub">おすすめはまだ登録されていません</p>
+        )}
+      </section>
+      <section>
+        <SectionHeading className="mb-5">公開ログ</SectionHeading>
+        <div className="space-y-4">
+          {runs.map((run) => (
+            <article key={run.id} className="rounded-xl border border-line bg-paper p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <Link href={`/spots/${run.spotSlug}`} className="font-bold text-accent">
+                  {run.spotName}
+                </Link>
+                <p className="text-xs text-sub">{runDateFormat.format(run.ranAt)}</p>
+              </div>
+              {run.comment ? (
+                <p className="mt-3 whitespace-pre-line leading-7">{run.comment}</p>
+              ) : (
+                <p className="mt-3 text-sm text-sub">この辺走ったよ 🏃</p>
+              )}
+              {run.photoKey && (
+                <img
+                  src={runPhotoUrl(run.photoKey)}
+                  alt={`${run.spotName}を走ったときの写真`}
+                  className="mt-3 aspect-video w-48 max-w-full rounded-xl object-cover"
+                />
+              )}
+            </article>
+          ))}
+        </div>
+        {!runs.length && <p className="text-sub">公開ログはまだありません</p>}
+      </section>
     </div>
   );
 }

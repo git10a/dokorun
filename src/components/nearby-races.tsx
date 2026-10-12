@@ -13,12 +13,30 @@ export function NearbyRaces({ items, spotSlug }: { items: NearbyRace[]; spotSlug
         {items.map(({ race, finished, startDistanceKm }) => {
           return (
             <li key={race.slug}>
-              <TrackedNextLink href={`/races/${race.slug}`} event="spot_race_link" meta={{ spot: spotSlug, race: race.slug, finished }} className="group flex items-center gap-3 overflow-hidden rounded-xl border border-line bg-paper p-2 pr-4 transition-all hover:-translate-y-0.5 hover:shadow-md">
-                <RaceThumb race={race} finished={finished} alt="" className="aspect-[16/10] w-28 shrink-0 rounded-lg object-cover sm:w-32" />
+              <TrackedNextLink
+                href={`/races/${race.slug}`}
+                event="spot_race_link"
+                meta={{ spot: spotSlug, race: race.slug, finished }}
+                className="group flex items-center gap-3 overflow-hidden rounded-xl border border-line bg-paper p-2 pr-4 transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <RaceThumb
+                  race={race}
+                  finished={finished}
+                  alt=""
+                  className="aspect-[16/10] w-28 shrink-0 rounded-lg object-cover sm:w-32"
+                />
                 <div className="min-w-0">
-                  <RaceDateLine race={race} finished={finished} dateLabel={finished ? "今年は開催済み" : raceShortDate(race)} />
+                  <RaceDateLine
+                    race={race}
+                    finished={finished}
+                    dateLabel={finished ? "今年は開催済み" : raceShortDate(race)}
+                  />
                   <h3 className="mt-0.5 font-bold leading-snug group-hover:text-accent">{race.name}</h3>
-                  <p className="mt-0.5 text-xs text-sub">{race.distanceLabel}{startDistanceKm !== null && `・スタートまで約${startDistanceKm < 10 ? startDistanceKm.toFixed(1) : Math.round(startDistanceKm)}km`}</p>
+                  <p className="mt-0.5 text-xs text-sub">
+                    {race.distanceLabel}
+                    {startDistanceKm !== null &&
+                      `・スタートまで約${startDistanceKm < 10 ? startDistanceKm.toFixed(1) : Math.round(startDistanceKm)}km`}
+                  </p>
                 </div>
               </TrackedNextLink>
             </li>

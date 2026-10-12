@@ -28,9 +28,20 @@ export function SpotCommunities({ communities }: { communities: SpotCommunity[] 
         {communities.map((community) => (
           <article key={community.id} className="flex flex-col rounded-xl border border-line bg-paper p-5">
             <div className="flex items-start gap-3">
-              {community.logoUrl
-                ? <img src={community.logoUrl} alt={`${community.name}のロゴ`} width={40} height={40} loading="lazy" className="size-10 shrink-0 rounded-full border border-line object-cover" />
-                : <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand"><Users size={18} aria-hidden="true" /></span>}
+              {community.logoUrl ? (
+                <img
+                  src={community.logoUrl}
+                  alt={`${community.name}のロゴ`}
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                  className="size-10 shrink-0 rounded-full border border-line object-cover"
+                />
+              ) : (
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand">
+                  <Users size={18} aria-hidden="true" />
+                </span>
+              )}
               <div className="min-w-0">
                 <h3 className="text-lg font-bold leading-snug">{community.name}</h3>
                 {community.schedule && (
@@ -44,9 +55,17 @@ export function SpotCommunities({ communities }: { communities: SpotCommunity[] 
             <p className="mt-3 flex-1 text-sm leading-7 text-sub">{community.description}</p>
             {(community.instagram || community.xHandle || community.strava || community.website) && (
               <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
-                <SocialLinks links={{ instagram: community.instagram, xHandle: community.xHandle, stravaClub: community.strava }} />
+                <SocialLinks
+                  links={{ instagram: community.instagram, xHandle: community.xHandle, stravaClub: community.strava }}
+                />
                 {community.website && (
-                  <a href={community.website} target="_blank" rel="noopener noreferrer" title="Webサイト" className="grid size-10 place-items-center rounded-full border border-line bg-paper text-ink transition-colors hover:bg-brand">
+                  <a
+                    href={community.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Webサイト"
+                    className="grid size-10 place-items-center rounded-full border border-line bg-paper text-ink transition-colors hover:bg-brand"
+                  >
                     <Globe size={16} aria-hidden="true" />
                   </a>
                 )}
@@ -57,7 +76,9 @@ export function SpotCommunities({ communities }: { communities: SpotCommunity[] 
       </div>
       <p className="mt-4 text-sm text-sub">
         この場所で活動しているコミュニティを運営していますか？{" "}
-        <Link href="/contact" className="font-bold text-accent underline underline-offset-4">掲載を申請する</Link>
+        <Link href="/contact" className="font-bold text-accent underline underline-offset-4">
+          掲載を申請する
+        </Link>
       </p>
     </section>
   );

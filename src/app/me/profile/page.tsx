@@ -19,22 +19,26 @@ export default async function ProfileEditPage() {
   if (!user) notFound();
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 md:px-6">
-      <Link href={`/u/${user.handle}`} className="text-sm font-bold text-accent">← プロフィールへ戻る</Link>
+      <Link href={`/u/${user.handle}`} className="text-sm font-bold text-accent">
+        ← プロフィールへ戻る
+      </Link>
       <p className="mt-7 text-sm font-bold text-sub">MY PAGE</p>
       <h1 className="mt-1 text-3xl font-black">プロフィールを編集</h1>
       <AvatarUploader user={{ id: user.id, image: user.image, customAvatarAt: user.customAvatarAt }} />
       <section className="mt-10">
         <SectionHeading>基本情報</SectionHeading>
-        <ProfileForm user={{
-          name: user.name,
-          handle: user.handle,
-          bio: user.bio,
-          instagram: user.instagram,
-          xHandle: user.xHandle,
-          strava: user.strava,
-          runningSinceYear: user.runningSinceYear,
-          runningSinceMonth: user.runningSinceMonth,
-        }} />
+        <ProfileForm
+          user={{
+            name: user.name,
+            handle: user.handle,
+            bio: user.bio,
+            instagram: user.instagram,
+            xHandle: user.xHandle,
+            strava: user.strava,
+            runningSinceYear: user.runningSinceYear,
+            runningSinceMonth: user.runningSinceMonth,
+          }}
+        />
       </section>
       <section className="mt-10">
         <SectionHeading>自己ベスト</SectionHeading>

@@ -12,8 +12,20 @@ function label(days: number) {
 const subscribeNothing = () => () => {};
 
 // ページはISRで最大1日キャッシュされるため、ハイドレーション後は閲覧時の日付で数え直す
-export function RaceCountdown({ dateKey, serverTodayKey, className = "px-2.5 py-1" }: { dateKey: string; serverTodayKey: string; className?: string }) {
-  const todayKey = useSyncExternalStore(subscribeNothing, () => jstTodayKey(), () => serverTodayKey);
+export function RaceCountdown({
+  dateKey,
+  serverTodayKey,
+  className = "px-2.5 py-1",
+}: {
+  dateKey: string;
+  serverTodayKey: string;
+  className?: string;
+}) {
+  const todayKey = useSyncExternalStore(
+    subscribeNothing,
+    () => jstTodayKey(),
+    () => serverTodayKey,
+  );
   const { text, tone } = label(daysUntil(dateKey, todayKey));
   return <span className={`rounded-full text-xs font-bold ${tone} ${className}`}>{text}</span>;
 }

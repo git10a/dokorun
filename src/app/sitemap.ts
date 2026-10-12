@@ -63,7 +63,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
   const storyPages: MetadataRoute.Sitemap = getPublishedStories().map((story) => ({
-    url: `${baseUrl}/stories/${story.slug}`, lastModified: story.publishedAt, changeFrequency: "monthly", priority: 0.7,
+    url: `${baseUrl}/stories/${story.slug}`,
+    lastModified: story.publishedAt,
+    changeFrequency: "monthly",
+    priority: 0.7,
   }));
-  return [...fixedPages, ...areaPages, ...featurePages, ...racePages, ...stationPages, ...stationLinePages, ...spotPages, ...storyPages];
+  return [
+    ...fixedPages,
+    ...areaPages,
+    ...featurePages,
+    ...racePages,
+    ...stationPages,
+    ...stationLinePages,
+    ...spotPages,
+    ...storyPages,
+  ];
 }

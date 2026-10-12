@@ -58,14 +58,27 @@ export function SortSelect() {
 
   return (
     <div className="relative">
-      <select aria-label="並び順" value={searchParams.get("sort") ?? (searchParams.get("popular") === "1" ? "popular" : "new")} onChange={(event) => changeSort(event.target.value)} disabled={locating} className="h-10 rounded-lg border border-line bg-paper px-3 text-sm disabled:opacity-60">
+      <select
+        aria-label="並び順"
+        value={searchParams.get("sort") ?? (searchParams.get("popular") === "1" ? "popular" : "new")}
+        onChange={(event) => changeSort(event.target.value)}
+        disabled={locating}
+        className="h-10 rounded-lg border border-line bg-paper px-3 text-sm disabled:opacity-60"
+      >
         <option value="popular">走りたいが多い順</option>
         <option value="new">新着順</option>
         <option value="near">{locating ? "現在地を取得中…" : "現在地から近い順"}</option>
         <option value="distance_asc">距離が短い順</option>
         <option value="distance_desc">距離が長い順</option>
       </select>
-      {error && <div role="status" className="absolute right-0 top-full z-10 mt-2 whitespace-nowrap rounded-lg bg-ink px-3 py-2 text-xs text-white shadow-lg">{error}</div>}
+      {error && (
+        <div
+          role="status"
+          className="absolute right-0 top-full z-10 mt-2 whitespace-nowrap rounded-lg bg-ink px-3 py-2 text-xs text-white shadow-lg"
+        >
+          {error}
+        </div>
+      )}
     </div>
   );
 }

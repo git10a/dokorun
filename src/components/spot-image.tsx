@@ -4,11 +4,23 @@ const candidateWidths = [320, 640, 960, 1280];
 
 export function imageTransformUrl(src: string, width: number) {
   if (process.env.NEXT_PUBLIC_IMAGE_TRANSFORM === "off") return src;
-  const source = src.startsWith("http://") || src.startsWith("https://") ? src : `https://dokorun.com${src.startsWith("/") ? "" : "/"}${src}`;
+  const source =
+    src.startsWith("http://") || src.startsWith("https://")
+      ? src
+      : `https://dokorun.com${src.startsWith("/") ? "" : "/"}${src}`;
   return `https://dokorun.com/cdn-cgi/image/format=auto,quality=78,width=${width}/${source}`;
 }
 
-export function SpotImage({ src, alt, width, height, sizes, priority = false, unoptimized = false, className }: {
+export function SpotImage({
+  src,
+  alt,
+  width,
+  height,
+  sizes,
+  priority = false,
+  unoptimized = false,
+  className,
+}: {
   src: string;
   alt: string;
   width: number;
@@ -24,7 +36,11 @@ export function SpotImage({ src, alt, width, height, sizes, priority = false, un
   return (
     <img
       src={unoptimized ? src : imageTransformUrl(src, largestWidth)}
-      srcSet={unoptimized ? undefined : effectiveWidths.map((candidate) => `${imageTransformUrl(src, candidate)} ${candidate}w`).join(", ")}
+      srcSet={
+        unoptimized
+          ? undefined
+          : effectiveWidths.map((candidate) => `${imageTransformUrl(src, candidate)} ${candidate}w`).join(", ")
+      }
       alt={alt}
       width={width}
       height={height}

@@ -12,13 +12,15 @@ afterEach(() => {
 describe("SpotImage", () => {
   it("renders responsive, lazy-loaded image attributes", () => {
     process.env.NEXT_PUBLIC_IMAGE_TRANSFORM = "off";
-    const html = renderToStaticMarkup(createElement(SpotImage, {
-      src: "https://images.example/spot.jpg",
-      alt: "コース写真",
-      width: 640,
-      height: 360,
-      sizes: "128px",
-    }));
+    const html = renderToStaticMarkup(
+      createElement(SpotImage, {
+        src: "https://images.example/spot.jpg",
+        alt: "コース写真",
+        width: 640,
+        height: 360,
+        sizes: "128px",
+      }),
+    );
     expect(html).toContain('width="640"');
     expect(html).toContain('height="360"');
     expect(html).toContain('loading="lazy"');

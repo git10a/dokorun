@@ -30,19 +30,68 @@ export function PbForm({ pbs }: { pbs: { event: string; timeS: number; competiti
               </div>
               <div className="grid gap-2 sm:grid-cols-[1fr_13rem]">
                 <div className="grid grid-cols-3 gap-2">
-                  <input name={`${event.key}-h`} type="number" min={0} inputMode="numeric" defaultValue={value.h} placeholder="時" className={inputClass} aria-label={`${event.label} 時`} />
-                  <input name={`${event.key}-m`} type="number" min={0} max={59} inputMode="numeric" defaultValue={value.m} placeholder="分" className={inputClass} aria-label={`${event.label} 分`} />
-                  <input name={`${event.key}-s`} type="number" min={0} max={59} inputMode="numeric" defaultValue={value.s} placeholder="秒" className={inputClass} aria-label={`${event.label} 秒`} />
+                  <input
+                    name={`${event.key}-h`}
+                    type="number"
+                    min={0}
+                    inputMode="numeric"
+                    defaultValue={value.h}
+                    placeholder="時"
+                    className={inputClass}
+                    aria-label={`${event.label} 時`}
+                  />
+                  <input
+                    name={`${event.key}-m`}
+                    type="number"
+                    min={0}
+                    max={59}
+                    inputMode="numeric"
+                    defaultValue={value.m}
+                    placeholder="分"
+                    className={inputClass}
+                    aria-label={`${event.label} 分`}
+                  />
+                  <input
+                    name={`${event.key}-s`}
+                    type="number"
+                    min={0}
+                    max={59}
+                    inputMode="numeric"
+                    defaultValue={value.s}
+                    placeholder="秒"
+                    className={inputClass}
+                    aria-label={`${event.label} 秒`}
+                  />
                 </div>
-                <input name={`${event.key}-competition`} maxLength={80} defaultValue={current?.competitionName ?? ""} placeholder="大会名（任意）" className={competitionInputClass} aria-label={`${event.label} 大会名`} />
+                <input
+                  name={`${event.key}-competition`}
+                  maxLength={80}
+                  defaultValue={current?.competitionName ?? ""}
+                  placeholder="大会名（任意）"
+                  className={competitionInputClass}
+                  aria-label={`${event.label} 大会名`}
+                />
               </div>
-              {state.errors?.[event.key]?.map((error) => <p key={error} className="sm:col-start-2 text-sm text-danger">{error}</p>)}
+              {state.errors?.[event.key]?.map((error) => (
+                <p key={error} className="sm:col-start-2 text-sm text-danger">
+                  {error}
+                </p>
+              ))}
             </div>
           );
         })}
       </div>
-      {state.message && <p role="status" className={`mt-4 rounded-lg px-4 py-3 text-sm font-bold ${state.status === "saved" ? "bg-cream" : "bg-danger/10 text-danger"}`}>{state.message}</p>}
-      <button disabled={pending} className="mt-5 rounded-lg bg-brand px-5 py-3 font-bold disabled:opacity-60">{pending ? "保存中…" : "自己ベストを保存"}</button>
+      {state.message && (
+        <p
+          role="status"
+          className={`mt-4 rounded-lg px-4 py-3 text-sm font-bold ${state.status === "saved" ? "bg-cream" : "bg-danger/10 text-danger"}`}
+        >
+          {state.message}
+        </p>
+      )}
+      <button disabled={pending} className="mt-5 rounded-lg bg-brand px-5 py-3 font-bold disabled:opacity-60">
+        {pending ? "保存中…" : "自己ベストを保存"}
+      </button>
     </form>
   );
 }

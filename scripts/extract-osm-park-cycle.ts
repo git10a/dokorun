@@ -63,9 +63,16 @@ const point = (id: number) => ({ lat: nodes.get(id)!.lat, lng: nodes.get(id)!.lo
 
 const candidates = cycles.map((cycle) => ({
   cycle: [...cycle, cycle[0]],
-  distanceM: cycle.reduce((sum, id, index) => sum + (index ? haversine(point(cycle[index - 1]), point(id)) : 0), 0)
-    + haversine(point(cycle.at(-1)!), point(cycle[0])),
+  distanceM:
+    cycle.reduce((sum, id, index) => sum + (index ? haversine(point(cycle[index - 1]), point(id)) : 0), 0) +
+    haversine(point(cycle.at(-1)!), point(cycle[0])),
 }));
 const selected = candidates.sort((a, b) => Math.abs(a.distanceM - target) - Math.abs(b.distanceM - target))[0];
-writeFileSync(output, pointsToGpx("Representative park loop", selected.cycle.map((id) => ({ ...point(id), ele: null }))));
+writeFileSync(
+  output,
+  pointsToGpx(
+    "Representative park loop",
+    selected.cycle.map((id) => ({ ...point(id), ele: null })),
+  ),
+);
 console.log(JSON.stringify({ output, distanceM: Math.round(selected.distanceM), points: selected.cycle.length }));

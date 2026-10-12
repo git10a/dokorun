@@ -31,9 +31,7 @@ const distanceRequestLabels: Record<string, string> = {
 };
 
 export function normalizeSearchParams(raw: Record<string, string | string[] | undefined>): SpotSearchParams {
-  return Object.fromEntries(
-    Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value]),
-  );
+  return Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value]));
 }
 
 export function toSearchFilters(params: SpotSearchParams): SearchFilters {
@@ -105,7 +103,9 @@ export function buildSpotRequestHref(params: SpotSearchParams, tagNames: string[
 }
 
 export function searchParamsHref(path: string, params: SpotSearchParams, changes: Record<string, string | undefined>) {
-  const next = new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1])));
+  const next = new URLSearchParams(
+    Object.entries(params).filter((entry): entry is [string, string] => Boolean(entry[1])),
+  );
   for (const [key, value] of Object.entries(changes)) {
     if (value) next.set(key, value);
     else next.delete(key);

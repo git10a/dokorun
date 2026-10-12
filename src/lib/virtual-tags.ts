@@ -1,7 +1,19 @@
 // DB の tags テーブルにない「仮想タグ」。距離やスポットの一覧から機械的に付ける
-export const longRunTag = { id: "virtual-long-run", slug: "long-run", name: "ロングラン", category: "terrain", sortOrder: 6 } as const;
+export const longRunTag = {
+  id: "virtual-long-run",
+  slug: "long-run",
+  name: "ロングラン",
+  category: "terrain",
+  sortOrder: 6,
+} as const;
 export const longRunDistanceM = 10000;
-export const castleRunTag = { id: "virtual-castle-run", slug: "castle-run", name: "お城ラン", category: "scenery", sortOrder: 16 } as const;
+export const castleRunTag = {
+  id: "virtual-castle-run",
+  slug: "castle-run",
+  name: "お城ラン",
+  category: "scenery",
+  sortOrder: 16,
+} as const;
 export const virtualTagSlugs: readonly string[] = [longRunTag.slug, castleRunTag.slug];
 
 // 城が主目的・主要経由地になっているコースだけを対象にする。
@@ -52,7 +64,9 @@ type Tag = { slug: string; name: string };
 // DB のタグに、該当する仮想タグを後ろに足す(重複はしない)
 export function withVirtualTags(tags: Tag[], spot: { slug: string; distanceM: number }): Tag[] {
   const result = [...tags];
-  const add = (tag: Tag) => { if (!result.some((item) => item.slug === tag.slug)) result.push({ slug: tag.slug, name: tag.name }); };
+  const add = (tag: Tag) => {
+    if (!result.some((item) => item.slug === tag.slug)) result.push({ slug: tag.slug, name: tag.name });
+  };
   if (spot.distanceM >= longRunDistanceM) add(longRunTag);
   if (castleRunSpotSet.has(spot.slug)) add(castleRunTag);
   return result;

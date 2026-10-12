@@ -8,16 +8,31 @@ import type { FormState } from "@/app/admin/actions";
 
 type SpotOption = { id: string; name: string; prefecture: string };
 type Initial = {
-  id?: string; name?: string; description?: string; schedule?: string | null;
-  instagram?: string | null; xHandle?: string | null; strava?: string | null; website?: string | null;
+  id?: string;
+  name?: string;
+  description?: string;
+  schedule?: string | null;
+  instagram?: string | null;
+  xHandle?: string | null;
+  strava?: string | null;
+  website?: string | null;
   logoUrl?: string | null;
-  isPublished?: boolean; spotIds?: string[];
+  isPublished?: boolean;
+  spotIds?: string[];
 };
 
 const initialState: FormState = {};
 const fieldClass = "mt-2 h-11 w-full rounded-lg border border-line bg-paper px-3 outline-none focus:border-ink";
 
-export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "create" | "edit"; spotOptions: SpotOption[]; initial?: Initial }) {
+export function CommunityForm({
+  mode,
+  spotOptions,
+  initial = {},
+}: {
+  mode: "create" | "edit";
+  spotOptions: SpotOption[];
+  initial?: Initial;
+}) {
   const [state, action, pending] = useActionState(mode === "edit" ? updateCommunity : createCommunity, initialState);
   const [logoUrl, setLogoUrl] = useState(initial.logoUrl ?? "");
   const error = (name: string) => state.errors?.[name]?.[0];
@@ -25,22 +40,55 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
   return (
     <form action={action} className="space-y-10">
       {initial.id && <input type="hidden" name="id" value={initial.id} />}
-      {state.message && <div className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-danger">{state.message}</div>}
+      {state.message && (
+        <div className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-danger">{state.message}</div>
+      )}
       <section>
         <h2 className="mb-5 text-xl font-bold">1. 基本情報</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           <Field label="名前" name="name" required defaultValue={initial.name} error={error("name")} />
-          <Field label="活動日時" name="schedule" placeholder="毎週水曜 19:30〜" defaultValue={initial.schedule ?? ""} />
+          <Field
+            label="活動日時"
+            name="schedule"
+            placeholder="毎週水曜 19:30〜"
+            defaultValue={initial.schedule ?? ""}
+          />
         </div>
-        <label className="mt-5 block text-sm font-bold">紹介文<textarea name="description" required rows={5} defaultValue={initial.description} className="mt-2 w-full rounded-lg border border-line p-3 font-normal leading-7 outline-none focus:border-ink" />{error("description") && <span className="mt-1 block text-xs text-danger">{error("description")}</span>}</label>
+        <label className="mt-5 block text-sm font-bold">
+          紹介文
+          <textarea
+            name="description"
+            required
+            rows={5}
+            defaultValue={initial.description}
+            className="mt-2 w-full rounded-lg border border-line p-3 font-normal leading-7 outline-none focus:border-ink"
+          />
+          {error("description") && <span className="mt-1 block text-xs text-danger">{error("description")}</span>}
+        </label>
         <div className="mt-5">
           <p className="text-sm font-bold">ロゴ</p>
           <input type="hidden" name="logoUrl" value={logoUrl} />
           <div className="mt-2 flex items-start gap-4">
-            {logoUrl && <img src={logoUrl} alt="コミュニティロゴ" width={64} height={64} className="size-16 shrink-0 rounded-full border border-line object-cover" />}
+            {logoUrl && (
+              <img
+                src={logoUrl}
+                alt="コミュニティロゴ"
+                width={64}
+                height={64}
+                className="size-16 shrink-0 rounded-full border border-line object-cover"
+              />
+            )}
             <div className="min-w-0 flex-1">
               <ImageUploader onUploaded={setLogoUrl} />
-              {logoUrl && <button type="button" onClick={() => setLogoUrl("")} className="mt-2 text-xs font-bold text-danger underline">ロゴを外す</button>}
+              {logoUrl && (
+                <button
+                  type="button"
+                  onClick={() => setLogoUrl("")}
+                  className="mt-2 text-xs font-bold text-danger underline"
+                >
+                  ロゴを外す
+                </button>
+              )}
               {error("logoUrl") && <span className="mt-1 block text-xs text-danger">{error("logoUrl")}</span>}
             </div>
           </div>
@@ -52,37 +100,82 @@ export function CommunityForm({ mode, spotOptions, initial = {} }: { mode: "crea
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <Field label="Instagram" name="instagram" placeholder="hinode_run" defaultValue={initial.instagram ?? ""} />
           <Field label="X" name="xHandle" placeholder="hinode_run" defaultValue={initial.xHandle ?? ""} />
-          <Field label="Stravaクラブ" name="strava" placeholder="strava.com/clubs/hinode" defaultValue={initial.strava ?? ""} />
-          <Field label="Webサイト" name="website" placeholder="https://example.com" defaultValue={initial.website ?? ""} />
+          <Field
+            label="Stravaクラブ"
+            name="strava"
+            placeholder="strava.com/clubs/hinode"
+            defaultValue={initial.strava ?? ""}
+          />
+          <Field
+            label="Webサイト"
+            name="website"
+            placeholder="https://example.com"
+            defaultValue={initial.website ?? ""}
+          />
         </div>
       </section>
       <section>
         <h2 className="mb-2 text-xl font-bold">3. 活動スポット</h2>
-        <p className="mb-5 text-sm text-sub">このコミュニティが活動しているスポットを選んでください(複数可)。選んだスポットのページに表示されます。</p>
+        <p className="mb-5 text-sm text-sub">
+          このコミュニティが活動しているスポットを選んでください(複数可)。選んだスポットのページに表示されます。
+        </p>
         <div className="space-y-5">
           {prefectures.map((prefecture) => (
             <div key={prefecture}>
               <p className="mb-2 text-sm font-bold text-sub">{prefecture}</p>
               <div className="flex flex-wrap gap-2">
-                {spotOptions.filter((spot) => spot.prefecture === prefecture).map((spot) => (
-                  <label key={spot.id} className="cursor-pointer">
-                    <input type="checkbox" name="spotIds" value={spot.id} defaultChecked={initial.spotIds?.includes(spot.id)} className="peer sr-only" />
-                    <span className="inline-flex rounded-full bg-cream px-3 py-2 text-sm peer-checked:bg-brand">{spot.name}</span>
-                  </label>
-                ))}
+                {spotOptions
+                  .filter((spot) => spot.prefecture === prefecture)
+                  .map((spot) => (
+                    <label key={spot.id} className="cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="spotIds"
+                        value={spot.id}
+                        defaultChecked={initial.spotIds?.includes(spot.id)}
+                        className="peer sr-only"
+                      />
+                      <span className="inline-flex rounded-full bg-cream px-3 py-2 text-sm peer-checked:bg-brand">
+                        {spot.name}
+                      </span>
+                    </label>
+                  ))}
               </div>
             </div>
           ))}
         </div>
       </section>
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-        <label className="flex items-center gap-2 font-bold"><input type="checkbox" name="isPublished" defaultChecked={initial.isPublished ?? true} className="size-5 accent-brand" />公開する</label>
-        <button disabled={pending} className="min-w-40 rounded-lg bg-brand px-7 py-3 font-bold hover:bg-brand-dark disabled:opacity-50">{pending ? "保存中…" : mode === "edit" ? "変更を保存" : "コミュニティを登録"}</button>
+        <label className="flex items-center gap-2 font-bold">
+          <input
+            type="checkbox"
+            name="isPublished"
+            defaultChecked={initial.isPublished ?? true}
+            className="size-5 accent-brand"
+          />
+          公開する
+        </label>
+        <button
+          disabled={pending}
+          className="min-w-40 rounded-lg bg-brand px-7 py-3 font-bold hover:bg-brand-dark disabled:opacity-50"
+        >
+          {pending ? "保存中…" : mode === "edit" ? "変更を保存" : "コミュニティを登録"}
+        </button>
       </div>
     </form>
   );
 }
 
-function Field({ label, error, ...props }: React.InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }) {
-  return <label className="text-sm font-bold">{label}<input {...props} className={fieldClass} />{error && <span className="mt-1 block text-xs text-danger">{error}</span>}</label>;
+function Field({
+  label,
+  error,
+  ...props
+}: React.InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }) {
+  return (
+    <label className="text-sm font-bold">
+      {label}
+      <input {...props} className={fieldClass} />
+      {error && <span className="mt-1 block text-xs text-danger">{error}</span>}
+    </label>
+  );
 }

@@ -25,7 +25,7 @@ export async function verifyTurnstileToken({
   try {
     const response = await fetch(SITEVERIFY_URL, { method: "POST", body, signal: AbortSignal.timeout(5_000) });
     if (!response.ok) return false;
-    const result = await response.json() as TurnstileResponse;
+    const result = (await response.json()) as TurnstileResponse;
     if (!result.success) return false;
     if (expectedAction && result.action !== expectedAction) return false;
     if (allowedHostnames?.length && (!result.hostname || !allowedHostnames.includes(result.hostname))) return false;

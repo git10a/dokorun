@@ -75,7 +75,21 @@ async function renderAll(browser: Browser, targets: Target[]) {
 
   for (const target of targets) {
     await page.evaluate(
-      ({ data, padding, name, meta, dist, chara }: { data: LineString; padding: typeof FIT_PADDING; name: string; meta: string; dist: string; chara: string }) => {
+      ({
+        data,
+        padding,
+        name,
+        meta,
+        dist,
+        chara,
+      }: {
+        data: LineString;
+        padding: typeof FIT_PADDING;
+        name: string;
+        meta: string;
+        dist: string;
+        chara: string;
+      }) => {
         const nameEl = document.getElementById("name")!;
         nameEl.textContent = name;
         // 長い名前は省略記号で切らず、フォントを段階的に縮めて収める
@@ -88,7 +102,13 @@ async function renderAll(browser: Browser, targets: Target[]) {
         if (map.getLayer("course")) map.removeLayer("course");
         if (map.getSource("course")) map.removeSource("course");
         map.addSource("course", { type: "geojson", data });
-        map.addLayer({ id: "course", type: "line", source: "course", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#1A1A1A", "line-width": 6, "line-opacity": 0.85 } });
+        map.addLayer({
+          id: "course",
+          type: "line",
+          source: "course",
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": "#1A1A1A", "line-width": 6, "line-opacity": 0.85 },
+        });
         const bounds = new w.maplibregl.LngLatBounds();
         data.coordinates.forEach((coordinate) => bounds.extend(coordinate));
         // fitBoundsはアニメーション経由で初回にズレることがあるため、カメラを直接確定させる
@@ -147,4 +167,7 @@ async function main() {
   process.exit(0);
 }
 
-main().catch((error) => { console.error(error); process.exit(1); });
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

@@ -3,8 +3,14 @@ export const courseTypes = ["loop", "out_and_back", "one_way", "track"] as const
 export const surfaces = ["asphalt", "dirt", "track", "trail", "mixed"] as const;
 export const lightings = ["bright", "partial", "dark"] as const;
 export const facilityKeys = [
-  "hasToilet", "hasWaterFountain", "hasVendingMachine", "hasLocker",
-  "hasShower", "hasSentoNearby", "hasParking", "hasConvenienceStore",
+  "hasToilet",
+  "hasWaterFountain",
+  "hasVendingMachine",
+  "hasLocker",
+  "hasShower",
+  "hasSentoNearby",
+  "hasParking",
+  "hasConvenienceStore",
 ] as const;
 
 export type CourseType = (typeof courseTypes)[number];

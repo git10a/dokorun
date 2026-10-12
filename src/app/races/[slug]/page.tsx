@@ -48,7 +48,10 @@ export default async function RacePage({ params }: { params: Params }) {
   const { slug } = await params;
   const race = raceBySlug.get(slug);
   if (!race) notFound();
-  const [summaries, initialReviews] = await Promise.all([getSpots(race.spots.map((item) => item.slug)), getRaceReviews(slug)]);
+  const [summaries, initialReviews] = await Promise.all([
+    getSpots(race.spots.map((item) => item.slug)),
+    getRaceReviews(slug),
+  ]);
   const summaryBySlug = new Map(summaries.map((spot) => [spot.slug, spot]));
   // 非公開化などでDBから消えたスポットは黙って落とし、定義順を保って表示する
   const spotItems = race.spots.flatMap((item) => {
@@ -64,48 +67,165 @@ export default async function RacePage({ params }: { params: Params }) {
   const start = courseMeta?.start;
   const finish = courseMeta?.finish;
   const finishDiffers = Boolean(start && finish && Math.hypot(start[0] - finish[0], start[1] - finish[1]) > 0.003);
-  const raceDayLinks = start ? [
-    { kind: "start", label: finishDiffers ? "スタート地点" : "発着点", href: `https://www.google.com/maps/search/?api=1&query=${start[0]},${start[1]}` },
-    ...(finishDiffers && finish ? [{ kind: "finish", label: "ゴール地点", href: `https://www.google.com/maps/search/?api=1&query=${finish[0]},${finish[1]}` }] : []),
-  ] : [];
+  const raceDayLinks = start
+    ? [
+        {
+          kind: "start",
+          label: finishDiffers ? "スタート地点" : "発着点",
+          href: `https://www.google.com/maps/search/?api=1&query=${start[0]},${start[1]}`,
+        },
+        ...(finishDiffers && finish
+          ? [
+              {
+                kind: "finish",
+                label: "ゴール地点",
+                href: `https://www.google.com/maps/search/?api=1&query=${finish[0]},${finish[1]}`,
+              },
+            ]
+          : []),
+      ]
+    : [];
   const title = racePageTitle(race);
   const structuredData = [
-    breadcrumbJsonLd([{ name: "ホーム", path: "/" }, { name: "大会からさがす", path: "/races" }, { name: title, path: `/races/${slug}` }]),
-    ...(spotItems.length ? [spotItemListJsonLd(`${race.name}の近くの有名ランニングスポット`, spotItems.map((item) => item.spot))] : []),
+    breadcrumbJsonLd([
+      { name: "ホーム", path: "/" },
+      { name: "大会からさがす", path: "/races" },
+      { name: title, path: `/races/${slug}` },
+    ]),
+    ...(spotItems.length
+      ? [
+          spotItemListJsonLd(
+            `${race.name}の近くの有名ランニングスポット`,
+            spotItems.map((item) => item.spot),
+          ),
+        ]
+      : []),
   ];
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <JsonLd data={structuredData} />
       <TrackView name="race_view" meta={{ race: slug }} />
-      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす", href: "/races" }, { name: race.name }]} />
+      <Breadcrumb
+        items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす", href: "/races" }, { name: race.name }]}
+      />
       <h1 className="text-2xl font-bold sm:text-3xl">{race.name}のコースマップ</h1>
-      <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm"><CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" /><span className="font-bold">{race.timing}</span>{dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}</p>
-      {getPublishedStories(slug).map((story) => <RaceStoryCard key={story.slug} story={story} />)}
-      {process.env.NODE_ENV === "development" && raceStories.filter((story) => story.raceSlug === slug && story.isSample).map((story) => <RaceStoryCard key={story.slug} story={story} preview />)}
-      <RaceExperience slug={slug} name={race.name} distanceLabel={race.distanceLabel} maxKm={raceDistanceKm(race)} hasCourse={Boolean(courseMeta)} initialReviews={initialReviews}
-        mapOverlay={courseMeta && <MemberGpxLink href={`/race-gpx/${slug}.gpx`} callbackURL={`/races/${slug}`} fileName={`${slug}.gpx`} slug={slug} meta={{ source: "race", courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified" }} className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"><Download size={16} />コースをダウンロード</MemberGpxLink>}
-        courseNote={courseMeta ? <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
-          <p>{courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図をもとに独自作成"}・約{(courseMeta.distanceM / 1000).toFixed(1)}km・{courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}{courseMeta.checkedAt ? `（${courseMeta.checkedAt}確認）` : ""}。主催者が配布するコースデータではありません。正式な距離・経路は<a href={courseMeta.sourceUrl ?? race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式情報</a>で。ダウンロードは無料（ログインが必要）。</p>
-          <p className="flex flex-wrap gap-x-4 gap-y-1">
-            {raceDayLinks.map((item) => <TrackedLink key={item.kind} event="race_day_link" meta={{ race: slug, kind: item.kind }} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-accent hover:underline"><MapPin size={13} />{item.label}をGoogleマップで見る</TrackedLink>)}
-            <Link href="/guide/gpx" className="font-bold text-accent hover:underline">ウォッチへの取り込み方</Link>
-          </p>
-        </div> : <p className="rounded-xl bg-cream p-6 text-sm">コースデータは準備中です。最新のコースは<a href={race.officialUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline underline-offset-2">公式サイト</a>でご確認ください。</p>} />
-      {spotItems.length > 0 && <section id="nearby" className="mt-12 scroll-mt-24">
-      <SectionHeading>近くの有名ランニングスポット</SectionHeading>
-      <div className="mt-5 grid snap-x snap-proximity auto-cols-[280px] grid-flow-col gap-5 overflow-x-auto p-1 pb-3 lg:grid-flow-row lg:grid-cols-3">
-        {spotItems.map((item) => <SpotCard key={item.spot.slug} spot={item.spot} compact />)}
-      </div>
-      </section>}
+      <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+        <CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" />
+        <span className="font-bold">{race.timing}</span>
+        {dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}
+      </p>
+      {getPublishedStories(slug).map((story) => (
+        <RaceStoryCard key={story.slug} story={story} />
+      ))}
+      {process.env.NODE_ENV === "development" &&
+        raceStories
+          .filter((story) => story.raceSlug === slug && story.isSample)
+          .map((story) => <RaceStoryCard key={story.slug} story={story} preview />)}
+      <RaceExperience
+        slug={slug}
+        name={race.name}
+        distanceLabel={race.distanceLabel}
+        maxKm={raceDistanceKm(race)}
+        hasCourse={Boolean(courseMeta)}
+        initialReviews={initialReviews}
+        mapOverlay={
+          courseMeta && (
+            <MemberGpxLink
+              href={`/race-gpx/${slug}.gpx`}
+              callbackURL={`/races/${slug}`}
+              fileName={`${slug}.gpx`}
+              slug={slug}
+              meta={{
+                source: "race",
+                courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified",
+              }}
+              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"
+            >
+              <Download size={16} />
+              コースをダウンロード
+            </MemberGpxLink>
+          )
+        }
+        courseNote={
+          courseMeta ? (
+            <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
+              <p>
+                {courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図をもとに独自作成"}・約
+                {(courseMeta.distanceM / 1000).toFixed(1)}km・
+                {courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}
+                {courseMeta.checkedAt ? `（${courseMeta.checkedAt}確認）` : ""}
+                。主催者が配布するコースデータではありません。正式な距離・経路は
+                <a
+                  href={courseMeta.sourceUrl ?? race.officialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-accent underline underline-offset-2"
+                >
+                  公式情報
+                </a>
+                で。ダウンロードは無料（ログインが必要）。
+              </p>
+              <p className="flex flex-wrap gap-x-4 gap-y-1">
+                {raceDayLinks.map((item) => (
+                  <TrackedLink
+                    key={item.kind}
+                    event="race_day_link"
+                    meta={{ race: slug, kind: item.kind }}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-bold text-accent hover:underline"
+                  >
+                    <MapPin size={13} />
+                    {item.label}をGoogleマップで見る
+                  </TrackedLink>
+                ))}
+                <Link href="/guide/gpx" className="font-bold text-accent hover:underline">
+                  ウォッチへの取り込み方
+                </Link>
+              </p>
+            </div>
+          ) : (
+            <p className="rounded-xl bg-cream p-6 text-sm">
+              コースデータは準備中です。最新のコースは
+              <a
+                href={race.officialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-accent underline underline-offset-2"
+              >
+                公式サイト
+              </a>
+              でご確認ください。
+            </p>
+          )
+        }
+      />
+      {spotItems.length > 0 && (
+        <section id="nearby" className="mt-12 scroll-mt-24">
+          <SectionHeading>近くの有名ランニングスポット</SectionHeading>
+          <div className="mt-5 grid snap-x snap-proximity auto-cols-[280px] grid-flow-col gap-5 overflow-x-auto p-1 pb-3 lg:grid-flow-row lg:grid-cols-3">
+            {spotItems.map((item) => (
+              <SpotCard key={item.spot.slug} spot={item.spot} compact />
+            ))}
+          </div>
+        </section>
+      )}
       <section className="mt-14">
         <SectionHeading className="mb-4">ほかの大会</SectionHeading>
         <div className="flex flex-wrap gap-2.5">
           {otherRaces.map((item) => (
-            <Link key={item.slug} href={`/races/${item.slug}`} className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">
+            <Link
+              key={item.slug}
+              href={`/races/${item.slug}`}
+              className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream"
+            >
               {item.name}
             </Link>
           ))}
-          <Link href="/races" className="px-2 py-2 text-sm font-bold text-accent hover:underline">すべての大会 →</Link>
+          <Link href="/races" className="px-2 py-2 text-sm font-bold text-accent hover:underline">
+            すべての大会 →
+          </Link>
         </div>
       </section>
     </div>

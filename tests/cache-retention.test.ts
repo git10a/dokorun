@@ -7,7 +7,11 @@ const select = selectRetiredBuilds as (objects: unknown[], activeBuildIds: strin
 
 const now = Date.parse("2026-09-08T00:00:00Z");
 const id = (n: number) => `build${String(n).padStart(16, "0")}`;
-const object = (n: number, ageDays: number) => ({ key: `incremental-cache/${id(n)}/${"a".repeat(64)}.cache`, last_modified: new Date(now - ageDays * 86400000).toISOString(), size: 100 });
+const object = (n: number, ageDays: number) => ({
+  key: `incremental-cache/${id(n)}/${"a".repeat(64)}.cache`,
+  last_modified: new Date(now - ageDays * 86400000).toISOString(),
+  size: 100,
+});
 
 describe("R2 incremental cache retention", () => {
   it("protects an old active build and the newest three rollback candidates", () => {

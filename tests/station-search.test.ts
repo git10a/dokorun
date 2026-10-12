@@ -18,10 +18,16 @@ describe("station search", () => {
 
   it("multiple lines at one station are averaged", () => {
     const result = summarizeStationRecords([record(), record({ line: "東急東横線", x: 139.703, y: 35.657 })]);
-    expect(result).toEqual({ status: "found", station: { name: "渋谷", prefecture: "東京都", lat: 35.658, lng: 139.702 } });
+    expect(result).toEqual({
+      status: "found",
+      station: { name: "渋谷", prefecture: "東京都", lat: 35.658, lng: 139.702 },
+    });
   });
 
   it("same-name stations in different prefectures ask for clarification", () => {
-    expect(summarizeStationRecords([record(), record({ prefecture: "静岡県" })])).toEqual({ status: "ambiguous", prefectures: ["東京都", "静岡県"] });
+    expect(summarizeStationRecords([record(), record({ prefecture: "静岡県" })])).toEqual({
+      status: "ambiguous",
+      prefectures: ["東京都", "静岡県"],
+    });
   });
 });

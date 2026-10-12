@@ -85,10 +85,19 @@ type NearbyDestinationResearch = {
 };
 
 const destinationsBySpot = new Map(
-  ([...batch01, ...batch02, ...batch03, ...batch05Partial, ...batch06Partial, ...batch09Partial, ...batch10, ...batch11, ...batch12] as NearbyDestinationResearch[]).map((entry) => [
-    entry.spotSlug,
-    [...entry.places].sort((a, b) => a.rank - b.rank),
-  ]),
+  (
+    [
+      ...batch01,
+      ...batch02,
+      ...batch03,
+      ...batch05Partial,
+      ...batch06Partial,
+      ...batch09Partial,
+      ...batch10,
+      ...batch11,
+      ...batch12,
+    ] as NearbyDestinationResearch[]
+  ).map((entry) => [entry.spotSlug, [...entry.places].sort((a, b) => a.rank - b.rank)]),
 );
 
 export type NearbyDestinationSearchItem = NearbyDestination & { spotSlug: string };
@@ -96,15 +105,17 @@ export type NearbyDestinationSearchItem = NearbyDestination & { spotSlug: string
 const ratingPlatformRank = ["食べログ", "Tabelog", "Google Maps"];
 
 export function getPrimaryNearbyDestinationRating(destination: NearbyDestination) {
-  return [...(destination.ratings ?? [])]
-    ?.filter((rating) => Number.isFinite(rating.rating) && Number.isFinite(rating.reviewCount) && Boolean(rating.url))
-    .sort((a, b) => {
-      const rank = (platform: string) => {
-        const index = ratingPlatformRank.indexOf(platform);
-        return index === -1 ? ratingPlatformRank.length : index;
-      };
-      return rank(a.platform) - rank(b.platform) || b.reviewCount - a.reviewCount;
-    })[0] ?? null;
+  return (
+    [...(destination.ratings ?? [])]
+      ?.filter((rating) => Number.isFinite(rating.rating) && Number.isFinite(rating.reviewCount) && Boolean(rating.url))
+      .sort((a, b) => {
+        const rank = (platform: string) => {
+          const index = ratingPlatformRank.indexOf(platform);
+          return index === -1 ? ratingPlatformRank.length : index;
+        };
+        return rank(a.platform) - rank(b.platform) || b.reviewCount - a.reviewCount;
+      })[0] ?? null
+  );
 }
 
 export function ratingPlatformLabel(platform: string) {

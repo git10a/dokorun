@@ -21,7 +21,9 @@ describe("article publication boundaries", () => {
   it("requires both publication and a date for a real article", () => {
     expect(isPublishedStory({ ...raceStories[0], isSample: false })).toBe(false);
     expect(isPublishedStory({ ...raceStories[0], isSample: false, status: "published" })).toBe(false);
-    expect(isPublishedStory({ ...raceStories[0], isSample: false, status: "published", publishedAt: "2026-10-12" })).toBe(true);
+    expect(
+      isPublishedStory({ ...raceStories[0], isSample: false, status: "published", publishedAt: "2026-10-12" }),
+    ).toBe(true);
   });
   it("blocks every production preview", async () => {
     vi.stubEnv("NODE_ENV", "production");
@@ -39,12 +41,22 @@ describe("article publication boundaries", () => {
       expect(html).toContain(`href="#${id}"`);
       expect(html).toContain(`id="${id}"`);
     }
-    expect(html).toContain('/races/yokohama-marathon#pace');
-    expect(html).toContain('/races/yokohama-marathon#course-map');
+    expect(html).toContain("/races/yokohama-marathon#pace");
+    expect(html).toContain("/races/yokohama-marathon#course-map");
     expect(html).not.toMatch(/<blockquote|checkout|buy\.stripe|購入する|blur-/);
   });
   it("escapes future interview text rather than executing embedded HTML", () => {
-    const story = { ...raceStories[0], sections: [{ id: "safe", title: "Test", paragraphs: ['<script>alert(1)</script>'], quote: { text: '<img src=x onerror=alert(1)>', speaker: "取材先" } }] };
+    const story = {
+      ...raceStories[0],
+      sections: [
+        {
+          id: "safe",
+          title: "Test",
+          paragraphs: ["<script>alert(1)</script>"],
+          quote: { text: "<img src=x onerror=alert(1)>", speaker: "取材先" },
+        },
+      ],
+    };
     const html = renderToStaticMarkup(createElement(RaceStoryArticle, { story }));
     expect(html).toContain("&lt;script&gt;");
     expect(html).not.toContain("<script>");

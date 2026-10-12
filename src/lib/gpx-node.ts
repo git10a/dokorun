@@ -29,12 +29,16 @@ export function parseGpxPoints(xml: string): GpxPoint[] {
   const gpxNode = gpx as XmlNode;
   const trackPoints = asArray(gpxNode.trk).flatMap((track) =>
     track && typeof track === "object" && !Array.isArray(track)
-      ? asArray((track as XmlNode).trkseg).flatMap((segment) => segment && typeof segment === "object" && !Array.isArray(segment) ? asArray((segment as XmlNode).trkpt) : [])
+      ? asArray((track as XmlNode).trkseg).flatMap((segment) =>
+          segment && typeof segment === "object" && !Array.isArray(segment) ? asArray((segment as XmlNode).trkpt) : [],
+        )
       : [],
   );
-  const routePoints = asArray(gpxNode.rte).flatMap((route) => route && typeof route === "object" && !Array.isArray(route) ? asArray((route as XmlNode).rtept) : []);
+  const routePoints = asArray(gpxNode.rte).flatMap((route) =>
+    route && typeof route === "object" && !Array.isArray(route) ? asArray((route as XmlNode).rtept) : [],
+  );
   const points = (trackPoints.length ? trackPoints : routePoints)
-    .map((point) => point && typeof point === "object" && !Array.isArray(point) ? readPoint(point as XmlNode) : null)
+    .map((point) => (point && typeof point === "object" && !Array.isArray(point) ? readPoint(point as XmlNode) : null))
     .filter((point): point is GpxPoint => Boolean(point));
   if (points.length < 2) throw new Error("GPXファイルを解析できませんでした");
   return points;

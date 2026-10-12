@@ -17,61 +17,53 @@
     "logs": {
       "enabled": true,
       "head_sampling_rate": 1,
-      "invocation_logs": false
+      "invocation_logs": false,
     },
     "traces": {
       "enabled": false,
-      "head_sampling_rate": 0.05
-    }
+      "head_sampling_rate": 0.05,
+    },
   },
   "assets": {
     "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
   },
   // OpenNextの再検証Queueが同じWorkerを呼び戻すためのself service binding。
-  "services": [
-    { "binding": "WORKER_SELF_REFERENCE", "service": "dokorun" }
-  ],
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "dokorun" }],
   "durable_objects": {
-    "bindings": [
-      { "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }
-    ]
+    "bindings": [{ "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }],
   },
   // DO追加版より前へはrollbackできないため、この版ではまだキャッシュ挙動を変えない。
-  "migrations": [
-    { "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }
-  ],
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }],
   // ISR/SSGのincremental cache受け皿。無料プランのKV write上限(1,000/日)に注意
-  "kv_namespaces": [
-    { "binding": "NEXT_INC_CACHE_KV", "id": "e7e2706b6b1e414bada5fcfbf4497866" }
-  ],
+  "kv_namespaces": [{ "binding": "NEXT_INC_CACHE_KV", "id": "e7e2706b6b1e414bada5fcfbf4497866" }],
   // 本体DB(Neonから移行。無料枠: 読み500万行/日・書き10万行/日)
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "dokorun-db",
-      "database_id": "cafb425e-efb9-4911-9f43-e7abf9a9beb1"
+      "database_id": "cafb425e-efb9-4911-9f43-e7abf9a9beb1",
     },
     {
       "binding": "NEXT_TAG_CACHE_D1",
       "database_name": "dokorun-opennext-tag-cache",
-      "database_id": "776af469-b8bf-4a75-a1a6-601859fae4d8"
-    }
+      "database_id": "776af469-b8bf-4a75-a1a6-601859fae4d8",
+    },
   ],
   "r2_buckets": [
     { "binding": "PRIVATE_IMAGE_BUCKET", "bucket_name": "dokorun-private-images" },
     {
       "binding": "IMAGE_BUCKET",
-      "bucket_name": "dokorun-images"
+      "bucket_name": "dokorun-images",
     },
     {
       "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "dokorun-opennext-cache"
-    }
+      "bucket_name": "dokorun-opennext-cache",
+    },
   ],
   "routes": [
     { "pattern": "dokorun.com", "custom_domain": true },
-    { "pattern": "www.dokorun.com", "custom_domain": true }
+    { "pattern": "www.dokorun.com", "custom_domain": true },
   ],
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://dokorun.com",
@@ -87,8 +79,8 @@
     // 手動方式に切り替える場合のみ、ダッシュボードでRUMを
     // 「Enable with JS Snippet installation」に変更してからトークンを貼る。
     "CF_BEACON_TOKEN": "",
-    "R2_PUBLIC_URL": "https://pub-c598f7bd37324d98a1771a87633f82d0.r2.dev"
-  }
+    "R2_PUBLIC_URL": "https://pub-c598f7bd37324d98a1771a87633f82d0.r2.dev",
+  },
   // DATABASE_URL / ADMIN_PASSWORD / SESSION_SECRET / BETTER_AUTH_SECRET /
   // GOOGLE_CLIENT_SECRET / TURNSTILE_SECRET_KEY は `wrangler secret put <NAME>` で設定する
 }

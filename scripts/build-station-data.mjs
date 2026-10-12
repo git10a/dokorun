@@ -16,19 +16,103 @@ const STATION_RADIUS_M = 2_000;
 const MAX_HOPS = 3;
 
 const PREFECTURES = [
-  "北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
-  "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県",
-  "岐阜県", "静岡県", "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県",
-  "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県",
-  "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県",
+  "北海道",
+  "青森県",
+  "岩手県",
+  "宮城県",
+  "秋田県",
+  "山形県",
+  "福島県",
+  "茨城県",
+  "栃木県",
+  "群馬県",
+  "埼玉県",
+  "千葉県",
+  "東京都",
+  "神奈川県",
+  "新潟県",
+  "富山県",
+  "石川県",
+  "福井県",
+  "山梨県",
+  "長野県",
+  "岐阜県",
+  "静岡県",
+  "愛知県",
+  "三重県",
+  "滋賀県",
+  "京都府",
+  "大阪府",
+  "兵庫県",
+  "奈良県",
+  "和歌山県",
+  "鳥取県",
+  "島根県",
+  "岡山県",
+  "広島県",
+  "山口県",
+  "徳島県",
+  "香川県",
+  "愛媛県",
+  "高知県",
+  "福岡県",
+  "佐賀県",
+  "長崎県",
+  "熊本県",
+  "大分県",
+  "宮崎県",
+  "鹿児島県",
+  "沖縄県",
 ];
 
 const PREFECTURE_ROMAJI = [
-  "hokkaido", "aomori", "iwate", "miyagi", "akita", "yamagata", "fukushima", "ibaraki", "tochigi", "gunma",
-  "saitama", "chiba", "tokyo", "kanagawa", "niigata", "toyama", "ishikawa", "fukui", "yamanashi", "nagano",
-  "gifu", "shizuoka", "aichi", "mie", "shiga", "kyoto", "osaka", "hyogo", "nara", "wakayama",
-  "tottori", "shimane", "okayama", "hiroshima", "yamaguchi", "tokushima", "kagawa", "ehime", "kochi", "fukuoka",
-  "saga", "nagasaki", "kumamoto", "oita", "miyazaki", "kagoshima", "okinawa",
+  "hokkaido",
+  "aomori",
+  "iwate",
+  "miyagi",
+  "akita",
+  "yamagata",
+  "fukushima",
+  "ibaraki",
+  "tochigi",
+  "gunma",
+  "saitama",
+  "chiba",
+  "tokyo",
+  "kanagawa",
+  "niigata",
+  "toyama",
+  "ishikawa",
+  "fukui",
+  "yamanashi",
+  "nagano",
+  "gifu",
+  "shizuoka",
+  "aichi",
+  "mie",
+  "shiga",
+  "kyoto",
+  "osaka",
+  "hyogo",
+  "nara",
+  "wakayama",
+  "tottori",
+  "shimane",
+  "okayama",
+  "hiroshima",
+  "yamaguchi",
+  "tokushima",
+  "kagawa",
+  "ehime",
+  "kochi",
+  "fukuoka",
+  "saga",
+  "nagasaki",
+  "kumamoto",
+  "oita",
+  "miyazaki",
+  "kagoshima",
+  "okinawa",
 ];
 
 function parseCsv(text) {
@@ -67,7 +151,9 @@ function parseCsv(text) {
   }
   const [headers, ...values] = rows;
   if (!headers) return [];
-  return values.map((valuesRow) => Object.fromEntries(headers.map((header, index) => [header.replace(/^\uFEFF/, ""), valuesRow[index] ?? ""])));
+  return values.map((valuesRow) =>
+    Object.fromEntries(headers.map((header, index) => [header.replace(/^\uFEFF/, ""), valuesRow[index] ?? ""])),
+  );
 }
 
 function prefectureFor(row, postalPrefectures) {
@@ -137,7 +223,8 @@ function bfs(graph, from) {
   for (let cursor = 0; cursor < queue.length; cursor += 1) {
     const current = queue[cursor];
     const previous = routes.get(current.groupCode);
-    if (!previous || current.hops < previous.hops) routes.set(current.groupCode, { hops: current.hops, lines: [current.lineName] });
+    if (!previous || current.hops < previous.hops)
+      routes.set(current.groupCode, { hops: current.hops, lines: [current.lineName] });
     if (current.hops >= MAX_HOPS) continue;
     for (const edge of graph.get(current.groupCode) ?? []) {
       if (edge.lineName !== current.lineName) continue;
@@ -159,14 +246,18 @@ async function main() {
     readFile(path.join(INPUT_DIR, "join.csv"), "utf8"),
   ]);
   const postalPrefecturePath = path.join(INPUT_DIR, "postal-prefectures.json");
-  const postalPrefectures = await fileExists(postalPrefecturePath)
+  const postalPrefectures = (await fileExists(postalPrefecturePath))
     ? JSON.parse(await readFile(postalPrefecturePath, "utf8"))
     : {};
-  const stationRows = parseCsv(stationCsv).filter((row) => Number(row.e_status || 0) === 0 && Number.isFinite(Number(row.lat)) && Number.isFinite(Number(row.lon)));
+  const stationRows = parseCsv(stationCsv).filter(
+    (row) => Number(row.e_status || 0) === 0 && Number.isFinite(Number(row.lat)) && Number.isFinite(Number(row.lon)),
+  );
   const lineRows = parseCsv(lineCsv).filter((row) => Number(row.e_status || 0) !== 2);
   const joinRows = parseCsv(joinCsv);
   const lineNames = new Map(lineRows.map((row) => [String(row.line_cd), row.line_name]));
-  const stationCodeToGroup = new Map(stationRows.map((row) => [String(row.station_cd), String(row.station_g_cd || row.station_cd)]));
+  const stationCodeToGroup = new Map(
+    stationRows.map((row) => [String(row.station_cd), String(row.station_g_cd || row.station_cd)]),
+  );
   const groups = new Map();
 
   for (const row of stationRows) {
@@ -195,7 +286,9 @@ async function main() {
     addEdge(to, from, lineName);
   }
 
-  const needsReading = [...groups.values()].some((group) => !group.rows.some((row) => row.station_name_k || row.station_name_r));
+  const needsReading = [...groups.values()].some(
+    (group) => !group.rows.some((row) => row.station_name_k || row.station_name_r),
+  );
   let kuroshiro = null;
   if (needsReading) {
     kuroshiro = new Kuroshiro();
@@ -248,7 +341,8 @@ async function main() {
     group.nearbySpots = [];
     for (const spot of spots) {
       const distanceM = haversineM(group.lat, group.lng, Number(spot.lat), Number(spot.lng));
-      if (distanceM <= STATION_RADIUS_M) group.nearbySpots.push({ slug: spot.slug, distanceM, walkMinutes: Math.ceil(distanceM / 80) });
+      if (distanceM <= STATION_RADIUS_M)
+        group.nearbySpots.push({ slug: spot.slug, distanceM, walkMinutes: Math.ceil(distanceM / 80) });
     }
     group.nearbySpots.sort((a, b) => a.distanceM - b.distanceM || a.slug.localeCompare(b.slug));
   }
@@ -269,43 +363,62 @@ async function main() {
           walkMinutes: nearby.walkMinutes,
         };
         const previous = candidates.get(nearby.slug);
-        if (!previous || candidate.stationCount < previous.stationCount || (candidate.stationCount === previous.stationCount && candidate.walkMinutes < previous.walkMinutes)) {
+        if (
+          !previous ||
+          candidate.stationCount < previous.stationCount ||
+          (candidate.stationCount === previous.stationCount && candidate.walkMinutes < previous.walkMinutes)
+        ) {
           candidates.set(nearby.slug, candidate);
         }
       }
     }
-    group.oneStationSpots = [...candidates.values()].sort((a, b) => a.stationCount - b.stationCount || a.walkMinutes - b.walkMinutes || a.slug.localeCompare(b.slug));
+    group.oneStationSpots = [...candidates.values()].sort(
+      (a, b) => a.stationCount - b.stationCount || a.walkMinutes - b.walkMinutes || a.slug.localeCompare(b.slug),
+    );
   }
 
-  const pageGroups = [...groups.values()].filter((group) => group.nearbySpots.length >= 1 || group.oneStationSpots.length >= 2);
+  const pageGroups = [...groups.values()].filter(
+    (group) => group.nearbySpots.length >= 1 || group.oneStationSpots.length >= 2,
+  );
   const pageCodes = new Set(pageGroups.map((group) => group.groupCode));
-  const stations = pageGroups.map((group) => ({
-    slug: group.slug,
-    name: group.name,
-    kana: group.kana,
-    prefecture: group.prefecture,
-    lat: Number(group.lat.toFixed(6)),
-    lng: Number(group.lng.toFixed(6)),
-    lineNames: [...group.lineNames].sort(),
-    lines: group.rows
-      .map((row) => ({ slug: String(row.line_cd), name: lineNames.get(String(row.line_cd)) }))
-      .filter((line) => line.name)
-      .filter((line, index, items) => items.findIndex((candidate) => candidate.slug === line.slug) === index)
-      .sort((a, b) => a.name.localeCompare(b.name, "ja")),
-    nearbySpots: group.nearbySpots,
-    oneStationSpots: group.oneStationSpots,
-    adjacentStations: (graph.get(group.groupCode) ?? [])
-      .filter((edge) => pageCodes.has(edge.to))
-      .map((edge) => ({ slug: groups.get(edge.to).slug, name: groups.get(edge.to).name, lineName: edge.lineName }))
-      .filter((item, index, items) => items.findIndex((candidate) => candidate.slug === item.slug && candidate.lineName === item.lineName) === index)
-      .sort((a, b) => a.lineName.localeCompare(b.lineName, "ja") || a.name.localeCompare(b.name, "ja")),
-  })).sort((a, b) => a.prefecture.localeCompare(b.prefecture, "ja") || a.kana.localeCompare(b.kana, "ja"));
+  const stations = pageGroups
+    .map((group) => ({
+      slug: group.slug,
+      name: group.name,
+      kana: group.kana,
+      prefecture: group.prefecture,
+      lat: Number(group.lat.toFixed(6)),
+      lng: Number(group.lng.toFixed(6)),
+      lineNames: [...group.lineNames].sort(),
+      lines: group.rows
+        .map((row) => ({ slug: String(row.line_cd), name: lineNames.get(String(row.line_cd)) }))
+        .filter((line) => line.name)
+        .filter((line, index, items) => items.findIndex((candidate) => candidate.slug === line.slug) === index)
+        .sort((a, b) => a.name.localeCompare(b.name, "ja")),
+      nearbySpots: group.nearbySpots,
+      oneStationSpots: group.oneStationSpots,
+      adjacentStations: (graph.get(group.groupCode) ?? [])
+        .filter((edge) => pageCodes.has(edge.to))
+        .map((edge) => ({ slug: groups.get(edge.to).slug, name: groups.get(edge.to).name, lineName: edge.lineName }))
+        .filter(
+          (item, index, items) =>
+            items.findIndex((candidate) => candidate.slug === item.slug && candidate.lineName === item.lineName) ===
+            index,
+        )
+        .sort((a, b) => a.lineName.localeCompare(b.lineName, "ja") || a.name.localeCompare(b.name, "ja")),
+    }))
+    .sort((a, b) => a.prefecture.localeCompare(b.prefecture, "ja") || a.kana.localeCompare(b.kana, "ja"));
 
   const spotStations = {};
   for (const station of stations) {
     for (const nearby of station.nearbySpots) {
       const items = spotStations[nearby.slug] ?? [];
-      items.push({ slug: station.slug, name: station.name, distanceM: nearby.distanceM, walkMinutes: nearby.walkMinutes });
+      items.push({
+        slug: station.slug,
+        name: station.name,
+        distanceM: nearby.distanceM,
+        walkMinutes: nearby.walkMinutes,
+      });
       spotStations[nearby.slug] = items;
     }
   }
@@ -326,15 +439,21 @@ async function main() {
           return true;
         });
       const lineStations = orderedGroups.map((group) => ({
-          name: group.name,
-          kana: group.kana,
-          prefecture: group.prefecture,
-          pageSlug: pageCodes.has(group.groupCode) ? group.slug : null,
-          nearbySpots: group.nearbySpots,
-        }));
+        name: group.name,
+        kana: group.kana,
+        prefecture: group.prefecture,
+        pageSlug: pageCodes.has(group.groupCode) ? group.slug : null,
+        nearbySpots: group.nearbySpots,
+      }));
       const firstGroup = orderedGroups[0];
       const lastGroup = orderedGroups.at(-1);
-      const isLoop = Boolean(firstGroup && lastGroup && (graph.get(firstGroup.groupCode) ?? []).some((edge) => edge.to === lastGroup.groupCode && edge.lineName === line.line_name));
+      const isLoop = Boolean(
+        firstGroup &&
+          lastGroup &&
+          (graph.get(firstGroup.groupCode) ?? []).some(
+            (edge) => edge.to === lastGroup.groupCode && edge.lineName === line.line_name,
+          ),
+      );
       return {
         slug: String(line.line_cd),
         name: line.line_name,
@@ -360,7 +479,9 @@ async function main() {
     writeFile(path.join(OUTPUT_DIR, "prefecture-counts.json"), `${JSON.stringify(stationPrefectureCounts, null, 2)}\n`),
     writeFile(path.join(OUTPUT_DIR, "slugs.json"), `${JSON.stringify(slugMap, null, 2)}\n`),
   ]);
-  console.log(`station data ok: ${stations.length} station pages, ${lines.length} line pages, ${spots.length} published spots`);
+  console.log(
+    `station data ok: ${stations.length} station pages, ${lines.length} line pages, ${spots.length} published spots`,
+  );
 }
 
 main().catch((error) => {

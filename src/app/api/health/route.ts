@@ -18,24 +18,32 @@ export async function GET() {
   const version = versionMetadata();
   try {
     await getDb().run(sql`SELECT 1`);
-    return NextResponse.json({
-      ok: true,
-      database: "ok",
-      version: version ? { id: version.id, tag: version.tag } : null,
-      durationMs: Date.now() - startedAt,
-    }, { headers: { "Cache-Control": "no-store" } });
+    return NextResponse.json(
+      {
+        ok: true,
+        database: "ok",
+        version: version ? { id: version.id, tag: version.tag } : null,
+        durationMs: Date.now() - startedAt,
+      },
+      { headers: { "Cache-Control": "no-store" } },
+    );
   } catch (error) {
-    console.error(JSON.stringify({
-      event: "health_check_failed",
-      versionId: version?.id,
-      versionTag: version?.tag,
-      error: error instanceof Error ? { name: error.name, message: error.message } : String(error),
-    }));
-    return NextResponse.json({
-      ok: false,
-      database: "error",
-      version: version ? { id: version.id, tag: version.tag } : null,
-      durationMs: Date.now() - startedAt,
-    }, { status: 503, headers: { "Cache-Control": "no-store" } });
+    console.error(
+      JSON.stringify({
+        event: "health_check_failed",
+        versionId: version?.id,
+        versionTag: version?.tag,
+        error: error instanceof Error ? { name: error.name, message: error.message } : String(error),
+      }),
+    );
+    return NextResponse.json(
+      {
+        ok: false,
+        database: "error",
+        version: version ? { id: version.id, tag: version.tag } : null,
+        durationMs: Date.now() - startedAt,
+      },
+      { status: 503, headers: { "Cache-Control": "no-store" } },
+    );
   }
 }

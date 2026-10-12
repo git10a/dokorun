@@ -9,10 +9,16 @@ if (!path) {
   process.exit(1);
 }
 const result = parseGpx(readFileSync(path, "utf8"));
-console.log(JSON.stringify({
-  distanceKm: Number((result.distanceM / 1000).toFixed(2)),
-  elevationGainM: result.elevationGainM,
-  courseType: result.suggestedCourseType,
-  startPoint: result.startPoint,
-  simplifiedPoints: result.geojson.coordinates.length,
-}, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      distanceKm: Number((result.distanceM / 1000).toFixed(2)),
+      elevationGainM: result.elevationGainM,
+      courseType: result.suggestedCourseType,
+      startPoint: result.startPoint,
+      simplifiedPoints: result.geojson.coordinates.length,
+    },
+    null,
+    2,
+  ),
+);

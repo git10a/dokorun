@@ -45,13 +45,52 @@ const courseFields = [
 ];
 
 const prefectures = [
-  ["hokkaido", 1], ["aomori", 2], ["iwate", 3], ["miyagi", 4], ["akita", 5], ["yamagata", 6], ["fukushima", 7],
-  ["ibaraki", 8], ["tochigi", 9], ["gunma", 10], ["saitama", 11], ["chiba", 12], ["tokyo", 13], ["kanagawa", 14],
-  ["niigata", 15], ["toyama", 16], ["ishikawa", 17], ["fukui", 18], ["yamanashi", 19], ["nagano", 20], ["gifu", 21],
-  ["shizuoka", 22], ["aichi", 23], ["mie", 24], ["shiga", 25], ["kyoto", 26], ["osaka", 27], ["hyogo", 28],
-  ["nara", 29], ["wakayama", 30], ["tottori", 31], ["shimane", 32], ["okayama", 33], ["hiroshima", 34],
-  ["yamaguchi", 35], ["tokushima", 36], ["kagawa", 37], ["ehime", 38], ["kochi", 39], ["fukuoka", 40],
-  ["saga", 41], ["nagasaki", 42], ["kumamoto", 43], ["oita", 44], ["miyazaki", 45], ["kagoshima", 46],
+  ["hokkaido", 1],
+  ["aomori", 2],
+  ["iwate", 3],
+  ["miyagi", 4],
+  ["akita", 5],
+  ["yamagata", 6],
+  ["fukushima", 7],
+  ["ibaraki", 8],
+  ["tochigi", 9],
+  ["gunma", 10],
+  ["saitama", 11],
+  ["chiba", 12],
+  ["tokyo", 13],
+  ["kanagawa", 14],
+  ["niigata", 15],
+  ["toyama", 16],
+  ["ishikawa", 17],
+  ["fukui", 18],
+  ["yamanashi", 19],
+  ["nagano", 20],
+  ["gifu", 21],
+  ["shizuoka", 22],
+  ["aichi", 23],
+  ["mie", 24],
+  ["shiga", 25],
+  ["kyoto", 26],
+  ["osaka", 27],
+  ["hyogo", 28],
+  ["nara", 29],
+  ["wakayama", 30],
+  ["tottori", 31],
+  ["shimane", 32],
+  ["okayama", 33],
+  ["hiroshima", 34],
+  ["yamaguchi", 35],
+  ["tokushima", 36],
+  ["kagawa", 37],
+  ["ehime", 38],
+  ["kochi", 39],
+  ["fukuoka", 40],
+  ["saga", 41],
+  ["nagasaki", 42],
+  ["kumamoto", 43],
+  ["oita", 44],
+  ["miyazaki", 45],
+  ["kagoshima", 46],
   ["okinawa", 47],
 ];
 
@@ -134,7 +173,9 @@ function haversineKm(aLat, aLng, bLat, bLng) {
 }
 
 function markdownCell(value) {
-  return String(value ?? "").replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
+  return String(value ?? "")
+    .replace(/\|/g, "\\|")
+    .replace(/\r?\n/g, " ");
 }
 
 async function fetchHtml(url) {
@@ -145,7 +186,7 @@ async function fetchHtml(url) {
   requestCount += 1;
   const response = await fetch(url, {
     headers: {
-      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
       "accept-language": "ja,en-US;q=0.9,en;q=0.8",
       "user-agent": USER_AGENT,
     },
@@ -170,8 +211,8 @@ function extractCoursesFromHtml(html, url) {
   const nextData = JSON.parse(match[1]);
   const fallback = nextData?.props?.pageProps?.swr?.fallback;
   if (!fallback || typeof fallback !== "object") throw new Error("SWR fallback が見つかりません");
-  const fallbackEntry = Object.entries(fallback).find(([key, value]) =>
-    key.includes("/v1/courses") && value && typeof value === "object" && Array.isArray(value.courses)
+  const fallbackEntry = Object.entries(fallback).find(
+    ([key, value]) => key.includes("/v1/courses") && value && typeof value === "object" && Array.isArray(value.courses),
   );
   if (!fallbackEntry) throw new Error("/v1/courses の fallback が見つかりません");
   const [, payload] = fallbackEntry;
@@ -197,10 +238,16 @@ async function fetchCoursePage(page) {
     if (!courses.length) {
       skippedPages.push({ url: page.url, reason: "コース0件", label: page.label });
     }
-    console.log(`[${requestCount}/${MAX_TOTAL_REQUESTS}] ${page.label}: ${courses.length}件 / total ${parsed.metadata.total ?? "unknown"}`);
+    console.log(
+      `[${requestCount}/${MAX_TOTAL_REQUESTS}] ${page.label}: ${courses.length}件 / total ${parsed.metadata.total ?? "unknown"}`,
+    );
     return { page, metadata: parsed.metadata, courses };
   } catch (error) {
-    skippedPages.push({ url: page.url, reason: error instanceof Error ? error.message : String(error), label: page.label });
+    skippedPages.push({
+      url: page.url,
+      reason: error instanceof Error ? error.message : String(error),
+      label: page.label,
+    });
     console.warn(`[skip] ${page.label}: ${error instanceof Error ? error.message : String(error)}`);
     return { page, metadata: {}, courses: [] };
   }
@@ -232,12 +279,14 @@ async function loadExistingSpots() {
     sql: "select slug, name, lat, lng from spots where is_published = 1 order by slug",
     args: [],
   });
-  return result.rows.map((row) => ({
-    slug: String(row.slug),
-    name: String(row.name),
-    lat: Number(row.lat),
-    lng: Number(row.lng),
-  })).filter((spot) => Number.isFinite(spot.lat) && Number.isFinite(spot.lng));
+  return result.rows
+    .map((row) => ({
+      slug: String(row.slug),
+      name: String(row.name),
+      lat: Number(row.lat),
+      lng: Number(row.lng),
+    }))
+    .filter((spot) => Number.isFinite(spot.lat) && Number.isFinite(spot.lng));
 }
 
 function closestSpot(course, spots) {
@@ -274,12 +323,14 @@ function normalizeCourse(raw, sourcePage, fetchedAt, existingSpots) {
   course.startLatitude = startLatitude;
   course.startLongitude = startLongitude;
   course.runtripUrl = `${BASE_URL}/courses/${id}`;
-  course.sourcePages = [{
-    type: sourcePage.type,
-    label: sourcePage.label,
-    url: sourcePage.url,
-    fetchedAt,
-  }];
+  course.sourcePages = [
+    {
+      type: sourcePage.type,
+      label: sourcePage.label,
+      url: sourcePage.url,
+      fetchedAt,
+    },
+  ];
   course.fetchedAt = fetchedAt;
   const closest = closestSpot(course, existingSpots);
   course.closestExistingSpot = closest;
@@ -346,16 +397,21 @@ function buildMarkdown(courses, summary, generatedAt) {
     const closest = course.closestExistingSpot
       ? `${course.duplicateCandidate ? course.closestExistingSpot.slug : "最寄り"} (${course.closestExistingSpot.distanceKm.toFixed(1)}km)`
       : "";
-    lines.push([
-      index + 1,
-      markdownCell(course.title),
-      markdownCell(area),
-      distanceKm,
-      course.favoriteCount ?? 0,
-      coord,
-      course.runtripUrl,
-      markdownCell(closest),
-    ].join(" | ").replace(/^/, "| ").replace(/$/, " |"));
+    lines.push(
+      [
+        index + 1,
+        markdownCell(course.title),
+        markdownCell(area),
+        distanceKm,
+        course.favoriteCount ?? 0,
+        coord,
+        course.runtripUrl,
+        markdownCell(closest),
+      ]
+        .join(" | ")
+        .replace(/^/, "| ")
+        .replace(/$/, " |"),
+    );
   });
   return `${lines.join("\n")}\n`;
 }
@@ -364,11 +420,13 @@ function assertOutput(courses, summary) {
   const ids = new Set(courses.map((course) => course.id));
   const errors = [];
   if (courses.length < 500) errors.push(`ユニークコースが500件未満です: ${courses.length}`);
-  if (summary.favoriteCountGte10 < 300) errors.push(`favoriteCount >= 10 が300件未満です: ${summary.favoriteCountGte10}`);
+  if (summary.favoriteCountGte10 < 300)
+    errors.push(`favoriteCount >= 10 が300件未満です: ${summary.favoriteCountGte10}`);
   if (ids.size !== courses.length) errors.push("id重複があります");
   const outOfBounds = courses.filter((course) => !inJapanBbox(course.startLatitude, course.startLongitude));
   if (outOfBounds.length) errors.push(`日本bbox外の座標があります: ${outOfBounds.length}件`);
-  if (requestCount > MAX_TOTAL_REQUESTS) errors.push(`総リクエストが${MAX_TOTAL_REQUESTS}を超えました: ${requestCount}`);
+  if (requestCount > MAX_TOTAL_REQUESTS)
+    errors.push(`総リクエストが${MAX_TOTAL_REQUESTS}を超えました: ${requestCount}`);
   if (errors.length) {
     throw new Error(`合格基準未達:\n- ${errors.join("\n- ")}`);
   }
@@ -387,13 +445,15 @@ async function main() {
 
   const prefResults = [];
   for (const [slug, prefecturesId] of prefectures) {
-    prefResults.push(await fetchCoursePage({
-      type: "prefecture",
-      slug,
-      prefecturesId,
-      label: slug,
-      url: `${BASE_URL}/courses/${slug}?sort=1`,
-    }));
+    prefResults.push(
+      await fetchCoursePage({
+        type: "prefecture",
+        slug,
+        prefecturesId,
+        label: slug,
+        url: `${BASE_URL}/courses/${slug}?sort=1`,
+      }),
+    );
   }
 
   const drillPages = buildDrillPages(prefResults);
@@ -421,8 +481,8 @@ async function main() {
     }
   }
 
-  const courses = [...byId.values()].sort((a, b) =>
-    (b.favoriteCount ?? 0) - (a.favoriteCount ?? 0) || String(a.id).localeCompare(String(b.id), "ja")
+  const courses = [...byId.values()].sort(
+    (a, b) => (b.favoriteCount ?? 0) - (a.favoriteCount ?? 0) || String(a.id).localeCompare(String(b.id), "ja"),
   );
   const summary = {
     generatedAt: fetchedAt,

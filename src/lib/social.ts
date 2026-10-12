@@ -40,7 +40,7 @@ export function normalizeStrava(value: string) {
   const stripped = stripUrl(value, ["strava.com"]);
   if (!isStravaUrl && stripped.includes("/")) return null;
   const parts = stripped.split("/").filter(Boolean);
-  const name = parts[0] === "athletes" ? parts[1] ?? "" : parts[0] ?? "";
+  const name = parts[0] === "athletes" ? (parts[1] ?? "") : (parts[0] ?? "");
   return patterns.strava.test(name) ? name : null;
 }
 
@@ -48,7 +48,7 @@ export function normalizeStrava(value: string) {
 export function normalizeStravaClub(value: string) {
   const stripped = stripUrl(value, ["strava.com"]);
   const parts = stripped.split("/").filter(Boolean);
-  const name = parts[0] === "clubs" ? parts[1] ?? "" : parts.length === 1 ? parts[0] : "";
+  const name = parts[0] === "clubs" ? (parts[1] ?? "") : parts.length === 1 ? parts[0] : "";
   return patterns.strava.test(name) ? name : null;
 }
 

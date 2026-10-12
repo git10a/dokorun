@@ -22,7 +22,7 @@ export function MemberGpxLink({ href, callbackURL, slug, children, className, fi
   return (
     <a
       href={loggedIn ? href : loginHref}
-      download={loggedIn ? fileName ?? true : undefined}
+      download={loggedIn ? (fileName ?? true) : undefined}
       aria-disabled={isPending || undefined}
       title={loggedIn ? undefined : "会員登録・ログインするとダウンロードできます"}
       onClick={(event) => {

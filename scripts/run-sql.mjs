@@ -14,7 +14,16 @@ if (!file) {
 
 execFileSync(
   "npx",
-  ["wrangler", "d1", "execute", "dokorun-db", remote ? "--remote" : "--local", "--file", file, ...(remote ? ["-y"] : [])],
+  [
+    "wrangler",
+    "d1",
+    "execute",
+    "dokorun-db",
+    remote ? "--remote" : "--local",
+    "--file",
+    file,
+    ...(remote ? ["-y"] : []),
+  ],
   { stdio: "inherit" },
 );
 console.log(`applied: ${file} (${remote ? "remote" : "local"})`);

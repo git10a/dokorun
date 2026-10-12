@@ -57,23 +57,40 @@ export function NearbyLines({ lines }: { lines: NearbyLineEntry[] }) {
     <section aria-label="近くの路線" className="mt-8 rounded-2xl bg-cream p-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-lg font-bold">近くの路線からさがす</h2>
-        <button type="button" onClick={locate} disabled={locating} className="inline-flex items-center gap-1.5 rounded-full border border-ink/30 bg-paper px-4 py-1.5 text-sm font-bold transition-colors hover:bg-paper/60 disabled:opacity-70">
+        <button
+          type="button"
+          onClick={locate}
+          disabled={locating}
+          className="inline-flex items-center gap-1.5 rounded-full border border-ink/30 bg-paper px-4 py-1.5 text-sm font-bold transition-colors hover:bg-paper/60 disabled:opacity-70"
+        >
           {locating ? <LoaderCircle size={16} className="animate-spin" /> : <LocateFixed size={16} />}
           {results ? "現在地を取り直す" : "現在地から出す"}
         </button>
       </div>
-      {error && <p role="alert" className="mt-3 text-sm font-bold text-danger">{error}</p>}
+      {error && (
+        <p role="alert" className="mt-3 text-sm font-bold text-danger">
+          {error}
+        </p>
+      )}
       {results && (
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {results.map((line) => (
-            <Link key={line.slug} href={`/stations/lines/${line.slug}`} className="rounded-lg border border-line bg-paper px-4 py-3 hover:bg-cream">
+            <Link
+              key={line.slug}
+              href={`/stations/lines/${line.slug}`}
+              className="rounded-lg border border-line bg-paper px-4 py-3 hover:bg-cream"
+            >
               <span className="font-bold">{line.name}</span>
-              <span className="ml-2 text-xs text-sub">{line.stationCount}駅・{distanceLabel(line.distanceKm)}</span>
+              <span className="ml-2 text-xs text-sub">
+                {line.stationCount}駅・{distanceLabel(line.distanceKm)}
+              </span>
             </Link>
           ))}
         </div>
       )}
-      {!results && !error && <p className="mt-3 text-sm text-sub">位置情報から、いま近くを走っている路線を上に出します。</p>}
+      {!results && !error && (
+        <p className="mt-3 text-sm text-sub">位置情報から、いま近くを走っている路線を上に出します。</p>
+      )}
     </section>
   );
 }

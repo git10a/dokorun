@@ -17,5 +17,10 @@ export function splitRacesBySchedule(todayKey = jstTodayKey()) {
 // 大会名の検索ボックス用の候補。開催前→開催済みの順
 export function raceSearchOptions(todayKey = jstTodayKey()) {
   const { upcoming, finished } = splitRacesBySchedule(todayKey);
-  return [...upcoming, ...finished].map((race) => ({ slug: race.slug, name: race.name, prefecture: race.prefecture, date: raceShortDate(race) }));
+  return [...upcoming, ...finished].map((race) => ({
+    slug: race.slug,
+    name: race.name,
+    prefecture: race.prefecture,
+    date: raceShortDate(race),
+  }));
 }

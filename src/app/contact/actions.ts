@@ -20,8 +20,9 @@ export async function submitFeedback(_: FeedbackState, formData: FormData): Prom
   const parsed = schema.safeParse(Object.fromEntries(formData.entries()));
   if (!parsed.success) return { status: "error", message: "入力内容を確認してください(本文は1〜2000文字です)" };
   if (parsed.data.website) return { status: "sent" }; // botは保存せず成功扱い
-  const secretKey = process.env.TURNSTILE_SECRET_KEY
-    ?? (process.env.NODE_ENV === "production" ? "" : "1x0000000000000000000000000000000AA");
+  const secretKey =
+    process.env.TURNSTILE_SECRET_KEY ??
+    (process.env.NODE_ENV === "production" ? "" : "1x0000000000000000000000000000000AA");
   const requestHeaders = await headers();
   const isProduction = process.env.NODE_ENV === "production";
   const verified = await verifyTurnstileToken({
@@ -33,7 +34,9 @@ export async function submitFeedback(_: FeedbackState, formData: FormData): Prom
   });
   if (!verified) return { status: "error", message: "セキュリティ確認に失敗しました。もう一度お試しください" };
   try {
-    await getDb().insert(feedback).values({ category: parsed.data.category, message: parsed.data.message, contact: parsed.data.contact || null });
+    await getDb()
+      .insert(feedback)
+      .values({ category: parsed.data.category, message: parsed.data.message, contact: parsed.data.contact || null });
   } catch {
     return { status: "error", message: "送信できませんでした。時間をおいて再度お試しください" };
   }

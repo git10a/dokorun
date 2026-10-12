@@ -39,7 +39,10 @@ async function main() {
   const onlySlugs = process.argv.slice(2).filter((arg) => !arg.startsWith("-"));
   const targets = readdirSync(SOURCE_DIR)
     .filter((file) => file.endsWith(".json"))
-    .map((file) => ({ slug: file.replace(/\.json$/, ""), geojson: JSON.parse(readFileSync(join(SOURCE_DIR, file), "utf8")) as LineString }))
+    .map((file) => ({
+      slug: file.replace(/\.json$/, ""),
+      geojson: JSON.parse(readFileSync(join(SOURCE_DIR, file), "utf8")) as LineString,
+    }))
     .filter(({ slug }) => !onlySlugs.length || onlySlugs.includes(slug));
   if (!targets.length) {
     console.error("対象の大会コースがありません");
@@ -52,7 +55,9 @@ async function main() {
     const page = await browser.newPage();
     await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: SCALE });
     await setupMapPage(page, { html: PAGE_HTML, style: "positron", zoom: 11 });
-    await page.evaluate(() => { (window as never as { markers: unknown[] }).markers = []; });
+    await page.evaluate(() => {
+      (window as never as { markers: unknown[] }).markers = [];
+    });
     // positronは全体がグレーで味気ないため、文字ラベルを消して水・緑・陸に色を付ける
     await page.evaluate(() => {
       const map = (window as never as { map: import("maplibre-gl").Map }).map;
@@ -62,39 +67,59 @@ async function main() {
         else if (layer.type === "background") map.setPaintProperty(id, "background-color", "#f7f5ef");
         else if (layer.type === "fill" && /water/.test(id)) map.setPaintProperty(id, "fill-color", "#b5dcf2");
         else if (layer.type === "line" && /water/.test(id)) map.setPaintProperty(id, "line-color", "#b5dcf2");
-        else if (layer.type === "fill" && /park|wood|grass|landcover|forest/.test(id)) map.setPaintProperty(id, "fill-color", "#d9ecc8");
+        else if (layer.type === "fill" && /park|wood|grass|landcover|forest/.test(id))
+          map.setPaintProperty(id, "fill-color", "#d9ecc8");
       }
     });
 
     for (const { slug, geojson } of targets) {
       const coords = geojson.coordinates;
       const loop = distanceM(coords[0], coords[coords.length - 1]) <= SAME_POINT_M;
-      await page.evaluate(({ data, padding, loop }: { data: LineString; padding: number; loop: boolean }) => {
-        const w = window as never as { map: import("maplibre-gl").Map; maplibregl: typeof import("maplibre-gl"); markers: import("maplibre-gl").Marker[] };
-        const map = w.map;
-        for (const id of ["course", "course-casing"]) if (map.getLayer(id)) map.removeLayer(id);
-        if (map.getSource("course")) map.removeSource("course");
-        w.markers.forEach((marker) => marker.remove());
-        map.addSource("course", { type: "geojson", data });
-        const layout = { "line-cap": "round", "line-join": "round" } as const;
-        map.addLayer({ id: "course-casing", type: "line", source: "course", layout, paint: { "line-color": "#ffd900", "line-width": 10, "line-opacity": 0.9 } });
-        map.addLayer({ id: "course", type: "line", source: "course", layout, paint: { "line-color": "#1a1a1a", "line-width": 4 } });
-        const pin = (label: string, className: string, lngLat: [number, number]) => {
-          const element = document.createElement("div");
-          element.className = `pin ${className}`;
-          element.textContent = label;
-          return new w.maplibregl.Marker({ element }).setLngLat(lngLat).addTo(map);
-        };
-        const first = data.coordinates[0] as [number, number];
-        const last = data.coordinates[data.coordinates.length - 1] as [number, number];
-        // ゴールを先に置き、重なったときにスタートが上に来るようにする
-        w.markers = loop ? [pin("S/G", "start", first)] : [pin("G", "goal", last), pin("S", "start", first)];
-        const bounds = new w.maplibregl.LngLatBounds();
-        data.coordinates.forEach((coordinate) => bounds.extend(coordinate as [number, number]));
-        // fitBoundsはアニメーション経由で初回にズレることがあるため、カメラを直接確定させる
-        const camera = map.cameraForBounds(bounds, { padding, maxZoom: 15 });
-        if (camera) map.jumpTo(camera);
-      }, { data: geojson, padding: PADDING, loop });
+      await page.evaluate(
+        ({ data, padding, loop }: { data: LineString; padding: number; loop: boolean }) => {
+          const w = window as never as {
+            map: import("maplibre-gl").Map;
+            maplibregl: typeof import("maplibre-gl");
+            markers: import("maplibre-gl").Marker[];
+          };
+          const map = w.map;
+          for (const id of ["course", "course-casing"]) if (map.getLayer(id)) map.removeLayer(id);
+          if (map.getSource("course")) map.removeSource("course");
+          w.markers.forEach((marker) => marker.remove());
+          map.addSource("course", { type: "geojson", data });
+          const layout = { "line-cap": "round", "line-join": "round" } as const;
+          map.addLayer({
+            id: "course-casing",
+            type: "line",
+            source: "course",
+            layout,
+            paint: { "line-color": "#ffd900", "line-width": 10, "line-opacity": 0.9 },
+          });
+          map.addLayer({
+            id: "course",
+            type: "line",
+            source: "course",
+            layout,
+            paint: { "line-color": "#1a1a1a", "line-width": 4 },
+          });
+          const pin = (label: string, className: string, lngLat: [number, number]) => {
+            const element = document.createElement("div");
+            element.className = `pin ${className}`;
+            element.textContent = label;
+            return new w.maplibregl.Marker({ element }).setLngLat(lngLat).addTo(map);
+          };
+          const first = data.coordinates[0] as [number, number];
+          const last = data.coordinates[data.coordinates.length - 1] as [number, number];
+          // ゴールを先に置き、重なったときにスタートが上に来るようにする
+          w.markers = loop ? [pin("S/G", "start", first)] : [pin("G", "goal", last), pin("S", "start", first)];
+          const bounds = new w.maplibregl.LngLatBounds();
+          data.coordinates.forEach((coordinate) => bounds.extend(coordinate as [number, number]));
+          // fitBoundsはアニメーション経由で初回にズレることがあるため、カメラを直接確定させる
+          const camera = map.cameraForBounds(bounds, { padding, maxZoom: 15 });
+          if (camera) map.jumpTo(camera);
+        },
+        { data: geojson, padding: PADDING, loop },
+      );
       await waitForMapIdle(page);
       const path = join(OUT_DIR, `${slug}.webp`) as `${string}.webp`;
       await page.screenshot({ path, type: "webp", quality: 80 });
@@ -110,4 +135,7 @@ async function main() {
   process.exit(0);
 }
 
-main().catch((error) => { console.error(error); process.exit(1); });
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

@@ -18,8 +18,13 @@ export default function StationsPage() {
     <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
       <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "駅から探す" }]} />
       <h1 className="text-3xl font-black sm:text-4xl">駅からランニングスポットを探す</h1>
-      <p className="mt-3 max-w-2xl leading-7 text-sub">駅の近くで走れる場所と、同じ路線で少し足を伸ばして走れる場所をまとめました。</p>
-      <Link href="/stations/lines" className="mt-8 block rounded-2xl border border-line bg-cream px-6 py-5 transition hover:border-brand">
+      <p className="mt-3 max-w-2xl leading-7 text-sub">
+        駅の近くで走れる場所と、同じ路線で少し足を伸ばして走れる場所をまとめました。
+      </p>
+      <Link
+        href="/stations/lines"
+        className="mt-8 block rounded-2xl border border-line bg-cream px-6 py-5 transition hover:border-brand"
+      >
         <p className="text-lg font-bold">路線から探す →</p>
         <p className="mt-1 text-sm text-sub">始点から終点まで、各駅のランニングスポットを順番に見る</p>
       </Link>
@@ -27,10 +32,21 @@ export default function StationsPage() {
       <div className="mt-10 space-y-5">
         {[...groups].map(([prefecture, stations]) => (
           <details key={prefecture} className="rounded-xl border border-line bg-paper" open={prefecture === "東京都"}>
-            <summary className="cursor-pointer px-5 py-4 text-lg font-bold">{prefecture} <span className="ml-1 text-sm font-normal text-sub">{stations.length}駅</span></summary>
+            <summary className="cursor-pointer px-5 py-4 text-lg font-bold">
+              {prefecture} <span className="ml-1 text-sm font-normal text-sub">{stations.length}駅</span>
+            </summary>
             <div className="flex flex-wrap gap-x-5 gap-y-3 border-t border-line px-5 py-5">
-              {stations.map((station) => <Link key={station.slug} href={`/stations/${station.slug}`} className="text-accent hover:underline">{station.name}駅</Link>)}
-              <Link href={`/areas/${prefectureSlug(prefecture)}`} className="w-full pt-2 text-sm font-bold text-sub hover:underline">{prefecture}のエリアページへ →</Link>
+              {stations.map((station) => (
+                <Link key={station.slug} href={`/stations/${station.slug}`} className="text-accent hover:underline">
+                  {station.name}駅
+                </Link>
+              ))}
+              <Link
+                href={`/areas/${prefectureSlug(prefecture)}`}
+                className="w-full pt-2 text-sm font-bold text-sub hover:underline"
+              >
+                {prefecture}のエリアページへ →
+              </Link>
             </div>
           </details>
         ))}

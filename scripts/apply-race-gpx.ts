@@ -45,17 +45,45 @@ function main() {
   mkdirSync("data/race-gpx", { recursive: true });
   writeFileSync(join("data/race-gpx", `${slug}.gpx`), xml);
 
-  const manifest: Record<string, { distanceM: number; elevationGainM: number | null; source: "gps" | "map"; start?: [number, number]; finish?: [number, number] }> = existsSync(MANIFEST_PATH)
-    ? JSON.parse(readFileSync(MANIFEST_PATH, "utf8"))
-    : {};
+  const manifest: Record<
+    string,
+    {
+      distanceM: number;
+      elevationGainM: number | null;
+      source: "gps" | "map";
+      start?: [number, number];
+      finish?: [number, number];
+    }
+  > = existsSync(MANIFEST_PATH) ? JSON.parse(readFileSync(MANIFEST_PATH, "utf8")) : {};
   // 大会ページの「当日の会場まわり」で使う発着地点([lat, lng])
   const roundCoord = (value: number) => Math.round(value * 1e5) / 1e5;
   const [first, last] = [simplified.coordinates[0], simplified.coordinates[simplified.coordinates.length - 1]];
-  manifest[slug] = { ...manifest[slug], distanceM: Math.round(gpx.distanceM), elevationGainM: gpx.elevationGainM, source, start: [roundCoord(first[1]), roundCoord(first[0])], finish: [roundCoord(last[1]), roundCoord(last[0])] };
+  manifest[slug] = {
+    ...manifest[slug],
+    distanceM: Math.round(gpx.distanceM),
+    elevationGainM: gpx.elevationGainM,
+    source,
+    start: [roundCoord(first[1]), roundCoord(first[0])],
+    finish: [roundCoord(last[1]), roundCoord(last[0])],
+  };
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(MANIFEST_PATH, `${JSON.stringify(sorted, null, 2)}\n`);
 
-  console.log(JSON.stringify({ slug, source, distanceM: Math.round(gpx.distanceM), elevationGainM: gpx.elevationGainM, points: simplified.coordinates.length, bytes: JSON.stringify(simplified).length, outPath }, null, 2));
+  console.log(
+    JSON.stringify(
+      {
+        slug,
+        source,
+        distanceM: Math.round(gpx.distanceM),
+        elevationGainM: gpx.elevationGainM,
+        points: simplified.coordinates.length,
+        bytes: JSON.stringify(simplified).length,
+        outPath,
+      },
+      null,
+      2,
+    ),
+  );
 }
 
 main();

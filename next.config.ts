@@ -20,12 +20,7 @@ const nextConfig: NextConfig = {
   // ここで外部化した依存はOpenNext(esbuild)がnext/react-domと同様に1回だけ同梱する。
   // 注: better-auth は外部化するとSSR中の better-auth/react が別Reactインスタンスを
   // 参照して useRef null で落ちるため外部化しない(依存の kysely/jose は単独で外部化可)
-  serverExternalPackages: [
-    "drizzle-orm",
-    "kysely",
-    "jose",
-    "zod",
-  ],
+  serverExternalPackages: ["drizzle-orm", "kysely", "jose", "zod"],
 };
 
 export default bundleAnalyzer({ enabled: process.env.ANALYZE === "true" })(nextConfig);

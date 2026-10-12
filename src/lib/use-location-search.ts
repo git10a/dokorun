@@ -31,5 +31,9 @@ function subscribe(onStoreChange: () => void) {
 }
 
 export function useLocationSearch() {
-  return useSyncExternalStore(subscribe, () => window.location.search, () => "");
+  return useSyncExternalStore(
+    subscribe,
+    () => window.location.search,
+    () => "",
+  );
 }

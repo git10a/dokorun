@@ -24,4 +24,11 @@ const spurEnd = cumulative.findIndex((distance) => distance >= extensionM);
 const spur = [...points.slice(0, spurEnd), pointAtDistance(points, cumulative, extensionM)];
 const output = [...points, ...spur.slice(1), ...spur.slice(0, -1).reverse()];
 writeFileSync(outPath, pointsToGpx(name, output));
-console.log(JSON.stringify({ baseM: Math.round(baseM), targetM: Math.round(cumulativeDistances(output).at(-1)!), points: output.length, outPath }));
+console.log(
+  JSON.stringify({
+    baseM: Math.round(baseM),
+    targetM: Math.round(cumulativeDistances(output).at(-1)!),
+    points: output.length,
+    outPath,
+  }),
+);

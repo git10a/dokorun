@@ -11,9 +11,10 @@ if (!stableVersion || !newVersion || !Number.isInteger(newPercentage) || newPerc
 
 const stablePercentage = 100 - newPercentage;
 const message = messageParts.join(" ") || `canary: ${newVersion} at ${newPercentage}%`;
-const specs = newPercentage === 100
-  ? [`${newVersion}@100%`]
-  : [`${stableVersion}@${stablePercentage}%`, `${newVersion}@${newPercentage}%`];
+const specs =
+  newPercentage === 100
+    ? [`${newVersion}@100%`]
+    : [`${stableVersion}@${stablePercentage}%`, `${newVersion}@${newPercentage}%`];
 
 const result = spawnSync("npx", ["wrangler", "versions", "deploy", ...specs, "--message", message, "-y"], {
   stdio: "inherit",

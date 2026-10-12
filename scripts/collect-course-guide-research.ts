@@ -29,7 +29,9 @@ type WikimediaPage = {
 };
 
 const userAgent = "DokorunCourseGuideResearch/1.0 (https://dokorun.com)";
-const coverage = JSON.parse(readFileSync(resolve("data/course-guides/coverage.json"), "utf8")) as { entries: CoverageEntry[] };
+const coverage = JSON.parse(readFileSync(resolve("data/course-guides/coverage.json"), "utf8")) as {
+  entries: CoverageEntry[];
+};
 const requested = new Set(process.argv.slice(2));
 const entries = coverage.entries.filter((entry) => entry.hasGpx && (!requested.size || requested.has(entry.slug)));
 const outputDirectory = resolve("data/course-guides/research");
@@ -63,14 +65,18 @@ async function fetchJson(url: string, attempts = 3): Promise<unknown> {
 
 async function nearbyStations(point: GpxPoint) {
   const params = new URLSearchParams({ method: "getStations", x: String(point.lng), y: String(point.lat) });
-  const data = await fetchJson(`https://express.heartrails.com/api/json?${params}`) as { response?: { station?: Station[] } };
+  const data = (await fetchJson(`https://express.heartrails.com/api/json?${params}`)) as {
+    response?: { station?: Station[] };
+  };
   const seen = new Set<string>();
-  return (data.response?.station ?? []).filter((station) => {
-    const key = `${station.prefecture}:${station.name}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, 5);
+  return (data.response?.station ?? [])
+    .filter((station) => {
+      const key = `${station.prefecture}:${station.name}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 5);
 }
 
 async function nearbyPhotos(point: GpxPoint) {
@@ -88,27 +94,41 @@ async function nearbyPhotos(point: GpxPoint) {
     iiurlwidth: "960",
     origin: "*",
   });
-  const data = await fetchJson(`https://commons.wikimedia.org/w/api.php?${params}`) as { query?: { pages?: Record<string, WikimediaPage> } };
-  return Object.values(data.query?.pages ?? {}).sort((a, b) => (a.index ?? 999) - (b.index ?? 999)).flatMap((page) => {
-    const info = page.imageinfo?.[0];
-    const metadata = info?.extmetadata;
-    const license = stripHtml(metadata?.LicenseShortName?.value);
-    if (!info?.thumburl || !info.descriptionurl || !info.mime?.startsWith("image/") || (info.width ?? 0) < 640) return [];
-    if (!/CC|Public domain|PDM|パブリックドメイン/i.test(license)) return [];
-    if (/\b(map|logo|diagram|route|旗|地図)\b/i.test(page.title)) return [];
-    return [{
-      title: page.title.replace(/^File:/, "").replace(/\.[^.]+$/, "").replaceAll("_", " "),
-      description: stripHtml(metadata?.ImageDescription?.value) || page.title.replace(/^File:/, ""),
-      url: info.thumburl,
-      sourceUrl: info.descriptionurl,
-      credit: stripHtml(metadata?.Artist?.value) || "Wikimedia Commons contributor",
-      license,
-      gps: metadata?.GPSLatitude?.value && metadata?.GPSLongitude?.value ? {
-        lat: Number(metadata.GPSLatitude.value),
-        lng: Number(metadata.GPSLongitude.value),
-      } : null,
-    }];
-  }).slice(0, 8);
+  const data = (await fetchJson(`https://commons.wikimedia.org/w/api.php?${params}`)) as {
+    query?: { pages?: Record<string, WikimediaPage> };
+  };
+  return Object.values(data.query?.pages ?? {})
+    .sort((a, b) => (a.index ?? 999) - (b.index ?? 999))
+    .flatMap((page) => {
+      const info = page.imageinfo?.[0];
+      const metadata = info?.extmetadata;
+      const license = stripHtml(metadata?.LicenseShortName?.value);
+      if (!info?.thumburl || !info.descriptionurl || !info.mime?.startsWith("image/") || (info.width ?? 0) < 640)
+        return [];
+      if (!/CC|Public domain|PDM|パブリックドメイン/i.test(license)) return [];
+      if (/\b(map|logo|diagram|route|旗|地図)\b/i.test(page.title)) return [];
+      return [
+        {
+          title: page.title
+            .replace(/^File:/, "")
+            .replace(/\.[^.]+$/, "")
+            .replaceAll("_", " "),
+          description: stripHtml(metadata?.ImageDescription?.value) || page.title.replace(/^File:/, ""),
+          url: info.thumburl,
+          sourceUrl: info.descriptionurl,
+          credit: stripHtml(metadata?.Artist?.value) || "Wikimedia Commons contributor",
+          license,
+          gps:
+            metadata?.GPSLatitude?.value && metadata?.GPSLongitude?.value
+              ? {
+                  lat: Number(metadata.GPSLatitude.value),
+                  lng: Number(metadata.GPSLongitude.value),
+                }
+              : null,
+        },
+      ];
+    })
+    .slice(0, 8);
 }
 
 async function collect(entry: CoverageEntry) {
@@ -134,20 +154,37 @@ async function collect(entry: CoverageEntry) {
     reviewStatus: "needs_review",
   };
   writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`);
-  return { slug: entry.slug, status: "collected", samples: researched.length, photos: researched.reduce((sum, item) => sum + item.photos.length, 0) };
+  return {
+    slug: entry.slug,
+    status: "collected",
+    samples: researched.length,
+    photos: researched.reduce((sum, item) => sum + item.photos.length, 0),
+  };
 }
 
 async function main() {
   const results = [];
   for (let offset = 0; offset < entries.length; offset += 4) {
-    const batch = await Promise.all(entries.slice(offset, offset + 4).map((entry) => collect(entry).catch((error) => ({ slug: entry.slug, status: "error", error: error instanceof Error ? error.message : String(error) }))));
+    const batch = await Promise.all(
+      entries.slice(offset, offset + 4).map((entry) =>
+        collect(entry).catch((error) => ({
+          slug: entry.slug,
+          status: "error",
+          error: error instanceof Error ? error.message : String(error),
+        })),
+      ),
+    );
     results.push(...batch);
-    console.log(`[${Math.min(offset + 4, entries.length)}/${entries.length}] ${batch.map((item) => `${item.slug}:${item.status}`).join(" ")}`);
+    console.log(
+      `[${Math.min(offset + 4, entries.length)}/${entries.length}] ${batch.map((item) => `${item.slug}:${item.status}`).join(" ")}`,
+    );
   }
   const summary = {
     generatedAt: new Date().toISOString(),
     requested: results.length,
-    total: readdirSync(outputDirectory).filter((name) => name.endsWith(".json") && !["index.json", "quality.json"].includes(name)).length,
+    total: readdirSync(outputDirectory).filter(
+      (name) => name.endsWith(".json") && !["index.json", "quality.json"].includes(name),
+    ).length,
     collected: results.filter((result) => result.status === "collected").length,
     cached: results.filter((result) => result.status === "cached").length,
     errors: results.filter((result) => result.status === "error"),

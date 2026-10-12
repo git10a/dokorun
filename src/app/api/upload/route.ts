@@ -4,10 +4,12 @@ import { isAdmin } from "@/lib/auth";
 
 const allowedTypes: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 const maxSizeInBytes = 10 * 1024 * 1024;
-type ImageBucket = { put(key: string, value: ArrayBuffer, options: { httpMetadata: { contentType: string } }): Promise<unknown> };
+type ImageBucket = {
+  put(key: string, value: ArrayBuffer, options: { httpMetadata: { contentType: string } }): Promise<unknown>;
+};
 
 export async function POST(request: Request) {
-  if (!await isAdmin()) return NextResponse.json({ error: "認証が必要です" }, { status: 401 });
+  if (!(await isAdmin())) return NextResponse.json({ error: "認証が必要です" }, { status: 401 });
   const publicBase = process.env.R2_PUBLIC_URL;
   if (!publicBase) return NextResponse.json({ error: "画像アップロードは設定されていません" }, { status: 503 });
   const formData = await request.formData();
@@ -15,7 +17,8 @@ export async function POST(request: Request) {
   if (!(file instanceof File)) return NextResponse.json({ error: "ファイルが指定されていません" }, { status: 400 });
   const extension = allowedTypes[file.type];
   if (!extension) return NextResponse.json({ error: "JPEG・PNG・WebPのみアップロードできます" }, { status: 400 });
-  if (file.size > maxSizeInBytes) return NextResponse.json({ error: "10MB以下の画像を指定してください" }, { status: 400 });
+  if (file.size > maxSizeInBytes)
+    return NextResponse.json({ error: "10MB以下の画像を指定してください" }, { status: 400 });
   try {
     const key = `spots/${crypto.randomUUID()}.${extension}`;
     const { env } = getCloudflareContext();

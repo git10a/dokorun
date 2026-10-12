@@ -24,6 +24,7 @@ export function formatPace(totalSeconds: number, meters: number) {
 export function validatePbTime(eventKey: string, timeS: number) {
   const event = PB_EVENTS.find((item) => item.key === eventKey);
   if (!event) return "種目を確認してください";
-  if (!Number.isInteger(timeS) || timeS < event.minS || timeS > event.maxS) return `${event.label}のタイムを確認してください`;
+  if (!Number.isInteger(timeS) || timeS < event.minS || timeS > event.maxS)
+    return `${event.label}のタイムを確認してください`;
   return null;
 }

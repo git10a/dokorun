@@ -17,21 +17,21 @@
 //   Japanese eki-stamp rubber stamp style, single vermilion ink color on white
 //   background, flat line art, circular border, text {名前} at top and DOKORUN at
 //   bottom, slightly distressed ink texture.
-import path from 'node:path';
-import sharp from 'sharp';
+import path from "node:path";
+import sharp from "sharp";
 
 const [, , input, slug, sizeArg] = process.argv;
 if (!input || !slug) {
-  console.error('usage: node scripts/make-stamp-mask.mjs <input.png> <slug> [size=640]');
+  console.error("usage: node scripts/make-stamp-mask.mjs <input.png> <slug> [size=640]");
   process.exit(1);
 }
 const size = Number(sizeArg) || 640;
-const output = path.join(import.meta.dirname, '..', 'public', 'stamps', `${slug}.png`);
+const output = path.join(import.meta.dirname, "..", "public", "stamps", `${slug}.png`);
 
 // 1) 白背景基準で余白トリム → 正方形にパディング → リサイズ。
 //    sharpは同一パイプライン内だと呼び出し順でなく内部固定順(resize→extend)で適用され
 //    出力サイズが狂うため、extendとresizeは必ず別パイプラインに分ける
-const trimmed = await sharp(input).trim({ background: '#ffffff', threshold: 40 }).toBuffer();
+const trimmed = await sharp(input).trim({ background: "#ffffff", threshold: 40 }).toBuffer();
 const meta = await sharp(trimmed).metadata();
 const side = Math.max(meta.width, meta.height);
 const padded = await sharp(trimmed)
@@ -40,7 +40,7 @@ const padded = await sharp(trimmed)
     bottom: Math.ceil((side - meta.height) / 2),
     left: Math.floor((side - meta.width) / 2),
     right: Math.ceil((side - meta.width) / 2),
-    background: '#ffffff',
+    background: "#ffffff",
   })
   .toBuffer();
 const squared = await sharp(padded).resize(size, size).toBuffer();
@@ -54,7 +54,7 @@ const alpha = await sharp(squared)
   .greyscale()
   .negate()
   .normalise({ lower: 1, upper: 95 })
-  .toColourspace('b-w')
+  .toColourspace("b-w")
   .raw()
   .toBuffer();
 

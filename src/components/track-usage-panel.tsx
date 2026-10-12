@@ -29,8 +29,14 @@ export function TrackUsagePanel({ usage }: { usage: TrackUsage }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-paper">
       <div className="flex flex-wrap items-center gap-3 border-b border-line bg-cream px-5 py-4">
-        <span className={`rounded-full px-3 py-1 text-sm font-bold ${usage.publicAccess === "free" ? "bg-brand" : "bg-paper border border-line"}`}>{usage.publicAccess === "free" ? "無料開放あり" : "有料開放"}</span>
-        <p className="text-sm text-sub">大会・貸切等で利用できない日があります。おでかけ前に公式情報をご確認ください。</p>
+        <span
+          className={`rounded-full px-3 py-1 text-sm font-bold ${usage.publicAccess === "free" ? "bg-brand" : "bg-paper border border-line"}`}
+        >
+          {usage.publicAccess === "free" ? "無料開放あり" : "有料開放"}
+        </span>
+        <p className="text-sm text-sub">
+          大会・貸切等で利用できない日があります。おでかけ前に公式情報をご確認ください。
+        </p>
       </div>
       <dl className="divide-y divide-line">
         {rows.map((row) => (
@@ -43,7 +49,13 @@ export function TrackUsagePanel({ usage }: { usage: TrackUsage }) {
       {links.length > 0 && (
         <div className="flex flex-wrap gap-3 border-t border-line px-5 py-4">
           {links.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-line bg-paper px-3 py-1.5 text-sm font-bold text-accent hover:bg-cream">
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-line bg-paper px-3 py-1.5 text-sm font-bold text-accent hover:bg-cream"
+            >
               {link.label} ↗
             </a>
           ))}

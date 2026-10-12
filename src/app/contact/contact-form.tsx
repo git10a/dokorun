@@ -31,33 +31,71 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
     return (
       <div className="rounded-2xl bg-cream px-5 py-12 text-center">
         <p className="text-xl font-bold">送信しました。ありがとうございます!</p>
-        <p className="mt-3 text-sub">いただいた内容を運営が確認します。掲載リクエストは、コース情報や作成できるデータを調べたうえで検討します。</p>
+        <p className="mt-3 text-sub">
+          いただいた内容を運営が確認します。掲載リクエストは、コース情報や作成できるデータを調べたうえで検討します。
+        </p>
       </div>
     );
   }
 
   return (
-    <form action={action} className="space-y-6" onSubmit={(event) => {
-      const category = String(new FormData(event.currentTarget).get("category") ?? "spot_request");
-      categoryRef.current = category === "contact" ? "contact" : "spot_request";
-    }}>
+    <form
+      action={action}
+      className="space-y-6"
+      onSubmit={(event) => {
+        const category = String(new FormData(event.currentTarget).get("category") ?? "spot_request");
+        categoryRef.current = category === "contact" ? "contact" : "spot_request";
+      }}
+    >
       <fieldset>
         <legend className="mb-3 font-bold">内容の種類</legend>
         <div className="flex flex-wrap gap-3">
-          {[["spot_request", "大会・スポットの掲載リクエスト"], ["contact", "その他のお問い合わせ"]].map(([value, label]) => (
-            <label key={value} className="flex items-center gap-2 rounded-lg border border-line bg-paper px-4 py-2.5 font-bold has-checked:border-brand has-checked:bg-cream">
-              <input type="radio" name="category" value={value} defaultChecked={value === initialCategory} className="accent-(--color-brand)" />{label}
+          {[
+            ["spot_request", "大会・スポットの掲載リクエスト"],
+            ["contact", "その他のお問い合わせ"],
+          ].map(([value, label]) => (
+            <label
+              key={value}
+              className="flex items-center gap-2 rounded-lg border border-line bg-paper px-4 py-2.5 font-bold has-checked:border-brand has-checked:bg-cream"
+            >
+              <input
+                type="radio"
+                name="category"
+                value={value}
+                defaultChecked={value === initialCategory}
+                className="accent-(--color-brand)"
+              />
+              {label}
             </label>
           ))}
         </div>
       </fieldset>
       <div>
-        <label htmlFor="feedback-message" className="mb-2 block font-bold">本文 <span className="text-sm font-normal text-sub">(必須・2000文字まで)</span></label>
-        <textarea id="feedback-message" name="message" required maxLength={2000} rows={6} placeholder="例：〇〇マラソンのコースを掲載してほしいです。開催年・種目・公式サイトも、わかれば教えてください。" defaultValue={initialMessage} className={inputClass} />
+        <label htmlFor="feedback-message" className="mb-2 block font-bold">
+          本文 <span className="text-sm font-normal text-sub">(必須・2000文字まで)</span>
+        </label>
+        <textarea
+          id="feedback-message"
+          name="message"
+          required
+          maxLength={2000}
+          rows={6}
+          placeholder="例：〇〇マラソンのコースを掲載してほしいです。開催年・種目・公式サイトも、わかれば教えてください。"
+          defaultValue={initialMessage}
+          className={inputClass}
+        />
       </div>
       <div>
-        <label htmlFor="feedback-contact" className="mb-2 block font-bold">連絡先 <span className="text-sm font-normal text-sub">(任意・メールアドレスやXアカウントなど)</span></label>
-        <input id="feedback-contact" name="contact" maxLength={200} placeholder="you@example.com / @dokorun" className={inputClass} />
+        <label htmlFor="feedback-contact" className="mb-2 block font-bold">
+          連絡先 <span className="text-sm font-normal text-sub">(任意・メールアドレスやXアカウントなど)</span>
+        </label>
+        <input
+          id="feedback-contact"
+          name="contact"
+          maxLength={200}
+          placeholder="you@example.com / @dokorun"
+          className={inputClass}
+        />
         <p className="mt-2 text-sm leading-6 text-sub">内容の確認のため、折り返し連絡をすることがあります。</p>
       </div>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
@@ -66,9 +104,23 @@ export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) 
           <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
           <div className="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="contact" data-theme="light" />
         </>
-      ) : <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。</p>}
-      {state.status === "error" && <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">{state.message}</p>}
-      <button type="submit" disabled={pending || !turnstileSiteKey} className="rounded-lg bg-brand px-6 py-3 font-bold disabled:opacity-60">{pending ? "送信中…" : "送信する"}</button>
+      ) : (
+        <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">
+          セキュリティ確認を読み込めませんでした。時間をおいて再度お試しください。
+        </p>
+      )}
+      {state.status === "error" && (
+        <p role="alert" className="rounded-lg bg-danger-soft px-4 py-3 text-sm font-bold text-[#B3261E]">
+          {state.message}
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={pending || !turnstileSiteKey}
+        className="rounded-lg bg-brand px-6 py-3 font-bold disabled:opacity-60"
+      >
+        {pending ? "送信中…" : "送信する"}
+      </button>
     </form>
   );
 }

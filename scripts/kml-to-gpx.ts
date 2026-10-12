@@ -17,7 +17,9 @@ const optionValueIndexes = new Set([nameIndex, blocksIndex].filter((index) => in
 const positional = args.filter((arg, i) => !arg.startsWith("--") && !optionValueIndexes.has(i));
 const [kmlPath, outPath] = positional;
 if (!kmlPath || !outPath || !lineName) {
-  console.error("使い方: npx tsx scripts/kml-to-gpx.ts <kmlファイル> <出力gpx> --name <LineString名の部分一致> [--blocks 0r,1r]");
+  console.error(
+    "使い方: npx tsx scripts/kml-to-gpx.ts <kmlファイル> <出力gpx> --name <LineString名の部分一致> [--blocks 0r,1r]",
+  );
   process.exit(1);
 }
 
@@ -35,10 +37,16 @@ if (lines.length !== 1) {
 }
 
 const blocks = (lines[0].pm.match(/<coordinates>[\s\S]*?<\/coordinates>/g) ?? []).map((block) =>
-  block.replace(/<\/?coordinates>/g, "").trim().split(/\s+/).map((tuple) => tuple.split(",").map(Number)),
+  block
+    .replace(/<\/?coordinates>/g, "")
+    .trim()
+    .split(/\s+/)
+    .map((tuple) => tuple.split(",").map(Number)),
 );
 for (const [index, block] of blocks.entries()) {
-  console.error(`block ${index}: ${block.length}pts  first=[${block[0].slice(0, 2)}]  last=[${block[block.length - 1].slice(0, 2)}]`);
+  console.error(
+    `block ${index}: ${block.length}pts  first=[${block[0].slice(0, 2)}]  last=[${block[block.length - 1].slice(0, 2)}]`,
+  );
 }
 
 let path: number[][];
@@ -58,5 +66,13 @@ if (blocks.length === 1 && !blocksSpec) {
   process.exit(1);
 }
 
-writeFileSync(outPath, pointsToGpx(`${lineName} (公式My Maps由来)`, path.map(([lng, lat]) => ({ lat, lng, ele: null }))));
-console.log(JSON.stringify({ points: path.length, first: path[0].slice(0, 2), last: path[path.length - 1].slice(0, 2), outPath }));
+writeFileSync(
+  outPath,
+  pointsToGpx(
+    `${lineName} (公式My Maps由来)`,
+    path.map(([lng, lat]) => ({ lat, lng, ele: null })),
+  ),
+);
+console.log(
+  JSON.stringify({ points: path.length, first: path[0].slice(0, 2), last: path[path.length - 1].slice(0, 2), outPath }),
+);

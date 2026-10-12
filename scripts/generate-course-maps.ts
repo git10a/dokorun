@@ -30,19 +30,28 @@ async function renderAll(browser: Browser, targets: { slug: string; geojson: Lin
   await setupMapPage(page, { html: PAGE_HTML, style: "liberty", zoom: 12 });
 
   for (const { slug, geojson } of targets) {
-    await page.evaluate(({ data, padding }: { data: LineString; padding: number }) => {
-      const w = window as never as { map: import("maplibre-gl").Map; maplibregl: typeof import("maplibre-gl") };
-      const map = w.map;
-      if (map.getLayer("course")) map.removeLayer("course");
-      if (map.getSource("course")) map.removeSource("course");
-      map.addSource("course", { type: "geojson", data });
-      map.addLayer({ id: "course", type: "line", source: "course", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#1A1A1A", "line-width": 4, "line-opacity": 0.85 } });
-      const bounds = new w.maplibregl.LngLatBounds();
-      data.coordinates.forEach((coordinate) => bounds.extend(coordinate));
-      // fitBoundsはアニメーション経由で初回にズレることがあるため、カメラを直接確定させる
-      const camera = map.cameraForBounds(bounds, { padding, maxZoom: 16 });
-      if (camera) map.jumpTo(camera);
-    }, { data: geojson, padding: PADDING });
+    await page.evaluate(
+      ({ data, padding }: { data: LineString; padding: number }) => {
+        const w = window as never as { map: import("maplibre-gl").Map; maplibregl: typeof import("maplibre-gl") };
+        const map = w.map;
+        if (map.getLayer("course")) map.removeLayer("course");
+        if (map.getSource("course")) map.removeSource("course");
+        map.addSource("course", { type: "geojson", data });
+        map.addLayer({
+          id: "course",
+          type: "line",
+          source: "course",
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": "#1A1A1A", "line-width": 4, "line-opacity": 0.85 },
+        });
+        const bounds = new w.maplibregl.LngLatBounds();
+        data.coordinates.forEach((coordinate) => bounds.extend(coordinate));
+        // fitBoundsはアニメーション経由で初回にズレることがあるため、カメラを直接確定させる
+        const camera = map.cameraForBounds(bounds, { padding, maxZoom: 16 });
+        if (camera) map.jumpTo(camera);
+      },
+      { data: geojson, padding: PADDING },
+    );
     await waitForMapIdle(page);
     const path = join(OUT_DIR, `${slug}.webp`) as `${string}.webp`;
     await page.screenshot({ path, type: "webp", quality: 82 });
@@ -76,10 +85,20 @@ async function main() {
     await browser.close();
   }
   if (!onlySlugs.length) {
-    writeFileSync(join(OUT_DIR, "manifest.json"), `${JSON.stringify(targets.map((t) => t.slug), null, 2)}\n`);
+    writeFileSync(
+      join(OUT_DIR, "manifest.json"),
+      `${JSON.stringify(
+        targets.map((t) => t.slug),
+        null,
+        2,
+      )}\n`,
+    );
   }
   console.log(`done: ${targets.length}件`);
   process.exit(0);
 }
 
-main().catch((error) => { console.error(error); process.exit(1); });
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

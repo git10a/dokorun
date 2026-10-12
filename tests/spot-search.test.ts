@@ -1,14 +1,38 @@
 import { describe, expect, it } from "vitest";
-import { buildSpotRequestHref, distanceBetweenKm, nearbyFallbackFilters, normalizeSearchParams, searchParamsHref, toSearchFilters } from "@/lib/spot-search";
+import {
+  buildSpotRequestHref,
+  distanceBetweenKm,
+  nearbyFallbackFilters,
+  normalizeSearchParams,
+  searchParamsHref,
+  toSearchFilters,
+} from "@/lib/spot-search";
 
 describe("spot search helpers", () => {
   it("normalizes repeated params and converts public query values to DB filters", () => {
-    const params = normalizeSearchParams({ tags: ["flat,night", "ignored"], dist: "5-10", lat: "35.68", lng: "139.76", page: "2" });
-    expect(toSearchFilters(params)).toMatchObject({ tags: ["flat", "night"], distMin: 5000, distMax: 10000, lat: 35.68, lng: 139.76, page: 2 });
+    const params = normalizeSearchParams({
+      tags: ["flat,night", "ignored"],
+      dist: "5-10",
+      lat: "35.68",
+      lng: "139.76",
+      page: "2",
+    });
+    expect(toSearchFilters(params)).toMatchObject({
+      tags: ["flat", "night"],
+      distMin: 5000,
+      distMax: 10000,
+      lat: 35.68,
+      lng: 139.76,
+      page: 2,
+    });
   });
 
   it("rejects invalid coordinates without discarding the other filters", () => {
-    expect(toSearchFilters({ pref: "東京都", lat: "999", lng: "139" })).toMatchObject({ pref: "東京都", lat: undefined, lng: undefined });
+    expect(toSearchFilters({ pref: "東京都", lat: "999", lng: "139" })).toMatchObject({
+      pref: "東京都",
+      lat: undefined,
+      lng: undefined,
+    });
   });
 
   it("maps the 30-minute homepage choice to a 3–5km search", () => {
@@ -16,7 +40,9 @@ describe("spot search helpers", () => {
   });
 
   it("builds pagination links without losing active filters", () => {
-    expect(searchParamsHref("/spots", { pref: "東京都", page: "1" }, { page: "3" })).toBe("/spots?pref=%E6%9D%B1%E4%BA%AC%E9%83%BD&page=3");
+    expect(searchParamsHref("/spots", { pref: "東京都", page: "1" }, { page: "3" })).toBe(
+      "/spots?pref=%E6%9D%B1%E4%BA%AC%E9%83%BD&page=3",
+    );
   });
 
   it("preserves the useful context in an empty-result request", () => {
@@ -31,15 +57,17 @@ describe("spot search helpers", () => {
 
 describe("nearbyFallbackFilters", () => {
   it("現在地と近い順だけを残して検索条件を広げる", () => {
-    expect(nearbyFallbackFilters({
-      sort: "near",
-      lat: 35.6812,
-      lng: 139.7671,
-      tags: ["no-signals"],
-      distMin: 3000,
-      toilet: true,
-      page: 4,
-    })).toEqual({ sort: "near", lat: 35.6812, lng: 139.7671, page: 1, limit: 3 });
+    expect(
+      nearbyFallbackFilters({
+        sort: "near",
+        lat: 35.6812,
+        lng: 139.7671,
+        tags: ["no-signals"],
+        distMin: 3000,
+        toilet: true,
+        page: 4,
+      }),
+    ).toEqual({ sort: "near", lat: 35.6812, lng: 139.7671, page: 1, limit: 3 });
   });
 
   it("現在地検索でなければフォールバックしない", () => {

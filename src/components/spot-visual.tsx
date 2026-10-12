@@ -23,7 +23,14 @@ function baseHue(tagSlugs: Set<string>): number {
 /** courseTypeを表すシンプルなコースライン。viewBox 0 0 320 180 前提。 */
 function CourseMotif({ courseType }: { courseType: CourseType }) {
   const stroke = "#ffffff";
-  const common = { fill: "none", stroke, strokeWidth: 13, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, opacity: 0.42 };
+  const common = {
+    fill: "none",
+    stroke,
+    strokeWidth: 13,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    opacity: 0.42,
+  };
   if (courseType === "track") {
     return (
       <g>
@@ -87,9 +94,19 @@ export function SpotVisual({
       </defs>
       <rect width="320" height="180" fill={`url(#${gradId})`} />
       <CourseMotif courseType={courseType} />
-      <text x="24" y="150" fontSize="60" fontWeight="900" fill="#ffffff" opacity="0.92" style={{ letterSpacing: "-0.02em" }}>
+      <text
+        x="24"
+        y="150"
+        fontSize="60"
+        fontWeight="900"
+        fill="#ffffff"
+        opacity="0.92"
+        style={{ letterSpacing: "-0.02em" }}
+      >
         {km}
-        <tspan fontSize="26" dx="4">km</tspan>
+        <tspan fontSize="26" dx="4">
+          km
+        </tspan>
       </text>
     </svg>
   );

@@ -37,12 +37,14 @@ export function buildAuth(db: Database) {
       cookiePrefix: "dokorun",
       ipAddress: { ipAddressHeaders: ["cf-connecting-ip"] },
     },
-    socialProviders: isGoogleAuthConfigured ? {
-      google: {
-        clientId: googleClientId!,
-        clientSecret: googleClientSecret!,
-      },
-    } : {},
+    socialProviders: isGoogleAuthConfigured
+      ? {
+          google: {
+            clientId: googleClientId!,
+            clientSecret: googleClientSecret!,
+          },
+        }
+      : {},
     user: {
       deleteUser: { enabled: true },
       additionalFields: {

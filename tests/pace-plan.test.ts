@@ -3,7 +3,8 @@ import { buildPacePlan, canUseHills, gradeFactor, hillEffortLabel, pacePlanText,
 import { formatDuration } from "@/lib/format";
 import type { RaceElevationPoint } from "@/lib/race-elevation";
 
-const flat = (lengthM: number): RaceElevationPoint[] => [0, lengthM].map((distanceM) => ({ distanceM, elevationM: 10, lat: 35, lng: 139 }));
+const flat = (lengthM: number): RaceElevationPoint[] =>
+  [0, lengthM].map((distanceM) => ({ distanceM, elevationM: 10, lat: 35, lng: 139 }));
 
 describe("buildPacePlan", () => {
   it("sums exactly to the target and covers the official distance", () => {
@@ -11,16 +12,27 @@ describe("buildPacePlan", () => {
     expect(plan.km).toHaveLength(43);
     expect(plan.km.at(-1)!.label).toBe("42.195km");
     expect(plan.km.at(-1)!.cumulativeS).toBeCloseTo(4 * 3600, 6);
-    expect(plan.km[0].splitS).toBeCloseTo(4 * 3600 / 42.195, 6);
+    expect(plan.km[0].splitS).toBeCloseTo((4 * 3600) / 42.195, 6);
   });
 
   it("lists 5km checkpoints with the halfway point and finish", () => {
     const plan = buildPacePlan({ targetS: 3 * 3600, distanceKm: 42.195, points: null });
-    expect(plan.fiveKm.map((row) => row.label)).toEqual(["5km", "10km", "15km", "20km", "中間点", "25km", "30km", "35km", "40km", "ゴール"]);
+    expect(plan.fiveKm.map((row) => row.label)).toEqual([
+      "5km",
+      "10km",
+      "15km",
+      "20km",
+      "中間点",
+      "25km",
+      "30km",
+      "35km",
+      "40km",
+      "ゴール",
+    ]);
     expect(plan.fiveKm.find((row) => row.label === "中間点")!.cumulativeS).toBeCloseTo(1.5 * 3600, 6);
     expect(plan.fiveKm.at(-1)!.cumulativeS).toBeCloseTo(3 * 3600, 6);
     // 中間点を挟んでも、25kmの区間は20kmからの5km
-    expect(plan.fiveKm.find((row) => row.label === "25km")!.splitS).toBeCloseTo(3 * 3600 * 5 / 42.195, 6);
+    expect(plan.fiveKm.find((row) => row.label === "25km")!.splitS).toBeCloseTo((3 * 3600 * 5) / 42.195, 6);
   });
 
   it("does not add a halfway row for a half marathon", () => {

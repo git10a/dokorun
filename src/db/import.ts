@@ -14,15 +14,25 @@ const optionalUrl = z.url().nullable().optional();
 // トラック開放施設の個人利用情報。evidenceNotes/confidenceなどの調査用メタはzodが自動で落とす
 const trackUsageSchema = z.object({
   publicAccess: z.enum(["free", "paid"]),
-  feeText: optionalText, openingHoursText: optionalText, openDaysText: optionalText, closedDaysText: optionalText,
-  reservationText: optionalText, showerText: optionalText, lockerText: optionalText, spikeRulesText: optionalText,
-  officialUrl: optionalUrl, feeUrl: optionalUrl, scheduleUrl: optionalUrl,
+  feeText: optionalText,
+  openingHoursText: optionalText,
+  openDaysText: optionalText,
+  closedDaysText: optionalText,
+  reservationText: optionalText,
+  showerText: optionalText,
+  lockerText: optionalText,
+  spikeRulesText: optionalText,
+  officialUrl: optionalUrl,
+  feeUrl: optionalUrl,
+  scheduleUrl: optionalUrl,
 });
 const importSpotSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/, "slugは半角英数字とハイフン"),
   name: z.string().trim().min(1),
   nameKana: z.string().trim().min(1),
-  prefecture: z.string().refine((value) => (prefectures as readonly string[]).includes(value), "都道府県は正式名称(例: 東京都)"),
+  prefecture: z
+    .string()
+    .refine((value) => (prefectures as readonly string[]).includes(value), "都道府県は正式名称(例: 東京都)"),
   city: z.string().trim().min(1),
   lat: z.number().min(20).max(46, "緯度が日本の範囲外"),
   lng: z.number().min(122).max(154, "経度が日本の範囲外"),
@@ -30,11 +40,18 @@ const importSpotSchema = z.object({
   access: z.string().trim().nullable().optional(),
   nightLighting: z.enum(lightings).nullable().optional(),
   tags: z.array(z.string()).default([]),
-  facilities: z.object({
-    hasToilet: z.boolean().optional(), hasWaterFountain: z.boolean().optional(), hasVendingMachine: z.boolean().optional(),
-    hasLocker: z.boolean().optional(), hasShower: z.boolean().optional(), hasSentoNearby: z.boolean().optional(),
-    hasParking: z.boolean().optional(), hasConvenienceStore: z.boolean().optional(),
-  }).default({}),
+  facilities: z
+    .object({
+      hasToilet: z.boolean().optional(),
+      hasWaterFountain: z.boolean().optional(),
+      hasVendingMachine: z.boolean().optional(),
+      hasLocker: z.boolean().optional(),
+      hasShower: z.boolean().optional(),
+      hasSentoNearby: z.boolean().optional(),
+      hasParking: z.boolean().optional(),
+      hasConvenienceStore: z.boolean().optional(),
+    })
+    .default({}),
   course: z.object({
     distanceM: z.number().int().positive(),
     courseType: z.enum(courseTypes),
@@ -83,7 +100,15 @@ async function run() {
   const db = getDb();
   const knownTags = await db.select({ id: tags.id, slug: tags.slug }).from(tags);
   const tagIdBySlug = new Map(knownTags.map((tag) => [tag.slug, tag.id]));
-  const existing = await db.select({ slug: spots.slug }).from(spots).where(inArray(spots.slug, entries.map((entry) => entry.slug)));
+  const existing = await db
+    .select({ slug: spots.slug })
+    .from(spots)
+    .where(
+      inArray(
+        spots.slug,
+        entries.map((entry) => entry.slug),
+      ),
+    );
   const existingSlugs = new Set(existing.map((row) => row.slug));
   const allSpots = await db.select({ slug: spots.slug, name: spots.name, lat: spots.lat, lng: spots.lng }).from(spots);
 
@@ -104,26 +129,48 @@ async function run() {
       const sameName = spot.name === entry.name;
       const distanceM = haversine(entry, spot);
       if (sameName || distanceM < 500) {
-        warnings.push(`${entry.slug}: 既存の「${spot.name}」(${spot.slug})と重複の可能性(${sameName ? "同名" : `約${Math.round(distanceM)}m`})。重複ならJSONから削除を`);
+        warnings.push(
+          `${entry.slug}: 既存の「${spot.name}」(${spot.slug})と重複の可能性(${sameName ? "同名" : `約${Math.round(distanceM)}m`})。重複ならJSONから削除を`,
+        );
       }
     }
-    const tagIds = entry.tags.flatMap((slug) => tagIdBySlug.has(slug) ? [tagIdBySlug.get(slug)!] : []);
+    const tagIds = entry.tags.flatMap((slug) => (tagIdBySlug.has(slug) ? [tagIdBySlug.get(slug)!] : []));
 
     if (dryRun) {
       inserted += 1;
-      console.log(`dry-run: ${entry.slug}(${entry.prefecture} ${entry.name} / ${entry.course.distanceM}m / タグ${tagIds.length}件)`);
+      console.log(
+        `dry-run: ${entry.slug}(${entry.prefecture} ${entry.name} / ${entry.course.distanceM}m / タグ${tagIds.length}件)`,
+      );
       continue;
     }
 
     await db.transaction(async (tx) => {
-      const [spot] = await tx.insert(spots).values({
-        slug: entry.slug, name: entry.name, nameKana: entry.nameKana, prefecture: entry.prefecture, city: entry.city,
-        lat: entry.lat, lng: entry.lng, description: stripPrepublishSentences(entry.description), access: entry.access ?? null,
-        nightLighting: entry.nightLighting ?? null, trackUsage: entry.trackUsage ?? null, ...entry.facilities,
-      }).returning({ id: spots.id });
+      const [spot] = await tx
+        .insert(spots)
+        .values({
+          slug: entry.slug,
+          name: entry.name,
+          nameKana: entry.nameKana,
+          prefecture: entry.prefecture,
+          city: entry.city,
+          lat: entry.lat,
+          lng: entry.lng,
+          description: stripPrepublishSentences(entry.description),
+          access: entry.access ?? null,
+          nightLighting: entry.nightLighting ?? null,
+          trackUsage: entry.trackUsage ?? null,
+          ...entry.facilities,
+        })
+        .returning({ id: spots.id });
       await tx.insert(courses).values({
-        spotId: spot.id, geojson: null, geojsonSimplified: null, distanceM: entry.course.distanceM, courseType: entry.course.courseType,
-        surface: entry.course.surface, elevationGainM: entry.course.elevationGainM ?? null, signalsCount: entry.course.signalsCount ?? null,
+        spotId: spot.id,
+        geojson: null,
+        geojsonSimplified: null,
+        distanceM: entry.course.distanceM,
+        courseType: entry.course.courseType,
+        surface: entry.course.surface,
+        elevationGainM: entry.course.elevationGainM ?? null,
+        signalsCount: entry.course.signalsCount ?? null,
       });
       if (tagIds.length) await tx.insert(spotTags).values(tagIds.map((tagId) => ({ spotId: spot.id, tagId })));
     });
@@ -136,4 +183,9 @@ async function run() {
   console.log("ルート形状(GPX)は未登録です。各スポットの編集画面からGPXをアップロードしてください。");
 }
 
-run().then(() => process.exit(0)).catch((error) => { console.error(error); process.exit(1); });
+run()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

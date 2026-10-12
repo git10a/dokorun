@@ -17,10 +17,16 @@ export async function POST(request: Request) {
   const { slug, clientId, on } = parsed.data;
   const [db, user] = [getDb(), await getUser()];
   if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const spot = await db.select({ id: spots.id }).from(spots).where(and(eq(spots.slug, slug), eq(spots.isPublished, true))).limit(1);
+  const spot = await db
+    .select({ id: spots.id })
+    .from(spots)
+    .where(and(eq(spots.slug, slug), eq(spots.isPublished, true)))
+    .limit(1);
   if (!spot[0]) return NextResponse.json({ error: "not_found" }, { status: 404 });
   if (on) {
-    await db.delete(hashiritai).where(and(eq(hashiritai.clientId, clientId), eq(hashiritai.spotId, spot[0].id), isNull(hashiritai.userId)));
+    await db
+      .delete(hashiritai)
+      .where(and(eq(hashiritai.clientId, clientId), eq(hashiritai.spotId, spot[0].id), isNull(hashiritai.userId)));
     await db.insert(hashiritai).values({ clientId, userId: user.id, spotId: spot[0].id }).onConflictDoNothing();
   } else {
     await db.delete(hashiritai).where(and(eq(hashiritai.userId, user.id), eq(hashiritai.spotId, spot[0].id)));

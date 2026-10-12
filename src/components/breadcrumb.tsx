@@ -7,7 +7,13 @@ export function Breadcrumb({ items }: { items: { name: string; href?: string }[]
       {items.map((item, index) => (
         <span key={`${index}-${item.name}`}>
           {index > 0 && " / "}
-          {item.href && index < items.length - 1 ? <Link href={item.href} className="hover:underline">{item.name}</Link> : item.name}
+          {item.href && index < items.length - 1 ? (
+            <Link href={item.href} className="hover:underline">
+              {item.name}
+            </Link>
+          ) : (
+            item.name
+          )}
         </span>
       ))}
     </nav>

@@ -10,8 +10,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const story = getPublishedStory((await params).slug);
   if (!story) notFound();
   const title = story.title.replaceAll("\n", "");
-  return { title, description: story.description, alternates: { canonical: `/stories/${story.slug}` },
-    openGraph: { title, description: story.description, type: "article", url: `/stories/${story.slug}`, publishedTime: story.publishedAt } };
+  return {
+    title,
+    description: story.description,
+    alternates: { canonical: `/stories/${story.slug}` },
+    openGraph: {
+      title,
+      description: story.description,
+      type: "article",
+      url: `/stories/${story.slug}`,
+      publishedTime: story.publishedAt,
+    },
+  };
 }
 
 export default async function StoryPage({ params }: Props) {

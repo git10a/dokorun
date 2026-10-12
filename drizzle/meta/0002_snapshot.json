@@ -104,9 +104,7 @@
       "indexes": {
         "accounts_user_idx": {
           "name": "accounts_user_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         }
       },
@@ -115,12 +113,8 @@
           "name": "accounts_user_id_users_id_fk",
           "tableFrom": "accounts",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -320,10 +314,7 @@
       "indexes": {
         "courses_spot_primary_idx": {
           "name": "courses_spot_primary_idx",
-          "columns": [
-            "spot_id",
-            "is_primary"
-          ],
+          "columns": ["spot_id", "is_primary"],
           "isUnique": false
         }
       },
@@ -332,12 +323,8 @@
           "name": "courses_spot_id_spots_id_fk",
           "tableFrom": "courses",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -389,10 +376,7 @@
       "indexes": {
         "events_name_idx": {
           "name": "events_name_idx",
-          "columns": [
-            "name",
-            "created_at"
-          ],
+          "columns": ["name", "created_at"],
           "isUnique": false
         }
       },
@@ -430,17 +414,12 @@
       "indexes": {
         "favorite_spots_pk": {
           "name": "favorite_spots_pk",
-          "columns": [
-            "user_id",
-            "spot_id"
-          ],
+          "columns": ["user_id", "spot_id"],
           "isUnique": true
         },
         "favorite_spots_spot_idx": {
           "name": "favorite_spots_spot_idx",
-          "columns": [
-            "spot_id"
-          ],
+          "columns": ["spot_id"],
           "isUnique": false
         }
       },
@@ -449,12 +428,8 @@
           "name": "favorite_spots_user_id_users_id_fk",
           "tableFrom": "favorite_spots",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -462,12 +437,8 @@
           "name": "favorite_spots_spot_id_spots_id_fk",
           "tableFrom": "favorite_spots",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -558,33 +529,23 @@
       "indexes": {
         "hashiritai_pk": {
           "name": "hashiritai_pk",
-          "columns": [
-            "client_id",
-            "spot_id"
-          ],
+          "columns": ["client_id", "spot_id"],
           "isUnique": true
         },
         "hashiritai_user_spot_unique": {
           "name": "hashiritai_user_spot_unique",
-          "columns": [
-            "user_id",
-            "spot_id"
-          ],
+          "columns": ["user_id", "spot_id"],
           "isUnique": true,
           "where": "\"hashiritai\".\"user_id\" is not null"
         },
         "hashiritai_spot_idx": {
           "name": "hashiritai_spot_idx",
-          "columns": [
-            "spot_id"
-          ],
+          "columns": ["spot_id"],
           "isUnique": false
         },
         "hashiritai_user_idx": {
           "name": "hashiritai_user_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         }
       },
@@ -593,12 +554,8 @@
           "name": "hashiritai_user_id_users_id_fk",
           "tableFrom": "hashiritai",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -606,12 +563,8 @@
           "name": "hashiritai_spot_id_spots_id_fk",
           "tableFrom": "hashiritai",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -666,12 +619,8 @@
           "name": "photos_spot_id_spots_id_fk",
           "tableFrom": "photos",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -717,10 +666,7 @@
       "indexes": {
         "run_days_pk": {
           "name": "run_days_pk",
-          "columns": [
-            "user_id",
-            "day"
-          ],
+          "columns": ["user_id", "day"],
           "isUnique": true
         }
       },
@@ -729,12 +675,8 @@
           "name": "run_days_user_id_users_id_fk",
           "tableFrom": "run_days",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -779,16 +721,12 @@
       "indexes": {
         "run_photos_key_unique": {
           "name": "run_photos_key_unique",
-          "columns": [
-            "key"
-          ],
+          "columns": ["key"],
           "isUnique": true
         },
         "run_photos_run_unique": {
           "name": "run_photos_run_unique",
-          "columns": [
-            "run_id"
-          ],
+          "columns": ["run_id"],
           "isUnique": true
         }
       },
@@ -797,12 +735,8 @@
           "name": "run_photos_run_id_runs_id_fk",
           "tableFrom": "run_photos",
           "tableTo": "runs",
-          "columnsFrom": [
-            "run_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["run_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -898,23 +832,17 @@
       "indexes": {
         "runs_spot_idx": {
           "name": "runs_spot_idx",
-          "columns": [
-            "spot_id"
-          ],
+          "columns": ["spot_id"],
           "isUnique": false
         },
         "runs_user_idx": {
           "name": "runs_user_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         },
         "runs_ran_at_idx": {
           "name": "runs_ran_at_idx",
-          "columns": [
-            "ran_at"
-          ],
+          "columns": ["ran_at"],
           "isUnique": false
         }
       },
@@ -923,12 +851,8 @@
           "name": "runs_user_id_users_id_fk",
           "tableFrom": "runs",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -936,12 +860,8 @@
           "name": "runs_spot_id_spots_id_fk",
           "tableFrom": "runs",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -949,12 +869,8 @@
           "name": "runs_course_id_courses_id_fk",
           "tableFrom": "runs",
           "tableTo": "courses",
-          "columnsFrom": [
-            "course_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["course_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "no action"
         }
@@ -1028,16 +944,12 @@
       "indexes": {
         "sessions_token_unique": {
           "name": "sessions_token_unique",
-          "columns": [
-            "token"
-          ],
+          "columns": ["token"],
           "isUnique": true
         },
         "sessions_user_idx": {
           "name": "sessions_user_idx",
-          "columns": [
-            "user_id"
-          ],
+          "columns": ["user_id"],
           "isUnique": false
         }
       },
@@ -1046,12 +958,8 @@
           "name": "sessions_user_id_users_id_fk",
           "tableFrom": "sessions",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1081,17 +989,12 @@
       "indexes": {
         "spot_communities_pk": {
           "name": "spot_communities_pk",
-          "columns": [
-            "spot_id",
-            "community_id"
-          ],
+          "columns": ["spot_id", "community_id"],
           "isUnique": true
         },
         "spot_communities_community_idx": {
           "name": "spot_communities_community_idx",
-          "columns": [
-            "community_id"
-          ],
+          "columns": ["community_id"],
           "isUnique": false
         }
       },
@@ -1100,12 +1003,8 @@
           "name": "spot_communities_spot_id_spots_id_fk",
           "tableFrom": "spot_communities",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -1113,12 +1012,8 @@
           "name": "spot_communities_community_id_communities_id_fk",
           "tableFrom": "spot_communities",
           "tableTo": "communities",
-          "columnsFrom": [
-            "community_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["community_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1148,10 +1043,7 @@
       "indexes": {
         "spot_tags_pk": {
           "name": "spot_tags_pk",
-          "columns": [
-            "spot_id",
-            "tag_id"
-          ],
+          "columns": ["spot_id", "tag_id"],
           "isUnique": true
         }
       },
@@ -1160,12 +1052,8 @@
           "name": "spot_tags_spot_id_spots_id_fk",
           "tableFrom": "spot_tags",
           "tableTo": "spots",
-          "columnsFrom": [
-            "spot_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["spot_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -1173,12 +1061,8 @@
           "name": "spot_tags_tag_id_tags_id_fk",
           "tableFrom": "spot_tags",
           "tableTo": "tags",
-          "columnsFrom": [
-            "tag_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1366,16 +1250,12 @@
       "indexes": {
         "spots_slug_unique": {
           "name": "spots_slug_unique",
-          "columns": [
-            "slug"
-          ],
+          "columns": ["slug"],
           "isUnique": true
         },
         "spots_prefecture_idx": {
           "name": "spots_prefecture_idx",
-          "columns": [
-            "prefecture"
-          ],
+          "columns": ["prefecture"],
           "isUnique": false
         }
       },
@@ -1427,9 +1307,7 @@
       "indexes": {
         "tags_slug_unique": {
           "name": "tags_slug_unique",
-          "columns": [
-            "slug"
-          ],
+          "columns": ["slug"],
           "isUnique": true
         }
       },
@@ -1477,12 +1355,8 @@
           "name": "user_avatars_user_id_users_id_fk",
           "tableFrom": "user_avatars",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1549,10 +1423,7 @@
       "indexes": {
         "user_pbs_user_event_unique": {
           "name": "user_pbs_user_event_unique",
-          "columns": [
-            "user_id",
-            "event"
-          ],
+          "columns": ["user_id", "event"],
           "isUnique": true
         }
       },
@@ -1561,12 +1432,8 @@
           "name": "user_pbs_user_id_users_id_fk",
           "tableFrom": "user_pbs",
           "tableTo": "users",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1690,16 +1557,12 @@
       "indexes": {
         "users_email_unique": {
           "name": "users_email_unique",
-          "columns": [
-            "email"
-          ],
+          "columns": ["email"],
           "isUnique": true
         },
         "users_handle_unique": {
           "name": "users_handle_unique",
-          "columns": [
-            "handle"
-          ],
+          "columns": ["handle"],
           "isUnique": true
         }
       },
@@ -1759,9 +1622,7 @@
       "indexes": {
         "verifications_identifier_idx": {
           "name": "verifications_identifier_idx",
-          "columns": [
-            "identifier"
-          ],
+          "columns": ["identifier"],
           "isUnique": false
         }
       },

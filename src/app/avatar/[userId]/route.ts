@@ -10,8 +10,11 @@ export async function GET(_request: Request, { params }: { params: Promise<{ use
   const { userId } = await params;
   const parsed = userIdSchema.safeParse(userId);
   if (!parsed.success) return new NextResponse(null, { status: 404 });
-  const rows = await getDb().select({ data: userAvatars.data, contentType: userAvatars.contentType })
-    .from(userAvatars).where(eq(userAvatars.userId, parsed.data)).limit(1);
+  const rows = await getDb()
+    .select({ data: userAvatars.data, contentType: userAvatars.contentType })
+    .from(userAvatars)
+    .where(eq(userAvatars.userId, parsed.data))
+    .limit(1);
   const row = rows[0];
   if (!row) return new NextResponse(null, { status: 404 });
   const cacheControl = "private, no-store, max-age=0";

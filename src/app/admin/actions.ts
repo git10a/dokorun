@@ -15,28 +15,48 @@ import { courseTypes, facilitiesFromForm, lightings, surfaces, type LineString }
 
 export type FormState = { message?: string; errors?: Record<string, string[]> };
 
-const optionalNumber = z.preprocess((value) => value === "" || value === null ? null : Number(value), z.number().finite().nullable());
+const optionalNumber = z.preprocess(
+  (value) => (value === "" || value === null ? null : Number(value)),
+  z.number().finite().nullable(),
+);
 const spotSchema = z.object({
   id: z.string().uuid().optional(),
   name: z.string().trim().min(1, "名前を入力してください"),
   nameKana: z.string().trim().min(1, "かなを入力してください"),
-  slug: z.string().trim().regex(/^[a-z0-9-]+$/, "slugは半角英数字とハイフンで入力してください"),
+  slug: z
+    .string()
+    .trim()
+    .regex(/^[a-z0-9-]+$/, "slugは半角英数字とハイフンで入力してください"),
   prefecture: z.string().min(1, "都道府県を選択してください"),
   city: z.string().trim().min(1, "市区町村を入力してください"),
-  lat: z.coerce.number().min(-90).max(90), lng: z.coerce.number().min(-180).max(180),
-  description: z.string().trim().min(1, "紹介文を入力してください"), access: z.string().trim().optional(),
-  distanceKm: z.coerce.number().positive("距離を入力してください"), elevationGainM: optionalNumber, signalsCount: optionalNumber,
-  courseType: z.enum(courseTypes), surface: z.enum(surfaces),
-  nightLighting: z.preprocess((value) => value === "" ? null : value, z.enum(lightings).nullable()),
-  geojson: z.string().optional(), photoUrls: z.string().optional(),
+  lat: z.coerce.number().min(-90).max(90),
+  lng: z.coerce.number().min(-180).max(180),
+  description: z.string().trim().min(1, "紹介文を入力してください"),
+  access: z.string().trim().optional(),
+  distanceKm: z.coerce.number().positive("距離を入力してください"),
+  elevationGainM: optionalNumber,
+  signalsCount: optionalNumber,
+  courseType: z.enum(courseTypes),
+  surface: z.enum(surfaces),
+  nightLighting: z.preprocess((value) => (value === "" ? null : value), z.enum(lightings).nullable()),
+  geojson: z.string().optional(),
+  photoUrls: z.string().optional(),
 });
 
 export async function login(_: FormState, formData: FormData): Promise<FormState> {
   const password = String(formData.get("password") ?? "");
-  if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) return { message: "パスワードが違います" };
-  if (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length < 32) return { message: "SESSION_SECRETを32文字以上で設定してください" };
+  if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD)
+    return { message: "パスワードが違います" };
+  if (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length < 32)
+    return { message: "SESSION_SECRETを32文字以上で設定してください" };
   const store = await cookies();
-  store.set(sessionCookieName, await createSessionToken(), { httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: "/", maxAge: 7 * 24 * 60 * 60 });
+  store.set(sessionCookieName, await createSessionToken(), {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    maxAge: 7 * 24 * 60 * 60,
+  });
   redirect("/admin?success=login");
 }
 
@@ -57,22 +77,54 @@ function flags(formData: FormData) {
 }
 
 function spotFields(data: SpotInput, formData: FormData) {
-  return { name: data.name, nameKana: data.nameKana, slug: data.slug, prefecture: data.prefecture, city: data.city, lat: data.lat, lng: data.lng, description: data.description, access: data.access || null, nightLighting: data.nightLighting, ...flags(formData) };
+  return {
+    name: data.name,
+    nameKana: data.nameKana,
+    slug: data.slug,
+    prefecture: data.prefecture,
+    city: data.city,
+    lat: data.lat,
+    lng: data.lng,
+    description: data.description,
+    access: data.access || null,
+    nightLighting: data.nightLighting,
+    ...flags(formData),
+  };
 }
 
 // コース・タグ・写真の insert 文を組み立てる(実行は呼び出し側の batch でまとめて行う)
 async function relationStatements(spotId: string, data: SpotInput, formData: FormData): Promise<BatchItem<"sqlite">[]> {
   const db = getDb();
   let geojson: LineString | null = null;
-  if (data.geojson) { try { geojson = JSON.parse(data.geojson) as LineString; } catch { geojson = null; } }
+  if (data.geojson) {
+    try {
+      geojson = JSON.parse(data.geojson) as LineString;
+    } catch {
+      geojson = null;
+    }
+  }
   const statements: BatchItem<"sqlite">[] = [
-    db.insert(courses).values({ spotId, distanceM: Math.round(data.distanceKm * 1000), elevationGainM: data.elevationGainM === null ? null : Math.round(data.elevationGainM), signalsCount: data.signalsCount === null ? null : Math.round(data.signalsCount), courseType: data.courseType, surface: data.surface, geojson, geojsonSimplified: simplifyCourseGeojson(geojson) }),
+    db.insert(courses).values({
+      spotId,
+      distanceM: Math.round(data.distanceKm * 1000),
+      elevationGainM: data.elevationGainM === null ? null : Math.round(data.elevationGainM),
+      signalsCount: data.signalsCount === null ? null : Math.round(data.signalsCount),
+      courseType: data.courseType,
+      surface: data.surface,
+      geojson,
+      geojsonSimplified: simplifyCourseGeojson(geojson),
+    }),
   ];
   const tagIds = formData.getAll("tagIds").map(String).filter(Boolean);
   const existingTags = tagIds.length ? await db.select({ id: tags.id }).from(tags).where(inArray(tags.id, tagIds)) : [];
-  if (existingTags.length) statements.push(db.insert(spotTags).values(existingTags.map((tag) => ({ spotId, tagId: tag.id }))));
-  const photoUrls = (data.photoUrls ?? "").split("\n").map((url) => url.trim()).filter(Boolean);
-  if (photoUrls.length) statements.push(db.insert(photos).values(photoUrls.map((url, sortOrder) => ({ spotId, url, sortOrder }))));
+  if (existingTags.length)
+    statements.push(db.insert(spotTags).values(existingTags.map((tag) => ({ spotId, tagId: tag.id }))));
+  const photoUrls = (data.photoUrls ?? "")
+    .split("\n")
+    .map((url) => url.trim())
+    .filter(Boolean);
+  if (photoUrls.length)
+    statements.push(db.insert(photos).values(photoUrls.map((url, sortOrder) => ({ spotId, url, sortOrder }))));
   return statements;
 }
 
@@ -84,10 +136,14 @@ export async function createSpot(_: FormState, formData: FormData): Promise<Form
   try {
     const spotId = crypto.randomUUID();
     await runAtomically([
-      getDb().insert(spots).values({ id: spotId, ...spotFields(data, formData) }),
-      ...await relationStatements(spotId, data, formData),
+      getDb()
+        .insert(spots)
+        .values({ id: spotId, ...spotFields(data, formData) }),
+      ...(await relationStatements(spotId, data, formData)),
     ]);
-  } catch (error) { return { message: isUniqueViolation(error) ? "このslugはすでに使われています" : "保存できませんでした" }; }
+  } catch (error) {
+    return { message: isUniqueViolation(error) ? "このslugはすでに使われています" : "保存できませんでした" };
+  }
   revalidateSpotCatalog(data.slug);
   redirect("/admin?success=created");
 }
@@ -95,7 +151,11 @@ export async function createSpot(_: FormState, formData: FormData): Promise<Form
 export async function updateSpot(_: FormState, formData: FormData): Promise<FormState> {
   await requireAdmin();
   const parsed = values(formData);
-  if (!parsed.success || !parsed.data.id) return { message: "入力内容を確認してください", errors: parsed.success ? { id: ["スポットIDがありません"] } : parsed.error.flatten().fieldErrors };
+  if (!parsed.success || !parsed.data.id)
+    return {
+      message: "入力内容を確認してください",
+      errors: parsed.success ? { id: ["スポットIDがありません"] } : parsed.error.flatten().fieldErrors,
+    };
   const data = parsed.data;
   const spotId = data.id!;
   const db = getDb();
@@ -103,13 +163,18 @@ export async function updateSpot(_: FormState, formData: FormData): Promise<Form
   try {
     // 付け替え(delete→insert)を1バッチにして、途中失敗でコース・タグ・写真が消えたままにならないようにする
     await runAtomically([
-      db.update(spots).set({ ...spotFields(data, formData), updatedAt: new Date() }).where(eq(spots.id, spotId)),
+      db
+        .update(spots)
+        .set({ ...spotFields(data, formData), updatedAt: new Date() })
+        .where(eq(spots.id, spotId)),
       db.delete(courses).where(eq(courses.spotId, spotId)),
       db.delete(spotTags).where(eq(spotTags.spotId, spotId)),
       db.delete(photos).where(eq(photos.spotId, spotId)),
-      ...await relationStatements(spotId, data, formData),
+      ...(await relationStatements(spotId, data, formData)),
     ]);
-  } catch { return { message: "更新できませんでした" }; }
+  } catch {
+    return { message: "更新できませんでした" };
+  }
   revalidateSpotCatalog(data.slug);
   if (previous && previous.slug !== data.slug) revalidatePath(`/spots/${previous.slug}`);
   redirect("/admin?success=updated");

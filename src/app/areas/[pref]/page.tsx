@@ -33,7 +33,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!prefecture) return { title: "エリアが見つかりません" };
   const areaSpots = await getAreaSpots(prefecture);
   if (!areaSpots.length) return { title: "エリアが見つかりません" };
-  const names = areaSpots.slice(0, 3).map((spot) => spot.name).join("、");
+  const names = areaSpots
+    .slice(0, 3)
+    .map((spot) => spot.name)
+    .join("、");
   const title = `${prefecture}のランニングコース・スポット一覧【${areaSpots.length}件】`;
   const description = `${prefecture}のランニングコースを${areaSpots.length}件掲載。${names}など、コースマップ・距離・信号の数・トイレなどの設備情報つきで走る場所を探せます。`;
   return pageMetadata({ title, description, path: `/areas/${pref}` });
@@ -48,8 +51,15 @@ export default async function AreaPage({ params }: { params: Params }) {
   const region = regionGroups.find((group) => (group.prefectures as readonly string[]).includes(prefecture));
   const neighborPrefectures = region?.prefectures.filter((name) => name !== prefecture) ?? [];
   const areaStationCount = getStationCountByPrefecture(prefecture);
-  const crumbs = [{ name: "ホーム", path: "/" }, { name: "エリアからさがす", path: "/areas" }, { name: prefecture, path: `/areas/${pref}` }];
-  const structuredData = [breadcrumbJsonLd(crumbs), spotItemListJsonLd(`${prefecture}のランニングコース・スポット一覧`, areaSpots)];
+  const crumbs = [
+    { name: "ホーム", path: "/" },
+    { name: "エリアからさがす", path: "/areas" },
+    { name: prefecture, path: `/areas/${pref}` },
+  ];
+  const structuredData = [
+    breadcrumbJsonLd(crumbs),
+    spotItemListJsonLd(`${prefecture}のランニングコース・スポット一覧`, areaSpots),
+  ];
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
       <JsonLd data={structuredData} />
@@ -57,20 +67,41 @@ export default async function AreaPage({ params }: { params: Params }) {
       <Breadcrumb items={crumbs.map((crumb) => ({ name: crumb.name, href: crumb.path }))} />
       <h1 className="text-2xl font-bold sm:text-3xl">{prefecture}のランニングコース・スポット一覧</h1>
       <p className="mt-3 leading-7 text-sub">
-        {prefecture}のランニングスポットを<strong className="text-ink">{areaSpots.length}件</strong>掲載しています。すべてのスポットにコースマップと距離・高低差・信号の数、トイレや水飲み場などの設備情報つき。
+        {prefecture}のランニングスポットを<strong className="text-ink">{areaSpots.length}件</strong>
+        掲載しています。すべてのスポットにコースマップと距離・高低差・信号の数、トイレや水飲み場などの設備情報つき。
       </p>
       <div className="mt-4">
-        <Link href={`/spots?pref=${encodeURIComponent(prefecture)}`} className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">距離やタグで絞り込む →</Link>
+        <Link
+          href={`/spots?pref=${encodeURIComponent(prefecture)}`}
+          className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream"
+        >
+          距離やタグで絞り込む →
+        </Link>
       </div>
-      {areaStationCount > 0 && <div className="mt-3"><Link href="/stations" className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">駅から探す（{areaStationCount}駅）→</Link></div>}
+      {areaStationCount > 0 && (
+        <div className="mt-3">
+          <Link
+            href="/stations"
+            className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream"
+          >
+            駅から探す（{areaStationCount}駅）→
+          </Link>
+        </div>
+      )}
       <div className="mt-8 grid gap-5 lg:grid-cols-2">
-        {areaSpots.map((spot) => <SpotCard key={spot.id} spot={spot} />)}
+        {areaSpots.map((spot) => (
+          <SpotCard key={spot.id} spot={spot} />
+        ))}
       </div>
       <section className="mt-14">
         <SectionHeading className="mb-4">条件からさがす</SectionHeading>
         <div className="flex flex-wrap gap-2.5">
           {features.map((feature) => (
-            <Link key={feature.slug} href={`/features/${feature.slug}`} className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream">
+            <Link
+              key={feature.slug}
+              href={`/features/${feature.slug}`}
+              className="rounded-full border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream"
+            >
               {feature.emoji} {feature.name}
             </Link>
           ))}
@@ -81,7 +112,9 @@ export default async function AreaPage({ params }: { params: Params }) {
           <SectionHeading className="mb-4">近くのエリア</SectionHeading>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
             {neighborPrefectures.map((name) => (
-              <Link key={name} href={`/areas/${prefectureSlug(name)}`} className="text-accent hover:underline">{name}のランニングコース</Link>
+              <Link key={name} href={`/areas/${prefectureSlug(name)}`} className="text-accent hover:underline">
+                {name}のランニングコース
+              </Link>
             ))}
           </div>
         </section>

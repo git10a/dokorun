@@ -51,7 +51,8 @@ function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
   const fs = nodeRequire("node:fs") as typeof import("node:fs");
   const dir = ".wrangler/state/v3/d1/miniflare-D1DatabaseObject";
   if (!fs.existsSync(dir)) return null;
-  const largest = fs.readdirSync(dir)
+  const largest = fs
+    .readdirSync(dir)
     .filter((file) => file.endsWith(".sqlite") && file !== "metadata.sqlite")
     .map((file) => ({ file, size: fs.statSync(`${dir}/${file}`).size }))
     .sort((a, b) => b.size - a.size)[0];
@@ -62,7 +63,7 @@ function findMiniflareD1Path(nodeRequire: NodeRequire): string | null {
 // Nodeで動くビルド・CLI用のローカルsqliteだけは同一プロセス内で再利用してよい。
 export function getDb(): Database {
   // An explicit build/test file must not be shadowed by Miniflare dev bindings.
-  if (!isWorkersRuntime && process.env.D1_LOCAL_PATH) return localFileDb ??= fromLocalFile();
+  if (!isWorkersRuntime && process.env.D1_LOCAL_PATH) return (localFileDb ??= fromLocalFile());
   const boundDb = fromBinding();
   if (boundDb) return boundDb;
   localFileDb ??= fromLocalFile();
@@ -78,6 +79,8 @@ export async function runAtomically(statements: BatchItem<"sqlite">[]) {
 
 // drizzle はドライバのエラーを cause に包んで投げるため、両方を見て UNIQUE 制約違反か判定する
 export function isUniqueViolation(error: unknown): boolean {
-  const messages = [error, (error as { cause?: unknown })?.cause].map((value) => value instanceof Error ? value.message : String(value ?? ""));
+  const messages = [error, (error as { cause?: unknown })?.cause].map((value) =>
+    value instanceof Error ? value.message : String(value ?? ""),
+  );
   return messages.some((message) => /UNIQUE constraint failed/i.test(message));
 }

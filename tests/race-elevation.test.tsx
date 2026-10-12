@@ -32,19 +32,27 @@ describe("race elevation map alignment", () => {
     expect(elevationPointAtDistance([], 0)).toBeNull();
   });
   it("keeps missing heights as gaps instead of a fabricated descent to zero", () => {
-    const points = profile.points.map((point, index) => ({ ...point, elevationM: index === 1 ? null : point.elevationM }));
+    const points = profile.points.map((point, index) => ({
+      ...point,
+      elevationM: index === 1 ? null : point.elevationM,
+    }));
     expect(elevationPointAtDistance(points, 500)?.elevationM).toBeNull();
     expect(elevationSegments(points)).toHaveLength(2);
-    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, points }} selectedDistanceM={500} onSelect={() => {}} />);
+    const markup = renderToStaticMarkup(
+      <RaceElevationChart profile={{ ...profile, points }} selectedDistanceM={500} onSelect={() => {}} />,
+    );
     expect(markup).toContain("標高データなし");
     expect(markup).toContain("標高データのない区間は線を表示していません");
   });
   it("does not treat empty, whitespace or invalid XML elevations as zero", () => {
-    const points = parseGpxPoints('<gpx><trk><trkseg><trkpt lat="35" lon="139"><ele/></trkpt><trkpt lat="35.1" lon="139"><ele> </ele></trkpt><trkpt lat="35.2" lon="139"><ele>bad</ele></trkpt><trkpt lat="35.3" lon="139"><ele>0</ele></trkpt></trkseg></trk></gpx>');
+    const points = parseGpxPoints(
+      '<gpx><trk><trkseg><trkpt lat="35" lon="139"><ele/></trkpt><trkpt lat="35.1" lon="139"><ele> </ele></trkpt><trkpt lat="35.2" lon="139"><ele>bad</ele></trkpt><trkpt lat="35.3" lon="139"><ele>0</ele></trkpt></trkseg></trk></gpx>',
+    );
     expect(points.map((point) => point.ele)).toEqual([null, null, null, 0]);
   });
   it("distinguishes missing elevation, GPX measurements and terrain estimates", () => {
-    const render = (value: typeof profile) => renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />);
+    const render = (value: typeof profile) =>
+      renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />);
     expect(render(profile)).toContain("コースデータに記録された標高");
     expect(render({ ...profile, source: "gsi" })).toContain("国土地理院の標高タイル");
     const missing = render({ ...profile, points: profile.points.map((point) => ({ ...point, elevationM: null })) });
@@ -52,7 +60,13 @@ describe("race elevation map alignment", () => {
     expect(missing).not.toContain('role="slider"');
   });
   it("shows a review notice when the route needs verification", () => {
-    const markup = renderToStaticMarkup(<RaceElevationChart profile={{ ...profile, routeReviewRequired: true }} selectedDistanceM={null} onSelect={() => {}} />);
+    const markup = renderToStaticMarkup(
+      <RaceElevationChart
+        profile={{ ...profile, routeReviewRequired: true }}
+        selectedDistanceM={null}
+        onSelect={() => {}}
+      />,
+    );
     expect(markup).toContain("コースの経路・標高を確認中です。");
   });
   it("builds aligned elevation assets for every published race course", () => {

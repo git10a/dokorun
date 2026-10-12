@@ -7,12 +7,34 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-4 sm:gap-3 md:px-6">
         <Link href="/" className="flex shrink-0 items-center" aria-label="どこラン ホーム">
-          <Image src="/brand/dokorun-wordmark-header.png" alt="どこラン" width={800} height={199} className="h-7 w-auto shrink-0 sm:h-8" priority />
+          <Image
+            src="/brand/dokorun-wordmark-header.png"
+            alt="どこラン"
+            width={800}
+            height={199}
+            className="h-7 w-auto shrink-0 sm:h-8"
+            priority
+          />
         </Link>
-        <nav aria-label="メインナビゲーション" className="flex min-w-0 flex-1 items-center justify-end gap-1 sm:gap-4 md:gap-6">
+        <nav
+          aria-label="メインナビゲーション"
+          className="flex min-w-0 flex-1 items-center justify-end gap-1 sm:gap-4 md:gap-6"
+        >
           <div className="flex min-w-0 items-center gap-1 sm:gap-4">
-            <Link href="/races" className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"><span className="sm:hidden">大会</span><span className="hidden sm:inline">大会をさがす</span></Link>
-            <Link href="/spots" className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"><span className="sm:hidden">スポット</span><span className="hidden sm:inline">スポットをさがす</span></Link>
+            <Link
+              href="/races"
+              className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"
+            >
+              <span className="sm:hidden">大会</span>
+              <span className="hidden sm:inline">大会をさがす</span>
+            </Link>
+            <Link
+              href="/spots"
+              className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"
+            >
+              <span className="sm:hidden">スポット</span>
+              <span className="hidden sm:inline">スポットをさがす</span>
+            </Link>
           </div>
           <div className="ml-1 border-l border-line pl-2 sm:ml-0 sm:border-0 sm:pl-0">
             <UserMenu />

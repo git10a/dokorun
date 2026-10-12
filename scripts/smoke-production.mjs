@@ -20,9 +20,7 @@ async function check(testCase) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15_000);
   try {
-    const headers = versionId
-      ? { "Cloudflare-Workers-Version-Overrides": `dokorun="${versionId}"` }
-      : undefined;
+    const headers = versionId ? { "Cloudflare-Workers-Version-Overrides": `dokorun="${versionId}"` } : undefined;
     const response = await fetch(`${baseUrl}${testCase.path}`, {
       headers,
       redirect: "follow",
@@ -30,7 +28,9 @@ async function check(testCase) {
     });
     const body = await response.text();
     if (!response.ok || /error code:\s*110[12]/i.test(body) || (testCase.marker && !body.includes(testCase.marker))) {
-      throw new Error(`${testCase.path} status=${response.status} cf-ray=${response.headers.get("cf-ray") ?? "-"} body=${body.slice(0, 300)}`);
+      throw new Error(
+        `${testCase.path} status=${response.status} cf-ray=${response.headers.get("cf-ray") ?? "-"} body=${body.slice(0, 300)}`,
+      );
     }
     return `${testCase.path} ${response.status} cf-ray=${response.headers.get("cf-ray") ?? "-"}`;
   } finally {
@@ -45,9 +45,11 @@ for (let iteration = 0; iteration < iterations; iteration += 1) {
 // Static Assetsは0% deploymentのVersion Overrideが常に適用されるとは限らないため、
 // 並列負荷試験は必ずWorkerを通る経路だけに限定する。静的経路は上の逐次確認で検証する。
 const concurrentCases = cases.filter(({ path }) => path !== "/healthz.txt" && path !== "/spot-gpx/kokyo.gpx");
-await Promise.all(Array.from({ length: Math.min(20, iterations * 2) }, async (_, index) => {
-  const result = await check(concurrentCases[index % concurrentCases.length]);
-  console.log(`concurrent ${result}`);
-}));
+await Promise.all(
+  Array.from({ length: Math.min(20, iterations * 2) }, async (_, index) => {
+    const result = await check(concurrentCases[index % concurrentCases.length]);
+    console.log(`concurrent ${result}`);
+  }),
+);
 
 console.log(`Smoke passed: version=${versionId ?? "active"} iterations=${iterations}`);

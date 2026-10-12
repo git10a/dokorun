@@ -19,28 +19,77 @@ export function RunCoursePanel({ slug, lat, lng, canDownloadGpx }: Props) {
   return (
     <div>
       <div className="grid grid-cols-[minmax(0,1fr)_3rem] gap-2 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_3rem]">
-        <a href={directionsUrl} target="_blank" rel="noopener noreferrer" onClick={() => track("route_start", { slug, destination: "google_maps" })} className="col-span-2 flex items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-bold transition-colors hover:bg-brand-dark sm:col-span-1">
-          <Navigation size={20} />スタート地点への行き方
+        <a
+          href={directionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track("route_start", { slug, destination: "google_maps" })}
+          className="col-span-2 flex items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-bold transition-colors hover:bg-brand-dark sm:col-span-1"
+        >
+          <Navigation size={20} />
+          スタート地点への行き方
         </a>
-        {canDownloadGpx && <>
-          <MemberGpxLink href={`/spot-gpx/${slug}.gpx`} callbackURL={`/spots/${slug}`} fileName={`${slug}.gpx`} slug={slug} className="flex min-w-0 items-center justify-center gap-2 rounded-lg border border-line bg-paper px-4 py-3 font-bold text-sub transition-colors hover:bg-cream">
-            <Download size={20} />コースをダウンロード
-          </MemberGpxLink>
-          <button type="button" aria-label="ダウンロードしたコースの使い方を表示" aria-expanded={showGpxHelp} onClick={() => { setShowGpxHelp((value) => !value); if (!showGpxHelp) track("gpx_help", { slug }); }} className="grid size-12 place-items-center rounded-lg border border-line bg-paper text-sub transition-colors hover:bg-cream hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">
-            <Info size={20} aria-hidden="true" />
-          </button>
-          {showGpxHelp && <div className="col-span-2 rounded-xl border border-line bg-cream p-4 text-left sm:col-span-3">
-            <h3 className="flex items-center gap-2 text-sm font-bold"><CircleHelp size={17} />ダウンロードしたコースの使い方</h3>
-            <p className="mt-2 text-xs leading-6 text-sub">走るコースの線が入ったファイル（GPX形式）です。対応するスマートウォッチや地図アプリに読み込むと、ルート確認やナビに使えます。</p>
-            <ol className="mt-3 space-y-2 text-xs leading-5 text-sub">
-              <li className="flex gap-2"><span className="font-bold text-ink">1.</span><span>「コースをダウンロード」でファイルを保存します。</span></li>
-              <li className="flex gap-2"><span className="font-bold text-ink">2.</span><span>このファイル形式に対応したウォッチ用アプリや地図アプリへ読み込みます。</span></li>
-              <li className="flex gap-2"><span className="font-bold text-ink">3.</span><span>ウォッチへ同期するか、アプリでコースを開いてナビに使います。</span></li>
-            </ol>
-            <p className="mt-3 text-xs leading-5 text-sub">読み込み方法はアプリごとに異なります。ファイルを保存しただけではナビは始まりません。</p>
-            <Link href="/guide/gpx" onClick={() => track("gpx_guide", { slug })} className="mt-3 inline-flex text-sm font-bold text-accent underline decoration-brand decoration-2 underline-offset-4">アプリ別の詳しい使い方を見る →</Link>
-          </div>}
-        </>}
+        {canDownloadGpx && (
+          <>
+            <MemberGpxLink
+              href={`/spot-gpx/${slug}.gpx`}
+              callbackURL={`/spots/${slug}`}
+              fileName={`${slug}.gpx`}
+              slug={slug}
+              className="flex min-w-0 items-center justify-center gap-2 rounded-lg border border-line bg-paper px-4 py-3 font-bold text-sub transition-colors hover:bg-cream"
+            >
+              <Download size={20} />
+              コースをダウンロード
+            </MemberGpxLink>
+            <button
+              type="button"
+              aria-label="ダウンロードしたコースの使い方を表示"
+              aria-expanded={showGpxHelp}
+              onClick={() => {
+                setShowGpxHelp((value) => !value);
+                if (!showGpxHelp) track("gpx_help", { slug });
+              }}
+              className="grid size-12 place-items-center rounded-lg border border-line bg-paper text-sub transition-colors hover:bg-cream hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+            >
+              <Info size={20} aria-hidden="true" />
+            </button>
+            {showGpxHelp && (
+              <div className="col-span-2 rounded-xl border border-line bg-cream p-4 text-left sm:col-span-3">
+                <h3 className="flex items-center gap-2 text-sm font-bold">
+                  <CircleHelp size={17} />
+                  ダウンロードしたコースの使い方
+                </h3>
+                <p className="mt-2 text-xs leading-6 text-sub">
+                  走るコースの線が入ったファイル（GPX形式）です。対応するスマートウォッチや地図アプリに読み込むと、ルート確認やナビに使えます。
+                </p>
+                <ol className="mt-3 space-y-2 text-xs leading-5 text-sub">
+                  <li className="flex gap-2">
+                    <span className="font-bold text-ink">1.</span>
+                    <span>「コースをダウンロード」でファイルを保存します。</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-ink">2.</span>
+                    <span>このファイル形式に対応したウォッチ用アプリや地図アプリへ読み込みます。</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-bold text-ink">3.</span>
+                    <span>ウォッチへ同期するか、アプリでコースを開いてナビに使います。</span>
+                  </li>
+                </ol>
+                <p className="mt-3 text-xs leading-5 text-sub">
+                  読み込み方法はアプリごとに異なります。ファイルを保存しただけではナビは始まりません。
+                </p>
+                <Link
+                  href="/guide/gpx"
+                  onClick={() => track("gpx_guide", { slug })}
+                  className="mt-3 inline-flex text-sm font-bold text-accent underline decoration-brand decoration-2 underline-offset-4"
+                >
+                  アプリ別の詳しい使い方を見る →
+                </Link>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

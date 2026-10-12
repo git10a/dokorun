@@ -28,7 +28,10 @@ async function main() {
 
   await db.transaction(async (tx) => {
     if (!keepLatLng) {
-      await tx.update(spots).set({ lat: gpx.startPoint.lat, lng: gpx.startPoint.lng, updatedAt: new Date() }).where(eq(spots.id, spot.id));
+      await tx
+        .update(spots)
+        .set({ lat: gpx.startPoint.lat, lng: gpx.startPoint.lng, updatedAt: new Date() })
+        .where(eq(spots.id, spot.id));
     }
     const values = {
       geojson: gpx.geojson,
@@ -40,21 +43,32 @@ async function main() {
       // courseTypeは調査時にキュレーション済みの値(track等)を保持し、上書きしない
       await tx.update(courses).set(values).where(eq(courses.id, course.id));
     } else {
-      await tx.insert(courses).values({ ...values, courseType: gpx.suggestedCourseType, spotId: spot.id, surface: "asphalt" });
+      await tx
+        .insert(courses)
+        .values({ ...values, courseType: gpx.suggestedCourseType, spotId: spot.id, surface: "asphalt" });
     }
   });
 
-  console.log(JSON.stringify({
-    slug,
-    name: spot.name,
-    previousDistanceM: course?.distanceM ?? null,
-    distanceM: Math.round(gpx.distanceM),
-    elevationGainM: gpx.elevationGainM,
-    courseType: gpx.suggestedCourseType,
-    startPoint: keepLatLng ? "維持" : gpx.startPoint,
-    points: gpx.geojson.coordinates.length,
-  }, null, 2));
+  console.log(
+    JSON.stringify(
+      {
+        slug,
+        name: spot.name,
+        previousDistanceM: course?.distanceM ?? null,
+        distanceM: Math.round(gpx.distanceM),
+        elevationGainM: gpx.elevationGainM,
+        courseType: gpx.suggestedCourseType,
+        startPoint: keepLatLng ? "維持" : gpx.startPoint,
+        points: gpx.geojson.coordinates.length,
+      },
+      null,
+      2,
+    ),
+  );
   process.exit(0);
 }
 
-void main().catch((error) => { console.error(error); process.exit(1); });
+void main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

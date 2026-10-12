@@ -28,13 +28,19 @@ export async function getSearchTags() {
 }
 
 async function loadPrefectureCounts() {
-  return getDb().select({ prefecture: spots.prefecture, count: count() }).from(spots)
-    .where(eq(spots.isPublished, true)).groupBy(spots.prefecture).orderBy(spots.prefecture);
+  return getDb()
+    .select({ prefecture: spots.prefecture, count: count() })
+    .from(spots)
+    .where(eq(spots.isPublished, true))
+    .groupBy(spots.prefecture)
+    .orderBy(spots.prefecture);
 }
 
 // エリアハブページ用: 都道府県内の全スポットをハシリタイ数順で返す
 async function loadSpotsByPrefecture(prefecture: string) {
-  const rows = await getDb().select(summarySelection).from(spots)
+  const rows = await getDb()
+    .select(summarySelection)
+    .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(spots.isPublished, true), eq(spots.prefecture, prefecture)))
     .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
@@ -44,22 +50,33 @@ async function loadSpotsByPrefecture(prefecture: string) {
 // 特集ページ(/features/{slug})の絞り込み条件。スラッグは src/lib/features.ts の定義と対応する
 function featureCondition(featureSlug: string): SQL | null {
   switch (featureSlug) {
-    case "morning-run": return spotHasTag("sunrise-view");
-    case "night-run": return eq(spots.nightLighting, "bright");
-    case "no-signals": return eq(courses.signalsCount, 0);
-    case "long-run": return sql`${courses.distanceM} >= ${longRunDistanceM}`;
-    case "track": return or(eq(courses.courseType, "track"), sql`${spots.trackUsage} is not null`)!;
-    case "water-toilet": return and(eq(spots.hasToilet, true), eq(spots.hasWaterFountain, true))!;
-    case "shower": return or(eq(spots.hasShower, true), eq(spots.hasSentoNearby, true))!;
-    case "parking": return eq(spots.hasParking, true);
-    default: return null;
+    case "morning-run":
+      return spotHasTag("sunrise-view");
+    case "night-run":
+      return eq(spots.nightLighting, "bright");
+    case "no-signals":
+      return eq(courses.signalsCount, 0);
+    case "long-run":
+      return sql`${courses.distanceM} >= ${longRunDistanceM}`;
+    case "track":
+      return or(eq(courses.courseType, "track"), sql`${spots.trackUsage} is not null`)!;
+    case "water-toilet":
+      return and(eq(spots.hasToilet, true), eq(spots.hasWaterFountain, true))!;
+    case "shower":
+      return or(eq(spots.hasShower, true), eq(spots.hasSentoNearby, true))!;
+    case "parking":
+      return eq(spots.hasParking, true);
+    default:
+      return null;
   }
 }
 
 async function loadFeatureSpots(featureSlug: string) {
   const condition = featureCondition(featureSlug);
   if (!condition) return [];
-  const rows = await getDb().select(summarySelection).from(spots)
+  const rows = await getDb()
+    .select(summarySelection)
+    .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(spots.isPublished, true), condition))
     .orderBy(desc(hashiritaiCountExpr), asc(spots.nameKana));
@@ -72,7 +89,10 @@ async function loadFeatureCounts(): Promise<Record<string, number>> {
     const condition = featureCondition(feature.slug);
     return condition ? [{ slug: feature.slug, key: `f${index}`, condition }] : [];
   });
-  const rows = await getDb().select(Object.fromEntries(counted.map(({ key, condition }) => [key, sql<number>`count(*) filter (where ${condition})`])))
+  const rows = await getDb()
+    .select(
+      Object.fromEntries(counted.map(({ key, condition }) => [key, sql<number>`count(*) filter (where ${condition})`])),
+    )
     .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(eq(spots.isPublished, true));
@@ -84,7 +104,14 @@ function searchConditions(filters: SearchFilters) {
   const conditions: SQL[] = [eq(spots.isPublished, true), eq(courses.isPrimary, true)];
   if (filters.pref) conditions.push(eq(spots.prefecture, filters.pref));
   // SQLiteのLIKEはASCIIに対して大文字小文字を区別しないため、ilike相当として使える
-  if (filters.q) conditions.push(or(like(spots.name, `%${filters.q}%`), like(spots.nameKana, `%${filters.q}%`), like(spots.city, `%${filters.q}%`))!);
+  if (filters.q)
+    conditions.push(
+      or(
+        like(spots.name, `%${filters.q}%`),
+        like(spots.nameKana, `%${filters.q}%`),
+        like(spots.city, `%${filters.q}%`),
+      )!,
+    );
   if (filters.type) conditions.push(eq(courses.courseType, filters.type as CourseType)); // 未知の値は0件になるだけ
   const selectedTagSlugs = filters.tags ?? [];
   const hasLongRunFilter = selectedTagSlugs.includes(longRunTag.slug);
@@ -114,7 +141,9 @@ export function nearOrderExpr(filters: SearchFilters) {
   if (filters.sort !== "near" || filters.lat === undefined || filters.lng === undefined) return null;
   const cosLat = Math.cos((filters.lat * Math.PI) / 180);
   // D1のSQLiteに数学関数が有効かはバージョン依存のため、power()を使わず乗算で書く
-  return asc(sql`(${spots.lat} - ${filters.lat}) * (${spots.lat} - ${filters.lat}) + ((${spots.lng} - ${filters.lng}) * ${cosLat}) * ((${spots.lng} - ${filters.lng}) * ${cosLat})`);
+  return asc(
+    sql`(${spots.lat} - ${filters.lat}) * (${spots.lat} - ${filters.lat}) + ((${spots.lng} - ${filters.lng}) * ${cosLat}) * ((${spots.lng} - ${filters.lng}) * ${cosLat})`,
+  );
 }
 
 function searchOrder(filters: SearchFilters) {
@@ -132,45 +161,75 @@ async function loadSearchSpots(filters: SearchFilters) {
   const limit = filters.limit ?? 20;
   const page = Math.max(1, filters.page ?? 1);
   const [rows, totalRows] = await Promise.all([
-    db.select(summarySelection).from(spots)
+    db
+      .select(summarySelection)
+      .from(spots)
       .innerJoin(courses, eq(courses.spotId, spots.id))
-      .where(and(...conditions)).orderBy(searchOrder(filters), asc(spots.nameKana)).limit(limit).offset((page - 1) * limit),
-    db.select({ count: count() }).from(spots).innerJoin(courses, eq(courses.spotId, spots.id)).where(and(...conditions)),
+      .where(and(...conditions))
+      .orderBy(searchOrder(filters), asc(spots.nameKana))
+      .limit(limit)
+      .offset((page - 1) * limit),
+    db
+      .select({ count: count() })
+      .from(spots)
+      .innerJoin(courses, eq(courses.spotId, spots.id))
+      .where(and(...conditions)),
   ]);
   return { spots: await addRelations(rows), total: totalRows[0]?.count ?? 0 };
 }
 
 async function loadSearchSpotsForMap(filters: SearchFilters): Promise<MapSpot[]> {
-  return getDb().select({
-    slug: spots.slug,
-    name: spots.name,
-    lat: spots.lat,
-    lng: spots.lng,
-    distanceM: courses.distanceM,
-  }).from(spots).innerJoin(courses, eq(courses.spotId, spots.id)).where(and(...searchConditions(filters)))
+  return getDb()
+    .select({
+      slug: spots.slug,
+      name: spots.name,
+      lat: spots.lat,
+      lng: spots.lng,
+      distanceM: courses.distanceM,
+    })
+    .from(spots)
+    .innerJoin(courses, eq(courses.spotId, spots.id))
+    .where(and(...searchConditions(filters)))
     .limit(300);
 }
 
 export async function getSpotSummariesBySlugs(slugs: string[]) {
   const uniqueSlugs = [...new Set(slugs)];
   if (!uniqueSlugs.length) return [];
-  const rows = await getDb().select(summarySelection).from(spots)
+  const rows = await getDb()
+    .select(summarySelection)
+    .from(spots)
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(spots.isPublished, true), inArray(spots.slug, uniqueSlugs)));
   return addRelations(rows);
 }
 
 async function loadSitemapSpots() {
-  return getDb().select({ slug: spots.slug, updatedAt: spots.updatedAt }).from(spots)
-    .where(eq(spots.isPublished, true)).orderBy(spots.slug);
+  return getDb()
+    .select({ slug: spots.slug, updatedAt: spots.updatedAt })
+    .from(spots)
+    .where(eq(spots.isPublished, true))
+    .orderBy(spots.slug);
 }
 
 const catalogCache = { revalidate: 86400, tags: ["public-catalog"] };
 export const getTags = unstable_cache(loadTags, ["public-catalog-v1", "getTags"], catalogCache);
-export const getPrefectureCounts = unstable_cache(loadPrefectureCounts, ["public-catalog-v1", "getPrefectureCounts"], catalogCache);
-export const getSpotsByPrefecture = unstable_cache(loadSpotsByPrefecture, ["public-catalog-v1", "getSpotsByPrefecture"], catalogCache);
+export const getPrefectureCounts = unstable_cache(
+  loadPrefectureCounts,
+  ["public-catalog-v1", "getPrefectureCounts"],
+  catalogCache,
+);
+export const getSpotsByPrefecture = unstable_cache(
+  loadSpotsByPrefecture,
+  ["public-catalog-v1", "getSpotsByPrefecture"],
+  catalogCache,
+);
 export const getFeatureSpots = unstable_cache(loadFeatureSpots, ["public-catalog-v1", "getFeatureSpots"], catalogCache);
-export const getFeatureCounts = unstable_cache(loadFeatureCounts, ["public-catalog-v1", "getFeatureCounts"], catalogCache);
+export const getFeatureCounts = unstable_cache(
+  loadFeatureCounts,
+  ["public-catalog-v1", "getFeatureCounts"],
+  catalogCache,
+);
 export const getSitemapSpots = unstable_cache(loadSitemapSpots, ["public-catalog-v1", "getSitemapSpots"], catalogCache);
 
 const cacheableSorts = new Set(["popular", "new", "distance_asc", "distance_desc"]);
@@ -192,21 +251,27 @@ async function catalogSearchFilters(filters: SearchFilters): Promise<SearchFilte
     if (filters.tags.length > 5 || filters.tags.some((slug) => !knownTags.has(slug))) return null;
   }
   return {
-    pref: filters.pref || undefined, type: filters.type || undefined,
+    pref: filters.pref || undefined,
+    type: filters.type || undefined,
     tags: [...new Set(filters.tags ?? [])].sort(),
-    distMin: filters.distMin, distMax: filters.distMax,
-    toilet: Boolean(filters.toilet), locker: Boolean(filters.locker),
-    sento: Boolean(filters.sento), popular: Boolean(filters.popular),
+    distMin: filters.distMin,
+    distMax: filters.distMax,
+    toilet: Boolean(filters.toilet),
+    locker: Boolean(filters.locker),
+    sento: Boolean(filters.sento),
+    popular: Boolean(filters.popular),
     sort: filters.sort || undefined,
     page: Math.max(1, Math.floor(filters.page ?? 1)),
     limit: Math.min(100, Math.max(1, Math.floor(filters.limit ?? 20))),
   };
 }
 const cachedSearch = unstable_cache(loadSearchSpots, ["public-catalog-v1", "search"], {
-  revalidate: 3600, tags: ["public-catalog"],
+  revalidate: 3600,
+  tags: ["public-catalog"],
 });
 const cachedMapSearch = unstable_cache(loadSearchSpotsForMap, ["public-catalog-v1", "map"], {
-  revalidate: 3600, tags: ["public-catalog"],
+  revalidate: 3600,
+  tags: ["public-catalog"],
 });
 export async function searchSpots(filters: SearchFilters) {
   const canonical = await catalogSearchFilters(filters);

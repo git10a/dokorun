@@ -28,7 +28,8 @@ export function haversine(a: Pick<GpxPoint, "lat" | "lng">, b: Pick<GpxPoint, "l
 // 各点までの累積距離(m)。cumulative[i] は points[0] から points[i] までの道のり
 export function cumulativeDistances(points: Pick<GpxPoint, "lat" | "lng">[]): number[] {
   const cumulative = [0];
-  for (let index = 1; index < points.length; index += 1) cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
+  for (let index = 1; index < points.length; index += 1)
+    cumulative.push(cumulative[index - 1] + haversine(points[index - 1], points[index]));
   return cumulative;
 }
 
@@ -55,9 +56,7 @@ export function pointAtDistance(points: GpxPoint[], cumulative: number[], distan
   return {
     lat: points[index - 1].lat + (points[index].lat - points[index - 1].lat) * ratio,
     lng: points[index - 1].lng + (points[index].lng - points[index - 1].lng) * ratio,
-    ele: beforeEle === null || afterEle === null
-      ? null
-      : beforeEle + (afterEle - beforeEle) * ratio,
+    ele: beforeEle === null || afterEle === null ? null : beforeEle + (afterEle - beforeEle) * ratio,
   };
 }
 
@@ -91,7 +90,10 @@ export function gpxResultFromPoints(points: GpxPoint[]): GpxResult {
   const coordinates = points.map((point): [number, number] => [point.lng, point.lat]);
   let tolerance = 0.00005;
   let simplified = simplifyLine(coordinates, tolerance);
-  while (simplified.length > 2000) { tolerance *= 2; simplified = simplifyLine(coordinates, tolerance); }
+  while (simplified.length > 2000) {
+    tolerance *= 2;
+    simplified = simplifyLine(coordinates, tolerance);
+  }
   const closed = haversine(points[0], points[points.length - 1]) <= 150;
   return {
     geojson: { type: "LineString", coordinates: simplified },

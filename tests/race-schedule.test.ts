@@ -32,6 +32,8 @@ describe("race dates", () => {
     expect(upcoming.length + finished.length).toBe(races.length);
     expect(upcoming.every((race) => raceDateKey(race)! >= todayKey)).toBe(true);
     expect(finished.every((race) => raceDateKey(race)! < todayKey)).toBe(true);
-    expect(raceSearchOptions(todayKey).map((option) => option.slug)).toEqual([...upcoming, ...finished].map((race) => race.slug));
+    expect(raceSearchOptions(todayKey).map((option) => option.slug)).toEqual(
+      [...upcoming, ...finished].map((race) => race.slug),
+    );
   });
 });

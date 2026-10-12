@@ -44,10 +44,10 @@ export async function isAdmin() {
 
 // 管理画面の server action / ページ用。middleware に加えた二重チェック
 export async function requireAdmin() {
-  if (!await isAdmin()) throw new Error("認証が必要です");
+  if (!(await isAdmin())) throw new Error("認証が必要です");
 }
 
 // 管理ページ用。middleware が守っているが、middleware を迂回された場合に備えてページ側でも確認する
 export async function requireAdminPage() {
-  if (!await isAdmin()) redirect("/admin/login");
+  if (!(await isAdmin())) redirect("/admin/login");
 }

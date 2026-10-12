@@ -38,9 +38,10 @@ export const summarySelection = {
 // 外側の spots.id が内側テーブルの id に誤解決されるため、外側の列はテーブル名つきで直書きする
 const outerSpotId = sql.raw(`"spots"."id"`);
 // 公開用スナップショットでのビルド時は、個人データを含む hashiritai の代わりに集計済みの件数を使う
-export const hashiritaiCountExpr = process.env.D1_PUBLIC_SNAPSHOT === "1"
-  ? sql<number>`coalesce((select m."wanted_count" from "build_spot_metrics" m where m."spot_id" = ${outerSpotId}), 0)`
-  : sql<number>`(select count(*) from "hashiritai" h where h."spot_id" = ${outerSpotId})`;
+export const hashiritaiCountExpr =
+  process.env.D1_PUBLIC_SNAPSHOT === "1"
+    ? sql<number>`coalesce((select m."wanted_count" from "build_spot_metrics" m where m."spot_id" = ${outerSpotId}), 0)`
+    : sql<number>`(select count(*) from "hashiritai" h where h."spot_id" = ${outerSpotId})`;
 export const publicRunsCountExpr = sql<number>`(select count(*) from "runs" r where r."spot_id" = ${outerSpotId} and r."visibility" = 'public')`;
 
 export function spotHasTag(tagSlug: string): SQL {
@@ -58,24 +59,38 @@ type RelationRow = Omit<SpotSummary, "photoUrl" | "tags"> & { courseType: Course
 
 export function loadPhotoRows(spotIds: string[]): Promise<PhotoRow[]> {
   if (!spotIds.length) return Promise.resolve([]);
-  return getDb().select({ spotId: photos.spotId, url: photos.url, sortOrder: photos.sortOrder }).from(photos)
-    .where(inArray(photos.spotId, spotIds)).orderBy(photos.sortOrder);
+  return getDb()
+    .select({ spotId: photos.spotId, url: photos.url, sortOrder: photos.sortOrder })
+    .from(photos)
+    .where(inArray(photos.spotId, spotIds))
+    .orderBy(photos.sortOrder);
 }
 
 export function loadTagRows(spotIds: string[]): Promise<TagRow[]> {
   if (!spotIds.length) return Promise.resolve([]);
-  return getDb().select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name }).from(spotTags)
-    .innerJoin(tags, eq(spotTags.tagId, tags.id)).where(inArray(spotTags.spotId, spotIds)).orderBy(tags.sortOrder);
+  return getDb()
+    .select({ spotId: spotTags.spotId, slug: tags.slug, name: tags.name })
+    .from(spotTags)
+    .innerJoin(tags, eq(spotTags.tagId, tags.id))
+    .where(inArray(spotTags.spotId, spotIds))
+    .orderBy(tags.sortOrder);
 }
 
 // 取得済みの写真・タグを各行に付ける(先頭写真をサムネイルに、仮想タグも付与)
-export function decorateRows<T extends RelationRow>(rows: T[], photoRows: PhotoRow[], tagRows: TagRow[]): (SpotSummary & T)[] {
+export function decorateRows<T extends RelationRow>(
+  rows: T[],
+  photoRows: PhotoRow[],
+  tagRows: TagRow[],
+): (SpotSummary & T)[] {
   const photosBySpot = groupByMap(photoRows, (photo) => photo.spotId);
   const tagsBySpot = groupByMap(tagRows, (tag) => tag.spotId);
   return rows.map((row) => ({
     ...row,
     photoUrl: photosBySpot.get(row.id)?.[0]?.url ?? null,
-    tags: withVirtualTags((tagsBySpot.get(row.id) ?? []).map(({ slug, name }) => ({ slug, name })), row),
+    tags: withVirtualTags(
+      (tagsBySpot.get(row.id) ?? []).map(({ slug, name }) => ({ slug, name })),
+      row,
+    ),
   }));
 }
 

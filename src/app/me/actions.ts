@@ -16,13 +16,23 @@ export type AvatarState = { status?: "saved" | "error"; message?: string };
 
 const profileSchema = z.object({
   name: z.string().trim().min(1, "表示名を入力してください").max(50, "表示名は50文字までです"),
-  handle: z.string().trim().toLowerCase().regex(/^[a-z0-9][a-z0-9-]{2,29}$/, "3〜30文字の半角英数字・ハイフンで入力してください"),
+  handle: z
+    .string()
+    .trim()
+    .toLowerCase()
+    .regex(/^[a-z0-9][a-z0-9-]{2,29}$/, "3〜30文字の半角英数字・ハイフンで入力してください"),
   bio: z.string().trim().max(300, "自己紹介は300文字までです"),
   instagram: z.string().trim().max(120).optional(),
   xHandle: z.string().trim().max(120).optional(),
   strava: z.string().trim().max(120).optional(),
-  runningSinceYear: z.preprocess((value) => value === "" ? null : Number(value), z.number().int().min(1950).max(jstYear()).nullable()),
-  runningSinceMonth: z.preprocess((value) => value === "" ? null : Number(value), z.number().int().min(1).max(12).nullable()),
+  runningSinceYear: z.preprocess(
+    (value) => (value === "" ? null : Number(value)),
+    z.number().int().min(1950).max(jstYear()).nullable(),
+  ),
+  runningSinceMonth: z.preprocess(
+    (value) => (value === "" ? null : Number(value)),
+    z.number().int().min(1).max(12).nullable(),
+  ),
 });
 
 const allowedAvatarTypes = new Set(["image/webp", "image/jpeg", "image/png"]);
@@ -36,7 +46,8 @@ function normalizeOptional(value: string | undefined, normalize: (value: string)
 export async function updateProfile(_: ProfileState, formData: FormData): Promise<ProfileState> {
   const user = await requireUser("/me");
   const parsed = profileSchema.safeParse(Object.fromEntries(formData.entries()));
-  if (!parsed.success) return { status: "error", message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
+  if (!parsed.success)
+    return { status: "error", message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
   const instagram = normalizeOptional(parsed.data.instagram, normalizeInstagram);
   const xHandle = normalizeOptional(parsed.data.xHandle, normalizeXHandle);
   const strava = normalizeOptional(parsed.data.strava, normalizeStrava);
@@ -47,19 +58,23 @@ export async function updateProfile(_: ProfileState, formData: FormData): Promis
   if (Object.keys(errors).length) return { status: "error", message: "入力内容を確認してください", errors };
   const runningSinceMonth = parsed.data.runningSinceYear ? parsed.data.runningSinceMonth : null;
   try {
-    await getDb().update(users).set({
-      name: parsed.data.name,
-      handle: parsed.data.handle,
-      bio: parsed.data.bio || null,
-      instagram,
-      xHandle,
-      strava,
-      runningSinceYear: parsed.data.runningSinceYear,
-      runningSinceMonth,
-      updatedAt: new Date(),
-    }).where(eq(users.id, user.id));
+    await getDb()
+      .update(users)
+      .set({
+        name: parsed.data.name,
+        handle: parsed.data.handle,
+        bio: parsed.data.bio || null,
+        instagram,
+        xHandle,
+        strava,
+        runningSinceYear: parsed.data.runningSinceYear,
+        runningSinceMonth,
+        updatedAt: new Date(),
+      })
+      .where(eq(users.id, user.id));
   } catch (error) {
-    if (error instanceof Error && error.message.toLowerCase().includes("unique")) return { status: "error", message: "このハンドルはすでに使われています" };
+    if (error instanceof Error && error.message.toLowerCase().includes("unique"))
+      return { status: "error", message: "このハンドルはすでに使われています" };
     return { status: "error", message: "保存できませんでした。時間をおいて再度お試しください" };
   }
   revalidatePath("/me");
@@ -73,11 +88,14 @@ export async function updateAvatar(formData: FormData): Promise<AvatarState> {
   if (!user) return { status: "error", message: "ログインしてください" };
   const file = formData.get("file");
   if (!(file instanceof File)) return { status: "error", message: "画像が指定されていません" };
-  if (!allowedAvatarTypes.has(file.type)) return { status: "error", message: "webp・jpeg・pngのみアップロードできます" };
+  if (!allowedAvatarTypes.has(file.type))
+    return { status: "error", message: "webp・jpeg・pngのみアップロードできます" };
   if (file.size > maxAvatarBytes) return { status: "error", message: "画像サイズが大きすぎます" };
   const data = Buffer.from(await file.arrayBuffer()).toString("base64");
   const db = getDb();
-  await db.insert(userAvatars).values({ userId: user.id, data, contentType: file.type })
+  await db
+    .insert(userAvatars)
+    .values({ userId: user.id, data, contentType: file.type })
     .onConflictDoUpdate({ target: userAvatars.userId, set: { data, contentType: file.type, updatedAt: new Date() } });
   await db.update(users).set({ customAvatarAt: new Date() }).where(eq(users.id, user.id));
   revalidatePath(`/u/${user.handle}`);
@@ -117,7 +135,14 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
     const hours = hourValue === "" ? 0 : Number(hourValue);
     const minutes = minuteValue === "" ? 0 : Number(minuteValue);
     const seconds = secondValue === "" ? 0 : Number(secondValue);
-    if (![hours, minutes, seconds].every(Number.isInteger) || hours < 0 || minutes < 0 || minutes > 59 || seconds < 0 || seconds > 59) {
+    if (
+      ![hours, minutes, seconds].every(Number.isInteger) ||
+      hours < 0 ||
+      minutes < 0 ||
+      minutes > 59 ||
+      seconds < 0 ||
+      seconds > 59
+    ) {
       errors[event.key] = [`${event.label}の時・分・秒を確認してください`];
       continue;
     }
@@ -131,8 +156,13 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
     if (update.timeS === null) {
       await db.delete(userPbs).where(and(eq(userPbs.userId, user.id), eq(userPbs.event, update.event)));
     } else {
-      await db.insert(userPbs).values({ userId: user.id, event: update.event, timeS: update.timeS, competitionName: update.competitionName })
-        .onConflictDoUpdate({ target: [userPbs.userId, userPbs.event], set: { timeS: update.timeS, competitionName: update.competitionName, updatedAt: new Date() } });
+      await db
+        .insert(userPbs)
+        .values({ userId: user.id, event: update.event, timeS: update.timeS, competitionName: update.competitionName })
+        .onConflictDoUpdate({
+          target: [userPbs.userId, userPbs.event],
+          set: { timeS: update.timeS, competitionName: update.competitionName, updatedAt: new Date() },
+        });
     }
   }
   revalidatePath("/me");
@@ -142,13 +172,18 @@ export async function updatePbs(_: PbState, formData: FormData): Promise<PbState
 
 export async function toggleFavorite(spotId: string, on: boolean) {
   const user = await requireUser("/spots");
-  const spot = await getDb().select({ id: spots.id, slug: spots.slug }).from(spots)
-    .where(and(eq(spots.id, spotId), eq(spots.isPublished, true))).limit(1);
+  const spot = await getDb()
+    .select({ id: spots.id, slug: spots.slug })
+    .from(spots)
+    .where(and(eq(spots.id, spotId), eq(spots.isPublished, true)))
+    .limit(1);
   if (!spot[0]) return { ok: false };
   if (on) {
     await getDb().insert(favoriteSpots).values({ userId: user.id, spotId }).onConflictDoNothing();
   } else {
-    await getDb().delete(favoriteSpots).where(and(eq(favoriteSpots.userId, user.id), eq(favoriteSpots.spotId, spotId)));
+    await getDb()
+      .delete(favoriteSpots)
+      .where(and(eq(favoriteSpots.userId, user.id), eq(favoriteSpots.spotId, spotId)));
   }
   revalidatePath("/me");
   revalidatePath("/me/favorites");

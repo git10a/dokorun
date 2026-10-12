@@ -11,9 +11,21 @@ const assetDataUri = (path: string, mime: string) =>
 
 // 大会カードは scripts/build-race-thumbnails.ts で生成したコースマップを使う
 const maps = [
-  { src: assetDataUri("public/race-thumbs/tokyo-marathon.webp", "image/webp"), name: "東京マラソン", meta: "コースマップ / ダウンロード" },
-  { src: assetDataUri("public/race-thumbs/osaka-marathon.webp", "image/webp"), name: "大阪マラソン", meta: "高低図 / 完走者の体験" },
-  { src: assetDataUri("public/race-thumbs/kobe-marathon.webp", "image/webp"), name: "神戸マラソン", meta: "コースマップ / ダウンロード" },
+  {
+    src: assetDataUri("public/race-thumbs/tokyo-marathon.webp", "image/webp"),
+    name: "東京マラソン",
+    meta: "コースマップ / ダウンロード",
+  },
+  {
+    src: assetDataUri("public/race-thumbs/osaka-marathon.webp", "image/webp"),
+    name: "大阪マラソン",
+    meta: "高低図 / 完走者の体験",
+  },
+  {
+    src: assetDataUri("public/race-thumbs/kobe-marathon.webp", "image/webp"),
+    name: "神戸マラソン",
+    meta: "コースマップ / ダウンロード",
+  },
 ];
 
 const ran = assetDataUri("public/characters/ran-happy.png", "image/png");

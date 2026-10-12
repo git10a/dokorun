@@ -96,7 +96,18 @@ export function AvatarUploader({ user }: { user: AvatarUser }) {
     <section className="mt-6 rounded-xl border border-line bg-paper p-5">
       <div className="flex items-center gap-4">
         <span className="grid size-16 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-cream">
-          {currentUrl ? <img src={currentUrl} alt="" width={64} height={64} referrerPolicy="no-referrer" className="h-full w-full object-cover" /> : <span className="text-xl font-black">走</span>}
+          {currentUrl ? (
+            <img
+              src={currentUrl}
+              alt=""
+              width={64}
+              height={64}
+              referrerPolicy="no-referrer"
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <span className="text-xl font-black">走</span>
+          )}
         </span>
         <div>
           <h3 className="font-bold">アバター</h3>
@@ -104,13 +115,39 @@ export function AvatarUploader({ user }: { user: AvatarUser }) {
         </div>
       </div>
       <div className="mt-5 flex flex-wrap items-center gap-3">
-        <input ref={inputRef} type="file" accept="image/*" className="hidden" onChange={(event) => {
-          const file = event.target.files?.[0];
-          if (file) void handleFile(file);
-        }} />
-        <button type="button" disabled={pending} onClick={() => inputRef.current?.click()} className="rounded-lg bg-brand px-4 py-2 text-sm font-bold disabled:opacity-60">{pending ? "処理中…" : "画像を選ぶ"}</button>
-        {user.customAvatarAt && <button type="button" disabled={pending} onClick={handleDelete} className="rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream disabled:opacity-60">画像を削除する</button>}
-        {message && <p role="status" className="text-sm font-bold text-sub">{message}</p>}
+        <input
+          ref={inputRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={(event) => {
+            const file = event.target.files?.[0];
+            if (file) void handleFile(file);
+          }}
+        />
+        <button
+          type="button"
+          disabled={pending}
+          onClick={() => inputRef.current?.click()}
+          className="rounded-lg bg-brand px-4 py-2 text-sm font-bold disabled:opacity-60"
+        >
+          {pending ? "処理中…" : "画像を選ぶ"}
+        </button>
+        {user.customAvatarAt && (
+          <button
+            type="button"
+            disabled={pending}
+            onClick={handleDelete}
+            className="rounded-lg border border-line px-4 py-2 text-sm font-bold hover:bg-cream disabled:opacity-60"
+          >
+            画像を削除する
+          </button>
+        )}
+        {message && (
+          <p role="status" className="text-sm font-bold text-sub">
+            {message}
+          </p>
+        )}
       </div>
     </section>
   );

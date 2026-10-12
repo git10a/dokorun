@@ -22,7 +22,10 @@ const spotEditSchema = z.object({
   access: z.string().trim().max(1000, "アクセスは1000文字までです"),
   courseType: z.enum(courseTypes),
   surface: z.enum(surfaces),
-  signalsCount: z.string().trim().regex(/^\d{0,3}$/, "信号数は0〜999の数字で入力してください"),
+  signalsCount: z
+    .string()
+    .trim()
+    .regex(/^\d{0,3}$/, "信号数は0〜999の数字で入力してください"),
   nightLighting: z.enum(["", ...lightings]),
 });
 
@@ -38,14 +41,33 @@ export async function updateSpotInfo(_: SpotEditState, formData: FormData): Prom
   const facilities = facilitiesFromForm(formData);
   const db = getDb();
   const { start, end } = jstDayBounds();
-  const daily = await db.select({ count: count() }).from(events)
-    .where(and(eq(events.name, "spot_edit"), gte(events.createdAt, start), lt(events.createdAt, end), sql`json_extract(${events.meta}, '$.userId') = ${user.id}`));
+  const daily = await db
+    .select({ count: count() })
+    .from(events)
+    .where(
+      and(
+        eq(events.name, "spot_edit"),
+        gte(events.createdAt, start),
+        lt(events.createdAt, end),
+        sql`json_extract(${events.meta}, '$.userId') = ${user.id}`,
+      ),
+    );
   if ((daily[0]?.count ?? 0) >= 10) return { message: "1日に修正できるのは10回までです。また明日お願いします" };
-  const current = (await db.select().from(spots)
-    .where(and(eq(spots.id, data.spotId), eq(spots.slug, data.spotSlug), eq(spots.isPublished, true))).limit(1))[0];
+  const current = (
+    await db
+      .select()
+      .from(spots)
+      .where(and(eq(spots.id, data.spotId), eq(spots.slug, data.spotSlug), eq(spots.isPublished, true)))
+      .limit(1)
+  )[0];
   if (!current) return { message: "スポットが見つかりません" };
-  const currentCourse = (await db.select({ courseType: courses.courseType, surface: courses.surface, signalsCount: courses.signalsCount })
-    .from(courses).where(and(eq(courses.spotId, current.id), eq(courses.isPrimary, true))).limit(1))[0];
+  const currentCourse = (
+    await db
+      .select({ courseType: courses.courseType, surface: courses.surface, signalsCount: courses.signalsCount })
+      .from(courses)
+      .where(and(eq(courses.spotId, current.id), eq(courses.isPrimary, true)))
+      .limit(1)
+  )[0];
   const nextSpot = {
     name: data.name,
     nameKana: data.nameKana,
@@ -74,9 +96,23 @@ export async function updateSpotInfo(_: SpotEditState, formData: FormData): Prom
   if (!Object.keys(changes).length) redirect(`/spots/${data.spotSlug}?posted=info`);
   // スポット・コースの更新と監査ログを1バッチにして、記録の欠けた変更が残らないようにする
   await runAtomically([
-    db.update(spots).set({ ...nextSpot, updatedAt: new Date() }).where(eq(spots.id, current.id)),
-    ...(currentCourse ? [db.update(courses).set(nextCourse).where(and(eq(courses.spotId, current.id), eq(courses.isPrimary, true)))] : []),
-    db.insert(events).values({ name: "spot_edit", path: `/spots/${data.spotSlug}`, meta: { userId: user.id, spotId: current.id, changes } }),
+    db
+      .update(spots)
+      .set({ ...nextSpot, updatedAt: new Date() })
+      .where(eq(spots.id, current.id)),
+    ...(currentCourse
+      ? [
+          db
+            .update(courses)
+            .set(nextCourse)
+            .where(and(eq(courses.spotId, current.id), eq(courses.isPrimary, true))),
+        ]
+      : []),
+    db.insert(events).values({
+      name: "spot_edit",
+      path: `/spots/${data.spotSlug}`,
+      meta: { userId: user.id, spotId: current.id, changes },
+    }),
   ]);
   revalidateSpotCatalog(data.spotSlug);
   redirect(`/spots/${data.spotSlug}?posted=info`);

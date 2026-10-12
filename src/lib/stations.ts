@@ -81,8 +81,10 @@ export function getNearbyLineIndex() {
       .map((station) => [Number(station.lat.toFixed(2)), Number(station.lng.toFixed(2))] as [number, number]);
     if (!coords.length) return [];
     const sampleCount = Math.min(4, coords.length);
-    const points = Array.from({ length: sampleCount }, (_, index) =>
-      coords[Math.floor((index * (coords.length - 1)) / Math.max(1, sampleCount - 1))]);
+    const points = Array.from(
+      { length: sampleCount },
+      (_, index) => coords[Math.floor((index * (coords.length - 1)) / Math.max(1, sampleCount - 1))],
+    );
     return [{ slug: line.slug, name: line.name, stationCount: line.stations.length, points }];
   });
 }

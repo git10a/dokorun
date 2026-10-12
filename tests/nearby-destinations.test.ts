@@ -1,15 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { getNearbyDestinationHighlights, getNearbyDestinations, getNearbyDestinationsForPurpose, getPrimaryNearbyDestinationRating, googleMapsPlaceUrl } from "@/lib/nearby-destinations";
+import {
+  getNearbyDestinationHighlights,
+  getNearbyDestinations,
+  getNearbyDestinationsForPurpose,
+  getPrimaryNearbyDestinationRating,
+  googleMapsPlaceUrl,
+} from "@/lib/nearby-destinations";
 
 describe("nearby destinations", () => {
   it("returns the researched places for a listed spot", () => {
     const places = getNearbyDestinations("shikishima-park");
 
     expect(places).toHaveLength(2);
-    expect(places.map((place) => place.name)).toEqual([
-      "SHIKISHIMA COFFEE FACTORY",
-      "敷島公園ばら園",
-    ]);
+    expect(places.map((place) => place.name)).toEqual(["SHIKISHIMA COFFEE FACTORY", "敷島公園ばら園"]);
   });
 
   it("keeps spots with no accepted candidates empty", () => {
@@ -79,6 +82,8 @@ describe("nearby destinations", () => {
     const rating = getPrimaryNearbyDestinationRating(place);
 
     expect(rating).toMatchObject({ platform: "Tabelog", rating: 3.73, reviewCount: 1028 });
-    expect(getNearbyDestinationHighlights(place)).toEqual(expect.arrayContaining(["百名店", "朝9時から", "テイクアウト可", "テラス席"]));
+    expect(getNearbyDestinationHighlights(place)).toEqual(
+      expect.arrayContaining(["百名店", "朝9時から", "テイクアウト可", "テラス席"]),
+    );
   });
 });

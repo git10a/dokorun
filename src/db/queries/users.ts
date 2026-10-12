@@ -6,7 +6,9 @@ import { addRelations, primaryCourseJoin, summarySelection } from "./spot-rows";
 // ユーザー単位のデータ(マイページ・公開プロフィール)
 
 export async function getUserHashiritai(userId: string) {
-  const rows = await getDb().select(summarySelection).from(hashiritai)
+  const rows = await getDb()
+    .select(summarySelection)
+    .from(hashiritai)
     .innerJoin(spots, eq(spots.id, hashiritai.spotId))
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(hashiritai.userId, userId), eq(spots.isPublished, true)))
@@ -15,7 +17,9 @@ export async function getUserHashiritai(userId: string) {
 }
 
 export async function getUserFavorites(userId: string) {
-  const rows = await getDb().select(summarySelection).from(favoriteSpots)
+  const rows = await getDb()
+    .select(summarySelection)
+    .from(favoriteSpots)
     .innerJoin(spots, eq(spots.id, favoriteSpots.spotId))
     .innerJoin(courses, primaryCourseJoin)
     .where(and(eq(favoriteSpots.userId, userId), eq(spots.isPublished, true)))
@@ -28,11 +32,23 @@ export async function getUserFavorites(userId: string) {
 export async function getStampBook(userId: string, slugs: readonly string[]) {
   if (!slugs.length) return [];
   const db = getDb();
-  const spotRows = await db.select({ id: spots.id, slug: spots.slug, name: spots.name, prefecture: spots.prefecture })
-    .from(spots).where(and(inArray(spots.slug, [...slugs]), eq(spots.isPublished, true)));
+  const spotRows = await db
+    .select({ id: spots.id, slug: spots.slug, name: spots.name, prefecture: spots.prefecture })
+    .from(spots)
+    .where(and(inArray(spots.slug, [...slugs]), eq(spots.isPublished, true)));
   if (!spotRows.length) return [];
-  const countRows = await db.select({ spotId: runs.spotId, runCount: count() }).from(runs)
-    .where(and(eq(runs.userId, userId), inArray(runs.spotId, spotRows.map((row) => row.id))))
+  const countRows = await db
+    .select({ spotId: runs.spotId, runCount: count() })
+    .from(runs)
+    .where(
+      and(
+        eq(runs.userId, userId),
+        inArray(
+          runs.spotId,
+          spotRows.map((row) => row.id),
+        ),
+      ),
+    )
     .groupBy(runs.spotId);
   const countMap = new Map(countRows.map((row) => [row.spotId, row.runCount]));
   return spotRows.map(({ id, ...row }) => ({ ...row, runCount: countMap.get(id) ?? 0 }));
@@ -64,8 +80,11 @@ export async function getProfileUserById(userId: string) {
 }
 
 export async function getUserPbs(userId: string) {
-  return getDb().select({ event: userPbs.event, timeS: userPbs.timeS, competitionName: userPbs.competitionName }).from(userPbs)
-    .where(eq(userPbs.userId, userId)).orderBy(userPbs.event);
+  return getDb()
+    .select({ event: userPbs.event, timeS: userPbs.timeS, competitionName: userPbs.competitionName })
+    .from(userPbs)
+    .where(eq(userPbs.userId, userId))
+    .orderBy(userPbs.event);
 }
 
 const runSelection = {
@@ -81,27 +100,48 @@ const runSelection = {
 };
 
 export async function getPublicRunsByUser(userId: string, limit = 10) {
-  return getDb().select(runSelection).from(runs)
+  return getDb()
+    .select(runSelection)
+    .from(runs)
     .innerJoin(spots, eq(spots.id, runs.spotId))
-    .leftJoin(courses, eq(courses.id, runs.courseId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
+    .leftJoin(courses, eq(courses.id, runs.courseId))
+    .leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
     .where(and(eq(runs.userId, userId), eq(runs.visibility, "public"), eq(spots.isPublished, true)))
     .orderBy(desc(runs.ranAt), desc(runs.createdAt))
     .limit(limit);
 }
 
 export async function getUserRuns(userId: string) {
-  return getDb().select({ ...runSelection, visibility: runs.visibility }).from(runs)
+  return getDb()
+    .select({ ...runSelection, visibility: runs.visibility })
+    .from(runs)
     .innerJoin(spots, eq(spots.id, runs.spotId))
-    .leftJoin(courses, eq(courses.id, runs.courseId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
-    .where(eq(runs.userId, userId)).orderBy(desc(runs.ranAt), desc(runs.createdAt));
+    .leftJoin(courses, eq(courses.id, runs.courseId))
+    .leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
+    .where(eq(runs.userId, userId))
+    .orderBy(desc(runs.ranAt), desc(runs.createdAt));
 }
 
 export async function getUserRun(id: string, userId: string) {
-  const rows = await getDb().select({
-    id: runs.id, userId: runs.userId, spotId: runs.spotId, courseId: runs.courseId, ranAt: runs.ranAt,
-    distanceM: runs.distanceM, durationS: runs.durationS, comment: runs.comment, visibility: runs.visibility,
-    photoKey: runPhotos.key,
-    spotName: spots.name, spotSlug: spots.slug,
-  }).from(runs).innerJoin(spots, eq(spots.id, runs.spotId)).leftJoin(runPhotos, eq(runPhotos.runId, runs.id)).where(and(eq(runs.id, id), eq(runs.userId, userId))).limit(1);
+  const rows = await getDb()
+    .select({
+      id: runs.id,
+      userId: runs.userId,
+      spotId: runs.spotId,
+      courseId: runs.courseId,
+      ranAt: runs.ranAt,
+      distanceM: runs.distanceM,
+      durationS: runs.durationS,
+      comment: runs.comment,
+      visibility: runs.visibility,
+      photoKey: runPhotos.key,
+      spotName: spots.name,
+      spotSlug: spots.slug,
+    })
+    .from(runs)
+    .innerJoin(spots, eq(spots.id, runs.spotId))
+    .leftJoin(runPhotos, eq(runPhotos.runId, runs.id))
+    .where(and(eq(runs.id, id), eq(runs.userId, userId)))
+    .limit(1);
   return rows[0] ?? null;
 }

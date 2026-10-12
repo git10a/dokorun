@@ -29,9 +29,7 @@ export const races: RaceDef[] = [
     prefecture: "愛媛県",
     startFinish: "愛媛県庁前スタート、城山公園（堀之内）フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "dogo-matsuyama-castle" },
-    ],
+    spots: [{ slug: "dogo-matsuyama-castle" }],
   },
   {
     slug: "saitama-marathon",
@@ -42,9 +40,7 @@ export const races: RaceDef[] = [
     prefecture: "埼玉県",
     startFinish: "GMOアリーナさいたま（さいたまスーパーアリーナ）周辺発着",
     distanceLabel: "フルマラソン・8km",
-    spots: [
-      { slug: "saitama-stadium-park" },
-    ],
+    spots: [{ slug: "saitama-stadium-park" }],
   },
   {
     slug: "beppu-oita-marathon",
@@ -70,11 +66,7 @@ export const races: RaceDef[] = [
     prefecture: "京都府",
     startFinish: "たけびしスタジアム京都（西京極総合運動公園）スタート、平安神宮前フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "kamogawa-sanjo-demachiyanagi" },
-      { slug: "kyoto-gyoen" },
-      { slug: "takaragaike-park" },
-    ],
+    spots: [{ slug: "kamogawa-sanjo-demachiyanagi" }, { slug: "kyoto-gyoen" }, { slug: "takaragaike-park" }],
   },
   {
     slug: "osaka-marathon",
@@ -85,11 +77,7 @@ export const races: RaceDef[] = [
     prefecture: "大阪府",
     startFinish: "大阪府庁前スタート、大阪城公園フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "osakajo" },
-      { slug: "nagai-park" },
-      { slug: "yodogawa-nishinakajima" },
-    ],
+    spots: [{ slug: "osakajo" }, { slug: "nagai-park" }, { slug: "yodogawa-nishinakajima" }],
   },
   {
     slug: "tokyo-marathon",
@@ -116,11 +104,7 @@ export const races: RaceDef[] = [
     prefecture: "愛知県",
     startFinish: "バンテリンドーム ナゴヤ発着",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "meijo" },
-      { slug: "tsurumai-park" },
-      { slug: "yamazaki-river-kawanabashi-ishikawabashi" },
-    ],
+    spots: [{ slug: "meijo" }, { slug: "tsurumai-park" }, { slug: "yamazaki-river-kawanabashi-ishikawabashi" }],
   },
   {
     slug: "itabashi-city-marathon",
@@ -131,10 +115,7 @@ export const races: RaceDef[] = [
     prefecture: "東京都",
     startFinish: "荒川河川敷(板橋・浮間エリア)発着",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "arakawa" },
-      { slug: "ukima-park" },
-    ],
+    spots: [{ slug: "arakawa" }, { slug: "ukima-park" }],
   },
   {
     slug: "hokkaido-marathon",
@@ -145,10 +126,7 @@ export const races: RaceDef[] = [
     prefecture: "北海道",
     startFinish: "大通公園（駅前通・大通西4丁目）発着",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "nakajima-park" },
-      { slug: "makomanai-park" },
-    ],
+    spots: [{ slug: "nakajima-park" }, { slug: "makomanai-park" }],
   },
   {
     slug: "tazawako-marathon",
@@ -159,9 +137,7 @@ export const races: RaceDef[] = [
     prefecture: "秋田県",
     startFinish: "田沢湖マラソン特設会場(田沢湖畔・春山)発着",
     distanceLabel: "フルマラソン・20km・10km",
-    spots: [
-      { slug: "tazawako-loop" },
-    ],
+    spots: [{ slug: "tazawako-loop" }],
   },
   {
     slug: "yokohama-marathon",
@@ -172,11 +148,7 @@ export const races: RaceDef[] = [
     prefecture: "神奈川県",
     startFinish: "横浜ランドマークタワー前スタート、パシフィコ横浜臨港パークフィニッシュ",
     distanceLabel: "フルマラソン・約20.3km・約7km",
-    spots: [
-      { slug: "rinko-park" },
-      { slug: "negishi-forest-park" },
-      { slug: "mitsuzawa-park" },
-    ],
+    spots: [{ slug: "rinko-park" }, { slug: "negishi-forest-park" }, { slug: "mitsuzawa-park" }],
   },
   {
     slug: "mito-komon-marathon",
@@ -187,9 +159,7 @@ export const races: RaceDef[] = [
     prefecture: "茨城県",
     startFinish: "南町2丁目交差点スタート、茨城県三の丸庁舎フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "senbako" },
-    ],
+    spots: [{ slug: "senbako" }],
   },
   {
     slug: "kanazawa-marathon",
@@ -200,10 +170,7 @@ export const races: RaceDef[] = [
     prefecture: "石川県",
     startFinish: "しいのき迎賓館前スタート、石川県西部緑地公園陸上競技場フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "kanazawa-castle-loop" },
-      { slug: "saigawa-kasenjiki" },
-    ],
+    spots: [{ slug: "kanazawa-castle-loop" }, { slug: "saigawa-kasenjiki" }],
   },
   {
     slug: "suwako-marathon",
@@ -214,9 +181,7 @@ export const races: RaceDef[] = [
     prefecture: "長野県",
     startFinish: "ヨットハーバー付近スタート、諏訪湖イベントひろば前フィニッシュ",
     distanceLabel: "ハーフマラソン",
-    spots: [
-      { slug: "suwako-loop" },
-    ],
+    spots: [{ slug: "suwako-loop" }],
   },
   {
     slug: "fukuoka-marathon",
@@ -227,10 +192,7 @@ export const races: RaceDef[] = [
     prefecture: "福岡県",
     startFinish: "天神（渡辺通り天神交差点付近）スタート、糸島市交流プラザ志摩館付近フィニッシュ",
     distanceLabel: "フルマラソン・5.2km",
-    spots: [
-      { slug: "oohori" },
-      { slug: "seaside-momochi" },
-    ],
+    spots: [{ slug: "oohori" }, { slug: "seaside-momochi" }],
   },
   {
     slug: "shimonoseki-kaikyo-marathon",
@@ -241,9 +203,7 @@ export const races: RaceDef[] = [
     prefecture: "山口県",
     startFinish: "オーヴィジョン海峡通り 海峡メッセ下関前発着",
     distanceLabel: "フルマラソン・2km",
-    spots: [
-      { slug: "kanmon-kaikyo-crossing" },
-    ],
+    spots: [{ slug: "kanmon-kaikyo-crossing" }],
   },
   {
     slug: "ibigawa-marathon",
@@ -254,9 +214,7 @@ export const races: RaceDef[] = [
     prefecture: "岐阜県",
     startFinish: "揖斐警察署前スタート、揖斐川町役場フィニッシュ",
     distanceLabel: "ハーフマラソン",
-    spots: [
-      { slug: "ibigawa-long" },
-    ],
+    spots: [{ slug: "ibigawa-long" }],
   },
   {
     slug: "kobe-marathon",
@@ -267,10 +225,7 @@ export const races: RaceDef[] = [
     prefecture: "兵庫県",
     startFinish: "神戸市役所前スタート、神戸ハーバーランド（神戸ガス燈通り）フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "minato-no-mori-park" },
-      { slug: "hat-kobe-nagisa-park" },
-    ],
+    spots: [{ slug: "minato-no-mori-park" }, { slug: "hat-kobe-nagisa-park" }],
   },
   {
     slug: "fujisan-marathon",
@@ -281,10 +236,7 @@ export const races: RaceDef[] = [
     prefecture: "山梨県",
     startFinish: "河口湖畔発着(河口湖・西湖をめぐる)",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "saiko-loop" },
-      { slug: "lake-yamanaka-loop" },
-    ],
+    spots: [{ slug: "saiko-loop" }, { slug: "lake-yamanaka-loop" }],
   },
   {
     slug: "aoshima-taiheiyo-marathon",
@@ -295,10 +247,7 @@ export const races: RaceDef[] = [
     prefecture: "宮崎県",
     startFinish: "ひなた宮崎県総合運動公園発着",
     distanceLabel: "フルマラソン・10km",
-    spots: [
-      { slug: "aoshima-kisakihama" },
-      { slug: "miyazaki-night-run" },
-    ],
+    spots: [{ slug: "aoshima-kisakihama" }, { slug: "miyazaki-night-run" }],
   },
   {
     slug: "naha-marathon",
@@ -309,9 +258,7 @@ export const races: RaceDef[] = [
     prefecture: "沖縄県",
     startFinish: "那覇市・奥武山公園周辺発着",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "naminoue-beach" },
-    ],
+    spots: [{ slug: "naminoue-beach" }],
   },
   {
     slug: "okayama-marathon",
@@ -322,10 +269,7 @@ export const races: RaceDef[] = [
     prefecture: "岡山県",
     startFinish: "シゲトーアリーナ岡山前スタート、JFE晴れの国スタジアムフィニッシュ",
     distanceLabel: "フルマラソン・5.6km",
-    spots: [
-      { slug: "okayama-sogo-ground" },
-      { slug: "okayama-castle-korakuen" },
-    ],
+    spots: [{ slug: "okayama-sogo-ground" }, { slug: "okayama-castle-korakuen" }],
   },
   {
     slug: "tsukuba-marathon",
@@ -336,9 +280,7 @@ export const races: RaceDef[] = [
     prefecture: "茨城県",
     startFinish: "イーアスつくば前スタート、つくば市役所フィニッシュ",
     distanceLabel: "フルマラソン・1.5km",
-    spots: [
-      { slug: "doho-park" },
-    ],
+    spots: [{ slug: "doho-park" }],
   },
   {
     slug: "osaka-yodogawa-shimin-marathon",
@@ -349,11 +291,7 @@ export const races: RaceDef[] = [
     prefecture: "大阪府",
     startFinish: "淀川河川公園 外島・太子橋地区特設会場発着",
     distanceLabel: "フルマラソン・ハーフマラソン・10km",
-    spots: [
-      { slug: "yodogawa-nishinakajima" },
-      { slug: "nakanoshima-loop" },
-      { slug: "osakajo" },
-    ],
+    spots: [{ slug: "yodogawa-nishinakajima" }, { slug: "nakanoshima-loop" }, { slug: "osakajo" }],
   },
   {
     slug: "koedo-kawagoe-half-marathon",
@@ -364,9 +302,7 @@ export const races: RaceDef[] = [
     prefecture: "埼玉県",
     startFinish: "ホットスタッフ川越パーク(川越水上公園)発着",
     distanceLabel: "ハーフマラソン・10km・4km",
-    spots: [
-      { slug: "sainomori-iruma-park" },
-    ],
+    spots: [{ slug: "sainomori-iruma-park" }],
   },
   {
     slug: "yokosuka-seaside-marathon",
@@ -377,9 +313,7 @@ export const races: RaceDef[] = [
     prefecture: "神奈川県",
     startFinish: "いちご よこすかポートマーケット付近(よこすか海岸通り)発着",
     distanceLabel: "ハーフマラソン・10km・3km・1.8km",
-    spots: [
-      { slug: "mabori-kaigan-umikaze" },
-    ],
+    spots: [{ slug: "mabori-kaigan-umikaze" }],
   },
   {
     slug: "shonan-international-marathon",
@@ -412,9 +346,7 @@ export const races: RaceDef[] = [
     prefecture: "山形県",
     startFinish: "NDソフトスタジアム山形発着",
     distanceLabel: "ハーフマラソン・5km・3km",
-    spots: [
-      { slug: "yamagata-city-loop" },
-    ],
+    spots: [{ slug: "yamagata-city-loop" }],
   },
   {
     slug: "natori-seaside-marathon",
@@ -425,9 +357,7 @@ export const races: RaceDef[] = [
     prefecture: "宮城県",
     startFinish: "名取市サイクルスポーツセンター発着",
     distanceLabel: "フルマラソン・ハーフマラソン・10km・1.6km",
-    spots: [
-      { slug: "tsutsujigaoka-park" },
-    ],
+    spots: [{ slug: "tsutsujigaoka-park" }],
   },
   {
     slug: "yoron-marathon",
@@ -438,9 +368,7 @@ export const races: RaceDef[] = [
     prefecture: "鹿児島県",
     startFinish: "茶花海岸前発着",
     distanceLabel: "フルマラソン・ハーフマラソン",
-    spots: [
-      { slug: "yoron-loop" },
-    ],
+    spots: [{ slug: "yoron-loop" }],
   },
   {
     slug: "ogaki-marathon",
@@ -473,11 +401,7 @@ export const races: RaceDef[] = [
     prefecture: "富山県",
     startFinish: "高岡市役所前スタート、富岩運河環水公園フィニッシュ",
     distanceLabel: "フルマラソン",
-    spots: [
-      { slug: "kansui-park" },
-      { slug: "takaoka-castle-park" },
-      { slug: "toyama-castle-park" },
-    ],
+    spots: [{ slug: "kansui-park" }, { slug: "takaoka-castle-park" }, { slug: "toyama-castle-park" }],
   },
   {
     slug: "minato-city-half-marathon",
@@ -488,11 +412,7 @@ export const races: RaceDef[] = [
     prefecture: "東京都",
     startFinish: "芝公園（日比谷通り）スタート、東京タワーフィニッシュ",
     distanceLabel: "ハーフマラソン",
-    spots: [
-      { slug: "kokyo" },
-      { slug: "rainbow-bridge-odaiba" },
-      { slug: "meiji-jingu-gaien-loop" },
-    ],
+    spots: [{ slug: "kokyo" }, { slug: "rainbow-bridge-odaiba" }, { slug: "meiji-jingu-gaien-loop" }],
   },
   {
     slug: "izu-oshima-marathon",
@@ -514,8 +434,7 @@ export const races: RaceDef[] = [
     prefecture: "埼玉県",
     startFinish: "道の駅おがわまち発着",
     distanceLabel: "ハーフマラソン・10km・2km",
-    spots: [
-    ],
+    spots: [],
   },
   {
     slug: "fukuyama-yearend-marathon",
@@ -526,9 +445,7 @@ export const races: RaceDef[] = [
     prefecture: "広島県",
     startFinish: "芦田川かわまち広場発着",
     distanceLabel: "フルマラソン・ハーフマラソン・10km・3km・1km",
-    spots: [
-      { slug: "fukuyama-castle-loop" },
-    ],
+    spots: [{ slug: "fukuyama-castle-loop" }],
   },
   {
     slug: "shimada-oigawa-marathon",
@@ -572,11 +489,7 @@ export const races: RaceDef[] = [
     prefecture: "埼玉県",
     startFinish: "青木町公園総合運動場発着",
     distanceLabel: "ハーフマラソン・10km・3km・2km",
-    spots: [
-      { slug: "ukima-park" },
-      { slug: "arakawa" },
-      { slug: "toneri-park" },
-    ],
+    spots: [{ slug: "ukima-park" }, { slug: "arakawa" }, { slug: "toneri-park" }],
   },
   {
     slug: "teganuma-eco-marathon",
@@ -587,10 +500,7 @@ export const races: RaceDef[] = [
     prefecture: "千葉県",
     startFinish: "柏ふるさと公園発着",
     distanceLabel: "ハーフマラソン・5マイル",
-    spots: [
-      { slug: "teganuma-loop" },
-      { slug: "kashiwanoha-park" },
-    ],
+    spots: [{ slug: "teganuma-loop" }, { slug: "kashiwanoha-park" }],
   },
   {
     slug: "setagaya-246-half-marathon",
@@ -601,11 +511,7 @@ export const races: RaceDef[] = [
     prefecture: "東京都",
     startFinish: "駒沢オリンピック公園陸上競技場発着",
     distanceLabel: "ハーフマラソン",
-    spots: [
-      { slug: "komazawa" },
-      { slug: "rinshi-no-mori-park" },
-      { slug: "hanegi-park" },
-    ],
+    spots: [{ slug: "komazawa" }, { slug: "rinshi-no-mori-park" }, { slug: "hanegi-park" }],
   },
   {
     slug: "kasama-half-marathon",
@@ -649,10 +555,7 @@ export const races: RaceDef[] = [
     prefecture: "島根県",
     startFinish: "松江市総合体育館発着",
     distanceLabel: "フルマラソン・4.4km",
-    spots: [
-      { slug: "matsue-castle-loop" },
-      { slug: "shinji-lake-north-shore" },
-    ],
+    spots: [{ slug: "matsue-castle-loop" }, { slug: "shinji-lake-north-shore" }],
   },
   {
     slug: "tokyo-legacy-half-marathon",
@@ -663,11 +566,7 @@ export const races: RaceDef[] = [
     prefecture: "東京都",
     startFinish: "MUFGスタジアム（国立競技場）発着",
     distanceLabel: "ハーフマラソン",
-    spots: [
-      { slug: "tokyo-metropolitan-gymnasium-track" },
-      { slug: "meiji-jingu-gaien-loop" },
-      { slug: "yoyogi" },
-    ],
+    spots: [{ slug: "tokyo-metropolitan-gymnasium-track" }, { slug: "meiji-jingu-gaien-loop" }, { slug: "yoyogi" }],
   },
   {
     slug: "gunma-marathon",
@@ -678,9 +577,7 @@ export const races: RaceDef[] = [
     prefecture: "群馬県",
     startFinish: "正田醤油スタジアム群馬発着",
     distanceLabel: "フルマラソン・10km・4.2km",
-    spots: [
-      { slug: "shikishima-park" },
-    ],
+    spots: [{ slug: "shikishima-park" }],
   },
 ];
 
