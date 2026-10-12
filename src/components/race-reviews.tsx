@@ -146,6 +146,9 @@ export function RaceReviews({
 
   // 体験が1件もない大会では、絞り込みフォームや注意書きを出さず投稿の呼びかけだけにする
   const empty = page.available && target === null && page.reviews.length === 0 && page.nextOffset === null;
+  // 0件のうちは投稿カードも畳み、見出し下の一文とボタンだけにする。書き始めたらカードに戻す
+  const compactPrompt = empty && !writing;
+  const ctaMargin = compactPrompt ? "" : "mt-4";
 
   return (
     <section id="reviews" className="scroll-mt-24">
@@ -154,7 +157,7 @@ export function RaceReviews({
           <SectionHeading>走った人の体験</SectionHeading>
           <p className="mt-2 text-sm leading-6 text-sub">
             {empty
-              ? "この大会の体験は、まだありません。"
+              ? "まだ体験はありません。走ったことがあれば、きつかった坂や知っておきたかったことを残してみませんか。"
               : "自分の目標タイムに近い完走者の経験を、レース計画の参考に。"}
           </p>
         </div>
@@ -393,23 +396,30 @@ export function RaceReviews({
       )}
       <div
         id="write-review"
-        className={`${empty ? "mt-4" : "mt-8"} scroll-mt-24 rounded-2xl border border-line bg-cream p-4 sm:p-5`}
+        className={`scroll-mt-24 ${compactPrompt ? "mt-3" : `${empty ? "mt-4" : "mt-8"} rounded-2xl border border-line bg-cream p-4 sm:p-5`}`}
       >
-        <h3 className="font-bold leading-7">{raceReviewPrompt}</h3>
-        <p className="mt-1 text-sm leading-6 text-sub">
-          きつかった坂、ペースを上げられた場所、走る前に知っておきたかったこと。
-        </p>
+        {!compactPrompt && (
+          <>
+            <h3 className="font-bold leading-7">{raceReviewPrompt}</h3>
+            <p className="mt-1 text-sm leading-6 text-sub">
+              きつかった坂、ペースを上げられた場所、走る前に知っておきたかったこと。
+            </p>
+          </>
+        )}
         {isPending ? (
-          <p className="mt-4 text-sm">ログイン状態を確認中…</p>
+          <p className={`${ctaMargin} text-sm`}>ログイン状態を確認中…</p>
         ) : !session ? (
-          <Link href={loginHref} className="mt-4 inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold">
+          <Link
+            href={loginHref}
+            className={`${ctaMargin} inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold`}
+          >
             ログインして体験を残す
           </Link>
         ) : !writing ? (
           <button
             type="button"
             onClick={() => setWriting(true)}
-            className="mt-4 inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold"
+            className={`${ctaMargin} inline-flex rounded-lg bg-brand px-5 py-2.5 text-sm font-bold`}
           >
             体験を書く
           </button>

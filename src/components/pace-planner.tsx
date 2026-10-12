@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { Check, Copy, Minus, Plus, Printer } from "lucide-react";
+import { Check, ChevronDown, Copy, Minus, Plus, Printer } from "lucide-react";
 import {
   buildPacePlan,
   canUseHills,
@@ -65,6 +65,8 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
   const [hillEffort, setHillEffort] = useState(0);
   const [profile, setProfile] = useState<RaceElevation | null | undefined>(hasCourse ? undefined : null);
   const [view, setView] = useState<"5km" | "1km">("5km");
+  // 設定UIと棒グラフで配分は伝わるので、縦に長い通過表は開いた人にだけ見せる
+  const [tableOpen, setTableOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const hillsAvailable = canUseHills(profile ?? null);
   // ボタンなしで、目標タイム・スライダーの変更をその場で表に反映する
@@ -142,6 +144,11 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
     track("pace_plan_print", { race: slug, targetMin, splitPercent, hillEffort });
     document.body.classList.add("printing-pace");
     window.print();
+  };
+
+  const toggleTable = () => {
+    if (!tableOpen) track("pace_table_open", { race: slug });
+    setTableOpen(!tableOpen);
   };
 
   const rows = view === "5km" ? plan.fiveKm : plan.km;
@@ -236,24 +243,16 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
 
       <div className="mt-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <div
-            className="inline-flex overflow-hidden rounded-lg border border-line text-sm font-bold"
-            role="tablist"
-            aria-label="ペース表の区切り"
+          <button
+            type="button"
+            onClick={toggleTable}
+            aria-expanded={tableOpen}
+            aria-controls={`${slug}-pace-table`}
+            className="inline-flex items-center gap-1 rounded-lg border border-line bg-paper px-3 py-2 text-sm font-bold hover:bg-cream"
           >
-            {(["5km", "1km"] as const).map((value) => (
-              <button
-                key={value}
-                type="button"
-                role="tab"
-                aria-selected={view === value}
-                onClick={() => setView(value)}
-                className={`px-4 py-2 ${view === value ? "bg-ink text-white" : "bg-paper"}`}
-              >
-                {value}ごと
-              </button>
-            ))}
-          </div>
+            通過タイム表
+            <ChevronDown size={16} className={`transition-transform ${tableOpen ? "rotate-180" : ""}`} />
+          </button>
           <div className="flex gap-2">
             <button
               type="button"
@@ -273,34 +272,58 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
             </button>
           </div>
         </div>
-        <div className="mt-3 overflow-hidden rounded-xl border border-line">
-          <table className="w-full text-sm tabular-nums">
-            <thead className="bg-cream text-xs text-sub">
-              <tr>
-                <th className="px-3 py-2 text-left font-bold">地点</th>
-                <th className="px-3 py-2 text-right font-bold">{view === "5km" ? "区間" : "ラップ"}</th>
-                <th className="px-3 py-2 text-right font-bold">ペース/km</th>
-                <th className="px-3 py-2 text-right font-bold">通過</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-line">
-              {rows.map((row) => (
-                <tr
-                  key={row.label}
-                  className={row.label === "中間点" || row.label === "ゴール" ? "font-bold" : undefined}
+        {tableOpen && (
+          <div id={`${slug}-pace-table`}>
+            <div
+              className="mt-3 inline-flex overflow-hidden rounded-lg border border-line text-sm font-bold"
+              role="tablist"
+              aria-label="ペース表の区切り"
+            >
+              {(["5km", "1km"] as const).map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  role="tab"
+                  aria-selected={view === value}
+                  onClick={() => setView(value)}
+                  className={`px-4 py-2 ${view === value ? "bg-ink text-white" : "bg-paper"}`}
                 >
-                  <td className="px-3 py-2">{row.label}</td>
-                  <td className="px-3 py-2 text-right">{row.label === "中間点" ? "–" : formatDuration(row.splitS)}</td>
-                  <td className="px-3 py-2 text-right text-sub">
-                    {row.label === "中間点" ? "–" : formatDuration(row.paceS)}
-                  </td>
-                  <td className="px-3 py-2 text-right font-bold">{formatDuration(row.cumulativeS, true)}</td>
-                </tr>
+                  {value}ごと
+                </button>
               ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-2 text-xs text-sub">距離は大会の公式距離に合わせた目安です。</p>
+            </div>
+            <div className="mt-3 overflow-hidden rounded-xl border border-line">
+              <table className="w-full text-sm tabular-nums">
+                <thead className="bg-cream text-xs text-sub">
+                  <tr>
+                    <th className="px-3 py-2 text-left font-bold">地点</th>
+                    <th className="px-3 py-2 text-right font-bold">{view === "5km" ? "区間" : "ラップ"}</th>
+                    <th className="px-3 py-2 text-right font-bold">ペース/km</th>
+                    <th className="px-3 py-2 text-right font-bold">通過</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line">
+                  {rows.map((row) => (
+                    <tr
+                      key={row.label}
+                      className={row.label === "中間点" || row.label === "ゴール" ? "font-bold" : undefined}
+                    >
+                      <td className="px-3 py-2">{row.label}</td>
+                      <td className="px-3 py-2 text-right">
+                        {row.label === "中間点" ? "–" : formatDuration(row.splitS)}
+                      </td>
+                      <td className="px-3 py-2 text-right text-sub">
+                        {row.label === "中間点" ? "–" : formatDuration(row.paceS)}
+                      </td>
+                      <td className="px-3 py-2 text-right font-bold">{formatDuration(row.cumulativeS, true)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-2 text-xs text-sub">距離は大会の公式距離に合わせた目安です。</p>
+          </div>
+        )}
 
         {/* 通常はinlineで隠す。印刷ルールもportalと一緒に読み込み、CSSの遅延で画面へ漏れないようにする。 */}
         {mounted &&

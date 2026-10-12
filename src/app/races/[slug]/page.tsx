@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, Download, MapPin } from "lucide-react";
+import { CalendarDays, Download, Info, MapPin } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { MemberGpxLink } from "@/components/member-gpx-link";
 import { RaceExperience } from "@/components/race-experience";
@@ -149,22 +149,30 @@ export default async function RacePage({ params }: { params: Params }) {
         courseNote={
           courseMeta ? (
             <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
-              <p>
-                {courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図をもとに独自作成"}・約
-                {(courseMeta.distanceM / 1000).toFixed(1)}km・
-                {courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}
-                {courseMeta.checkedAt ? `（${courseMeta.checkedAt}確認）` : ""}
-                。主催者が配布するコースデータではありません。正式な距離・経路は
-                <a
-                  href={courseMeta.sourceUrl ?? race.officialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-accent underline underline-offset-2"
-                >
-                  公式情報
-                </a>
-                で。ダウンロードは無料（ログインが必要）。
-              </p>
+              {/* 出典と注意書きは1行に畳み、気になる人だけ開いて読めるようにする */}
+              <details>
+                <summary className="flex cursor-pointer list-none items-center gap-1 [&::-webkit-details-marker]:hidden">
+                  <span>
+                    {courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図から独自作成"}・約
+                    {(courseMeta.distanceM / 1000).toFixed(1)}km・
+                    {courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}
+                  </span>
+                  <Info size={13} className="shrink-0" aria-label="データについて詳しく" />
+                </summary>
+                <p className="mt-1">
+                  {courseMeta.checkedAt ? `${courseMeta.checkedAt}に確認。` : ""}
+                  主催者が配布するコースデータではありません。正式な距離・経路は
+                  <a
+                    href={courseMeta.sourceUrl ?? race.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-accent underline underline-offset-2"
+                  >
+                    公式情報
+                  </a>
+                  で。ダウンロードは無料（ログインが必要）。
+                </p>
+              </details>
               <p className="flex flex-wrap gap-x-4 gap-y-1">
                 {raceDayLinks.map((item) => (
                   <TrackedLink
@@ -174,10 +182,11 @@ export default async function RacePage({ params }: { params: Params }) {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${item.label}をGoogleマップで見る`}
                     className="inline-flex items-center gap-1 font-bold text-accent hover:underline"
                   >
                     <MapPin size={13} />
-                    {item.label}をGoogleマップで見る
+                    {item.label}の地図
                   </TrackedLink>
                 ))}
                 <Link href="/guide/gpx" className="font-bold text-accent hover:underline">
