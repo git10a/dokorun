@@ -24,7 +24,7 @@ describe("大会コース", () => {
     expect(new Set(racesByCalendar.map((race) => race.slug))).toEqual(new Set(races.map((race) => race.slug)));
     const ordered = racesByCalendar.map((race) => dates.get(race.slug)!);
     expect(ordered).toEqual([...ordered].sort((a, b) => a - b));
-    expect(racesByCalendar.findIndex((race) => race.slug === "aoshima-taiheiyo-marathon")).toBeLessThan(
+    expect(racesByCalendar.findIndex((race) => race.slug === "naha-marathon")).toBeLessThan(
       racesByCalendar.findIndex((race) => race.slug === "ehime-marathon"),
     );
   });
@@ -44,11 +44,12 @@ describe("大会コース", () => {
     expect(Object.keys(courses)).toHaveLength(races.length);
   });
 
-  it("全大会コースが公式距離の±3%以内に収まる", () => {
+  // GPXは時計に入れてペース配分に使うため、公式距離との差は±0.3%以内(フル42.07〜42.32km)に限る
+  it("全大会コースが公式距離の±0.3%以内に収まる", () => {
     for (const race of races) {
       const officialDistanceM = race.distanceLabel.includes("フル") ? 42195 : 21097.5;
       const differenceRate = Math.abs((courses[race.slug]?.distanceM ?? 0) - officialDistanceM) / officialDistanceM;
-      expect(differenceRate, `${race.name}: ${courses[race.slug]?.distanceM}m`).toBeLessThanOrEqual(0.03);
+      expect(differenceRate, `${race.name}: ${courses[race.slug]?.distanceM}m`).toBeLessThanOrEqual(0.003);
     }
   });
 });
