@@ -13,6 +13,13 @@ export const PB_EVENTS = [
 
 export type PbEventKey = (typeof PB_EVENTS)[number]["key"];
 
+// A profile's full-marathon PB, never the finish time of the current review.
+export function marathonPbBadge(timeS: number | null | undefined): string | null {
+  if (timeS == null || validatePbTime("full", timeS)) return null;
+  const threshold = [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6].find((hours) => timeS < hours * 3600);
+  return threshold ? `サブ${threshold}` : `フル ${formatDuration(timeS, true)}`;
+}
+
 export function secondsFromParts(hours: number, minutes: number, seconds: number) {
   return hours * 3600 + minutes * 60 + seconds;
 }

@@ -1,6 +1,7 @@
 import { and, desc, eq, gte, lte } from "drizzle-orm";
 import { getDb } from "@/db";
-import { raceReviews, users } from "@/db/schema";
+import { raceReviews, users, userPbs } from "@/db/schema";
+import { avatarUrl } from "@/lib/avatars";
 import { reviewPageSize, type RaceReviewPage, type OwnRaceReview } from "@/lib/race-reviews";
 
 // Only call from an authenticated owner route; never include these rows in a public profile.
@@ -39,6 +40,9 @@ export async function getRaceReviews(slug: string, target: number | null = null,
         userId: raceReviews.userId,
         userName: users.name,
         userHandle: users.handle,
+        image: users.image,
+        customAvatarAt: users.customAvatarAt,
+        userMarathonPbS: userPbs.timeS,
         raceYear: raceReviews.raceYear,
         finishTimeS: raceReviews.finishTimeS,
         body: raceReviews.body,
@@ -47,6 +51,7 @@ export async function getRaceReviews(slug: string, target: number | null = null,
       })
       .from(raceReviews)
       .innerJoin(users, eq(raceReviews.userId, users.id))
+      .leftJoin(userPbs, and(eq(userPbs.userId, users.id), eq(userPbs.event, "full")))
       .where(
         and(
           eq(raceReviews.raceSlug, slug),
@@ -61,7 +66,11 @@ export async function getRaceReviews(slug: string, target: number | null = null,
     return {
       available: true,
       nextOffset: rows.length > reviewPageSize ? offset + reviewPageSize : null,
-      reviews: rows.slice(0, reviewPageSize).map((row) => ({ ...row, createdAt: row.createdAt.toISOString() })),
+      reviews: rows.slice(0, reviewPageSize).map(({ image, customAvatarAt, ...row }) => ({
+        ...row,
+        userAvatarUrl: avatarUrl({ id: row.userId, image, customAvatarAt }),
+        createdAt: row.createdAt.toISOString(),
+      })),
     };
   } catch (error) {
     // Reviews must not take the existing race landing page offline during migration/outages.

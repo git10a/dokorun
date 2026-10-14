@@ -58,15 +58,45 @@ describe("race review persistence and authorization", () => {
     vi.clearAllMocks();
     client = createClient({ url: ":memory:" });
     await client.execute("PRAGMA foreign_keys = ON");
-    await client.execute("CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT, handle TEXT)");
+    await client.execute(
+      "CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT, handle TEXT, image TEXT, custom_avatar_at INTEGER)",
+    );
+    await client.execute("CREATE TABLE user_pbs (user_id TEXT, event TEXT, time_s INTEGER, UNIQUE(user_id, event))");
     await client.executeMultiple(readFileSync("scripts/sql/2026-10-12-race-reviews.sql", "utf8"));
     await client.execute(
-      "INSERT INTO users VALUES ('runner-a', 'Runner A', 'runner-a'), ('runner-b', 'Runner B', 'runner-b')",
+      "INSERT INTO users (id, name, handle) VALUES ('runner-a', 'Runner A', 'runner-a'), ('runner-b', 'Runner B', 'runner-b')",
     );
     mocks.getDb.mockReturnValue(drizzle(client, { schema }));
     mocks.getUser.mockResolvedValue({ id: "runner-a" });
   });
   afterEach(() => client.close());
+
+  it("reads the current public avatar and full PB without excluding runners lacking a PB or multiplying reviews", async () => {
+    await POST(request(valid), context);
+    await client.execute("INSERT INTO user_pbs VALUES ('runner-a', 'half', 5400), ('runner-a', 'full', 14399)");
+    await client.execute(
+      "UPDATE users SET image = 'https://example.com/avatar.png', custom_avatar_at = 1000 WHERE id = 'runner-a'",
+    );
+    mocks.getUser.mockResolvedValue({ id: "runner-b" });
+    await POST(request(valid), context);
+    let reviews = (await getRaceReviews(slug)).reviews;
+    expect(reviews).toHaveLength(2);
+    expect(reviews.find((row) => row.userId === "runner-a")).toMatchObject({
+      userAvatarUrl: "/avatar/runner-a?v=1000",
+      userMarathonPbS: 14399,
+    });
+    expect(reviews.find((row) => row.userId === "runner-b")).toMatchObject({
+      userAvatarUrl: null,
+      userMarathonPbS: null,
+    });
+    await client.execute("DELETE FROM user_pbs WHERE event = 'full'");
+    await client.execute("UPDATE users SET custom_avatar_at = NULL WHERE id = 'runner-a'");
+    reviews = (await getRaceReviews(slug)).reviews;
+    expect(reviews.find((row) => row.userId === "runner-a")).toMatchObject({
+      userAvatarUrl: "https://example.com/avatar.png",
+      userMarathonPbS: null,
+    });
+  });
 
   it("requires both same-origin and a server-verified session", async () => {
     expect((await POST(request(valid, "https://evil.example"), context)).status).toBe(403);

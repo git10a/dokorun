@@ -6,13 +6,15 @@ import { redirect } from "next/navigation";
 import { LoginButton } from "@/components/auth/login-button";
 import { isGoogleAuthConfigured } from "@/lib/better-auth";
 import { getUser } from "@/lib/user";
+import { loginDestination } from "@/lib/login-destination";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "会員登録・ログイン", robots: { index: false, follow: false } };
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ callbackURL?: string }> }) {
   const [{ callbackURL }, user] = await Promise.all([searchParams, getUser()]);
-  const destination = callbackURL?.startsWith("/") && !callbackURL.startsWith("//") ? callbackURL : "/me";
+  const destination = loginDestination(callbackURL);
+  const returningToReview = /^\/races\/[a-z0-9-]+#write-review$/.test(destination);
   if (user) redirect(destination);
   return (
     <div className="mx-auto max-w-lg px-4 pt-10 sm:pt-16">
@@ -27,11 +29,15 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
               className="mx-auto h-8 w-auto"
               priority
             />
-            <h1 className="mt-6 text-2xl font-bold tracking-tight">会員登録・ログイン</h1>
+            <h1 className="mt-6 text-2xl font-bold tracking-tight">
+              {returningToReview ? "体験を保存するにはログイン" : "会員登録・ログイン"}
+            </h1>
             <p className="mt-3 text-sm leading-6 text-sub">
-              いつものGoogleアカウントで、
-              <br />
-              どこランをはじめよう。
+              {returningToReview ? (
+                <>ログイン後、入力した体験に戻ります。<br />内容を確認して保存してください。</>
+              ) : (
+                <>いつものGoogleアカウントで、<br />どこランをはじめよう。</>
+              )}
             </p>
           </div>
           <div className="mt-7">
@@ -50,7 +56,8 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
             に同意したものとみなされます。
           </p>
         </div>
-        <div className="border-t border-line bg-cream/60 px-6 py-6 sm:px-10">
+        {!returningToReview && (
+          <div className="border-t border-line bg-cream/60 px-6 py-6 sm:px-10">
           <h2 className="text-xs font-bold text-sub">無料登録でできること</h2>
           <ul className="mt-4 space-y-4">
             <li className="flex items-start gap-3">
@@ -77,7 +84,8 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
               </div>
             </li>
           </ul>
-        </div>
+          </div>
+        )}
       </div>
       <p className="mx-auto mt-6 max-w-sm text-center text-xs leading-6 text-sub">
         コースマップ・高低図・ペース表・完走者の体験は、
@@ -86,10 +94,10 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
       </p>
       <div className="mt-3 text-center">
         <Link
-          href="/races"
+          href={returningToReview ? destination : "/races"}
           className="inline-flex min-h-11 items-center text-sm font-medium underline underline-offset-4 hover:text-accent"
         >
-          大会をさがす
+          {returningToReview ? "体験の入力に戻る" : "大会をさがす"}
         </Link>
       </div>
     </div>

@@ -12,6 +12,8 @@ export type RaceReview = {
   userId: string;
   userName: string;
   userHandle: string;
+  userAvatarUrl?: string | null;
+  userMarathonPbS?: number | null;
   raceYear: number;
   finishTimeS: number;
   body: string;

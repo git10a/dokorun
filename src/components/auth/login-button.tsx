@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
+import { loginCallbackURL } from "@/lib/login-destination";
 
 export function LoginButton({ callbackURL, configured }: { callbackURL: string; configured: boolean }) {
   const [pending, setPending] = useState(false);
@@ -16,7 +17,10 @@ export function LoginButton({ callbackURL, configured }: { callbackURL: string; 
     setMessage("");
     setPending(true);
     try {
-      const result = await authClient.signIn.social({ provider: "google", callbackURL });
+      const result = await authClient.signIn.social({
+        provider: "google",
+        callbackURL: loginCallbackURL(callbackURL, window.location.origin),
+      });
       if (!result.error) return;
     } catch {
       // 通信エラーでもボタンを再び操作できるようにする。
