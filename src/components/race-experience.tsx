@@ -6,6 +6,7 @@ import { PacePlanner } from "./pace-planner";
 import { RaceReviews } from "./race-reviews";
 import type { RaceReviewPage } from "@/lib/race-reviews";
 import { RaceCoursePoints } from "./race-course-points";
+import { useRaceElevation } from "@/lib/use-race-elevation";
 import type { RaceEditorial } from "@/lib/course-editorial";
 import type { RaceAtmosphere as Atmosphere } from "@/lib/race-atmosphere";
 
@@ -33,6 +34,7 @@ export function RaceExperience({
   initialReviews: RaceReviewPage;
 }) {
   const [selectedKm, setSelectedKm] = useState<number | null>(null);
+  const profile = useRaceElevation(slug, hasCourse);
   // 予習ポイントや体験の距離から、地図・高低図の該当地点へ移る
   const selectPoint = hasCourse
     ? (km: number) => {
@@ -49,6 +51,7 @@ export function RaceExperience({
             key={slug}
             slug={slug}
             name={name}
+            profile={profile}
             selectedKm={selectedKm}
             onSelectKm={setSelectedKm}
             overlay={mapOverlay}
@@ -61,7 +64,7 @@ export function RaceExperience({
       {(editorial || atmosphere) && (
         <RaceCoursePoints entry={editorial} atmosphere={atmosphere} onSelectPoint={selectPoint} />
       )}
-      <PacePlanner slug={slug} raceName={name} distanceKm={maxKm} hasCourse={hasCourse} />
+      <PacePlanner slug={slug} raceName={name} distanceKm={maxKm} profile={profile} />
       <div className="mt-12">
         <RaceReviews
           key={slug}

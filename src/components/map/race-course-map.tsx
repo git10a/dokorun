@@ -9,9 +9,11 @@ import { elevationPointAtDistance, type RaceElevation } from "@/lib/race-elevati
 
 // Keep course data in static assets rather than the Worker bundle.
 // overlay: 地図の左上に重ねる操作(GPXボタンなど)。note: 地図の直下に置く作成元などの注記
+// profile: 親が取得した高低図(undefinedは読み込み中、nullは取得失敗)
 export function RaceCourseMap({
   slug,
   name,
+  profile,
   selectedKm = null,
   onSelectKm,
   overlay,
@@ -19,14 +21,13 @@ export function RaceCourseMap({
 }: {
   slug: string;
   name?: string;
+  profile: RaceElevation | null | undefined;
   selectedKm?: number | null;
   onSelectKm: (km: number | null) => void;
   overlay?: ReactNode;
   note?: ReactNode;
 }) {
   const [geojson, setGeojson] = useState<LineString | null>(null);
-  const [profile, setProfile] = useState<RaceElevation | null>(null);
-  const [profileFailed, setProfileFailed] = useState(false);
   const [failed, setFailed] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
@@ -41,18 +42,6 @@ export function RaceCourseMap({
       })
       .catch(() => {
         if (!controller.signal.aborted) setFailed(true);
-      });
-    fetch(`/race-elevation/${slug}.json`, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error("elevation unavailable");
-        return response.json() as Promise<RaceElevation>;
-      })
-      .then((data) => {
-        if (data.version !== 1 || !data.points?.length) throw new Error("empty elevation");
-        setProfile(data);
-      })
-      .catch(() => {
-        if (!controller.signal.aborted) setProfileFailed(true);
       });
     return () => controller.abort();
   }, [slug]);
@@ -113,7 +102,7 @@ export function RaceCourseMap({
         />
       ) : (
         <p className="mt-3 rounded-xl border border-line p-4 text-sm text-sub" role="status">
-          {profileFailed
+          {profile === null
             ? "高低図を読み込めませんでした。ページを再読み込みしてお試しください。"
             : "高低図を読み込んでいます…"}
         </p>

@@ -23,7 +23,8 @@ type Props = {
   slug: string;
   raceName: string;
   distanceKm: number;
-  hasCourse: boolean;
+  // 親が取得した高低図。undefinedは読み込み中、nullはコースなし・取得失敗
+  profile: RaceElevation | null | undefined;
 };
 
 // 目標タイム(分)の選択肢。入力欄は使わず、プリセット・スライダー・±1分で選ぶ
@@ -58,12 +59,11 @@ const subscribeNothing = () => () => {};
 
 // 時計を持っていない人向けに、目標タイムから1km・5kmごとのペース表を作る。
 // ログイン不要。コピーしてメモアプリに貼るか、印刷して当日持っていく
-export function PacePlanner({ slug, raceName, distanceKm, hasCourse }: Props) {
+export function PacePlanner({ slug, raceName, distanceKm, profile }: Props) {
   const targets = distanceKm > 30 ? TARGETS.full : TARGETS.half;
   const [targetMin, setTargetMin] = useState<number>(targets.initial);
   const [splitPercent, setSplitPercent] = useState(0);
   const [hillEffort, setHillEffort] = useState(0);
-  const [profile, setProfile] = useState<RaceElevation | null | undefined>(hasCourse ? undefined : null);
   const [view, setView] = useState<"5km" | "1km">("5km");
   // 目標タイムを変えた結果をすぐ確認できるよう、通過表は最初から表示する
   const [tableOpen, setTableOpen] = useState(true);
@@ -88,20 +88,6 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse }: Props) {
     () => false,
   );
   const interacted = useRef(false);
-
-  useEffect(() => {
-    if (!hasCourse) return;
-    let active = true;
-    fetch(`/race-elevation/${slug}.json`)
-      .then((response) => (response.ok ? (response.json() as Promise<RaceElevation>) : null))
-      .catch(() => null)
-      .then((value) => {
-        if (active) setProfile(value);
-      });
-    return () => {
-      active = false;
-    };
-  }, [hasCourse, slug]);
 
   useEffect(() => {
     const clear = () => document.body.classList.remove("printing-pace");
