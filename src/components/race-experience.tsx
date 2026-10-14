@@ -33,6 +33,13 @@ export function RaceExperience({
   initialReviews: RaceReviewPage;
 }) {
   const [selectedKm, setSelectedKm] = useState<number | null>(null);
+  // 予習ポイントや体験の距離から、地図・高低図の該当地点へ移る
+  const selectPoint = hasCourse
+    ? (km: number) => {
+        setSelectedKm(km);
+        document.getElementById("course-map")?.scrollIntoView({ block: "start" });
+      }
+    : undefined;
   return (
     <>
       <section id="course-map" className="mt-6 scroll-mt-24">
@@ -52,18 +59,7 @@ export function RaceExperience({
         )}
       </section>
       {(editorial || atmosphere) && (
-        <RaceCoursePoints
-          entry={editorial}
-          atmosphere={atmosphere}
-          onSelectPoint={
-            hasCourse
-              ? (km) => {
-                  setSelectedKm(km);
-                  document.getElementById("course-map")?.scrollIntoView({ block: "start" });
-                }
-              : undefined
-          }
-        />
+        <RaceCoursePoints entry={editorial} atmosphere={atmosphere} onSelectPoint={selectPoint} />
       )}
       <PacePlanner slug={slug} raceName={name} distanceKm={maxKm} hasCourse={hasCourse} />
       <div className="mt-12">
@@ -71,16 +67,8 @@ export function RaceExperience({
           key={slug}
           slug={slug}
           distanceLabel={distanceLabel}
-          maxKm={maxKm}
           initial={initialReviews}
-          onSelectPoint={
-            hasCourse
-              ? (km) => {
-                  setSelectedKm(km);
-                  document.getElementById("course-map")?.scrollIntoView({ block: "start" });
-                }
-              : undefined
-          }
+          onSelectPoint={selectPoint}
         />
       </div>
     </>

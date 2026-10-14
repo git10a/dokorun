@@ -111,7 +111,6 @@ describe("race page SEO preservation", () => {
     const html = renderToStaticMarkup(
       createElement(RaceReviews, {
         slug: "itabashi-city-marathon",
-        maxKm: 42.195,
         distanceLabel: "フルマラソン",
         initial: {
           available: true,

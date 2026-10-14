@@ -24,7 +24,6 @@ type Props = {
   raceName: string;
   distanceKm: number;
   hasCourse: boolean;
-  onTargetChange?: (targetS: number) => void;
 };
 
 // 目標タイム(分)の選択肢。入力欄は使わず、プリセット・スライダー・±1分で選ぶ
@@ -59,7 +58,7 @@ const subscribeNothing = () => () => {};
 
 // 時計を持っていない人向けに、目標タイムから1km・5kmごとのペース表を作る。
 // ログイン不要。コピーしてメモアプリに貼るか、印刷して当日持っていく
-export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetChange }: Props) {
+export function PacePlanner({ slug, raceName, distanceKm, hasCourse }: Props) {
   const targets = distanceKm > 30 ? TARGETS.full : TARGETS.half;
   const [targetMin, setTargetMin] = useState<number>(targets.initial);
   const [splitPercent, setSplitPercent] = useState(0);
@@ -123,11 +122,7 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
         track("pace_plan_create", { race: slug, hills: hillsAvailable });
       }
     };
-  const changeTarget = adjust((value: number) => {
-    const next = Math.min(targets.max, Math.max(targets.min, value));
-    setTargetMin(next);
-    onTargetChange?.(next * 60);
-  });
+  const changeTarget = adjust((value: number) => setTargetMin(Math.min(targets.max, Math.max(targets.min, value))));
 
   const copy = async () => {
     const text = pacePlanText(plan, raceName);

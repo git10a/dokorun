@@ -28,7 +28,6 @@ export function RaceReviews({
 }: {
   slug: string;
   distanceLabel: string;
-  maxKm: number;
   initial: RaceReviewPage;
   onSelectPoint?: (km: number) => void;
 }) {
@@ -50,33 +49,38 @@ export function RaceReviews({
   const requestId = useRef(0);
   const formRef = useRef<HTMLFormElement>(null);
   const loginHref = `/login?callbackURL=${encodeURIComponent(`/races/${slug}#write-review`)}`;
+  // 自分の投稿の編集、またはログイン往復で引き継いだ編集中の下書き
+  const isEditing = Boolean(editing || restoredDraft?.editing);
 
-  const load = useCallback(async (offset = 0) => {
-    const id = ++requestId.current;
-    setLoading(true);
-    setError("");
-    try {
-      const query = new URLSearchParams({ offset: String(offset) });
-      const response = await fetch(`/api/races/${slug}/reviews?${query}`, { cache: "no-store" });
-      if (!response.ok) throw new Error("体験を読み込めませんでした。もう一度お試しください。");
-      const result: RaceReviewPage = await response.json();
-      if (id !== requestId.current) return;
-      setPage((previous) => ({
-        ...result,
-        reviews: offset
-          ? [
-              ...previous.reviews,
-              ...result.reviews.filter((item) => !previous.reviews.some((old) => old.id === item.id)),
-            ]
-          : result.reviews,
-      }));
-      track("race_review_view", { race: slug, filtered: false });
-    } catch (cause) {
-      if (id === requestId.current) setError(cause instanceof Error ? cause.message : "読み込めませんでした");
-    } finally {
-      if (id === requestId.current) setLoading(false);
-    }
-  }, [slug]);
+  const load = useCallback(
+    async (offset = 0) => {
+      const id = ++requestId.current;
+      setLoading(true);
+      setError("");
+      try {
+        const query = new URLSearchParams({ offset: String(offset) });
+        const response = await fetch(`/api/races/${slug}/reviews?${query}`, { cache: "no-store" });
+        if (!response.ok) throw new Error("体験を読み込めませんでした。もう一度お試しください。");
+        const result: RaceReviewPage = await response.json();
+        if (id !== requestId.current) return;
+        setPage((previous) => ({
+          ...result,
+          reviews: offset
+            ? [
+                ...previous.reviews,
+                ...result.reviews.filter((item) => !previous.reviews.some((old) => old.id === item.id)),
+              ]
+            : result.reviews,
+        }));
+        track("race_review_view", { race: slug, filtered: false });
+      } catch (cause) {
+        if (id === requestId.current) setError(cause instanceof Error ? cause.message : "読み込めませんでした");
+      } finally {
+        if (id === requestId.current) setLoading(false);
+      }
+    },
+    [slug],
+  );
 
   // Race pages use ISR and public-only build snapshots. Always refresh reviews
   // from the uncached API so posts and profile updates survive a page reload.
@@ -131,7 +135,7 @@ export function RaceReviews({
       finishTime: `${form.get("finishHours") || "0"}:${String(form.get("finishMinutes") || "0").padStart(2, "0")}:${String(form.get("finishSeconds") || "0").padStart(2, "0")}`,
       distanceKm: String(editing?.distanceKm ?? restoredDraft?.distanceKm ?? ""),
       body: String(form.get("body")),
-      editing: Boolean(editing || restoredDraft?.editing),
+      editing: isEditing,
     };
     const seconds = parseFinishTime(draft.finishTime);
     if (seconds === null) {
@@ -230,7 +234,6 @@ export function RaceReviews({
 
   const currentYear = jstYear(new Date());
   const selectedYear = editing?.raceYear ?? restoredDraft?.raceYear ?? "";
-  const yearLocked = Boolean(editing || restoredDraft?.editing);
   const timeParts = (editing ? formatFinishTime(editing.finishTimeS) : (restoredDraft?.finishTime ?? "")).split(":");
 
   return (
@@ -418,7 +421,7 @@ export function RaceReviews({
           <ArrowLeft size={16} aria-hidden="true" />
           体験一覧に戻る
         </button>
-        <SectionHeading>{editing || restoredDraft?.editing ? "体験を編集" : "体験を書く"}</SectionHeading>
+        <SectionHeading>{isEditing ? "体験を編集" : "体験を書く"}</SectionHeading>
         <form
           ref={formRef}
           key={draftVersion}
@@ -441,14 +444,12 @@ export function RaceReviews({
           )}
           <p className="text-sm font-bold">
             {distanceLabel}
-            {editing || restoredDraft?.editing
-              ? ` · ${editing?.raceYear ?? restoredDraft?.raceYear}年の体験を編集`
-              : "の体験"}
+            {isEditing ? ` · ${editing?.raceYear ?? restoredDraft?.raceYear}年の体験を編集` : "の体験"}
           </p>
           <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
             <label className="text-sm font-bold">
               走った年
-              <select name="raceYear" required defaultValue={selectedYear} disabled={yearLocked} className={fieldClass}>
+              <select name="raceYear" required defaultValue={selectedYear} disabled={isEditing} className={fieldClass}>
                 <option value="" disabled>
                   年を選択
                 </option>
@@ -458,7 +459,7 @@ export function RaceReviews({
                   </option>
                 ))}
               </select>
-              {yearLocked && <input type="hidden" name="raceYear" value={selectedYear} />}
+              {isEditing && <input type="hidden" name="raceYear" value={selectedYear} />}
             </label>
             <fieldset aria-describedby="review-time-help" className="min-w-0">
               <legend className="text-sm font-bold">完走タイム</legend>
@@ -530,13 +531,7 @@ export function RaceReviews({
               disabled={saving || isPending || !page.available}
               className="rounded-lg bg-brand px-5 py-3 text-sm font-bold hover:bg-brand-dark disabled:opacity-50"
             >
-              {saving
-                ? "保存中…"
-                : isPending
-                  ? "確認中…"
-                  : editing || restoredDraft?.editing
-                    ? "変更を保存する"
-                    : "保存する"}
+              {saving ? "保存中…" : isPending ? "確認中…" : isEditing ? "変更を保存する" : "保存する"}
             </button>
           </div>
         </form>
