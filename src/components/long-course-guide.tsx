@@ -163,17 +163,9 @@ export function LongCourseGuide({
       <section id="route" className="scroll-mt-32 space-y-4">
         <SectionHeading>ルート確認</SectionHeading>
         <div className="overflow-hidden rounded-2xl border border-line">
-          <CourseGuideMap
-            geojson={geojson}
-            startPoints={guide.startPoints}
-            selectedStartId={selectedStart.id}
-          />
+          <CourseGuideMap geojson={geojson} startPoints={guide.startPoints} selectedStartId={selectedStart.id} />
           <div className="border-t border-line p-3 sm:p-5">
-            <ElevationProfile
-              profile={profile}
-              totalDistanceM={guide.distanceM}
-              startName={selectedStart.name}
-            />
+            <ElevationProfile profile={profile} totalDistanceM={guide.distanceM} startName={selectedStart.name} />
           </div>
         </div>
         <div className="rounded-xl bg-cream px-4 py-3">

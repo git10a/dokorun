@@ -65,7 +65,10 @@ export function PaceChart({ plan }: { plan: PacePlan }) {
         <span className="text-xs tabular-nums text-sub">
           平均 <b className="text-ink">{formatDuration(average)}</b>/km
           {halfway && (
-            <> ・中間点 <b className="text-ink">{formatDuration(halfway.cumulativeS, true)}</b></>
+            <>
+              {" "}
+              ・中間点 <b className="text-ink">{formatDuration(halfway.cumulativeS, true)}</b>
+            </>
           )}
         </span>
       </div>
@@ -148,7 +151,9 @@ export function PaceChart({ plan }: { plan: PacePlan }) {
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs">
         <p className="inline-flex items-baseline gap-2 tabular-nums">
           <span className="text-sub">{selectedText}</span>
-          <span><strong className="text-base">{formatDuration(selected.paceS)}</strong> /km</span>
+          <span>
+            <strong className="text-base">{formatDuration(selected.paceS)}</strong> /km
+          </span>
         </p>
         <span className="inline-flex items-center gap-1.5 text-sub">
           <span className="w-5 border-t border-dashed border-sub" aria-hidden="true" />
