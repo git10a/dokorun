@@ -10,11 +10,11 @@ import { RaceExperience } from "@/components/race-experience";
 import { getRaceAtmosphere } from "@/lib/race-atmosphere";
 import { SpotCard } from "@/components/spot-card";
 import { TrackView } from "@/components/track-view";
-import { racesByCalendar, raceBySlug } from "@/lib/races";
+import { racesByCalendar, raceBySlug, type RaceDef } from "@/lib/races";
 import { RaceCountdown } from "@/components/race-countdown";
 import { jstTodayKey } from "@/lib/race-date";
 import { raceDateKey, splitRacesBySchedule } from "@/lib/race-schedule";
-import { raceCourseMeta, racePageTitle, racePageDescription } from "@/lib/race-page";
+import { raceCourseMeta, racePageTitle, racePageDescription, type RaceCourseMeta } from "@/lib/race-page";
 import { raceDistanceKm } from "@/lib/race-reviews";
 import { getRaceReviews } from "@/db/race-reviews";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -109,90 +109,8 @@ export default async function RacePage({ params }: { params: Params }) {
         initialReviews={initialReviews}
         atmosphere={getRaceAtmosphere(slug, courseMeta?.courseYear)}
         editorial={raceEditorial[slug]}
-        mapOverlay={
-          courseMeta && (
-            <div className="flex items-center gap-2">
-              <MemberGpxLink
-                href={`/race-gpx/${slug}.gpx`}
-                callbackURL={`/races/${slug}`}
-                fileName={`${slug}.gpx`}
-                slug={slug}
-                meta={{
-                  source: "race",
-                  courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified",
-                }}
-                className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"
-              >
-                <Download size={16} />
-                コースをダウンロード
-              </MemberGpxLink>
-              <Link
-                href="/guide/gpx"
-                title="ウォッチへの取り込み方"
-                className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-paper/95 text-sub shadow-sm hover:text-ink"
-              >
-                <CircleHelp size={18} aria-hidden="true" />
-                <span className="sr-only">ウォッチへの取り込み方</span>
-              </Link>
-            </div>
-          )
-        }
-        courseNote={
-          courseMeta ? (
-            <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
-              {courseMeta.notice && (
-                <p className="font-bold text-ink">
-                  {courseMeta.notice}{" "}
-                  <a
-                    href={race.officialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent underline underline-offset-2"
-                  >
-                    大会公式サイト
-                  </a>
-                </p>
-              )}
-              {/* 出典と注意書きは1行に畳み、気になる人だけ開いて読めるようにする */}
-              <details>
-                <summary className="flex cursor-pointer list-none items-center gap-1 [&::-webkit-details-marker]:hidden">
-                  <span>
-                    {courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図から独自作成"}・約
-                    {(courseMeta.distanceM / 1000).toFixed(1)}km・
-                    {courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}
-                  </span>
-                  <Info size={13} className="shrink-0" aria-label="データについて詳しく" />
-                </summary>
-                <p className="mt-1">
-                  {courseMeta.checkedAt ? `${courseMeta.checkedAt}に確認。` : ""}
-                  主催者が配布するコースデータではありません。正式な距離・経路は
-                  <a
-                    href={courseMeta.sourceUrl ?? race.officialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-accent underline underline-offset-2"
-                  >
-                    公式情報
-                  </a>
-                  で。ダウンロードは無料（ログインが必要）。
-                </p>
-              </details>
-            </div>
-          ) : (
-            <p className="rounded-xl bg-cream p-6 text-sm">
-              コースデータは準備中です。最新のコースは
-              <a
-                href={race.officialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-accent underline underline-offset-2"
-              >
-                公式サイト
-              </a>
-              でご確認ください。
-            </p>
-          )
-        }
+        mapOverlay={courseMeta && <RaceGpxActions slug={slug} courseMeta={courseMeta} />}
+        courseNote={<RaceCourseNote race={race} courseMeta={courseMeta} />}
       />
       {spotItems.length > 0 && (
         <section id="nearby" className="mt-12 scroll-mt-24">
@@ -221,6 +139,96 @@ export default async function RacePage({ params }: { params: Params }) {
           </Link>
         </div>
       </section>
+    </div>
+  );
+}
+
+// 地図の左上に重ねる操作。GPXの取得と、ウォッチへの取り込み方の案内
+function RaceGpxActions({ slug, courseMeta }: { slug: string; courseMeta: RaceCourseMeta }) {
+  return (
+    <div className="flex items-center gap-2">
+      <MemberGpxLink
+        href={`/race-gpx/${slug}.gpx`}
+        callbackURL={`/races/${slug}`}
+        fileName={`${slug}.gpx`}
+        slug={slug}
+        meta={{
+          source: "race",
+          courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified",
+        }}
+        className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"
+      >
+        <Download size={16} />
+        コースをダウンロード
+      </MemberGpxLink>
+      <Link
+        href="/guide/gpx"
+        title="ウォッチへの取り込み方"
+        className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-paper/95 text-sub shadow-sm hover:text-ink"
+      >
+        <CircleHelp size={18} aria-hidden="true" />
+        <span className="sr-only">ウォッチへの取り込み方</span>
+      </Link>
+    </div>
+  );
+}
+
+// 地図の直下に置く作成元・対象年の注記。コースがない大会では公式サイトへ案内する
+function RaceCourseNote({ race, courseMeta }: { race: RaceDef; courseMeta: RaceCourseMeta | undefined }) {
+  if (!courseMeta)
+    return (
+      <p className="rounded-xl bg-cream p-6 text-sm">
+        コースデータは準備中です。最新のコースは
+        <a
+          href={race.officialUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-accent underline underline-offset-2"
+        >
+          公式サイト
+        </a>
+        でご確認ください。
+      </p>
+    );
+  return (
+    <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
+      {courseMeta.notice && (
+        <p className="font-bold text-ink">
+          {courseMeta.notice}{" "}
+          <a
+            href={race.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent underline underline-offset-2"
+          >
+            大会公式サイト
+          </a>
+        </p>
+      )}
+      {/* 出典と注意書きは1行に畳み、気になる人だけ開いて読めるようにする */}
+      <details>
+        <summary className="flex cursor-pointer list-none items-center gap-1 [&::-webkit-details-marker]:hidden">
+          <span>
+            {courseMeta.source === "gps" ? "ランナーの実走GPS" : "公式コース図から独自作成"}・約
+            {(courseMeta.distanceM / 1000).toFixed(1)}km・
+            {courseMeta.courseYear ? `${courseMeta.courseYear}年コース` : "対象年は未確認"}
+          </span>
+          <Info size={13} className="shrink-0" aria-label="データについて詳しく" />
+        </summary>
+        <p className="mt-1">
+          {courseMeta.checkedAt ? `${courseMeta.checkedAt}に確認。` : ""}
+          主催者が配布するコースデータではありません。正式な距離・経路は
+          <a
+            href={courseMeta.sourceUrl ?? race.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-accent underline underline-offset-2"
+          >
+            公式情報
+          </a>
+          で。ダウンロードは無料（ログインが必要）。
+        </p>
+      </details>
     </div>
   );
 }
