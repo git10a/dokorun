@@ -28,6 +28,8 @@ import { getCourseGuide } from "@/lib/course-guides";
 import { stripPrepublishSentences } from "@/lib/public-description";
 import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
 import { SectionHeading } from "@/components/section-heading";
+import { spotEditorial } from "@/lib/course-editorial";
+import { CourseEditorial } from "@/components/course-editorial";
 
 export const revalidate = 3600;
 
@@ -47,8 +49,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!spot) return { title: "スポットが見つかりません" };
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const publicSpotDescription = stripPrepublishSentences(spot.description);
-  const description = `1周${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${publicSpotDescription.slice(0, 90)}`;
-  const title = `${spot.name}のランニングコース - どこラン`;
+  const editorial = spotEditorial[slug];
+  const description =
+    editorial?.intro ??
+    `${spot.courseType === "loop" ? "1周" : "コース距離"}${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${publicSpotDescription.slice(0, 90)}`;
+  const title = `${editorial?.title ?? `${spot.name}のランニングコース`} - どこラン`;
   const canonical = `/spots/${spot.slug}`;
   // コース地図OGP(scripts/generate-og-images.tsで生成)を最優先。地図がなければ写真、それもなければ共通OGP
   const ogImage = spot.hasCourse
@@ -77,7 +82,8 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
   const guideHeroPhoto =
     courseGuide?.checkpoints.find((checkpoint) => checkpoint.id === courseGuide.heroCheckpointId)?.photo ??
     courseGuide?.checkpoints.find((checkpoint) => checkpoint.photo)?.photo;
-  const publicSpotDescription = stripPrepublishSentences(spot.description);
+  const editorial = spotEditorial[slug];
+  const publicSpotDescription = editorial?.intro ?? stripPrepublishSentences(spot.description);
   const detailTabs: SpotDetailTabItem[] = [
     { id: "course", label: "コース情報", href: `/spots/${spot.slug}` },
     { id: "logs", label: "ランログ", count: spot.runsCount, href: `/spots/${spot.slug}?tab=logs` },
@@ -200,6 +206,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
             geojson={spot.geojson}
             courseType={spot.courseType}
             surface={spot.surface}
+            editorial={editorial && <CourseEditorial entry={editorial} />}
           />
         ) : (
           <>
@@ -217,6 +224,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
               <CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} />
               <RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} canDownloadGpx={Boolean(spot.geojson)} />
             </section>
+            {editorial && <CourseEditorial entry={editorial} />}
           </>
         )}
         {nearbyRaces.length > 0 && <NearbyRaces items={nearbyRaces} spotSlug={spot.slug} />}

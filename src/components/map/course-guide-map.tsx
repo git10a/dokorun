@@ -5,16 +5,14 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
 import { addPoiEmphasis } from "./poi-emphasis";
 import type { LineString } from "@/lib/types";
-import type { CourseGuideCheckpoint, CourseGuideStartPoint } from "@/lib/course-guides";
+import type { CourseGuideStartPoint } from "@/lib/course-guides";
 
 export function CourseGuideMap({
   geojson,
-  checkpoints,
   startPoints,
   selectedStartId,
 }: {
   geojson: LineString;
-  checkpoints: CourseGuideCheckpoint[];
   startPoints: CourseGuideStartPoint[];
   selectedStartId: string;
 }) {
@@ -65,16 +63,6 @@ export function CourseGuideMap({
     markers.current = [];
     void import("maplibre-gl").then((maplibregl) => {
       if (!map.current) return;
-      checkpoints.forEach((checkpoint, index) => {
-        const element = document.createElement("div");
-        element.className =
-          "grid size-6 place-items-center rounded-full border-2 border-white bg-ink text-[10px] font-black text-paper shadow";
-        element.textContent = String(index + 1);
-        element.title = checkpoint.name;
-        markers.current.push(
-          new maplibregl.Marker({ element }).setLngLat([checkpoint.routeLng, checkpoint.routeLat]).addTo(map.current!),
-        );
-      });
       startPoints.forEach((start) => {
         const selected = start.id === selectedStartId;
         const element = document.createElement("div");
@@ -86,13 +74,13 @@ export function CourseGuideMap({
         );
       });
     });
-  }, [checkpoints, ready, selectedStartId, startPoints]);
+  }, [ready, selectedStartId, startPoints]);
 
   return (
     <div
       ref={container}
       className="h-[320px] w-full overflow-hidden rounded-2xl border border-line bg-cream sm:h-[400px]"
-      aria-label="コースと主要地点の地図"
+      aria-label="コースとスタート地点の地図"
     />
   );
 }

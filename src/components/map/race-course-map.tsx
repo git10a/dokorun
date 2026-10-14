@@ -78,10 +78,13 @@ export function RaceCourseMap({
   if (!geojson)
     return (
       <>
-        <div
-          className="h-[280px] w-full animate-pulse rounded-2xl border border-line bg-cream sm:h-[340px]"
-          aria-label="コース地図を読み込み中"
-        />
+        <div className="relative">
+          <div
+            className="h-[280px] w-full animate-pulse rounded-2xl border border-line bg-cream sm:h-[340px]"
+            aria-label="コース地図を読み込み中"
+          />
+          {overlay && <div className="absolute left-3 top-3 z-10">{overlay}</div>}
+        </div>
         {note}
       </>
     );
@@ -94,6 +97,8 @@ export function RaceCourseMap({
           lng={lng}
           geojson={geojson}
           name={name}
+          showEndpoints
+          raceSlug={slug}
           highlightedPoint={highlightedPoint}
           className="h-[280px] sm:h-[340px]"
         />

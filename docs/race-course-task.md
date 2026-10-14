@@ -111,6 +111,9 @@ npm run race-gpx:apply -- <race-slug> data/race-gpx/<race-slug>.gpx --source <gp
 | 18 | ehime-marathon | 愛媛マラソン | 42.195km | done | 松山市街地から北条方面の公式主要地点を道路スナップ、42.42km |
 | 19 | saitama-marathon | さいたまマラソン | 42.195km | done | さいたま新都心から浦和・東部方面の主要地点を再現、43.40km |
 | 20 | mito-komon-marathon | 水戸黄門漫遊マラソン | 42.195km | done | 水戸市街地・西部折返し・千波湖の主要地点を再現、42.59km |
+| 21 | iwaki-sunshine-marathon | いわきサンシャインマラソン | 42.195km | done | 2026年公式コース図・会場図・交通規制図から独自再現、42.55km（+0.83%）。2027年コースは未発表のため2026年参考図と常時表示。地形標高は国土地理院。出典・作成方法は data/race-course-sources/iwaki-sunshine-marathon.json |
+
+| 22 | kitakyushu-marathon | 北九州マラソン | 42.195km | done | 2027年公式コース図・交差点案内をもとに、東田周回・東港折返し・門司港ロータリーと関門海峡ミュージアム前折返しを独自再現。43.30km（+2.63%）。地形標高は国土地理院。出典・区間別座標・近似箇所は data/race-course-sources/kitakyushu-marathon.json |
 
 ### 調査メモ(2026-07-11)
 

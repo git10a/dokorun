@@ -11,6 +11,7 @@ import { getStation, getStations, stationJogMinutes } from "@/lib/stations";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd } from "@/components/structured-data";
 import { SectionHeading } from "@/components/section-heading";
+import { stationEditorial } from "@/lib/course-editorial";
 
 export const dynamicParams = false;
 
@@ -38,7 +39,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const representativeSlug = data.station.nearbySpots[0]?.slug ?? data.station.oneStationSpots[0]?.slug;
   const representative = data.spots.get(representativeSlug)?.name;
   const title = `${data.station.name}駅から走れるランニングスポット`;
-  const description = `${data.station.name}駅チカのランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
+  const description =
+    stationEditorial[slug]?.intro ??
+    `${data.station.name}駅チカのランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
   return pageMetadata({ title, description, path: `/stations/${slug}` });
 }
 
@@ -47,6 +50,8 @@ export default async function StationPage({ params }: { params: Params }) {
   const data = await getPageData(slug);
   if (!data) notFound();
   const { station, spots } = data;
+  const editorial = stationEditorial[slug];
+  const recommendations = editorial?.spots.filter((item) => spots.has(item.slug)) ?? [];
   const oneStationGroups = groupByMap(
     station.oneStationSpots,
     (spot) => `${spot.stationCount}:${spot.lineName}:${spot.destinationStationName}`,
@@ -77,6 +82,23 @@ export default async function StationPage({ params }: { params: Params }) {
         </div>
         <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm text-sub">ジョグはキロ6分で計算しています。</p>
       </header>
+
+      {editorial && recommendations.length > 0 && (
+        <section className="space-y-4">
+          <SectionHeading>走る場所の選び方</SectionHeading>
+          <p className="max-w-3xl text-sm leading-7">{editorial.intro}</p>
+          <ul className="max-w-3xl space-y-4">
+            {recommendations.map((item) => (
+              <li key={item.slug}>
+                <Link href={`/spots/${item.slug}`} className="font-bold text-accent underline underline-offset-4">
+                  {spots.get(item.slug)!.name}のコースを見る
+                </Link>
+                <p className="mt-1 text-sm leading-7 text-sub">{item.reason}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {station.nearbySpots.length > 0 && (
         <section>

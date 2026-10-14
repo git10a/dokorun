@@ -4,6 +4,8 @@ import { createElement } from "react";
 import { races } from "@/lib/races";
 import { RaceReviews } from "@/components/race-reviews";
 import { pointAlongCourse } from "@/lib/race-page";
+import { raceEditorial } from "@/lib/course-editorial";
+import { RaceCoursePoints } from "@/components/race-course-points";
 
 const mocks = vi.hoisted(() => ({
   getSpots: vi.fn(async () => []),
@@ -23,6 +25,47 @@ import sitemap from "@/app/sitemap";
 afterEach(() => vi.unstubAllEnvs());
 
 describe("race page SEO preservation", () => {
+  it("combines Legacy scenery and preparation while preserving its map, planner and reviews", async () => {
+    const html = renderToStaticMarkup(
+      await RacePage({ params: Promise.resolve({ slug: "tokyo-legacy-half-marathon" }) }),
+    );
+    const preparation = html.split('id="course-points"')[1].split("</section>")[0];
+    expect(html).not.toContain('id="race-atmosphere"');
+    expect(preparation).toContain("日本橋を渡り、最初の折り返しへ");
+    expect(preparation).toContain("競技場へ戻る道は、長い上り");
+    expect(preparation.match(/<figure/g)).toHaveLength(6);
+    expect(html).toContain('id="course-map"');
+    expect(html).toContain("日本橋を渡り、最初の折り返しへ");
+    expect(html).toContain("まだ体験はありません");
+    const other = renderToStaticMarkup(await RacePage({ params: Promise.resolve({ slug: "tokyo-marathon" }) }));
+    expect(other).not.toContain('id="race-atmosphere"');
+    expect(other).not.toContain("AI生成イメージ");
+  });
+  it("server-renders sourced preparation notes without inventing participant reviews", async () => {
+    for (const [slug, entry] of Object.entries(raceEditorial)) {
+      const html = renderToStaticMarkup(await RacePage({ params: Promise.resolve({ slug }) }));
+      expect(html).toContain("コースの予習ポイント");
+      for (const point of entry!.points) {
+        expect(html).toContain(point.heading);
+        expect(html).toContain(point.distance);
+      }
+      expect(html).toContain("まだ体験はありません");
+      expect(html).not.toContain("AggregateRating");
+    }
+  });
+  it("keeps sources and their reference editions in the HTML, outside the course points", () => {
+    for (const entry of Object.values(raceEditorial)) {
+      const html = renderToStaticMarkup(createElement(RaceCoursePoints, { entry: entry! }));
+      const points = html.split("<ol")[1].split("</ol>")[0];
+      expect(points).not.toContain("<a ");
+      expect(points).not.toContain("確認してください");
+      expect(html).toContain(entry!.referenceLabel);
+      expect(html).toContain("<details");
+      expect(html).not.toContain("<details open");
+      for (const source of entry!.sources) expect(html).toContain(source.url.replaceAll("&", "&amp;"));
+      expect(html).toContain(entry!.sourceNote);
+    }
+  });
   it("keeps every existing race URL, a self-canonical, and course search intent", async () => {
     vi.stubEnv("NEXT_PUBLIC_SITE_URL", "https://dokorun.com");
     expect(
@@ -55,7 +98,8 @@ describe("race page SEO preservation", () => {
     expect(html).not.toContain("AggregateRating");
     // 体験がまだない大会でも、投稿への入口は出す
     expect(html).toContain("まだ体験はありません");
-    expect(html).toContain("ログインして体験を残す");
+    expect(html).toContain("体験を書く");
+    expect(html).not.toContain("ログインして体験を残す");
     expect(html).toContain("/guide/gpx");
     await expect(RacePage({ params: Promise.resolve({ slug: "not-a-race" }) })).rejects.toThrow();
   });

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from "react";
 import Link from "next/link";
 import {
   AlertTriangle,
@@ -25,6 +25,7 @@ import { haversine } from "@/lib/gpx";
 import type { CourseGuide } from "@/lib/course-guides";
 import { track } from "@/lib/track";
 import { SectionHeading } from "@/components/section-heading";
+import { CourseAtmosphere } from "@/components/course-atmosphere";
 
 type StationResult = { name: string; prefecture: string; lat: number; lng: number };
 type Recommendation = { station: StationResult; startId: string; differenceKm: number | null };
@@ -34,11 +35,13 @@ export function LongCourseGuide({
   geojson,
   courseType,
   surface,
+  editorial,
 }: {
   guide: CourseGuide;
   geojson: LineString;
   courseType: CourseType;
   surface: Surface;
+  editorial?: ReactNode;
 }) {
   const [selectedStartId, setSelectedStartId] = useState(guide.startPoints[0].id);
   const [origin, setOrigin] = useState("");
@@ -70,6 +73,7 @@ export function LongCourseGuide({
         .sort((a, b) => a.displayDistanceM - b.displayDistanceM),
     [guide.checkpoints, selectedStart.checkpointDistances],
   );
+  const highlights = checkpoints.filter((checkpoint) => checkpoint.photo);
   const directionsUrl = useMemo(() => {
     const params = new URLSearchParams({
       api: "1",
@@ -161,14 +165,12 @@ export function LongCourseGuide({
         <div className="overflow-hidden rounded-2xl border border-line">
           <CourseGuideMap
             geojson={geojson}
-            checkpoints={checkpoints}
             startPoints={guide.startPoints}
             selectedStartId={selectedStart.id}
           />
           <div className="border-t border-line p-3 sm:p-5">
             <ElevationProfile
               profile={profile}
-              checkpoints={checkpoints}
               totalDistanceM={guide.distanceM}
               startName={selectedStart.name}
             />
@@ -197,79 +199,85 @@ export function LongCourseGuide({
         </div>
       </section>
 
-      <section id="highlights" className="scroll-mt-32 space-y-4">
-        <div>
-          <SectionHeading>{guide.checkpointsTitle ?? "見どころ"}</SectionHeading>
-          <p className="mt-2 text-sm text-sub">{selectedStart.name}からの順番</p>
-        </div>
-        <div className="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0">
-          {checkpoints.map((checkpoint, index) => (
-            <details
-              key={checkpoint.id}
-              className="group w-[82%] shrink-0 snap-center overflow-hidden rounded-xl border border-line bg-paper sm:w-[44%]"
-            >
-              <summary className="cursor-pointer list-none">
-                {checkpoint.photo ? (
-                  <div className="relative">
-                    <SpotImage
-                      src={checkpoint.photo.url}
-                      alt={checkpoint.photo.alt}
-                      width={640}
-                      height={360}
-                      sizes="(min-width: 768px) 44vw, 82vw"
-                      unoptimized
-                      className="aspect-video w-full object-cover"
-                    />
-                    <span className="absolute left-3 top-3 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">
-                      {index + 1}・{(checkpoint.displayDistanceM / 1000).toFixed(1)}km
-                    </span>
+      {editorial}
+
+      {guide.atmosphere ? (
+        <CourseAtmosphere atmosphere={guide.atmosphere} />
+      ) : highlights.length > 0 ? (
+        <section id="highlights" className="scroll-mt-32 space-y-4">
+          <div>
+            <SectionHeading>{guide.checkpointsTitle ?? "見どころ"}</SectionHeading>
+            <p className="mt-2 text-sm text-sub">{selectedStart.name}からの順番</p>
+          </div>
+          <div className="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0">
+            {highlights.map((checkpoint) => (
+              <details
+                key={checkpoint.id}
+                className="group w-[82%] shrink-0 snap-center overflow-hidden rounded-xl border border-line bg-paper sm:w-[44%]"
+              >
+                <summary className="cursor-pointer list-none">
+                  {checkpoint.photo ? (
+                    <div className="relative">
+                      <SpotImage
+                        src={checkpoint.photo.url}
+                        alt={checkpoint.photo.alt}
+                        width={640}
+                        height={360}
+                        sizes="(min-width: 768px) 44vw, 82vw"
+                        unoptimized
+                        className="aspect-video w-full object-cover"
+                      />
+                      <span className="absolute left-3 top-3 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">
+                        {(checkpoint.displayDistanceM / 1000).toFixed(1)}km
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-3 bg-cream p-4">
+                      <span className="shrink-0 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">
+                        {(checkpoint.displayDistanceM / 1000).toFixed(1)}km
+                      </span>
+                      <h3 className="text-lg font-bold">{checkpoint.name}</h3>
+                      <ChevronRight
+                        size={18}
+                        aria-hidden="true"
+                        className="ml-auto shrink-0 text-sub transition-transform group-open:rotate-90"
+                      />
+                    </div>
+                  )}
+                  {checkpoint.photo && (
+                    <div className="flex items-center justify-between gap-2 p-4">
+                      <h3 className="text-lg font-bold">{checkpoint.name}</h3>
+                      <ChevronRight
+                        size={18}
+                        aria-hidden="true"
+                        className="shrink-0 text-sub transition-transform group-open:rotate-90"
+                      />
+                    </div>
+                  )}
+                </summary>
+                <div className="border-t border-line p-4">
+                  <p className="text-sm leading-6 text-sub">{checkpoint.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                    <span className="rounded-full bg-cream px-2.5 py-1 font-bold">{checkpoint.surfaceLabel}</span>
+                    <span className="rounded-full border border-line px-2.5 py-1">{checkpoint.caution}</span>
                   </div>
-                ) : (
-                  <div className="flex items-center gap-3 bg-cream p-4">
-                    <span className="shrink-0 rounded-full bg-ink px-2.5 py-1 text-xs font-bold text-paper">
-                      {index + 1}・{(checkpoint.displayDistanceM / 1000).toFixed(1)}km
-                    </span>
-                    <h3 className="text-lg font-bold">{checkpoint.name}</h3>
-                    <ChevronRight
-                      size={18}
-                      aria-hidden="true"
-                      className="ml-auto shrink-0 text-sub transition-transform group-open:rotate-90"
-                    />
-                  </div>
-                )}
-                {checkpoint.photo && (
-                  <div className="flex items-center justify-between gap-2 p-4">
-                    <h3 className="text-lg font-bold">{checkpoint.name}</h3>
-                    <ChevronRight
-                      size={18}
-                      aria-hidden="true"
-                      className="shrink-0 text-sub transition-transform group-open:rotate-90"
-                    />
-                  </div>
-                )}
-              </summary>
-              <div className="border-t border-line p-4">
-                <p className="text-sm leading-6 text-sub">{checkpoint.description}</p>
-                <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full bg-cream px-2.5 py-1 font-bold">{checkpoint.surfaceLabel}</span>
-                  <span className="rounded-full border border-line px-2.5 py-1">{checkpoint.caution}</span>
+                  {checkpoint.photo && (
+                    <a
+                      href={checkpoint.photo.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1 text-[11px] text-sub underline"
+                    >
+                      写真: {checkpoint.photo.credit} / {checkpoint.photo.license}
+                      <ExternalLink size={11} />
+                    </a>
+                  )}
                 </div>
-                {checkpoint.photo && (
-                  <a
-                    href={checkpoint.photo.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-[11px] text-sub underline"
-                  >
-                    写真: {checkpoint.photo.credit} / {checkpoint.photo.license}
-                    <ExternalLink size={11} />
-                  </a>
-                )}
-              </div>
-            </details>
-          ))}
-        </div>
-      </section>
+              </details>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-paper/95 p-3 backdrop-blur">
         <div className="mx-auto flex w-full max-w-2xl gap-2">

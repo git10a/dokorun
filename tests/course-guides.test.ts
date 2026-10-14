@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { getCourseGuide } from "../src/lib/course-guides";
-import { readdirSync } from "node:fs";
+import {
+  getCourseGuide,
+  isReviewedCoursePhoto,
+  preparePublicCourseGuide,
+  type CourseGuide,
+} from "../src/lib/course-guides";
+import { readdirSync, readFileSync } from "node:fs";
 
 const guideSlugs = ["kamakura-issyu-trail", "teganuma-loop", "yamanote-loop"];
 
@@ -13,7 +18,7 @@ describe("course guides", () => {
     expect(new Set(slugs).size).toBe(250);
   });
 
-  it("serves every generated guide with only strongly matched photo content", async () => {
+  it("serves every guide with only explicitly reviewed photos", async () => {
     const slugs = readdirSync("public/course-guides")
       .filter((name) => name.endsWith(".json"))
       .map((name) => name.replace(/\.json$/, ""));
@@ -34,54 +39,77 @@ describe("course guides", () => {
           expect(checkpoint.description, guide.slug).not.toContain("写真");
           continue;
         }
+        expect(isReviewedCoursePhoto(guide.slug, checkpoint), `${guide.slug}/${checkpoint.id}`).toBe(true);
         expect(checkpoint.photo.sourceUrl, guide.slug).toMatch(/^https:\/\/commons\.wikimedia\.org\//);
         expect(checkpoint.photo.license, guide.slug).toMatch(/CC|Public domain|PDM/i);
       }
     }
   });
 
-  it("rejects nearby stations while retaining exact park photos", async () => {
-    const wangan = await getCourseGuide("wangan-ariake-kasai");
-    expect(wangan?.checkpointsTitle).toBe("コースの雰囲気");
-    const wanganPhotoSources =
-      wangan?.checkpoints.flatMap((checkpoint) => (checkpoint.photo ? [checkpoint.photo.sourceUrl] : [])) ?? [];
-    expect(wanganPhotoSources).toHaveLength(1);
-    expect(decodeURIComponent(wanganPhotoSources[0])).toContain("東京ビッグサイト");
-    expect(wangan?.checkpoints.some((checkpoint) => checkpoint.description.includes("改札"))).toBe(false);
-
-    const hattori = await getCourseGuide("hattori-ryokuchi");
-    const photoSources =
-      hattori?.checkpoints.flatMap((checkpoint) => (checkpoint.photo ? [checkpoint.photo.sourceUrl] : [])) ?? [];
-    expect(photoSources.some((source) => source.includes("Hattori_Ryokuchi_Park"))).toBe(true);
-    expect(photoSources.some((source) => /Momoyamadai|station|駅/i.test(source))).toBe(false);
-  });
-
-  it("uses actual Yoyogi Park photos for the trail guide hero and early section", async () => {
-    const guide = await getCourseGuide("yoyogi-park-trail");
-    const hero = guide?.checkpoints.find((checkpoint) => checkpoint.id === guide.heroCheckpointId);
-    const early = guide?.checkpoints.find((checkpoint) => checkpoint.id === "section-2");
-
-    expect(decodeURIComponent(hero?.photo?.sourceUrl ?? "")).toContain("代々木公園_Yoyogi_Park");
-    expect(early?.photo?.sourceUrl).toContain("Yoyogi_Park3");
-    expect(
-      `${hero?.description} ${early?.description} ${hero?.photo?.sourceUrl} ${early?.photo?.sourceUrl}`,
-    ).not.toMatch(/toilet|Puesto de comida|東京パークス/i);
-  });
-
-  it("does not broadly remove otherwise usable course photos", async () => {
-    const slugs = readdirSync("public/course-guides")
-      .filter((name) => name.endsWith(".json"))
-      .map((name) => name.replace(/\.json$/, ""));
-    let photoCount = 0;
-    let guidesWithPhotos = 0;
-    for (const slug of slugs) {
+  it.each(["yoyogi", "yoyogi-park-trail", "wangan-ariake-kasai", "nagai-park", "hattori-ryokuchi"])(
+    "does not publish automatically assigned photos for %s",
+    async (slug) => {
       const guide = await getCourseGuide(slug);
-      const count = guide?.checkpoints.filter((checkpoint) => checkpoint.photo).length ?? 0;
-      photoCount += count;
-      if (count > 0) guidesWithPhotos += 1;
-    }
-    expect(photoCount).toBeGreaterThan(900);
-    expect(guidesWithPhotos).toBeGreaterThan(220);
+      expect(guide?.checkpoints.every((checkpoint) => !checkpoint.photo)).toBe(true);
+      expect(guide?.checkpoints.some((checkpoint) => checkpoint.description.includes("写真"))).toBe(false);
+    },
+  );
+
+  it("retains reviewed landmark photos, including stations when the course is a station loop", async () => {
+    const kamakura = await getCourseGuide("kamakura-issyu-trail");
+    expect(kamakura?.checkpoints.filter((checkpoint) => checkpoint.photo)).toHaveLength(6);
+    const teganuma = await getCourseGuide("teganuma-loop");
+    expect(teganuma?.checkpoints.filter((checkpoint) => checkpoint.photo)).toHaveLength(5);
+    const yamanote = await getCourseGuide("yamanote-loop");
+    expect(yamanote?.checkpoints.filter((checkpoint) => checkpoint.photo)).toHaveLength(6);
+    expect(yamanote?.checkpoints.find((point) => point.id === "tokyo")?.photo?.alt).toContain("東京駅");
+  });
+
+  it("cannot transfer a review to a different image, source, course or checkpoint", () => {
+    const original = JSON.parse(readFileSync("public/course-guides/kamakura-issyu-trail.json", "utf8")) as CourseGuide;
+    const point = original.checkpoints[0];
+    expect(isReviewedCoursePhoto(original.slug, point)).toBe(true);
+    expect(isReviewedCoursePhoto("yoyogi", point)).toBe(false);
+    expect(isReviewedCoursePhoto(original.slug, { ...point, id: "section-1" })).toBe(false);
+    expect(
+      isReviewedCoursePhoto(original.slug, {
+        ...point,
+        photo: { ...point.photo!, url: "https://example.com/park.jpg" },
+      }),
+    ).toBe(false);
+    expect(
+      isReviewedCoursePhoto(original.slug, {
+        ...point,
+        photo: { ...point.photo!, sourceUrl: "https://example.com/park" },
+      }),
+    ).toBe(false);
+  });
+
+  it("preserves route data and source candidates while removing unreviewed photos from the public view", () => {
+    const original = JSON.parse(readFileSync("public/course-guides/yoyogi.json", "utf8")) as CourseGuide;
+    const before = structuredClone(original);
+    const prepared = preparePublicCourseGuide(original);
+    expect(original).toEqual(before);
+    expect(prepared.startPoints).toEqual(original.startPoints);
+    expect(prepared.elevationProfile).toEqual(original.elevationProfile);
+    expect(prepared.distanceM).toBe(original.distanceM);
+    expect(
+      prepared.checkpoints.map(({ id, routeDistanceM, routeLat, routeLng }) => ({
+        id,
+        routeDistanceM,
+        routeLat,
+        routeLng,
+      })),
+    ).toEqual(
+      original.checkpoints.map(({ id, routeDistanceM, routeLat, routeLng }) => ({
+        id,
+        routeDistanceM,
+        routeLat,
+        routeLng,
+      })),
+    );
+    expect(JSON.stringify(prepared)).not.toContain("upload.wikimedia.org");
+    expect(preparePublicCourseGuide(prepared)).toEqual(prepared);
   });
 
   it.each(guideSlugs)("registers generated guide data for %s", async (slug) => {

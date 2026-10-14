@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, Download, Info, MapPin } from "lucide-react";
+import { CalendarDays, CircleHelp, Download, Info } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { MemberGpxLink } from "@/components/member-gpx-link";
 import { RaceExperience } from "@/components/race-experience";
-import { TrackedLink } from "@/components/tracked-link";
+import { getRaceAtmosphere } from "@/lib/race-atmosphere";
 import { SpotCard } from "@/components/spot-card";
 import { TrackView } from "@/components/track-view";
 import { racesByCalendar, raceBySlug } from "@/lib/races";
@@ -22,6 +22,7 @@ import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/struc
 import { getPublishedStories, raceStories } from "@/lib/race-stories";
 import { RaceStoryCard } from "@/components/race-story";
 import { SectionHeading } from "@/components/section-heading";
+import { raceEditorial } from "@/lib/course-editorial";
 
 // スポット情報の更新反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
 export const revalidate = 3600;
@@ -63,28 +64,6 @@ export default async function RacePage({ params }: { params: Params }) {
   // 全大会を並べると長いので、開催が近い順に数件だけ見せて残りは一覧へ
   const otherRaces = [...schedule.upcoming, ...schedule.finished].filter((item) => item.slug !== race.slug).slice(0, 6);
   const dateKey = raceDateKey(race);
-  // 発着点はGoogleマップで開けるようにする(独自の施設データは持たない)
-  const start = courseMeta?.start;
-  const finish = courseMeta?.finish;
-  const finishDiffers = Boolean(start && finish && Math.hypot(start[0] - finish[0], start[1] - finish[1]) > 0.003);
-  const raceDayLinks = start
-    ? [
-        {
-          kind: "start",
-          label: finishDiffers ? "スタート地点" : "発着点",
-          href: `https://www.google.com/maps/search/?api=1&query=${start[0]},${start[1]}`,
-        },
-        ...(finishDiffers && finish
-          ? [
-              {
-                kind: "finish",
-                label: "ゴール地点",
-                href: `https://www.google.com/maps/search/?api=1&query=${finish[0]},${finish[1]}`,
-              },
-            ]
-          : []),
-      ]
-    : [];
   const title = racePageTitle(race);
   const structuredData = [
     breadcrumbJsonLd([
@@ -128,27 +107,52 @@ export default async function RacePage({ params }: { params: Params }) {
         maxKm={raceDistanceKm(race)}
         hasCourse={Boolean(courseMeta)}
         initialReviews={initialReviews}
+        atmosphere={getRaceAtmosphere(slug, courseMeta?.courseYear)}
+        editorial={raceEditorial[slug]}
         mapOverlay={
           courseMeta && (
-            <MemberGpxLink
-              href={`/race-gpx/${slug}.gpx`}
-              callbackURL={`/races/${slug}`}
-              fileName={`${slug}.gpx`}
-              slug={slug}
-              meta={{
-                source: "race",
-                courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified",
-              }}
-              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"
-            >
-              <Download size={16} />
-              コースをダウンロード
-            </MemberGpxLink>
+            <div className="flex items-center gap-2">
+              <MemberGpxLink
+                href={`/race-gpx/${slug}.gpx`}
+                callbackURL={`/races/${slug}`}
+                fileName={`${slug}.gpx`}
+                slug={slug}
+                meta={{
+                  source: "race",
+                  courseYear: courseMeta.courseYear ? String(courseMeta.courseYear) : "unverified",
+                }}
+                className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-bold shadow-md transition hover:bg-brand-dark"
+              >
+                <Download size={16} />
+                コースをダウンロード
+              </MemberGpxLink>
+              <Link
+                href="/guide/gpx"
+                title="ウォッチへの取り込み方"
+                className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-paper/95 text-sub shadow-sm hover:text-ink"
+              >
+                <CircleHelp size={18} aria-hidden="true" />
+                <span className="sr-only">ウォッチへの取り込み方</span>
+              </Link>
+            </div>
           )
         }
         courseNote={
           courseMeta ? (
             <div id="gpx" className="mt-2 scroll-mt-24 space-y-1.5 text-xs leading-5 text-sub">
+              {courseMeta.notice && (
+                <p className="font-bold text-ink">
+                  {courseMeta.notice}{" "}
+                  <a
+                    href={race.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline underline-offset-2"
+                  >
+                    大会公式サイト
+                  </a>
+                </p>
+              )}
               {/* 出典と注意書きは1行に畳み、気になる人だけ開いて読めるようにする */}
               <details>
                 <summary className="flex cursor-pointer list-none items-center gap-1 [&::-webkit-details-marker]:hidden">
@@ -173,26 +177,6 @@ export default async function RacePage({ params }: { params: Params }) {
                   で。ダウンロードは無料（ログインが必要）。
                 </p>
               </details>
-              <p className="flex flex-wrap gap-x-4 gap-y-1">
-                {raceDayLinks.map((item) => (
-                  <TrackedLink
-                    key={item.kind}
-                    event="race_day_link"
-                    meta={{ race: slug, kind: item.kind }}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${item.label}をGoogleマップで見る`}
-                    className="inline-flex items-center gap-1 font-bold text-accent hover:underline"
-                  >
-                    <MapPin size={13} />
-                    {item.label}の地図
-                  </TrackedLink>
-                ))}
-                <Link href="/guide/gpx" className="font-bold text-accent hover:underline">
-                  ウォッチへの取り込み方
-                </Link>
-              </p>
             </div>
           ) : (
             <p className="rounded-xl bg-cream p-6 text-sm">

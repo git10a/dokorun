@@ -17,6 +17,7 @@ import { formatDuration } from "@/lib/format";
 import type { RaceElevation } from "@/lib/race-elevation";
 import { track } from "@/lib/track";
 import { SectionHeading } from "@/components/section-heading";
+import { PaceChart } from "@/components/pace-chart";
 
 type Props = {
   slug: string;
@@ -65,8 +66,8 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
   const [hillEffort, setHillEffort] = useState(0);
   const [profile, setProfile] = useState<RaceElevation | null | undefined>(hasCourse ? undefined : null);
   const [view, setView] = useState<"5km" | "1km">("5km");
-  // 設定UIと棒グラフで配分は伝わるので、縦に長い通過表は開いた人にだけ見せる
-  const [tableOpen, setTableOpen] = useState(false);
+  // 目標タイムを変えた結果をすぐ確認できるよう、通過表は最初から表示する
+  const [tableOpen, setTableOpen] = useState(true);
   const [copied, setCopied] = useState(false);
   const hillsAvailable = canUseHills(profile ?? null);
   // ボタンなしで、目標タイム・スライダーの変更をその場で表に反映する
@@ -235,7 +236,7 @@ export function PacePlanner({ slug, raceName, distanceKm, hasCourse, onTargetCha
             disabled={!hillsAvailable}
           />
         </div>
-        <PaceBars plan={plan} />
+        <PaceChart plan={plan} />
         {profile !== undefined && !hillsAvailable && (
           <p className="mt-4 text-xs leading-5 text-sub">このコースは標高を確認中のため、坂を考慮せずに配分します。</p>
         )}
@@ -428,53 +429,6 @@ function PaceSlider({
           {min < 0 && max > 0 ? "中央に戻す" : ""}
         </button>
         <span>{rightLabel}</span>
-      </div>
-    </div>
-  );
-}
-
-// スライダーを動かすと形が変わる、1kmごとのペースの棒グラフ。高いほどゆっくり。平均ペース±8%の範囲で描く
-function PaceBars({ plan }: { plan: ReturnType<typeof buildPacePlan> }) {
-  const average = plan.targetS / plan.distanceKm;
-  const halfway =
-    plan.fiveKm.find((row) => row.label === "中間点") ?? plan.fiveKm.find((row) => row.toKm >= plan.distanceKm / 2);
-  const width = plan.km.length * 10;
-  return (
-    <div className="mt-5 rounded-xl bg-paper p-3">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-3 text-xs">
-        <span className="font-bold">1kmごとのペース</span>
-        <span className="tabular-nums text-sub">
-          平均 <b className="text-ink">{formatDuration(average)}</b>/km
-          {halfway && (
-            <>
-              ・中間点 <b className="text-ink">{formatDuration(halfway.cumulativeS, true)}</b>
-            </>
-          )}
-        </span>
-      </div>
-      <svg viewBox={`0 0 ${width} 56`} preserveAspectRatio="none" className="mt-2 h-14 w-full" aria-hidden="true">
-        <line x1="0" x2={width} y1="28" y2="28" stroke="currentColor" strokeOpacity="0.15" strokeDasharray="3 3" />
-        {plan.km.map((row, index) => {
-          const ratio = Math.max(-1, Math.min(1, (row.paceS / average - 1) / 0.08));
-          const height = 28 + ratio * 24;
-          return (
-            <rect
-              key={row.label}
-              x={index * 10 + 1}
-              y={56 - height}
-              width={8}
-              height={height}
-              rx={1.5}
-              className={ratio > 0.05 ? "fill-ink/70" : ratio < -0.05 ? "fill-brand-dark" : "fill-ink/35"}
-              style={{ transition: "y 150ms ease-out, height 150ms ease-out" }}
-            />
-          );
-        })}
-      </svg>
-      <div className="mt-1 flex justify-between text-[10px] text-sub">
-        <span>スタート</span>
-        <span>高い棒ほどゆっくり</span>
-        <span>ゴール</span>
       </div>
     </div>
   );

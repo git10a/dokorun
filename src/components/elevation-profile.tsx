@@ -1,5 +1,4 @@
 import type { ElevationSample } from "@/lib/gpx";
-import type { CourseGuideCheckpoint } from "@/lib/course-guides";
 
 const width = 800;
 const height = 190;
@@ -9,12 +8,10 @@ const padBottom = 32;
 
 export function ElevationProfile({
   profile,
-  checkpoints,
   totalDistanceM,
   startName,
 }: {
   profile: ElevationSample[];
-  checkpoints: Array<CourseGuideCheckpoint & { displayDistanceM: number }>;
   totalDistanceM: number;
   startName: string;
 }) {
@@ -78,32 +75,6 @@ export function ElevationProfile({
         <text x={padX - 8} y={padTop + chartHeight} textAnchor="end" fontSize="10" fill="#6B7280">
           {min}m
         </text>
-        {checkpoints.map((checkpoint, index) =>
-          checkpoint.elevationM === null ? null : (
-            <g key={checkpoint.id}>
-              <circle
-                cx={x(checkpoint.displayDistanceM)}
-                cy={y(checkpoint.elevationM)}
-                r="6"
-                fill="#FFD900"
-                stroke="#1A1A1A"
-                strokeWidth="2"
-              >
-                <title>{`${index + 1}. ${checkpoint.name}・${(checkpoint.displayDistanceM / 1000).toFixed(1)}km`}</title>
-              </circle>
-              <text
-                x={x(checkpoint.displayDistanceM)}
-                y={y(checkpoint.elevationM) - 10}
-                textAnchor="middle"
-                fontSize="10"
-                fontWeight="700"
-                fill="#1A1A1A"
-              >
-                {index + 1}
-              </text>
-            </g>
-          ),
-        )}
       </svg>
     </figure>
   );

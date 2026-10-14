@@ -1,6 +1,9 @@
 import { createRequire } from "node:module";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import type { ElevationSample } from "@/lib/gpx";
+import { spotEditorial } from "@/lib/course-editorial";
+import coursePhotoReviews from "@/lib/course-photo-reviews.json";
+import { courseAtmospheres, type CourseAtmosphere } from "@/lib/course-atmosphere";
 
 export type CourseGuideWarning = { title: string; body: string; url: string; linkLabel: string };
 export type CourseGuideStartPoint = {
@@ -43,49 +46,53 @@ export type CourseGuide = {
   warnings: CourseGuideWarning[];
   startPoints: CourseGuideStartPoint[];
   checkpoints: CourseGuideCheckpoint[];
+  atmosphere?: CourseAtmosphere;
 };
 
-const IRRELEVANT_PHOTO_PATTERN =
-  /(?:station|ticket.?gate|school|supermarket|restaurant|clubhouse|foundation|highway|heliport|earthquake|liquefaction|gas.?station|public.?toilet|eneos|\bsta\b|駅|改札|学校|スーパー|飲食店|クラブハウス|高速道路|ヘリポート|地震|液状化|給油所|公衆トイレ)/i;
+// Nearby search results are research candidates, not evidence of a course view.
+// A review is specific to the course, landmark, source page and displayed image.
+// Keep reviews outside generated JSON so regeneration cannot grant approval.
+const photoReviews: Record<
+  string,
+  Record<string, { sourceUrl: string; imageUrl: string; checkedAt: string }>
+> = coursePhotoReviews;
 
-function normalizedPhotoText(value: string) {
-  try {
-    return decodeURIComponent(value)
-      .normalize("NFKC")
-      .toLowerCase()
-      .replace(/[^\p{L}\p{N}]+/gu, " ");
-  } catch {
-    return value
-      .normalize("NFKC")
-      .toLowerCase()
-      .replace(/[^\p{L}\p{N}]+/gu, " ");
-  }
-}
-
-export function isRelevantCoursePhoto(checkpoint: CourseGuideCheckpoint) {
-  if (!checkpoint.photo) return false;
-  const sourceText = normalizedPhotoText(checkpoint.photo.sourceUrl);
-  return !IRRELEVANT_PHOTO_PATTERN.test(sourceText);
+export function isReviewedCoursePhoto(slug: string, checkpoint: CourseGuideCheckpoint) {
+  const review = photoReviews[slug]?.[checkpoint.id];
+  return Boolean(
+    checkpoint.photo &&
+    review &&
+    checkpoint.photo.sourceUrl === review.sourceUrl &&
+    checkpoint.photo.url === review.imageUrl,
+  );
 }
 
 export function preparePublicCourseGuide(guide: CourseGuide): CourseGuide {
-  const checkpoints = guide.checkpoints.map((checkpoint) =>
-    isRelevantCoursePhoto(checkpoint)
-      ? checkpoint
-      : {
-          id: checkpoint.id,
-          name: checkpoint.name,
-          description: `${checkpoint.name}の走行区間です。路面は${checkpoint.surfaceLabel}。注意点は「${checkpoint.caution}」です。地図と現地案内を確認しながら走ってください。`,
-          surfaceLabel: checkpoint.surfaceLabel,
-          caution: checkpoint.caution,
-          routeDistanceM: checkpoint.routeDistanceM,
-          routeLat: checkpoint.routeLat,
-          routeLng: checkpoint.routeLng,
-          elevationM: checkpoint.elevationM,
-        },
-  );
+  const editorial = spotEditorial[guide.slug];
+  const seenPhotos = new Set<string>();
+  const checkpoints = guide.checkpoints.map((checkpoint) => {
+    const { photo, ...point } = checkpoint;
+    if (
+      photo &&
+      !editorial?.hideUnverifiedPhotos &&
+      isReviewedCoursePhoto(guide.slug, checkpoint) &&
+      !seenPhotos.has(photo.sourceUrl)
+    ) {
+      seenPhotos.add(photo.sourceUrl);
+      return checkpoint;
+    }
+    return {
+      ...point,
+      // Photo-derived prose is not a route description. Do not publish it after
+      // rejecting the image, and do not replace it with five generic warnings.
+      description: point.description.includes("写真") ? "" : point.description,
+    };
+  });
   return {
     ...guide,
+    atmosphere: courseAtmospheres[guide.slug],
+    intro: editorial?.intro ?? guide.intro,
+    warnings: editorial?.notice ? [editorial.notice, ...guide.warnings] : guide.warnings,
     checkpointsTitle: checkpoints.some((checkpoint) => checkpoint.photo) ? "コースの雰囲気" : "区間ごとの確認ポイント",
     checkpoints,
   };

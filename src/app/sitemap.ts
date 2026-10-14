@@ -6,6 +6,7 @@ import { features } from "@/lib/features";
 import { races } from "@/lib/races";
 import { getStationLines, getStations } from "@/lib/stations";
 import { getPublishedStories } from "@/lib/race-stories";
+import { editorialLastModified, raceEditorial, spotEditorial, stationEditorial } from "@/lib/course-editorial";
 
 // クローラーアクセスのたびのD1クエリを1日1回に抑える。新スポットの反映は最大1日遅れる
 export const revalidate = 86400;
@@ -32,7 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [spotRows, prefectureCounts] = await Promise.all([getSitemapSpots(), getPrefectureCounts()]);
   const spotPages: MetadataRoute.Sitemap = spotRows.map((spot) => ({
     url: `${baseUrl}/spots/${spot.slug}`,
-    lastModified: spot.updatedAt,
+    lastModified: editorialLastModified(spotEditorial[spot.slug], spot.updatedAt),
     changeFrequency: "monthly",
     priority: 0.7,
   }));
@@ -49,11 +50,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
   const racePages: MetadataRoute.Sitemap = races.map((race) => ({
     url: `${baseUrl}/races/${race.slug}`,
+    lastModified: editorialLastModified(raceEditorial[race.slug]),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
   const stationPages: MetadataRoute.Sitemap = getStations().map((station) => ({
     url: `${baseUrl}/stations/${station.slug}`,
+    lastModified: editorialLastModified(stationEditorial[station.slug]),
     changeFrequency: "monthly",
     priority: 0.7,
   }));

@@ -5,6 +5,9 @@ import { RaceCourseMap } from "./map/race-course-map";
 import { PacePlanner } from "./pace-planner";
 import { RaceReviews } from "./race-reviews";
 import type { RaceReviewPage } from "@/lib/race-reviews";
+import { RaceCoursePoints } from "./race-course-points";
+import type { RaceEditorial } from "@/lib/course-editorial";
+import type { RaceAtmosphere as Atmosphere } from "@/lib/race-atmosphere";
 
 export function RaceExperience({
   slug,
@@ -14,6 +17,8 @@ export function RaceExperience({
   hasCourse,
   mapOverlay,
   courseNote,
+  editorial,
+  atmosphere,
   initialReviews,
 }: {
   slug: string;
@@ -23,11 +28,11 @@ export function RaceExperience({
   hasCourse: boolean;
   mapOverlay?: ReactNode;
   courseNote?: ReactNode;
+  editorial?: RaceEditorial;
+  atmosphere?: Atmosphere;
   initialReviews: RaceReviewPage;
 }) {
   const [selectedKm, setSelectedKm] = useState<number | null>(null);
-  // ペース表で選んだ目標タイムを、体験の絞り込みにも使えるようにする
-  const [paceTargetS, setPaceTargetS] = useState<number | null>(null);
   return (
     <>
       <section id="course-map" className="mt-6 scroll-mt-24">
@@ -46,13 +51,21 @@ export function RaceExperience({
           courseNote
         )}
       </section>
-      <PacePlanner
-        slug={slug}
-        raceName={name}
-        distanceKm={maxKm}
-        hasCourse={hasCourse}
-        onTargetChange={setPaceTargetS}
-      />
+      {(editorial || atmosphere) && (
+        <RaceCoursePoints
+          entry={editorial}
+          atmosphere={atmosphere}
+          onSelectPoint={
+            hasCourse
+              ? (km) => {
+                  setSelectedKm(km);
+                  document.getElementById("course-map")?.scrollIntoView({ block: "start" });
+                }
+              : undefined
+          }
+        />
+      )}
+      <PacePlanner slug={slug} raceName={name} distanceKm={maxKm} hasCourse={hasCourse} />
       <div className="mt-12">
         <RaceReviews
           key={slug}
@@ -60,7 +73,6 @@ export function RaceExperience({
           distanceLabel={distanceLabel}
           maxKm={maxKm}
           initial={initialReviews}
-          suggestedTargetS={paceTargetS}
           onSelectPoint={
             hasCourse
               ? (km) => {
