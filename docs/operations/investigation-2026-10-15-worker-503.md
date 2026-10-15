@@ -100,7 +100,7 @@ C1だけでも、この25分で観測した `exceededCpu` 80件は理屈の上�
 
 C1の注意点: 投稿や管理画面の更新で `revalidatePath` したページは、その後の最初の閲覧で1回だけ再描画される（約100ms CPU）。無料枠では失敗することがある。投稿は頻繁ではないので、時間ベースの空回りとは桁が違う。確実に反映したいときは再配信する。
 
-## 実装状況（ブランチ `fix/worker-cpu-isr`、未配信）
+## 実装状況（2026-10-15 11:34 JST 本番反映。`release-2026-10-15-worker-cpu-isr.md`）
 
 - **C1（実装）**: `revalidate = false` にしたのは `/spots/[slug]`・`/races/[slug]`・`/areas`・`/areas/[pref]`・`/features`・`/features/[slug]`・`/sitemap.xml`。これらのページが使う `unstable_cache`（`src/db/queries/catalog.ts` の `catalogCache`）も `revalidate: false` にした。こちらに期限が残っていると、ページ側も1日ごとの再生成対象に戻るため。R2のキャッシュキーにはビルドIDが入るので、配信のたびに作り直される。
   - ビルド結果のプリレンダー一覧で、スポット251件・レース93件・エリア48件・特集9件・sitemapが `false` になったことを確認した。
