@@ -11,6 +11,9 @@ if [ "$node_major" -lt 22 ]; then
   exit 1
 fi
 
+# 本番に出ている版の内容がHEADに含まれ、作業ツリーがHEADと一致することを確かめる(巻き戻り防止)
+node scripts/check-release-base.mjs
+
 node scripts/d1-snapshot.mjs .d1-build/prod.sqlite
 
 # opennextjs-cloudflare build は内部で `npm run build` を呼ぶため、GPX同期・高低図生成はそちらで走る
