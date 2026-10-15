@@ -1,12 +1,19 @@
 import { cumulativeDistances, type GpxPoint } from "./gpx";
 
 export type RaceElevationPoint = { distanceM: number; elevationM: number | null; lat: number; lng: number };
+export type RaceElevationBenchmark = {
+  distance: "full" | "half";
+  count: number;
+  meanGainM: number;
+};
 export type RaceElevation = {
   version: 1;
   source: "gpx" | "gsi";
   routeReviewRequired?: boolean;
   // A known major climb/descent may be missing even when overall coverage is high.
   hillAdjustmentUnavailable?: boolean;
+  // Generated with this profile so the comparison and course share the same data version.
+  benchmark?: RaceElevationBenchmark;
   points: RaceElevationPoint[];
 };
 

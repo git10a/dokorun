@@ -7,6 +7,7 @@ import {
   raceElevationGain,
   type RaceElevation,
 } from "@/lib/race-elevation";
+import { raceElevationComparison } from "@/lib/race-elevation-benchmark";
 
 const HEIGHT = 220;
 const LEFT = 48;
@@ -27,6 +28,7 @@ export function RaceElevationChart({
   const chart = useRef<SVGSVGElement>(null);
   const [width, setWidth] = useState(720);
   const elevationGainM = useMemo(() => raceElevationGain(profile), [profile]);
+  const comparison = raceElevationComparison(profile, elevationGainM);
   const hasElevation = profile.points.filter((point) => point.elevationM !== null).length >= 2;
   useEffect(() => {
     if (!chart.current) return;
@@ -80,9 +82,22 @@ export function RaceElevationChart({
         aria-atomic="true"
       >
         {elevationGainM !== null && (
-          <span>
-            獲得標高（推定） <strong className="tabular-nums">約 {elevationGainM.toLocaleString("ja-JP")} m</strong>
-          </span>
+          <div className={comparison ? "w-full" : undefined}>
+            <span>
+              獲得標高（推定） <strong className="tabular-nums">約 {elevationGainM.toLocaleString("ja-JP")} m</strong>
+            </span>
+            {comparison && (
+              <>
+                <p className="mt-1 text-xs leading-5 text-sub">
+                  掲載{comparison.distanceLabel}平均{comparison.difference === "ほぼ同じ" ? "と" : "より"}{" "}
+                  <strong className="font-semibold text-ink">{comparison.difference}</strong>
+                </p>
+                <p className="text-[11px] leading-5 text-sub">
+                  比較対象{comparison.count}大会・平均約{comparison.meanGainM.toLocaleString("ja-JP")}m
+                </p>
+              </>
+            )}
+          </div>
         )}
         {selected ? (
           <>
