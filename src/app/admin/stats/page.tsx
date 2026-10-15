@@ -213,11 +213,11 @@ export default async function AdminStatsPage() {
       </section>
       <p className="mt-3 text-xs leading-6 text-sub">
         内部トラフィックは集計から除外します。運営端末では
-        <Link href="/spots?dokorun_internal=1" className="mx-1 font-bold text-accent underline">
+        <Link prefetch={false} href="/spots?dokorun_internal=1" className="mx-1 font-bold text-accent underline">
           内部トラフィックに設定
         </Link>
         してください。解除は
-        <Link href="/spots?dokorun_internal=0" className="mx-1 font-bold text-accent underline">
+        <Link prefetch={false} href="/spots?dokorun_internal=0" className="mx-1 font-bold text-accent underline">
           こちら
         </Link>
         。

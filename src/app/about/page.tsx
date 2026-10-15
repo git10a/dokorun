@@ -74,7 +74,11 @@ export default function AboutPage() {
         <p className="mt-3 leading-8">
           大会の近くにある公園やランニングコースも紹介しています。遠征先で少し走りたいときは、距離・スタート地点・設備を確認して、行き先を選べます。
         </p>
-        <Link href="/spots" className="mt-4 inline-block text-sm font-bold text-accent underline underline-offset-4">
+        <Link
+          prefetch={false}
+          href="/spots"
+          className="mt-4 inline-block text-sm font-bold text-accent underline underline-offset-4"
+        >
           全国のランニングスポットをさがす
         </Link>
       </section>

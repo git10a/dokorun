@@ -128,7 +128,7 @@ export function SearchFilters({ tags, params }: { tags: Tag[]; params: Params })
           <div className="flex items-center justify-between">
             <button className="rounded-lg bg-brand px-5 py-2.5 font-bold">この条件でさがす</button>
             {active.length > 0 && (
-              <Link href="/spots" className="flex items-center gap-1 text-sm text-sub underline">
+              <Link prefetch={false} href="/spots" className="flex items-center gap-1 text-sm text-sub underline">
                 <X size={14} />
                 条件をクリア
               </Link>

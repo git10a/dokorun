@@ -29,6 +29,7 @@ export function CheckInButton({ spotId, spotSlug, loggedIn, todayRunId }: CheckI
   if (!loggedIn) {
     return (
       <Link
+        prefetch={false}
         href={`/login?callbackURL=${encodeURIComponent(`/spots/${spotSlug}?tab=logs#dokolog`)}`}
         className={buttonClass}
       >

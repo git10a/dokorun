@@ -24,6 +24,7 @@ export function UserMenu() {
   if (!session?.user)
     return (
       <Link
+        prefetch={false}
         href="/login"
         className="inline-flex min-h-11 items-center whitespace-nowrap rounded-lg border border-line px-2 py-2 text-[11px] font-bold sm:px-3 sm:text-sm"
       >
