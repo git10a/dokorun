@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
 import { addPoiEmphasis } from "./poi-emphasis";
+import { loadMapLibre } from "./load-maplibre";
 import type { MapSpot } from "@/lib/types";
 
 export function SpotsMap({ spots }: { spots: MapSpot[] }) {
@@ -12,7 +13,7 @@ export function SpotsMap({ spots }: { spots: MapSpot[] }) {
     if (!container.current || !spots.length) return;
     let map: import("maplibre-gl").Map | undefined;
     let disposed = false;
-    void import("maplibre-gl").then((maplibregl) => {
+    void loadMapLibre().then((maplibregl) => {
       if (disposed || !container.current) return;
       map = new maplibregl.Map({
         container: container.current,
