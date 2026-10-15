@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
+import { loadMaplibre } from "./load-maplibre";
 import { addPoiEmphasis } from "./poi-emphasis";
 import type { LineString } from "@/lib/types";
 import type { CourseGuideStartPoint } from "@/lib/course-guides";
@@ -24,7 +25,7 @@ export function CourseGuideMap({
   useEffect(() => {
     if (!container.current) return;
     let disposed = false;
-    void import("maplibre-gl").then((maplibregl) => {
+    void loadMaplibre().then((maplibregl) => {
       if (disposed || !container.current) return;
       const instance = new maplibregl.Map({
         container: container.current,
@@ -61,7 +62,7 @@ export function CourseGuideMap({
     if (!ready || !map.current) return;
     markers.current.forEach((marker) => marker.remove());
     markers.current = [];
-    void import("maplibre-gl").then((maplibregl) => {
+    void loadMaplibre().then((maplibregl) => {
       if (!map.current) return;
       startPoints.forEach((start) => {
         const selected = start.id === selectedStartId;
