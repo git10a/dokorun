@@ -38,6 +38,32 @@
         }
       },
       "updatedAt": "2026-10-12T20:00:00+09:00"
+    },
+    "/races/[slug]#elevation": {
+      "targetKind": "existing-ui",
+      "projectId": "9611e4b0-7dd6-4c84-9369-708db1755432",
+      "activeDraftId": "de381747-024e-44e7-a791-1bef8129e7a5",
+      "designSystemPath": ".superdesign/design-system.md",
+      "contextFiles": [
+        ".superdesign/design-system.md",
+        "src/components/race-elevation-chart.tsx",
+        "src/lib/race-elevation-benchmark.ts",
+        "src/app/globals.css"
+      ],
+      "fingerprints": {
+        ".superdesign/design-system.md": "237193ca44cf05e4d07112b89d95ce02730116fe5f6d3e637379696fcc0165b7",
+        "src/components/race-elevation-chart.tsx": "77ed0906adc7cc44c150ba47dddafe44f30e9bc5d2e1a2bfdfe3c807a649cf02",
+        "src/lib/race-elevation-benchmark.ts": "0360f0156fd4d7c71baa9108788d7d3bb0b3b00777736083d7b88a41763c8e94",
+        "src/app/globals.css": "f5672e8b0ba5d966e55004274cf0adef5fad154bd7807ce33ed1d7bf6bbc98e6"
+      },
+      "drafts": {
+        "de381747-024e-44e7-a791-1bef8129e7a5": {
+          "title": "高低図：掲載大会平均との差",
+          "visualDirection": "Approved existing elevation card with same-distance mean difference and denominator, rendered directly from the component.",
+          "currentVersion": 2
+        }
+      },
+      "updatedAt": "2026-10-15T07:01:32.766569+00:00"
     }
   }
 }
