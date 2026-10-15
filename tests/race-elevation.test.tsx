@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import manifest from "../src/lib/race-courses.json";
 import { raceElevationProfile } from "../scripts/lib/race-assets";
+import { canUseHills } from "../src/lib/pace-plan";
 
 const profile = raceElevationFromPoints([
   { lat: 35, lng: 139, ele: 10 },
@@ -15,6 +16,16 @@ const profile = raceElevationFromPoints([
 ]);
 
 describe("race elevation map alignment", () => {
+  it("omits Niigata's underwater tunnel elevations and does not plan hills from the surface DEM", () => {
+    const slug = "niigata-city-marathon";
+    const xml = readFileSync(`data/race-gpx/${slug}.gpx`, "utf8");
+    const niigata = raceElevationProfile(slug, xml);
+    const tunnel = niigata.points.filter((point) => point.distanceM >= 13450 && point.distanceM <= 19050);
+    expect(tunnel.length).toBeGreaterThan(100);
+    expect(tunnel.every((point) => point.elevationM === null)).toBe(true);
+    expect(niigata.points.filter((point) => point.elevationM !== null).length / niigata.points.length).toBeGreaterThan(0.8);
+    expect(canUseHills(niigata)).toBe(false);
+  });
   it("retains the return leg distance even when it shares coordinates", () => {
     const turn = profile.points[1].distanceM;
     const outbound = elevationPointAtDistance(profile.points, turn / 2)!;

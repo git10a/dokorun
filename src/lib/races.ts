@@ -21,6 +21,17 @@ export type RaceDef = {
 
 export const races: RaceDef[] = [
   {
+    slug: "niigata-city-marathon",
+    name: "新潟シティマラソン",
+    officialUrl: "https://runfes-niigata.com/",
+    timing: "2026年10月11日（日）",
+    monthIndex: 10,
+    prefecture: "新潟県",
+    startFinish: "デンカビッグスワンスタジアム前スタート、新潟市陸上競技場フィニッシュ",
+    distanceLabel: "フルマラソン・ファンラン10.6km",
+    spots: [],
+  },
+  {
     slug: "kitakyushu-marathon",
     name: "北九州マラソン",
     officialUrl: "https://kitakyushu-marathon.jp/",

@@ -3241,5 +3241,50 @@
         }
       }
     ]
+  },
+  "niigata-city-marathon": {
+    "courseYear": 2026,
+    "sourceUrl": "https://runfes-niigata.com/2026/wp-content/uploads/2026/03/map.pdf",
+    "scenes": [
+      {
+        "id": "niigata-city-marathon-point-1",
+        "title": "萬代橋を渡り、古町で折り返す",
+        "description": "信濃川に架かる萬代橋を渡って古町へ。NEXT21前で折り返したあとは、萬代橋を渡り直さず、川沿いをみなとぴあ方面へ進みます。",
+        "viewLabel": "萬代橋から古町方面",
+        "imageSrc": "/race-atmosphere/niigata-city-marathon-point-1.webp",
+        "referenceUrl": "https://www.google.com/maps/@?api=1&map_action=pano&pano=y5gtkJL_LQg4HCxeRCaUbA&heading=300&pitch=0&fov=80",
+        "coursePoint": {
+          "distanceM": 8900,
+          "lat": 37.9196830278,
+          "lng": 139.05374996243998
+        }
+      },
+      {
+        "id": "niigata-city-marathon-point-2",
+        "title": "みなとトンネルの下りと上りを往復",
+        "description": "新潟みなとトンネルは、公式コース図でも最大の難所として紹介される区間。川の下へ下ってから上り、折り返し後にもう一度通ります。下りで飛ばしすぎず、上りへ余力を残す配分を。",
+        "viewLabel": "西側の車道入口からトンネル方向",
+        "imageSrc": "/race-atmosphere/niigata-city-marathon-point-2.webp",
+        "referenceUrl": "https://www.google.com/maps/@?api=1&map_action=pano&pano=rChT_061WAlcU6qAGn9m6Q&heading=55&pitch=0&fov=80",
+        "coursePoint": {
+          "distanceM": 19450,
+          "lat": 37.94086763432,
+          "lng": 139.05550724958
+        }
+      },
+      {
+        "id": "niigata-city-marathon-point-3",
+        "title": "青山海岸で折り返し、信濃川沿いへ",
+        "description": "海沿いを進み、27.5kmの関門付近で折り返します。ここからは対向するランナーとすれ違いながら戻り、信濃川沿いへ。まだ十数kmあるので、終盤を走る余力を残しておきたい区間です。",
+        "viewLabel": "青山海岸沿いの国道402号を南西へ",
+        "imageSrc": "/race-atmosphere/niigata-city-marathon-point-3.webp",
+        "referenceUrl": "https://www.google.com/maps/@?api=1&map_action=pano&pano=uKRApSkMbV1MUV-ZoqL37w&heading=235&pitch=0&fov=80",
+        "coursePoint": {
+          "distanceM": 26050,
+          "lat": 37.90585468821764,
+          "lng": 138.99831956631328
+        }
+      }
+    ]
   }
 }

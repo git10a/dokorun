@@ -1,4 +1,4 @@
-import { elevationPointAtDistance, type RaceElevationPoint } from "./race-elevation";
+import { elevationPointAtDistance, type RaceElevation, type RaceElevationPoint } from "./race-elevation";
 import { formatDuration } from "./format";
 
 export type PacePlanRow = {
@@ -48,9 +48,12 @@ export function hillEffortLabel(hillEffort: number) {
   );
 }
 
-// 標高のある点が8割未満、または経路確認中のコースは坂の配分に使わない
-export function canUseHills(profile: { points: RaceElevationPoint[]; routeReviewRequired?: boolean } | null) {
-  if (!profile || profile.routeReviewRequired || profile.points.length < 2) return false;
+// 標高が8割未満、経路確認中、または主要な坂の標高が欠けるコースは坂の配分に使わない
+export function canUseHills(
+  profile: Pick<RaceElevation, "points" | "routeReviewRequired" | "hillAdjustmentUnavailable"> | null,
+) {
+  if (!profile || profile.routeReviewRequired || profile.hillAdjustmentUnavailable || profile.points.length < 2)
+    return false;
   return profile.points.filter((point) => point.elevationM !== null).length / profile.points.length >= 0.8;
 }
 
