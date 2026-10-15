@@ -1,0 +1,27 @@
+# 軽量化とNext 16.3.8更新
+
+2026-10-15、503対策（`release-2026-10-15-worker-cpu-isr.md`）の続きとして2回配信した。どちらもmainから、配信ガード `scripts/check-release-base.mjs` を通して配信した。
+
+## 1. /login・/spots のプリフェッチ停止と、未ログイン viewer-state の軽量化
+
+- 12:33 JST 本番100%。Worker `1d4b60de-e63c-49e6-afe6-4ded599da2ee`、tag `79fa6594be6d`（main `79fa659` = `884adc6` のマージ）。
+- 直前に、新潟シティマラソン（`64b7a32`）をmainへ取り込んだ（`d1df5ec`）。mainの作業ツリーに残っていた同じ内容の未コミット16ファイルは、scratchpadへ退避してから片付けた。
+- 0%でsmoke 5周が通り、未ログインの `viewer-state` が `{"loggedIn":false,...}` を返すことと、`get-session` が `null` を返すことを確認した。10%（2分）を経て100%にし、smoke 5周が通った。gzip 3052.08KiB。
+- 配信後20分（260件）: すべて `ok`、`exceededCpu` 0件。
+
+## 2. Next 16.3.8・@opennextjs/cloudflare 1.20.11・wrangler 4.151
+
+- 13:01 JST 本番100%。Worker `fbe4d261-9293-458b-8a7a-b7cce263fa07`、tag `04fd213b7a8f`（main `04fd213` = `0aa2a10` のマージ）。
+- @opennextjs/aws 4.1.10 で、`/` がキャッシュの横取りに当たるようになった（調査文書のC3）。Workerは gzip 3052→2859.78KiB。
+- テスト203件と型チェックが通った。ビルド結果の再生成の設定は変わらない（`/`・`/races` は86400、ほかの静的ページは `false`）。
+- 0%でsmoke 5周が通り、`/`・そのRSCプリフェッチ・`/races`・スポット・新潟・エリア・sitemapがすべて `x-opennext-cache: HIT` を返した。Google認可URLの発行は旧版と同一だった。10%（5分、新版8件すべてok）を経て100%にし、smoke 5周が通った。
+- 配信後15分（158件）: すべて `ok`、`exceededCpu` 0件。`GET /` はCPU 12ms（更新前は温まった状態で33ms）、`/` のプリフェッチは7ms（同22ms）。
+- 段階配信中は、旧版のページを開いたままの閲覧者が旧ビルドのJSチャンクを要求し、新版のWorkerに回る（コールドスタートで400〜970ms CPU、outcomeはok）。100%後は、ページを再読み込みすれば解消する。
+
+## 未配信
+
+- Workerサイズ削減（`5b01112`、main `9f40fcf`）。Worker `5c58c377-14f2-4ce3-b177-3def813457f0`（gzip 2143.58KiB）をアップロードし、0%でsmoke 5周、主要ページ、Googleログインの入口を確認した。地図の読み込みとヘッダーのログイン状態の取得をブラウザ側で変えているため、100%にしたあとにブラウザでの確認が要る。本番への切り替えはユーザーの了承待ち。
+
+## 補足
+
+- mainの作業ツリーの `node_modules` は、Next更新の前のまま。そこでビルドや開発サーバーを使う前に `npm ci` が要る。
