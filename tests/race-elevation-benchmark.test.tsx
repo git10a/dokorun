@@ -47,7 +47,11 @@ describe("race elevation benchmarks", () => {
 
   it("uses the unrounded mean for both signs and handles a zero rounded difference", () => {
     const value = { ...profile(83), benchmark: { distance: "full" as const, count: 44, meanGainM: 208.113636 } };
-    expect(raceElevationComparison(value, 83)).toMatchObject({ difference: "約125m少ない", meanGainM: 208 });
+    expect(raceElevationComparison(value, 83)).toMatchObject({
+      difference: "約125m少ない",
+      deltaM: -125,
+      meanGainM: 208,
+    });
     expect(raceElevationComparison(value, 229)?.difference).toBe("約21m多い");
     expect(raceElevationComparison(value, 208)?.difference).toBe("ほぼ同じ");
   });
@@ -58,9 +62,25 @@ describe("race elevation benchmarks", () => {
       const markup = renderToStaticMarkup(
         <RaceElevationChart profile={value} selectedDistanceM={selectedDistanceM} onSelect={() => {}} />,
       );
-      expect(markup).toContain("掲載フル平均より");
-      expect(markup).toContain("約125m少ない");
-      expect(markup).toContain("比較対象44大会・平均約208m");
+      expect(markup).toContain("フルマラソン平均より");
+      expect(markup.replace(/<[^>]+>/g, "")).toContain("−125m");
+      expect(markup).toContain("掲載フル44大会・平均約208m");
+      expect(markup).toMatch(/hidden=""[^>]*>[\s\S]*掲載フル44大会/);
+    }
+  });
+
+  it("renders positive, zero and half-marathon differences without changing the cohort", () => {
+    for (const [gain, expected] of [
+      [229, "+21m"],
+      [208, "0m"],
+    ] as const) {
+      const value = { ...profile(gain, 21_097), benchmark: { distance: "half" as const, count: 34, meanGainM: 208.1 } };
+      const markup = renderToStaticMarkup(
+        <RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />,
+      );
+      expect(markup).toContain("ハーフマラソン平均より");
+      expect(markup.replace(/<[^>]+>/g, "")).toContain(expected);
+      expect(markup).toContain("掲載ハーフ34大会・平均約208m");
     }
   });
 
@@ -75,7 +95,7 @@ describe("race elevation benchmarks", () => {
     const markup = renderToStaticMarkup(
       <RaceElevationChart profile={incomplete} selectedDistanceM={null} onSelect={() => {}} />,
     );
-    expect(markup).not.toContain("掲載フル平均");
-    expect(markup).not.toContain("比較対象");
+    expect(markup).not.toContain("マラソン平均より");
+    expect(markup).not.toContain("大会・平均約");
   });
 });
