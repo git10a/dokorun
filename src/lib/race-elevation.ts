@@ -67,3 +67,38 @@ export function elevationSegments(points: RaceElevationPoint[]): RaceElevationPo
   }
   return segments;
 }
+
+// Estimate total ascent from the same profile as the chart, never from max - min.
+// Require the whole route: even a short missing section can contain a major climb.
+export function raceElevationGain(profile: RaceElevation): number | null {
+  const { points } = profile;
+  if (profile.routeReviewRequired || profile.hillAdjustmentUnavailable || points.length < 2) return null;
+  if (
+    points[0].distanceM !== 0 ||
+    points.some(
+      (point, index) =>
+        point.elevationM === null ||
+        !Number.isFinite(point.elevationM) ||
+        !Number.isFinite(point.distanceM) ||
+        (index > 0 && point.distanceM < points[index - 1].distanceM),
+    )
+  )
+    return null;
+  const total = points.at(-1)!.distanceM;
+  if (total <= 0) return null;
+
+  // Equal distance sampling makes the estimate independent of GPX recording density.
+  // Smooth three samples at roughly 50 m spacing to reduce small elevation noise,
+  // preserving start/finish heights so a continuous ascent keeps its full gain.
+  const intervals = Math.ceil(total / 50);
+  const elevations = Array.from(
+    { length: intervals + 1 },
+    (_, index) => elevationPointAtDistance(points, (index / intervals) * total)!.elevationM!,
+  );
+  const smoothed = elevations.map((value, index) =>
+    index === 0 || index === elevations.length - 1
+      ? value
+      : (elevations[index - 1] + value + elevations[index + 1]) / 3,
+  );
+  return Math.round(smoothed.slice(1).reduce((gain, value, index) => gain + Math.max(0, value - smoothed[index]), 0));
+}

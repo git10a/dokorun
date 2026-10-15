@@ -1,7 +1,12 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type PointerEvent } from "react";
-import { elevationPointAtDistance, elevationSegments, type RaceElevation } from "@/lib/race-elevation";
+import { useEffect, useId, useMemo, useRef, useState, type PointerEvent } from "react";
+import {
+  elevationPointAtDistance,
+  elevationSegments,
+  raceElevationGain,
+  type RaceElevation,
+} from "@/lib/race-elevation";
 
 const HEIGHT = 220;
 const LEFT = 48;
@@ -21,6 +26,7 @@ export function RaceElevationChart({
   const hintId = useId();
   const chart = useRef<SVGSVGElement>(null);
   const [width, setWidth] = useState(720);
+  const elevationGainM = useMemo(() => raceElevationGain(profile), [profile]);
   const hasElevation = profile.points.filter((point) => point.elevationM !== null).length >= 2;
   useEffect(() => {
     if (!chart.current) return;
@@ -73,6 +79,11 @@ export function RaceElevationChart({
         aria-live="polite"
         aria-atomic="true"
       >
+        {elevationGainM !== null && (
+          <span>
+            獲得標高（推定） <strong className="tabular-nums">約 {elevationGainM.toLocaleString("ja-JP")} m</strong>
+          </span>
+        )}
         {selected ? (
           <>
             <span>
@@ -202,6 +213,9 @@ export function RaceElevationChart({
           )}
         </g>
       </svg>
+      {elevationGainM !== null && (
+        <p className="mt-1 text-[11px] leading-5 text-sub">獲得標高は、コース全体で上った高さの合計の目安です。</p>
+      )}
       <p className="mt-1 text-[11px] leading-5 text-sub">
         {profile.source === "gsi" ? (
           <>
