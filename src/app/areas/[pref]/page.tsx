@@ -73,6 +73,7 @@ export default async function AreaPage({ params }: { params: Params }) {
       </p>
       <div className="mt-4">
         <Link
+          prefetch={false}
           href={`/spots?pref=${encodeURIComponent(prefecture)}`}
           className="inline-block rounded-lg border border-line bg-paper px-4 py-2 text-sm font-bold hover:bg-cream"
         >

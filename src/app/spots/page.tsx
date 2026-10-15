@@ -187,6 +187,7 @@ export default async function SpotsPage({ searchParams }: { searchParams: Search
                   掲載をリクエスト
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/spots"
                   className="inline-flex items-center justify-center rounded-lg border border-line bg-paper px-5 py-3 font-bold hover:bg-paper/70"
                 >

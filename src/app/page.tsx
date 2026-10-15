@@ -129,6 +129,7 @@ export default async function HomePage() {
           </div>
         )}
         <Link
+          prefetch={false}
           href="/spots"
           className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
         >

@@ -27,7 +27,7 @@ export default async function MyFavoritesPage() {
       {!items.length && (
         <div className="mt-8 rounded-2xl bg-cream p-10 text-center">
           <p className="font-bold">おすすめはまだありません</p>
-          <Link href="/spots" className="mt-4 inline-block text-accent underline">
+          <Link prefetch={false} href="/spots" className="mt-4 inline-block text-accent underline">
             スポットをさがす
           </Link>
         </div>

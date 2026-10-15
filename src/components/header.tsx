@@ -29,6 +29,7 @@ export function Header() {
               <span className="hidden sm:inline">大会をさがす</span>
             </Link>
             <Link
+              prefetch={false}
               href="/spots"
               className="whitespace-nowrap px-1 py-1 text-[11px] font-bold transition-colors hover:text-accent sm:px-2 sm:text-sm"
             >

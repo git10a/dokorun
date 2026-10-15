@@ -90,7 +90,7 @@ export function RaceReviewItem({
             報告する
           </button>
         ) : (
-          <Link href={loginHref} className="hover:underline">
+          <Link prefetch={false} href={loginHref} className="hover:underline">
             ログインして報告する
           </Link>
         )}
