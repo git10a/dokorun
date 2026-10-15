@@ -29,7 +29,9 @@ describe("race elevation map alignment", () => {
     const tunnel = niigata.points.filter((point) => point.distanceM >= 13450 && point.distanceM <= 19050);
     expect(tunnel.length).toBeGreaterThan(100);
     expect(tunnel.every((point) => point.elevationM === null)).toBe(true);
-    expect(niigata.points.filter((point) => point.elevationM !== null).length / niigata.points.length).toBeGreaterThan(0.8);
+    expect(niigata.points.filter((point) => point.elevationM !== null).length / niigata.points.length).toBeGreaterThan(
+      0.8,
+    );
     expect(canUseHills(niigata)).toBe(false);
     expect(raceElevationGain(niigata)).toBeNull();
   });
@@ -71,8 +73,8 @@ describe("race elevation map alignment", () => {
   it("distinguishes missing elevation, GPX measurements and terrain estimates", () => {
     const render = (value: typeof profile) =>
       renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={null} onSelect={() => {}} />);
-    expect(render(profile)).toContain("コースデータに記録された標高");
-    expect(render({ ...profile, source: "gsi" })).toContain("国土地理院の標高タイル");
+    expect(render(profile)).toContain("コースデータの標高");
+    expect(render({ ...profile, source: "gsi" })).toContain("国土地理院データを加工");
     const missing = render({ ...profile, points: profile.points.map((point) => ({ ...point, elevationM: null })) });
     expect(missing).toContain("標高データは準備中");
     expect(missing).not.toContain('role="slider"');
@@ -130,9 +132,30 @@ describe("race elevation gain", () => {
 
   it("totals repeated climbs rather than the elevation range or the net change", () => {
     expect(raceElevationGain(hills)).toBe(90);
-    expect(raceElevationGain(fromSamples([[0, 10], [1000, 110]]))).toBe(100);
-    expect(raceElevationGain(fromSamples([[0, 110], [1000, 10]]))).toBe(0);
-    expect(raceElevationGain(fromSamples([[0, 10], [1000, 10]]))).toBe(0);
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [0, 10],
+          [1000, 110],
+        ]),
+      ),
+    ).toBe(100);
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [0, 110],
+          [1000, 10],
+        ]),
+      ),
+    ).toBe(0);
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [0, 10],
+          [1000, 10],
+        ]),
+      ),
+    ).toBe(0);
   });
 
   it("does not inflate the result when the same route has more recorded points", () => {
@@ -150,15 +173,45 @@ describe("race elevation gain", () => {
 
   it("withholds a total for incomplete, invalid or unverified profiles", () => {
     for (const elevation of [null, NaN, Infinity]) {
-      expect(raceElevationGain(fromSamples([[0, 0], [500, elevation], [1000, 50]]))).toBeNull();
+      expect(
+        raceElevationGain(
+          fromSamples([
+            [0, 0],
+            [500, elevation],
+            [1000, 50],
+          ]),
+        ),
+      ).toBeNull();
     }
     expect(raceElevationGain({ ...hills, routeReviewRequired: true })).toBeNull();
     expect(raceElevationGain({ ...hills, hillAdjustmentUnavailable: true })).toBeNull();
     expect(raceElevationGain(fromSamples([]))).toBeNull();
     expect(raceElevationGain(fromSamples([[0, 10]]))).toBeNull();
-    expect(raceElevationGain(fromSamples([[0, 10], [0, 20]]))).toBeNull();
-    expect(raceElevationGain(fromSamples([[100, 10], [1000, 20]]))).toBeNull();
-    expect(raceElevationGain(fromSamples([[0, 10], [500, 20], [400, 30]]))).toBeNull();
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [0, 10],
+          [0, 20],
+        ]),
+      ),
+    ).toBeNull();
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [100, 10],
+          [1000, 20],
+        ]),
+      ),
+    ).toBeNull();
+    expect(
+      raceElevationGain(
+        fromSamples([
+          [0, 10],
+          [500, 20],
+          [400, 30],
+        ]),
+      ),
+    ).toBeNull();
   });
 
   it("keeps the full-course gain visible when a point is selected, including a zero gain", () => {
@@ -166,24 +219,31 @@ describe("race elevation gain", () => {
       const markup = renderToStaticMarkup(
         <RaceElevationChart profile={hills} selectedDistanceM={selectedDistanceM} onSelect={() => {}} />,
       );
-      expect(markup).toContain("獲得標高（推定）");
-      expect(markup).toContain("約 90 m");
-      expect(markup).toContain("コース全体で上った高さの合計");
+      const text = markup.replace(/<[^>]+>/g, "");
+      expect(text).toContain("獲得標高（推定）約90m");
+      expect(text).not.toContain("コース全体で上った高さの合計");
+      expect(text).not.toContain("橋・トンネル");
     }
     const flat = renderToStaticMarkup(
       <RaceElevationChart
-        profile={fromSamples([[0, 10], [1000, 10]])}
+        profile={fromSamples([
+          [0, 10],
+          [1000, 10],
+        ])}
         selectedDistanceM={null}
         onSelect={() => {}}
       />,
     );
-    expect(flat).toContain("獲得標高（推定）");
-    expect(flat).toContain("約 0 m");
+    expect(flat.replace(/<[^>]+>/g, "")).toContain("獲得標高（推定）約0m");
   });
 
   it("does not display an incomplete or unverified total", () => {
     for (const value of [
-      fromSamples([[0, 0], [500, null], [1000, 50]]),
+      fromSamples([
+        [0, 0],
+        [500, null],
+        [1000, 50],
+      ]),
       { ...hills, routeReviewRequired: true },
       { ...hills, hillAdjustmentUnavailable: true },
     ]) {

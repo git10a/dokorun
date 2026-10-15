@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState, type PointerEvent } from "react";
+import { Info, X } from "lucide-react";
 import {
   elevationPointAtDistance,
   elevationSegments,
@@ -9,11 +10,10 @@ import {
 } from "@/lib/race-elevation";
 import { raceElevationComparison } from "@/lib/race-elevation-benchmark";
 
-const HEIGHT = 220;
-const LEFT = 48;
-const RIGHT = 20;
+const HEIGHT = 190;
+const RIGHT = 16;
 const TOP = 22;
-const BOTTOM = 36;
+const BOTTOM = 34;
 
 export function RaceElevationChart({
   profile,
@@ -25,11 +25,33 @@ export function RaceElevationChart({
   onSelect: (distanceM: number) => void;
 }) {
   const hintId = useId();
+  const detailsId = useId();
+  const details = useRef<HTMLDivElement>(null);
+  const detailsToggle = useRef<HTMLButtonElement>(null);
+  const [detailsOpen, setDetailsOpen] = useState(false);
   const chart = useRef<SVGSVGElement>(null);
   const [width, setWidth] = useState(720);
   const elevationGainM = useMemo(() => raceElevationGain(profile), [profile]);
   const comparison = raceElevationComparison(profile, elevationGainM);
   const hasElevation = profile.points.filter((point) => point.elevationM !== null).length >= 2;
+  useEffect(() => {
+    if (!detailsOpen) return;
+    const closeOutside = (event: globalThis.PointerEvent) => {
+      if (!details.current?.contains(event.target as Node) && !detailsToggle.current?.contains(event.target as Node))
+        setDetailsOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setDetailsOpen(false);
+      detailsToggle.current?.focus();
+    };
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [detailsOpen]);
   useEffect(() => {
     if (!chart.current) return;
     const observer = new ResizeObserver(([entry]) => setWidth(Math.max(220, entry.contentRect.width)));
@@ -53,6 +75,7 @@ export function RaceElevationChart({
   const tick = Math.max(10, Math.ceil((maximum - minimum) / 40) * 10);
   const yMin = Math.floor(minimum / tick) * tick;
   const yMax = Math.max(yMin + 50, Math.ceil(maximum / tick) * tick);
+  const LEFT = Math.max(30, Math.max(String(yMin).length, String(yMax).length) * 7 + 7);
   const x = (distance: number) => LEFT + (distance / total) * (width - LEFT - RIGHT);
   const y = (elevation: number) => HEIGHT - BOTTOM - ((elevation - yMin) / (yMax - yMin)) * (HEIGHT - TOP - BOTTOM);
   const selected = selectedDistanceM === null ? null : elevationPointAtDistance(profile.points, selectedDistanceM);
@@ -65,66 +88,99 @@ export function RaceElevationChart({
     onSelect(Math.max(0, Math.min(1, (graphX - LEFT) / (width - LEFT - RIGHT))) * total);
   };
   return (
-    <div className="mt-3 rounded-xl border border-line bg-paper px-3 py-4 sm:px-5">
-      <h3 className="font-bold">コースの高低差</h3>
-      <p id={hintId} className="mt-1 text-xs leading-5 text-sub">
-        グラフをタップすると、その地点を地図で確認できます。
-      </p>
+    <div className="relative mt-3 rounded-xl border border-line bg-paper px-4 pb-4 pt-4 sm:px-6">
+      <div className="mb-3 flex items-center justify-between">
+        <h3 className="text-base font-bold sm:text-lg">コースの高低差</h3>
+        <button
+          ref={detailsToggle}
+          type="button"
+          aria-label="詳細データ"
+          aria-expanded={detailsOpen}
+          aria-controls={detailsId}
+          onClick={() => setDetailsOpen((open) => !open)}
+          className="-mr-1 inline-flex h-8 w-8 items-center justify-center rounded-full text-sub hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+        >
+          <Info size={20} aria-hidden="true" />
+        </button>
+      </div>
+      <div
+        ref={details}
+        id={detailsId}
+        hidden={!detailsOpen}
+        className="absolute right-4 top-14 z-10 w-64 max-w-[calc(100%-2rem)] rounded-lg border border-line bg-paper p-4 text-sm shadow-lg sm:right-6"
+      >
+        <div className="mb-2 flex items-center justify-between">
+          <span className="font-bold">詳細データ</span>
+          <button
+            type="button"
+            aria-label="詳細を閉じる"
+            className="inline-flex h-7 w-7 items-center justify-center rounded text-sub hover:bg-cream focus-visible:outline-2 focus-visible:outline-ink"
+            onClick={() => {
+              setDetailsOpen(false);
+              detailsToggle.current?.focus();
+            }}
+          >
+            <X size={18} aria-hidden="true" />
+          </button>
+        </div>
+        <dl className="space-y-2 text-sub">
+          <div className="flex justify-between">
+            <dt>最低</dt>
+            <dd className="font-semibold tabular-nums text-ink">約 {Math.round(minimum)} m</dd>
+          </div>
+          <div className="flex justify-between">
+            <dt>最高</dt>
+            <dd className="font-semibold tabular-nums text-ink">約 {Math.round(maximum)} m</dd>
+          </div>
+          <div className="flex justify-between">
+            <dt>標高の差</dt>
+            <dd className="font-semibold tabular-nums text-ink">{Math.round(maximum - minimum)} m</dd>
+          </div>
+        </dl>
+        {comparison && (
+          <p className="mt-2 border-t border-line pt-2 text-xs text-sub">
+            掲載{comparison.distanceLabel}
+            {comparison.count}大会・平均約{comparison.meanGainM.toLocaleString("ja-JP")}m
+          </p>
+        )}
+      </div>
       {profile.routeReviewRequired && (
         <p className="mt-3 rounded-lg border border-brand bg-cream p-3 text-xs leading-5">
           <strong>コースの経路・標高を確認中です。</strong>{" "}
           この参考コースデータは大会公式コースとの照合が必要です。ペース計画に使う前に、大会公式のコース図・高低図をご確認ください。
         </p>
       )}
-      <div
-        className="mt-3 flex min-h-12 flex-wrap items-baseline gap-x-4 gap-y-1 rounded-lg bg-cream px-3 py-2 text-sm"
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        {elevationGainM !== null && (
-          <div className={comparison ? "w-full" : undefined}>
-            <span>
-              獲得標高（推定） <strong className="tabular-nums">約 {elevationGainM.toLocaleString("ja-JP")} m</strong>
-            </span>
-            {comparison && (
-              <>
-                <p className="mt-1 text-xs leading-5 text-sub">
-                  掲載{comparison.distanceLabel}平均{comparison.difference === "ほぼ同じ" ? "と" : "より"}{" "}
-                  <strong className="font-semibold text-ink">{comparison.difference}</strong>
-                </p>
-                <p className="text-[11px] leading-5 text-sub">
-                  比較対象{comparison.count}大会・平均約{comparison.meanGainM.toLocaleString("ja-JP")}m
-                </p>
-              </>
-            )}
+      {elevationGainM !== null && (
+        <div className="grid grid-cols-2 items-end gap-4 pb-4 pt-1">
+          <div>
+            <p className="mb-1 text-xs text-sub">
+              獲得標高<span className="text-[11px]">（推定）</span>
+            </p>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-sm text-sub">約</span>
+              <strong className="text-[40px] font-bold leading-none tracking-tight tabular-nums">
+                {elevationGainM.toLocaleString("ja-JP")}
+              </strong>
+              <span className="text-base font-medium">m</span>
+            </div>
           </div>
-        )}
-        {selected ? (
-          <>
-            <span>
-              スタートから <strong className="tabular-nums">{distanceLabel}</strong>
-            </span>
-            <span>
-              標高 <strong className="tabular-nums">{elevationLabel}</strong>
-            </span>
-          </>
-        ) : (
-          <>
-            <span>
-              最低 <strong>約 {Math.round(minimum)} m</strong>
-            </span>
-            <span>
-              最高 <strong>約 {Math.round(maximum)} m</strong>
-            </span>
-            <span className="text-xs text-sub">標高の差 {Math.round(maximum - minimum)} m</span>
-          </>
-        )}
-      </div>
+          {comparison && (
+            <div className="pb-0.5 text-right">
+              <p className="mb-2 text-[11px] text-sub">{comparison.distanceLabel}マラソン平均より</p>
+              <p className="text-[24px] font-bold leading-none tracking-tight tabular-nums">
+                {comparison.deltaM < 0 ? "−" : comparison.deltaM > 0 ? "+" : ""}
+                {Math.abs(comparison.deltaM).toLocaleString("ja-JP")}
+                <span className="ml-1 text-sm font-medium">m</span>
+              </p>
+            </div>
+          )}
+        </div>
+      )}
       <svg
         ref={chart}
         viewBox={`0 0 ${width} ${HEIGHT}`}
         preserveAspectRatio="none"
-        className="mt-2 h-[200px] w-full cursor-crosshair touch-pan-y rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink sm:h-[220px]"
+        className="my-2 h-[190px] w-full cursor-crosshair touch-pan-y rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         role="slider"
         tabIndex={0}
         aria-label="高低図の地点を選択"
@@ -165,12 +221,12 @@ export function RaceElevationChart({
           {[yMin, (yMin + yMax) / 2, yMax].map((value) => (
             <g key={value}>
               <line x1={LEFT} x2={width - RIGHT} y1={y(value)} y2={y(value)} stroke="#E5E2D9" strokeDasharray="3 4" />
-              <text x={LEFT - 8} y={y(value) + 4} textAnchor="end" fontSize="12" fill="#6B7280">
+              <text x={LEFT - 7} y={y(value) + 4} textAnchor="end" fontSize="11" fill="#6B7280">
                 {Math.round(value)}
               </text>
             </g>
           ))}
-          <text x={LEFT - 8} y={12} textAnchor="end" fontSize="11" fill="#6B7280">
+          <text x={0} y={10} fontSize="10" fill="#6B7280">
             標高 m
           </text>
           {segments.map((segment, index) => {
@@ -182,13 +238,13 @@ export function RaceElevationChart({
                 <path
                   d={`${line} L${x(segment.at(-1)!.distanceM)},${HEIGHT - BOTTOM} L${x(segment[0].distanceM)},${HEIGHT - BOTTOM} Z`}
                   fill="#FFD900"
-                  fillOpacity="0.3"
+                  fillOpacity="0.25"
                 />
                 <path
                   d={line}
                   fill="none"
                   stroke="#1A1A1A"
-                  strokeWidth="2"
+                  strokeWidth="1.8"
                   vectorEffect="non-scaling-stroke"
                   strokeLinejoin="round"
                 />
@@ -196,7 +252,7 @@ export function RaceElevationChart({
             );
           })}
           {[0, total / 4, total / 2, (total * 3) / 4, total].map((value) => (
-            <text key={value} x={x(value)} y={HEIGHT - 12} textAnchor="middle" fontSize="12" fill="#6B7280">
+            <text key={value} x={x(value)} y={HEIGHT - 15} textAnchor="middle" fontSize="11" fill="#6B7280">
               {(value / 1000).toFixed(value === 0 ? 0 : 1)}
             </text>
           ))}
@@ -218,38 +274,40 @@ export function RaceElevationChart({
                 <circle
                   cx={x(selected.distanceM)}
                   cy={y(selected.elevationM)}
-                  r="6"
+                  r="4.5"
                   fill="#FFD900"
                   stroke="#1A1A1A"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                 />
               )}
+              <g transform={`translate(${Math.max(LEFT, Math.min(width - 166, x(selected.distanceM) - 75))}, 0)`}>
+                <rect width="150" height="22" rx="5" fill="#F7F5EF" />
+                <text x="75" y="15" textAnchor="middle" fontSize="11" fill="#1A1A1A">
+                  {distanceLabel} · {elevationLabel}
+                </text>
+              </g>
             </g>
           )}
         </g>
       </svg>
-      {elevationGainM !== null && (
-        <p className="mt-1 text-[11px] leading-5 text-sub">獲得標高は、コース全体で上った高さの合計の目安です。</p>
-      )}
-      <p className="mt-1 text-[11px] leading-5 text-sub">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[10px] leading-5 text-sub sm:text-[11px]">
+        <p id={hintId}>タップで地点を確認</p>
         {profile.source === "gsi" ? (
-          <>
-            地形の高さの目安（橋・トンネルは路面と異なります）。出典：
-            <a
-              className="underline"
-              href="https://maps.gsi.go.jp/development/ichiran.html"
-              target="_blank"
-              rel="noreferrer"
-            >
-              国土地理院の標高タイル
-            </a>
-            を加工
-          </>
+          <a
+            className="underline"
+            href="https://maps.gsi.go.jp/development/ichiran.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            国土地理院データを加工
+          </a>
         ) : (
-          "コースデータに記録された標高（測定誤差を含みます）"
+          <span>コースデータの標高</span>
         )}
-        {values.length < profile.points.length && "。標高データのない区間は線を表示していません"}
-      </p>
+      </div>
+      {values.length < profile.points.length && (
+        <p className="mt-1 text-[11px] leading-5 text-sub">標高データのない区間は線を表示していません</p>
+      )}
     </div>
   );
 }

@@ -45,6 +45,7 @@ export function raceElevationComparison(profile: RaceElevation, gainM: number | 
   const distanceLabel = benchmark.distance === "full" ? "フル" : "ハーフ";
   return {
     distanceLabel,
+    deltaM,
     difference:
       deltaM === 0 ? "ほぼ同じ" : `約${Math.abs(deltaM).toLocaleString("ja-JP")}m${deltaM > 0 ? "多い" : "少ない"}`,
     count: benchmark.count,
