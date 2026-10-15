@@ -42,7 +42,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
         </div>
         <div className="min-w-0">
           <h3 className="text-sm font-bold leading-6 group-hover:underline">{spot.name}</h3>
-          <p className="mt-1 text-xs text-sub">{spot.city}</p>
+          <p className="mt-1 text-xs leading-relaxed text-sub">{spot.prefecture} {spot.city}</p>
           <p className="mt-3 flex items-center gap-3">
             <span className="text-sm font-bold">
               {distanceKm}
@@ -76,7 +76,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
         <SpotThumbnail spot={spot} sizes="(min-width: 640px) 176px, 112px" photoHeight={360} />
       </div>
       <div className="min-w-0 flex-1 p-3 sm:p-4">
-        <p className="truncate text-xs text-sub">
+        <p className="text-xs leading-relaxed text-sub">
           {spot.prefecture} {spot.city}
         </p>
         <h3 className="mt-0.5 text-base font-bold leading-snug sm:text-lg">{spot.name}</h3>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, CircleHelp, Download, Info } from "lucide-react";
+import { CalendarDays, CircleHelp, Download, Info, MapPin } from "lucide-react";
 import { getSpotSummariesBySlugs } from "@/db/data";
 import { MemberGpxLink } from "@/components/member-gpx-link";
 import { RaceExperience } from "@/components/race-experience";
@@ -89,6 +89,10 @@ export default async function RacePage({ params }: { params: Params }) {
         items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす", href: "/races" }, { name: race.name }]}
       />
       <h1 className="text-2xl font-bold sm:text-3xl">{race.name}のコースマップ</h1>
+      <p className="mt-2 flex items-start gap-1.5 text-sm leading-relaxed text-sub">
+        <MapPin size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
+        <span>{race.prefecture} {race.city}</span>
+      </p>
       <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
         <CalendarDays size={16} className="shrink-0 text-sub" aria-label="開催日" />
         <span className="font-bold">{race.timing}</span>
