@@ -15,12 +15,36 @@ const nextConfig: NextConfig = {
     staticGenerationMaxConcurrency: 1,
     staticGenerationMinPagesPerWorker: 1000,
   },
-  // Turbopackはルートごとのサーバーチャンクに依存を複製するため、OpenNextが全ルートを
-  // 1つのWorkerに束ねると重い依存が最大7〜19回重複し、無料プランの3MiB制限を超える。
-  // ここで外部化した依存はOpenNext(esbuild)がnext/react-domと同様に1回だけ同梱する。
-  // 注: better-auth は外部化するとSSR中の better-auth/react が別Reactインスタンスを
-  // 参照して useRef null で落ちるため外部化しない(依存の kysely/jose は単独で外部化可)
+  // 共通依存はOpenNext側で一度だけ束ねる。サーバーのルート間での重複を避ける。
+  // better-auth/react はNext側のReactと同じインスタンスが必要なため外部化しない。
   serverExternalPackages: ["drizzle-orm", "kysely", "jose", "zod"],
+  // NextのNode向けファイル追跡から漏れる、Workers向けの条件付きexportを含める。
+  outputFileTracingIncludes: {
+    "/**": ["./node_modules/@better-auth/core/dist/instrumentation/*.mjs"],
+  },
+  webpack(config, { isServer, nextRuntime }) {
+    if (isServer) {
+      // useEffect内の動的importもサーバーチャンクに残るため、地図本体を明示的に除外する。
+      config.resolve.alias = { ...config.resolve.alias, "maplibre-gl$": false };
+    }
+    if (isServer && nextRuntime !== "edge") {
+      // 認証サーバーだけを共通化する。better-auth/reactはNextのReactと一緒にbundleする。
+      const authServerExternal = (
+        { request }: { request?: string },
+        callback: (error?: Error | null, result?: string) => void,
+      ) => {
+        if (request === "better-auth" || request === "better-auth/adapters/drizzle") {
+          return callback(null, `commonjs ${request}`);
+        }
+        callback();
+      };
+      config.externals = [
+        authServerExternal,
+        ...(Array.isArray(config.externals) ? config.externals : [config.externals]),
+      ].filter(Boolean);
+    }
+    return config;
+  },
 };
 
 export default bundleAnalyzer({ enabled: process.env.ANALYZE === "true" })(nextConfig);

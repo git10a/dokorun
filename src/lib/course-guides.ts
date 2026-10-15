@@ -1,4 +1,3 @@
-import { createRequire } from "node:module";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import type { ElevationSample } from "@/lib/gpx";
 import { spotEditorial } from "@/lib/course-editorial";
@@ -61,9 +60,9 @@ export function isReviewedCoursePhoto(slug: string, checkpoint: CourseGuideCheck
   const review = photoReviews[slug]?.[checkpoint.id];
   return Boolean(
     checkpoint.photo &&
-    review &&
-    checkpoint.photo.sourceUrl === review.sourceUrl &&
-    checkpoint.photo.url === review.imageUrl,
+      review &&
+      checkpoint.photo.sourceUrl === review.sourceUrl &&
+      checkpoint.photo.url === review.imageUrl,
   );
 }
 
@@ -109,7 +108,8 @@ export async function getCourseGuide(slug: string): Promise<CourseGuide | null> 
     return preparePublicCourseGuide((await response.json()) as CourseGuide);
   } catch {
     try {
-      const nodeRequire = createRequire(process.cwd() + "/");
+      // Keep Node-only file loading opaque to the server bundler.
+      const nodeRequire = process.getBuiltinModule("module").createRequire(process.cwd() + "/");
       const fs = nodeRequire("node:fs") as typeof import("node:fs");
       const path = nodeRequire("node:path") as typeof import("node:path");
       const file = path.resolve("public/course-guides", `${slug}.json`);

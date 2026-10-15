@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next dev",
-    "build": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next build",
+    "build": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next build --webpack",
     "start": "next start",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "bash scripts/deploy.sh",

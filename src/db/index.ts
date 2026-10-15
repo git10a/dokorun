@@ -1,4 +1,3 @@
-import { createRequire } from "node:module";
 import type { BatchItem } from "drizzle-orm/batch";
 import { drizzle as drizzleD1 } from "drizzle-orm/d1";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
@@ -31,8 +30,8 @@ function fromLocalFile(): Database {
     throw new Error("D1バインディング(DB)が見つかりません。wrangler.jsonc の d1_databases を確認してください");
   }
   // ワーカーバンドルにネイティブ依存(@libsql/client)を含めないため、
-  // bundlerの静的解析が届かないcreateRequire経由で読み込む
-  const nodeRequire = createRequire(process.cwd() + "/");
+  // Nodeの実行時APIから読み込む。静的解析によるrequireへの書き換えを避ける。
+  const nodeRequire = process.getBuiltinModule("module").createRequire(process.cwd() + "/");
   const path = process.env.D1_LOCAL_PATH ?? findMiniflareD1Path(nodeRequire);
   if (!path) {
     throw new Error(
