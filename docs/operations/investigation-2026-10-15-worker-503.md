@@ -108,6 +108,14 @@ C1の注意点: 投稿や管理画面の更新で `revalidatePath` したペー�
   - 影響: D1へSQLで直接スポットを追加・修正した場合、エリア・特集・sitemap・スポット詳細には次の配信で反映される（これまでは最大1日・1時間遅れ）。
 - **C2（実装）**: `src/middleware.ts` に追加。テスト `tests/anonymous-session.test.ts`。
 - **C3（見送り）**: @opennextjs/cloudflare 1.20.2以降は、どれも Next 16.2.11以上（1.20.8以降は16.3.8以上）が前提。4.1.10の修正はキャッシュキーの決め方ごと作り直されており、4.0.2に一部だけ移すと `/` の再検証の扱いがずれるおそれがある。Next と OpenNext の更新（セキュリティ修正版への追従を含む）として別に行う。
+- **C3（実装、2026-10-15。未配信）**: next 16.2.10 → 16.3.8（eslint-config-next・@next/bundle-analyzer も揃えた）、@opennextjs/cloudflare 1.20.1 → 1.20.11（内部の @opennextjs/aws 4.0.2 → 4.1.10）、wrangler ^4.86 → ^4.151.0。React は 19.2.7 のまま（Next 16.3.8 の peer は `^19.0.0`）。
+  - ビルドした `cacheInterceptor` に `decodePathParams(localizedPath) || "/"` が入っていることを確認した。
+  - `opennextjs-cloudflare preview`（ローカル）で、`/` のHTMLとRSCプリフェッチ（`RSC: 1`）が `x-opennext-cache: HIT` を返した。更新前は `/` だけ横取りに当たらず `x-nextjs-cache: HIT`（Next本体が描画）だった。`/races`・`/spots/[slug]`・`/areas` も HIT。
+  - プリレンダー一覧の再生成設定は配信中の版（ad37749 のビルド）と同じ。`/` と `/races` が 86400、ほかは `false`。件数の差はレース94件→93件だけで、新潟（64b7a32、mainに未マージ）の有無による。
+  - Workerサイズは gzip 2856.80KiB / 3072KiB（更新前 3051.71KiB。約195KiB減って、残りは約215KiB）。
+  - Next 16.3 のビルドで `next-env.d.ts` に `root-params.d.ts` の import が自動で加わる。
+  - 検証: tsc・eslint（警告のみ）・vitest 197件が通過。prettier は今回触れていない10ファイル（`src/lib/race-review-draft.ts` など、HEADの時点で未整形）だけが残る。
+  - 配信時の注意: 本番は ad37749（64b7a32＋4016887）なので、mainから配信すると新潟が消える（`check-release-base.mjs` が止める）。本番の版にこのコミットを cherry-pick して配信する。配信後に `curl -sI https://dokorun.com/` が `x-opennext-cache: HIT` を返すことを確かめる。
 
 ## 有料プランを検討する条件
 
