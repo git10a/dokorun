@@ -18,14 +18,9 @@ const nextConfig: NextConfig = {
   // Turbopackはルートごとのサーバーチャンクに依存を複製するため、OpenNextが全ルートを
   // 1つのWorkerに束ねると重い依存が最大7〜19回重複し、無料プランの3MiB制限を超える。
   // ここで外部化した依存はOpenNext(esbuild)がnext/react-domと同様に1回だけ同梱する。
-  // 注: better-auth は内部化だと4回重複していた(gzip各92KiB)。外部化すると better-auth/react が
-  // 別Reactインスタンスを参照して useRef null で落ちるため、クライアントは better-auth/client と
-  // 自前の useSession(src/lib/auth-client.ts)で組む。better-auth/react はimportしないこと
-  serverExternalPackages: ["better-auth", "drizzle-orm", "kysely", "jose", "zod"],
-  // 外部化した依存のうち、Workerで使う条件付きexport(workerd)の先はNext.jsのトレースに載らない
-  outputFileTracingIncludes: {
-    "/*": ["./node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs"],
-  },
+  // 注: better-auth は外部化するとSSR中の better-auth/react が別Reactインスタンスを
+  // 参照して useRef null で落ちるため外部化しない(依存の kysely/jose は単独で外部化可)
+  serverExternalPackages: ["drizzle-orm", "kysely", "jose", "zod"],
 };
 
 export default bundleAnalyzer({ enabled: process.env.ANALYZE === "true" })(nextConfig);
