@@ -12,11 +12,12 @@ const cases = [
   { path: "/api/auth/get-session" },
   { path: "/areas/tokyo", marker: "東京都のランニングコース" },
   { path: "/spots/kokyo", marker: "皇居" },
+  { path: "/races/tokyo-marathon", marker: "東京マラソン" },
   { path: "/spot-gpx/kokyo.gpx", marker: "<gpx" },
   { path: "/api/spots/kokyo/gpx", marker: "<gpx" },
 ];
 
-async function check(testCase) {
+async function check(testCase, pageAssets) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15_000);
   try {
@@ -32,6 +33,19 @@ async function check(testCase) {
         `${testCase.path} status=${response.status} cf-ray=${response.headers.get("cf-ray") ?? "-"} body=${body.slice(0, 300)}`,
       );
     }
+    if (versionId && testCase.path === "/api/health" && JSON.parse(body).version?.id !== versionId) {
+      throw new Error(`Worker version mismatch: expected ${versionId}`);
+    }
+    if (testCase.contentType && !response.headers.get("content-type")?.includes(testCase.contentType)) {
+      throw new Error(
+        `${testCase.path}: expected ${testCase.contentType}, received ${response.headers.get("content-type")}`,
+      );
+    }
+    if (pageAssets && response.headers.get("content-type")?.includes("text/html")) {
+      for (const match of body.matchAll(/(?:src|href)="(\/_next\/static\/[^"?]+\.(?:js|css)(?:\?[^" ]*)?)"/g)) {
+        pageAssets.add(match[1]);
+      }
+    }
     return `${testCase.path} ${response.status} cf-ray=${response.headers.get("cf-ray") ?? "-"}`;
   } finally {
     clearTimeout(timeout);
@@ -39,7 +53,15 @@ async function check(testCase) {
 }
 
 for (let iteration = 0; iteration < iterations; iteration += 1) {
-  for (const testCase of cases) console.log(await check(testCase));
+  const pageAssets = new Set();
+  for (const testCase of cases) console.log(await check(testCase, pageAssets));
+  if (pageAssets.size === 0) throw new Error("No page assets found; HTML verification is incomplete");
+  // HTML 200 alone does not prove the page can run after a version switch.
+  for (const path of pageAssets) {
+    console.log(
+      await check({ path, contentType: new URL(path, baseUrl).pathname.endsWith(".js") ? "javascript" : "text/css" }),
+    );
+  }
 }
 
 // Static Assetsは0% deploymentのVersion Overrideが常に適用されるとは限らないため、
