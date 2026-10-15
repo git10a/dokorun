@@ -14,6 +14,15 @@ export async function middleware(request: NextRequest) {
   }
 
   const { pathname } = request.nextUrl;
+  // ヘッダーのuseSession()が全ページで呼ぶ。cookieが無ければBetter Authの結果もnullなので、
+  // 初期化(約20ms CPU)とD1照会を通さずに返す(2026-10-15調査)
+  if (
+    pathname === "/api/auth/get-session" &&
+    request.method === "GET" &&
+    !getSessionCookie(request, { cookiePrefix: "dokorun" })
+  ) {
+    return NextResponse.json(null, { headers: { "Cache-Control": "private, no-store" } });
+  }
   if (pathname.startsWith("/me")) {
     if (getSessionCookie(request, { cookiePrefix: "dokorun" })) return NextResponse.next();
     const login = new URL("/login", request.url);

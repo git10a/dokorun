@@ -13,8 +13,9 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 import { SectionHeading } from "@/components/section-heading";
 
-// 特集の対象は最大1時間の遅延を許容し、D1障害時も直前のHTMLを返せるようISR化する。
-export const revalidate = 86400;
+// 時間ベースの再生成はしない(理由は spots/[slug]/page.tsx)。
+// 特集の対象の変化は次の配信で反映する
+export const revalidate = false;
 
 type Params = Promise<{ slug: string }>;
 

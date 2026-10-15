@@ -14,8 +14,9 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 import { SectionHeading } from "@/components/section-heading";
 
-// スポットの追加・更新の反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
-export const revalidate = 86400;
+// 時間ベースの再生成はしない(理由は spots/[slug]/page.tsx)。
+// スポットの追加・更新は次の配信で反映する
+export const revalidate = false;
 
 type Params = Promise<{ pref: string }>;
 

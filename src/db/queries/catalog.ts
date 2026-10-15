@@ -207,7 +207,9 @@ async function loadSitemapSpots() {
     .orderBy(spots.slug);
 }
 
-const catalogCache = { revalidate: 86400, tags: ["public-catalog"] };
+// エリア・特集・sitemapを静的に保つため期限を付けない(期限があるとページも再生成対象になり、
+// 無料プランのCPU上限で失敗し続ける。2026-10-15調査)。キャッシュは配信ごとに作り直される
+const catalogCache = { revalidate: false as const, tags: ["public-catalog"] };
 export const getTags = unstable_cache(loadTags, ["public-catalog-v1", "getTags"], catalogCache);
 export const getPrefectureCounts = unstable_cache(
   loadPrefectureCounts,

@@ -31,7 +31,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { spotEditorial } from "@/lib/course-editorial";
 import { CourseEditorial } from "@/components/course-editorial";
 
-export const revalidate = 3600;
+// 時間ベースの再生成はしない。無料プランでは再描画(約100ms CPU)がCPU上限10msで失敗し、
+// 期限切れのまま再生成を繰り返して、同じisolateの閲覧者まで503にしていた(2026-10-15調査)。
+// 投稿・管理画面からの更新はrevalidatePathで反映し、D1への直接投入は次の配信で反映する
+export const revalidate = false;
 
 type Params = Promise<{ slug: string }>;
 

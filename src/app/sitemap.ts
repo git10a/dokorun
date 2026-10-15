@@ -8,8 +8,8 @@ import { getStationLines, getStations } from "@/lib/stations";
 import { getPublishedStories } from "@/lib/race-stories";
 import { editorialLastModified, raceEditorial, spotEditorial, stationEditorial } from "@/lib/course-editorial";
 
-// クローラーアクセスのたびのD1クエリを1日1回に抑える。新スポットの反映は最大1日遅れる
-export const revalidate = 86400;
+// クローラーアクセスのたびにD1を引かないよう静的に生成する。新スポットは次の配信で反映する
+export const revalidate = false;
 
 const rebrandingUpdatedAt = new Date("2026-10-12T00:00:00+09:00");
 const contentUpdatedAt = new Date("2026-07-12T00:00:00+09:00");

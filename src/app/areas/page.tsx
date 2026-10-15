@@ -9,8 +9,9 @@ import { features } from "@/lib/features";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SectionHeading } from "@/components/section-heading";
 
-// 件数表示のみが変化するページ。反映が最大1時間遅れるだけなのでISR化
-export const revalidate = 86400;
+// 時間ベースの再生成はしない(理由は spots/[slug]/page.tsx)。
+// 件数の変化は次の配信で反映する
+export const revalidate = false;
 
 export const metadata: Metadata = pageMetadata({
   title: "都道府県からランニングコースをさがす",

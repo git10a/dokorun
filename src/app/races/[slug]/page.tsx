@@ -24,8 +24,9 @@ import { RaceStoryCard } from "@/components/race-story";
 import { SectionHeading } from "@/components/section-heading";
 import { raceEditorial } from "@/lib/course-editorial";
 
-// スポット情報の更新反映が最大1時間遅れるのみ。検索エンジン向けの静的な面なのでISR化
-export const revalidate = 3600;
+// 時間ベースの再生成はしない(理由は spots/[slug]/page.tsx)。
+// レビューの承認・非表示はrevalidatePathで反映し、スポット情報の更新は次の配信で反映する
+export const revalidate = false;
 
 type Params = Promise<{ slug: string }>;
 
