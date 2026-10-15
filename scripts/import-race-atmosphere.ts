@@ -2,6 +2,7 @@ import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import sharp from "sharp";
 import { raceCourseMeta } from "../src/lib/race-page";
+import { races } from "../src/lib/races";
 import { elevationPointAtDistance, type RaceElevation } from "../src/lib/race-elevation";
 import type { RaceEditorial } from "../src/lib/course-editorial";
 import type { RaceAtmosphere } from "../src/lib/race-atmosphere";
@@ -36,9 +37,11 @@ const catalog = JSON.parse(readFileSync(catalogPath, "utf8")) as Record<string, 
 
 const reviewed = manifest.scenes.map((scene) => {
   const meta = raceCourseMeta[scene.slug];
+  const sourceUrl = meta?.sourceUrl ?? races.find((race) => race.slug === scene.slug)?.officialUrl;
   const editorial = editorials[scene.slug]?.points[scene.index];
   if (
-    !meta?.sourceUrl ||
+    !meta ||
+    !sourceUrl ||
     !editorial ||
     !scene.observations ||
     !scene.visualReview ||
@@ -53,7 +56,7 @@ const reviewed = manifest.scenes.map((scene) => {
   if (!position || Math.abs(position.distanceM - scene.distanceM) > 0.01) throw new Error(`Off route: ${scene.id}`);
   // Read all inputs before mutating the runtime catalogs.
   readFileSync(scene.generatedPath);
-  return { scene, courseYear: meta.courseYear ?? null, sourceUrl: meta.sourceUrl, editorial, position };
+  return { scene, courseYear: meta.courseYear ?? null, sourceUrl, editorial, position };
 });
 
 mkdirSync("output/race-atmosphere", { recursive: true });

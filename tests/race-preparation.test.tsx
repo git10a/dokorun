@@ -8,7 +8,9 @@ import { races } from "@/lib/races";
 import research from "../data/race-preparation-research/2026-10-14.json";
 import followupResearch from "../data/race-preparation-research/2026-10-15.json";
 
-const reviewedRaces = [...new Map([...research.races, ...followupResearch.races].map((race) => [race.slug, race])).values()];
+const reviewedRaces = [
+  ...new Map([...research.races, ...followupResearch.races].map((race) => [race.slug, race])).values(),
+];
 
 describe("race preparation source boundaries", () => {
   it("covers every race published at the research cutoff, with inspectable sources", () => {

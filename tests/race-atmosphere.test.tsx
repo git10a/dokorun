@@ -8,11 +8,17 @@ import { raceEditorial } from "@/lib/course-editorial";
 import { elevationPointAtDistance, type RaceElevation } from "@/lib/race-elevation";
 import additionalAtmospheres from "@/lib/race-atmosphere-scenes.json";
 import { raceCourseMeta } from "@/lib/race-page";
+import { races } from "@/lib/races";
 
 const slug = "tokyo-legacy-half-marathon";
 
 describe("race scenery references", () => {
   it("pairs every point in each expanded race with an existing image and the reviewed map location", () => {
+    for (const race of races) {
+      const atmosphere = getRaceAtmosphere(race.slug, raceCourseMeta[race.slug]?.courseYear);
+      expect(atmosphere, `${race.slug}: missing scenery`).toBeDefined();
+      expect(raceEditorial[race.slug], `${race.slug}: missing preparation`).toBeDefined();
+    }
     for (const [raceSlug, atmosphere] of Object.entries(additionalAtmospheres)) {
       const entry = raceEditorial[raceSlug]!;
       expect(getRaceAtmosphere(raceSlug, raceCourseMeta[raceSlug]?.courseYear)).toBeDefined();
@@ -51,9 +57,13 @@ describe("race scenery references", () => {
     const undated = getRaceAtmosphere("naha-marathon", undefined);
     expect(undated?.courseYear).toBeNull();
     expect(getRaceAtmosphere("naha-marathon", 2026)).toBeUndefined();
-    const html = renderToStaticMarkup(createElement(RaceCoursePoints, {
-      entry: raceEditorial["naha-marathon"], atmosphere: undated, onSelectPoint: () => {},
-    }));
+    const html = renderToStaticMarkup(
+      createElement(RaceCoursePoints, {
+        entry: raceEditorial["naha-marathon"],
+        atmosphere: undated,
+        onSelectPoint: () => {},
+      }),
+    );
     expect(html).toContain("画像は掲載コースの景色。");
   });
 
@@ -91,7 +101,7 @@ describe("race scenery references", () => {
     );
     expect(html.match(/<figure/g)).toHaveLength(6);
     expect(html).not.toContain("AI生成の参考イメージ</p>");
-    expect(html).toContain("現地のストリートビューを参考にしたAI生成イメージです。");
+    expect(html).toContain("現地の写真を参考にしたAI生成イメージです。");
     expect(html.match(/コース上で見る/g)).toHaveLength(5);
     expect(html.match(/>実際の景色を見る</g)).toHaveLength(6);
     expect(html).not.toContain("Googleマップで実景を見る");

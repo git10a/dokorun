@@ -97,7 +97,7 @@ export function RaceCoursePoints({
       <div className="mt-3 space-y-1 text-xs leading-5 text-sub">
         {entry && <p>{entry.referenceLabel}</p>}
         {atmosphere && (
-          <p>画像は{atmosphere.courseYear ? `${atmosphere.courseYear}年コース` : "掲載コース"}の景色。現地のストリートビューを参考にしたAI生成イメージです。</p>
+          <p>画像は{atmosphere.courseYear ? `${atmosphere.courseYear}年コース` : "掲載コース"}の景色。現地の写真を参考にしたAI生成イメージです。</p>
         )}
       </div>
       <ol className="mt-7">

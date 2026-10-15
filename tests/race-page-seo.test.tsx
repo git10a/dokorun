@@ -25,7 +25,7 @@ import sitemap from "@/app/sitemap";
 afterEach(() => vi.unstubAllEnvs());
 
 describe("race page SEO preservation", () => {
-  it("combines Legacy scenery and preparation while preserving its map, planner and reviews", async () => {
+  it("combines scenery and preparation on both Legacy and expanded race pages", async () => {
     const html = renderToStaticMarkup(
       await RacePage({ params: Promise.resolve({ slug: "tokyo-legacy-half-marathon" }) }),
     );
@@ -39,7 +39,11 @@ describe("race page SEO preservation", () => {
     expect(html).toContain("まだ体験はありません");
     const other = renderToStaticMarkup(await RacePage({ params: Promise.resolve({ slug: "tokyo-marathon" }) }));
     expect(other).not.toContain('id="race-atmosphere"');
-    expect(other).not.toContain("AI生成イメージ");
+    const expandedPreparation = other.split('id="course-points"')[1].split("</section>")[0];
+    expect(expandedPreparation.match(/<figure/g)).toHaveLength(3);
+    expect(expandedPreparation).toContain("AI生成イメージ");
+    expect(other).toContain('id="course-map"');
+    expect(other).toContain("まだ体験はありません");
   });
   it("server-renders sourced preparation notes without inventing participant reviews", async () => {
     for (const [slug, entry] of Object.entries(raceEditorial)) {
