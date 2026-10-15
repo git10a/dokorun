@@ -128,3 +128,20 @@ export function parseGpxXmlInBrowser(xml: string): GpxResult {
   if (document.querySelector("parsererror")) throw new Error("GPXファイルを解析できませんでした");
   return parseGpxDocument(document);
 }
+
+// Distances follow the reference geometry; they are not certified race kilometre markers.
+export function pointAlongCourse(geometry: LineString, km: number): [number, number] | null {
+  if (!Number.isFinite(km) || km < 0 || !geometry.coordinates.length) return null;
+  let remaining = km * 1000;
+  for (let i = 1; i < geometry.coordinates.length; i++) {
+    const a = geometry.coordinates[i - 1];
+    const b = geometry.coordinates[i];
+    const length = haversine({ lng: a[0], lat: a[1] }, { lng: b[0], lat: b[1] });
+    if (remaining <= length) {
+      const fraction = length ? remaining / length : 0;
+      return [a[0] + (b[0] - a[0]) * fraction, a[1] + (b[1] - a[1]) * fraction];
+    }
+    remaining -= length;
+  }
+  return null;
+}

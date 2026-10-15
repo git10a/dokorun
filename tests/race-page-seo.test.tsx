@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 import { races } from "@/lib/races";
 import { RaceReviews } from "@/components/race-reviews";
-import { pointAlongCourse } from "@/lib/race-page";
+import { pointAlongCourse } from "@/lib/gpx";
 import { raceEditorial } from "@/lib/course-editorial";
 import { RaceCoursePoints } from "@/components/race-course-points";
 

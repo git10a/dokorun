@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { CourseMap } from "./course-map";
 import { RaceElevationChart } from "../race-elevation-chart";
 import type { LineString } from "@/lib/types";
-import { pointAlongCourse } from "@/lib/race-page";
+import { pointAlongCourse } from "@/lib/gpx";
 import { elevationPointAtDistance, type RaceElevation } from "@/lib/race-elevation";
 
 // Keep course data in static assets rather than the Worker bundle.
