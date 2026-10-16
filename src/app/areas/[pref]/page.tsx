@@ -13,6 +13,7 @@ import { getStationCountByPrefecture } from "@/lib/station-prefecture-counts";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 import { SectionHeading } from "@/components/section-heading";
+import { splitRacesBySchedule } from "@/lib/race-schedule";
 
 // 時間ベースの再生成はしない(理由は spots/[slug]/page.tsx)。
 // スポットの追加・更新は次の配信で反映する
@@ -52,6 +53,8 @@ export default async function AreaPage({ params }: { params: Params }) {
   const region = regionGroups.find((group) => (group.prefectures as readonly string[]).includes(prefecture));
   const neighborPrefectures = region?.prefectures.filter((name) => name !== prefecture) ?? [];
   const areaStationCount = getStationCountByPrefecture(prefecture);
+  const schedule = splitRacesBySchedule();
+  const areaRaces = [...schedule.upcoming, ...schedule.finished].filter((race) => race.prefecture === prefecture);
   const crumbs = [
     { name: "ホーム", path: "/" },
     { name: "エリアからさがす", path: "/areas" },
@@ -116,6 +119,18 @@ export default async function AreaPage({ params }: { params: Params }) {
             {neighborPrefectures.map((name) => (
               <Link key={name} href={`/areas/${prefectureSlug(name)}`} className="text-accent hover:underline">
                 {name}のランニングコース
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+      {areaRaces.length > 0 && (
+        <section className="mt-10">
+          <SectionHeading className="mb-4">{prefecture}のマラソン大会のコース</SectionHeading>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            {areaRaces.map((race) => (
+              <Link key={race.slug} href={`/races/${race.slug}`} className="text-accent hover:underline">
+                {race.name}のコース
               </Link>
             ))}
           </div>

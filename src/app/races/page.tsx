@@ -10,9 +10,9 @@ import { SectionHeading } from "@/components/section-heading";
 export const revalidate = 86400;
 
 export const metadata: Metadata = pageMetadata({
-  title: "マラソン大会のコースマップ・高低図をさがす",
+  title: "マラソン大会のコースをさがす",
   description:
-    "東京マラソン、大阪マラソンなど全国の主要マラソン大会のコースマップ・高低図と、走った人の体験。目標タイムから坂を考えたペース表も作れます。",
+    "東京マラソン、大阪マラソンなど全国のマラソン大会のコースを地図で確認。コースの特徴や坂道を予習し、目標タイムに合わせたペース表を作れます。大会周辺のランニングスポットも紹介。",
   path: "/races",
 });
 
@@ -24,7 +24,7 @@ export default function RacesPage() {
       <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "大会からさがす" }]} />
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl">大会のコースをさがす</h1>
       <p className="mb-5 text-sm leading-7 text-sub">
-        出る大会のコースと坂を確認し、目標タイムからペース表を作れます。コースを対応ウォッチに取り込んだり、完走者の体験を読んだりして、レースの準備に役立ててください。
+        出る大会のコースや坂道を確認し、目標タイムに合わせたペース表を作れます。大会周辺で走れるランニングスポットも紹介しています。
       </p>
       <div className="mb-10 max-w-xl">
         <RaceSearch races={searchOptions} />

@@ -17,10 +17,12 @@ export type RaceCourseMeta = {
   finish?: number[];
 };
 export const raceCourseMeta = manifest as Record<string, RaceCourseMeta | undefined>;
-export const racePageTitle = (race: RaceDef) => `${race.name}のコースマップ・高低図`;
-// 大会ページの説明は、コースの予習とレース計画の価値に統一する。
-export const racePageDescription = (race: RaceDef) =>
-  `${race.name}（${race.distanceLabel}・${race.startFinish}）のコースマップ・高低図。${raceEditorial[race.slug]?.intro ?? "目標タイムから坂を考えたペース表も作れます。走った人の体験や、近くの有名ランニングスポットも紹介。"}`;
+// 非公開化されたスポットを除き、本文に実際に載る内容をタイトル・説明にも反映する。
+export const racePageTitle = (race: RaceDef, hasNearbySpots: boolean) =>
+  `${race.name}のコース${hasNearbySpots ? "と周辺ランニングスポット" : ""}`;
+
+export const racePageDescription = (race: RaceDef, hasNearbySpots: boolean) =>
+  `${race.name}のコースを地図で確認。${race.startFinish}。${raceEditorial[race.slug]?.intro ?? "コースの特徴を確認し、目標タイムに合わせたペース表を作れます。"}${hasNearbySpots ? "周辺のランニングスポットも紹介しています。" : ""}`;
 
 // Distances follow the reference geometry; they are not certified race kilometre markers.
 export function pointAlongCourse(geometry: LineString, km: number): [number, number] | null {
