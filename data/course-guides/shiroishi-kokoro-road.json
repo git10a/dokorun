@@ -1,140 +1,103 @@
 {
   "slug": "shiroishi-kokoro-road",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "札幌市白石区から北広島市まで続く自転車歩行者専用道「白石こころーど（札幌恵庭自転車道路）」を走る片道約18.5kmのロング走コースです。ラソラ札幌（旧イーアス札幌）付近を起点にJR北広島駅までほぼ途切れずに走り続けられ、車道と分離されているため安全に距離を稼げます。途中にコンビニやトイレもあり補給しやすく、ゴール後は電車で戻れるのも魅力です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "東札幌の専用道入口から白石こころーど、陽だまりロード、エルフィンロードをつなぎ、JR北広島駅の北側まで進む片道約18.8kmの参考ルートです。街なかの並木から厚別の公園、北広島の森へと景色が変わります。終点から駅までは徒歩約100m。全距離にこだわらず、途中の出入口から区間を選んで利用できます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "共用する道と参考経路について",
+      "body": "自転車と歩行者が共用する道です。白石区の案内では歩行者は道路右側の外側を通り、並んで道をふさがないよう呼びかけています。交差部や狭い区間では周囲を確認して減速・歩行してください。橋とトンネルの路面標高は未確認のため標高グラフの一部は欠けています。積雪や凍結、工事による通行状況は出発前と現地で確認し、飲料などは事前に用意してください。",
+      "url": "https://www.city.sapporo.jp/shiroishi/shisetsu/doboku/cycling/",
+      "linkLabel": "白石区の自転車道案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 地下鉄東西線 東札幌駅・南郷13丁目駅からアクセス可能。ゴールのJR北広島駅から電車で戻れます。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "東札幌側の専用道入口からスタート。北広島側は駅北側の専用道終端からJR北広島駅まで徒歩約100mです。",
+      "url": "https://www.city.kitahiroshima.hokkaido.jp/hotnews/detail/00001278.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "東札幌駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 43.051614,
-      "destinationLng": 141.384922,
-      "routeAnchorLat": 43.05418,
-      "routeAnchorLng": 141.382802,
+      "name": "東札幌の専用道入口",
+      "badge": "専用道の入口",
+      "destinationLat": 43.053441,
+      "destinationLng": 141.3821364,
+      "routeAnchorLat": 43.053441,
+      "routeAnchorLng": 141.3821364,
       "routeMode": "forward",
-      "accessText": "東札幌駅からコースまで約330m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "東札幌側の専用道入口からスタート。北広島側は駅北側の専用道終端からJR北広島駅まで徒歩約100mです。",
+      "facilitiesText": "飲料と帰路の交通を事前に確認してください",
+      "firstSection": "専用道を北広島方面へ進みます。"
     },
     {
       "id": "start-2",
-      "name": "北広島駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 42.979239,
-      "destinationLng": 141.563115,
-      "routeAnchorLat": 42.98548,
-      "routeAnchorLng": 141.563721,
+      "name": "北広島駅北側",
+      "badge": "駅から徒歩約100m",
+      "destinationLat": 42.9800262,
+      "destinationLng": 141.5634076,
+      "routeAnchorLat": 42.9800262,
+      "routeAnchorLng": 141.5634076,
       "routeMode": "reverse",
-      "accessText": "北広島駅からコースまで約700m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "掲載コースの終点側から逆向きに走ります。"
+      "accessText": "東札幌側の専用道入口からスタート。北広島側は駅北側の専用道終端からJR北広島駅まで徒歩約100mです。",
+      "facilitiesText": "飲料と帰路の交通を事前に確認してください",
+      "firstSection": "専用道を東札幌方面へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 43.05418,
-      "anchorLng": 141.382802,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 北海道道1148号札幌恵庭自転車道線（Shiroishi cycling road）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg/960px-%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg",
-        "alt": "白石こころーど（札幌恵庭自転車道路）のスタート周辺付近",
-        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
-        "credit": "t-konno",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio.jpg"
-      }
+      "name": "東札幌の入口",
+      "anchorLat": 43.053441,
+      "anchorLng": 141.3821364,
+      "description": "専用道を北広島方面へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 43.03267,
-      "anchorLng": 141.4295,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 北海道道1148号札幌恵庭自転車道線（Shiroishi cycling road）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_%287%29.jpg/960px-%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_%287%29.jpg",
-        "alt": "白石こころーど（札幌恵庭自転車道路）の序盤区間付近",
-        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
-        "credit": "t-konno",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E9%81%931148%E5%8F%B7%E6%9C%AD%E5%B9%8C%E6%81%B5%E5%BA%AD%E8%87%AA%E8%BB%A2%E8%BB%8A%E9%81%93%E7%B7%9A%EF%BC%88Shiroishi_cycling_road%EF%BC%89_-_panoramio_(7).jpg"
-      }
+      "name": "白石こころーど",
+      "anchorLat": 43.0386306,
+      "anchorLng": 141.4089873,
+      "description": "自転車や歩行者を優先します。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 43.013496,
-      "anchorLng": 141.472877,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 札幌市清田区 平岡公園 の梅林",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "白石こころーど（札幌恵庭自転車道路）の中盤区間付近",
-        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
-        "credit": "taku-k",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plum_Park-%E6%A2%85%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
+      "name": "陽だまりロード",
+      "anchorLat": 43.0279786,
+      "anchorLng": 141.4582121,
+      "description": "出入口と交差部では周囲を確認してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 43.007196,
-      "anchorLng": 141.522033,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: JR Hokkaido Rapid Train, Sapporo, Hokkaido, Japan, JR快速列車, 札幌, 北海道, 日本, JR快速エアポート, さっぽろし, ほっかいどう, にっぽん, にほん",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/JR_Hokkaido_Rapid_Train%2C_Sapporo%2C_Hokkaido%2C_Japan%2C_JR%E5%BF%AB%E9%80%9F%E5%88%97%E8%BB%8A%2C_%E6%9C%AD%E5%B9%8C%2C_%E5%8C%97%E6%B5%B7%E9%81%93%2C_%E6%97%A5%E6%9C%AC%2C_JR%E5%BF%AB%E9%80%9F%E3%82%A8%E3%82%A2%E3%83%9D%E3%83%BC%E3%83%88%2C_%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%81%97%2C_%E3%81%BB%E3%81%A3%E3%81%8B%E3%81%84%E3%81%A9%E3%81%86%2C_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93%2C_%E3%81%AB%E3%81%BB%E3%82%93_%2816765610585%29.jpg/960px-thumbnail.jpg",
-        "alt": "白石こころーど（札幌恵庭自転車道路）の後半区間付近",
-        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
-        "credit": "bryan...",
-        "license": "CC BY-SA 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_Hokkaido_Rapid_Train,_Sapporo,_Hokkaido,_Japan,_JR%E5%BF%AB%E9%80%9F%E5%88%97%E8%BB%8A,_%E6%9C%AD%E5%B9%8C,_%E5%8C%97%E6%B5%B7%E9%81%93,_%E6%97%A5%E6%9C%AC,_JR%E5%BF%AB%E9%80%9F%E3%82%A8%E3%82%A2%E3%83%9D%E3%83%BC%E3%83%88,_%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%81%97,_%E3%81%BB%E3%81%A3%E3%81%8B%E3%81%84%E3%81%A9%E3%81%86,_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93,_%E3%81%AB%E3%81%BB%E3%82%93_(16765610585).jpg"
-      }
+      "name": "エルフィンロード",
+      "anchorLat": 42.9944445,
+      "anchorLng": 141.54489660000002,
+      "description": "橋と接続する通路では速度を落とします。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 42.98548,
-      "anchorLng": 141.563721,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: An ESCON FIELD",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg/960px-%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg",
-        "alt": "白石こころーど（札幌恵庭自転車道路）の終盤区間付近",
-        "caption": "白石こころーど（札幌恵庭自転車道路）の走路近隣で撮影された風景",
-        "credit": "Reetlol",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%A8%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%92%E3%80%81%E7%89%B9%E5%BE%B4%E7%9A%84%E3%81%AA%E3%82%AC%E3%83%A9%E3%82%B9%E5%BC%B5%E3%82%8A%E3%81%AE%E9%83%A8%E5%88%86%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F.jpg"
-      }
+      "name": "北広島駅北側",
+      "anchorLat": 42.9800262,
+      "anchorLng": 141.5634076,
+      "description": "ここが参考経路の終点です。駅へは徒歩約100mです。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
-  }
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.city.sapporo.jp/shiroishi/shisetsu/doboku/cycling/",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
+  },
+  "elevationGapNotice": "橋・トンネルの路面の高さが未確認の区間は、地形標高で補わず空白にしています。全区間の獲得標高は表示していません。"
 }

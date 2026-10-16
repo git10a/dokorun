@@ -24,7 +24,7 @@ async function main() {
       : {
           spot: (
             await client.execute({
-              sql: "SELECT id, slug, lat, lng, description, access FROM spots WHERE slug = ?",
+              sql: "SELECT id, slug, name, lat, lng, description, access FROM spots WHERE slug = ?",
               args: [slug],
             })
           ).rows[0],
@@ -40,7 +40,14 @@ async function main() {
     const gpx = parseGpx(readFileSync(resolve("data/gpx", `${slug}.gpx`), "utf8"));
     const profile = JSON.parse(readFileSync(resolve("public/spot-elevation", `${slug}.json`), "utf8")) as RaceElevation;
     if (profile.routeReviewRequired) throw new Error(`${slug}: still under review`);
-    const spot = { lat: gpx.startPoint.lat, lng: gpx.startPoint.lng, description: config.intro, access: config.access };
+    if (config.spotName && !previous.spot.name) throw new Error(`${slug}: previous spot name missing`);
+    const spot = {
+      lat: gpx.startPoint.lat,
+      lng: gpx.startPoint.lng,
+      description: config.intro,
+      access: config.access,
+      ...(config.spotName ? { name: config.spotName } : {}),
+    };
     const course = {
       name: config.routeName,
       geojson: JSON.stringify(gpx.geojson),
@@ -120,6 +127,8 @@ async function main() {
       id: string;
       description: string;
       previousDescription: string;
+      name?: string;
+      previousName?: string;
       access?: string;
       previousAccess?: string | null;
       removeTagIds?: string[];
@@ -133,6 +142,17 @@ async function main() {
         `-- ${item.slug}: description only`,
         `UPDATE spots SET description = ${quote(item.previousDescription)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.description)};`,
       );
+      if (item.name !== undefined) {
+        if (!item.previousName) throw new Error(`${item.slug}: missing previous name`);
+        updates.push(
+          `-- ${item.slug}: name`,
+          `UPDATE spots SET name = ${quote(item.name)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND name IS ${quote(item.previousName)};`,
+        );
+        rollback.push(
+          `-- ${item.slug}: name`,
+          `UPDATE spots SET name = ${quote(item.previousName)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND name IS ${quote(item.name)};`,
+        );
+      }
       if (item.access !== undefined) {
         if (item.previousAccess === undefined) throw new Error(`${item.slug}: missing previous access`);
         updates.push(

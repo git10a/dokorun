@@ -2,19 +2,25 @@
   "slug": "sanaruko-park",
   "heroCheckpointId": "section-1",
   "checkpointsTitle": "コースの雰囲気",
-  "intro": "浜松市街に近い湖畔公園で、公式案内では1周約6km、より正確には5.941kmのウォーキングコースが整備されています。起点はひょうたん池前で、距離表示の運用も確認できます。公園全体として無料駐車場が8か所整備され、周回距離とアクセスのバランスが良好です。二次情報ではほぼ平坦と整理されており、景観・公開性・日常利用のしやすさで中部圏の掲載候補として扱いやすいです。",
+  "intro": "浜松市街に近い佐鳴湖を一周する、約5.90kmの参考コースです。湖面を望む芝生広場や木立のそばを通り、北岸はふれあい橋・であい橋を渡ります。土の園路や木道もあるため、雨上がりや段差では足元に注意し、散歩や野鳥観察をする人を優先して進みます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "木道や橋、段差では足元に注意してください",
+      "body": "北東岸には木道と短い階段、北岸には歩行者用の橋があります。濡れた路面や狭い区間では速度を落とし、歩行者を優先してください。",
+      "url": "https://sanaruko.hama-park.jp/facilities",
+      "linkLabel": "公園の施設案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 佐鳴湖公園公式のアクセス・駐車場案内あり。園内計8か所の無料駐車場を確認。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "公式案内と現地の規制を優先してください",
+      "body": "掲載ルートは公式の約6km周回を参考にした約5.90kmの経路です。出入口の道路横断や工事による通行規制を出発前に確認してください。",
+      "url": "https://sanaruko.hama-park.jp/facilities",
+      "linkLabel": "公園の施設案内"
+    },
+    {
+      "title": "標高データについて",
+      "body": "水面上の木道・橋と接続する段差の高さは未確認のため、その区間を空白で表示しています。コース全体の獲得標高は表示していません。",
+      "url": "https://sanaruko.hama-park.jp/facilities",
+      "linkLabel": "公園の施設案内"
     }
   ],
   "startPoints": [
@@ -34,14 +40,14 @@
       "routeDistanceM": 0,
       "routeLat": 34.707123,
       "routeLng": 137.681776,
-      "elevationM": 5.3,
+      "elevationM": 3.2,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
         "section-2": 1232,
         "section-3": 2451,
-        "section-4": 3664,
-        "section-5": 4905
+        "section-4": 3615,
+        "section-5": 4687
       },
       "gpxHref": "/gpx/sanaruko-park-start-1.gpx"
     }
@@ -67,7 +73,7 @@
       "routeDistanceM": 0,
       "routeLat": 34.707123,
       "routeLng": 137.681776,
-      "elevationM": 5.3,
+      "elevationM": 3.2,
       "snapGapM": 0
     },
     {
@@ -86,11 +92,11 @@
         "license": "CC BY 3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grave_of_Prince_Kidera_Yasuhito.jpg"
       },
-      "routePointIndex": 89,
+      "routePointIndex": 134,
       "routeDistanceM": 1232,
       "routeLat": 34.704198,
       "routeLng": 137.689215,
-      "elevationM": 4.6,
+      "elevationM": 1.9,
       "snapGapM": 0
     },
     {
@@ -109,34 +115,26 @@
         "license": "CC BY-SA 3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanaruko_3.JPG"
       },
-      "routePointIndex": 167,
+      "routePointIndex": 256,
       "routeDistanceM": 2451,
       "routeLat": 34.713376,
       "routeLng": 137.695933,
-      "elevationM": 4.7,
+      "elevationM": 2.2,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 34.721549,
-      "anchorLng": 137.697976,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: lake sanaru",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sanaruko_1.JPG/960px-Sanaruko_1.JPG",
-        "alt": "佐鳴湖公園の後半区間付近",
-        "caption": "佐鳴湖公園の走路近隣で撮影された風景",
-        "credit": "Jfr0595",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanaruko_1.JPG"
-      },
-      "routePointIndex": 257,
-      "routeDistanceM": 3664,
-      "routeLat": 34.721549,
-      "routeLng": 137.697976,
-      "elevationM": 3.9,
+      "name": "北岸の橋と園路",
+      "anchorLat": 34.7210703,
+      "anchorLng": 137.6970598,
+      "description": "ふれあい橋・であい橋を渡って湖岸園路へ進みます。木道・段差では歩き、歩行者を優先してください。",
+      "surfaceLabel": "橋・園路",
+      "caution": "足元と歩行者に注意",
+      "routePointIndex": 373,
+      "routeDistanceM": 3615,
+      "routeLat": 34.7210703,
+      "routeLng": 137.6970598,
+      "elevationM": 2.5,
       "snapGapM": 0
     },
     {
@@ -155,273 +153,28 @@
         "license": "CC BY-SA 3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_Chome-1_%C5%8Chiradai,_Nishi-ku,_Hamamatsu-shi,_Shizuoka-ken_432-8068,_Japan_-_panoramio.jpg"
       },
-      "routePointIndex": 340,
-      "routeDistanceM": 4905,
+      "routePointIndex": 489,
+      "routeDistanceM": 4687,
       "routeLat": 34.715206,
       "routeLng": 137.689544,
-      "elevationM": 5.1,
+      "elevationM": 4.1,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "既存経路の北東〜北西部分をOSM園路に修正。© OpenStreetMap contributors (ODbL)",
+    "routeSources": [
+      "https://sanaruko.hama-park.jp/facilities",
+      "https://www.city.hamamatsu.shizuoka.jp/koho2/pr/kouhou_all/2610/6other-03.html",
+      "https://api.openstreetmap.org/api/0.6/map?bbox=137.686,34.714,137.703,34.724",
+      "https://api.openstreetmap.org/api/0.6/map?bbox=137.677,34.700,137.700,34.716"
+    ],
+    "elevation": "国土地理院地形DEM。橋・木道・接続段差の標高は未確認として除外。",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 6122,
-  "elevationGainM": 18,
-  "elevationProfile": [
-    {
-      "distanceM": 0,
-      "elevationM": 5.3
-    },
-    {
-      "distanceM": 99,
-      "elevationM": 4.5
-    },
-    {
-      "distanceM": 197,
-      "elevationM": 6.7
-    },
-    {
-      "distanceM": 296,
-      "elevationM": 5.9
-    },
-    {
-      "distanceM": 395,
-      "elevationM": 5.6
-    },
-    {
-      "distanceM": 494,
-      "elevationM": 5.9
-    },
-    {
-      "distanceM": 592,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 691,
-      "elevationM": 5
-    },
-    {
-      "distanceM": 790,
-      "elevationM": 5
-    },
-    {
-      "distanceM": 889,
-      "elevationM": 4.9
-    },
-    {
-      "distanceM": 987,
-      "elevationM": 4.4
-    },
-    {
-      "distanceM": 1086,
-      "elevationM": 4.5
-    },
-    {
-      "distanceM": 1185,
-      "elevationM": 4.6
-    },
-    {
-      "distanceM": 1284,
-      "elevationM": 4.6
-    },
-    {
-      "distanceM": 1382,
-      "elevationM": 4.7
-    },
-    {
-      "distanceM": 1481,
-      "elevationM": 5.3
-    },
-    {
-      "distanceM": 1580,
-      "elevationM": 5.7
-    },
-    {
-      "distanceM": 1679,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 1777,
-      "elevationM": 5.9
-    },
-    {
-      "distanceM": 1876,
-      "elevationM": 5.9
-    },
-    {
-      "distanceM": 1975,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 2074,
-      "elevationM": 5.1
-    },
-    {
-      "distanceM": 2172,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 2271,
-      "elevationM": 5.6
-    },
-    {
-      "distanceM": 2370,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 2469,
-      "elevationM": 4.8
-    },
-    {
-      "distanceM": 2567,
-      "elevationM": 4.7
-    },
-    {
-      "distanceM": 2666,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 2765,
-      "elevationM": 8.2
-    },
-    {
-      "distanceM": 2864,
-      "elevationM": 9.5
-    },
-    {
-      "distanceM": 2962,
-      "elevationM": 7
-    },
-    {
-      "distanceM": 3061,
-      "elevationM": 4.4
-    },
-    {
-      "distanceM": 3160,
-      "elevationM": 3.9
-    },
-    {
-      "distanceM": 3259,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 3357,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 3456,
-      "elevationM": 5.3
-    },
-    {
-      "distanceM": 3555,
-      "elevationM": 4
-    },
-    {
-      "distanceM": 3654,
-      "elevationM": 3.9
-    },
-    {
-      "distanceM": 3752,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 3851,
-      "elevationM": 3.8
-    },
-    {
-      "distanceM": 3950,
-      "elevationM": 3.4
-    },
-    {
-      "distanceM": 4049,
-      "elevationM": 3.5
-    },
-    {
-      "distanceM": 4147,
-      "elevationM": 4.4
-    },
-    {
-      "distanceM": 4246,
-      "elevationM": 4.5
-    },
-    {
-      "distanceM": 4345,
-      "elevationM": 4.7
-    },
-    {
-      "distanceM": 4444,
-      "elevationM": 4.9
-    },
-    {
-      "distanceM": 4542,
-      "elevationM": 4.9
-    },
-    {
-      "distanceM": 4641,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 4740,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 4839,
-      "elevationM": 5.2
-    },
-    {
-      "distanceM": 4937,
-      "elevationM": 5.1
-    },
-    {
-      "distanceM": 5036,
-      "elevationM": 5
-    },
-    {
-      "distanceM": 5135,
-      "elevationM": 4.8
-    },
-    {
-      "distanceM": 5234,
-      "elevationM": 5.6
-    },
-    {
-      "distanceM": 5332,
-      "elevationM": 5.4
-    },
-    {
-      "distanceM": 5431,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 5530,
-      "elevationM": 5.4
-    },
-    {
-      "distanceM": 5629,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 5727,
-      "elevationM": 5.6
-    },
-    {
-      "distanceM": 5826,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 5925,
-      "elevationM": 5.6
-    },
-    {
-      "distanceM": 6024,
-      "elevationM": 6.4
-    },
-    {
-      "distanceM": 6122,
-      "elevationM": 5.3
-    }
-  ]
+  "elevationGapNotice": "水面上の木道・橋と接続する段差の高さは未確認のため、その区間を空白で表示しています。コース全体の獲得標高は表示していません。",
+  "distanceM": 5904,
+  "elevationGainM": null,
+  "elevationProfile": []
 }

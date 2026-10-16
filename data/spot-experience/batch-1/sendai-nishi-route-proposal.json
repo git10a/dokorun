@@ -1,0 +1,59 @@
+{
+  "slug": "sendai-nishi-park-running-course",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/sendai-nishi-route.json",
+  "plotFile": "/tmp/spot-route-repair/sendai-nishi-route-b1.png",
+  "distanceM": 1015.02,
+  "pointCount": 87,
+  "sourceUrls": [
+    "https://www.city.sendai.jp/aoba-chiikikatsudo/aobaku/machizukuri/ffi21.html",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=140.858,38.259,140.866,38.266"
+  ],
+  "officialEvidence": "仙台市2026-05-22現行案内のコース看板をCUAで目視。SL/こけし塔近くを起点に北側エリアの外周、広瀬川側園路と西公園通の歩道、西道路北側歩道を一周する赤い破線。公式1kmは平坦な舗装路、信号なし、一部歩道。",
+  "oldRouteEvidence": "旧17点GPXは起点がこけし塔より約81m南、中央園路を折り返して最後の327mを園内直線横断。旧標高は31〜52mで平坦という公式説明に合わない。",
+  "newRouteEvidence": "公式図の形に沿う公園外周の5waysで1015.02m参考ループ。新起点38.2643409,140.8627975の実景にはこけし塔とランニングコース案内板が同時に表示され、座標との一致を確認。手動接続なし、重複辺なし。",
+  "ways": [
+    977525036,
+    838355043,
+    838355044,
+    838355071,
+    977525035
+  ],
+  "startPointsProposal": [
+    {
+      "id": "start-1",
+      "name": "こけし塔・SL広場付近",
+      "badge": "コース起点",
+      "routeAnchorLat": 38.2643409,
+      "routeAnchorLng": 140.8627975,
+      "routeMode": "loop",
+      "accessText": "大町西公園駅から園内を北側へ。こけし塔近くのコース案内板が目印。"
+    }
+  ],
+  "introProposal": "仙台市中心部の西公園北側を一周するランニングコースです。掲載マップは、公式の約1kmコースに沿った約1.02kmの参考ルート。こけし塔・SL広場付近を起点に、広瀬川側の木立と公園沿いの歩道をつなぎます。短い周回なので、時間に合わせて周回数を調整できます。歩道では歩行者や自転車を優先してください。",
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14602/6304.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "startVisualEvidence": {
+    "pano": "CIHM0ogKEICAgIDO6ZXSJw",
+    "captured": "2021-12",
+    "registeredLat": 38.2643429,
+    "registeredLng": 140.8627845,
+    "sourceUrl": "https://google.com/maps/@38.2643429,140.8627845,48a,90y,145h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDO6ZXSJw!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8zHG_LEvLYjfMp7wQAC6O8vgbTYuOT1wqwafHnC5POG6VFPBPGAFGSFuQYWd-wfzrgqQXJFQy8Su2me7GwiaoWd6UyYXkjqE3mS1GQ7GnQTM5R1b8-8yTg8wALLWsdZ9_kOHMI%3Dw900-h600-k-no-pi0-ya301.8238067626953-ro0-fo100!7i5760!8i2880?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "起点の約1m西。こけし塔とランニングコース看板、木立、積雪した園路を確認。画面ヘッダー2022-07は投稿時期で撮影日フッター2021-12を採用。"
+  },
+  "southeastVisualEvidence": {
+    "sourceUrl": "https://google.com/maps/@38.2610873,140.8631738,3a,90y,300h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgICE8sjZwwE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9SThVz7zT0h6lesze7Ep92x4bzf1vK1DwpJ8SDx5Xzc0jsOM4PmdhkpiD3Dd4i1ATkdFS6kjcxZNrcs4ouXl8047xUy1azATiF686elR-OwS6F88okf1mtK3IH1HuN56nj8XnuQA%3Dw900-h600-k-no-pi0-ya47-ro0-fo100!7i8704!8i4352?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "pano": "CIHM0ogKEICAgICE8sjZwwE",
+    "captured": "2017-08",
+    "registeredLat": 38.2610873,
+    "registeredLng": 140.8631738,
+    "observed": "歩道橋上から南東角を目視。階段の下に広い公道歩道が連続している。way838355044のbuilding_passageは歩道橋階段下の短い歩道区間で、建物内部や私有地ではない。新ルートは地上歩道を利用、歩道橋へ登らない。"
+  }
+}

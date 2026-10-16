@@ -1,0 +1,53 @@
+{
+  "slug": "shimanto-sada-chinkabashi",
+  "reviewedAt": "2026-10-16",
+  "status": "ready-for-parent-review",
+  "routePath": "/tmp/spot-route-repair/shimanto-sada-route.json",
+  "distanceM": 19006.3,
+  "pointCount": 701,
+  "nullIndexRangeInclusive": [
+    251,
+    295
+  ],
+  "oldReplacedIndexRangeInclusive": [
+    251,
+    254
+  ],
+  "preservedOldPointRangesInclusive": [
+    [
+      0,
+      250
+    ],
+    [
+      255,
+      659
+    ]
+  ],
+  "scope": "橋区間だけを西岸から東岸接続道まで渡り同じ道を戻る形へ置換。他区間は既存profileの座標とGSI標高を保持。",
+  "turnaround": {
+    "lat": 33.0156243,
+    "lng": 132.8872263,
+    "name": "佐田沈下橋東岸の接続道",
+    "basis": "OSM way134616659接続ノード1479894686。Google 2024-01 pano zNPpX33pEzKy1IchvK7x1Aで橋の先の一般道接続を目視。旧橋途中折返しを解消。",
+    "sourceUrl": "https://google.com/maps/@33.0156079,132.8871883,13a,80y,260h,90t/data=!3m7!1e1!3m5!1szNPpX33pEzKy1IchvK7x1A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DzNPpX33pEzKy1IchvK7x1A%26yaw%3D260!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "elevationReview": "OSM橋梁way134616300だけで252.5mだが、公式橋長291.6mに対し短く、現地パノラマ上もOSM東端点に橋面の縁が残る。東岸接続道までの約309mを保守的に標高欠損とし往復45点をnull。接続道以外に新規地点追加なし。",
+  "introProposal": "四万十市街から川沿いの堤防や田園を巡り、佐田沈下橋まで足を延ばす約19.0kmの参考ルートです。佐田沈下橋は東岸まで渡り、同じ橋を戻ります。市街地や車両と共用する道もあるため、交差点と車の往来に気を配りながら走ってください。",
+  "warningsProposal": [
+    {
+      "title": "沈下橋と堤防道では車両に注意",
+      "body": "佐田沈下橋には欄干がなく、車や観光客も通行します。橋の上で立ち止まらず、混雑時は歩いて通行してください。増水時や規制中は橋へ入らず引き返してください。",
+      "url": "https://www.shimanto-kankou.com/kanko/shimanto-river/shimantoriver-2.html"
+    },
+    {
+      "title": "橋上の標高は表示していません",
+      "body": "地形の標高から橋の路面の高さを確認できない区間は、標高グラフを空白にしています。"
+    }
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/way/134616300",
+    "https://www.openstreetmap.org/way/134616659",
+    "https://www.shimanto-kankou.com/kanko/shimanto-river/shimantoriver-2.html"
+  ],
+  "photoRemapRequired": "橋上の既存生成画像の位置は有効。distanceMは修正profileで再対応。堤防画像3649.3mは変更前区間。"
+}

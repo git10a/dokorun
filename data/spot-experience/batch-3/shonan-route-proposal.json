@@ -1,0 +1,59 @@
+{
+  "slug": "shonan-kaigan-cycling-road",
+  "reviewedAt": "2026-10-16",
+  "status": "route-replacement-required",
+  "routeFile": "/tmp/spot-route-repair/shonan-route.json",
+  "distanceM": 19319.97,
+  "pointCount": 1601,
+  "nullElevationPoints": 54,
+  "oldIssue": "旧1789m・5677m点は国道134号車道。海辺の共用道という紹介と不一致。",
+  "observations": [
+    {
+      "pano": "_nRVsp2PNNgF-l68vbcChA",
+      "lat": 35.3169011,
+      "lng": 139.465807,
+      "captured": "2025-07",
+      "note": "旧1789m、鵠沼海浜公園前国道134号西向き車線。左木造商業施設、右住宅。"
+    },
+    {
+      "pano": "Rnwp0Mm8p5vQ4shgTBaivA",
+      "lat": 35.3192569,
+      "lng": 139.4239004,
+      "captured": "2025-07",
+      "note": "旧5677m、両側松林の134号多車線車道。"
+    },
+    {
+      "pano": "CIABIhCP_gJNYxysWb0n3gH1nXO5",
+      "lat": 35.3181323,
+      "lng": 139.4010371,
+      "captured": "2025-04",
+      "published": "2025-07",
+      "contributor": "ことり",
+      "note": "茅ヶ崎漁港東の白手すり付き狭い従来通路を目視。県2024年11月130m直線化図と照合。工事完了未確認のため新線を推定追加せず現地優先。",
+      "sourceUrl": "https://www.google.com/maps/@35.3181323,139.4010371,5a,90y,270h,90t/data=!3m7!1e1!3m5!1sCIABIhCP_gJNYxysWb0n3gH1nXO5!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8MuOLeQ0r7CxH4bfDdRYXy9wR8QAB9or94Fvr4mQN-ZuRkdSVgXClwW6yee6e7Zx6NLhjpVhf2y8HEh2e3_3gEuRixbOXbb_v_Pbhwh-aYVPWqGGHY6d6YmfJ_G4verxtLwdmr3wYiHlQ%3Dw900-h600-k-no-pi0-ya199.3771209716797-ro0-fo100!7i7680!8i3840"
+    }
+  ],
+  "config": {
+    "slug": "shonan-kaigan-cycling-road",
+    "name": "湘南海岸サイクリングロード",
+    "surface": "paved",
+    "distanceKm": 19.3,
+    "intro": "片瀬西浜から湘南海岸公園の海辺の道を進み、引地川の河口を歩道橋で渡って、辻堂・茅ヶ崎の海岸道を柳島まで往復する約19.3kmの参考ルートです。砂浜と海、松林の景色を楽しみながら、サザンビーチちがさきも通ります。全距離を走らず、好みの場所で折り返して距離を調整できます。",
+    "notice": "歩行者と自転車が共用する道です。海岸利用者の横断や混雑する区間では減速・歩行してください。引地川の接続部では国道134号沿いの歩道を使います。県の案内では飛砂が堆積しやすく、波浪警報時は一部通行止めになる場合があり、海岸道に照明灯はありません。茅ヶ崎漁港東側では直線化整備の案内があるため、工事柵や現地の迂回案内を優先してください。橋・トンネルの標高は未確認です。",
+    "officialUrl": "https://www.pref.kanagawa.jp/docs/ex5/saborin/index.html"
+  },
+  "sources": [
+    "https://www.pref.kanagawa.jp/docs/ex5/saborin/index.html",
+    "https://www.pref.kanagawa.jp/documents/22138/saikuringrodotyokusenka.pdf",
+    "https://www.fujisawa-kanko.jp/model_course/course05.html",
+    "https://www.openstreetmap.org/relation/16204924"
+  ],
+  "limitations": [
+    "国道134号車道中心を通る旧22kmを置換。海沿い歩行者・自転車道と引地川南側の歩道接続だけを使用。",
+    "柳島の海岸専用道終端で折り返す。湘南大橋や相模川西岸へは進まない。",
+    "2024年11月の県資料には茅ヶ崎漁港東側130mの直線化工事が掲載。2025年4月360画像では従来の低い橋と手すり道が見える。新直線の完成を未確認のまま推定せず、OSM登録の通行線を採用し現地案内優先。",
+    "公式路線7,726mとは起点と接続区間が異なる。距離を合わせるための反復はしていない。",
+    "OSM頂点を保持し15m以下に水平補間。全区間現地踏査ではない。",
+    "橋とトンネル54点ele:null。地形DEMは路面実測ではない。"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "shiroishi-kokoro-road",
+  "reviewedAt": "2026-10-16",
+  "status": "route-replacement-required",
+  "oldIssue": "旧19.6km線は南郷通と道道3号の車道中心線。北広島駅終点も駅から約700m北。専用道として画像化不可。",
+  "routeFile": "/tmp/spot-route-repair/shiroishi-route.json",
+  "distanceM": 18816.48,
+  "pointCount": 1545,
+  "nullElevationPoints": 113,
+  "sources": [
+    "https://www.openstreetmap.org/relation/11267074",
+    "https://www.city.sapporo.jp/shiroishi/shisetsu/doboku/cycling/",
+    "https://www.city.kitahiroshima.hokkaido.jp/hotnews/detail/00001278.html",
+    "https://www.city.sapporo.jp/atsubetsu/doboku/hidamariroad/",
+    "https://www.city.sapporo.jp/shiroishi/shisetsu/doboku/cycling/documents/shiroishikokoro-do.jpg",
+    "https://www.city.kitahiroshima.hokkaido.jp/hotnews/files/00001200/00001278/20090227150955.gif"
+  ],
+  "observations": [
+    {
+      "lat": 43.0347477,
+      "lng": 141.4258244,
+      "pano": "IV1-J_qujYD0a6jLuA5rQg",
+      "captured": "2025-08",
+      "note": "旧4540m点。南郷通の多車線交差点で専用道ではない。"
+    },
+    {
+      "lat": 43.0056708,
+      "lng": 141.5258567,
+      "pano": "1XFCUxom33HWqah6s27veA",
+      "captured": "2025-06",
+      "note": "旧15076m点。道道3号西の里交差点。専用道ではない。"
+    },
+    {
+      "lat": 42.9944482,
+      "lng": 141.5448616,
+      "pano": "CIHM0ogKEICAgICioviLQw",
+      "captured": "2020-10",
+      "contributor": "miya zaki",
+      "note": "エルフィンロードの立体交差。橋上の白中央破線舗装道から下のU字状の舗装接続道を実際に確認。橋のDEM採用不可。"
+    },
+    {
+      "lat": 43.0386317,
+      "lng": 141.4090445,
+      "pano": "h5-igxtRVXfafqCxgKqQIA",
+      "captured": "2024-07",
+      "note": "新3000m点の専用道。街路より低い位置の白線付き舗装路、草木と住宅街。"
+    }
+  ],
+  "config": {
+    "slug": "shiroishi-kokoro-road",
+    "name": "白石こころーど・陽だまりロード・エルフィンロード",
+    "surface": "paved",
+    "distanceKm": 18.8,
+    "intro": "東札幌の専用道入口から白石こころーど、陽だまりロード、エルフィンロードをつなぎ、JR北広島駅の北側まで進む片道約18.8kmの参考ルートです。街なかの並木から厚別の公園、北広島の森へと景色が変わります。終点から駅までは徒歩約100m。全距離にこだわらず、途中の出入口から区間を選んで利用できます。",
+    "notice": "自転車と歩行者が共用する道です。白石区の案内では歩行者は道路右側の外側を通り、並んで道をふさがないよう呼びかけています。交差部や狭い区間では周囲を確認して減速・歩行してください。橋とトンネルの路面標高は未確認のため標高グラフの一部は欠けています。積雪や凍結、工事による通行状況は出発前と現地で確認し、飲料などは事前に用意してください。",
+    "officialUrl": "https://www.city.sapporo.jp/shiroishi/shisetsu/doboku/cycling/"
+  },
+  "limitations": [
+    "公式距離を再現するために道を反復していない。東札幌の専用道入口から北広島駅北側の専用道終端までの参考片道。",
+    "OSMのcycleway/footwayのみを連結。一般車道の旧GPXは採用しない。",
+    "OSM relation11267074の接続不足は現存cycleway1273743973/1273743974のU字接続を使用。勝手な直線接続なし。",
+    "全線踏査ではない。公式概略地図とOSM歩行者・自転車道を基準に再構成し、現地案内を優先。",
+    "橋とトンネル・境界113点は地形DEMで埋めずnull。標高総上昇を表示しない。",
+    "地形DEMは地表の参考値で実測された舗装路面の高さではない。",
+    "水平距離であり斜面の実測距離とは異なる。"
+  ],
+  "startAnchor": {
+    "lat": 43.053441,
+    "lng": 141.3821364,
+    "distanceM": 0,
+    "wayId": 36907398,
+    "structure": null,
+    "ele": 19.58
+  },
+  "endAnchor": {
+    "lat": 42.9800262,
+    "lng": 141.5634076,
+    "distanceM": 18816.48,
+    "wayId": 33069350,
+    "structure": null,
+    "ele": 23.94
+  }
+}

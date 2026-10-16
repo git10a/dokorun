@@ -1,0 +1,110 @@
+{
+  "slug": "sanaruko-park",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/sanaruko-route.json",
+  "plotFile": "/tmp/spot-route-repair/sanaruko-route-b1.png",
+  "distanceM": 5903.92,
+  "pointCount": 614,
+  "startPoint": {
+    "lat": 34.707123,
+    "lng": 137.681776
+  },
+  "sourceUrls": [
+    "https://sanaruko.hama-park.jp/facilities",
+    "https://www.city.hamamatsu.shizuoka.jp/koho2/pr/kouhou_all/2610/6other-03.html",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=137.686,34.714,137.703,34.724",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=137.677,34.700,137.700,34.716"
+  ],
+  "officialEvidence": "現行指定管理者の施設マップをブラウザで目視。東岸木道→ふれあい橋→であい橋→北西湖岸遊歩道の赤い周回線を確認。旧公式entetsuassist-dms.comはsanaruko.hama-park.jpへ移転。浜松市2026年10月広報は一周およそ6km散策路と紹介。",
+  "oldRouteEvidence": "旧2,629.42m〜4,383.35m（indices181〜305）に東岸の並行道路と北側住宅街を回る線。3938.38m地点はGoogle2025-11住宅街で確認。",
+  "newRouteEvidence": "旧181点からOSM園路へ5.66m接続、佐鳴湖公園遊歩道と木道、ふれあい橋(way1372600502)、であい橋(way934989857)、北西湖岸を進み旧305点へ1.01mで接続。両端は園路接続部の短い差分。その他の区間は既存GPX維持。公式5.941kmとの完全一致でなく約5.90km参考周回。",
+  "ways": [
+    379054819,
+    533819620,
+    565103964,
+    565103963,
+    565103965,
+    379054820,
+    659277790,
+    380173411,
+    1372600503,
+    1372600502,
+    249494050,
+    380173410,
+    379054822,
+    934989857,
+    934989859,
+    249494171,
+    379054823,
+    379054824,
+    249494813,
+    681143883,
+    681143874
+  ],
+  "approachGapsM": [
+    5.66,
+    1.01
+  ],
+  "introProposal": "浜松市街に近い佐鳴湖を一周する、約5.90kmの参考コースです。湖面を望む芝生広場や木立のそばを通り、北岸はふれあい橋・であい橋を渡ります。土の園路や木道もあるため、雨上がりや段差では足元に注意し、散歩や野鳥観察をする人を優先して進みます。",
+  "warningsProposal": [
+    {
+      "title": "木道や橋、段差では足元に注意してください",
+      "body": "北東岸には木道と短い階段、北岸には歩行者用の橋があります。濡れた路面や狭い区間では速度を落とし、歩行者を優先してください。"
+    },
+    {
+      "title": "公式案内と現地の規制を優先してください",
+      "body": "掲載ルートは公式の約6km周回を参考にした約5.90kmの経路です。出入口の道路横断や工事による通行規制を出発前に確認してください。"
+    }
+  ],
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem/14/14458/6505.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem/14/14458/6506.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14458/6505.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14458/6506.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "visualEvidence": {
+    "pano": "gHec8vo_S9GOx5eGA0OPTw",
+    "registeredLat": 34.7194437,
+    "registeredLng": 137.6982394,
+    "captured": "2015-05",
+    "sourceUrl": "https://google.com/maps/@34.7194437,137.6982394,11a,90y,315h,90t/data=!3m7!1e1!3m5!1sgHec8vo_S9GOx5eGA0OPTw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DgHec8vo_S9GOx5eGA0OPTw%26yaw%3D315!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "公式・OSMのふれあい橋上と一致。平らな歩行者橋面、茶色欄干、左右の水路とヨシ、橋先の湖岸園路を目視。"
+  },
+  "elevationGaps": [
+    {
+      "wayId": 565103963,
+      "startIndex": 304,
+      "endIndex": 323,
+      "pointCount": 20,
+      "reason": "橋面・木道と接続段差の標高未測量。DEMは水面/地面の値のため欠損扱い。"
+    },
+    {
+      "wayId": 565103965,
+      "startIndex": 323,
+      "endIndex": 324,
+      "pointCount": 2,
+      "reason": "橋面・木道と接続段差の標高未測量。DEMは水面/地面の値のため欠損扱い。"
+    },
+    {
+      "wayId": 1372600502,
+      "startIndex": 352,
+      "endIndex": 355,
+      "pointCount": 4,
+      "reason": "橋面・木道と接続段差の標高未測量。DEMは水面/地面の値のため欠損扱い。"
+    },
+    {
+      "wayId": 934989857,
+      "startIndex": 374,
+      "endIndex": 376,
+      "pointCount": 3,
+      "reason": "橋面・木道と接続段差の標高未測量。DEMは水面/地面の値のため欠損扱い。"
+    }
+  ],
+  "caution": "水面上の木道・ふれあい橋・であい橋と木道接続段差はele:null。標高グラフは空白とし、獲得標高は表示しない。その他の地上園路はGSI値を維持。"
+}

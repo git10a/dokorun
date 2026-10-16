@@ -1,0 +1,51 @@
+{
+  "slug": "sanno-park-fukuoka",
+  "reviewedAt": "2026-10-16",
+  "status": "route-reconstruction-ready",
+  "routeFile": "/tmp/spot-route-repair/sanno-route.json",
+  "distanceM": 899.0,
+  "pointCount": 132,
+  "start": {
+    "lat": 33.5815637,
+    "lng": 130.4317062,
+    "distanceM": 0,
+    "wayId": "1161555139",
+    "ele": 5.49
+  },
+  "routeDescription": "南芝生沿いの短いループから東側主園路を北へ往復、復路に中央の小周回を使用。神社境内・車道・野球場内は通らない。北西の園内出口で折り返し。",
+  "sources": [
+    "https://yokanavi.com/features/74419",
+    "https://www.midorimachi.jp/park/map.php?code=204001",
+    "https://www.openstreetmap.org/way/1158626957",
+    "https://www.google.com/maps/place/山王公園/@33.5827583,130.4320542,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIDO3JC3SA!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FANWiy9RU6hYmPVcVEkKtowB0WFsjZp3nhEJAY8RoQ1hiQMm5r9qE22RqV2RHyUw6nAgDdPmvvSskqA0tmlYrWzRV7_YTgYJArlLOSM5GIrSVnJjZHLCUV-IKfPbpO1vfyaA1FPP3VZQ%3Dw397-h298-k-no!7i4032!8i3024"
+  ],
+  "onSiteMap": "博多区役所名義 山王公園さくら案内、Sammy Imma写真2022年6月。球場、芝生広場、さくらの丘、北側森と自由広場の相対配置を確認。",
+  "visualChecks": [
+    {
+      "lat": 33.5814884,
+      "lng": 130.4321243,
+      "pano": "CIHM0ogKEICAgIDc893C7gE",
+      "contributor": "potaro67",
+      "captured": "2017-04",
+      "heading": 45,
+      "observed": "南側芝生の右に赤茶色の幅約3m園路、右は樹木・ベンチ・公園外道路、左に芝生と低い木立。candidate頂点33.5815116,130.432105から約3m。"
+    },
+    {
+      "lat": 33.5834903,
+      "lng": 130.4325021,
+      "pano": "CIHM0ogKEICAgICEle7sNQ",
+      "contributor": "potaro67",
+      "captured": "2017-04",
+      "heading": 330,
+      "observed": "北側主園路は右側赤茶舗装と左側灰色舗装が並び、右にベンチと柵の下の広場、左に低く盛り上がる木立。candidate360.68m点33.583543,130.4324479から約7.7m。"
+    }
+  ],
+  "suggestedIntro": "博多区の山王公園で、南側の芝生広場から北側の木立に沿う園路を往復し、中央の小さな周回をつなぐ約0.9kmの参考ルートです。芝生や桜の木々を眺めながら進め、散歩にも距離を区切った軽いジョギングにも利用できます。公園公式の500m・1kmコースをそのまま再現した経路ではありません。来園者や遊具の近くでは歩き、狭い区間では道を譲ってください。",
+  "suggestedWarning": "掲載地図は公園内の歩行者用の道をつないだ参考ルートです。公式ジョギングコースの距離表示に従う場合は現地の案内板を確認してください。桜の時期や遊具周辺は混雑するため歩行者を優先し、北側の出入口では道路へ出ず園内で折り返してください。",
+  "limitations": [
+    "公式500m/1kmルートの完全再現ではなく確認できる園内歩行者道をつないだ899m参考往復。",
+    "全区間踏査ではない。途中の小周回や木立内で路面・段差・混雑があれば歩行。",
+    "OSMの元頂点を維持し15m以下にXY直線分割。標高は地形DEM参考値。",
+    "公式協会の園内マップ画像は未掲載、市現況PDFは404。Google Mapsで博多区役所名義の現地さくら案内板（Sammy Imma、撮影2022年6月）を目視。"
+  ]
+}

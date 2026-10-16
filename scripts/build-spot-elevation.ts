@@ -29,7 +29,7 @@ for (const file of readdirSync(resolve("data/gpx"))
   if (points.length < 2) throw new Error(`${slug}: missing course`);
   const guidePath = resolve("public/course-guides", `${slug}.json`);
   const guide = existsSync(guidePath)
-    ? (JSON.parse(readFileSync(guidePath, "utf8")) as { distanceM: number; startPoints: { routeMode: string }[] })
+    ? (JSON.parse(readFileSync(guidePath, "utf8")) as { distanceM: number; startPoints: { routeMode: string }[]; elevationGapNotice?: string })
     : null;
   // Match build-course-guide exactly so each start and scene keeps its distance axis.
   if (guide?.startPoints.some((start) => start.routeMode === "loop")) {
@@ -38,7 +38,7 @@ for (const file of readdirSync(resolve("data/gpx"))
     if (gap > 5) points.push({ ...points[0] });
   }
   const profile = raceElevationFromPoints(points);
-  const gapNotice = routeReviews[slug]?.correction?.elevationGapNotice;
+  const gapNotice = routeReviews[slug]?.correction?.elevationGapNotice ?? guide?.elevationGapNotice;
   if (gapNotice) profile.elevationGapNotice = gapNotice;
   if (routeReviews[slug]?.status === "route-mismatch") profile.routeReviewRequired = true;
   if (guide && Math.abs(profile.points.at(-1)!.distanceM - guide.distanceM) > 1)

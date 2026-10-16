@@ -2,8 +2,12 @@
   "slug": "suizenji-ezuko-park",
   "heroCheckpointId": "section-1",
   "checkpointsTitle": "コースの雰囲気",
-  "intro": "熊本市街地に近い江津湖を生かした大型公園で、公式に下江津湖3.8km、上江津湖・下江津湖7.3kmの公認周遊コースが案内されています。スタート／ゴールは広木地区サービスセンターと明記されており、周回系スポットとしてデータ化しやすい構造です。駐車場5か所やアクセスも公式で確認でき、水辺景観が明快な地方都市型ランニングスポットとして掲載優先度が高い候補です。",
+  "intro": "広木地区のサービスセンター付近から下江津湖を一周する、約3.89kmの参考ルートです。湖畔の園路や西岸の小道をつなぎ、水面や季節の草木を眺めながら走れます。公式には下江津湖3.8kmと上下江津湖7.3kmの周遊コースが案内されており、掲載ルートは下江津湖を回ります。",
   "warnings": [
+    {
+      "title": "歩行者用の園路をご利用ください",
+      "body": "歩行者用と自転車用に分かれている区間では歩行者用の園路を通ってください。公園外の道路や横断箇所では車両に注意し、イベント・管理作業時の通行規制に従ってください。"
+    },
     {
       "title": "一般利用者と交通ルールを優先してください",
       "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
@@ -34,7 +38,7 @@
       "routeDistanceM": 0,
       "routeLat": 32.768064,
       "routeLng": 130.757235,
-      "elevationM": 2,
+      "elevationM": 5.3,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
@@ -61,7 +65,7 @@
       "routeDistanceM": 775,
       "routeLat": 32.773229,
       "routeLng": 130.752218,
-      "elevationM": 8.6,
+      "elevationM": 6.4,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 3113,
@@ -88,7 +92,7 @@
       "routeDistanceM": 1551,
       "routeLat": 32.773376,
       "routeLng": 130.745267,
-      "elevationM": 5,
+      "elevationM": null,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 2337,
@@ -121,7 +125,7 @@
       "routeDistanceM": 0,
       "routeLat": 32.768064,
       "routeLng": 130.757235,
-      "elevationM": 2,
+      "elevationM": 5.3,
       "snapGapM": 0
     },
     {
@@ -144,7 +148,7 @@
       "routeDistanceM": 775,
       "routeLat": 32.773229,
       "routeLng": 130.752218,
-      "elevationM": 8.6,
+      "elevationM": 6.4,
       "snapGapM": 0
     },
     {
@@ -167,7 +171,7 @@
       "routeDistanceM": 1551,
       "routeLat": 32.773376,
       "routeLng": 130.745267,
-      "elevationM": 5,
+      "elevationM": null,
       "snapGapM": 0
     },
     {
@@ -190,7 +194,7 @@
       "routeDistanceM": 2330,
       "routeLat": 32.76999,
       "routeLng": 130.749286,
-      "elevationM": 8.2,
+      "elevationM": 6,
       "snapGapM": 0
     },
     {
@@ -213,177 +217,19 @@
       "routeDistanceM": 3107,
       "routeLat": 32.764573,
       "routeLng": 130.75337,
-      "elevationM": 7.6,
+      "elevationM": null,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
     "stations": "HeartRails Express",
     "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "automated_review_passed",
+    "elevation": "国土地理院の標高タイルを加工（橋面未確認区間は欠損）",
+    "elevationReviewedAt": "2026-10-16"
   },
+  "elevationGapNotice": "橋や湖畔の桟道など、路面の高さを確認できない区間は標高を空白にしています。全区間の獲得標高は表示していません。",
   "distanceM": 3888,
-  "elevationGainM": 124,
-  "elevationProfile": [
-    {
-      "distanceM": 0,
-      "elevationM": 2
-    },
-    {
-      "distanceM": 100,
-      "elevationM": -0.9
-    },
-    {
-      "distanceM": 199,
-      "elevationM": -3.6
-    },
-    {
-      "distanceM": 299,
-      "elevationM": -3.2
-    },
-    {
-      "distanceM": 399,
-      "elevationM": 0.7
-    },
-    {
-      "distanceM": 498,
-      "elevationM": 7
-    },
-    {
-      "distanceM": 598,
-      "elevationM": 9.6
-    },
-    {
-      "distanceM": 698,
-      "elevationM": 11.3
-    },
-    {
-      "distanceM": 797,
-      "elevationM": 6.9
-    },
-    {
-      "distanceM": 897,
-      "elevationM": -1.4
-    },
-    {
-      "distanceM": 997,
-      "elevationM": 6.5
-    },
-    {
-      "distanceM": 1097,
-      "elevationM": 5.1
-    },
-    {
-      "distanceM": 1196,
-      "elevationM": 7.1
-    },
-    {
-      "distanceM": 1296,
-      "elevationM": 6.9
-    },
-    {
-      "distanceM": 1396,
-      "elevationM": 10
-    },
-    {
-      "distanceM": 1495,
-      "elevationM": 5.7
-    },
-    {
-      "distanceM": 1595,
-      "elevationM": 6
-    },
-    {
-      "distanceM": 1695,
-      "elevationM": 13.2
-    },
-    {
-      "distanceM": 1794,
-      "elevationM": 13.2
-    },
-    {
-      "distanceM": 1894,
-      "elevationM": -4.5
-    },
-    {
-      "distanceM": 1994,
-      "elevationM": -6.8
-    },
-    {
-      "distanceM": 2093,
-      "elevationM": 8.1
-    },
-    {
-      "distanceM": 2193,
-      "elevationM": 13.5
-    },
-    {
-      "distanceM": 2293,
-      "elevationM": 9.8
-    },
-    {
-      "distanceM": 2392,
-      "elevationM": 3.1
-    },
-    {
-      "distanceM": 2492,
-      "elevationM": 7.5
-    },
-    {
-      "distanceM": 2592,
-      "elevationM": 10
-    },
-    {
-      "distanceM": 2691,
-      "elevationM": 3.4
-    },
-    {
-      "distanceM": 2791,
-      "elevationM": 1.1
-    },
-    {
-      "distanceM": 2891,
-      "elevationM": -3.4
-    },
-    {
-      "distanceM": 2990,
-      "elevationM": -0.2
-    },
-    {
-      "distanceM": 3090,
-      "elevationM": 8.6
-    },
-    {
-      "distanceM": 3190,
-      "elevationM": -4.2
-    },
-    {
-      "distanceM": 3290,
-      "elevationM": -10.2
-    },
-    {
-      "distanceM": 3389,
-      "elevationM": -1.9
-    },
-    {
-      "distanceM": 3489,
-      "elevationM": 13.4
-    },
-    {
-      "distanceM": 3589,
-      "elevationM": -0.9
-    },
-    {
-      "distanceM": 3688,
-      "elevationM": -8.6
-    },
-    {
-      "distanceM": 3788,
-      "elevationM": -4.8
-    },
-    {
-      "distanceM": 3888,
-      "elevationM": 2
-    }
-  ]
+  "elevationGainM": null,
+  "elevationProfile": []
 }

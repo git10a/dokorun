@@ -313,5 +313,185 @@
     },
     "observed": "近江大橋の車道から西を向く写真。橋に歩道はあるが開始点は公園ではなく湖上。全長4409.82mに対し紹介は公園から約5km。",
     "action": "開始点/紹介文の整合を親へ依頼。後続の湖岸画像は確認の上進める。"
+  },
+  {
+    "slug": "sanaruko-park",
+    "status": "northern-route-detour-needs-review",
+    "observedAt": "2026-10-16",
+    "reason": "3938.38m点は湖岸公園園路でなく住宅街。公式現行図では北岸のであい橋・ふれあい橋をつなぐ湖岸園路を示す。南西392mは公園と一致。北側住宅街を画像化しない。",
+    "coursePoint": {
+      "distanceM": 3938.38,
+      "lat": 34.721224,
+      "lng": 137.696045
+    },
+    "pano": {
+      "id": "YPiKBFi49NFAdeJYKkwfuQ",
+      "lat": 34.7212017,
+      "lng": 137.6960715,
+      "captured": "2025-11"
+    },
+    "sourceUrl": "https://google.com/maps/@34.7212017,137.6960715,3a,90y,240h,90t/data=!3m7!1e1!3m5!1sYPiKBFi49NFAdeJYKkwfuQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DYPiKBFi49NFAdeJYKkwfuQ%26yaw%3D240!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "officialUrl": "https://sanaruko.hama-park.jp/facilities",
+    "sourceImage": "/tmp/dokorun-batch1-sanaruko-north-residential-source.png"
+  },
+  {
+    "slug": "azuma-sports-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 3080.29,
+    "startPoint": {
+      "lat": 37.723253,
+      "lng": 140.359943
+    },
+    "introProposal": "福島市西部にある、広い芝生と並木に囲まれた総合運動公園です。掲載コースは約3.08kmの参考周回ルート。木立や園路沿いの景色を楽しみながら走れ、周回を重ねて距離を調整できます。道路沿いの区間では歩道を利用し、散歩をする人や施設利用者を優先してください。",
+    "basis": "現行profileの3080.29mと閉じた起終点、受理済み2画像の並木/道路沿い歩道を反映。公式3/5kmコースとの同一性を追加断定しない。"
+  },
+  {
+    "slug": "kashiwanoha-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 2033.72,
+    "startPoint": {
+      "lat": 35.897462,
+      "lng": 139.939283
+    },
+    "introProposal": "柏市にある、並木や芝生、池の景色を楽しめる公園です。掲載コースは園路をつなぐ約2.03kmの参考周回ルート。短いジョギングから周回を重ねる練習まで、走る距離を調整できます。園路から少し入るとボート池もあり、休憩や散歩を合わせて楽しめます。",
+    "basis": "現行profileの2033.72mと閉じた起終点、東側入口とコース内側のボート池の確認済み画像を反映。"
+  },
+  {
+    "slug": "shiroyama-park-horinouchi",
+    "status": "route-replacement-proposed",
+    "reviewedAt": "2026-10-16",
+    "issue": "旧5688.38mは清水町、東雲神社東側道路、松山市駅南西、味酒町の市街地を回り、堀之内や城山へ入らない。紹介の堀之内平地から松山城山腹、後半の城へ向かう上りと不一致。",
+    "evidence": [
+      {
+        "courseDistanceM": 1307.42,
+        "courseLat": 33.845336,
+        "courseLng": 132.772617,
+        "sourceUrl": "https://google.com/maps/@33.8453475,132.7725945,34a,80y,180h,90t/data=!3m7!1e1!3m5!1slk2bq1w0zOqxoDdPKhsasA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dlk2bq1w0zOqxoDdPKhsasA%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "captured": "2025-02",
+        "observed": "東雲神社東側の石垣沿いの一般道。"
+      },
+      {
+        "courseDistanceM": 3478.44,
+        "courseLat": 33.835288,
+        "courseLng": 132.759022,
+        "sourceUrl": "https://google.com/maps/@33.8352324,132.7590501,21a,80y,90t/data=!3m7!1e1!3m5!1sUSBgwYBxrp3YVnNFNdtaFA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DUSBgwYBxrp3YVnNFNdtaFA%26yaw%3D0!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "captured": "2025-06",
+        "observed": "四電事業所前の市街地歩道。"
+      }
+    ]
+  },
+  {
+    "slug": "shimanto-sada-chinkabashi",
+    "status": "bridge-elevation-and-turnaround-correction",
+    "reviewedAt": "2026-10-16",
+    "bridgeWay": 134616300,
+    "bridgeEnds": [
+      {
+        "lat": 33.0151792,
+        "lng": 132.8839528
+      },
+      {
+        "lat": 33.0155319,
+        "lng": 132.8866285
+      }
+    ],
+    "oldPointIndexRangeInclusive": [
+      251,
+      254
+    ],
+    "oldDistanceRangeM": [
+      8335.06,
+      8712.76
+    ],
+    "issue": "橋上標高は地形DEMが橋面の高さを保証しない。旧経路は西端→橋長約75%→中央→西端で、対岸へ渡り切らない。東端まで渡って同じ道を戻す修正案を後続で作成。",
+    "sourceUrl": "https://www.openstreetmap.org/way/134616300"
+  },
+  {
+    "slug": "showa-kinen-park",
+    "status": "superseded-by-route-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 5053.72,
+    "introProposal": "広い園内の木立や広場、水辺を巡って走れる国営公園です。掲載データは約5.05kmの参考周回ルート。歩行者や散策中の方を優先し、園内の案内に従って利用してください。開園時間や入園料、イベントによる通行制限は出発前に確認しましょう。",
+    "basis": "現行掲載profileは5053.72m。公式2026年ウォーキング図は水2.9km・広場3.9km・森5.6km。一般向けの掲載経路を陸連公認と裏付ける一次資料は未確認。2026年1月24日大会の主催者は5km特設コースを日本陸連公認ではないと明記。",
+    "sources": [
+      "https://www.showakinen-koen.jp/wp-content/uploads/2026/02/walking.pdf",
+      "https://www.goodsports.jp/gs-marathon/ichiran/0124showakinen/2026/"
+    ],
+    "proposalPath": "/Users/hirachan/.codex/worktrees/seo-release/hashiriniikitai/data/spot-experience/batch-1/showa-route-proposal.json"
+  },
+  {
+    "slug": "suizenji-ezuko-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "広木地区のサービスセンター付近から下江津湖を一周する、約3.89kmの参考ルートです。湖畔の園路や西岸の小道をつなぎ、水面や季節の草木を眺めながら走れます。公式には下江津湖3.8kmと上下江津湖7.3kmの周遊コースが案内されており、掲載ルートは下江津湖を回ります。",
+    "warningsProposal": [
+      {
+        "title": "歩行者用の園路をご利用ください",
+        "body": "歩行者用と自転車用に分かれている区間では歩行者用の園路を通ってください。公園外の道路や横断箇所では車両に注意し、イベント・管理作業時の通行規制に従ってください。"
+      }
+    ],
+    "sources": [
+      "https://www.ezuko-park.com/walking-park",
+      "https://www.ezuko-park.com/wp-content/uploads/2018/11/3.8MAP.jpg"
+    ],
+    "review": "公式下江津湖3.8km周回図と掲載約3887.65mの湖畔周回、東岸と西岸の実景を照合。内部評価の掲載優先度/候補は削除。公認は日本ノルディックフィットネス協会のコースのため、陸連公認と誤読させないよう紹介では公認を省略。",
+    "elevationObservation": "現profileのsourceはgpxで、平坦な湖畔に負値を含む-3.8m〜17.8m等が点ごとに変動。画像確認で大きな坂は見られず、実測保証のない元GPX標高なのでGSI再取得または未レビューの扱いが適切。経路全体の位置ずれはこの時点で認めない。"
+  },
+  {
+    "slug": "takada-castle-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "高田城址公園と本町通り周辺の市街地をつなぐ、約4.28kmの参考周回ルートです。公園では西堀沿いの松並木や三重櫓付近を通り、後半は街なかの道を走ります。園内だけを一周するコースではなく、交差点や一般道も含みます。観桜会の時期は混雑状況に合わせて歩行者を優先してください。",
+    "review": "現GPX121点4,276.41mには公園南側から本町通り・市街地への区間がある。公園外周のみとの旧紹介は一致しないため、経路を保持する説明修正案。西堀の実景は2026-04、南側一般道は2026-04、西城町の一般道は2026-05をCUAで確認。",
+    "sources": [
+      "https://www.city.joetsu.niigata.jp/soshiki/toshiseibi/takada-castle-site-park.html"
+    ]
+  },
+  {
+    "slug": "tamagawa-josui-ryokudo",
+    "status": "route-title-mismatch-observed",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "新宿駅付近から明大前・久我山・三鷹台を経て吉祥寺駅付近へ向かう、約14.69kmの参考片道ルートです。玉川上水ゆかりの緑地の近くも通りますが、甲州街道沿いの歩道や人見街道、住宅街など一般道の区間が多い街ランです。玉川上水緑道だけをつないだコースではありません。交差点では信号を守り、歩行者と自転車を優先してください。",
+    "review": "現profile541点14694.67m。2.80km35.676365,139.674360は甲州街道の歩道で旧玉川上水緑道は南の別道（Google2023-08 OzkiCvg69uW74fXTYkD6DQ）。10.69km35.688109,139.605047は人見街道（Google2023-09 g-2Q9swX9bBKWVDwiY_UDQ）。12.46km35.692102,139.588365は三鷹台駅南オダキューOX前（Google2024-11 UogIVrs4o6RaO7tlyRESjA）。いずれも実景目視。候補写真は未生成。",
+    "sources": [
+      "https://musashinoparks.com/kouen/about-tamagawa/",
+      "https://www.city.suginami.tokyo.jp/s100/shisetsu/14603.html"
+    ]
+  },
+  {
+    "slug": "tamagawa-josui-ryokudo",
+    "status": "public-copy-final-proposal",
+    "reviewedAt": "2026-10-16",
+    "spotNameProposal": "新宿〜吉祥寺の街ラン",
+    "courseNameProposal": "新宿〜吉祥寺 約14.7km 参考片道ルート",
+    "introProposal": "新宿駅付近から明大前・久我山・三鷹台を経て、吉祥寺駅付近へ向かう約14.7kmの参考片道ルートです。甲州街道沿いの歩道や住宅街をつなぎ、終盤は井の頭公園沿いの木々を眺めながら進みます。一般道を多く含むため、交差点では信号を守り、歩行者を優先してください。玉川上水緑道を連続して走るコースとは異なります。",
+    "warningsProposal": [
+      {
+        "title": "一般道と交差点を含みます",
+        "body": "甲州街道沿いの歩道、人見街道、住宅街を含みます。車や自転車に注意し、狭い場所や交差点では減速・歩行してください。全線が公園の専用走路ではありません。"
+      },
+      {
+        "title": "片道コースです",
+        "body": "掲載距離は約14.7kmです。新宿側・吉祥寺側からのアクセスと帰りの交通手段を出発前に確認してください。"
+      }
+    ],
+    "review": "親より名称を街ランへ変更して現GPX維持の方針を受領。公園・旧水路を通ると未確定な部分は文章に足さない。2画像は実際の幡ヶ谷甲州街道歩道と井の頭公園沿いの一般道。",
+    "sources": [
+      "https://musashinoparks.com/kouen/about-tamagawa/",
+      "https://www.city.suginami.tokyo.jp/s100/shisetsu/14603.html"
+    ]
+  },
+  {
+    "slug": "tochigi-prefectural-sports-park",
+    "status": "route-mismatch-images-held",
+    "reviewedAt": "2026-10-16",
+    "review": "現profile77点2687.12m起点36.531894,139.863184、北端36.5319。577.81m36.530506,139.867154は江曽島本町住宅街。Google2024-06 pano77ebs_NumtSVaH_zYSl17Q（36.5304694,139.8671163）の戸建住宅間の道をCUA目視。栃木県総合運動公園の公式配置図（西川田）とは別地点。候補は画像生成しない。",
+    "sourceUrl": "https://google.com/maps/@36.5304694,139.8671163,105a,80y,210h,90t/data=!3m7!1e1!3m5!1s77ebs_NumtSVaH_zYSl17Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D77ebs_NumtSVaH_zYSl17Q%26yaw%3D210!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "sources": [
+      "https://www.park-tochigi.com/sougou/",
+      "https://www.park-tochigi.com/tochinoki/wp/wp-content/uploads/2023/04/TFL-P2023.pdf"
+    ]
   }
 ]

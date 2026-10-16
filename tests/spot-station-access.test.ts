@@ -11,6 +11,12 @@ describe("station access after spot route corrections", () => {
       expect((station?.nearbySpots.length ?? 0) + (station?.oneStationSpots.length ?? 0), slug).toBeGreaterThan(0);
     }
   });
+  it.each(["suzuka", "suzukashi", "yanagi"])("keeps %s with the corrected distant sports-park start", (slug) => {
+    const station = stations.find((item) => item.slug === slug);
+    expect(station).toBeDefined();
+    expect(station!.nearbySpots[0].slug).toBe("sports-garden-suzuka");
+    expect(station!.nearbySpots[0].distanceM).toBeGreaterThan(5_000);
+  });
   it.each(["kozan", "tottoridaigakumae"])("keeps %s access truthful after the lake start moves", (slug) => {
     const station = stations.find((item) => item.slug === slug);
     const spot = station?.nearbySpots.find((item) => item.slug === "koyamaike-park");

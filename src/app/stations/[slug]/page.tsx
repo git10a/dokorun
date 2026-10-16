@@ -81,7 +81,7 @@ export default async function StationPage({ params }: { params: Params }) {
             </Link>
           ))}
         </div>
-        <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm text-sub">ジョグはキロ6分で計算しています。</p>
+        <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm text-sub">徒歩・ジョグの時間は駅と起点の直線距離からの目安です。実際の道順では距離が長くなります。ジョグはキロ6分で計算しています。</p>
       </header>
 
       {editorial && recommendations.length > 0 && (
@@ -117,8 +117,17 @@ export default async function StationPage({ params }: { params: Params }) {
               return spot ? (
                 <div key={nearby.slug} className="space-y-2">
                   <p className="text-sm font-bold text-accent">
-                    駅から徒歩{nearby.walkMinutes}分{" "}
-                    <span className="ml-2 text-sub">ジョグ{stationJogMinutes(nearby.distanceM)}分</span>
+                    {nearby.distanceM > 5_000 ? (
+                      <>
+                        駅から直線約{(nearby.distanceM / 1_000).toFixed(1)}km
+                        <span className="ml-2 text-sub">バスなどのアクセスをご確認ください</span>
+                      </>
+                    ) : (
+                      <>
+                        駅から徒歩{nearby.walkMinutes}分{" "}
+                        <span className="ml-2 text-sub">ジョグ{stationJogMinutes(nearby.distanceM)}分</span>
+                      </>
+                    )}
                   </p>
                   <SpotCard spot={spot} />
                 </div>

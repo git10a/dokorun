@@ -388,13 +388,12 @@ async function main() {
     ...((await fileExists(publishedSlugsPath)) ? JSON.parse(await readFile(publishedSlugsPath, "utf8")) : []),
   ]);
   // A route correction can move the start beyond the normal 2 km catchment.
-  // Keep an existing page useful with its closest published course (up to 5 km),
+  // Keep an existing page useful with its closest published course,
   // recalculating the distance instead of preserving stale access information.
   for (const group of groups.values()) {
     if (!publishedStationSlugs.has(group.slug) || group.nearbySpots.length || group.oneStationSpots.length) continue;
     const closest = spots
       .map((spot) => ({ slug: spot.slug, distanceM: haversineM(group.lat, group.lng, Number(spot.lat), Number(spot.lng)) }))
-      .filter((spot) => spot.distanceM <= 5_000)
       .sort((a, b) => a.distanceM - b.distanceM)[0];
     if (closest) group.nearbySpots.push({ ...closest, walkMinutes: Math.ceil(closest.distanceM / 80) });
   }

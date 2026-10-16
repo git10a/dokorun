@@ -1,0 +1,73 @@
+{
+  "slug": "sports-garden-suzuka",
+  "reviewedAt": "2026-10-16",
+  "status": "route-replacement-required",
+  "routeFile": "/tmp/spot-route-repair/suzuka-route.json",
+  "preview": "/tmp/spot-route-repair/suzuka-candidate.png",
+  "distanceM": 2263.47,
+  "pointCount": 261,
+  "oldIssue": "旧約2.9kmは施設から約9km離れた国道23号沿いの田園一般道だった。",
+  "observations": [
+    {
+      "lat": 34.8834928,
+      "lng": 136.5977787,
+      "pano": "8j885HVp5wrneGk2VSkZlw",
+      "captured": "2026-03",
+      "note": "旧584m点に対応。国道23号車道と田畑。"
+    },
+    {
+      "lat": 34.8357304,
+      "lng": 136.5158163,
+      "pano": "o-npas1kbf0YIBr8Da0IlQ",
+      "captured": "2026-02",
+      "note": "正しい施設内の中央交差部。横断歩道、道路沿い舗装路、右の水泳場屋根と左グラウンド側を確認。"
+    },
+    {
+      "lat": 34.8379744,
+      "lng": 136.5156755,
+      "pano": "ZPMUSUAUKaw5mO2NeosaiQ",
+      "captured": "2026-02",
+      "note": "水泳場北側外周。白線外の狭い路肩、両側刈込み生垣。縁石で分離された歩道はない。"
+    },
+    {
+      "lat": 34.8334888,
+      "lng": 136.5151309,
+      "pano": "CIHM0ogKEICAgID4p57wEQ",
+      "captured": "2017-12",
+      "note": "第4グラウンド脇ユーザー360は競技面側のカメラであり、園路の画像としては不採用。"
+    },
+    {
+      "lat": 34.836585,
+      "lng": 136.5136084,
+      "pano": "CIHM0ogKEICAgID4p47D4AE",
+      "captured": "2017-12",
+      "note": "起点候補から案内された温浴施設中庭の360。経路外なので不採用。"
+    }
+  ],
+  "config": {
+    "slug": "sports-garden-suzuka",
+    "name": "三重交通G スポーツの杜 鈴鹿",
+    "surface": "paved",
+    "distanceKm": 2.3,
+    "intro": "体育館西側を起点に、メイングラウンドの外側と第3・第4グラウンド脇を通り、水泳場・テニス場周辺を回る約2.3kmの参考ルートです。公式ウォーキングマップのAコースを参考に、施設の間の園路や外周道路をつないでいます。グラウンドや木々を眺めながら歩いたり、空いている園路で軽いジョギングを楽しんだりできます。",
+    "notice": "水泳場北側などには車が通る道路の路肩を使う区間があります。道路横断、駐車場の出入口、施設前では歩き、車と歩行者の動きを確認してください。第3駐車場では2026年9月8日から車両の通行規制が実施されています。大会開催時の誘導や通行規制を優先し、休業日は駐車場を利用できません。公式Aコースの距離を実測で再現したデータではありません。",
+    "officialUrl": "https://www.garden.suzuka.mie.jp/facility/walking"
+  },
+  "sources": [
+    "https://www.garden.suzuka.mie.jp/facility/walking",
+    "https://www.garden.suzuka.mie.jp/wp/wp-content/uploads/walkingmap.pdf",
+    "https://www.garden.suzuka.mie.jp/topics/25410",
+    "https://www.garden.suzuka.mie.jp/wp/wp-content/uploads/63779ebc4998be5a75b6d1a6bad5f379.pdf",
+    "https://maps.gsi.go.jp/#18/34.8359/136.5157/&base=seamlessphoto"
+  ],
+  "limitations": [
+    "旧経路は約9km離れた国道23号周辺で、施設外だったため全体を置換。",
+    "OSMには施設内歩道がほぼ未登録。公式ウォーキング図とGSI航空写真の舗装路を手動照合した参考線。数m〜10m程度の位置の誤差を含む。",
+    "公式Aコースを参考にした約2.3kmで、距離合わせの反復なし。体育館北西への帰路など自然に重なる接続区間を含む。",
+    "テニス・サッカー競技面、建物内部を通らない。グラウンド西・南外周、東側広場、テニス場周囲の舗装された通路を使用。",
+    "北側道路は2026年2月Street Viewで白線外の路肩を確認。専用歩道ではなく車の往来がある。",
+    "第3駐車場の規制は車両一方通行/右折等の規制であり、公園閉鎖と解釈しない。現地の誘導を優先。",
+    "全区間現地踏査ではない。航空写真の撮影日は個々のモザイクについて未確定。",
+    "コントロール点間を10m以下にXY分割。DEMは実測路面高ではない。"
+  ]
+}
