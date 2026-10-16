@@ -27,7 +27,8 @@ describe("course guides", () => {
       expect(guide, slug).not.toBeNull();
       if (!guide) continue;
       expect(guide.startPoints.length, guide.slug).toBeGreaterThanOrEqual(1);
-      expect(guide.checkpoints.length, guide.slug).toBeGreaterThanOrEqual(5);
+      // Checkpoints describe actual landmarks or turnarounds; short loops need not invent five sections.
+      expect(guide.checkpoints.length, guide.slug).toBeGreaterThanOrEqual(2);
       expect(guide.elevationProfile.length, guide.slug).toBeGreaterThanOrEqual(2);
       expect(guide.warnings.length, guide.slug).toBeGreaterThanOrEqual(2);
       expect(

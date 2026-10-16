@@ -1,6 +1,6 @@
 {
   "21st-century-forest-park": {
-    "status": "route-mismatch",
+    "status": "corrected-reference-route",
     "observedAt": "2026-10-16",
     "reason": "登録GPXの2地点は住宅街の舗装路。園内の土路面という掲載説明と一致せず、21世紀の森と広場の正しいコースに照合する必要がある。",
     "officialSource": "https://www.city.matsudo.chiba.jp/shisetsu-guide/kouen_ryokuka/top/shisetuannnai/index.html",
@@ -23,10 +23,17 @@
         "captured": "2025-08",
         "observed": "住宅街の舗装路、コンクリート擁壁、白線、電柱。"
       }
-    ]
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/21st-century-forest-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
   },
   "aoba-no-mori-park": {
-    "status": "route-mismatch",
+    "status": "corrected-reference-route",
     "observedAt": "2026-10-16",
     "reason": "登録GPXの北側地点は青葉の森公園内ではなく、千葉テレビ周辺の公道を通る。施設の取り違えを公式地図と照合する必要がある。",
     "officialSource": "https://www.cue-net.or.jp/kouen/aoba/access/index.html",
@@ -40,6 +47,57 @@
         "captured": "2025-08",
         "observed": "公道の向かいに低層の事業所、駐車場、電柱。園内走路の景色ではない。"
       }
-    ]
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/aoba-no-mori-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "arakawa": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "荒川河川敷（赤羽）の説明は信号なしの川沿いだが、掲載GPXの20%地点は団地内車道、65%地点も豊島五丁目の信号付き一般道。2地点を実写で確認。画像生成は保留。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 2308.18,
+          "lat": 35.768026,
+          "lng": 139.735378
+        },
+        "pano": {
+          "id": "9gTLqAmMAgHjKVZzsadJGA",
+          "lat": 35.7679529,
+          "lng": 139.7353665,
+          "heading": 110,
+          "captured": "2018-05"
+        },
+        "observed": "団地の高層集合住宅の間の道路。歩道、車道、工事仮囲い。河川敷ではない。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 7448.31,
+          "lat": 35.763976,
+          "lng": 139.751347
+        },
+        "pano": {
+          "id": "G6oVSEcxlMulVOYM1YM-NQ",
+          "lat": 35.7639369,
+          "lng": 139.7514143,
+          "heading": 90,
+          "captured": "2025-11"
+        },
+        "observed": "豊島五丁目団地付近の信号付き一般道。団地、レストラン、横断歩道と車線。河川敷ではない。"
+      }
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/arakawa.json",
+      "elevationSource": "gsi",
+      "method": "First 5 km of the mapped upstream riverbank route, reversed at a reference turning point; not a certified race course. Existing GSI terrain profile interpolated at original route nodes; not an official surveyed GPX."
+    }
   }
 }

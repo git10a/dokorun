@@ -74,11 +74,24 @@ describe("spot elevation and map share the selected start", () => {
       }
     }
   });
-  it("withholds ascent for the course whose recorded route differs from the park", () => {
-    const value = JSON.parse(
+  it("marks unresolved route mismatches and keeps corrected park routes in the right location", () => {
+    const reviews = JSON.parse(readFileSync("data/spot-experience/route-reviews.json", "utf8"));
+    for (const [slug, review] of Object.entries(reviews) as [string, { status: string }][]) {
+      const value = JSON.parse(readFileSync(`public/spot-elevation/${slug}.json`, "utf8")) as RaceElevation;
+      expect(Boolean(value.routeReviewRequired), slug).toBe(review.status === "route-mismatch");
+    }
+    const aoba = JSON.parse(readFileSync("public/spot-elevation/aoba-no-mori-park.json", "utf8")) as RaceElevation;
+    expect(aoba.source).toBe("gsi");
+    expect(aoba.points.every((p) => p.lat > 35.592 && p.lat < 35.6 && p.lng > 140.135 && p.lng < 140.145)).toBe(true);
+    expect(aoba.points.at(-1)!.distanceM).toBeGreaterThan(1900);
+    expect(aoba.points.at(-1)!.distanceM).toBeLessThan(2100);
+    const forest = JSON.parse(
       readFileSync("public/spot-elevation/21st-century-forest-park.json", "utf8"),
     ) as RaceElevation;
-    expect(value.routeReviewRequired).toBe(true);
+    expect(forest.source).toBe("gsi");
+    expect(forest.points.every((p) => p.lat > 35.801 && p.lat < 35.805 && p.lng > 139.94 && p.lng < 139.945)).toBe(
+      true,
+    );
   });
   it("credits terrain data and does not show race comparisons on spots", () => {
     const markup = renderToStaticMarkup(

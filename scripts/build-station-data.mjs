@@ -377,8 +377,19 @@ async function main() {
     );
   }
 
+  // Preserve published station URLs when a corrected spot location leaves one
+  // reachable course. New pages still require the existing content threshold.
+  const previousStationsPath = path.join(OUTPUT_DIR, "stations.json");
+  const publishedStationSlugs = new Set(
+    (await fileExists(previousStationsPath))
+      ? JSON.parse(await readFile(previousStationsPath, "utf8")).map((station) => station.slug)
+      : [],
+  );
   const pageGroups = [...groups.values()].filter(
-    (group) => group.nearbySpots.length >= 1 || group.oneStationSpots.length >= 2,
+    (group) =>
+      group.nearbySpots.length >= 1 ||
+      group.oneStationSpots.length >= 2 ||
+      (publishedStationSlugs.has(group.slug) && group.oneStationSpots.length >= 1),
   );
   const pageCodes = new Set(pageGroups.map((group) => group.groupCode));
   const stations = pageGroups

@@ -14,6 +14,7 @@ type Scene = {
   prompt: string;
   observed: string;
   generatedPath: string;
+  sourceUrl?: string;
   visualReview: string;
   reviewStatus: "accepted";
 };
@@ -26,6 +27,15 @@ async function main() {
     if (!/^[a-z0-9-]+$/.test(r.slug) || !/^[a-z0-9-]+$/.test(r.id)) throw new Error("Invalid scene id");
     if (r.reviewStatus !== "accepted" || !r.visualReview || !r.observed || !r.prompt || !r.pano?.captured)
       throw new Error(`${r.slug}/${r.id}: visual review required`);
+    if (r.sourceUrl) {
+      const source = new URL(r.sourceUrl);
+      if (
+        source.protocol !== "https:" ||
+        !["www.google.com", "www.google.co.jp"].includes(source.hostname) ||
+        !source.pathname.startsWith("/maps/")
+      )
+        throw new Error(`${r.slug}/${r.id}: expected a Google Maps panorama source URL`);
+    }
     if (!existsSync(r.generatedPath)) throw new Error(`Missing generated asset: ${r.generatedPath}`);
     const profile = JSON.parse(readFileSync(`public/spot-elevation/${r.slug}.json`, "utf8")) as RaceElevation;
     if (profile.routeReviewRequired) throw new Error(`${r.slug}: course needs review`);
@@ -48,7 +58,9 @@ async function main() {
       description: r.description,
       imageSrc,
       coursePoint: r.coursePoint,
-      referenceUrl: `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(r.pano.id)}&heading=${r.pano.heading}`,
+      referenceUrl:
+        r.sourceUrl ??
+        `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(r.pano.id)}&heading=${r.pano.heading}`,
     });
   }
   writeFileSync(path, JSON.stringify(catalog, null, 2) + "\n");

@@ -10,7 +10,7 @@ const backfill = JSON.parse(readFileSync(resolve("data/course-guides/elevation-b
 const terrainSlugs = new Set(backfill.entries.map((entry) => entry.slug));
 const routeReviews = JSON.parse(readFileSync(resolve("data/spot-experience/route-reviews.json"), "utf8")) as Record<
   string,
-  { status: string }
+  { status: string; correction?: { elevationSource?: string } }
 >;
 const out = resolve("public/spot-elevation");
 mkdirSync(out, { recursive: true });
@@ -36,7 +36,9 @@ for (const file of readdirSync(resolve("data/gpx"))
   if (routeReviews[slug]?.status === "route-mismatch") profile.routeReviewRequired = true;
   if (guide && Math.abs(profile.points.at(-1)!.distanceM - guide.distanceM) > 1)
     throw new Error(`${slug}: guide distance mismatch`);
-  if (terrainSlugs.has(slug))
+  if (routeReviews[slug]?.correction?.elevationSource === "gsi") {
+    profile.source = "gsi";
+  } else if (terrainSlugs.has(slug))
     profile.attribution = {
       label: "Open-Meteo 標高データを加工（CC BY 4.0）",
       url: "https://open-meteo.com/en/docs/elevation-api",
