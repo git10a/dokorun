@@ -2,34 +2,34 @@
   "slug": "yoro-daifukuyama",
   "heroCheckpointId": "section-1",
   "checkpointsTitle": "コースの雰囲気",
-  "intro": "小湊鉄道養老渓谷駅を起点に、林道女ヶ倉線で梅ヶ瀬渓谷入口を過ぎて大福山(約285m)まで登り、下山後は養老川沿いの温泉街と弘文洞跡方面を巡って駅へ戻る約17.9kmの周回。房総の深い森を縫う舗装林道は交通量が少なく、累積約630mでしっかり走り込める。駅と温泉街にトイレ・自販機、駅前に売店あり。梅ヶ瀬渓谷の沢沿い道は徒渉が多い登山道のため、本コースは林道経由で設計している。",
+  "intro": "大福山と養老渓谷周辺を結ぶ約17.9kmの参考周回です。現在、掲載ルートに林道朝生原線の通行止め区間が含まれるため、この周回は利用できません。地図・標高・景観画像は地域と過去のコースの参考情報として掲載しています。道路の規制解除と経路の再確認が済むまで、掲載ルートに沿った走行は控えてください。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "通行止めのため、この周回は現在利用できません",
+      "body": "林道朝生原線の通行止めに加え、周辺道路にも災害による規制があります。上総大久保駅側の市道7073号線も規制中のため、以前の迂回案内をそのまま利用しないでください。小湊鉄道は上総牛久〜上総中野間が運転見合わせ中です。掲載の地図・標高・画像は参考情報です。（2026年10月16日確認）",
+      "url": "https://www.city.ichihara.chiba.jp/article?articleId=6abf530424cd71056771749f",
+      "linkLabel": "市原市の交通・道路規制情報"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 小湊鉄道 養老渓谷駅 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "現在の道路規制を確認",
+      "body": "市の防災ポータルで通行止め箇所を確認できます。",
+      "url": "https://city-ichihara.my.site.com/K_PUB_VF_KakudaiMap",
+      "linkLabel": "市原市防災ポータルの道路規制地図"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
       "name": "養老渓谷駅側",
-      "badge": "電車でアクセス",
+      "badge": "現在は周回利用不可",
       "destinationLat": 35.266409,
       "destinationLng": 140.159382,
       "routeAnchorLat": 35.254604,
       "routeAnchorLng": 140.145535,
       "routeMode": "loop",
-      "accessText": "養老渓谷駅からコースまで約1820m",
+      "accessText": "2026年10月16日確認時点で、小湊鉄道は上総牛久〜上総中野間が運転見合わせ中です。養老渓谷駅まで通常どおり列車で行ける案内はしていません。道路にも災害による規制があり、交通機関と市の最新情報をご確認ください。",
       "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "firstSection": "通行止め解除と経路の再確認まで走行を控えてください。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
       "routeLat": 35.254604,
@@ -167,6 +167,12 @@
     "stations": "HeartRails Express",
     "photos": "Wikimedia Commons geotagged media",
     "status": "automated_review_passed"
+  },
+  "routeUnavailable": {
+    "title": "通行止めのため、この周回は現在利用できません",
+    "body": "林道朝生原線の通行止めに加え、周辺道路にも災害による規制があります。上総大久保駅側の市道7073号線も規制中のため、以前の迂回案内をそのまま利用しないでください。小湊鉄道は上総牛久〜上総中野間が運転見合わせ中です。掲載の地図・標高・画像は参考情報です。（2026年10月16日確認）",
+    "url": "https://www.city.ichihara.chiba.jp/article?articleId=6abf530424cd71056771749f",
+    "linkLabel": "市原市の交通・道路規制情報"
   },
   "distanceM": 17914,
   "elevationGainM": 630,

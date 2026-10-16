@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "updatedAt": "2026-10-17",
+  "originalAssignedSpots": 80,
+  "retainedSpots": 70,
+  "acceptedImages": 140,
+  "reassignedToParent": [
+    "kanagawa-pref-sports-center-athletic-field",
+    "sunpu-castle-park",
+    "toneri-park",
+    "tsurugajo-loop",
+    "tsutsujigaoka-park",
+    "ueno-onshi-park",
+    "wakayama-castle-park",
+    "yamanote-loop",
+    "yoyogi-park-trail",
+    "yurihama-kaigansen"
+  ],
+  "remainingSpots": 0,
+  "validation": {
+    "exactlyTwoImagesPerRetainedSpot": true,
+    "uniqueSlugAndImageIds": true,
+    "requiredSourceAndReviewFieldsPresent": true,
+    "generatedFilesExist": true,
+    "currentProfileDistanceAndPositionWithin25M": true,
+    "errors": []
+  },
+  "finalSpot": "yoro-daifukuyama",
+  "yoroAccess": "Historical views only. Existing loop currently unusable due to official road closures. Alternative9.7km proposal rejected; integrationAllowed=false.",
+  "closureEvidence": [
+    "yoro-route-proposal.json",
+    "route-observations.json"
+  ],
+  "sharedIntegration": "Parent handles catalog/import/deployment. No production claim from this report."
+}

@@ -147,6 +147,23 @@ export function LongCourseGuide({
 
   return (
     <div className="space-y-10">
+      {guide.routeUnavailable && (
+        <aside role="status" className="rounded-xl border border-danger/30 bg-cream p-4">
+          <p className="flex items-center gap-2 font-bold">
+            <AlertTriangle size={18} />
+            {guide.routeUnavailable.title}
+          </p>
+          <p className="mt-2 text-sm leading-6">{guide.routeUnavailable.body}</p>
+          <a
+            href={guide.routeUnavailable.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-sm font-bold text-accent underline"
+          >
+            {guide.routeUnavailable.linkLabel}
+          </a>
+        </aside>
+      )}
       <section id="overview" className="space-y-4 scroll-mt-28">
         <div className="grid grid-cols-2 border-y border-line sm:grid-cols-4">
           {[
@@ -327,13 +344,25 @@ export function LongCourseGuide({
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-paper/95 p-3 backdrop-blur">
         <div className="mx-auto flex w-full max-w-2xl gap-2">
-          <button
-            onClick={() => setSheetOpen(true)}
-            className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
-          >
-            <MapPin size={20} className="shrink-0" />
-            <span>{hasStartChoice ? "スタート地点を決める" : "アクセスを確認"}</span>
-          </button>
+          {guide.routeUnavailable ? (
+            <a
+              href={guide.routeUnavailable.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
+            >
+              <AlertTriangle size={20} className="shrink-0" />
+              <span>通行止め情報を確認</span>
+            </a>
+          ) : (
+            <button
+              onClick={() => setSheetOpen(true)}
+              className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
+            >
+              <MapPin size={20} className="shrink-0" />
+              <span>{hasStartChoice ? "スタート地点を決める" : "アクセスを確認"}</span>
+            </button>
+          )}
           <Link
             href={`/spots/${guide.slug}?tab=logs#dokolog`}
             onClick={() => track("footer_checkin_cta", { slug: guide.slug })}
@@ -344,7 +373,7 @@ export function LongCourseGuide({
         </div>
       </div>
 
-      {sheetOpen && (
+      {sheetOpen && !guide.routeUnavailable && (
         <div className="fixed inset-0 z-[60] bg-ink/45" role="presentation" onMouseDown={() => setSheetOpen(false)}>
           <section
             role="dialog"

@@ -2584,5 +2584,94 @@
     "oldMismatch": "旧約9.35km経路の2124m(34.715523,135.473105)は塚本付近の市街地道路。Google2025-07 BNIXx9yP3sRgwws4ihfOjAをCUA目視し、歩道橋・住宅・車道を確認。河川敷コース説明と不一致。",
     "visualReview": "公式西中島・十三地区園内図を目視。OSM464683149の堤防上舗装路を採用。東端2020-12 Google mAWIqAxd26fkN1RRTXvYygと中間2023-05 cafebombers CIHM0ogKEICAgICxvPnn3wEをCUAで目視。いずれも堤防の上と下段園路の高低が合致。",
     "notice": "歩行者・自転車と共用する細い堤防道です。減速してすれ違い、混雑時は歩いてください。河川の増水・工事など現地の規制を優先してください。"
+  },
+  {
+    "slug": "yoro-daifukuyama",
+    "reviewedAt": "2026-10-16",
+    "status": "closed-route-do-not-use",
+    "name": "養老渓谷・大福山周辺（通行止め区間あり）",
+    "intro": "養老渓谷・大福山周辺の旧参考周回です。現在、経路に通行止め区間が含まれるため、この周回は利用できません。公開地図の経路は通行可能な道を案内するものではありません。",
+    "notice": "林道朝生原線は朝生原939付近〜折津1143-8付近が通行止めで、旧周回と重なります。梅ヶ瀬渓谷の尾根・沢ルートと大福山展望台も閉鎖案内があります。2026年10月14日時点で小湊鐵道の上総牛久〜上総中野間は運転見合わせ中です。6月の林道迂回図にある上総大久保から西へのアクセスにも現行市防災地図で市道7073号線の通行止めを確認したため、代替経路として案内しません。",
+    "sources": [
+      "https://www.city.ichihara.chiba.jp/article?articleId=61765c592434580e7a2ff4ae",
+      "https://www.city.ichihara.chiba.jp/blob/images/common-article/6a43674fdf3a7311f500a56c/%E4%BD%8D%E7%BD%AE%E5%9B%B3.webp",
+      "https://www.city.ichihara.chiba.jp/article?articleId=6abf530424cd71056771749f",
+      "https://www.city.ichihara.chiba.jp/article?articleId=667287e63d677f0b8cb234f2",
+      "https://city-ichihara.my.site.com/K_PUB_VF_KakudaiMap"
+    ],
+    "rejectedAlternative": "data/spot-experience/batch-3/yoro-route-proposal.json",
+    "closureReview": {
+      "reviewedAt": "2026-10-16",
+      "method": "CUA browser visual review of official live map and marker popups",
+      "sourceUrl": "https://city-ichihara.my.site.com/K_PUB_VF_KakudaiMap",
+      "layer": "道路規制情報",
+      "scale": "50 m",
+      "observations": [
+        {
+          "title": "市道7073号線の通行止め",
+          "status": "規制中",
+          "type": "通行止め",
+          "locationReview": "上総大久保駅から西へ延びる道路のトンネル西口側、道路が南西へ曲がる地点に赤い通行止めアイコン。候補はOSM128693779のトンネルを西へ抜け128719199→128706818を通るため、このアクセスと重なる。地図クリックで件名と規制中を確認。正確な閉鎖の始終点は地図ポップアップに記載なし。"
+        },
+        {
+          "title": "市道7237号線の通行止めについて",
+          "status": "規制中",
+          "type": "通行止め",
+          "locationReview": "上総大久保駅の南側の道路付近に赤いアイコン。地図クリックで件名と規制中を確認。駅前からのアクセスが影響を受ける可能性があるが、閉鎖範囲の端点不明のため経路と確定重複とは断定しない。"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "zushi-hayama-trail",
+    "reviewedAt": "2026-10-17",
+    "distanceM": 17342.771337792892,
+    "officialUrl": "https://www.city.zushi.kanagawa.jp/shiminkatsudo/kanko/1004366/1004368.html",
+    "source": "Existing reference route corrected using Zushi official park/main trail map and OSM public streets, Nango park paths, main upper-Futago approach. Remove lower-Futago direct park path with official collapse warning.",
+    "osmWays": [
+      "323677302",
+      "226033308",
+      "323677316",
+      "323677300",
+      "1081789742",
+      "226033318",
+      "1080965037",
+      "226033321",
+      "374905963",
+      "226033329",
+      "363245004",
+      "363245000",
+      "370293822"
+    ],
+    "elevation": {
+      "source": "Retain original elevations outside new segment; GSI terrain DEM on new segment only; road bridge null",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14544/6473.txt",
+        "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14545/6473.txt"
+      ],
+      "nullCount": 2
+    },
+    "replacedOldRange": {
+      "startIndex": 115,
+      "endIndex": 240,
+      "startDistanceM": 2666.04,
+      "endDistanceM": 5693.5
+    },
+    "config": {
+      "name": "三浦アルプス縦走（二子山〜仙元山）",
+      "intro": "逗子・葉山駅付近から南郷上ノ山公園を経て、上二子山・乳頭山・茅塚・観音塚・仙元山をつなぐ約17.3kmの参考周回です。公園から上二子山へは北東側のメインルートを往復し、崩落の案内がある下二子山との直接の道を避けています。山中は細い道と分岐、繰り返す起伏が続きます。",
+      "notice": "市・町の整備コース以外の山道も含まれます。ハイカー優先で狭い道や見通しの悪い場所では歩き、地図と現地の道標を確認してください。下二子山から南郷上ノ山公園へ直接下る道には一部崩落の案内があります。旧大山林道（森戸川林道）へ外れず、現地の規制を優先してください。仙元山トイレは閉鎖案内があり、利用できる前提にしないでください。水・補給食を持参してください。"
+    },
+    "limitations": [
+      "地図から再構成した参考経路で、現地調査・公式測量ではありません。",
+      "道路区間は歩道や歩行可能な路肩を利用。公園内は施設利用者優先。",
+      "今回の修正で既知の下二子山〜公園直接道を外したが、山域全体の現在の通行を保証するものではない。"
+    ],
+    "visualReview": "逗子市公式PDF二子山回廊p2の南郷公園園路→北東の階段→メインルート→上二子山の形状とOSM226033329/363245004/363245000/370293822を照合。旧経路は下二子山4747mを経由し、公園南側の直接道363407882を往復していたため、既知崩落区間の範囲を広めに避けるため旧2666〜5693mを置換。山頂は同じ道を往復。",
+    "additionalSources": [
+      "https://www.city.zushi.kanagawa.jp/_res/projects/default_project/_page_/001/004/368/hutagoyamakairou.pdf",
+      "https://www.futagoyama.org/"
+    ],
+    "status": "route-replacement-proposal"
   }
 ]

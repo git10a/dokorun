@@ -669,5 +669,32 @@
       "elevationSource": "gsi",
       "method": "公式西中島・十三地区園内図を目視。OSM464683149の堤防上舗装路を採用。東端2020-12 Google mAWIqAxd26fkN1RRTXvYygと中間2023-05 cafebombers CIHM0ogKEICAgICxvPnn3wEをCUAで目視。いずれも堤防の上と下段園路の高低が合致。"
     }
+  },
+  "zushi-hayama-trail": {
+    "status": "corrected-reference-route",
+    "reason": "公園から下二子山へ直接つながる道に崩落案内があり、旧経路と重なる。",
+    "correctedAt": "2026-10-17",
+    "evidence": "data/spot-experience/batch-3/zushi-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/zushi-hayama-trail.json",
+      "elevationSource": "mixed",
+      "elevationGapNotice": "道路橋の高さが未確認の区間は空白にしています。地形の標高で橋上の高さを補間せず、全体の獲得標高も表示していません。",
+      "elevationAttribution": {
+        "label": "コースデータの標高・迂回区間は国土地理院の標高タイルを加工",
+        "url": "https://maps.gsi.go.jp/development/ichiran.html#dem"
+      },
+      "method": "逗子市公式PDF二子山回廊p2の南郷公園園路→北東の階段→メインルート→上二子山の形状とOSM226033329/363245004/363245000/370293822を照合。旧経路は下二子山4747mを経由し、公園南側の直接道363407882を往復していたため、既知崩落区間の範囲を広めに避けるため旧2666〜5693mを置換。山頂は同じ道を往復。"
+    }
+  },
+  "yutoku-inari-ariake": {
+    "status": "corrected-reference-route",
+    "reason": "The spur from the shore to the sea and back is a fisheries road exposed only at low tide. Remove it from the ordinary running route. Index 470 duplicates the retained shore index 466.",
+    "correctedAt": "2026-10-17",
+    "evidence": "data/spot-experience/batch-2/yutoku-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yutoku-inari-ariake.json",
+      "elevationSource": "preserve-existing",
+      "method": "Existing 498-point GPX retained except for the low-tide-only offshore causeway out-and-back; visual Google 360 review plus official Tara and Saga guidance."
+    }
   }
 }

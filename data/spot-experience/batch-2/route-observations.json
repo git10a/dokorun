@@ -1113,5 +1113,150 @@
         "observed": "香川県立ミュージアムの東に黄色い誘導帯と街路樹のある公開歩道。北側から南側まで連続。"
       }
     ]
+  },
+  {
+    "slug": "yoron-loop",
+    "status": "intro-and-access-correction-proposed",
+    "observedAt": "2026-10-16",
+    "distanceM": 22867.22,
+    "observations": [
+      "起点27.048175,128.413813は茶花海岸付近の道路。Google Rl4wvunV06aEk5r7YPuLOA 2013-12で海岸側の植栽、白い記念物、市街の建物を目視。与論港（供利港）発ではない。",
+      "9.15km付近は南岸の高い道路で右側に海を確認。16.5km付近はサトウキビ畑の間の細い舗装道。歩道・センターラインのない区間も含む。",
+      "公式大会サイトは茶花海岸から一周のハーフと折り返すフルを案内。掲載GPXは22.867kmなので公式大会コースと同一の距離・ルートと断定せず、参考周回として案内する。",
+      "東側の掲載経路は畑・集落側も通る。百合ヶ浜を望む白い砂浜そのものを通ることは確認できないため、紹介を海を望む道路・畑・集落に合わせる。"
+    ],
+    "suggestedIntro": "茶花海岸付近を起点に、海を望む道路やサトウキビ畑の間の道、集落をつなぐ約22.9kmの参考周回コース。南岸などには起伏があり、景色が切り替わるロング走を楽しめる。掲載ルートは大会公式コースと同一ではありません。日陰の少ない区間があるため、飲み物や補給を準備して出発してください。",
+    "suggestedWarning": "掲載起点は茶花海岸付近です。与論港や空港から走り始める場合は、起点までの移動距離を別に確認してください。一般道や歩道のない細い道を含むため、車に注意して交通ルールに従ってください。",
+    "sourceUrls": [
+      "https://www.yoronmarathon.com/コースマップ",
+      "https://www.yoronmarathon.com/特徴-見どころ"
+    ]
+  },
+  {
+    "slug": "yutoku-inari-ariake",
+    "reviewedAt": "2026-10-17",
+    "status": "ready-for-parent-integration",
+    "source": "Existing 498-point GPX retained except for the low-tide-only offshore causeway out-and-back; visual Google 360 review plus official Tara and Saga guidance.",
+    "sourceProfile": "public/spot-elevation/yutoku-inari-ariake.json",
+    "sourceGpx": "data/gpx/yutoku-inari-ariake.gpx",
+    "removal": {
+      "indexBase": 0,
+      "profileIndicesInclusive": [
+        467,
+        470
+      ],
+      "gpxTrkptIndicesInclusive": [
+        467,
+        470
+      ],
+      "gpxOneBasedTrkptOrdinalsInclusive": [
+        468,
+        471
+      ],
+      "retainedShoreIndex": 466,
+      "resumeOldIndex": 471,
+      "originalPointCount": 498,
+      "revisedPointCount": 494,
+      "removedDistanceM": 254.82835716732146,
+      "reason": "The spur from the shore to the sea and back is a fisheries road exposed only at low tide. Remove it from the ordinary running route. Index 470 duplicates the retained shore index 466."
+    },
+    "distanceM": 17567.61332013586,
+    "elevationPolicy": "Existing profile elevations preserved. The removed offshore spur is no longer part of the route. This is reference GPX data, not an official measured course.",
+    "evidence": [
+      {
+        "url": "https://www.town.tara.lg.jp/kanko/_1901/_4175.html",
+        "kind": "official-current-information-and-photo",
+        "pageUpdatedAt": "2026-09-10",
+        "observed": "Torii rebuilt February 6-7, 2024; actual new-torii photo labelled April 9, 2024 was opened in CUA. Fisheries land; work early-late April and September 4-end October. Tourism and parking operate normally, so this is not a blanket closure."
+      },
+      {
+        "url": "https://www.asobo-saga.jp/galleries/detail/efd0a667-e497-4929-bd46-d637e7408460",
+        "kind": "official-tourism-photo-description",
+        "observed": "Sea roads appear only at low tide and are fisheries loading/working roads."
+      },
+      {
+        "url": "https://www.town.tara.lg.jp/chosei/_1006/_1056/_1410.html",
+        "kind": "official-sea-road-description",
+        "observed": "Sea road becomes visible at low tide and is used for fisheries transport."
+      },
+      {
+        "url": "https://www.google.com/maps/@33.0307722,130.1777117,3a,90y,180h,90t/data=!3m5!1e1!3m3!1sCIHM0ogKEICAgICU89bLogE!2e10!7i5376",
+        "kind": "cua-user-360-visual-review",
+        "captureDate": "2019-08",
+        "observed": "Concrete road projects offshore across tidal flats; shore parking and torii visible on return-facing view. Old photo not used to generate present torii because they were rebuilt in 2024."
+      }
+    ],
+    "suggestedName": "祐徳稲荷神社〜大魚神社海中鳥居",
+    "suggestedIntro": "JR肥前浜駅付近から肥前浜宿を通り、祐徳稲荷神社の参道、大魚神社海中鳥居の岸側を経てJR多良駅前へ向かう約17.6kmの参考ルートです。町中の一般道や海沿いをつなぎ、祐徳稲荷周辺では起伏があります。参道は参拝者を優先して歩いて通過してください。潮位で水没する海中道路への往復は含めず、海中鳥居は岸側から景色を楽しむ立ち寄り地点としています。",
+    "suggestedAccess": "JR長崎本線の肥前浜駅から起点まで約60m。終点は多良駅前で、駅まで約30mです。片道のため帰りの列車時刻を確認してください。",
+    "suggestedNotice": [
+      {
+        "title": "参道では歩いて通過してください",
+        "body": "祐徳稲荷神社の参道は参拝者を優先し、混雑時は無理に進まず現地案内に従ってください。",
+        "url": "https://www.yutokusan.jp/",
+        "linkLabel": "祐徳稲荷神社の公式案内"
+      },
+      {
+        "title": "海中道路への往復は含みません",
+        "body": "潮位によって水没する海中道路への往復は、この参考ルートから除いています。水に覆われた道路へ進まず、岸側から景色を楽しんでください。海中鳥居周辺では漁業作業と現地案内を優先してください。",
+        "url": "https://www.town.tara.lg.jp/kanko/_1901/_4175.html",
+        "linkLabel": "太良町の海中鳥居案内"
+      },
+      {
+        "title": "漁業作業にご配慮ください",
+        "body": "太良町の2026年9月10日更新案内では、海中鳥居周辺の漁業作業期間を4月上旬〜下旬、9月4日〜10月末頃としています。観光と駐車場は通常どおり利用できますが、作業の妨げにならないよう現地案内に従ってください。",
+        "url": "https://www.town.tara.lg.jp/kanko/_1901/_4175.html",
+        "linkLabel": "太良町の最新案内"
+      }
+    ],
+    "suggestedCheckpoints": [
+      {
+        "id": "section-1",
+        "name": "肥前浜駅付近・肥前浜宿",
+        "anchorLat": 33.095601,
+        "anchorLng": 130.117211,
+        "description": "肥前浜駅近くを出発し、町の道をたどります。",
+        "surfaceLabel": "舗装路",
+        "caution": "生活道路の車と歩行者を優先"
+      },
+      {
+        "id": "section-2",
+        "name": "祐徳稲荷神社の参道",
+        "anchorLat": 33.074278,
+        "anchorLng": 130.108808,
+        "description": "境内手前の参道から社殿や木々を眺める区間です。",
+        "surfaceLabel": "舗装路",
+        "caution": "参拝者を優先し歩いて通過"
+      },
+      {
+        "id": "section-3",
+        "name": "有明海側へ",
+        "anchorLat": 33.081561,
+        "anchorLng": 130.138035,
+        "description": "一般道をたどり、有明海側へ進みます。",
+        "surfaceLabel": "舗装路",
+        "caution": "交差点・車の通行に注意"
+      },
+      {
+        "id": "section-4",
+        "name": "大魚神社海中鳥居の岸側",
+        "anchorLat": 33.030735,
+        "anchorLng": 130.177616,
+        "description": "海中鳥居周辺の岸側を通過します。潮位で水没する海中道路への往復は含めていません。",
+        "surfaceLabel": "舗装路",
+        "caution": "漁業作業と現地案内を優先"
+      },
+      {
+        "id": "section-5",
+        "name": "多良駅前",
+        "anchorLat": 33.025103,
+        "anchorLng": 130.176309,
+        "description": "海中鳥居周辺から町の道を進み、多良駅前で終わります。",
+        "surfaceLabel": "舗装路",
+        "caution": "駅前の歩行者と車に注意"
+      }
+    ],
+    "routeProposal": "data/spot-experience/batch-2/yutoku-route-proposal.json",
+    "imageCompletion": "2 accepted images; shrine panorama and rebuilt sea torii official photo"
   }
 ]

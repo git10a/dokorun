@@ -1,15 +1,12 @@
 {
-  "updatedAt": "2026-10-16",
-  "readySpots": 63,
-  "readyImages": 126,
-  "inProgress": "yoron-loop",
+  "updatedAt": "2026-10-17",
+  "readySpots": 65,
+  "readyImages": 130,
+  "inProgress": null,
   "heldForParentRouteCorrection": [],
-  "remainingSpots": [
-    "yoron-loop",
-    "yutoku-inari-ariake"
-  ],
+  "remainingSpots": [],
   "mode": "built-in-imagegen",
-  "review": "Actual CUA panorama observation and generated-image visual review required",
+  "review": "Actual CUA panorama or explicitly approved official-photo observation; all generated images visually reviewed",
   "completedSpots": [
     "akiyoshidai-karst-trail",
     "aoba-no-mori-park",
@@ -72,7 +69,9 @@
     "yamanakagoe-tetsugaku",
     "yashima-loop",
     "yokoyama-no-michi-oyamada",
+    "yoron-loop",
     "yoyogi-park-athletic-field",
+    "yutoku-inari-ariake",
     "zenibako-otaru"
   ],
   "reassignedToParent": [
@@ -99,5 +98,6 @@
   "reassignedFromBatch1": [
     "yoron-loop",
     "yutoku-inari-ariake"
-  ]
+  ],
+  "status": "complete"
 }

@@ -47,6 +47,18 @@ async function renderGuide(slug: string, withoutAtmosphere = false) {
 }
 
 describe("course highlights", () => {
+  it("replaces route access with official closure information for an unavailable course", async () => {
+    const html = await renderGuide("yoro-daifukuyama");
+    expect(html).toContain("この周回は現在利用できません");
+    expect(html).toContain("通行止め情報を確認");
+    expect(html).not.toContain("アクセスを確認</span>");
+    expect(html).not.toContain("スタート地点を決める");
+    expect(html).not.toContain("コースをダウンロード");
+    const normal = await renderGuide("kokyo");
+    expect(normal).toMatch(/アクセスを確認|スタート地点を決める/);
+    expect(normal).not.toContain("通行止め情報を確認");
+  });
+
   it.each(Object.keys(courseAtmospheres))(
     "shows disclosed AI reference scenes and mapped distance controls for %s",
     async (slug) => {
