@@ -1,47 +1,47 @@
 {
   "slug": "niigata-sports-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "鳥屋野潟とデンカビッグスワン周辺を取り込む大規模公園で、公式のウォーキング・ジョギングコース図に1周5kmが明示されています。0.5kmごとの距離表示も確認でき、周回の分かりやすさは高めです。園内のレストハウスやトイレ位置も図面に載っており、日常ジョグから少し長めの周回走まで扱いやすい構成です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "新潟県スポーツ公園の公式『WALK & JOG ROAD』5kmコース図をもとに、野球場、西側芝生広場、ビッグスワン東側、鳥屋野潟沿いをつないだ周回です。掲載の参考経路は約5.1kmで、道路下の連絡通路を通り、列柱廊やレストハウス付近も回ります。現地の0.5kmごとの距離標識と案内を優先し、歩行者や自転車に注意して走ってください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式案内は1周5kmです。掲載経路は園内図・地図・航空写真から作成した約5.1kmの参考データで、広場内や折返しの位置に差があります。イベント時は通れない区間があるため、現地案内を確認してください。",
+      "url": "https://www.niigata-sportspark.jp/documents/guidemap/walk_jog_road_map.pdf",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 新潟市中央区清五郎エリア。新潟駅方面からバス利用可。車でのアクセスもしやすい。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "公式の園内案内図で野球場北西側の広場とスタート標識を確認してください。",
+      "url": "https://www.niigata-sportspark.jp/",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "上所駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 37.906961,
-      "destinationLng": 139.04525,
-      "routeAnchorLat": 37.883213,
-      "routeAnchorLng": 139.059304,
+      "name": "野球場北西側の広場",
+      "badge": "園路からスタート",
+      "destinationLat": 37.880163168285286,
+      "destinationLng": 139.0627098083496,
+      "routeAnchorLat": 37.880163168285286,
+      "routeAnchorLng": 139.0627098083496,
       "routeMode": "loop",
-      "accessText": "上所駅からコースまで約2920m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "公式の園内案内図で野球場北西側の広場とスタート標識を確認してください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "スタート標識を確認して野球場の周囲へ進みます。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 37.883213,
-      "routeLng": 139.059304,
-      "elevationM": 9.8,
+      "routeLat": 37.8801632,
+      "routeLng": 139.0627098,
+      "elevationM": 1.5,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 1407,
-        "section-3": 4009,
-        "section-4": 2622,
-        "section-5": 3629
+        "section-2": 588,
+        "section-3": 1752,
+        "section-4": 3101,
+        "section-5": 3987
       },
       "gpxHref": "/gpx/niigata-sports-park-start-1.gpx"
     }
@@ -49,339 +49,301 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 37.883213,
-      "anchorLng": 139.059304,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: HARD OFF ECOスタジアム新潟 全景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg/960px-HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg",
-        "alt": "新潟県スポーツ公園のスタート周辺付近",
-        "caption": "新潟県スポーツ公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg"
-      },
+      "name": "野球場北西側の広場",
+      "anchorLat": 37.880163168285286,
+      "anchorLng": 139.0627098083496,
+      "description": "スタート標識を確認して野球場の周囲へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 37.883213,
-      "routeLng": 139.059304,
-      "elevationM": 9.8,
+      "routeLat": 37.8801632,
+      "routeLng": 139.0627098,
+      "elevationM": 1.5,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 37.882392,
-      "anchorLng": 139.058853,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: HARD OFF ECOスタジアム新潟 全景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg/960px-HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg",
-        "alt": "新潟県スポーツ公園の序盤区間付近",
-        "caption": "新潟県スポーツ公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg"
-      },
-      "routePointIndex": 271,
-      "routeDistanceM": 1407,
-      "routeLat": 37.882392,
-      "routeLng": 139.058853,
-      "elevationM": 11.6,
+      "name": "野球場の南側",
+      "anchorLat": 37.87800091386204,
+      "anchorLng": 139.0639078617096,
+      "description": "野球場の外側を回り、西側芝生広場へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 45,
+      "routeDistanceM": 588,
+      "routeLat": 37.8780009,
+      "routeLng": 139.0639079,
+      "elevationM": 0.8,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 37.882846,
-      "anchorLng": 139.059452,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: HARD OFF ECOスタジアム新潟 全景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg/960px-HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg",
-        "alt": "新潟県スポーツ公園の中盤区間付近",
-        "caption": "新潟県スポーツ公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg"
-      },
-      "routePointIndex": 802,
-      "routeDistanceM": 4009,
-      "routeLat": 37.882846,
-      "routeLng": 139.059452,
-      "elevationM": 11.6,
+      "name": "カナール西側",
+      "anchorLat": 37.88277416101049,
+      "anchorLng": 139.0610647201538,
+      "description": "道路下連絡通路を通り、カナール西側を北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 165,
+      "routeDistanceM": 1752,
+      "routeLat": 37.8827742,
+      "routeLng": 139.0610647,
+      "elevationM": 1.1,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 37.882251,
-      "anchorLng": 139.058934,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: HARD OFF ECOスタジアム新潟 全景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg/960px-HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg",
-        "alt": "新潟県スポーツ公園の後半区間付近",
-        "caption": "新潟県スポーツ公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg"
-      },
-      "routePointIndex": 515,
-      "routeDistanceM": 2622,
-      "routeLat": 37.882251,
-      "routeLng": 139.058934,
-      "elevationM": 11.6,
+      "name": "鳥屋野潟沿い",
+      "anchorLat": 37.88545103333333,
+      "anchorLng": 139.05844183333332,
+      "description": "潟沿いの園路を現地の標識に沿って進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 284,
+      "routeDistanceM": 3101,
+      "routeLat": 37.885451,
+      "routeLng": 139.0584418,
+      "elevationM": -0.5,
       "snapGapM": 0
     },
     {
       "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 37.882997,
-      "anchorLng": 139.059349,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: HARD OFF ECOスタジアム新潟 全景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg/960px-HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg",
-        "alt": "新潟県スポーツ公園の終盤区間付近",
-        "caption": "新潟県スポーツ公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HARD_OFF_ECO%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%A2%E3%83%A0%E6%96%B0%E6%BD%9F_%E5%85%A8%E6%99%AF_-_panoramio.jpg"
-      },
-      "routePointIndex": 724,
-      "routeDistanceM": 3629,
-      "routeLat": 37.882997,
-      "routeLng": 139.059349,
-      "elevationM": 11.6,
+      "name": "レストハウス付近",
+      "anchorLat": 37.886816,
+      "anchorLng": 139.062934,
+      "description": "カナール東側へ戻り、列柱廊の外側から連絡通路へ向かいます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 361,
+      "routeDistanceM": 3987,
+      "routeLat": 37.886816,
+      "routeLng": 139.062934,
+      "elevationM": 0.4,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.niigata-sportspark.jp/documents/guidemap/walk_jog_road_map.pdf",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 5161,
-  "elevationGainM": 5,
+  "distanceM": 5120,
+  "elevationGainM": 28,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 9.8
+      "elevationM": 1.5
     },
     {
-      "distanceM": 99,
-      "elevationM": 10.6
+      "distanceM": 98,
+      "elevationM": 1.3
     },
     {
-      "distanceM": 198,
-      "elevationM": 10.8
+      "distanceM": 197,
+      "elevationM": 2
     },
     {
-      "distanceM": 298,
-      "elevationM": 11.1
+      "distanceM": 295,
+      "elevationM": 2.2
     },
     {
-      "distanceM": 397,
-      "elevationM": 11
+      "distanceM": 394,
+      "elevationM": 1.9
     },
     {
-      "distanceM": 496,
-      "elevationM": 11.2
+      "distanceM": 492,
+      "elevationM": 1
     },
     {
-      "distanceM": 595,
-      "elevationM": 12
+      "distanceM": 591,
+      "elevationM": 0.7
     },
     {
-      "distanceM": 695,
-      "elevationM": 10.6
+      "distanceM": 689,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 794,
-      "elevationM": 11.8
+      "distanceM": 788,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 893,
-      "elevationM": 11.6
+      "distanceM": 886,
+      "elevationM": 1.1
     },
     {
-      "distanceM": 992,
-      "elevationM": 11.6
+      "distanceM": 985,
+      "elevationM": 0.5
     },
     {
-      "distanceM": 1092,
-      "elevationM": 11.6
+      "distanceM": 1083,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 1191,
-      "elevationM": 11.6
+      "distanceM": 1182,
+      "elevationM": 0.4
     },
     {
-      "distanceM": 1290,
-      "elevationM": 11.6
+      "distanceM": 1280,
+      "elevationM": 0.6
     },
     {
-      "distanceM": 1389,
-      "elevationM": 11.6
+      "distanceM": 1379,
+      "elevationM": 1.3
     },
     {
-      "distanceM": 1489,
-      "elevationM": 11.6
+      "distanceM": 1477,
+      "elevationM": 0.7
     },
     {
-      "distanceM": 1588,
-      "elevationM": 11.6
+      "distanceM": 1575,
+      "elevationM": -0.4
     },
     {
-      "distanceM": 1687,
-      "elevationM": 11.6
+      "distanceM": 1674,
+      "elevationM": 1
     },
     {
-      "distanceM": 1786,
-      "elevationM": 11.6
+      "distanceM": 1772,
+      "elevationM": 1
     },
     {
-      "distanceM": 1886,
-      "elevationM": 11.6
+      "distanceM": 1871,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 1985,
-      "elevationM": 11.6
+      "distanceM": 1969,
+      "elevationM": -0.8
     },
     {
-      "distanceM": 2084,
-      "elevationM": 11.6
+      "distanceM": 2068,
+      "elevationM": 2.2
     },
     {
-      "distanceM": 2183,
-      "elevationM": 11.6
+      "distanceM": 2166,
+      "elevationM": 4.1
     },
     {
-      "distanceM": 2283,
-      "elevationM": 11.6
+      "distanceM": 2265,
+      "elevationM": 1.1
     },
     {
-      "distanceM": 2382,
-      "elevationM": 11.6
+      "distanceM": 2363,
+      "elevationM": 0.5
     },
     {
-      "distanceM": 2481,
-      "elevationM": 11.6
+      "distanceM": 2462,
+      "elevationM": 2.1
     },
     {
-      "distanceM": 2580,
-      "elevationM": 11.6
+      "distanceM": 2560,
+      "elevationM": 1.8
     },
     {
-      "distanceM": 2680,
-      "elevationM": 11.6
+      "distanceM": 2659,
+      "elevationM": -0.6
     },
     {
-      "distanceM": 2779,
-      "elevationM": 11.6
+      "distanceM": 2757,
+      "elevationM": 0
     },
     {
-      "distanceM": 2878,
-      "elevationM": 11.6
+      "distanceM": 2855,
+      "elevationM": 0.3
     },
     {
-      "distanceM": 2977,
-      "elevationM": 11.6
+      "distanceM": 2954,
+      "elevationM": -0.4
     },
     {
-      "distanceM": 3077,
-      "elevationM": 11.6
+      "distanceM": 3052,
+      "elevationM": -0.7
     },
     {
-      "distanceM": 3176,
-      "elevationM": 11.6
+      "distanceM": 3151,
+      "elevationM": -0.7
     },
     {
-      "distanceM": 3275,
-      "elevationM": 11.6
+      "distanceM": 3249,
+      "elevationM": -1.2
     },
     {
-      "distanceM": 3374,
-      "elevationM": 11.6
+      "distanceM": 3348,
+      "elevationM": 0.5
     },
     {
-      "distanceM": 3474,
-      "elevationM": 11.6
+      "distanceM": 3446,
+      "elevationM": 0
     },
     {
-      "distanceM": 3573,
-      "elevationM": 11.6
+      "distanceM": 3545,
+      "elevationM": -0.6
     },
     {
-      "distanceM": 3672,
-      "elevationM": 11.6
+      "distanceM": 3643,
+      "elevationM": -0.4
     },
     {
-      "distanceM": 3771,
-      "elevationM": 11.6
+      "distanceM": 3742,
+      "elevationM": 0.4
     },
     {
-      "distanceM": 3871,
-      "elevationM": 11.6
+      "distanceM": 3840,
+      "elevationM": 0.5
     },
     {
-      "distanceM": 3970,
-      "elevationM": 11.6
+      "distanceM": 3939,
+      "elevationM": 0.8
     },
     {
-      "distanceM": 4069,
-      "elevationM": 11.6
+      "distanceM": 4037,
+      "elevationM": 0.7
     },
     {
-      "distanceM": 4168,
-      "elevationM": 11.6
+      "distanceM": 4136,
+      "elevationM": 2.4
     },
     {
-      "distanceM": 4268,
-      "elevationM": 11.6
+      "distanceM": 4234,
+      "elevationM": 2.2
     },
     {
-      "distanceM": 4367,
-      "elevationM": 11.6
+      "distanceM": 4332,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 4466,
-      "elevationM": 11.6
+      "distanceM": 4431,
+      "elevationM": 0.9
     },
     {
-      "distanceM": 4565,
-      "elevationM": 11.6
+      "distanceM": 4529,
+      "elevationM": 1.1
     },
     {
-      "distanceM": 4665,
-      "elevationM": 11.6
+      "distanceM": 4628,
+      "elevationM": 1
     },
     {
-      "distanceM": 4764,
-      "elevationM": 11.6
+      "distanceM": 4726,
+      "elevationM": -0.2
     },
     {
-      "distanceM": 4863,
-      "elevationM": 11.6
+      "distanceM": 4825,
+      "elevationM": 3.1
     },
     {
-      "distanceM": 4962,
-      "elevationM": 11.6
+      "distanceM": 4923,
+      "elevationM": 1.5
     },
     {
-      "distanceM": 5062,
-      "elevationM": 11.2
+      "distanceM": 5022,
+      "elevationM": 2.8
     },
     {
-      "distanceM": 5161,
-      "elevationM": 9.8
+      "distanceM": 5120,
+      "elevationM": 1.5
     }
   ]
 }

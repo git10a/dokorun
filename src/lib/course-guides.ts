@@ -42,6 +42,7 @@ export type CourseGuide = {
   distanceM: number;
   elevationGainM: number | null;
   elevationProfile: ElevationSample[];
+  elevationGapNotice?: string;
   warnings: CourseGuideWarning[];
   startPoints: CourseGuideStartPoint[];
   checkpoints: CourseGuideCheckpoint[];

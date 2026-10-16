@@ -1,0 +1,116 @@
+{
+  "slug": "oita-sports-park-happy-road",
+  "name": "大分スポーツ公園 ハッピーロード参考周回",
+  "distanceM": 5139.85,
+  "courseType": "loop",
+  "surface": "asphalt",
+  "start": {
+    "name": "クラサスドーム北側の外周路",
+    "lat": 33.2025858,
+    "lng": 131.6572685
+  },
+  "description": "大分スポーツ公園の公式ハッピーロード5km図をもとに、ドーム外周と西側の園路をつないだ約5.1kmの参考コースです。ドーム北側から西へ進み、西側の直線園路と駐車場付近を回って戻ったあと、ドーム南側と投てき場外側を通って一周します。起伏のある舗装路で、木立とドーム周辺の開けた景色が交互に現れます。",
+  "access": "クラサスドーム大分の北側外周路を起点にしています。車利用の場合は公園の開放駐車場・イベント時の規制を公式案内で確認してください。",
+  "warnings": [
+    "公式案内は1周5kmです。掲載経路は公開地図と現地画像から再構成した約5.14kmの参考データで、公式測量GPXではありません。",
+    "公式案内のとおり、一部は車道・駐車場の通路を含みます。車両、出入口、曲がり角に注意し、歩行者を優先してください。",
+    "ドーム東側の大階段は通らず、投てき場沿いの園路へ進む経路です。現地の案内や通行規制を優先してください。",
+    "大会・試合開催時はコースや駐車場が使えない場合があります。"
+  ],
+  "checkpoints": [
+    {
+      "name": "西側園路入口",
+      "lat": 33.2008203,
+      "lng": 131.6497548
+    },
+    {
+      "name": "西側駐車場付近",
+      "lat": 33.1954228,
+      "lng": 131.6472476
+    },
+    {
+      "name": "ドーム南側外周",
+      "lat": 33.1989643,
+      "lng": 131.6564793
+    },
+    {
+      "name": "投てき場外側の園路",
+      "lat": 33.2014438,
+      "lng": 131.6592323
+    }
+  ],
+  "evidence": {
+    "officialUrls": [
+      "https://www.oita-sportspark.jp/information/2166",
+      "https://www.oita-sportspark.jp/wp/wp-content/uploads/2022/05/happyroad.jpg",
+      "https://www.oita-sportspark.jp/access"
+    ],
+    "osmUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=131.64,33.19,131.675,33.22",
+    "review": "公式ハッピーロード5km図の西側往復・南西駐車場一周・ドーム南半周・北東の投てき場外周の順番を照合。1kmは西側園路入口、2kmは西側駐車場付近、3kmは西側復路、4kmはドーム南側となり、案内図の位置関係と一致。OSMネットワークの欠けた4接続を補間し、北西の約97mは開けた舗装広場、東側約7mは投てき場入口、西側約15mは車道沿い園路入口であることを360画像で目視。北側駐車場縁の約3mは公開地図上の園路・駐車場通路間の接続。旧GPXは公園の約5km東側の農道で全体不採用。",
+    "manualConnections": [
+      {
+        "from": 10656692956,
+        "to": 5100275631,
+        "label": "parking-edge",
+        "distanceM": 3.03
+      },
+      {
+        "from": 6320272445,
+        "to": 9171435565,
+        "label": "northwest-open-plaza",
+        "distanceM": 96.89
+      },
+      {
+        "from": 1650317272,
+        "to": 2384962694,
+        "label": "west-entrance",
+        "distanceM": 14.63
+      },
+      {
+        "from": 1676557741,
+        "to": 10656986855,
+        "label": "east-path-entry",
+        "distanceM": 7.35
+      }
+    ],
+    "localOfficialMap": "/tmp/spot-route-repair/oita-happyroad.jpg",
+    "routePlot": "/tmp/spot-route-repair/oita-route-b1.png",
+    "routePath": "/tmp/spot-route-repair/oita-sports-route.json",
+    "elevation": {
+      "source": "gsi",
+      "zoom": 14,
+      "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14183/6588.txt"
+      ],
+      "fetchedAt": "2026-10-16"
+    },
+    "visualChecks": [
+      {
+        "name": "oita-northwest-connection",
+        "sourceUrl": "https://google.com/maps/@33.2023523,131.6562426,3a,90y,250h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDulp-kgQE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9f5u3YI_I4qwXnYvqIV8H9nZn0OHHn3NR2YmntQukt2Sc-gvkbNukSztqTM2ePo2YsxtW3UwELybzxr1_zWugXGrZHgTW24EHrpaHcBC5cKrgPFWbnMr7ZogZ_4C6mWvPSXo2YrQ%3Dw900-h600-k-no-pi0-ya292.5791015625-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "screenshot": "/tmp/spot-route-repair/oita-northwest-connection.png"
+      },
+      {
+        "name": "oita-west-connection",
+        "sourceUrl": "https://google.com/maps/@33.2008528,131.6498183,3a,90y,180h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDN1YjRlgE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-kzfMPUB-kmYN2oL1rq7T9V-f77p5KsBtGn8EHi-pUDGEdWULDs8snRe9J97nDb7x_JQTg-R-1ocEu1BKjf3qdV_bIe9y9oN-rcCK1qS0v6SgVpWVVWUDapZ0DRlr4tICbK6XHkg%3Dw900-h600-k-no-pi0-ya180-ro0-fo100!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "screenshot": "/tmp/spot-route-repair/oita-west-connection.png"
+      },
+      {
+        "name": "oita-east-ramp",
+        "sourceUrl": "https://google.com/maps/@33.2014321,131.6592306,3a,90y,90h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDNiv-tnAE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-XNyYlJKFDkKo4yOQx0EWRMWfdsk43AR0JuxbVdogfZkPECsqvvmKZYUJYva9zc60Tb6Wkp9rNAONsp5Yfgv3RfFfZ2PQ_c8og4pzVkuWixQxbKLdDaf--C8rQqd-Pbuk7VdEo%3Dw900-h600-k-no-pi0-ya50.68999862670898-ro0-fo100!7i10000!8i5000!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "screenshot": "/tmp/spot-route-repair/oita-east-ramp.png"
+      }
+    ],
+    "closureReview": "2026-10-06公式の高尾山自然公園トリム広場トイレ周辺園路の工事（10/16まで予定）はドームの北方で、この参考経路には含めていません。最新規制は現地優先。",
+    "checks": {
+      "closed": true,
+      "pointCount": 472,
+      "elevationMin": 84.73,
+      "elevationMax": 110.45,
+      "allElevationsPresent": true,
+      "usesStairs": false,
+      "notOfficialSurvey": true
+    }
+  }
+}

@@ -22,6 +22,13 @@ const entries = spots.map((spot) => {
         profile.points.every((p) => Number.isFinite(p.elevationM)) &&
         !profile.routeReviewRequired,
     ),
+    elevationPartialReviewed: Boolean(
+      profile?.elevationGapNotice &&
+        !profile.routeReviewRequired &&
+        profile.points.filter((p) => Number.isFinite(p.elevationM)).length >= 2 &&
+        profile.points.some((p) => p.elevationM === null) &&
+        profile.points.every((p) => p.elevationM === null || Number.isFinite(p.elevationM)),
+    ),
     readyImages: ready.length,
     imagesRemaining: Math.max(0, 2 - ready.length),
     status: profile?.routeReviewRequired
@@ -44,6 +51,7 @@ const entries = spots.map((spot) => {
 const report = {
   totalSpots: entries.length,
   elevationReady: entries.filter((e) => e.elevationReady).length,
+  elevationPartialReviewed: entries.filter((e) => e.elevationPartialReviewed).length,
   imageReadySpots: entries.filter((e) => e.readyImages >= 2).length,
   readyImages: entries.reduce((n, e) => n + e.readyImages, 0),
   imagesRemaining: entries.reduce((n, e) => n + e.imagesRemaining, 0),
@@ -53,6 +61,6 @@ writeFileSync("data/spot-experience/coverage.json", JSON.stringify(report, null,
 console.log(JSON.stringify({ ...report, entries: undefined }));
 if (
   process.argv.includes("--require-complete") &&
-  (report.imagesRemaining || report.elevationReady !== report.totalSpots)
+  (report.imagesRemaining || report.elevationReady + report.elevationPartialReviewed !== report.totalSpots)
 )
   process.exitCode = 1;

@@ -1,127 +1,71 @@
 {
   "slug": "seaside-momochi",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "福岡の海辺ランの代表格で、観光情報でも街なかのおすすめコースとして挙げられます。百道浜の広い歩道と海浜部を使えばフラットに走れ、福岡タワーや博多湾の眺めで気分よく距離を重ねられます。中央プラザ側には駐車場とトイレがあり、海沿いの開放感も十分です。ジョグを中心に、景色を楽しみながらのテンポ走や旅先の朝ランに向く福岡市内の定番スポットです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "シーサイドももち海浜公園の百道浜地区で、砂浜沿いの遊歩道を往復する約1.8kmの参考ルート。西端からマリゾン前を通り、なぎさ橋手前で折り返します。博多湾と砂浜を眺めながら走れる区間ですが、散歩や海浜利用の人が多い場所では速度を落として通りましょう。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "園内の走行と参考ルートについて",
+      "body": "地図・標高は公開地図と地形データから作成した参考情報です。現地の案内・規制を優先してください。 中央部では管理・搬入車両が通る場合があります。歩行者や自転車にも注意してください。 中央プラザの上階、マリゾンの桟橋・私有部、なぎさ橋はこの経路に含みません。 強風、飛砂、混雑、イベントの設営・規制時は無理に走らず現地の誘導に従ってください。",
+      "url": "https://www.marizon-kankyo.jp/park/",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 西鉄バス「福岡タワー南口」から徒歩約3分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "百道浜地区の遊歩道西端を参考起点にしています。バス停や地下鉄駅から公園へ向かう際は、公式アクセス案内を確認してください。",
+      "url": "https://www.marizon-kankyo.jp/park/",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "藤崎駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 33.581347,
-      "destinationLng": 130.348231,
-      "routeAnchorLat": 33.594352,
-      "routeAnchorLng": 130.346186,
+      "name": "百道浜地区・遊歩道西端",
+      "badge": "園路からスタート",
+      "destinationLat": 33.5943668,
+      "destinationLng": 130.3460776,
+      "routeAnchorLat": 33.5943668,
+      "routeAnchorLng": 130.3460776,
       "routeMode": "forward",
-      "accessText": "藤崎駅からコースまで約1460m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "百道浜地区の遊歩道西端を参考起点にしています。バス停や地下鉄駅から公園へ向かう際は、公式アクセス案内を確認してください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "砂浜沿いの遊歩道を東へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 33.594352,
-      "anchorLng": 130.346186,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: Momochihama 1st Public Toilet of Seaside Momochi Seaside Park (902-15, Momochihama 4-chōme, Sawara-ku, Fukuoka City, Japan)",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Momochihama_1st_Public_Toilet_of_Seaside_Momochi_Seaside_Park_902-15_Momochihama-4-ch%C5%8Dme_Sawara-ku_Fukuoka_City_20221213.jpg/960px-Momochihama_1st_Public_Toilet_of_Seaside_Momochi_Seaside_Park_902-15_Momochihama-4-ch%C5%8Dme_Sawara-ku_Fukuoka_City_20221213.jpg",
-        "alt": "シーサイドももち海浜公園のスタート周辺付近",
-        "caption": "シーサイドももち海浜公園の走路近隣で撮影された風景",
-        "credit": "Hirho",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Momochihama_1st_Public_Toilet_of_Seaside_Momochi_Seaside_Park_902-15_Momochihama-4-ch%C5%8Dme_Sawara-ku_Fukuoka_City_20221213.jpg"
-      }
+      "name": "遊歩道西端",
+      "anchorLat": 33.5943668,
+      "anchorLng": 130.3460776,
+      "description": "砂浜沿いの遊歩道を東へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 33.587887,
-      "anchorLng": 130.344471,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: View from Atago Ōhashi, one of the bridges over the Muromi River .",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Muromi_River_-View_from_Atago_%C5%8Chashi.jpg/960px-Muromi_River_-View_from_Atago_%C5%8Chashi.jpg",
-        "alt": "シーサイドももち海浜公園の序盤区間付近",
-        "caption": "シーサイドももち海浜公園の走路近隣で撮影された風景",
-        "credit": "amber201",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muromi_River_-View_from_Atago_%C5%8Chashi.jpg"
-      }
+      "name": "中央プラザ北側",
+      "anchorLat": 33.594499,
+      "anchorLng": 130.3512761,
+      "description": "上階や桟橋へ入らず、地上の遊歩道を進みます。搬入車にも注意してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 33.591967,
-      "anchorLng": 130.34098,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 室見川の西側より望む福岡タワー",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Fukuoka_Tower_and_Muromigawa_River_2.jpg/960px-Fukuoka_Tower_and_Muromigawa_River_2.jpg",
-        "alt": "シーサイドももち海浜公園の中盤区間付近",
-        "caption": "シーサイドももち海浜公園の走路近隣で撮影された風景",
-        "credit": "そらみみ",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukuoka_Tower_and_Muromigawa_River_2.jpg"
-      }
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 33.591967,
-      "anchorLng": 130.34098,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 室見川の西側より望む福岡タワー",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Fukuoka_Tower_and_Muromigawa_River_2.jpg/960px-Fukuoka_Tower_and_Muromigawa_River_2.jpg",
-        "alt": "シーサイドももち海浜公園の後半区間付近",
-        "caption": "シーサイドももち海浜公園の走路近隣で撮影された風景",
-        "credit": "そらみみ",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukuoka_Tower_and_Muromigawa_River_2.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 33.587887,
-      "anchorLng": 130.344471,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: View from Atago Ōhashi, one of the bridges over the Muromi River .",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Muromi_River_-View_from_Atago_%C5%8Chashi.jpg/960px-Muromi_River_-View_from_Atago_%C5%8Chashi.jpg",
-        "alt": "シーサイドももち海浜公園の終盤区間付近",
-        "caption": "シーサイドももち海浜公園の走路近隣で撮影された風景",
-        "credit": "amber201",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muromi_River_-View_from_Atago_%C5%8Chashi.jpg"
-      }
+      "name": "なぎさ橋手前の折り返し",
+      "anchorLat": 33.5952945,
+      "anchorLng": 130.3557815,
+      "description": "橋へ上らず、ここで折り返して同じ遊歩道を戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.marizon-kankyo.jp/park/",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

@@ -120,6 +120,8 @@ async function main() {
       id: string;
       description: string;
       previousDescription: string;
+      access?: string;
+      previousAccess?: string | null;
       removeTagIds?: string[];
     }[];
     for (const item of descriptions) {
@@ -131,6 +133,17 @@ async function main() {
         `-- ${item.slug}: description only`,
         `UPDATE spots SET description = ${quote(item.previousDescription)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.description)};`,
       );
+      if (item.access !== undefined) {
+        if (item.previousAccess === undefined) throw new Error(`${item.slug}: missing previous access`);
+        updates.push(
+          `-- ${item.slug}: access`,
+          `UPDATE spots SET access = ${quote(item.access)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND access IS ${quote(item.previousAccess)};`,
+        );
+        rollback.push(
+          `-- ${item.slug}: access`,
+          `UPDATE spots SET access = ${quote(item.previousAccess)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND access IS ${quote(item.access)};`,
+        );
+      }
       for (const tagId of item.removeTagIds ?? []) {
         updates.push(
           `DELETE FROM spot_tags WHERE spot_id = ${quote(item.id)} AND tag_id = ${quote(tagId)} AND EXISTS (SELECT 1 FROM spots WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.description)});`,

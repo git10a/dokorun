@@ -308,5 +308,107 @@
       "body": "掲載画像は昼間の参照写真をもとにしたイメージです。夜間の照明や河川敷の状況を保証するものではありません。北側の折返しは宮崎神宮駅前です。"
     },
     "action": "Parent will integrate station-specific wording; retain route and continue images."
+  },
+  {
+    "slug": "omazaki-shimofuro",
+    "status": "description-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 19731.11,
+    "elevationRangeM": [
+      2.25,
+      50
+    ],
+    "observations": [
+      {
+        "panoId": "JiXTCV4OE9csa9R1kPe9_A",
+        "lat": 41.4824739,
+        "lng": 141.0436907,
+        "captured": "2025-06",
+        "observed": "15km付近は山側の擁壁と木々、海側ガードレールに挟まれた一般道。歩道がなく路肩も狭い。"
+      },
+      {
+        "panoId": "MexaH5LxmVxS5xsECPi7pw",
+        "lat": 41.489856,
+        "lng": 140.9942442,
+        "captured": "2025-06",
+        "observed": "10km付近は漁具小屋・船・海が見える国道279号。ここも歩道なし。"
+      }
+    ],
+    "proposedIntro": "本州最北端の大間崎から下風呂温泉郷まで、津軽海峡沿いの集落や国道279号をつなぐ片道約19.7kmの参考コースです。海を望む区間に加えて、海岸の丘を越える起伏や、歩道がなく路肩の狭い一般道を含みます。交通と現地の通行状況を確かめ、無理のない区間で利用してください。補給場所が限られるため飲料や補給食を用意し、ゴールからの交通手段も事前に計画します。",
+    "proposedWarning": {
+      "title": "歩道のない一般道を含みます",
+      "body": "海岸沿いには路肩が狭く、車と距離を取りにくい区間があります。交通量の少なさや安全な通行を保証するコースではありません。現地で歩行空間と通行規制を確認し、危険を感じる区間は利用を避けてください。"
+    },
+    "action": "Retain route; replace unsupported flat/low-traffic/easy wording and distance in parent-owned guide."
+  },
+  {
+    "slug": "sanbesan-loop",
+    "status": "description-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 15132.42,
+    "observations": [
+      {
+        "panoId": "1Ve1_jAXgOf1APY2aEKXgg",
+        "lat": 35.1305374,
+        "lng": 132.6017924,
+        "captured": "2026-05",
+        "observed": "西の原は道路越しに草原と三瓶山の山容が開ける。"
+      },
+      {
+        "panoId": "C5oum6aMLyxqKIAOd9dpqg",
+        "lat": 35.1378157,
+        "lng": 132.6434239,
+        "captured": "2026-08",
+        "observed": "東の原より南東の道路は木々に囲まれ山は見えず、歩道なし。"
+      }
+    ],
+    "proposedIntro": "三瓶山の北の原付近を起点に、東側・三瓶温泉方面・西の原を時計回りにめぐる約15.1kmの参考ロードコースです。西の原では草原越しに山容が開け、ほかには木立に囲まれた道路や起伏のある区間も続きます。歩道のない区間が多いため車の通行と路肩に注意し、距離と標高グラフを確認して計画してください。",
+    "action": "Route retained. Existing counterclockwise wording is reversed: north→east→south→west is clockwise. Replace constant mountain-view wording with observed open/wooded sections."
+  },
+  {
+    "slug": "satsukiyama-ikeda-trail",
+    "status": "description-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 12307.2,
+    "officialSources": [
+      "https://www.city.ikeda.osaka.jp/soshiki/siminseikatsu/sogomadoguchi/shieibochi/21454.html",
+      "https://www.city.ikeda.osaka.jp/material/files/group/101/omote.pdf",
+      "https://www.pref.osaka.lg.jp/o130170/kenshi_kikaku/viewspotosakaproject/viewspot-k-ike1.html"
+    ],
+    "officialFinding": "池田市2026-09-18更新: 日の丸展望台は構造上の危険により2026-09-07から当面立入禁止。霊園と駐車場は通常通り利用可能。既存GPXは展望台の東約138mの道路を通り塔を訪れない。五月平展望台は別施設で、府の参考位置34.833915,135.435480はコース最寄約40m。",
+    "proposedIntro": "阪急池田駅から五月山公園周辺の道と山側の道をつなぎ、東側から市街地へ戻る約12.3kmの参考周回です。五月平展望台付近や木立のある区間を経由し、舗装された一般道・ドライブウェイと山道を含みます。起伏が続くため標高グラフを確認し、明るい時間帯に余裕をもって利用してください。日の丸展望台そのものへ入る経路ではありません。",
+    "proposedWarning": {
+      "title": "日の丸展望台は立ち入り禁止です",
+      "body": "池田市は構造上の危険を理由に、2026年9月7日から日の丸展望台を当面立ち入り禁止としています。掲載経路は塔へ入りません。周辺の通行規制や天候によるドライブウェイの閉鎖は出発前に公式案内と現地で確認してください。",
+      "url": "https://www.city.ikeda.osaka.jp/soshiki/siminseikatsu/sogomadoguchi/shieibochi/21454.html",
+      "linkLabel": "池田市の日の丸展望台利用停止案内"
+    },
+    "action": "Retain GPX; remove claim that route connects Hinomaru tower. Do not use imagery from closed tower."
+  },
+  {
+    "slug": "shinminato-kaiwomaru-loop",
+    "reviewedAt": "2026-10-16",
+    "issue": "経路の説明順と実GPXが異なる。内川の山王橋付近は約10.2kmであり、序盤の越ノ潟の直後ではない。序盤約3kmは工場・草地沿い一般道。",
+    "evidence": [
+      {
+        "pano": "zYuVZaCPx98JfslKGpVfaQ",
+        "lat": 36.7724328,
+        "lng": 137.0957533,
+        "captured": "2021-05",
+        "distanceM": 2986.5,
+        "observed": "鉄塔・倉庫右、草地左の一般道。内川の橋めぐりとは異なる。"
+      },
+      {
+        "pano": "n0I7ezKsRVVz3wc0yVvUXQ",
+        "lat": 36.780859,
+        "lng": 137.0887342,
+        "captured": "2021-06",
+        "distanceM": 10235.41,
+        "observed": "内川山王橋の南詰。西向き川沿い道路。県水質調査山王橋座標とも一致。"
+      }
+    ],
+    "proposedIntro": "海王丸パークの駐車場付近を起点に、越ノ潟、庄川東側の市街地、内川周辺をつなぐ約12.1kmの参考周回です。越ノ潟では新湊大橋を地上から見上げ、後半は内川周辺の橋や町並みを通って海王丸パークへ戻ります。港湾道路や住宅地の一般道も含まれるため、交差点、車両の出入り、歩道のない区間に注意してください。",
+    "routeChangeNeeded": false,
+    "source": "https://www.pref.toyama.jp/documents/7852/r6keikaku.pdf"
   }
 ]

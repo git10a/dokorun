@@ -211,5 +211,107 @@
       "https://makomanai-park.jp/assets/pamphlet/guidemap.jpg"
     ],
     "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "oita-sports-park-happy-road",
+    "status": "route-location-mismatch",
+    "reviewedAt": "2026-10-16",
+    "profileBounds": {
+      "latMin": 33.204104,
+      "latMax": 33.215412,
+      "lngMin": 131.702067,
+      "lngMax": 131.714672
+    },
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 0,
+          "lat": 33.213704,
+          "lng": 131.707654,
+          "elevationM": 50.75
+        },
+        "pano": {
+          "lat": 33.213692,
+          "lng": 131.7076797,
+          "id": "Fupkh3CCy6dIjQj8OWK7KA",
+          "captured": "2026-03"
+        },
+        "sourceUrl": "https://google.com/maps/@33.213692,131.7076797,48a,90y,140h,90t/data=!3m7!1e1!3m5!1sFupkh3CCy6dIjQj8OWK7KA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DFupkh3CCy6dIjQj8OWK7KA%26yaw%3D140!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observation": "畑と竹林に挟まれた細い農道を目視。公式アクセス地図の公園中心33.20072058,131.65588052より約5km東で、全GPXが公園の東へ外れている。"
+      },
+      {
+        "placePoint": {
+          "lat": 33.20072058084624,
+          "lng": 131.65588051519305
+        },
+        "sourceUrl": "https://www.oita-sportspark.jp/access",
+        "observation": "公式公園マップのGoogle埋込座標。ハッピーロード公式お知らせは一周5kmだが、掲載中GPXの東側農道とは位置が合わない。"
+      }
+    ],
+    "officialContext": [
+      "https://www.oita-sportspark.jp/information/2166",
+      "https://www.oita-sportspark.jp/access",
+      "https://www.oita-sportspark.jp/pdf/access_parking.pdf"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "okinawa-athletic-park",
+    "status": "route-mismatch-image-hold",
+    "checkedAt": "2026-10-16",
+    "point": {
+      "lat": 26.315795,
+      "lng": 127.817107,
+      "distanceM": 0
+    },
+    "pano": {
+      "id": "LtQABwwchcSpoFsW3dmzrA",
+      "lat": 26.3157731,
+      "lng": 127.8171192,
+      "captured": "2024-06"
+    },
+    "sourceUrl": "https://google.com/maps/@26.3157731,127.8171192,16a,90y,160h,90t/data=!3m7!1e1!3m5!1sLtQABwwchcSpoFsW3dmzrA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DLtQABwwchcSpoFsW3dmzrA%26yaw%3D160!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-okinawa-mismatch-source.png",
+    "observed": "掲載開始点は比屋根の住宅街。ピンクの集合住宅、駐車車両、電柱、白いガードレールが続き、公式の園内3kmコースではない。既存経路は公園北西の市街地へ広がる。",
+    "officialUrls": [
+      "https://okinawa-kenso.com/?page_id=10",
+      "https://okinawa-kenso.com/?page_id=12",
+      "https://okinawa-kenso.com/wp-content/uploads/2021/01/cd3f3cc4cd398dd11a149744ae61eb1f.pdf"
+    ],
+    "officialEvidence": "公式アクセスの埋込地図中心は26.30979307873134,127.82502621281992。公式住所は比屋根5-3-1。OSM公園relation6213951外周範囲26.3027741..26.3131202,127.8177702..127.8289752と一致する南東側。開始点は外周北端より約300m北で、既存経路は比屋根小学校周辺市街地に展開。",
+    "osmSource": "https://api.openstreetmap.org/api/0.6/map?bbox=127.812,26.300,127.835,26.320",
+    "action": "画像未生成。公式3kmコース図に沿う経路修正を依頼。"
+  },
+  {
+    "slug": "okushizu-long",
+    "issue": "紹介文の温泉終点と公開経路終点に不一致の疑い",
+    "profilePoint": {
+      "distanceM": 48543.41,
+      "lat": 35.283009,
+      "lng": 138.327003
+    },
+    "sourceUrl": "https://google.com/maps/@35.2829369,138.3270294,757a,90y,90t/data=!3m7!1e1!3m5!1sVOlYS4f5tYhIQxX8VCuMyA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DVOlYS4f5tYhIQxX8VCuMyA%26yaw%3D0!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-okushizu-end-source.png",
+    "observed": "Google2012年6月 VOlYS4f5tYhIQxX8VCuMyA。梅ヶ島新田稲荷神社近くの山林道路で温泉施設がない。紹介45.5kmに対し公開距離48.543km。39.614km35.228143,138.330677は直接SV参照なし。30.772km山間道路の画像1枚は実コース約4mで確認済み。",
+    "action": "終点の説明/経路の確認を親へ依頼、終点温泉としての画像は保留。"
+  },
+  {
+    "slug": "otsu-kogan-nagisa-park",
+    "issue": "開始点が紹介文の膳所城跡公園ではなく近江大橋の中央",
+    "profilePoint": {
+      "distanceM": 0,
+      "lat": 34.997203,
+      "lng": 135.902266
+    },
+    "sourceUrl": "https://google.com/maps/@34.9972355,135.9022722,94a,90y,270h,90t/data=!3m7!1e1!3m5!1sdQgdtHocUrxPSZucXuyceA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdQgdtHocUrxPSZucXuyceA%26yaw%3D270!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-otsu-start-source.png",
+    "pano": {
+      "id": "dQgdtHocUrxPSZucXuyceA",
+      "captured": "2024-11",
+      "lat": 34.9972355,
+      "lng": 135.9022722
+    },
+    "observed": "近江大橋の車道から西を向く写真。橋に歩道はあるが開始点は公園ではなく湖上。全長4409.82mに対し紹介は公園から約5km。",
+    "action": "開始点/紹介文の整合を親へ依頼。後続の湖岸画像は確認の上進める。"
   }
 ]

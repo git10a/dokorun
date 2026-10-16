@@ -125,15 +125,15 @@ export function RaceElevationChart({
         </div>
         <dl className="space-y-2 text-sub">
           <div className="flex justify-between">
-            <dt>最低</dt>
+            <dt>{values.length < profile.points.length ? "確認区間の最低" : "最低"}</dt>
             <dd className="font-semibold tabular-nums text-ink">約 {Math.round(minimum)} m</dd>
           </div>
           <div className="flex justify-between">
-            <dt>最高</dt>
+            <dt>{values.length < profile.points.length ? "確認区間の最高" : "最高"}</dt>
             <dd className="font-semibold tabular-nums text-ink">約 {Math.round(maximum)} m</dd>
           </div>
           <div className="flex justify-between">
-            <dt>標高の差</dt>
+            <dt>{values.length < profile.points.length ? "確認区間の標高差" : "標高の差"}</dt>
             <dd className="font-semibold tabular-nums text-ink">{Math.round(maximum - minimum)} m</dd>
           </div>
         </dl>
@@ -310,7 +310,9 @@ export function RaceElevationChart({
         )}
       </div>
       {values.length < profile.points.length && (
-        <p className="mt-1 text-[11px] leading-5 text-sub">標高データのない区間は線を表示していません</p>
+        <p className="mt-1 text-[11px] leading-5 text-sub">
+          {profile.elevationGapNotice ?? "標高データのない区間は線を表示していません"}
+        </p>
       )}
     </div>
   );

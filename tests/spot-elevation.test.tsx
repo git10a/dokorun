@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { spotElevationFromStart, spotDistanceFromStart } from "../src/lib/spot-elevation";
-import { elevationPointAtDistance, type RaceElevation } from "../src/lib/race-elevation";
+import { elevationPointAtDistance, raceElevationGain, type RaceElevation } from "../src/lib/race-elevation";
 import { RaceElevationChart } from "../src/components/race-elevation-chart";
 import spots from "../data/spot-experience/published-spots.json";
 
@@ -39,7 +39,7 @@ describe("spot elevation and map share the selected start", () => {
     };
     expect(spotElevationFromStart(missing, 150, "loop").points[0].elevationM).toBeNull();
   });
-  it("has complete position and elevation data for every published spot, including the page without a guide", () => {
+  it("has complete positions and explicitly documents missing structure heights", () => {
     expect(spots).toHaveLength(251);
     for (const spot of spots) {
       const value = JSON.parse(readFileSync(`public/spot-elevation/${spot.slug}.json`, "utf8")) as RaceElevation;
@@ -50,12 +50,29 @@ describe("spot elevation and map share the selected start", () => {
           (p, i) =>
             Number.isFinite(p.lat) &&
             Number.isFinite(p.lng) &&
-            Number.isFinite(p.elevationM) &&
+            (Number.isFinite(p.elevationM) || (p.elevationM === null && Boolean(value.elevationGapNotice))) &&
             (i === 0 || p.distanceM >= value.points[i - 1].distanceM),
         ),
         spot.slug,
       ).toBe(true);
     }
+  });
+  it("never fabricates Rainbow Bridge deck heights or total ascent", () => {
+    const value = JSON.parse(readFileSync("public/spot-elevation/rainbow-bridge-odaiba.json", "utf8")) as RaceElevation;
+    const correction = JSON.parse(readFileSync("data/spot-experience/route-corrections/rainbow-bridge-odaiba.json", "utf8"));
+    const expected = new Set<number>();
+    for (const gap of correction.elevation.unknownIntervals) {
+      for (let i = gap.startIndex; i <= gap.endIndex; i++) expected.add(i);
+    }
+    expect(expected.size).toBe(393);
+    value.points.forEach((p, i) => expect(p.elevationM === null, `point ${i}`).toBe(expected.has(i)));
+    expect(raceElevationGain(value)).toBeNull();
+    expect(elevationPointAtDistance(value.points, 3400)?.elevationM).toBeNull();
+    const markup = renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={3400} onSelect={() => {}} />);
+    expect(markup).toContain("標高データなし");
+    expect(markup).toContain("橋・高架歩道・階段の高さは未確認");
+    expect(markup).not.toContain("獲得標高<span");
+    expect(markup).toContain("確認区間の最高");
   });
   it("keeps every guide start aligned with the mapped route and the shared chart", () => {
     for (const spot of spots.filter((s) => s.slug !== "midoriko")) {

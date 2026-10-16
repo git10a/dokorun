@@ -18,6 +18,7 @@ type GuideSource = {
   slug: string;
   intro: string;
   warnings: unknown[];
+  elevationGapNotice?: string;
   startPoints: SourceStart[];
   checkpoints: SourcePoint[];
 };
@@ -43,7 +44,8 @@ function buildGuide(slug: string) {
   if (usesLoopStarts && closureGapM > 250) throw new Error(`${slug}: 周回始点を生成するには閉じたGPXが必要です`);
   const points = usesLoopStarts && closureGapM > 5 ? [...parsedPoints, parsedPoints[0]] : parsedPoints;
   const result = gpxResultFromPoints(points);
-  if (!result.elevationProfile) throw new Error(`${slug}: 高低図を生成できる標高データがありません`);
+  if (!result.elevationProfile && !source.elevationGapNotice)
+    throw new Error(`${slug}: 標高欠損には確認済みの説明が必要です`);
 
   const cumulative = cumulativeDistances(points);
   function snap(target: { lat: number; lng: number }, label: string) {
@@ -107,7 +109,7 @@ function buildGuide(slug: string) {
     intro: stripPrepublishSentences(source.intro),
     distanceM: result.distanceM,
     elevationGainM: result.elevationGainM,
-    elevationProfile: result.elevationProfile,
+    elevationProfile: result.elevationProfile ?? [],
     startPoints,
     checkpoints,
   };
@@ -119,7 +121,7 @@ function buildGuide(slug: string) {
         slug: source.slug,
         distanceKm: Number((result.distanceM / 1000).toFixed(2)),
         elevationGainM: result.elevationGainM,
-        elevationSamples: result.elevationProfile.length,
+        elevationSamples: result.elevationProfile?.length ?? 0,
         starts: startPoints.map(({ id, routeDistanceM, snapGapM, gpxHref }) => ({
           id,
           routeDistanceM,

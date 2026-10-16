@@ -10,7 +10,7 @@ const backfill = JSON.parse(readFileSync(resolve("data/course-guides/elevation-b
 const terrainSlugs = new Set(backfill.entries.map((entry) => entry.slug));
 const routeReviews = JSON.parse(readFileSync(resolve("data/spot-experience/route-reviews.json"), "utf8")) as Record<
   string,
-  { status: string; correction?: { elevationSource?: string } }
+  { status: string; correction?: { elevationSource?: string; elevationGapNotice?: string } }
 >;
 const elevationCorrections = new Set(
   readdirSync(resolve("data/spot-experience/elevation-corrections"))
@@ -38,6 +38,8 @@ for (const file of readdirSync(resolve("data/gpx"))
     if (gap > 5) points.push({ ...points[0] });
   }
   const profile = raceElevationFromPoints(points);
+  const gapNotice = routeReviews[slug]?.correction?.elevationGapNotice;
+  if (gapNotice) profile.elevationGapNotice = gapNotice;
   if (routeReviews[slug]?.status === "route-mismatch") profile.routeReviewRequired = true;
   if (guide && Math.abs(profile.points.at(-1)!.distanceM - guide.distanceM) > 1)
     throw new Error(`${slug}: guide distance mismatch`);

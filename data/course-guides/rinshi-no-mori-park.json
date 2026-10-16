@@ -1,127 +1,80 @@
 {
   "slug": "rinshi-no-mori-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "旧林業試験場の跡地を生かした都立公園で、武蔵小山駅から徒歩10分の住宅街に広がる緑豊かなスポットです。代表コースは公園の外周を巡る1周約2.2kmで、大木の並木に囲まれた木陰の多い道が続きます。舗装路主体で適度なカーブと小さな起伏があり、日常のジョグやゆったりしたペース走に向いています。夏でも比較的涼しく走れるのが魅力で、東京都公園協会のジョギングカテゴリにも掲載されています。園内にトイレがあり、駐車場はないため公共交通の利用が基本です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "林試の森公園の園内をめぐる約1.6kmの参考周回。南門の北約70mにある園路分岐から、大きな広場、プラタナスの広場、せせらぎ橋、東側の芝生広場をめぐって戻ります。林業試験場時代からの木立を楽しめる道で、一部に短い階段があります。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公認のランニングコースではなく、園内図と公開地図に基づく参考ルートです。散策や遊びで利用する人を優先し、階段や混雑箇所は歩いて通過してください。行事・整備による通行規制は現地案内に従ってください。 プラタナスの広場北西と六角堂付近の短い階段は歩いて通過してください。",
+      "url": "https://www.tokyo-park.or.jp/park/rinshinomori/rinshinomori_map_jpn_2512.pdf",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 東急目黒線 武蔵小山駅から徒歩10分。バス「林試の森入口」から徒歩1分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "武蔵小山駅方面から南門へ。南門の北約70mにある園路分岐を参考起点にしています。",
+      "url": "https://www.tokyo-park.or.jp/park/rinshinomori/",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "武蔵小山駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.620538,
-      "destinationLng": 139.704524,
-      "routeAnchorLat": 35.62393,
-      "routeAnchorLng": 139.699811,
+      "name": "南門北側の園路分岐",
+      "badge": "園路からスタート",
+      "destinationLat": 35.6246197,
+      "destinationLng": 139.7025204,
+      "routeAnchorLat": 35.6246197,
+      "routeAnchorLng": 139.7025204,
       "routeMode": "loop",
-      "accessText": "武蔵小山駅からコースまで約570m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "武蔵小山駅方面から南門へ。南門の北約70mにある園路分岐を参考起点にしています。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "現地案内に沿って園路を進み、階段と混雑箇所は歩いて通過してください。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.62393,
-      "anchorLng": 139.699811,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 羅漢寺川 プロムナード（東京都目黒区）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Rakanji_River_Promenade_in_Meguro%2C_Tokyo.jpg/960px-Rakanji_River_Promenade_in_Meguro%2C_Tokyo.jpg",
-        "alt": "林試の森公園のスタート周辺付近",
-        "caption": "林試の森公園の走路近隣で撮影された風景",
-        "credit": "Doricono",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rakanji_River_Promenade_in_Meguro,_Tokyo.jpg"
-      }
+      "name": "南門北側の分岐",
+      "anchorLat": 35.6246197,
+      "anchorLng": 139.7025204,
+      "description": "現地案内に沿って園路を進み、階段と混雑箇所は歩いて通過してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.622466,
-      "anchorLng": 139.704196,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 都立林試の森公園：水車",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg",
-        "alt": "林試の森公園の序盤区間付近",
-        "caption": "林試の森公園の走路近隣で撮影された風景",
-        "credit": "koji_h",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg"
-      }
+      "name": "西側の木立",
+      "anchorLat": 35.625666949999996,
+      "anchorLng": 139.70001630000002,
+      "description": "現地案内に沿って園路を進み、階段と混雑箇所は歩いて通過してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.624786,
-      "anchorLng": 139.707173,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 白井権八 ・小紫 比翼塚 。東京都 目黒区 目黒不動尊 龍泉寺 門前。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hiyoku-zuka_Monument_at_Ryusenji.jpg/960px-Hiyoku-zuka_Monument_at_Ryusenji.jpg",
-        "alt": "林試の森公園の中盤区間付近",
-        "caption": "林試の森公園の走路近隣で撮影された風景",
-        "credit": "Doricono",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hiyoku-zuka_Monument_at_Ryusenji.jpg"
-      }
+      "name": "せせらぎ橋方面",
+      "anchorLat": 35.6252102,
+      "anchorLng": 139.7038262,
+      "description": "現地案内に沿って園路を進み、階段と混雑箇所は歩いて通過してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.626777,
-      "anchorLng": 139.705637,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 本居長世 記念碑。東京都 目黒区 目黒不動尊 龍泉寺 境内。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Motoori_Nagayo_Monument.jpg/960px-Motoori_Nagayo_Monument.jpg",
-        "alt": "林試の森公園の後半区間付近",
-        "caption": "林試の森公園の走路近隣で撮影された風景",
-        "credit": "Doricono",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Motoori_Nagayo_Monument.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.62599,
-      "anchorLng": 139.701242,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 都立林試の森公園：水車",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg/960px-%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg",
-        "alt": "林試の森公園の終盤区間付近",
-        "caption": "林試の森公園の走路近隣で撮影された風景",
-        "credit": "koji_h",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%BD%E7%AB%8B%E6%9E%97%E8%A9%A6%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%EF%BC%9A%E6%B0%B4%E8%BB%8A_-_panoramio.jpg"
-      }
+      "name": "東側の芝生広場方面",
+      "anchorLat": 35.6256529,
+      "anchorLng": 139.7062003,
+      "description": "現地案内に沿って園路を進み、階段と混雑箇所は歩いて通過してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.tokyo-park.or.jp/park/rinshinomori/rinshinomori_map_jpn_2512.pdf",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

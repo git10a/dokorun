@@ -302,5 +302,123 @@
       "elevationSource": "gsi",
       "method": "CUA Chromeで2048x1016版の園内図を目視。北が画面右。Aコース赤点線1,100mは北エリア外周、B青点線900mは園内、C緑180mは西エリア。再構成はAだけ。 OSM footwayとsidewalkをつないだ閉ループ。公開地図を照合した参考GPX、公式測量線そのものではない。公園側外周歩道を通り、道路横断なし、地下道・階段なし。"
     }
+  },
+  "nanakita-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園の北側の市街地周回で、公式冊子の別公園の3.2km表記を誤って七北田へ当てはめていた。",
+    "evidence": "data/spot-experience/batch-1/nanakita-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/nanakita-park.json",
+      "elevationSource": "gsi",
+      "method": "2014年の公式ウォーキング冊子の両面と2026年公式ガイドを目視照合。七北田はA2.5km・B1.3kmで、3.2kmは別の水の森公園。西側の園路、四阿周辺、河川沿い、池周辺の繋がりをOSM14waysに沿って確認した。A全周の東側はOSM接続が途切れて駅方面へ迂回するため採用せず、西側を単独周回。温室内のbuilding_passageを除外し、建物西側の屋外園路へ修正済み。旧起点38.328015,140.882793は公園から北へ約1km離れた市街地で不採用。"
+    }
+  },
+  "niigata-sports-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXはビッグスワン周辺の狭い区域を何度も反復し、公式の公園全体5kmコースを示していなかった。",
+    "evidence": "data/spot-experience/batch-2/niigata-sports-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/niigata-sports-park.json",
+      "elevationSource": "gsi",
+      "method": "公式図を全体と南側拡大で目視。野球場、芝生広場、連絡通路、ビッグスワン東側、鳥屋野潟北端、レストハウス、列柱廊、駐車場北側折返しを照合した。 GSI航空写真に経路を重ね、建物・競技場内部・水面・駐車枠を横切らず、舗装園路と広場をたどることを目視。 同一辺の重複は道路下連絡通路と公式図に描かれた短い折返しの4辺のみ。競技場内部の反復や距離を増やす周回はない。 参考距離は5,120m。公式5,000mに合わせるための人工的な距離調整は行わず、2.4%の差を明記する。"
+    }
+  },
+  "okumusashi-izugatake": {
+    "status": "corrected-reference-route",
+    "reason": "現GPXは危険な男坂の5点と一致。県公式2024/09図は男坂と閉道女坂の間の道を正式ルートとしており、現OSM登山道の西側迂回と対応する。分岐点と合流点は既存GPXと一致。",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/okumusashi-izugatake.json",
+      "method": "Only the 197m Otokozaka section replaced with the official detour; remainder preserved.",
+      "elevationSource": "gsi"
+    }
+  },
+  "oita-sports-park-happy-road": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園の約5km東側の農道にあり、ハッピーロードの場所と一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/oita-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/oita-sports-park-happy-road.json",
+      "elevationSource": "gsi",
+      "method": "公式ハッピーロード5km図の西側往復・南西駐車場一周・ドーム南半周・北東の投てき場外周の順番を照合。1kmは西側園路入口、2kmは西側駐車場付近、3kmは西側復路、4kmはドーム南側となり、案内図の位置関係と一致。OSMネットワークの欠けた4接続を補間し、北西の約97mは開けた舗装広場、東側約7mは投てき場入口、西側約15mは車道沿い園路入口であることを360画像で目視。北側駐車場縁の約3mは公開地図上の園路・駐車場通路間の接続。旧GPXは公園の約5km東側の農道で全体不採用。"
+    }
+  },
+  "okinawa-athletic-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園北側の住宅街を通り、公式の園内コースと一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/okinawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/okinawa-athletic-park.json",
+      "elevationSource": "gsi",
+      "method": "公式3/4/5kmコースPDFの3km図と公式公園案内図を目視照合。陸上競技場東→蹴球場北→テニスコート外側→東側の橋→海側南外周→南側池西→みどりのかけ橋→陸上競技場東を接続した。公式3km図の競技場南西にある短いU字部分は、正確な折返し園路形状を確定できないため含めない参考ルート。大通りは通らず、東側はbridge=yesのway207835105、南側は公式図みどりのかけ橋と重なるway207422816を採用。池西歩道way1509545124の端点2か所は公園サービス通路との隙間4.92m/2.48mを接続。現地起点の360は取得できず、南側パドルボート付近の2021-11画像では広場・駐車場・施設位置の整合を確認したが、端点を直接目視した証拠とはしていない。"
+    }
+  },
+  "rinshi-no-mori-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園南東の住宅街に外れており、園内周回の説明と一致しなかった。",
+    "evidence": "data/spot-experience/batch-2/rinshi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/rinshi-no-mori-park.json",
+      "elevationSource": "gsi",
+      "method": "公式2025/12園内図の園路・ランドマーク配置を、OSM footway/path/pedestrian/stepsの接続済み中心線18wayと照合。公園外の住宅街・羅漢寺川プロムナードは通さず、園内だけを一周。area境界や距離合わせの重複なし。 公式園内図とルート描画を目視照合。大きな広場を西から回り、中央せせらぎ橋を越えて芝生広場の北と南を回る形状が一致。南東住宅街へは出ない。"
+    }
+  },
+  "odaka-ryokuchi": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPX bbox35.045〜35.049,136.944〜136.951は共知IC付近の一般道。親がGoogle2025-02 pano R74dA0FgrnFklSEZjqnaSA (35.0456648,136.9512315)で高速道路下と確認。",
+    "evidence": "data/spot-experience/batch-3/odaka-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/odaka-ryokuchi.json",
+      "elevationSource": "gsi",
+      "method": "大高緑地の公式エンジョイコース約2.5kmの西側周回を参考に、つつじの道(OSM495379573)と中央園路を一周。OSM495457886/495457877は通路が面として登録されるため、対向する境界の中点を使い通路中央を推定。駐車枠・ゴーカートコース・施設内部・階段は通らない。公開図を参照した参考線で、公式GPXや測量線ではない。距離合わせの追加周回は行っていない。 現行公式サイトのリンク先2023年施設図・公式ウォーキング図・2017年バリアマップをCUAで目視。エンジョイコースは園内西側を巡る約2.5km、クロスカントリーは別の約1.3km。今回の参考線は西側大周回約2.4km。つつじの道と中央の園路を一周し、公式距離に合わせるための折返しや重複は付加しない。"
+    }
+  },
+  "rainbow-bridge-odaiba": {
+    "status": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "reason": "旧経路が車道ループを通るため歩道へ修正",
+    "evidence": "data/spot-experience/batch-3/rainbow-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/rainbow-bridge-odaiba.json",
+      "elevationSource": "gsi",
+      "elevationGapNotice": "橋・高架歩道・階段の高さは未確認のため、その区間を空白で表示しています。地上部分の標高だけではコース全体の上り下りを表せないため、獲得標高は表示していません。",
+      "method": "公式パンフレットの北南遊歩道と芝浦入口を確認し、公開OSM歩道グラフのみで品川側街路と台場側公園・プロムナードを接続。車道を経路として不使用。エレベーター前の建物内接続線はOSMによる概略。"
+    }
+  },
+  "seaside-momochi": {
+    "status": "corrected-reference-route",
+    "reason": "旧3.8km経路は百道浜西端から南のマリナ通り・室見川西岸へ往復し、百道浜の海浜遊歩道と不一致。",
+    "evidence": "data/spot-experience/batch-2/momochi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/seaside-momochi.json",
+      "elevationSource": "gsi",
+      "method": "Official beach map and OSM promenade compared with visually inspected Street View at west end, Central Plaza ground level, and eastern bridge approach. Route excludes all upper decks and bridges."
+    }
+  },
+  "otsu-kogan-nagisa-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧起点は近江大橋中央。旧1,418m点は湖岸から離れた住宅街。旧GPXは中盤で国道/市街地を通り北側でも湖岸歩行者園路より道路寄り。単純な起点移動では公園コースの説明と一致しない。",
+    "evidence": "data/spot-experience/batch-1/otsu-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/otsu-kogan-nagisa-park.json",
+      "elevationSource": "gsi",
+      "method": "滋賀県観光公式は浜大津〜近江大橋の湖岸一帯を公園と説明。公園管理者の主な公園一覧と大津市2026-03-24の湖岸施設/交通案内図でびわ湖ホールと湖岸範囲を照合。旧2024091246.pdfと県5560197.pdfは404で根拠に採用しない。 びわ湖ホール西側の陸上湖岸園路35.0077767,135.8751448から大津港東側の湖岸園路35.0136121,135.865051へ進む片道1,247.99m。OSMのfoot designated cycleway/pathと小水路の歩道橋を接続。建物通路/私有地/階段を除外。手動接続なし、重複辺なし。"
+    }
   }
 }

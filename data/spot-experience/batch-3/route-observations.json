@@ -241,5 +241,182 @@
     "suggestedIntro": "岡山市中心部の運動公園で、総合グラウンド外周の歩道と一部園路をつなぐ約2.5kmの参考周回です。北側や西側は車道沿いの並木道を進み、園内には木陰や競技施設が点在します。掲載経路は第1駐車場の車両通路も通るため、その区間は歩いて車の出入りに注意してください。園内は歩行者を優先し、大会やイベント時の規制は現地案内に従ってください。",
     "suggestedWarning": "約1.65km付近に第1駐車場内の車両通路を通る区間があります。駐車車両の間を走り抜けず、周囲を確認して歩いて通過してください。外周歩道でも自転車・歩行者・交差点を優先してください。",
     "copyToRemove": "都市型周回スポットとして実装しやすい。夜間照明の全経路保証も出典が弱いため使用しない。"
+  },
+  {
+    "slug": "okumusashi-yugate-monomiyama",
+    "reviewedAt": "2026-10-16",
+    "status": "minor-copy-accuracy",
+    "observed": "profile合計13,192.38m。鎌北湖西端5775mと高指山付近10342mの舗装道路を目視確認。ユガテ/山道の一部はSVなし、物見山山頂はGoogle場所ページに360写真メニューなし。",
+    "suggestedEdits": [
+      "実測約13.2kmは参考経路約13.2kmに変更（再構成GPXは実測と呼ばない）。",
+      "よく踏まれた走りやすい登山道は削除または木の根や段差のある登山道と舗装道路をつなぐに変更。",
+      "鎌北湖のトイレは町公式で確認できるが、自販機と中間補給の営業は未確認のため、水・補給食の事前携行を案内。"
+    ],
+    "sources": [
+      "https://www.town.moroyama.saitama.jp/soshikikarasagasu/sangyoshinkoka/kanko_tokusan/2/4/2918.html"
+    ]
+  },
+  {
+    "slug": "oshima-komatsugawa-park",
+    "reviewedAt": "2026-10-16",
+    "status": "minor-copy-accuracy",
+    "observed": "現行公式ページからリンクされる園内図とprofileを照合。掲載経路は自由の広場外周約0.8kmで旧中川に架かるさくら大橋・もみじ大橋を通らない。南側と東側の舗装園路をGoogle2011年3月SVで目視。",
+    "sources": [
+      "https://tokyo-eastpark.com/parksearch/ohjima",
+      "https://tokyo-eastpark.com/wp-content/uploads/page/map_ojima.pdf"
+    ],
+    "suggestedIntro": "大島小松川公園の自由の広場を囲む、約800mの参考周回です。広い芝生や木立を眺めながら舗装園路を進みます。東大島駅からアクセスでき、短いジョグや日常のウォーキングに使いやすい場所です。広場やアスレチック、バーベキュー場の利用者を優先し、混雑時は歩いて通過してください。",
+    "copyToRemove": "橋のゆるい上り下りを含む、園内で安全に周回、夜も比較的明るい区間が多め。千本桜は周辺施設として案内可能だが当周回が桜並木を通るとの断定はしない。"
+  },
+  {
+    "slug": "rainbow-bridge-odaiba",
+    "reviewedAt": "2026-10-16",
+    "status": "route-repair-proposed",
+    "routeFile": "/tmp/spot-route-repair/rainbow-route.json",
+    "distanceM": 12597.256659097708,
+    "sourceUrls": [
+      "https://www.kouwan.metro.tokyo.lg.jp/kanko/road/rainbowbridge",
+      "https://www.kouwan.metro.tokyo.lg.jp/data/pamphlet/rainbow",
+      "https://www.kouwan.metro.tokyo.lg.jp/documents/d/kouwan/28825_rainbowbridge",
+      "https://www.kouwan.metro.tokyo.lg.jp/kanko/running2/odaiba"
+    ],
+    "observations": [
+      {
+        "type": "rejected-old-course",
+        "oldDistanceM": 3001.94,
+        "coursePoint": {
+          "lat": 35.636237,
+          "lng": 139.757219
+        },
+        "pano": {
+          "id": "c4BD7JAAzFrRNScZNhGCbQ",
+          "lat": 35.6362445,
+          "lng": 139.7572433,
+          "captured": "2026-08",
+          "heading": 90
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.6362445,139.7572433,23a,90y,90h,90t/data=!3m7!1e1!3m5!1sc4BD7JAAzFrRNScZNhGCbQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dc4BD7JAAzFrRNScZNhGCbQ%26yaw%3D90!7i16384!8i8192",
+        "observed": "赤舗装の車道ループ上。黄中央線・車両・赤白バリケード・右金網と海。歩行者用の通路はない。旧GPXはループを一周し橋へ合流する形であり遊歩道の経路ではない。"
+      },
+      {
+        "type": "accepted-entrance",
+        "pano": {
+          "id": "iVXy0sJPiX_oJu32XD2DJw",
+          "lat": 35.6382582,
+          "lng": 139.7591273,
+          "captured": "2017-06",
+          "heading": 180
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.6382582,139.7591273,8a,90y,180h,90t/data=!3m7!1e1!3m5!1siVXy0sJPiX_oJu32XD2DJw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DiVXy0sJPiX_oJu32XD2DJw%26yaw%3D180!7i13312!8i6656",
+        "observed": "北から芝浦アンカレイジ入口へ渡る屋根付き歩行通路・金属手すり・緑色床、入口係員・白い大建物。OSM319209548の入口位置と一致。車道ループは通らない。"
+      }
+    ],
+    "method": "公式パンフレットの北南遊歩道と芝浦入口を確認し、公開OSM歩道グラフのみで品川側街路と台場側公園・プロムナードを接続。車道を経路として不使用。エレベーター前の建物内接続線はOSMによる概略。",
+    "geometryNotes": [
+      "南508040811を芝浦→台場、北508040812を台場→芝浦。北南の進行方向は提案経路の選択であり、現地一方通行規制を断定しない。",
+      "台場側は出入口の階段508040814を使用。お台場海浜公園→ウエストプロムナード→ダイバーシティ前屋外広場→センタープロムナード→テレポートブリッジ→台場側入口。Zeppゲート・商業施設内通路は使わない。",
+      "橋以外にも高架歩道・階段を含む。1073点、地形DEM採用680点、構造物区間393点はele:null。獲得標高は非表示。"
+    ],
+    "operatingRules": {
+      "summer": "4月1日〜10月31日 9:00〜21:00",
+      "winter": "11月1日〜3月31日 10:00〜18:00",
+      "lastEntry": "閉館30分前",
+      "closed": "第3月曜日（祝日なら翌日）、天候・メンテナンスによる臨時閉鎖あり",
+      "walking": "橋遊歩道・階段・混雑する観光広場は歩行区間として案内。公式は他の歩行者に支障となる行為禁止。全面的なランニング禁止とは記載しない。"
+    },
+    "elevationNotes": "橋面標高・勾配の確かな数値がこの公式パンフレットにないため推測しない。橋/高架/階段はnullとし、前後を高さ補間しない。OSM長直線の15m分割はXY座標のみ。"
+  },
+  {
+    "slug": "saga-castle-moat",
+    "reviewedAt": "2026-10-16",
+    "status": "copy-route-accuracy",
+    "observed": "北側の掲載経路は県庁前の堀沿いのみではなく、県庁敷地の通路・旧館北の玄関付近を迂回する。profile584.77m点33.249617,130.299488の最近傍Street Viewは43m北の構内車路へ移動し、Google2024年4月4_BkRuNAx1ZSBd2VC5MUDwでは右に旧館、左に緑地、青塗装の交差部と横断歩道が見える。採用画像にはしない。旧館OSMrelation7022500の玄関部外形に593.48m/600.97mの2点が重なるが、屋内を通り抜けるとは断定できない。",
+    "sources": [
+      "https://www.pref.saga.lg.jp/kiji00313405/index.html",
+      "https://www.pref.saga.lg.jp/kiji00313405/3_13405_5_sagap.pdf",
+      "https://www.google.com/maps/@33.249993,130.2993861,6a,90y,90h,90t/data=!3m7!1e1!3m5!1s4_BkRuNAx1ZSBd2VC5MUDw!2e0!7i16384!8i8192"
+    ],
+    "suggestedIntro": "佐賀城跡周辺のお堀沿いと県庁周辺の通路・街路をつなぐ、約3.6kmの参考周回です。水面やクスノキなどの木立を眺めながら進み、周辺には佐賀城本丸歴史館や県立博物館・美術館があります。掲載経路には構内通路や道路との交差部も含まれます。歩行者や車の出入りを優先し、混雑する場所や県庁の玄関付近は歩いて通過してください。",
+    "suggestedWarning": "県庁周辺は来庁者と車両を優先してください。施設入口や構内の規制がある場合は、現地案内に従って公道側の歩道へ回ってください。",
+    "copyToRemove": "堀の外周だけを一周する、インターバルの単位にしやすい。公園共用路でスピード練習を勧めない。"
+  },
+  {
+    "slug": "saiko-doman-green-park",
+    "reviewedAt": "2026-10-16",
+    "status": "copy-distance-accuracy",
+    "observed": "掲載profileの水平距離5080.14mで約5.1km。西岸1129.78mと東岸3590.29mで湖沿い舗装路を2016年11月ユーザー360写真から目視。旧introは別の4.2kmの紹介と掲載候補選定用の内部文言が混在。公式の2025年11月〜2026年3月23日予定工事告知は過去予定であり、現在の通行止めとは断定しない。",
+    "sources": [
+      "https://www.toda-kousha.com/park/saikodoman/",
+      "https://www.toda-kousha.com/news/entry_2927/"
+    ],
+    "suggestedIntro": "彩湖の湖沿いと道満グリーンパーク周辺の舗装路をつなぐ、約5.1kmの参考周回です。西側は水面を広く眺める開けた道、東側には木立や広場に沿う区間があり、景色の変化を楽しめます。歩行者や自転車が利用する共用路なので、お互いに道を譲り合って進んでください。園内にはトイレや駐車場があり、武蔵浦和駅からバスでもアクセスできます。",
+    "suggestedWarning": "道満グリーンパークの利用時間は7:30〜18:30、11〜3月は17:30閉園です。日差しや強風、雨後の路面、イベント・工事の現地規制に注意してください。",
+    "copyToRemove": "設備面の検証性も高め、目的地認識がしやすい、首都圏枠でも皇居系と重ならない独立した掲載候補。4.2kmを掲載経路距離と混同しない。"
+  },
+  {
+    "slug": "saitama-stadium-park",
+    "reviewedAt": "2026-10-16",
+    "status": "copy-distance-and-event-rules",
+    "observed": "掲載profileは1868.32m。公式guide_19/guide_3の公園概要はジョギングコース2.2kmと記載し、旧guide.htmlの1.8kmと異なる。掲載経路は独自参考周回として約1.9kmを明示。現地Google2020年3月南広場はブロック舗装、2012年11月東側は黒灰舗装。全面ウレタンや全面フラットを現行保証しない。",
+    "sources": [
+      "https://www.stadium2002.com/guide_19.html",
+      "https://www.stadium2002.com/guide_3.html"
+    ],
+    "suggestedIntro": "埼玉スタジアム2002公園の南広場や木立に沿う園路をつなぐ、約1.9kmの参考周回です。南側ではスタジアムの大きな屋根を間近に眺め、東側では植栽に囲まれた道を進みます。公式に案内されているジョギングコースは2.2kmで、この掲載経路とは距離が異なります。散歩や公園利用の人を優先し、混雑する広場や出入口では歩いて通過してください。",
+    "suggestedWarning": "Jリーグなど大規模イベントの開催時は園内の一部利用や駐車場が制限されます。広場・駐車場の供用は原則7:00〜21:00、5〜8月は6:00〜21:00。出発前に公式イベント情報と現地案内を確認してください。",
+    "copyToRemove": "人気ランスポット、全面ウレタンチップ・フラットの断定、混雑時も含む観戦前後ランやビルドアップの推奨。"
+  },
+  {
+    "slug": "sanno-park-fukuoka",
+    "reviewedAt": "2026-10-16",
+    "status": "route-mismatch-images-held",
+    "observed": "現profile1024.54m・18点は山王公園内のジョギング周回ではなく周辺街路を含む。起点は公園東側一般道交差点、564.35mは山王通り車道。園内のゴムチップ500m/1kmという公式説明をそのまま適用できない。",
+    "sources": [
+      "https://yokanavi.com/features/74419",
+      "https://www.google.com/maps/@33.5815077,130.4331506,7a,90y,270h,90t/data=!3m7!1e1!3m5!1sToGNrt2vlvN7Rdm2m3SVog!2e0!7i16384!8i8192",
+      "https://www.google.com/maps/@33.5820637,130.429606,7a,90y,90h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDat-ektAE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-b8QSbn6H2kNDTidx4sl0ZUduNOdqkG8ORdj_4UPH7rcevIXH0ivq6BTQdSiCXy-j1zWop1NE08yk6cLVBV90qhNzDDUuRwsc54Gfi5XsJpfoLDvwt09E6HBrw6_NnG7zMM_fDSg%3Dw900-h600-k-no-pi0-ya109.05831909179688-ro0-fo100!7i6720!8i3360"
+    ],
+    "panoramas": [
+      {
+        "coursePoint": {
+          "distanceM": 0,
+          "lat": 33.581555,
+          "lng": 130.4331434
+        },
+        "id": "ToGNrt2vlvN7Rdm2m3SVog",
+        "lat": 33.5815077,
+        "lng": 130.4331506,
+        "captured": "2024-12",
+        "observed": "西向き、前方赤茶マンションと一般道、右奥に公園。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 564.35,
+          "lat": 33.58201,
+          "lng": 130.4296227
+        },
+        "id": "CIHM0ogKEICAgIDat-ektAE",
+        "lat": 33.5820637,
+        "lng": 130.429606,
+        "captured": "2020-05",
+        "contributor": "potaro67",
+        "observed": "東向き山王通りの複数車線、商業ビルとマンション。園内走路ではない。"
+      }
+    ]
+  },
+  {
+    "slug": "sayama-hills-totoro-trail",
+    "reviewedAt": "2026-10-16",
+    "status": "copy-conservation-boundary",
+    "observed": "掲載経路は早稲田大学西側から六道山の展望塔足元まで往復8660.51m。Google2024年3月2044m点は両側に柵のある約2m砂利路、2017年11月折返しは舗装広場。地域一帯を基金所有トトロの森と呼ぶ旧introは範囲の誤解がある。基金公式ではトトロの森は丘陵に点在する取得地であり、森へ立ち入らず散策路から見る案内。",
+    "sources": [
+      "https://www.totoro.or.jp/intro/",
+      "https://www.totoro.or.jp/intro/stroll_guide/",
+      "https://sayamaparks.com/kouen/noyama/",
+      "https://sayamaparks.com/news/news-4029/"
+    ],
+    "suggestedIntro": "早稲田大学所沢キャンパスの西側から狭山丘陵の道をたどり、六道山公園の展望塔付近まで往復する約8.7kmの参考ルートです。雑木林の砂利道や土の道を中心に進み、六道山では広場でひと息つけます。狭山丘陵にはナショナル・トラストで守られる「トトロの森」が点在しています。保全地や柵の内側へ入らず、決められた道を利用してください。散策者とすれ違う場所や狭い区間では歩き、雨後のぬかるみや落枝に注意しましょう。",
+    "suggestedWarning": "自然保全地へ入らず散策路を利用し、歩行者を優先してください。日没前に戻れる計画で、水分を携帯してください。2026年9〜12月予定の里山民家工事は別エリアであり、この尾根往復全体の閉鎖とは扱いません。",
+    "copyToRemove": "地域一帯がトトロの森の保全地域、起伏が緩やかなので入門向き、未確認の自販機を断定。"
   }
 ]

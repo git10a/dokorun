@@ -29,7 +29,10 @@ describe("course guides", () => {
       expect(guide.startPoints.length, guide.slug).toBeGreaterThanOrEqual(1);
       // Checkpoints describe actual landmarks or turnarounds; short loops need not invent five sections.
       expect(guide.checkpoints.length, guide.slug).toBeGreaterThanOrEqual(2);
-      expect(guide.elevationProfile.length, guide.slug).toBeGreaterThanOrEqual(2);
+      if (guide.elevationGapNotice) {
+        expect(guide.elevationProfile, guide.slug).toEqual([]);
+        expect(guide.elevationGainM, guide.slug).toBeNull();
+      } else expect(guide.elevationProfile.length, guide.slug).toBeGreaterThanOrEqual(2);
       expect(guide.warnings.length, guide.slug).toBeGreaterThanOrEqual(2);
       expect(
         guide.startPoints.every((start) => start.gpxHref.startsWith(`/gpx/${guide.slug}-`)),
