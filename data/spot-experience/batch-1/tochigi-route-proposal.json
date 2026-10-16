@@ -1,0 +1,63 @@
+{
+  "slug": "tochigi-prefectural-sports-park",
+  "reviewedAt": "2026-10-16",
+  "routePath": "/tmp/spot-route-repair/tochigi-route.json",
+  "plotPath": "/tmp/spot-route-repair/tochigi-route-draft.png",
+  "officialMapPath": "/tmp/spot-route-repair/tochigi-jogging.png",
+  "sourceUrls": [
+    "https://www.gsz-northcentralarea.com/facility/runningcourse.html",
+    "https://www.gsz-northcentralarea.com/content/files/pdf/20230316-045014.pdf"
+  ],
+  "distanceM": 3216.34,
+  "pointCount": 331,
+  "startPoint": {
+    "lat": 36.5091113,
+    "lng": 139.8600148,
+    "ele": 92.83
+  },
+  "courseNameProposal": "中央エリア園路 約3.2km参考周回",
+  "introProposal": "栃木県総合運動公園の中央エリアをめぐる、約3.2kmの参考周回ルートです。本球場、サッカー・ラグビー場、水生植物園、第2陸上競技場の外周を園路でつなぎます。公園公式の3kmモデルコースを参考にしていますが、掲載距離は地図上の経路から算出しています。歩行者を優先し、反時計回りで走ってください。",
+  "warningsProposal": [
+    {
+      "title": "反時計回り・歩行者優先",
+      "body": "管理者はランニング時の反時計回りを案内しています。公園利用者や競技場の出入口では減速し、混雑時は歩行してください。",
+      "url": "https://www.gsz-northcentralarea.com/facility/runningcourse.html",
+      "linkLabel": "公式ジョギング・ウォーキングコース"
+    },
+    {
+      "title": "大会開催時は現地の案内を確認",
+      "body": "競技会やイベント時は園路・施設・駐車場の利用条件が変わる場合があります。規制や誘導を優先し、競技場内には入らず外周園路を利用してください。"
+    }
+  ],
+  "startPointProposal": {
+    "id": "central-entrance",
+    "name": "中央エントランス内側",
+    "badge": "中央エリアから",
+    "destinationLat": 36.5091113,
+    "destinationLng": 139.8600148,
+    "routeAnchorLat": 36.5091113,
+    "routeAnchorLng": 139.8600148,
+    "routeMode": "loop",
+    "accessText": "公園南側の中央エントランスから園内へ。各駐車場や駅からは公式案内に従ってアクセスしてください。",
+    "facilitiesText": "公園内のトイレ・休憩施設の利用時間を現地で確認してください。",
+    "firstSection": "本球場の南側から東側へ進み、園路を反時計回りにつなぎます。"
+  },
+  "review": [
+    "中央エリア公式3kmモデルを園路へ対応した3216m参考周回。測量コースとの同一距離を保証しない。",
+    "OSM pedestrian area内の可視的短絡を利用。競技場・池・遊園地内を横切らないことをプロットで目視確認。",
+    "本球場北東の広い舗装接続は公式図と2022-09実パノラマCIHM0ogKEICAgICe4deo2QEを照合し約44mを補間。",
+    "方向は中央エントランス→本球場南東→サッカー・ラグビー場反時計回り→水生植物園→相撲場南→第2陸上競技場北西南→中央エントランス。"
+  ],
+  "limitations": "公式モデル図は概略であり、GPXは測量値・大会公認コースではない。舗装広場内ではOSM areaの内側を通る経路、1か所は公式図と現地360により補間。旧GPXは住宅街のため全置換。",
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14556/6404.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14557/6404.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14557/6405.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  }
+}

@@ -493,5 +493,54 @@
       "https://www.park-tochigi.com/sougou/",
       "https://www.park-tochigi.com/tochinoki/wp/wp-content/uploads/2023/04/TFL-P2023.pdf"
     ]
+  },
+  {
+    "slug": "tokushima-central-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "徳島城跡の城山を囲む、約1.95kmの参考周回ルートです。南側の石垣沿いから北側の川沿いまで、園路で公園の景色を楽しめます。JR徳島駅からアクセスしやすく、短いジョグにも周回を重ねる練習にも使えます。掲載ルートは城山の山頂には登りません。園内は歩行者を優先し、混雑時は減速してください。",
+    "review": "掲載profileは1952.34m、旧紹介の城山外周1.7kmと区別。南東石垣と北側園路を現地画像で確認。",
+    "sources": [
+      "https://www.city.tokushima.tokushima.jp/shisetsu/park/chuo.html"
+    ]
+  },
+  {
+    "slug": "tamako-cycling-road",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "多摩湖（村山貯水池）周辺の自転車歩行者道をつなぐ、約11.8kmの参考周回ルートです。堤防からの開けた眺めと、狭山丘陵の木々に囲まれた道の変化を楽しめます。湖畔の道には緩い上り下りがあり、自転車や歩行者とすれ違う場所ではペースを落としてください。出発前にトイレや補給場所を確認しておくと安心です。",
+    "review": "起伏はわずか・安定したペース走との旧断定を避け、森の上り下り・共有路を明示。",
+    "sources": [
+      "https://www.city.higashiyamato.lg.jp/kurashi/midokoro/1003873/1007191/1007192.html"
+    ]
+  },
+  {
+    "slug": "tsuzuki-central-park",
+    "status": "route-mismatch-and-replacement-proposed",
+    "oldDistanceM": 1940.9,
+    "oldPoint": {
+      "distanceM": 510.1,
+      "lat": 35.544774,
+      "lng": 139.573516
+    },
+    "sourceUrl": "https://google.com/maps/@35.5447035,139.5734871,39a,80y,230h,90t/data=!3m7!1e1!3m5!1sw3LYdct5dAdxqA03ARQseQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dw3LYdct5dAdxqA03ARQseQ%26yaw%3D230!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "Google2016-12のpano w3LYdct5dAdxqA03ARQseQ はセンター南駅前広場。既存経路の全点が公園南の商業・住宅地で、池と里山園路を通らない。",
+    "proposalFile": "tsuzuki-route-proposal.json"
+  },
+  {
+    "slug": "wangan-ariake-kasai",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "東京ビッグサイト付近を起点に、新木場・若洲・葛西臨海公園をつなぐ約31.8kmの参考ロングルートです。若洲では東京ゲートブリッジのたもとの園路へ立ち寄り、荒川河口橋を渡って葛西臨海公園の園路を巡ります。水辺や広い公園の眺めを楽しみながら、歩道・橋の歩道・園路をつないで戻ります。",
+    "reason": "現起点35.631737,139.792364はビッグサイト側であり旧intro有明北の水辺と区別。信号数/ほぼノンストップ/コンビニの限定数は確認できず断定を削除。",
+    "warningsProposal": [
+      "長距離のため、水分や補給、途中で切り上げる駅を事前に確認してください。",
+      "交差点・橋の歩道・公園では歩行者と交通ルールを優先し、混雑時は歩いてください。",
+      "若洲の橋たもとや園内で工事・規制がある場合は、現地案内に従ってください。"
+    ],
+    "sources": [
+      "https://www.tptc.co.jp/park/03_07",
+      "https://www.tokyo-park.or.jp/park/kasairinkai/"
+    ]
   }
 ]

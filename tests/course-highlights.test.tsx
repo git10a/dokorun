@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { getCourseGuide } from "@/lib/course-guides";
 import { LongCourseGuide } from "@/components/long-course-guide";
+import { CourseAtmosphere } from "@/components/course-atmosphere";
 import { SpotCourseMap } from "@/components/spot-course-map";
 import { courseAtmospheres } from "@/lib/course-atmosphere";
 
@@ -53,10 +54,17 @@ describe("course highlights", () => {
       const section = html.slice(html.indexOf('<section id="highlights"'));
       expect(section).toContain("コースの雰囲気");
       expect(section.match(/<figure/g)).toHaveLength(courseAtmospheres[slug].scenes.length);
-      expect(section).toContain("ストリートビューを参考にしたAI生成イメージ");
+      const scenes = courseAtmospheres[slug].scenes;
+      const official = scenes.filter((scene) => scene.referenceType === "official-photo").length;
+      expect(section).toContain(
+        official ? "現地の写真を参考にしたAI生成イメージ" : "ストリートビューを参考にしたAI生成イメージ",
+      );
       expect(section.match(/AI生成の参考イメージ<\/p>/g)).toHaveLength(courseAtmospheres[slug].scenes.length);
-      expect(section.match(/の地点をコース地図で見る/g)).toHaveLength(courseAtmospheres[slug].scenes.length);
-      expect(section.match(/参考地点を地図で見る/g)).toHaveLength(courseAtmospheres[slug].scenes.length);
+      expect(section.match(/の地点をコース地図で見る/g) ?? []).toHaveLength(
+        scenes.filter((scene) => scene.coursePoint).length,
+      );
+      expect(section.match(/参考地点を地図で見る/g) ?? []).toHaveLength(scenes.length - official);
+      expect(section.match(/参考にした公式写真を見る/g) ?? []).toHaveLength(official);
       expect(section).not.toContain("からの順番");
       expect(section).not.toContain("wikimedia.org");
       expect(section).not.toContain("・0.0km");
@@ -67,6 +75,31 @@ describe("course highlights", () => {
       }
     },
   );
+
+  it("does not invent a mapped position or Street View source for an official facility photograph", () => {
+    const html = renderToStaticMarkup(
+      createElement(CourseAtmosphere, {
+        atmosphere: {
+          scenes: [
+            {
+              id: "official",
+              title: "競技場の全景",
+              description: "公式写真を参考にした全景",
+              imageSrc: "/course-atmosphere/example.webp",
+              referenceUrl: "https://www.tef.or.jp/tmg/stadium/index.html",
+              referenceType: "official-photo",
+              referenceTitle: "東京体育館",
+            },
+          ],
+        },
+        onSelectPoint: () => {},
+      }),
+    );
+    expect(html).toContain("現地の写真を参考にしたAI生成イメージ");
+    expect(html).toContain("参考にした公式写真を見る");
+    expect(html).not.toContain("コース上で見る");
+    expect(html).not.toContain("ストリートビュー");
+  });
 
   it("omits empty photo sections and generic substitute cards while keeping route and access controls", async () => {
     const html = await renderGuide("hattori-ryokuchi", true);

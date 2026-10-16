@@ -92,7 +92,7 @@ async function main() {
   for (const file of readdirSync(elevationDir).filter(
     (name) => name.endsWith(".json") && !name.endsWith("-before.json"),
   )) {
-    const { slug } = JSON.parse(readFileSync(resolve(elevationDir, file), "utf8"));
+    const { slug, source } = JSON.parse(readFileSync(resolve(elevationDir, file), "utf8"));
     if (existsSync(resolve(dir, file))) throw new Error(`${slug}: route and elevation-only correction overlap`);
     const beforeFile = resolve(elevationDir, `${slug}-before.json`);
     const previous = existsSync(beforeFile)
@@ -106,7 +106,7 @@ async function main() {
     if (!previous) throw new Error(`${slug}: primary course missing`);
     if (!existsSync(beforeFile)) writeFileSync(beforeFile, JSON.stringify(previous, null, 2) + "\n");
     const profile = JSON.parse(readFileSync(resolve("public/spot-elevation", `${slug}.json`), "utf8")) as RaceElevation;
-    if (profile.source !== "gsi" || profile.routeReviewRequired)
+    if ((source !== "preserve-existing" && profile.source !== "gsi") || profile.routeReviewRequired)
       throw new Error(`${slug}: elevation correction not ready`);
     const gain = raceElevationGain(profile);
     if (gain === previous.elevation_gain_m) continue;

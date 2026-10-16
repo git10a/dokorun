@@ -1,47 +1,45 @@
 {
   "slug": "tamagawa-marukobashi-furuichiba",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "多摩川河川敷の丸子橋〜古市場区間は、首都圏でも屈指の定番河川敷ランです。代表設定は片道約3.5kmを往復する7kmで、ほぼ砂利混じりのフラット路面をノンストップで進めます。視界が開けていて流れを保ちやすく、地元の走友会や大会でもよく使われる実績があります。ジョグやLSDはもちろん、マラソン練習の巡航走、一定ペースでのフォーム確認、信号を避けたい日の距離走に非常に使いやすい区間です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "丸子橋の川崎側河川敷から、ガス橋をくぐって古市場陸上競技場の下流側出入口付近まで往復する約7.3kmの参考コース。土手下の砂利道を中心に、橋の周辺など一部の舗装区間をつなぐ。広い空とグラウンドを眺めながら走れ、距離は途中で折り返して調整できる。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "園内の走行と参考ルートについて",
+      "body": "駐車場やグラウンドへの進入路を横切る箇所では車両を確認してください。散歩や自転車などほかの利用者に配慮し、増水時・工事中は現地の通行規制に従ってください。掲載ルートは地図と公園案内を照合した参考線で、公式大会の計測コースではありません。",
+      "url": "https://www.city.kawasaki.jp/530/page/0000077936.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 東急東横線・目黒線 新丸子駅から丸子橋まで徒歩7分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "東急東横線・目黒線の新丸子駅から丸子橋の川崎側へ向かい、河川敷の散策路へ下ります。橋の下流側にある走路を起点にしてください。",
+      "url": "https://www.city.kawasaki.jp/530/page/0000020718.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "新丸子駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.58049,
-      "destinationLng": 139.661964,
-      "routeAnchorLat": 35.579498,
-      "routeAnchorLng": 139.665917,
+      "name": "丸子橋・川崎側の河川敷走路（橋の下流側）",
+      "badge": "園路からスタート",
+      "destinationLat": 35.5842369,
+      "destinationLng": 139.666201,
+      "routeAnchorLat": 35.5842369,
+      "routeAnchorLng": 139.666201,
       "routeMode": "forward",
-      "accessText": "新丸子駅からコースまで約370m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "東急東横線・目黒線の新丸子駅から丸子橋の川崎側へ向かい、河川敷の散策路へ下ります。橋の下流側にある走路を起点にしてください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "橋の下流側から河川敷の走路を進みます。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.579498,
-      "routeLng": 139.665917,
-      "elevationM": 13.8,
+      "routeLat": 35.5842369,
+      "routeLng": 139.666201,
+      "elevationM": 6,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 1477,
-        "section-3": 2950,
-        "section-4": 2950,
-        "section-5": 1477
+        "section-2": 2426,
+        "section-3": 3637
       },
       "gpxHref": "/gpx/tamagawa-marukobashi-furuichiba-start-1.gpx"
     }
@@ -49,427 +47,355 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.579498,
-      "anchorLng": 139.665917,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 焼売炒飯弁当けっこう好き。 [1]",
-      "surfaceLabel": "未舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/%E7%84%BC%E5%A3%B2%E7%82%92%E9%A3%AF%E5%BC%81%E5%BD%93_%286562197273%29.jpg/960px-%E7%84%BC%E5%A3%B2%E7%82%92%E9%A3%AF%E5%BC%81%E5%BD%93_%286562197273%29.jpg",
-        "alt": "多摩川河川敷 丸子橋〜古市場のスタート周辺付近",
-        "caption": "多摩川河川敷 丸子橋〜古市場の走路近隣で撮影された風景",
-        "credit": "zenjiro",
-        "license": "CC BY 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%84%BC%E5%A3%B2%E7%82%92%E9%A3%AF%E5%BC%81%E5%BD%93_(6562197273).jpg"
-      },
+      "name": "丸子橋・川崎側の河川敷走路（橋の下流側）",
+      "anchorLat": 35.5842369,
+      "anchorLng": 139.666201,
+      "description": "橋の下流側から河川敷の走路を進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.579498,
-      "routeLng": 139.665917,
-      "elevationM": 13.8,
+      "routeLat": 35.5842369,
+      "routeLng": 139.666201,
+      "elevationM": 6,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.568357,
-      "anchorLng": 139.672878,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Kawasaki, Kanagawa skyline.jpg",
-      "surfaceLabel": "未舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Kawasaki%2C_Kanagawa_skyline.jpg/960px-Kawasaki%2C_Kanagawa_skyline.jpg",
-        "alt": "多摩川河川敷 丸子橋〜古市場の序盤区間付近",
-        "caption": "多摩川河川敷 丸子橋〜古市場の走路近隣で撮影された風景",
-        "credit": "浜っ子",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawasaki,_Kanagawa_skyline.jpg"
-      },
-      "routePointIndex": 63,
-      "routeDistanceM": 1477,
-      "routeLat": 35.568357,
-      "routeLng": 139.672878,
-      "elevationM": 7,
+      "name": "ガス橋付近",
+      "anchorLat": 35.56422725,
+      "anchorLng": 139.67655539999998,
+      "description": "橋の下を通る舗装区間。河川敷の出入りやほかの利用者に注意してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 181,
+      "routeDistanceM": 2426,
+      "routeLat": 35.5642273,
+      "routeLng": 139.6765554,
+      "elevationM": 3.2,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.562802,
-      "anchorLng": 139.683202,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: This picture was taken at \"GAS bashi\" bridge,where is over the Tama river.",
-      "surfaceLabel": "未舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tama_River_in_sunset.jpg/960px-Tama_River_in_sunset.jpg",
-        "alt": "多摩川河川敷 丸子橋〜古市場の中盤区間付近",
-        "caption": "多摩川河川敷 丸子橋〜古市場の走路近隣で撮影された風景",
-        "credit": "Sotaro.Hikosaka",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tama_River_in_sunset.jpg"
-      },
-      "routePointIndex": 105,
-      "routeDistanceM": 2950,
-      "routeLat": 35.562802,
-      "routeLng": 139.683202,
-      "elevationM": 4.8,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.562802,
-      "anchorLng": 139.683202,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: This picture was taken at \"GAS bashi\" bridge,where is over the Tama river.",
-      "surfaceLabel": "未舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tama_River_in_sunset.jpg/960px-Tama_River_in_sunset.jpg",
-        "alt": "多摩川河川敷 丸子橋〜古市場の後半区間付近",
-        "caption": "多摩川河川敷 丸子橋〜古市場の走路近隣で撮影された風景",
-        "credit": "Sotaro.Hikosaka",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tama_River_in_sunset.jpg"
-      },
-      "routePointIndex": 105,
-      "routeDistanceM": 2950,
-      "routeLat": 35.562802,
-      "routeLng": 139.683202,
-      "elevationM": 4.8,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.568357,
-      "anchorLng": 139.672878,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Kawasaki, Kanagawa skyline.jpg",
-      "surfaceLabel": "未舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Kawasaki%2C_Kanagawa_skyline.jpg/960px-Kawasaki%2C_Kanagawa_skyline.jpg",
-        "alt": "多摩川河川敷 丸子橋〜古市場の終盤区間付近",
-        "caption": "多摩川河川敷 丸子橋〜古市場の走路近隣で撮影された風景",
-        "credit": "浜っ子",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawasaki,_Kanagawa_skyline.jpg"
-      },
-      "routePointIndex": 63,
-      "routeDistanceM": 1477,
-      "routeLat": 35.568357,
-      "routeLng": 139.672878,
-      "elevationM": 7,
+      "name": "古市場陸上競技場・下流側出入口付近の河川敷走路",
+      "anchorLat": 35.5563168,
+      "anchorLng": 139.6856098,
+      "description": "ここで折り返して丸子橋側へ戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 274,
+      "routeDistanceM": 3637,
+      "routeLat": 35.5563168,
+      "routeLng": 139.6856098,
+      "elevationM": 5.3,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.city.kawasaki.jp/530/page/0000077936.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 7379,
-  "elevationGainM": 53,
+  "distanceM": 7274,
+  "elevationGainM": 14,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 13.8
+      "elevationM": 6
     },
     {
       "distanceM": 100,
-      "elevationM": 13.8
+      "elevationM": 6
     },
     {
       "distanceM": 199,
-      "elevationM": 11.8
+      "elevationM": 5.8
     },
     {
       "distanceM": 299,
-      "elevationM": 13.3
+      "elevationM": 5.5
     },
     {
       "distanceM": 399,
-      "elevationM": 12.3
+      "elevationM": 5
     },
     {
-      "distanceM": 499,
-      "elevationM": 9.3
+      "distanceM": 498,
+      "elevationM": 4.9
     },
     {
       "distanceM": 598,
-      "elevationM": 10.4
+      "elevationM": 4.8
     },
     {
       "distanceM": 698,
-      "elevationM": 10.5
+      "elevationM": 4.6
     },
     {
-      "distanceM": 798,
-      "elevationM": 11.2
+      "distanceM": 797,
+      "elevationM": 4.4
     },
     {
       "distanceM": 897,
-      "elevationM": 8.9
-    },
-    {
-      "distanceM": 997,
-      "elevationM": 9.4
-    },
-    {
-      "distanceM": 1097,
-      "elevationM": 10.8
-    },
-    {
-      "distanceM": 1197,
-      "elevationM": 10.4
-    },
-    {
-      "distanceM": 1296,
-      "elevationM": 10.4
-    },
-    {
-      "distanceM": 1396,
-      "elevationM": 8
-    },
-    {
-      "distanceM": 1496,
-      "elevationM": 6.6
-    },
-    {
-      "distanceM": 1595,
-      "elevationM": 6.1
-    },
-    {
-      "distanceM": 1695,
       "elevationM": 4.8
     },
     {
-      "distanceM": 1795,
-      "elevationM": 2.9
-    },
-    {
-      "distanceM": 1895,
-      "elevationM": 3.3
-    },
-    {
-      "distanceM": 1994,
-      "elevationM": 5.1
-    },
-    {
-      "distanceM": 2094,
-      "elevationM": 7.4
-    },
-    {
-      "distanceM": 2194,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 2293,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 2393,
-      "elevationM": 6.3
-    },
-    {
-      "distanceM": 2493,
-      "elevationM": 7.2
-    },
-    {
-      "distanceM": 2593,
-      "elevationM": 8
-    },
-    {
-      "distanceM": 2692,
-      "elevationM": 10.4
-    },
-    {
-      "distanceM": 2792,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 2892,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 2991,
-      "elevationM": 3.9
-    },
-    {
-      "distanceM": 3091,
-      "elevationM": 7.2
-    },
-    {
-      "distanceM": 3191,
-      "elevationM": 10.7
-    },
-    {
-      "distanceM": 3291,
-      "elevationM": 6.6
-    },
-    {
-      "distanceM": 3390,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 3490,
-      "elevationM": 2.9
-    },
-    {
-      "distanceM": 3590,
-      "elevationM": 1.8
-    },
-    {
-      "distanceM": 3689,
-      "elevationM": 2.7
-    },
-    {
-      "distanceM": 3789,
-      "elevationM": 1.8
-    },
-    {
-      "distanceM": 3889,
-      "elevationM": 2.9
-    },
-    {
-      "distanceM": 3989,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 4088,
-      "elevationM": 6.6
-    },
-    {
-      "distanceM": 4188,
-      "elevationM": 10.7
-    },
-    {
-      "distanceM": 4288,
-      "elevationM": 7.2
-    },
-    {
-      "distanceM": 4387,
-      "elevationM": 3.9
-    },
-    {
-      "distanceM": 4487,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 4587,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 4687,
-      "elevationM": 10.4
-    },
-    {
-      "distanceM": 4786,
-      "elevationM": 8
-    },
-    {
-      "distanceM": 4886,
-      "elevationM": 7.2
-    },
-    {
-      "distanceM": 4986,
-      "elevationM": 6.3
-    },
-    {
-      "distanceM": 5085,
-      "elevationM": 5.5
-    },
-    {
-      "distanceM": 5185,
-      "elevationM": 5.8
-    },
-    {
-      "distanceM": 5285,
-      "elevationM": 7.4
-    },
-    {
-      "distanceM": 5385,
-      "elevationM": 5.1
-    },
-    {
-      "distanceM": 5484,
-      "elevationM": 3.3
-    },
-    {
-      "distanceM": 5584,
-      "elevationM": 2.9
-    },
-    {
-      "distanceM": 5684,
+      "distanceM": 996,
       "elevationM": 4.8
     },
     {
-      "distanceM": 5783,
-      "elevationM": 6.1
+      "distanceM": 1096,
+      "elevationM": 4.7
     },
     {
-      "distanceM": 5883,
-      "elevationM": 6.6
+      "distanceM": 1196,
+      "elevationM": 4.4
     },
     {
-      "distanceM": 5983,
-      "elevationM": 8
+      "distanceM": 1295,
+      "elevationM": 4.4
     },
     {
-      "distanceM": 6083,
-      "elevationM": 10.4
+      "distanceM": 1395,
+      "elevationM": 4.3
     },
     {
-      "distanceM": 6182,
-      "elevationM": 10.4
+      "distanceM": 1495,
+      "elevationM": 4.3
     },
     {
-      "distanceM": 6282,
-      "elevationM": 10.8
+      "distanceM": 1594,
+      "elevationM": 4.2
     },
     {
-      "distanceM": 6382,
-      "elevationM": 9.4
+      "distanceM": 1694,
+      "elevationM": 3.8
     },
     {
-      "distanceM": 6481,
-      "elevationM": 8.9
+      "distanceM": 1794,
+      "elevationM": 3.5
     },
     {
-      "distanceM": 6581,
-      "elevationM": 11.2
+      "distanceM": 1893,
+      "elevationM": 3.4
     },
     {
-      "distanceM": 6681,
-      "elevationM": 10.5
+      "distanceM": 1993,
+      "elevationM": 3.3
     },
     {
-      "distanceM": 6781,
-      "elevationM": 10.4
+      "distanceM": 2093,
+      "elevationM": 3.3
     },
     {
-      "distanceM": 6880,
-      "elevationM": 9.3
+      "distanceM": 2192,
+      "elevationM": 3.5
     },
     {
-      "distanceM": 6980,
-      "elevationM": 12.3
+      "distanceM": 2292,
+      "elevationM": 3.6
     },
     {
-      "distanceM": 7080,
-      "elevationM": 13.3
+      "distanceM": 2391,
+      "elevationM": 3.7
     },
     {
-      "distanceM": 7179,
-      "elevationM": 11.8
+      "distanceM": 2491,
+      "elevationM": 3.6
     },
     {
-      "distanceM": 7279,
-      "elevationM": 13.8
+      "distanceM": 2591,
+      "elevationM": 4.2
     },
     {
-      "distanceM": 7379,
-      "elevationM": 13.8
+      "distanceM": 2690,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 2790,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 2890,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 2989,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3089,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3189,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 3288,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 3388,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3488,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 3587,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 3687,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 3786,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 3886,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 3986,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 4085,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 4185,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 4285,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 4384,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 4484,
+      "elevationM": 3.9
+    },
+    {
+      "distanceM": 4584,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 4683,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 4783,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 4883,
+      "elevationM": 3.7
+    },
+    {
+      "distanceM": 4982,
+      "elevationM": 3.6
+    },
+    {
+      "distanceM": 5082,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5182,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 5281,
+      "elevationM": 3.3
+    },
+    {
+      "distanceM": 5381,
+      "elevationM": 3.4
+    },
+    {
+      "distanceM": 5480,
+      "elevationM": 3.5
+    },
+    {
+      "distanceM": 5580,
+      "elevationM": 3.8
+    },
+    {
+      "distanceM": 5680,
+      "elevationM": 4.2
+    },
+    {
+      "distanceM": 5779,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 5879,
+      "elevationM": 4.3
+    },
+    {
+      "distanceM": 5979,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 6078,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 6178,
+      "elevationM": 4.7
+    },
+    {
+      "distanceM": 6278,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 6377,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 6477,
+      "elevationM": 4.4
+    },
+    {
+      "distanceM": 6577,
+      "elevationM": 4.6
+    },
+    {
+      "distanceM": 6676,
+      "elevationM": 4.8
+    },
+    {
+      "distanceM": 6776,
+      "elevationM": 4.9
+    },
+    {
+      "distanceM": 6875,
+      "elevationM": 5
+    },
+    {
+      "distanceM": 6975,
+      "elevationM": 5.5
+    },
+    {
+      "distanceM": 7075,
+      "elevationM": 5.8
+    },
+    {
+      "distanceM": 7174,
+      "elevationM": 6
+    },
+    {
+      "distanceM": 7274,
+      "elevationM": 6
     }
   ]
 }

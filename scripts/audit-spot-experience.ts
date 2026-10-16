@@ -8,7 +8,8 @@ const entries = spots.map((spot) => {
   const profile = existsSync(profilePath) ? (JSON.parse(readFileSync(profilePath, "utf8")) as RaceElevation) : null;
   const scenes = courseAtmospheres[spot.slug]?.scenes ?? [];
   const ready = scenes.filter((s) => {
-    if (!s.coursePoint || !profile || !existsSync(`public${s.imageSrc}`)) return false;
+    if (!profile || !existsSync(`public${s.imageSrc}`)) return false;
+    if (!s.coursePoint) return s.referenceType === "official-photo" && Boolean(s.referenceTitle && s.referenceUrl);
     const distance = s.coursePoint.distanceM;
     if (!Number.isFinite(distance) || distance < 0 || distance > profile.points.at(-1)!.distanceM) return false;
     const point = elevationPointAtDistance(profile.points, distance);

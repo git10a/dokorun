@@ -10,11 +10,23 @@ const backfill = JSON.parse(readFileSync(resolve("data/course-guides/elevation-b
 const terrainSlugs = new Set(backfill.entries.map((entry) => entry.slug));
 const routeReviews = JSON.parse(readFileSync(resolve("data/spot-experience/route-reviews.json"), "utf8")) as Record<
   string,
-  { status: string; correction?: { elevationSource?: string; elevationGapNotice?: string } }
+  {
+    status: string;
+    correction?: {
+      elevationSource?: string;
+      elevationGapNotice?: string;
+      elevationAttribution?: { label: string; url: string };
+    };
+  }
 >;
 const elevationCorrections = new Set(
   readdirSync(resolve("data/spot-experience/elevation-corrections"))
     .filter((file) => file.endsWith(".json") && !file.endsWith("-before.json"))
+    .filter(
+      (file) =>
+        JSON.parse(readFileSync(resolve("data/spot-experience/elevation-corrections", file), "utf8")).source !==
+        "preserve-existing",
+    )
     .map((file) => file.slice(0, -5)),
 );
 const out = resolve("public/spot-elevation");
@@ -29,7 +41,11 @@ for (const file of readdirSync(resolve("data/gpx"))
   if (points.length < 2) throw new Error(`${slug}: missing course`);
   const guidePath = resolve("public/course-guides", `${slug}.json`);
   const guide = existsSync(guidePath)
-    ? (JSON.parse(readFileSync(guidePath, "utf8")) as { distanceM: number; startPoints: { routeMode: string }[]; elevationGapNotice?: string })
+    ? (JSON.parse(readFileSync(guidePath, "utf8")) as {
+        distanceM: number;
+        startPoints: { routeMode: string }[];
+        elevationGapNotice?: string;
+      })
     : null;
   // Match build-course-guide exactly so each start and scene keeps its distance axis.
   if (guide?.startPoints.some((start) => start.routeMode === "loop")) {
@@ -50,6 +66,8 @@ for (const file of readdirSync(resolve("data/gpx"))
       label: "Open-Meteo 標高データを加工（CC BY 4.0）",
       url: "https://open-meteo.com/en/docs/elevation-api",
     };
+  if (routeReviews[slug]?.correction?.elevationAttribution)
+    profile.attribution = routeReviews[slug].correction!.elevationAttribution;
   writeFileSync(resolve(out, `${slug}.json`), JSON.stringify(profile));
   summaries[slug] = { elevationGainM: raceElevationGain(profile) };
   count++;

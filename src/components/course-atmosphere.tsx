@@ -15,7 +15,9 @@ export function CourseAtmosphere({
       <div>
         <SectionHeading>コースの雰囲気</SectionHeading>
         <p className="mt-2 text-sm leading-6 text-sub">
-          現地のストリートビューを参考にしたAI生成イメージです。季節や現在の景観とは異なる場合があります。
+          {atmosphere.scenes.some((scene) => scene.referenceType === "official-photo")
+            ? "現地の写真を参考にしたAI生成イメージです。季節や現在の景観とは異なる場合があります。"
+            : "現地のストリートビューを参考にしたAI生成イメージです。季節や現在の景観とは異なる場合があります。"}
         </p>
         {atmosphere.direction === "counterclockwise" && (
           <p className="mt-2 text-sm font-bold">皇居を反時計回りに走る視点</p>
@@ -53,7 +55,7 @@ export function CourseAtmosphere({
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-accent underline underline-offset-4"
               >
-                参考地点を地図で見る
+                {scene.referenceType === "official-photo" ? "参考にした公式写真を見る" : "参考地点を地図で見る"}
                 <ExternalLink size={12} aria-hidden="true" />
               </a>
             </figcaption>

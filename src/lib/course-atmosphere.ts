@@ -6,6 +6,8 @@ export type CourseAtmosphereScene = {
   description: string;
   imageSrc: string;
   referenceUrl: string;
+  referenceType?: "official-photo";
+  referenceTitle?: string;
   coursePoint?: { distanceM: number; lat: number; lng: number };
 };
 
@@ -180,5 +182,5 @@ export const courseAtmospheres: Record<string, CourseAtmosphere> = {
       },
     ],
   },
-  ...additionalAtmospheres,
+  ...(additionalAtmospheres as Record<string, CourseAtmosphere>),
 };

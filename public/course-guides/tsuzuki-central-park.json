@@ -1,47 +1,46 @@
 {
   "slug": "tsuzuki-central-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "都筑中央公園はセンター南駅近くでショートトレイルの感覚を味わえる貴重な公園です。代表周回は約1.7kmで、土路面と舗装路が混ざり、谷戸地形を生かした上り下りが連続します。池や樹林、展望広場など変化が多く、短くても単調になりません。ロードシューズでも走れますが、接地感覚や体幹の安定を求められるため、クロカン練習、坂耐性づくり、ロードだけでは不足しがちな脚まわりの補強に向いています。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "都筑中央公園の宮谷戸大池北側から、木々に囲まれた園路と広場を巡る約1.4kmの参考周回ルートです。里山の上り下りを味わいながら、宮谷戸やばじょうじ谷戸、展望広場周辺をたどります。階段では歩き、散策する人のペースを優先して楽しみましょう。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式に距離認定されたランニングコースではなく、園内案内図と歩道データをもとにした参考経路です。 階段を3区間含みます。階段・狭い道では歩き、散策者や子どもを優先してください。 舗装路と土の園路が混在します。雨後のぬかるみや落ち葉、木の根に注意してください。 園路の工事・通行止めやイベント時は、現地案内を優先してください。",
+      "url": "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/koen/koen/daihyoteki/tuduki-park.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 横浜市営地下鉄ブルーライン・グリーンライン センター南駅から徒歩5分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "横浜市営地下鉄センター南駅から公園の南東側へ。園内案内図を確認し、宮谷戸大池の北東側園路へ向かってください。",
+      "url": "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/koen/koen/daihyoteki/tuduki-park.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "センター南駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.545863,
-      "destinationLng": 139.574325,
-      "routeAnchorLat": 35.546332,
-      "routeAnchorLng": 139.571752,
+      "name": "宮谷戸大池 北東側園路",
+      "badge": "園路からスタート",
+      "destinationLat": 35.5481926,
+      "destinationLng": 139.5722031,
+      "routeAnchorLat": 35.5481926,
+      "routeAnchorLng": 139.5722031,
       "routeMode": "loop",
-      "accessText": "センター南駅からコースまで約240m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "横浜市営地下鉄センター南駅から公園の南東側へ。園内案内図を確認し、宮谷戸大池の北東側園路へ向かってください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "池北側の園路から木立の中へ進みます。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.546332,
-      "routeLng": 139.571752,
-      "elevationM": 28.8,
+      "routeLat": 35.5481926,
+      "routeLng": 139.5722031,
+      "elevationM": 25.1,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 391,
-        "section-3": 755,
-        "section-4": 1168,
-        "section-5": 1567
+        "section-2": 249,
+        "section-3": 660,
+        "section-4": 989
       },
       "gpxHref": "/gpx/tsuzuki-central-park-start-1.gpx"
     }
@@ -49,211 +48,138 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.546332,
-      "anchorLng": 139.571752,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 横浜市営地下鉄・センター南駅改札口",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Yokohama_Municipal_Subway_Center-Minami_Station_concourse.jpg/960px-Yokohama_Municipal_Subway_Center-Minami_Station_concourse.jpg",
-        "alt": "都筑中央公園のスタート周辺付近",
-        "caption": "都筑中央公園の走路近隣で撮影された風景",
-        "credit": "掬茶",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama_Municipal_Subway_Center-Minami_Station_concourse.jpg"
-      },
+      "name": "宮谷戸大池の北東側",
+      "anchorLat": 35.5481926,
+      "anchorLng": 139.5722031,
+      "description": "池北側の園路から木立の中へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.546332,
-      "routeLng": 139.571752,
-      "elevationM": 28.8,
+      "routeLat": 35.5481926,
+      "routeLng": 139.5722031,
+      "elevationM": 25.1,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.545392,
-      "anchorLng": 139.573386,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 横浜市営地下鉄・センター南駅",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg/960px-Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg",
-        "alt": "都筑中央公園の序盤区間付近",
-        "caption": "都筑中央公園の走路近隣で撮影された風景",
-        "credit": "掬茶",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg"
-      },
-      "routePointIndex": 12,
-      "routeDistanceM": 391,
-      "routeLat": 35.545392,
-      "routeLng": 139.573386,
-      "elevationM": 32.5,
+      "name": "北側の林間園路",
+      "anchorLat": 35.549443350000004,
+      "anchorLng": 139.57034305000002,
+      "description": "階段のある区間は歩いて進んでください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 26,
+      "routeDistanceM": 249,
+      "routeLat": 35.5494434,
+      "routeLng": 139.5703431,
+      "elevationM": 50.5,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.543789,
-      "anchorLng": 139.574515,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 横浜市営地下鉄・センター南駅",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg/960px-Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg",
-        "alt": "都筑中央公園の中盤区間付近",
-        "caption": "都筑中央公園の走路近隣で撮影された風景",
-        "credit": "掬茶",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg"
-      },
-      "routePointIndex": 33,
-      "routeDistanceM": 755,
-      "routeLat": 35.543789,
-      "routeLng": 139.574515,
-      "elevationM": 38.8,
+      "name": "西側の園路",
+      "anchorLat": 35.548553,
+      "anchorLng": 139.5677321,
+      "description": "散策利用者と譲り合い、見通しの悪い箇所で減速してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 66,
+      "routeDistanceM": 660,
+      "routeLat": 35.548553,
+      "routeLng": 139.5677321,
+      "elevationM": 39.5,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.543777,
-      "anchorLng": 139.571886,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 横浜市営地下鉄・センター南駅",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg/960px-Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg",
-        "alt": "都筑中央公園の後半区間付近",
-        "caption": "都筑中央公園の走路近隣で撮影された風景",
-        "credit": "掬茶",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama_Municipal_Subway_Center-Minami_Station_exterior.jpg"
-      },
-      "routePointIndex": 48,
-      "routeDistanceM": 1168,
-      "routeLat": 35.543777,
-      "routeLng": 139.571886,
-      "elevationM": 51.5,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.545102,
-      "anchorLng": 139.569321,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 横浜市都筑区のショッピングモール、サウスウッド。国内初となる耐火木造の大型商業施設である。",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Southwood_20150201-3.jpg/960px-Southwood_20150201-3.jpg",
-        "alt": "都筑中央公園の終盤区間付近",
-        "caption": "都筑中央公園の走路近隣で撮影された風景",
-        "credit": "掬茶",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Southwood_20150201-3.jpg"
-      },
-      "routePointIndex": 66,
-      "routeDistanceM": 1567,
-      "routeLat": 35.545102,
-      "routeLng": 139.569321,
-      "elevationM": 41.8,
+      "name": "南側の園路",
+      "anchorLat": 35.5475174,
+      "anchorLng": 139.5694743,
+      "description": "土の路面や木の根に注意し、池側へ戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 100,
+      "routeDistanceM": 989,
+      "routeLat": 35.5475174,
+      "routeLng": 139.5694743,
+      "elevationM": 44.6,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/koen/koen/daihyoteki/tuduki-park.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 1941,
-  "elevationGainM": 29,
+  "distanceM": 1433,
+  "elevationGainM": 59,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 28.8
+      "elevationM": 25.1
     },
     {
-      "distanceM": 97,
-      "elevationM": 30.4
+      "distanceM": 96,
+      "elevationM": 42.7
     },
     {
-      "distanceM": 194,
-      "elevationM": 31.4
+      "distanceM": 191,
+      "elevationM": 48.8
     },
     {
-      "distanceM": 291,
-      "elevationM": 30
+      "distanceM": 287,
+      "elevationM": 47.3
     },
     {
-      "distanceM": 388,
-      "elevationM": 32.5
+      "distanceM": 382,
+      "elevationM": 48.2
     },
     {
-      "distanceM": 485,
-      "elevationM": 36.5
+      "distanceM": 478,
+      "elevationM": 50.2
     },
     {
-      "distanceM": 582,
-      "elevationM": 37.6
+      "distanceM": 573,
+      "elevationM": 46.9
     },
     {
-      "distanceM": 679,
-      "elevationM": 34.8
+      "distanceM": 669,
+      "elevationM": 39.4
     },
     {
-      "distanceM": 776,
-      "elevationM": 39.3
+      "distanceM": 764,
+      "elevationM": 25.3
     },
     {
-      "distanceM": 873,
-      "elevationM": 42.5
+      "distanceM": 860,
+      "elevationM": 32.2
     },
     {
-      "distanceM": 970,
-      "elevationM": 46
+      "distanceM": 955,
+      "elevationM": 40
     },
     {
-      "distanceM": 1067,
-      "elevationM": 48.5
+      "distanceM": 1051,
+      "elevationM": 50.6
     },
     {
-      "distanceM": 1165,
-      "elevationM": 51.4
+      "distanceM": 1147,
+      "elevationM": 50.7
     },
     {
-      "distanceM": 1262,
-      "elevationM": 47
+      "distanceM": 1242,
+      "elevationM": 34
     },
     {
-      "distanceM": 1359,
-      "elevationM": 47
+      "distanceM": 1338,
+      "elevationM": 25.6
     },
     {
-      "distanceM": 1456,
-      "elevationM": 44.9
-    },
-    {
-      "distanceM": 1553,
-      "elevationM": 41.7
-    },
-    {
-      "distanceM": 1650,
-      "elevationM": 45
-    },
-    {
-      "distanceM": 1747,
-      "elevationM": 46.2
-    },
-    {
-      "distanceM": 1844,
-      "elevationM": 37.9
-    },
-    {
-      "distanceM": 1941,
-      "elevationM": 28.3
+      "distanceM": 1433,
+      "elevationM": 25.1
     }
   ]
 }

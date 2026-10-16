@@ -581,5 +581,93 @@
       "elevationSource": "gsi",
       "method": "Official walking map A course compared with georeferenced GSI aerial photography and selected Street View points; manually reconstructed reference with position uncertainty, not surveyed official GPX."
     }
+  },
+  "yoyogi-park-trail": {
+    "status": "corrected-reference-route",
+    "reason": "旧約3.1km経路は北側の幼児用サイクリング広場（終日自転車専用）と工事区域付近を含む。2026年公式制限図とOSM園路を照合し、西側の園路と林間の小道に変更。",
+    "evidence": "https://www.tokyo-park.or.jp/park/yoyogi/news/2026/park_info_73.html",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yoyogi-park-trail.json",
+      "elevationSource": "gsi",
+      "method": "Official current construction and cycle-only restriction diagrams compared with the western OSM footpath loop and two visually inspected Street View locations. Reconstructed reference, not surveyed official GPX."
+    }
+  },
+  "tamagawa-marukobashi-furuichiba": {
+    "status": "corrected-reference-route",
+    "reason": "既存経路は堤内側一般道などを含み、土手下の砂利走路という説明と不一致。公式多目的散策路図とOSM走路・接続部航空写真を照合。",
+    "evidence": "data/spot-experience/batch-2/tamagawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tamagawa-marukobashi-furuichiba.json",
+      "elevationSource": "gsi",
+      "method": "Official Kawasaki riverside multipurpose walking route diagram compared against OSM paths and a visually reviewed short aerial-photo connector. Reconstructed reference, not surveyed official GPX."
+    }
+  },
+  "tochigi-prefectural-sports-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は公園の北に離れた江曽島本町の住宅街。公式中央エリア3kmモデル図と公園内園路・広場を照合した参考経路へ全置換。",
+    "evidence": "data/spot-experience/batch-1/tochigi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tochigi-prefectural-sports-park.json",
+      "elevationSource": "gsi",
+      "method": "Official central-area 3 km model course compared with OSM paths and pedestrian-area interiors; one 44 m plaza connector visually confirmed using a 2022-09 panorama. Reconstructed 3.2 km reference, not surveyed official GPX."
+    }
+  },
+  "tsuzuki-central-park": {
+    "status": "corrected-reference-route",
+    "reason": "公式図の白い園路と3か所の階段、宮谷戸大池北岸、谷戸周辺・南側園路を目視照合。既存経路は公園南のセンター南駅・商業施設周辺であり不一致。新経路はOSM上の既存歩道/階段の接続のみを利用し架空の接続なし。同じ辺の往復なし。池横断と東の高架歩道は除外。",
+    "evidence": "data/spot-experience/batch-1/tsuzuki-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tsuzuki-central-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "takamatsu-kaigan-yashima": {
+    "status": "corrected-reference-route",
+    "reason": "入園料と開園時間のある玉藻公園内の園路を除外し、foot=yes bicycle=yes sidewalk の外周歩道へ変更。既存の信号横断歩道で接続。",
+    "evidence": "data/spot-experience/batch-2/takamatsu-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/takamatsu-kaigan-yashima.json",
+      "elevationSource": "gsi",
+      "method": "Existing route retained except paid Tamamo Park section replaced with public sidewalk verified against OSM and street-level imagery. Bridge terrain elevations omitted; reference route, not surveyed GPX."
+    }
+  },
+  "yamagata-city-loop": {
+    "status": "corrected-reference-route",
+    "reason": "2026年7月21日からの公式通年通行変更では本丸西側道路および北側道路が閉鎖/撤去対象。旧経路index71–77はその通行禁止区間へ入るため、北門内分岐→北側駐車場前→県体育館西側→東大手門側の現行案内に沿う道路へ迂回。",
+    "evidence": "data/spot-experience/batch-1/yamagata-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yamagata-city-loop.json",
+      "elevationSource": "mixed",
+      "method": "Existing city loop retained, with the closed Kajo Park section replaced by the north/east public route from the 2026-07-21 official traffic diagram. Existing heights retained; only the detour uses GSI terrain.",
+      "elevationAttribution": {
+        "label": "コースデータの標高・迂回区間は国土地理院の標高タイルを加工",
+        "url": "https://maps.gsi.go.jp/development/ichiran.html#dem"
+      }
+    }
+  },
+  "yodogawa-nishinakajima": {
+    "status": "corrected-reference-route",
+    "reason": "旧約9.35km経路の2124m(34.715523,135.473105)は塚本付近の市街地道路。Google2025-07 BNIXx9yP3sRgwws4ihfOjAをCUA目視し、歩道橋・住宅・車道を確認。河川敷コース説明と不一致。",
+    "evidence": "data/spot-experience/batch-3/yodogawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yodogawa-nishinakajima.json",
+      "elevationSource": "gsi",
+      "method": "公式西中島・十三地区園内図を目視。OSM464683149の堤防上舗装路を採用。東端2020-12 Google mAWIqAxd26fkN1RRTXvYygと中間2023-05 cafebombers CIHM0ogKEICAgICxvPnn3wEをCUAで目視。いずれも堤防の上と下段園路の高低が合致。"
+    }
   }
 }

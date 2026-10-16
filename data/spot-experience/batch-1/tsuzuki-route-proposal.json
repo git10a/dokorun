@@ -1,0 +1,62 @@
+{
+  "slug": "tsuzuki-central-park",
+  "reviewedAt": "2026-10-16",
+  "status": "route-replacement-proposal",
+  "routeFile": "/tmp/spot-route-repair/tsuzuki-route.json",
+  "distanceM": 1433.23,
+  "pointCount": 148,
+  "courseName": "宮谷戸大池・里山園路 約1.4km参考周回",
+  "start": {
+    "label": "宮谷戸大池 北東側園路",
+    "lat": 35.5481926,
+    "lng": 139.5722031
+  },
+  "intro": "都筑中央公園の宮谷戸大池北側から、木々に囲まれた園路と広場を巡る約1.4kmの参考周回ルートです。里山の上り下りを味わいながら、宮谷戸やばじょうじ谷戸、展望広場周辺をたどります。階段では歩き、散策する人のペースを優先して楽しみましょう。",
+  "warnings": [
+    "公式に距離認定されたランニングコースではなく、園内案内図と歩道データをもとにした参考経路です。",
+    "階段を3区間含みます。階段・狭い道では歩き、散策者や子どもを優先してください。",
+    "舗装路と土の園路が混在します。雨後のぬかるみや落ち葉、木の根に注意してください。",
+    "園路の工事・通行止めやイベント時は、現地案内を優先してください。"
+  ],
+  "sources": [
+    "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/koen/koen/daihyoteki/tuduki-park.html",
+    "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/koen/koen/daihyoteki/tuduki-park.images/tsuzuki-chuo-park-map.png",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=139.563,35.546,139.575,35.553"
+  ],
+  "review": "公式図の白い園路と3か所の階段、宮谷戸大池北岸、谷戸周辺・南側園路を目視照合。既存経路は公園南のセンター南駅・商業施設周辺であり不一致。新経路はOSM上の既存歩道/階段の接続のみを利用し架空の接続なし。同じ辺の往復なし。池横断と東の高架歩道は除外。",
+  "stairs": [
+    {
+      "wayId": 153045332,
+      "tags": {
+        "highway": "steps"
+      }
+    },
+    {
+      "wayId": 896133633,
+      "tags": {
+        "highway": "steps"
+      }
+    },
+    {
+      "wayId": 153045321,
+      "tags": {
+        "highway": "steps"
+      }
+    }
+  ],
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14543/6459.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14544/6459.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "elevationRange": [
+    24.07,
+    54.43
+  ],
+  "bridgeNullIndices": []
+}

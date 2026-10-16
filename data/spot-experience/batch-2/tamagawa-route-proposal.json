@@ -1,0 +1,54 @@
+{
+  "slug": "tamagawa-marukobashi-furuichiba",
+  "status": "route-repair-proposed",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/marukobashi-furuichiba-route.json",
+  "distanceM": 7274.04,
+  "start": {
+    "lat": 35.5842369,
+    "lng": 139.666201,
+    "ele": 5.99
+  },
+  "turn": {
+    "lat": 35.5563168,
+    "lng": 139.6856098,
+    "ele": 5.25
+  },
+  "sourceUrls": [
+    "https://www.city.kawasaki.jp/530/page/0000020718.html",
+    "https://www.city.kawasaki.jp/530/page/0000077936.html",
+    "https://www.city.kawasaki.jp/530/cmsfiles/contents/0000077/77936/tamokutekiannai2013.pdf"
+  ],
+  "ways": [
+    "1086472405",
+    "558945433",
+    "558945434",
+    "558947168",
+    "558947169",
+    "32132346",
+    "32423528"
+  ],
+  "connector": {
+    "from": "11145594457",
+    "to": "11145594451",
+    "via": [
+      [
+        35.561329,
+        139.679064
+      ],
+      [
+        35.561299,
+        139.679108
+      ]
+    ],
+    "status": "CUA satellite view: open pedestrian fork around the bollards and before the separating shrub row. Coordinates read from map context menu; short connection is manually traced, not OSM topology.",
+    "sourceUrl": "https://www.google.com/maps/@35.5612673,139.6792165,96m/data=!3m1!1e3"
+  },
+  "observed": "公式図の丸子橋〜ガス橋〜古市場陸上競技場の土手下の走路とOSMを照合。堤防上のかわさき多摩川ふれあいロード、堤内側の多摩沿線道路は除外。ガス橋付近に舗装区間があり、下流は管理道路に並ぶ砂利の走路。ガス橋下流のOSM未接続箇所は航空写真の開いた歩行者分岐を2点で補完。橋の上を通らず、GSI標高0.51〜6.66mで橋上の突出なし。",
+  "suggestedIntro": "丸子橋の川崎側河川敷から、ガス橋をくぐって古市場陸上競技場の下流側出入口付近まで往復する約7.3kmの参考コース。土手下の砂利道を中心に、橋の周辺など一部の舗装区間をつなぐ。広い空とグラウンドを眺めながら走れ、距離は途中で折り返して調整できる。",
+  "suggestedWarning": "駐車場やグラウンドへの進入路を横切る箇所では車両を確認してください。散歩や自転車などほかの利用者に配慮し、増水時・工事中は現地の通行規制に従ってください。掲載ルートは地図と公園案内を照合した参考線で、公式大会の計測コースではありません。",
+  "suggestedStart": "丸子橋・川崎側の河川敷走路（橋の下流側）",
+  "suggestedTurn": "古市場陸上競技場・下流側出入口付近の河川敷走路",
+  "elevationReview": "国土地理院DEMの地表標高を全点取得。橋下で路面より橋桁の高さになる突出はない。構造物上を通る区間は含めない。",
+  "imageStatus": "現地パノラマを確認中"
+}
