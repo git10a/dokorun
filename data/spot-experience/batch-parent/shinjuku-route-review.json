@@ -1,0 +1,55 @@
+{
+  "slug": "shinjuku-central-park",
+  "reviewedAt": "2026-10-16",
+  "status": "accepted-reference-route",
+  "oldRouteProblem": "親がStreet View目視：旧383m点35.688929,139.688804は西側道路（2025-12 pano5-65ti9mQCF06YWPK7PoCw）、766m点35.688931,139.685936は公園西の住宅街（2022-10 panoNpCv9XnwFrQ02ph-Ni2Ufg）。旧経路bbox lng139.685578..139.689083は公式園内図の周回と一致しない。",
+  "officialMap": [
+    "https://shinjukuchuo-park.jp/facilities/",
+    "https://shinjukuchuo-park.jp/wp-content/uploads/2026/02/f6d44d207f34c1c42d87099ac6f81f58-2048x1016.jpg"
+  ],
+  "officialMapObserved": "CUA Chromeで2048x1016版の園内図を目視。北が画面右。Aコース赤点線1,100mは北エリア外周、B青点線900mは園内、C緑180mは西エリア。再構成はAだけ。",
+  "geometryEvidence": {
+    "osmApi": "https://api.openstreetmap.org/api/0.6/map?bbox=139.6875,35.6865,139.6925,35.6925",
+    "rawOsm": "/tmp/spot-route-repair/shinjuku.osm",
+    "ways": [
+      571949732,
+      572293468
+    ],
+    "start": {
+      "lat": 35.6904377,
+      "lng": 139.6904826,
+      "ele": 34.39
+    },
+    "computedDistanceM": 1106.5798715079661,
+    "officialDistanceM": 1100,
+    "note": "OSM footwayとsidewalkをつないだ閉ループ。公開地図を照合した参考GPX、公式測量線そのものではない。公園側外周歩道を通り、道路横断なし、地下道・階段なし。"
+  },
+  "accessObservations": [
+    {
+      "sourceUrl": "https://shinjukuchuo-park.jp/2026/10/06/10-30%E9%87%91%EF%BD%9E11-13%E9%87%91%E3%80%80%E8%8A%9D%E7%94%9F%E5%BA%83%E5%A0%B4%E5%85%A8%E9%9D%A2%E9%96%89%E9%8E%96%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/",
+      "finding": "2026/10/30〜11/13芝生広場全面閉鎖。期間変更・一部養生継続の可能性あり。本ルートは芝生に入らない。"
+    },
+    {
+      "sourceUrl": "https://shinjukuchuo-park.jp/wp-content/uploads/2026/09/b56c744e42804f6fba899b2155b21c1a-1.jpg",
+      "finding": "CUA目視。10/2〜5,7〜9,16〜18,31〜11/3はイベント準備実施撤収でファンモアタイム広場の通常利用・スケートボード利用停止。本ルートは当該広場に入らない。"
+    },
+    {
+      "sourceUrl": "https://shinjukuchuo-park.jp/wp-content/uploads/2026/09/ffdedf708f23191f846c8012c6368ed0.jpg",
+      "finding": "CUA目視。10/2〜5はファンモアタイム広場・眺望のもり・ジャブジャブ池・多目的運動広場でイベント準備実施撤収。当該施設に入らない。"
+    }
+  ],
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14549/6451.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "limitations": [
+    "最新の現地規制・通行状況を保証しない。",
+    "公式Aコース1,100mと再構成1,106.6mを区別する。",
+    "画像の参照確認と生成は親担当。新ルートの画像は本エージェント未生成。"
+  ]
+}

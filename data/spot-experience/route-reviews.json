@@ -290,5 +290,17 @@
       "elevationSource": "gsi",
       "method": "公式案内図の青い3km線を目視し、中央橋→太陽の広場外側→緑橋→きのこ広場南側→南端森林→豊平川寄りの西園路→スタジアム北側→中央橋の順でOSM園路を照合。全区間footway、公園内の閉じた周回で同じ辺の重複なし。中央橋西詰をGoogle Street View 2015-05の42.9974212,141.3445298で実景確認し、橋名表示・位置・向きが一致。"
     }
+  },
+  "shinjuku-central-park": {
+    "status": "corrected-reference-route",
+    "reason": "親がStreet View目視：旧383m点35.688929,139.688804は西側道路（2025-12 pano5-65ti9mQCF06YWPK7PoCw）、766m点35.688931,139.685936は公園西の住宅街（2022-10 panoNpCv9XnwFrQ02ph-Ni2Ufg）。旧経路bbox lng139.685578..139.689083は公式園内図の周回と一致しない。",
+    "evidence": "data/spot-experience/batch-parent/shinjuku-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shinjuku-central-park.json",
+      "elevationSource": "gsi",
+      "method": "CUA Chromeで2048x1016版の園内図を目視。北が画面右。Aコース赤点線1,100mは北エリア外周、B青点線900mは園内、C緑180mは西エリア。再構成はAだけ。 OSM footwayとsidewalkをつないだ閉ループ。公開地図を照合した参考GPX、公式測量線そのものではない。公園側外周歩道を通り、道路横断なし、地下道・階段なし。"
+    }
   }
 }

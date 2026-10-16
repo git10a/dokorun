@@ -112,5 +112,134 @@
     "observed": "中盤座標から眼鏡橋の位置を疑ったが、親エージェントが公式観光ページのGoogle Mapsリンク座標32.747151,129.880105を確認し、現行profile2220.94m点32.747184,129.880074から4.7mの通過を照合。私の初期位置把握が誤りで、眼鏡橋の紹介は維持。",
     "sourceUrl": "https://www.at-nagasaki.jp/spot/95",
     "verification": "parent-agent official source check; no route change needed"
+  },
+  {
+    "slug": "natsudomari-asamushi",
+    "observedAt": "2026-10-16",
+    "status": "content-correction-requested",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 7384.33,
+          "lat": 40.972496,
+          "lng": 140.961665
+        },
+        "pano": {
+          "id": "mm3KD3IOVHWEk5NtsA494Q",
+          "lat": 40.9724579,
+          "lng": 140.9616961,
+          "heading": 0,
+          "captured": "2025-06"
+        },
+        "sourceUrl": "https://www.google.com/maps/@40.9724579,140.9616961,6a,80y,90t/data=!3m7!1e1!3m5!1smm3KD3IOVHWEk5NtsA494Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dmm3KD3IOVHWEk5NtsA494Q%26yaw%3D0!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observed": "Google2025年6月。北向き、幅5〜6mほどの灰舗装一般道、薄い白破線中央、左右縁線なし、歩道なし。左に緑の山裾と電柱、右に濃い背高い草・低木・横に枝を張る木。灰青い海は植栽の向こうに細く見える。灰白の曇り、対向の小型銀軽自動車。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 15063.94,
+          "lat": 40.982055,
+          "lng": 140.904108
+        },
+        "pano": {
+          "id": "ID3nTZbz4Xsut2l7wPhcaw",
+          "lat": 40.982034,
+          "lng": 140.9040582,
+          "heading": 180,
+          "captured": "2025-06"
+        },
+        "sourceUrl": "https://www.google.com/maps/@40.982034,140.9040582,10a,80y,180h,90t/data=!3m7!1e1!3m5!1sID3nTZbz4Xsut2l7wPhcaw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DID3nTZbz4Xsut2l7wPhcaw%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observed": "Google2025年6月。南向き、白線のない幅約3mの細舗装道。左手前に大きい白半透明ビニールハウス、電柱・架線・側溝、少し先に小住宅。右は水を張った低い田んぼ、低い草縁、先に赤茶小屋。遠景は低い緑の山。海は見えず、歩道なし。"
+      }
+    ],
+    "profileDistanceM": 32117.06,
+    "oldIntroProblems": [
+      "約34.2kmとあるが現行profile距離は32,117.06m。",
+      "時計回りとあるが東岸を北上し、北側から西側へ下る反時計回りの順。",
+      "海景色がぐるりと続くように読めるが15.06km点は田園の内陸一般道。"
+    ],
+    "suggestedIntro": "平内町役場を起点に、夏泊半島の東岸を北上し、北側から西側へ回って浅虫温泉方面へ向かう約32.1kmの参考ルートです。陸奥湾を望む海沿いに加え、田園や山沿いの区間も通ります。歩道のない一般道や幅の狭い道を含み、車の通行があります。走る距離だけでなく、交通状況と路肩の幅を確認して計画してください。補給場所や帰りの交通手段も事前に確認が必要です。",
+    "suggestedTrafficWarning": {
+      "title": "歩道のない一般道を含みます",
+      "body": "2025年6月のStreet Viewでは約7.4kmと約15.1kmの区間に歩道がなく、細い道路や車の通行を確認しています。歩行者用の路肩が十分でない場所もあります。現地の通行規制と交通状況を優先し、無理に走り続けないでください。"
+    },
+    "note": "経路そのものの変更依頼ではなく、現行profileと確認できた実景に説明を合わせる修正文案。道路の現在の通行を保証しない。"
+  },
+  {
+    "slug": "niiharu-shimin-no-mori",
+    "observedAt": "2026-10-16",
+    "status": "content-correction-requested",
+    "officialSources": [
+      {
+        "url": "https://www.niiharu.jp/%E6%96%B0%E6%B2%BB%E3%81%AE%E9%87%8C%E5%B1%B1/%E8%87%AA%E7%84%B6%E3%81%A8%E6%9A%AE%E3%82%89%E3%81%97/",
+        "finding": "現行サイトの里山憲章・マナーから利用ルール画像へ移動。散策路を外れない、静かに利用する、生き物等を持ち出さない。"
+      },
+      {
+        "url": "https://www.niiharu.jp/wp-content/uploads/2025/05/%E3%83%9E%E3%83%8A%E3%83%BC.png",
+        "finding": "CUAで現行掲載画像を目視。利用は日の出から日の入り。歩行者・自然観察者優先、追い越しは声をかけ歩いてゆっくり、タイムを競わない、5人以上グループ走行自粛。狭い山道や手作り階段がある。"
+      },
+      {
+        "url": "https://www.niiharu.jp/riyou/qa/",
+        "finding": "里山公園には駐車場なし。市民の森には土日祝（年末年始除く）の駐車場。新治市民の森ガイドマップへの現行リンクを確認。"
+      },
+      {
+        "url": "https://www.niiharu.jp/wp-content/uploads/2025/05/%E6%96%B0%E6%B2%BB%E5%B8%82%E6%B0%91%E3%81%AE%E6%A3%AE%E3%82%AC%E3%82%A4%E3%83%89%E3%83%9E%E3%83%83%E3%83%97.pdf",
+        "finding": "取得成功。2ページ目を画像にして目視。市民の森駐車場は西側みはらし広場A-8付近、土日祝9〜17時。旭谷戸広場側ではない。A/B一部は地域生活道路、森内には起伏・階段。100人以上団体の池ぶち広場以南の利用自粛、100人未満もできるだけ通行を避ける計画、やむを得ず通る場合は少人数で間隔をあけ静かに歩く。"
+      }
+    ],
+    "unavailablePriorSource": "横浜市旧0116_20240405.pdfは404。現行センターサイト掲載PDFへ置き換えて確認。",
+    "profileDistanceM": 3102.09,
+    "suggestedIntro": "横浜市緑区に残る新治市民の森で、雑木林や谷戸、森の外縁の道をつなぐ約3.1kmの参考周回ルートです。土の散策路には起伏や階段があり、地域の生活道路も含みます。歩行者や自然観察をする人を優先し、すれ違いや追い越しでは歩いて通過してください。タイムを競う走り方は避け、5人以上のグループ走行は自粛してください。利用時間は日の出から日の入りまでです。",
+    "suggestedWarnings": [
+      {
+        "title": "歩行者・自然観察者を優先してください",
+        "body": "現地の利用ルールでは、追い越す際は声をかけて歩いてゆっくり通過し、タイムを競わないこと、5人以上のグループ走行を自粛することが求められています。散策路から外れず、静かに利用してください。",
+        "url": "https://www.niiharu.jp/%E6%96%B0%E6%B2%BB%E3%81%AE%E9%87%8C%E5%B1%B1/%E8%87%AA%E7%84%B6%E3%81%A8%E6%9A%AE%E3%82%89%E3%81%97/"
+      },
+      {
+        "title": "駐車場の場所と開放日を確認してください",
+        "body": "にいはる里山交流センター・里山公園には駐車場がありません。市民の森の駐車場は西側のみはらし広場付近で、土日祝の9〜17時（年末年始を除く）に限り利用できます。公共交通機関での来訪が案内されています。",
+        "url": "https://www.niiharu.jp/riyou/qa/"
+      }
+    ],
+    "notes": "『岩場がなく走って登れる緩い坂が中心』『トレイル入門の練習にちょうどよい』『旭谷戸広場側に無料駐車場』は外し、現在掲載中の公式ルールへ合わせる。既存駅リンクは保持。"
+  },
+  {
+    "slug": "oi-futo-chuo-kaihin-park",
+    "reviewedAt": "2026-10-16",
+    "status": "route-retained-current-map-checked",
+    "sources": [
+      "https://tokyo-south-seaside-parks.com/sports/",
+      "https://tokyo-south-seaside-parks.com/common/images/nagisa/access/nagisa-access_pdf01.pdf"
+    ],
+    "observed": "現行運営サイトから公園図2025-08-01版を取得・目視。約1km参考周回は野球場A/B/C/D/E/F外側の園路。南辺450m付近の2019-12パノラマには工事柵があるが、現行公園図では野球場とホッケーサブピッチ間の園路。現在の閉鎖の証拠には扱わず、当該工事写真は画像に不採用。東辺816m候補は東京湾岸道路へスナップして園路が見えず不採用。",
+    "currentFacilitiesClosures": "公式サイトは陸上競技場2026-10-01〜2027-03-31改修休止、野球場B2026-09-01〜2027-04-30照明LED化休止、第一駐車場2026-06-01〜2027-03下旬休止を掲載。施設内部の利用休止であり、外周園路の全面閉鎖とは判定しない。",
+    "suggestedWarning": "野球場Bなどで改修工事が予定されています。園路の規制は現地案内を優先してください。"
+  },
+  {
+    "slug": "okayama-sogo-ground",
+    "reviewedAt": "2026-10-16",
+    "status": "description-and-parking-caution",
+    "coursePoint": {
+      "distanceM": 1649.15,
+      "lat": 34.677865,
+      "lng": 133.91607
+    },
+    "pano": {
+      "id": "-qGjrUJHluLKM_i1fj9G6Q",
+      "lat": 34.6778548,
+      "lng": 133.9160356,
+      "heading": 90,
+      "captured": "2012-12"
+    },
+    "sourceUrl": "https://www.google.com/maps/@34.6778548,133.9160356,11a,80y,90h,90t/data=!3m7!1e1!3m5!1s-qGjrUJHluLKM_i1fj9G6Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D-qGjrUJHluLKM_i1fj9G6Q%26yaw%3D90!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "profile1649mと約3.3m。第1駐車場内の灰色車両通路に白い誘導矢印、左右に駐車車列、北側木立、南側球場の照明柱と低い施設が見える。画像用には不採用。北側570mと西側1154mの歩道を画像用採用。",
+    "sources": [
+      "https://www.okayama-momo.jp/parkinginfo/",
+      "https://www.okayama-momo.jp/wp-content/uploads/2021/10/施設案内図.pdf",
+      "https://www.okayama-momo.jp/about/"
+    ],
+    "suggestedIntro": "岡山市中心部の運動公園で、総合グラウンド外周の歩道と一部園路をつなぐ約2.5kmの参考周回です。北側や西側は車道沿いの並木道を進み、園内には木陰や競技施設が点在します。掲載経路は第1駐車場の車両通路も通るため、その区間は歩いて車の出入りに注意してください。園内は歩行者を優先し、大会やイベント時の規制は現地案内に従ってください。",
+    "suggestedWarning": "約1.65km付近に第1駐車場内の車両通路を通る区間があります。駐車車両の間を走り抜けず、周囲を確認して歩いて通過してください。外周歩道でも自転車・歩行者・交差点を優先してください。",
+    "copyToRemove": "都市型周回スポットとして実装しやすい。夜間照明の全経路保証も出典が弱いため使用しない。"
   }
 ]

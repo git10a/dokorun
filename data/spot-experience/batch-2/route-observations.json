@@ -227,5 +227,86 @@
     "officialMap": "https://www.env.go.jp/garden/content/000368344.pdf",
     "action": "Parent notified; hold images until route correction.",
     "resolution": "Parent integrated 4021.18m perimeter-sidewalk reference loop; 2 accepted images aligned to current public profile."
+  },
+  {
+    "slug": "mishima-shuzenji",
+    "status": "description-correction-proposed",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 21704.36,
+    "issue": "現経路は約21.7km。旧説明の19.5km・狩野川沿いの田園・緩やかな起伏だけでは実経路と一致しない。終点は温泉街道路ではなく修禅寺北側の千聖の森付近。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 15047.73,
+          "lat": 35.007239,
+          "lng": 138.942004
+        },
+        "pano": {
+          "id": "Q_4ylRECKEBYUXkOyeN8lQ",
+          "lat": 35.0072111,
+          "lng": 138.9420232,
+          "captured": "2025-04"
+        },
+        "observed": "CUA目視。国道136号の市街道路、両側店舗と歩道、小水路。狩野川堤防ではない。",
+        "sourceUrl": "https://www.google.com/maps/@35.0072111,138.9420232,25a,90y,180h,90t/data=!3m5!1e1!3m3!1sQ_4ylRECKEBYUXkOyeN8lQ!2e0!7i16384"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 19992.96,
+          "lat": 34.978447,
+          "lng": 138.918545
+        },
+        "pano": {
+          "id": "ns6QyVx20lWz3orv_jPD5g",
+          "lat": 34.9784693,
+          "lng": 138.918556,
+          "captured": "2025-04"
+        },
+        "observed": "CUA目視。修善寺自然公園付近、住宅左・樹木右の一般道を南東へ下る坂。標高約227m。",
+        "sourceUrl": "https://www.google.com/maps/@34.9784693,138.918556,220a,90y,120h,90t/data=!3m5!1e1!3m3!1sns6QyVx20lWz3orv_jPD5g!2e0!7i16384"
+      }
+    ],
+    "officialSources": [
+      "https://kanko.city.izu.shizuoka.jp/form1.html?c1=7&pid=5353",
+      "https://ameblo.jp/izuno-yukari/entry-12256922654.html"
+    ],
+    "officialFinding": "伊豆市観光公式は千聖の森を修禅寺裏山の整備された散策道と案内。観光公式ブログでは梅林までの森林散策コースが確認できる。",
+    "proposedIntro": "三島駅側から三嶋大社の周辺を通り、市街地や一般道を南下して、修善寺の裏山・千聖の森付近まで進む片道約21.7kmの参考コースです。後半は修善寺自然公園方面の丘陵を経由し、上り下りと森林散策路を含みます。平坦な川沿いだけを走るコースではないため、距離と標高グラフを確認して計画してください。終点から温泉街へ移動して休憩したり、修善寺駅経由で戻ったりできます。",
+    "proposedWarning": {
+      "title": "後半の坂道と森林散策路に注意",
+      "body": "終盤は丘陵の一般道と修禅寺裏山の散策路を含みます。車の通行、路面や足元に注意し、寺社周辺や散策する人の多い区間は歩いて通過してください。掲載終点は温泉街の道路ではなく千聖の森付近です。"
+    },
+    "action": "Parent approved keeping route and will integrate wording correction. Images continue on current profile."
+  },
+  {
+    "slug": "miyazaki-night-run",
+    "status": "description-correction-proposed",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 8882.09,
+    "issue": "現経路の北側折返しは宮崎神宮駅前。神武天皇を祀る宮崎神宮の境内とは別の場所。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 2342.2,
+          "lat": 31.938226,
+          "lng": 131.429585
+        },
+        "pano": {
+          "id": "S2sIpb-rhj3RccCuLrjhPw",
+          "lat": 31.9382315,
+          "lng": 131.4296007,
+          "heading": 90,
+          "captured": "2024-06"
+        },
+        "observed": "CUA目視。東向きに宮崎神宮駅前の大鳥居と駅舎、手前に住宅や店舗。神社境内・参道ではない。地図にも宮崎神宮駅と表示。",
+        "sourceUrl": "https://www.google.com/maps/@31.9382315,131.4296007,10a,90y,90h,90t/data=!3m5!1e1!3m3!1sS2sIpb-rhj3RccCuLrjhPw!2e0!7i16384"
+      }
+    ],
+    "proposedIntro": "宮崎市中心部の橘通りから宮崎神宮駅前まで北上し、折り返して大淀川北岸の堤防沿いを橘橋・市役所方面へ進む、約8.9kmの市街地周回コースです。宮崎神宮の境内を通る経路ではありません。大通りの歩道と川沿いの道をつなぎ、街並みと大淀川の景色を楽しめます。夜に走る場合は照明や足元の見え方を現地で確認し、横断歩道と歩行者を優先してください。",
+    "proposedWarning": {
+      "title": "夜間の明るさを現地で確認してください",
+      "body": "掲載画像は昼間の参照写真をもとにしたイメージです。夜間の照明や河川敷の状況を保証するものではありません。北側の折返しは宮崎神宮駅前です。"
+    },
+    "action": "Parent will integrate station-specific wording; retain route and continue images."
   }
 ]
