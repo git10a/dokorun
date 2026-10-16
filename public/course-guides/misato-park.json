@@ -1,47 +1,46 @@
 {
   "slug": "misato-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "みさと公園は水辺の景色と広い芝地を楽しめる埼玉東部の人気スポットで、代表周回は約1550mです。全体はフラットで走りやすく、疎林から水面へと景色が変わるため、短い周回でも飽きにくいのが魅力です。春の桜や初夏の花菖蒲、冬の澄んだ空気など季節感も豊かです。スピード練習向きというより、普段のジョグ、回復走、休日のゆったりした距離走、景色を楽しむファンランとの相性が良いコースです。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "小合溜の水辺や芝生広場を巡る、みさと公園の約1.55km周回です。園内のジョギング・ウォーキングコースをもとにした参考ルートで、景色を見ながら繰り返し走れます。散歩や遊具を利用する方も多いため、混雑している場所では速度を落としてください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式に案内されている1,550mのジョギング・ウォーキングコースを、公開地図の園路と照合して作成した参考ルートです。小合溜沿いから芝生広場の周囲を回ります。現地の通行案内と歩行者を優先してください。",
+      "url": "https://www.seibu-la.co.jp/misato-yoshikawa/facility/misato.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: JR常磐線 金町駅からバス利用、みさと公園前下車徒歩すぐ。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "JR・つくばエクスプレスの各駅からバス「みさと公園前」または「高州地区文化センター入口」下車、徒歩約3分。園内の水上テラス付近から周回します。",
+      "url": "https://www.seibu-la.co.jp/misato-yoshikawa/access/misato.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "松戸駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.784472,
-      "destinationLng": 139.900779,
-      "routeAnchorLat": 35.785623,
-      "routeAnchorLng": 139.884471,
+      "name": "水上テラス付近の園路",
+      "badge": "園路からスタート",
+      "destinationLat": 35.7853628,
+      "destinationLng": 139.8717753,
+      "routeAnchorLat": 35.7853628,
+      "routeAnchorLng": 139.8717753,
       "routeMode": "loop",
-      "accessText": "松戸駅からコースまで約1480m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "JR・つくばエクスプレスの各駅からバス「みさと公園前」または「高州地区文化センター入口」下車、徒歩約3分。園内の水上テラス付近から周回します。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "水辺の園路から北へ進みます。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.785623,
-      "routeLng": 139.884471,
-      "elevationM": 4,
+      "routeLat": 35.7853628,
+      "routeLng": 139.8717753,
+      "elevationM": 1.7,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 319,
-        "section-3": 638,
-        "section-4": 987,
-        "section-5": 1322
+        "section-2": 198,
+        "section-3": 548,
+        "section-4": 1251
       },
       "gpxHref": "/gpx/misato-park-start-1.gpx"
     }
@@ -49,199 +48,142 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.785623,
-      "anchorLng": 139.884471,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 埼玉県道54号（三郷市高州2丁目461番付近）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg/960px-Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg",
-        "alt": "みさと公園のスタート周辺付近",
-        "caption": "みさと公園の走路近隣で撮影された風景",
-        "credit": "LERK",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg"
-      },
+      "name": "水上テラス付近",
+      "anchorLat": 35.7853628,
+      "anchorLng": 139.8717753,
+      "description": "水辺の園路から北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 35.785623,
-      "routeLng": 139.884471,
-      "elevationM": 4,
+      "routeLat": 35.7853628,
+      "routeLng": 139.8717753,
+      "elevationM": 1.7,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.784773,
-      "anchorLng": 139.887268,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 環天頂アーク 2013-04-09 07.18.07(JST)撮影",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Circumzenithal_arc2013-04-09_07.18.07%28JST%29.jpg/960px-Circumzenithal_arc2013-04-09_07.18.07%28JST%29.jpg",
-        "alt": "みさと公園の序盤区間付近",
-        "caption": "みさと公園の走路近隣で撮影された風景",
-        "credit": "Ucheniitza",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circumzenithal_arc2013-04-09_07.18.07(JST).jpg"
-      },
-      "routePointIndex": 16,
-      "routeDistanceM": 319,
-      "routeLat": 35.784773,
-      "routeLng": 139.887268,
-      "elevationM": 3.3,
+      "name": "小合溜沿い",
+      "anchorLat": 35.7871328,
+      "anchorLng": 139.8716425,
+      "description": "左手に水辺を眺めながら、北側の広場へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 17,
+      "routeDistanceM": 198,
+      "routeLat": 35.7871328,
+      "routeLng": 139.8716425,
+      "elevationM": 2,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.782946,
-      "anchorLng": 139.886136,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 埼玉県道54号（三郷市高州2丁目461番付近）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg/960px-Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg",
-        "alt": "みさと公園の中盤区間付近",
-        "caption": "みさと公園の走路近隣で撮影された風景",
-        "credit": "LERK",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg"
-      },
-      "routePointIndex": 43,
-      "routeDistanceM": 638,
-      "routeLat": 35.782946,
-      "routeLng": 139.886136,
-      "elevationM": 1.5,
+      "name": "北側の折り返し",
+      "anchorLat": 35.7894979,
+      "anchorLng": 139.8734879,
+      "description": "園内の道を回り、芝生広場の東側へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 46,
+      "routeDistanceM": 548,
+      "routeLat": 35.7894979,
+      "routeLng": 139.8734879,
+      "elevationM": 2,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.781651,
-      "anchorLng": 139.884774,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 東京都道54号線葛飾区内",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tokyotodo_54_Katsushika_Word_1.JPG/960px-Tokyotodo_54_Katsushika_Word_1.JPG",
-        "alt": "みさと公園の後半区間付近",
-        "caption": "みさと公園の走路近隣で撮影された風景",
-        "credit": "Ebiebi2",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyotodo_54_Katsushika_Word_1.JPG"
-      },
-      "routePointIndex": 68,
-      "routeDistanceM": 987,
-      "routeLat": 35.781651,
-      "routeLng": 139.884774,
-      "elevationM": 1,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.783867,
-      "anchorLng": 139.882555,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 埼玉県道54号（三郷市高州2丁目461番付近）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg/960px-Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg",
-        "alt": "みさと公園の終盤区間付近",
-        "caption": "みさと公園の走路近隣で撮影された風景",
-        "credit": "LERK",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saitama_prefectural_road_54_near_Takasu_2chome_461_Misato_city_20210430_155439.jpg"
-      },
-      "routePointIndex": 74,
-      "routeDistanceM": 1322,
-      "routeLat": 35.783867,
-      "routeLng": 139.882555,
-      "elevationM": 1.5,
+      "name": "菖蒲田の南側",
+      "anchorLat": 35.7837478,
+      "anchorLng": 139.8732763,
+      "description": "南側の園路を通り、水上テラス方面へ戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 107,
+      "routeDistanceM": 1251,
+      "routeLat": 35.7837478,
+      "routeLng": 139.8732763,
+      "elevationM": 2.4,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.seibu-la.co.jp/misato-yoshikawa/facility/misato.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 1640,
-  "elevationGainM": 10,
+  "distanceM": 1552,
+  "elevationGainM": 2,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 4
+      "elevationM": 1.7
     },
     {
-      "distanceM": 96,
-      "elevationM": 4.2
+      "distanceM": 97,
+      "elevationM": 2
     },
     {
-      "distanceM": 193,
-      "elevationM": 4
+      "distanceM": 194,
+      "elevationM": 2
     },
     {
-      "distanceM": 289,
-      "elevationM": 4.6
+      "distanceM": 291,
+      "elevationM": 2
     },
     {
-      "distanceM": 386,
-      "elevationM": 1.8
+      "distanceM": 388,
+      "elevationM": 1.9
     },
     {
-      "distanceM": 482,
+      "distanceM": 485,
+      "elevationM": 1.9
+    },
+    {
+      "distanceM": 582,
       "elevationM": 2.3
     },
     {
-      "distanceM": 579,
+      "distanceM": 679,
+      "elevationM": 2.7
+    },
+    {
+      "distanceM": 776,
       "elevationM": 3
     },
     {
-      "distanceM": 675,
-      "elevationM": 1.5
+      "distanceM": 873,
+      "elevationM": 3
     },
     {
-      "distanceM": 772,
-      "elevationM": 0.9
+      "distanceM": 970,
+      "elevationM": 2.7
     },
     {
-      "distanceM": 868,
-      "elevationM": -0.4
+      "distanceM": 1067,
+      "elevationM": 2.5
     },
     {
-      "distanceM": 965,
-      "elevationM": 0.5
+      "distanceM": 1164,
+      "elevationM": 2.5
     },
     {
-      "distanceM": 1061,
-      "elevationM": 0.6
+      "distanceM": 1261,
+      "elevationM": 2.4
     },
     {
-      "distanceM": 1158,
-      "elevationM": 3.2
+      "distanceM": 1358,
+      "elevationM": 1.6
     },
     {
-      "distanceM": 1254,
-      "elevationM": 3.5
+      "distanceM": 1455,
+      "elevationM": 1.6
     },
     {
-      "distanceM": 1351,
-      "elevationM": 1.3
-    },
-    {
-      "distanceM": 1447,
-      "elevationM": 4
-    },
-    {
-      "distanceM": 1544,
-      "elevationM": 4.3
-    },
-    {
-      "distanceM": 1640,
-      "elevationM": 4
+      "distanceM": 1552,
+      "elevationM": 1.7
     }
   ]
 }

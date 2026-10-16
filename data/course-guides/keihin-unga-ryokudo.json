@@ -1,127 +1,71 @@
 {
   "slug": "keihin-unga-ryokudo",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "京浜運河緑道公園は大井ふ頭エリアでは貴重な不整地を含むコースで、代表ルートは約2.9kmです。運河沿いの舗装路に加え、林間の土区間が多く、全体の約3分の2を足にやさしい路面でつなげられます。景色の切り替わりが多く、木陰も取りやすいため、ゆったりしたジョグやロングジョグに好相性です。単調なロード練習の補完として、脚づくりや接地感覚を整えたい時にも使いやすいスポットです。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "勝島橋の北側から、京浜運河に沿う園路を北へ1.5km進んで戻る約3kmの参考往復です。運河と樹木に挟まれた水辺の道が続き、土の細い区間もあります。距離を延ばす場合は、現地の案内と通行状況を確認してください。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "運河沿いの通行と参考ルートについて",
+      "body": "東京都の公園案内と歩行可能な園路を照合した参考ルートです。公園全体の緑道は約2.5kmですが、掲載するのは勝島橋北側から1.5km進んで戻る往復です。折り返し位置に公式の標識があるわけではありません。一部の園路は細く、土・草地や木の根があります。歩行者や自転車と譲り合い、混雑時は歩いてください。 運河沿いの風や濡れた路面に注意し、現地の通行規制を優先してください。",
+      "url": "https://www.gotokyo.org/jp/spot/1164/index.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 東京モノレール 大井競馬場前駅から徒歩10分前後。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと公園案内",
+      "body": "勝島橋の北側から、運河東岸の緑道へ入ります。橋や交差点を渡る際は交通に注意し、園路に入ってから走り始めてください。",
+      "url": "https://www.kouwan.metro.tokyo.lg.jp/kanko/model2.pdf",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "大井競馬場前駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.595006,
-      "destinationLng": 139.74708,
-      "routeAnchorLat": 35.598506,
-      "routeAnchorLng": 139.745366,
-      "routeMode": "loop",
-      "accessText": "大井競馬場前駅からコースまで約420m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "name": "勝島橋北側の緑道入口",
+      "badge": "園路からスタート",
+      "destinationLat": 35.5959828,
+      "destinationLng": 139.7489956,
+      "routeAnchorLat": 35.5959828,
+      "routeAnchorLng": 139.7489956,
+      "routeMode": "forward",
+      "accessText": "勝島橋の北側から、運河東岸の緑道へ入ります。橋や交差点を渡る際は交通に注意し、園路に入ってから走り始めてください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "運河東岸の園路を北へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.598506,
-      "anchorLng": 139.745366,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 品川の運河(Canal in Shinagawa)",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E5%93%81%E5%B7%9D%E3%81%AE%E9%81%8B%E6%B2%B3%28Canal_in_Shinagawa%29_-_panoramio.jpg/960px-%E5%93%81%E5%B7%9D%E3%81%AE%E9%81%8B%E6%B2%B3%28Canal_in_Shinagawa%29_-_panoramio.jpg",
-        "alt": "京浜運河緑道公園のスタート周辺付近",
-        "caption": "京浜運河緑道公園の走路近隣で撮影された風景",
-        "credit": "damiyan",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%93%81%E5%B7%9D%E3%81%AE%E9%81%8B%E6%B2%B3(Canal_in_Shinagawa)_-_panoramio.jpg"
-      }
+      "name": "勝島橋北側の緑道入口",
+      "anchorLat": 35.5959828,
+      "anchorLng": 139.7489956,
+      "description": "運河東岸の園路を北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.595704,
-      "anchorLng": 139.748697,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Littorina brevicula (Philippi, 1844). Ooi Wharf Chuo Coast Park , Shinagawa, Tokyo, Japan.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Littorina_brevicula_001_Tokyo_bay.jpg/960px-Littorina_brevicula_001_Tokyo_bay.jpg",
-        "alt": "京浜運河緑道公園の序盤区間付近",
-        "caption": "京浜運河緑道公園の走路近隣で撮影された風景",
-        "credit": "PD files",
-        "license": "Public domain",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Littorina_brevicula_001_Tokyo_bay.jpg"
-      }
+      "name": "運河沿いの木立",
+      "anchorLat": 35.6005425,
+      "anchorLng": 139.749098,
+      "description": "水辺や木立を眺めながら進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.593513,
-      "anchorLng": 139.750862,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Two Azure-winged Magpies Cyanopica cyanus in Tokai 1 Chome, Tokyo, Japan.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cyanopica_cyanus_Tokyo_Japan_2.jpg/960px-Cyanopica_cyanus_Tokyo_Japan_2.jpg",
-        "alt": "京浜運河緑道公園の中盤区間付近",
-        "caption": "京浜運河緑道公園の走路近隣で撮影された風景",
-        "credit": "Greg Schechter",
-        "license": "CC BY 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanopica_cyanus_Tokyo_Japan_2.jpg"
-      }
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.593513,
-      "anchorLng": 139.750862,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Two Azure-winged Magpies Cyanopica cyanus in Tokai 1 Chome, Tokyo, Japan.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cyanopica_cyanus_Tokyo_Japan_2.jpg/960px-Cyanopica_cyanus_Tokyo_Japan_2.jpg",
-        "alt": "京浜運河緑道公園の後半区間付近",
-        "caption": "京浜運河緑道公園の走路近隣で撮影された風景",
-        "credit": "Greg Schechter",
-        "license": "CC BY 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanopica_cyanus_Tokyo_Japan_2.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.595704,
-      "anchorLng": 139.748697,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: Littorina brevicula (Philippi, 1844). Ooi Wharf Chuo Coast Park , Shinagawa, Tokyo, Japan.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Littorina_brevicula_001_Tokyo_bay.jpg/960px-Littorina_brevicula_001_Tokyo_bay.jpg",
-        "alt": "京浜運河緑道公園の終盤区間付近",
-        "caption": "京浜運河緑道公園の走路近隣で撮影された風景",
-        "credit": "PD files",
-        "license": "Public domain",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Littorina_brevicula_001_Tokyo_bay.jpg"
-      }
+      "name": "1.5km地点・折り返し",
+      "anchorLat": 35.608809770190135,
+      "anchorLng": 139.75219361865203,
+      "description": "参考の距離地点で折り返し、同じ園路を戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.gotokyo.org/jp/spot/1164/index.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

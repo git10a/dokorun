@@ -1,0 +1,43 @@
+{
+  "slug": "koyamaike-park",
+  "reviewedAt": "2026-10-16",
+  "status": "integrated-images-ready",
+  "routeFile": "/tmp/spot-route-repair/koyamaike-route.json",
+  "distanceM": 13865.204604491746,
+  "samples": 1171,
+  "osmWays": 49,
+  "sourceUrls": [
+    "https://koyamaike-jp.hatenablog.com/",
+    "https://cdn-ak.f.st-hatena.com/images/fotolife/k/koyamaike_jp/20260501/20260501091930.png",
+    "https://www.pref.tottori.lg.jp/223331.htm",
+    "https://www.koyamaike.jp/areamap/"
+  ],
+  "officialEvidence": "2026春の湖山池シーズンウォークの主催者チラシ裏を目視。情報プラザ→東岸ナチュラルガーデン→鳥取大学東側→北岸グリーンフィールド→B&G海洋センター→西岸福井→つづらお城跡下→南岸→情報プラザの一周約15km。県も既存の道路を使った一周ウォーク案内整備、歩道のない区間のカラー舗装を案内。",
+  "osmEvidence": "公式概略図とOSMの接続道路を照合。49way、重複辺なしの閉ループ。foot/access=no/private、motorroad=yes、motorway/trunkを除外。relation16467838は一周の一部7wayしか登録がなかったため補助に使用し、他の接続道を組み合わせた。公式イベントの配布GPXではなく約13.9km参考経路。",
+  "startProposal": {
+    "name": "青島大橋南側・湖山池情報プラザ付近",
+    "lat": 35.4975834,
+    "lng": 134.1555451,
+    "note": "南側一般道路上の経路起点。公園駐車場・情報プラザから取り付く想定。"
+  },
+  "introProposal": "湖山池の東岸・北岸・西岸・南岸をつなぐ、約13.9kmの参考周回です。湖畔の公園沿いから鳥取大学周辺、北岸の広場、西岸の集落や南岸の道路へと景色が変わります。青島の島内周回は含みません。",
+  "warningProposal": "公園の園路だけでなく一般道を含み、歩道のない区間もあります。歩道がある場所では歩道を使い、交差点と車の通行に注意してください。公式ウォークの約15kmコースをそのまま測量したデータではなく、公式概略図と公開地図から組んだ参考経路です。",
+  "visualChecks": [
+    {
+      "pano": "bDKZzrr_Qt7CD5-hwFEBYQ",
+      "lat": 35.4953813,
+      "lng": 134.1379892,
+      "captured": "2023-07",
+      "observation": "県道21号南岸。左に縁石付きの連続歩道、右に山林。普通の2車線道路。歩道の利用を案内する。"
+    },
+    {
+      "pano": "CIHM0ogKEICAgIDas4DjDA",
+      "lat": 35.5210633,
+      "lng": 134.1626936,
+      "captured": "2019-03",
+      "observation": "北岸。左に湖、右に広い芝生、中央に舗装された湖岸園路。新経路から約2m。"
+    }
+  ],
+  "elevation": "国土地理院DEM5A/5B/DEM 14zoom・8タイルから取得。標高0〜18.43m、1171点。",
+  "imageReview": "New 13.865 km route integrated by parent. Both images use current public profile; first old held east-shore draft excluded."
+}

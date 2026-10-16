@@ -85,5 +85,32 @@
     },
     "sourceUrl": "https://www.google.com/maps/@39.6704994,141.148231,122a,90y,180h,90t/data=!3m7!1e1!3m5!1sidENRAdnVnH1fZQpBWL9Fg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DidENRAdnVnH1fZQpBWL9Fg%26yaw%3D180!7i16384!8i8192?entry=ttu",
     "observed": "実コースから約1m。右に東北新幹線の大型コンクリート高架が並走、左は2階建事業所と駐車場、細い生活道路。川は見えず河川敷ではない。画像生成せず親へ経路照合を依頼。"
+  },
+  {
+    "slug": "kumamoto-castle-loop",
+    "status": "guide-route-check-needed",
+    "reviewedAt": "2026-10-16",
+    "coursePoint": {
+      "distanceM": 2390.49,
+      "lat": 32.810036,
+      "lng": 130.702896
+    },
+    "pano": {
+      "id": "01ebOC_TV_qdYPP3Dy04fQ",
+      "lat": 32.8099983,
+      "lng": 130.7028705,
+      "captured": "2024-07",
+      "heading": 300
+    },
+    "sourceUrl": "https://www.google.com/maps/@32.8099983,130.7028705,14a,90y,300h,90t/data=!3m7!1e1!3m5!1s01ebOC_TV_qdYPP3Dy04fQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D01ebOC_TV_qdYPP3Dy04fQ%26yaw%3D300!7i16384!8i8192?entry=ttu",
+    "observed": "2390m掲載点から約5mのわが輩通り。北西向きに白線車道、左狭い歩道と低い住宅店、右灰茶中層マンション・駐車場・石塀。信号交差点・車あり、城は見えない。既存introの二の丸・加藤神社・美術館をつなぐ園内周回との関係を親へ照合依頼。"
+  },
+  {
+    "slug": "nagasaki-machinaka-loop",
+    "reviewedAt": "2026-10-16",
+    "status": "resolved-no-mismatch",
+    "observed": "中盤座標から眼鏡橋の位置を疑ったが、親エージェントが公式観光ページのGoogle Mapsリンク座標32.747151,129.880105を確認し、現行profile2220.94m点32.747184,129.880074から4.7mの通過を照合。私の初期位置把握が誤りで、眼鏡橋の紹介は維持。",
+    "sourceUrl": "https://www.at-nagasaki.jp/spot/95",
+    "verification": "parent-agent official source check; no route change needed"
   }
 ]

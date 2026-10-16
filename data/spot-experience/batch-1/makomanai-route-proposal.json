@@ -1,0 +1,45 @@
+{
+  "slug": "makomanai-park",
+  "routePath": "/tmp/spot-route-repair/makomanai-route.json",
+  "name": "真駒内公園・3km参考周回",
+  "start": {
+    "name": "中央橋西側（スタジアム側）の園路",
+    "lat": 42.9974128,
+    "lng": 141.3445265
+  },
+  "distanceKm": 3.032,
+  "description": "真駒内公園の公式3km案内を参考に、中央橋から太陽の広場側の園路、緑橋、南側の森、スタジアム北側を回る約3kmの周回です。川を渡る橋や木立のある道をつなぎ、園内の景色を楽しめます。",
+  "routeNote": "公式案内の3kmコースをOpenStreetMapの園路に沿って再構成した参考経路です。地図上の距離は約3.03kmで、公式の測量データではありません。掲載済みの住宅街側の旧経路は使用しません。",
+  "warnings": [
+    "散歩や自転車利用者と譲り合い、混雑時は歩いてください。",
+    "積雪・凍結、倒木や工事など現地の通行規制を優先してください。",
+    "国土地理院DEMによる参考標高です。橋上の路面高と地表面の標高には差がある場合があります。"
+  ],
+  "evidence": {
+    "officialUrls": [
+      "https://makomanai-park.jp/about/",
+      "https://makomanai-park.jp/assets/pamphlet/guidemap.jpg"
+    ],
+    "osmSource": "https://api.openstreetmap.org/api/0.6/map?bbox=141.334,42.985,141.355,43.006",
+    "osmWays": [
+      416498210,
+      416498211,
+      416498214,
+      416498215,
+      416498216,
+      416498217,
+      416498218,
+      416498219,
+      416498222
+    ],
+    "review": "公式案内図の青い3km線を目視し、中央橋→太陽の広場外側→緑橋→きのこ広場南側→南端森林→豊平川寄りの西園路→スタジアム北側→中央橋の順でOSM園路を照合。全区間footway、公園内の閉じた周回で同じ辺の重複なし。中央橋西詰をGoogle Street View 2015-05の42.9974212,141.3445298で実景確認し、橋名表示・位置・向きが一致。",
+    "routePlot": "/tmp/spot-route-repair/makomanai-route-b1.png",
+    "elevationSamples": 285,
+    "elevationMissing": 0,
+    "elevationRangeM": [
+      66.66,
+      94.52
+    ],
+    "repeatEdges": 0
+  }
+}

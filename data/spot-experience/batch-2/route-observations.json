@@ -87,7 +87,7 @@
   {
     "slug": "kagamigawa-riverside",
     "reviewedAt": "2026-10-16",
-    "status": "held-for-route-correction",
+    "status": "corrected-references-accepted",
     "routeBounds": {
       "minLat": 33.555129,
       "maxLat": 33.557489,
@@ -117,12 +117,13 @@
       "bridgeLng": 133.4980863,
       "observed": "CUA地図検索で下流側の鏡川橋と鏡川が幹線道路より南側にあることを確認。"
     },
-    "action": "画像は生成前に保留。親へ経路修正を依頼。"
+    "action": "画像は生成前に保留。親へ経路修正を依頼。",
+    "resolution": "親が北岸往復2409.33mへ修正。柳原橋西側と新月橋付近の川沿いの道を実写確認し2画像を保存。橋名も公式資料により新月橋へ修正済み。"
   },
   {
     "slug": "kamogawa-sanjo-demachiyanagi",
     "reviewedAt": "2026-10-16",
-    "status": "held-for-route-correction",
+    "status": "corrected-references-accepted",
     "routeBounds": {
       "minLat": 35.009499,
       "maxLat": 35.029488,
@@ -146,6 +147,85 @@
         "observed": "CUAで目視。鴨川東側の川端通、中央分離帯の草、車線矢印、横断歩道、対向車線、道路左右の街路樹。川の河川敷は西隣の下側で現GPXの車道とは別。"
       }
     ],
-    "action": "画像生成前に保留。親へ河川敷経路への修正を依頼。"
+    "action": "画像生成前に保留。親へ河川敷経路への修正を依頼。",
+    "resolution": "親が鴨川東岸河川敷往復4380.54mへ修正。中間の土の道と賀茂大橋北の折り返し付近から2画像を保存。"
+  },
+  {
+    "slug": "koyamaike-park",
+    "reviewedAt": "2026-10-16",
+    "status": "corrected-images-ready",
+    "routeBounds": {
+      "minLat": 35.480845,
+      "maxLat": 35.518299,
+      "minLng": 134.166125,
+      "maxLng": 134.21008,
+      "distanceM": 18269.61
+    },
+    "findings": [
+      {
+        "courseDistanceM": 2036.83,
+        "courseLat": 35.513399,
+        "courseLng": 134.201958,
+        "actualPano": {
+          "id": "k8Wet6ClbZC_ujgqQQZP3Q",
+          "lat": 35.5133926,
+          "lng": 134.2019868,
+          "captured": "2026-08"
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.5133926,134.2019868,6a,90y,180h,90t/data=!3m7!1e1!3m5!1sk8Wet6ClbZC_ujgqQQZP3Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dk8Wet6ClbZC_ujgqQQZP3Q%26yaw%3D180!7i16384!8i8192",
+        "observed": "Google2026年8月。鳥取南バイパスの大きな車道・ディーラー・信号交差点。湖岸ではない。"
+      },
+      {
+        "courseDistanceM": 4574.15,
+        "courseLat": 35.498128,
+        "courseLng": 134.210021,
+        "actualPano": {
+          "id": "22BLjVIWovXNlC5oFsbv-Q",
+          "lat": 35.4981434,
+          "lng": 134.2099953,
+          "captured": "2023-08"
+        },
+        "observed": "Google2023年8月。古海側住宅街の細街路。"
+      }
+    ],
+    "mapEvidence": {
+      "sourceUrl": "https://www.google.com/maps/@35.5133926,134.1916872,15z",
+      "observed": "地図で湖山池とオアシスパークが現GPXの西側にあり、現経路が湖全体を囲まず東市街地と南側丘陵を周回していることを確認。13997m地点の湖岸は東岸であり西岸ではない。"
+    },
+    "action": "2枚目は生成前に保留。湖岸の1枚目は生成したが、経路修正前のためaccepted manifestに入れない。親に経路修正依頼済み。",
+    "resolution": "Parent integrated new 13.865 km lake loop; old 18.3 km east/south detour replaced. Two accepted images aligned to new profile."
+  },
+  {
+    "slug": "kyoto-gyoen",
+    "status": "corrected-images-ready",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 4074.61,
+    "bounds": {
+      "minLat": 35.016216,
+      "maxLat": 35.024087,
+      "minLng": 135.754996,
+      "maxLng": 135.76679
+    },
+    "issue": "京都御苑の外周約4kmという説明だが、北半分を回らず西側府庁側市街地へ約400m外れている。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 2995.89,
+          "lat": 35.0198,
+          "lng": 135.754996
+        },
+        "pano": {
+          "id": "FOqFqq_6CvgGA_bWEs86QQ",
+          "lat": 35.0197667,
+          "lng": 135.7549975,
+          "captured": "2025-09"
+        },
+        "observed": "CUA目視。下立売通近く府庁側の市街地、一般街路と建物が中心。御苑の外周ではない。",
+        "sourceUrl": "https://www.google.com/maps/@35.0197667,135.7549975,3a,90y,90t/data=!3m5!1e1!3m3!1sFOqFqq_6CvgGA_bWEs86QQ!2e0!7i16384"
+      }
+    ],
+    "officialMap": "https://www.env.go.jp/garden/content/000368344.pdf",
+    "action": "Parent notified; hold images until route correction.",
+    "resolution": "Parent integrated 4021.18m perimeter-sidewalk reference loop; 2 accepted images aligned to current public profile."
   }
 ]

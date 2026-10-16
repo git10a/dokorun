@@ -31,7 +31,7 @@ async function main() {
       const source = new URL(r.sourceUrl);
       if (
         source.protocol !== "https:" ||
-        !["www.google.com", "www.google.co.jp"].includes(source.hostname) ||
+        !["www.google.com", "google.com", "www.google.co.jp", "google.co.jp"].includes(source.hostname) ||
         !source.pathname.startsWith("/maps/")
       )
         throw new Error(`${r.slug}/${r.id}: expected a Google Maps panorama source URL`);

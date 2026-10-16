@@ -1,0 +1,33 @@
+{
+  "slug": "kyoto-gyoen",
+  "status": "integrated-images-ready",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/kyoto-gyoen-route.json",
+  "officialSources": [
+    "https://www.env.go.jp/garden/content/000368344.pdf",
+    "https://www.env.go.jp/garden/kyotogyoen/2_guide/map.html"
+  ],
+  "method": "公式散策図の苑境界と外周の4道路を確認し、御苑側のOSM highway=footway,footway=sidewalk の7wayを連続周回として選択。車道・御所内部は通さず、重複edgeゼロ。",
+  "distanceM": 4021.2,
+  "start": {
+    "name": "烏丸丸太町・御苑南西角",
+    "lat": 35.0175883,
+    "lng": 135.7594963
+  },
+  "direction": "烏丸通東側歩道を北進→今出川通南側歩道を東進→寺町通西側歩道を南進→丸太町通北側歩道を西進",
+  "introProposal": "京都御苑の外側を、烏丸通・今出川通・寺町通・丸太町通の御苑側歩道で一周する約4.0kmの参考コース。石垣や樹木を眺めながら走る舗装主体の周回で、苑内の砂利道や京都御所の参観区域は通りません。",
+  "warnings": [
+    "歩道は歩行者を最優先し、狭い場所や門・出入口では歩いてください。",
+    "自転車、バス停利用者、車両出入口に注意。信号と現地表示を優先してください。",
+    "公式の公認ランニングコースや測量距離ではなく、公開地図から再構成した参考ルートです。"
+  ],
+  "sourceChecks": [
+    {
+      "lat": 35.0226428,
+      "lng": 135.7593581,
+      "pano": "3cXIA3bptL59v_ugwVjz7w",
+      "captured": "2025-09",
+      "observation": "烏丸通の御苑側歩道、石垣と木々、道路との低い柵をCUAで目視。車道中心の撮影位置から東側歩道を確認。"
+    }
+  ]
+}

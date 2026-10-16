@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const title = `${data.station.name}駅から走れるランニングスポット`;
   const description =
     stationEditorial[slug]?.intro ??
-    `${data.station.name}駅チカのランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
+    `${data.station.name}駅から行けるランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
   return pageMetadata({ title, description, path: `/stations/${slug}` });
 }
 
@@ -51,6 +51,7 @@ export default async function StationPage({ params }: { params: Params }) {
   if (!data) notFound();
   const { station, spots } = data;
   const editorial = stationEditorial[slug];
+  const hasDistantStart = station.nearbySpots.some((spot) => spot.distanceM > 2_000);
   const recommendations = editorial?.spots.filter((item) => spots.has(item.slug)) ?? [];
   const oneStationGroups = groupByMap(
     station.oneStationSpots,
@@ -102,9 +103,13 @@ export default async function StationPage({ params }: { params: Params }) {
 
       {station.nearbySpots.length > 0 && (
         <section>
-          <SectionHeading className="mb-2">駅チカのランニングスポット</SectionHeading>
+          <SectionHeading className="mb-2">
+            {hasDistantStart ? "駅から行けるランニングスポット" : "駅チカのランニングスポット"}
+          </SectionHeading>
           <p className="mb-6 pl-4 text-sm leading-6 text-sub">
-            {station.name}駅から2km以内。徒歩の近い順に掲載しています。
+            {hasDistantStart
+              ? `${station.name}駅からコースのスタート地点までの距離をもとに掲載しています。`
+              : `${station.name}駅から2km以内。徒歩の近い順に掲載しています。`}
           </p>
           <div className="grid gap-6 lg:grid-cols-2">
             {station.nearbySpots.map((nearby) => {

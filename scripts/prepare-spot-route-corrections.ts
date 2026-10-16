@@ -81,6 +81,38 @@ async function main() {
     }
     console.log(`${slug}: ${course.distance_m}m, ${profile.points.length} height samples`);
   }
+  const elevationDir = resolve("data/spot-experience/elevation-corrections");
+  for (const file of readdirSync(elevationDir).filter(
+    (name) => name.endsWith(".json") && !name.endsWith("-before.json"),
+  )) {
+    const { slug } = JSON.parse(readFileSync(resolve(elevationDir, file), "utf8"));
+    if (existsSync(resolve(dir, file))) throw new Error(`${slug}: route and elevation-only correction overlap`);
+    const beforeFile = resolve(elevationDir, `${slug}-before.json`);
+    const previous = existsSync(beforeFile)
+      ? JSON.parse(readFileSync(beforeFile, "utf8"))
+      : (
+          await client.execute({
+            sql: "SELECT c.id, c.elevation_gain_m FROM courses c JOIN spots s ON s.id = c.spot_id WHERE s.slug = ? AND c.is_primary = 1",
+            args: [slug],
+          })
+        ).rows[0];
+    if (!previous) throw new Error(`${slug}: primary course missing`);
+    if (!existsSync(beforeFile)) writeFileSync(beforeFile, JSON.stringify(previous, null, 2) + "\n");
+    const profile = JSON.parse(readFileSync(resolve("public/spot-elevation", `${slug}.json`), "utf8")) as RaceElevation;
+    if (profile.source !== "gsi" || profile.routeReviewRequired)
+      throw new Error(`${slug}: elevation correction not ready`);
+    const gain = raceElevationGain(profile);
+    if (gain === previous.elevation_gain_m) continue;
+    updates.push(
+      `-- ${slug}: elevation only`,
+      `UPDATE courses SET elevation_gain_m = ${quote(gain)} WHERE id = ${quote(previous.id)} AND elevation_gain_m IS ${quote(previous.elevation_gain_m)};`,
+    );
+    rollback.push(
+      `-- ${slug}: elevation only`,
+      `UPDATE courses SET elevation_gain_m = ${quote(previous.elevation_gain_m)} WHERE id = ${quote(previous.id)} AND elevation_gain_m IS ${quote(gain)};`,
+    );
+    console.log(`${slug}: elevation gain ${previous.elevation_gain_m}m → ${gain}m`);
+  }
   const descriptionsPath = resolve("data/spot-experience/content-corrections.json");
   if (existsSync(descriptionsPath)) {
     const descriptions = JSON.parse(readFileSync(descriptionsPath, "utf8")) as {

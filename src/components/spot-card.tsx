@@ -5,10 +5,13 @@ import { FacilityIcons } from "./facility-icons";
 import { SpotImage } from "./spot-image";
 import { SpotThumbnail } from "./spot-thumbnail";
 import { formatDistanceKm } from "@/lib/format";
+import spotElevationSummaries from "@/lib/spot-elevation-summaries.json";
 import { courseTypeLabels, surfaceLabels, type SpotSummary } from "@/lib/types";
 
 export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact?: boolean }) {
   const distanceKm = formatDistanceKm(spot.distanceM);
+  const summary = (spotElevationSummaries as Record<string, { elevationGainM: number | null }>)[spot.slug];
+  const elevationGainM = summary ? summary.elevationGainM : spot.elevationGainM;
 
   if (compact) {
     return (
@@ -59,7 +62,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
   const details = [
     ...new Set(
       [
-        spot.elevationGainM !== null ? `高低差${spot.elevationGainM}m` : null,
+        elevationGainM !== null ? `獲得標高${elevationGainM}m` : null,
         spot.signalsCount !== null ? `信号${spot.signalsCount}` : null,
         courseTypeLabels[spot.courseType],
         surfaceLabels[spot.surface],

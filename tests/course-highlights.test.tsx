@@ -10,7 +10,7 @@ vi.mock("@/components/map/course-guide-map", () => ({ CourseGuideMap: () => null
 vi.mock("@/components/member-gpx-link", () => ({ MemberGpxLink: () => null }));
 vi.mock("@/components/map/course-map", () => ({ CourseMap: () => null }));
 
-async function renderGuide(slug: string) {
+async function renderGuide(slug: string, withoutAtmosphere = false) {
   const guide = await getCourseGuide(slug);
   if (!guide)
     return renderToStaticMarkup(
@@ -31,7 +31,7 @@ async function renderGuide(slug: string) {
     );
   return renderToStaticMarkup(
     createElement(LongCourseGuide, {
-      guide,
+      guide: withoutAtmosphere ? { ...guide, atmosphere: undefined } : guide,
       geojson: {
         type: "LineString",
         coordinates: [
@@ -69,16 +69,16 @@ describe("course highlights", () => {
   );
 
   it("omits empty photo sections and generic substitute cards while keeping route and access controls", async () => {
-    const html = await renderGuide("hattori-ryokuchi");
+    const html = await renderGuide("hattori-ryokuchi", true);
     expect(html).not.toContain('id="highlights"');
     expect(html).not.toContain("区間ごとの確認ポイント");
     expect(html).not.toContain("wikimedia.org");
     expect(html).toContain('id="route"');
-    expect(html).toContain("スタート地点を決める");
+    expect(html).toContain("アクセスを確認");
   });
 
-  it("keeps the reviewed landmark gallery and source credits", async () => {
-    const html = await renderGuide("kamakura-issyu-trail");
+  it("keeps the reviewed landmark gallery and source credits when AI scenes are absent", async () => {
+    const html = await renderGuide("kamakura-issyu-trail", true);
     expect(html).toContain('id="highlights"');
     expect(html).toContain("六国見山");
     expect(html).toContain("CC BY-SA 3.0");

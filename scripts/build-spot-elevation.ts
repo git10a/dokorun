@@ -12,6 +12,11 @@ const routeReviews = JSON.parse(readFileSync(resolve("data/spot-experience/route
   string,
   { status: string; correction?: { elevationSource?: string } }
 >;
+const elevationCorrections = new Set(
+  readdirSync(resolve("data/spot-experience/elevation-corrections"))
+    .filter((file) => file.endsWith(".json") && !file.endsWith("-before.json"))
+    .map((file) => file.slice(0, -5)),
+);
 const out = resolve("public/spot-elevation");
 mkdirSync(out, { recursive: true });
 let count = 0;
@@ -36,7 +41,7 @@ for (const file of readdirSync(resolve("data/gpx"))
   if (routeReviews[slug]?.status === "route-mismatch") profile.routeReviewRequired = true;
   if (guide && Math.abs(profile.points.at(-1)!.distanceM - guide.distanceM) > 1)
     throw new Error(`${slug}: guide distance mismatch`);
-  if (routeReviews[slug]?.correction?.elevationSource === "gsi") {
+  if (routeReviews[slug]?.correction?.elevationSource === "gsi" || elevationCorrections.has(slug)) {
     profile.source = "gsi";
   } else if (terrainSlugs.has(slug))
     profile.attribution = {

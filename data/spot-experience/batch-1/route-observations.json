@@ -109,5 +109,107 @@
         "screenshot": "/tmp/dokorun-batch1-iwadono-lookout-source.png"
       }
     ]
+  },
+  {
+    "slug": "kaiseizan-park",
+    "status": "needs-post-2024-panorama",
+    "reason": "郡山市公式で2024-04-01公園西側改修を確認。園路・広場・親水デッキ等が変更。コース付近SV2016-11と施設360写真1:2015-04/2:2018-04/3:2018-04、初期表示2017-04は改修前なので未採用。",
+    "officialUrl": "https://www.city.koriyama.lg.jp/soshiki/132/3252.html",
+    "observations": [
+      {
+        "pano": {
+          "id": "CIHM0ogKEICAgID4rqTgIw",
+          "lat": 37.3977488,
+          "lng": 140.3579123,
+          "captured": "2016-11"
+        },
+        "sourceUrl": "https://www.google.com/maps/@37.3977488,140.3579123,3a,90y,90h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgID4rqTgIw!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_gFofb_89XHpsZ4VgrHb-6Cry9Cl-A5siCzUN0bY57DOmRYR6-jWUqkjSJC7WUuW8wo-11ezjyrc3jmaQcSApv0krdHopULoUsfDRVBBFe_3SQafamHThLda5soVUISEzzUjCx%3Dw900-h600-k-no-pi0-ya92.239990234375-ro0-fo100!7i5376!8i2688"
+      }
+    ]
+  },
+  {
+    "slug": "keihin-unga-ryokudo",
+    "status": "route-review-needed",
+    "observedAt": "2026-10-16",
+    "finding": "公開GPXは駅付近35.598506,139.745366から勝島橋を渡って南の八潮通りへ往復する2,978.89m。京浜運河緑道公園の水辺園路を北上するコースではなく、紹介文の2.9kmクロカン周回と一致しない。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 610.65,
+          "lat": 35.595704,
+          "lng": 139.748697
+        },
+        "pano": {
+          "lat": 35.595744,
+          "lng": 139.748717,
+          "id": "fR9DKSR22dZ8YoJPt1MrVw",
+          "captured": "2023-10"
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.595744,139.748717,3a,90y,90h,90t/data=!3m4!1e1!3m2!1sfR9DKSR22dZ8YoJPt1MrVw!2e0",
+        "observation": "勝島橋の車道と両側歩道、橋東側の樹林が見える。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 1041.89,
+          "lat": 35.593513,
+          "lng": 139.750862
+        },
+        "pano": {
+          "lat": 35.5935644,
+          "lng": 139.7509005,
+          "id": "Ev028UW5gMCvyTGgImqLzA",
+          "captured": "2023-10"
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.5935644,139.7509005,3a,90y,180h,90t/data=!3m4!1e1!3m2!1sEv028UW5gMCvyTGgImqLzA!2e0",
+        "observation": "中央分離帯のある八潮通りと交差点。運河緑道の中ではない。"
+      }
+    ],
+    "officialContext": [
+      "https://www.gotokyo.org/jp/spot/1164/index.html",
+      "https://shinagawa-kanko.or.jp/featured/cityrun/"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "makomanai-park",
+    "status": "route-location-mismatch",
+    "reviewedAt": "2026-10-16",
+    "profileBounds": {
+      "latMin": 43.005222,
+      "latMax": 43.011678,
+      "lngMin": 141.341269,
+      "lngMax": 141.349255
+    },
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 402.8,
+          "lat": 43.011172,
+          "lng": 141.3485
+        },
+        "pano": {
+          "lat": 43.0111659,
+          "lng": 141.3484519,
+          "id": "lVd6YB9H5Kzl-jHIJK-W2A",
+          "captured": "2024-07"
+        },
+        "sourceUrl": "https://google.com/maps/@43.0111659,141.3484519,60a,90y,180h,90t/data=!3m7!1e1!3m5!1slVd6YB9H5Kzl-jHIJK-W2A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DlVd6YB9H5Kzl-jHIJK-W2A%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observation": "実際に表示されたのは南34条西付近の住宅街の戸建住宅。真駒内公園内ではない。"
+      },
+      {
+        "placePoint": {
+          "lat": 42.9960957,
+          "lng": 141.3447364
+        },
+        "sourceUrl": "https://www.google.com/maps/place/北海道立真駒内公園/data=!4m2!3m1!1s0x5f0ad57424ff1c5f:0x9b47aa77a2a3fc83",
+        "observation": "Google Maps公園ページを開き、公式サイトリンクと住所一致、スタジアム・緑橋・きのこ広場を地図で確認。現GPX全体は公園の北に外れる。"
+      }
+    ],
+    "officialContext": [
+      "https://makomanai-park.jp/about/",
+      "https://makomanai-park.jp/access/",
+      "https://makomanai-park.jp/assets/pamphlet/guidemap.jpg"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
   }
 ]

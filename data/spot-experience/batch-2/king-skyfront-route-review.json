@@ -1,0 +1,68 @@
+{
+  "slug": "king-skyfront-tamagawa",
+  "status": "integrated-by-parent-images-ready",
+  "reviewedAt": "2026-10-16",
+  "routePath": "/tmp/spot-route-repair/king-skyfront-route.json",
+  "distanceM": 3629.725205385544,
+  "start": {
+    "lat": 35.5399932,
+    "lng": 139.759449,
+    "label": "多摩川スカイブリッジ西側・右岸の自転車歩行者道"
+  },
+  "turnaround": {
+    "lat": 35.5406079,
+    "lng": 139.7399541,
+    "label": "大師橋西側・河川敷への階段分岐付近"
+  },
+  "routeName": "多摩川スカイブリッジ西側〜大師橋西側・右岸約3.6km往復（参考ルート）",
+  "courseType": "out_and_back",
+  "surface": "paved",
+  "intro": "多摩川スカイブリッジの西側から、川崎側の「かわさき多摩川ふれあいロード」を大師橋の西側まで往復する約3.6kmの参考ルートです。キングスカイフロントの研究施設やホテルを横に、多摩川と対岸の羽田エリアを眺めながら走れます。舗装された堤防沿いの道が中心で、橋の下を通る区間には短い上り下りがあります。歩行者や自転車と共用する道なので、左側を一列で通り、出入り口や混雑する場所では速度を落としましょう。",
+  "notice": "川崎市の河川敷利用案内・ウォーキングマップとOpenStreetMapの歩行可能な自転車道を照合した参考ルートです。公式に測量されたランニングコースではありません。市の駅間ウォーキングコース（約3.7km）とは区間が異なります。橋は渡らず、川崎側の河川敷を往復します。標高は国土地理院DEMに基づく参考値で、橋下の立体構造や短い段差は正確に表せない場合があります。増水・工事・通行規制や現地の案内を優先してください。",
+  "access": "キングスカイフロント地区から多摩川沿いへ出て、多摩川スカイブリッジの西側にある自転車歩行者道へ。橋上の車道や研究施設間の街路とは別の川沿いの道が起点です。",
+  "officialSources": [
+    {
+      "url": "https://www.city.kawasaki.jp/530/page/0000113987.html",
+      "checked": "2026-10-16",
+      "observed": "2026年8月4日更新。殿町までの河口コース、歩行者優先・左側通行・交差/坂路注意を確認。"
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/kawasaki/cmsfiles/contents/0000076/76052/walking_02.pdf",
+      "checked": "2026-10-16",
+      "observed": "p24-25（PDF3ページ目）を画像で確認。大師橋から殿町第二公園・ホテル・LiSEへ続く川沿いの道とスカイブリッジ方向を確認。駅間3.7km全体を転用せず河川沿い区間を照合。"
+    }
+  ],
+  "osm": {
+    "file": "/tmp/spot-route-repair/king-skyfront.osm",
+    "retrievedAt": "2026-10-16",
+    "ways": [
+      96350118,
+      161462594,
+      305354014,
+      305355408,
+      305355409,
+      305823005,
+      963845805,
+      963845806,
+      964191649
+    ],
+    "checks": "全採用wayはhighway=cycleway、foot=designated、access=no/privateなし。ノード接続を使い同じ経路を往復。道路の車線・ホテル私有地・橋の車道は採用せず。"
+  },
+  "visualReferences": [
+    {
+      "pano": "CIHM0ogKEICAgICM2MHlOQ",
+      "lat": 35.5400102,
+      "lng": 139.7594222,
+      "captured": "2019-08",
+      "observed": "a zakiのユーザー360。起点付近の舗装された堤防道、右に多摩川、左に研究建物。"
+    },
+    {
+      "pano": "CIHM0ogKEICAgICM2K6izAE",
+      "lat": 35.5406252,
+      "lng": 139.739938,
+      "captured": "2019-08",
+      "observed": "a zakiのユーザー360。大師橋西側の舗装道、橋下方向と建物、河川敷への階段付近。"
+    }
+  ],
+  "imageManifest": "sources-and-prompts.json"
+}

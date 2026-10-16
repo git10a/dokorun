@@ -194,5 +194,101 @@
       "elevationSource": "gsi",
       "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
     }
+  },
+  "kitakami-river-morioka": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは北上川から離れた住宅地・線路沿いを通り、河川敷の説明と一致しない。",
+    "evidence": "data/spot-experience/batch-3/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kitakami-river-morioka.json",
+      "elevationSource": "gsi",
+      "method": "City riverside walking-route description compared against the OSM bicycle-and-foot designated riverbank path; out-and-back reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "king-skyfront-tamagawa": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは研究施設間と国道409号沿いの街路を含み、川沿い往復の紹介文と一致しない。",
+    "evidence": "data/spot-experience/batch-2/king-skyfront-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/king-skyfront-tamagawa.json",
+      "elevationSource": "gsi",
+      "method": "Official Kawasaki riverside use guide and walking map compared against connected bicycle-and-foot designated OSM riverbank ways; reconstructed out-and-back reference, not a surveyed official GPX."
+    }
+  },
+  "iwadono-kyuryo-cross": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路にゴルフ場のカート道を含むため、公式の散策案内をもとに公道・園路へ修正。",
+    "evidence": "data/spot-experience/batch-1/iwadono-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/iwadono-kyuryo-cross.json",
+      "elevationSource": "gsi",
+      "method": "公式の廃線敷→北側階段と道路下トンネル→西側一般道→市民の森→物見山付近→動物園前→彫刻プロムナードという順序を照合。ゴルフ場内の旧経路を除去。道路交差点の歩道を優先。"
+    }
+  },
+  "misato-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXはみさと公園から東へ約1km離れた水元公園東側を通っていたため、公式1,550mコースと園路を照合して修正。",
+    "evidence": "https://www.seibu-la.co.jp/misato-yoshikawa/facility/misato.html",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/misato-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "keihin-unga-ryokudo": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXが勝島橋の南側の一般道往復で、運河沿いの園路という説明と一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/keihin-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/keihin-unga-ryokudo.json",
+      "elevationSource": "gsi",
+      "method": "東京都港湾局のウォーキング案内およびGO TOKYOの運河沿い緑道案内とOSMの歩行可能な園路を照合。道路を南下していた旧ルートを除去し、運河の東岸にある園路を北上する往復へ変更。Google Street View 2019-12の35.6005394,139.7491096で園路・護岸・柵を実景確認。"
+    }
+  },
+  "koyamaike-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は湖から東側の市街地・丘陵へ離れ、湖を一周するという説明と不一致。",
+    "evidence": "data/spot-experience/batch-2/koyamaike-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/koyamaike-park.json",
+      "elevationSource": "gsi",
+      "method": "2026春の湖山池シーズンウォークの主催者チラシ裏を目視。情報プラザ→東岸ナチュラルガーデン→鳥取大学東側→北岸グリーンフィールド→B&G海洋センター→西岸福井→つづらお城跡下→南岸→情報プラザの一周約15km。県も既存の道路を使った一周ウォーク案内整備、歩道のない区間のカラー舗装を案内。 公式概略図とOSMの接続道路を照合。49way、重複辺なしの閉ループ。foot/access=no/private、motorroad=yes、motorway/trunkを除外。relation16467838は一周の一部7wayしか登録がなかったため補助に使用し、他の接続道を組み合わせた。公式イベントの配布GPXではなく約13.9km参考経路。"
+    }
+  },
+  "kyoto-gyoen": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは京都御苑北半分を通らず、西側の市街地を回っており、御苑外周の説明と不一致。",
+    "evidence": "data/spot-experience/batch-2/kyoto-gyoen-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kyoto-gyoen.json",
+      "elevationSource": "gsi",
+      "method": "公式散策図の苑境界と外周の4道路を確認し、御苑側のOSM highway=footway,footway=sidewalk の7wayを連続周回として選択。車道・御所内部は通さず、重複edgeゼロ。"
+    }
+  },
+  "makomanai-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは真駒内公園より北の住宅街を回り、公園の説明と不一致。",
+    "evidence": "data/spot-experience/batch-1/makomanai-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/makomanai-park.json",
+      "elevationSource": "gsi",
+      "method": "公式案内図の青い3km線を目視し、中央橋→太陽の広場外側→緑橋→きのこ広場南側→南端森林→豊平川寄りの西園路→スタジアム北側→中央橋の順でOSM園路を照合。全区間footway、公園内の閉じた周回で同じ辺の重複なし。中央橋西詰をGoogle Street View 2015-05の42.9974212,141.3445298で実景確認し、橋名表示・位置・向きが一致。"
+    }
   }
 }

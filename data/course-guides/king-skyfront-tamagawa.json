@@ -1,127 +1,62 @@
 {
   "slug": "king-skyfront-tamagawa",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "川崎市殿町のキングスカイフロント地区を起点に、多摩川スカイブリッジのたもとから多摩川右岸沿いを大師橋まで往復する約5.3kmのフラットコース。対岸に羽田空港が広がり、離着陸する飛行機を眺めながら信号にほぼ止まらず走れる。研究施設街のため歩道が広く夜も人通りが少なめ。周辺のホテルや公園でトイレ・自販機を利用できる。スカイブリッジを渡れば羽田空港側にも行ける。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "多摩川スカイブリッジの西側から、川崎側の「かわさき多摩川ふれあいロード」を大師橋の西側まで往復する約3.6kmの参考ルートです。キングスカイフロントの研究施設やホテルを横に、多摩川と対岸の羽田エリアを眺めながら走れます。舗装された堤防沿いの道が中心で、橋の下を通る区間には短い上り下りがあります。歩行者や自転車と共用する道なので、左側を一列で通り、出入り口や混雑する場所では速度を落としましょう。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "河川敷の走行と参考ルートについて",
+      "body": "川崎市の河川敷利用案内・ウォーキングマップとOpenStreetMapの歩行可能な自転車道を照合した参考ルートです。公式に測量されたランニングコースではありません。市の駅間ウォーキングコース（約3.7km）とは区間が異なります。橋は渡らず、川崎側の河川敷を往復します。標高は国土地理院DEMに基づく参考値で、橋下の立体構造や短い段差は正確に表せない場合があります。増水・工事・通行規制や現地の案内を優先してください。",
+      "url": "https://www.city.kawasaki.jp/530/page/0000113987.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 京急大師線 小島新田駅 徒歩約15分/多摩川スカイブリッジ経由で羽田空港第3ターミナル 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと河川敷の案内",
+      "body": "キングスカイフロント地区から多摩川沿いへ出て、多摩川スカイブリッジの西側にある自転車歩行者道へ。橋上の車道や研究施設間の街路とは別の川沿いの道が起点です。",
+      "url": "https://www.city.kawasaki.jp/530/page/0000113987.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "小島新田駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.534798,
-      "destinationLng": 139.747575,
-      "routeAnchorLat": 35.54081,
-      "routeAnchorLng": 139.753798,
+      "name": "多摩川スカイブリッジ西側・右岸の自転車歩行者道",
+      "badge": "川沿いの道からスタート",
+      "destinationLat": 35.5399932,
+      "destinationLng": 139.759449,
+      "routeAnchorLat": 35.5399932,
+      "routeAnchorLng": 139.759449,
       "routeMode": "forward",
-      "accessText": "小島新田駅からコースまで約880m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "キングスカイフロント地区から多摩川沿いへ出て、多摩川スカイブリッジの西側にある自転車歩行者道へ。橋上の車道や研究施設間の街路とは別の川沿いの道が起点です。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "川崎側の自転車歩行者道を上流へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.54081,
-      "anchorLng": 139.753798,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 多摩川河口",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg/960px-%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg",
-        "alt": "多摩川河口・キングスカイフロントのスタート周辺付近",
-        "caption": "多摩川河口・キングスカイフロントの走路近隣で撮影された風景",
-        "credit": "Kiyo",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg"
-      }
+      "name": "多摩川スカイブリッジ西側・右岸の自転車歩行者道",
+      "anchorLat": 35.5399932,
+      "anchorLng": 139.759449,
+      "description": "川崎側の自転車歩行者道を上流へ進みます。",
+      "surfaceLabel": "自転車歩行者道",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.539505,
-      "anchorLng": 139.760283,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: The view of Haneda airport from Keihin industrial area (川崎の工場地帯からの羽田空港)",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_view_of_Haneda_airport_from_Keihin_industrial_area_%28%E5%B7%9D%E5%B4%8E%E3%81%AE%E5%B7%A5%E5%A0%B4%E5%9C%B0%E5%B8%AF%E3%81%8B%E3%82%89%E3%81%AE%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%29_-_panoramio.jpg/960px-The_view_of_Haneda_airport_from_Keihin_industrial_area_%28%E5%B7%9D%E5%B4%8E%E3%81%AE%E5%B7%A5%E5%A0%B4%E5%9C%B0%E5%B8%AF%E3%81%8B%E3%82%89%E3%81%AE%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%29_-_panoramio.jpg",
-        "alt": "多摩川河口・キングスカイフロントの序盤区間付近",
-        "caption": "多摩川河口・キングスカイフロントの走路近隣で撮影された風景",
-        "credit": "ohkubo",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_view_of_Haneda_airport_from_Keihin_industrial_area_(%E5%B7%9D%E5%B4%8E%E3%81%AE%E5%B7%A5%E5%A0%B4%E5%9C%B0%E5%B8%AF%E3%81%8B%E3%82%89%E3%81%AE%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF)_-_panoramio.jpg"
-      }
-    },
-    {
-      "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.539484,
-      "anchorLng": 139.751417,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 多摩川河口",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg/960px-%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg",
-        "alt": "多摩川河口・キングスカイフロントの中盤区間付近",
-        "caption": "多摩川河口・キングスカイフロントの走路近隣で撮影された風景",
-        "credit": "Kiyo",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%B7%9D%E6%B2%B3%E5%8F%A3_-_panoramio.jpg"
-      }
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.53752,
-      "anchorLng": 139.741587,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 産業道路駅",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/%E7%94%A3%E6%A5%AD%E9%81%93%E8%B7%AF%E9%A7%85_-_panoramio.jpg/960px-%E7%94%A3%E6%A5%AD%E9%81%93%E8%B7%AF%E9%A7%85_-_panoramio.jpg",
-        "alt": "多摩川河口・キングスカイフロントの後半区間付近",
-        "caption": "多摩川河口・キングスカイフロントの走路近隣で撮影された風景",
-        "credit": "ardosa",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%94%A3%E6%A5%AD%E9%81%93%E8%B7%AF%E9%A7%85_-_panoramio.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.538647,
-      "anchorLng": 139.745004,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 羽田の渡し 川崎側",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/%E7%BE%BD%E7%94%B0%E3%81%AE%E6%B8%A1%E3%81%97_%E5%B7%9D%E5%B4%8E%E5%81%B4_-_panoramio.jpg/960px-%E7%BE%BD%E7%94%B0%E3%81%AE%E6%B8%A1%E3%81%97_%E5%B7%9D%E5%B4%8E%E5%81%B4_-_panoramio.jpg",
-        "alt": "多摩川河口・キングスカイフロントの終盤区間付近",
-        "caption": "多摩川河口・キングスカイフロントの走路近隣で撮影された風景",
-        "credit": "次田和宏",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%BE%BD%E7%94%B0%E3%81%AE%E6%B8%A1%E3%81%97_%E5%B7%9D%E5%B4%8E%E5%81%B4_-_panoramio.jpg"
-      }
+      "name": "大師橋西側・折り返し",
+      "anchorLat": 35.5406079,
+      "anchorLng": 139.7399541,
+      "description": "河川敷への階段分岐付近で折り返し、同じ道を戻ります。橋は渡りません。",
+      "surfaceLabel": "自転車歩行者道",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.city.kawasaki.jp/530/page/0000113987.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

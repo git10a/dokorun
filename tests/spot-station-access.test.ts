@@ -1,31 +1,23 @@
 import { describe, expect, it } from "vitest";
 import stations from "../data/stations/stations.json";
+import publishedSlugs from "../data/stations/published-slugs.json";
 
 // A route correction must change station access without deleting useful indexed pages.
 describe("station access after spot route corrections", () => {
   it("retains established station pages with a reachable running spot", () => {
-    const retained = [
-      "kitakogane",
-      "inage",
-      "shinkemigawa",
-      "monoi",
-      "itahashimotomachi",
-      "tabata",
-      "supo-tsusenta",
-      "tsudanuma",
-      "midoridai",
-      "itabashikuyakushomae",
-      "higashijuujou",
-      "minamikashiwa",
-      "anagawa-chiba",
-      "honhasunuma",
-      "tsuga",
-    ];
-    for (const slug of retained) {
+    for (const slug of publishedSlugs) {
       const station = stations.find((item) => item.slug === slug);
       expect(station, slug).toBeDefined();
       expect((station?.nearbySpots.length ?? 0) + (station?.oneStationSpots.length ?? 0), slug).toBeGreaterThan(0);
     }
+  });
+  it.each(["kozan", "tottoridaigakumae"])("keeps %s access truthful after the lake start moves", (slug) => {
+    const station = stations.find((item) => item.slug === slug);
+    const spot = station?.nearbySpots.find((item) => item.slug === "koyamaike-park");
+    expect(spot).toBeDefined();
+    expect(spot!.distanceM).toBeGreaterThan(2_000);
+    expect(spot!.distanceM).toBeLessThan(5_000);
+    expect(spot!.walkMinutes).toBe(Math.ceil(spot!.distanceM / 80));
   });
   it.each([
     ["aoba-no-mori-park", "chibadera"],
