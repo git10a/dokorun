@@ -42,7 +42,7 @@ export function SpotCourseMap({
             {profile ? (
               <RaceElevationChart profile={profile} selectedDistanceM={distanceM} onSelect={setDistanceM} />
             ) : (
-              <p className="py-4 text-sm text-sub" role="status">
+              <p className="flex min-h-[391px] items-center py-4 text-sm text-sub" role="status">
                 {profile === undefined
                   ? "標高データを読み込み中…"
                   : "標高データを読み込めませんでした。時間をおいて再度お試しください。"}
