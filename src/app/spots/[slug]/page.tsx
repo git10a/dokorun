@@ -1,9 +1,11 @@
+import spotElevationSummaries from "@/lib/spot-elevation-summaries.json";
 import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSitemapSpots, getSpotCommunities, getSpotDetailWithNearby } from "@/db/data";
-import { CourseMap } from "@/components/map/course-map";
+import { courseAtmospheres } from "@/lib/course-atmosphere";
+import { SpotCourseMap } from "@/components/spot-course-map";
 import { FacilityIcons } from "@/components/facility-icons";
 import { TrackView } from "@/components/track-view";
 import { ShareButtons } from "@/components/share-buttons";
@@ -205,6 +207,7 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
         )}
         {courseGuide && spot.geojson ? (
           <LongCourseGuide
+            key={spot.slug}
             guide={courseGuide}
             geojson={spot.geojson}
             courseType={spot.courseType}
@@ -215,7 +218,10 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
           <>
             <SpecPanel
               distanceM={spot.distanceM}
-              elevationGainM={spot.elevationGainM}
+              elevationGainM={
+                (spotElevationSummaries as Record<string, { elevationGainM: number | null }>)[spot.slug]
+                  ?.elevationGainM ?? null
+              }
               signalsCount={spot.signalsCount}
               courseType={spot.courseType}
               surface={spot.surface}
@@ -224,7 +230,15 @@ export default async function SpotDetailPage({ params }: { params: Params }) {
             {publicSpotDescription && <p className="max-w-3xl leading-7">{publicSpotDescription}</p>}
             <section className="space-y-4">
               <SectionHeading>コースマップ</SectionHeading>
-              <CourseMap lat={spot.lat} lng={spot.lng} geojson={spot.geojson} name={spot.name} />
+              <SpotCourseMap
+                key={spot.slug}
+                atmosphere={courseAtmospheres[spot.slug]}
+                slug={spot.slug}
+                lat={spot.lat}
+                lng={spot.lng}
+                geojson={spot.geojson}
+                name={spot.name}
+              />
               <RunCoursePanel slug={spot.slug} lat={spot.lat} lng={spot.lng} canDownloadGpx={Boolean(spot.geojson)} />
             </section>
             {editorial && <CourseEditorial entry={editorial} />}

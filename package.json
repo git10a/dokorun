@@ -6,8 +6,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next dev",
-    "build": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && next build --webpack",
+    "dev": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && tsx scripts/build-spot-elevation.ts && next dev",
+    "build": "node scripts/sync-public-spot-gpx.mjs && tsx scripts/build-race-elevation.ts && tsx scripts/build-spot-elevation.ts && next build --webpack",
     "start": "next start",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "bash scripts/deploy.sh",
@@ -39,7 +39,8 @@
     "race-elevation:terrain": "tsx scripts/sample-race-terrain.ts",
     "race-gpx:apply": "tsx scripts/apply-race-gpx.ts",
     "validate:spots": "tsx scripts/validate-spots.ts",
-    "station-data:build": "tsx scripts/build-station-data.mjs"
+    "station-data:build": "tsx scripts/build-station-data.mjs",
+    "spot-elevation:build": "tsx scripts/build-spot-elevation.ts"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.11",

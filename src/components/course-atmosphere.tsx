@@ -1,9 +1,15 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { SpotImage } from "@/components/spot-image";
 import type { CourseAtmosphere as Atmosphere } from "@/lib/course-atmosphere";
 
-export function CourseAtmosphere({ atmosphere }: { atmosphere: Atmosphere }) {
+export function CourseAtmosphere({
+  atmosphere,
+  onSelectPoint,
+}: {
+  atmosphere: Atmosphere;
+  onSelectPoint?: (distanceM: number) => void;
+}) {
   return (
     <section id="highlights" className="scroll-mt-40 space-y-5">
       <div>
@@ -27,7 +33,18 @@ export function CourseAtmosphere({ atmosphere }: { atmosphere: Atmosphere }) {
               className="aspect-video w-full rounded-xl object-cover"
             />
             <figcaption className="pt-3">
-              <p className="text-[11px] font-medium text-sub">AI生成の参考イメージ</p>
+              <p className="mb-2 text-[11px] font-medium text-sub">AI生成の参考イメージ</p>
+              {scene.coursePoint && onSelectPoint && (
+                <button
+                  type="button"
+                  onClick={() => onSelectPoint(scene.coursePoint!.distanceM)}
+                  aria-label={`約${(scene.coursePoint.distanceM / 1000).toFixed(1)}kmの地点をコース地図で見る：${scene.title}`}
+                  className="mb-2 inline-flex min-h-11 items-center gap-2 rounded-xl border-2 border-brand/60 bg-cream px-3 py-2 text-sm font-bold shadow-[0_3px_0] shadow-brand/35 hover:bg-brand/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  <MapPin size={15} aria-hidden="true" />約{(scene.coursePoint.distanceM / 1000).toFixed(1)}km ·
+                  コース上で見る
+                </button>
+              )}
               <h3 className="mt-1 text-lg font-bold">{scene.title}</h3>
               <p className="mt-2 text-sm leading-6 text-sub">{scene.description}</p>
               <a

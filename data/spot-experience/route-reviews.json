@@ -1,0 +1,45 @@
+{
+  "21st-century-forest-park": {
+    "status": "route-mismatch",
+    "observedAt": "2026-10-16",
+    "reason": "登録GPXの2地点は住宅街の舗装路。園内の土路面という掲載説明と一致せず、21世紀の森と広場の正しいコースに照合する必要がある。",
+    "officialSource": "https://www.city.matsudo.chiba.jp/shisetsu-guide/kouen_ryokuka/top/shisetuannnai/index.html",
+    "evidence": [
+      {
+        "routePoint": [
+          35.79484407726597,
+          139.9274307771174
+        ],
+        "panoId": "oSZJgJs2vnsZjxLE6o1t7g",
+        "captured": "2022-11",
+        "observed": "車道両側に住宅・電柱。掲載説明の土の園路ではない。"
+      },
+      {
+        "routePoint": [
+          35.794785033765216,
+          139.92212331095408
+        ],
+        "panoId": "rZgq1HKQwRBSki0ds1PoJg",
+        "captured": "2025-08",
+        "observed": "住宅街の舗装路、コンクリート擁壁、白線、電柱。"
+      }
+    ]
+  },
+  "aoba-no-mori-park": {
+    "status": "route-mismatch",
+    "observedAt": "2026-10-16",
+    "reason": "登録GPXの北側地点は青葉の森公園内ではなく、千葉テレビ周辺の公道を通る。施設の取り違えを公式地図と照合する必要がある。",
+    "officialSource": "https://www.cue-net.or.jp/kouen/aoba/access/index.html",
+    "evidence": [
+      {
+        "routePoint": [
+          35.61400248277668,
+          140.13464879373888
+        ],
+        "panoId": "EjpzO7aHnQtnTrAqAx_FWg",
+        "captured": "2025-08",
+        "observed": "公道の向かいに低層の事業所、駐車場、電柱。園内走路の景色ではない。"
+      }
+    ]
+  }
+}

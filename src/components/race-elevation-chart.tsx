@@ -292,7 +292,11 @@ export function RaceElevationChart({
       </svg>
       <div className="mt-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[10px] leading-5 text-sub sm:text-[11px]">
         <p id={hintId}>タップで地点を確認</p>
-        {profile.source === "gsi" ? (
+        {profile.attribution ? (
+          <a className="underline" href={profile.attribution.url} target="_blank" rel="noreferrer">
+            {profile.attribution.label}
+          </a>
+        ) : profile.source === "gsi" ? (
           <a
             className="underline"
             href="https://maps.gsi.go.jp/development/ichiran.html"
