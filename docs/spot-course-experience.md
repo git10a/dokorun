@@ -1,28 +1,51 @@
-# Running spot course experience — 2026-10-16
+# ランニングスポットの標高・景色画像
 
-Target: all 251 published spots, two or three reviewed scenery images per spot, and the same interactive elevation chart as race pages. This work is not complete and has not been deployed.
+2026-10-16時点。対象は公開中の全251スポット。**全件完了ではなく、本番未反映です。**
 
-## Implemented
+## 実装済み
 
-- `RaceElevationChart` reused for running spots. Tapping/dragging or arrow/Home/End keys selects a distance and the corresponding map position.
-- Coordinates and elevation share a cumulative distance axis from the existing GPX. Loop starts rotate both; reverse starts reverse both. Changing starts clears the previous selection. Photo reference distances follow the selected start.
-- `LongCourseGuide` handles the 250 guided spots. `SpotCourseMap` covers the remaining spot, midoriko, and other future pages without a guide.
-- `scripts/build-spot-elevation.ts` generates static JSON in `public/spot-elevation` before dev/build. It follows the existing guide builder's loop-closing rule and checks distance agreement. Terrain data backfilled from Open-Meteo is credited in the chart.
-- Existing 16 images retained, with their course positions registered. Additional sources/prompts and reviewed scenes are in `data/spot-experience`; final WebPs are in `public/course-atmosphere` and the additional display catalog is `src/lib/spot-atmosphere-catalog.json`.
-- New images use built-in image_gen, one image per request, from directly viewed Google Maps panoramas. No unreviewed coordinate is treated as image evidence. No API/CLI image generation is used.
+- 大会ページと同じ `RaceElevationChart` を使用。タップ・ドラッグ・矢印キーで選んだ距離に対応する地点を地図上に表示する。
+- 周回のスタート変更では距離・標高・座標を一緒に並べ替え、逆方向にも対応。スタート変更時には前の選択を消す。
+- 画像の「コース上で見る」から地図とグラフの同じ地点を選択。画像の距離も選択したスタートに合わせる。
+- ガイド付き250ページと、ガイドのないみどり湖ページの両方に対応。
+- 読み込み中にもグラフの高さを確保し、画像へのリンク位置が大きくずれるのを抑える。
+- 既存16枚を保持し、みどり湖・赤城山・明石公園に各2枚追加。現在 **11スポット・22枚**。残りは **240スポット・最低480枚**。
 
-## Coverage and remaining work
+## 標高・経路の状況
 
-Run `npx tsx scripts/audit-spot-experience.ts` to refresh `data/spot-experience/coverage.json`. `--require-complete` fails unless every published spot has a usable elevation profile and at least two registered image files.
+全251スポットに元の標高サンプルがあり、距離と座標の整合をテスト済み。これは全経路が現地と一致することを確認した意味ではない。
 
-All 251 spots have existing height samples. The routes for 21st-century-forest-park and aoba-no-mori-park are inconsistent with its description: two sampled route points are residential paved streets, while the description says dirt paths inside the park. Evidence and the official map index are recorded in `route-reviews.json`. The new elevation chart/ascent are withheld for both spots. Their original routes must be corrected and verified; no scenery has been generated for the wrong route.
+実景との照合で、次の2件にコースの取り違えを確認した。新しいグラフと獲得標高は表示せず、経路確認中とする。その他249件の表示用データを用意している。
 
-All other unprocessed spots still require visual source review and two generated/reviewed images. Candidate links in the coverage report are only research leads. Do not mark the whole task complete from shared UI or numeric elevation coverage.
+- **21世紀の森と広場**：園内の土路面という説明に対し、登録コースの2地点は松戸運動公園近隣の住宅街の舗装路だった。
+- **青葉の森公園**：登録コースの地点は千葉テレビ周辺の公道。公式アクセス地図の公園位置と一致しない。
 
-## Verification
+公式資料・参照パノラマ・撮影時期・観察内容は `data/spot-experience/route-reviews.json` に記録。元の経路を修正・照合してから、この2件の標高と画像を追加する。
 
-Production-mode Next build passed before the final Akashi catalog additions; re-run the build after remaining image work.
+## 画像と記録
 
-Local browser: desktop Kokyo chart pointer/keyboard selection, image-to-map selection, and start change; 390px Midoriko chart and image selection; reviewed-route notice. Source screenshots and UI proof are in the primary checkout's `output/spot-course-experience-2026-10-16`.
+新規画像はすべて **内蔵 image_gen** で1枚ずつ生成。Google Mapsのパノラマを実際に開き、撮影地点・方向・撮影時期・路面・周囲の配置を確認した観察文を使用。API/CLIによる画像生成は使っていない。
 
-Run tests, typecheck, lint, production build and live staged release checks before claiming production. No production deployment has been performed for this feature.
+- 最終画像：`public/course-atmosphere/`
+- 新規掲載台帳：`src/lib/spot-atmosphere-catalog.json`
+- 参照地点・観察・最終プロンプト・目視レビュー：`data/spot-experience/*-sources-and-prompts.json`
+- 既存画像の記録：`data/spot-experience/existing-references/`
+
+AI画像であることをセクション説明・各画像の直下・代替テキストに表示する。参照した景色の再構成であり、現在の路面状態や個々の建物・木・石の正確な再現を保証しない。
+
+## 全件作業の継続
+
+`npx tsx scripts/audit-spot-experience.ts` で `data/spot-experience/coverage.json` を更新。`--require-complete` は全251件の利用可能な標高と各2枚の登録画像がそろわなければ失敗する。候補地点のリンクだけでは画像確認済みにしない。
+
+`npx tsx scripts/import-spot-atmosphere.ts <確認済みマニフェスト.json>` は、目視レビュー・コース上の距離と座標・参照パノラマとの距離・既存画像の保護を確認して取り込む。
+
+残り240件を3分割した一覧は `data/spot-experience/work-batches.json`。並列エージェントの明示的な利用許可はユーザーに確認中。分担する場合は担当ごとの参照・生成マニフェストを作り、共有の台帳を同時編集しない。
+
+## 検証
+
+- 型チェック、関係箇所のESLint、全体テスト通過。その後に追加した画像・経路確認の関連テストも通過。
+- 本番用Nextビルドを確認。Cloudflareへのアップロード・段階公開はまだ行っていない。
+- ブラウザ：皇居のタップ/キー操作、画像からの地点選択、竹橋へのスタート変更、390pxのみどり湖、経路確認中の表示。
+- 確認画像：メインチェックアウトの `output/spot-course-experience-2026-10-16/`。
+
+全件の画像追加、経路不一致2件の修正、本番への段階公開と通常アクセスでの確認が残っている。
