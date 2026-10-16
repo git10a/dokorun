@@ -99,5 +99,100 @@
       "elevationSource": "gsi",
       "method": "First 5 km of the mapped upstream riverbank route, reversed at a reference turning point; not a certified race course. Existing GSI terrain profile interpolated at original route nodes; not an official surveyed GPX."
     }
+  },
+  "heijo-palace-park": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "園内周回の説明に対し、登録経路は平城宮跡の西側の住宅街を通っている。877m地点の民家間の路地と公園公式図を照合。",
+    "officialSource": "https://www.heijo-park.jp/course/",
+    "evidenceRecord": "data/spot-experience/batch-3/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/heijo-palace-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "hakusan-park-yasuragitei": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "やすらぎ堤の説明に対し、登録経路は白山神社から古町方面の市街地を通る。1.16km地点の細街路と地図範囲を照合。",
+    "officialSource": "https://www.hrr.mlit.go.jp/shinage/shinanogawa/sansakumap.html",
+    "evidenceRecord": "data/spot-experience/batch-1/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/hakusan-park-yasuragitei.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "hattori-ryokuchi": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "園内周回の説明に対し、登録経路は公園の北側の国道423号高架横や西泉丘の住宅街を通る。",
+    "officialSource": "https://www.pref.osaka.lg.jp/documents/19726/kantou20.pdf",
+    "evidenceRecord": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/hattori-ryokuchi.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "ibigawa-long": {
+    "status": "corrected-reference-route",
+    "reviewedAt": "2026-10-16",
+    "reason": "旧47.3km GPXは県道254号の現行全面通行止区間に重なり、国道303号の歩道のない部分や山側の迂回を含む。",
+    "evidence": [
+      "https://douro.pref.gifu.lg.jp/",
+      "https://ibigawa-marathon.jp/info/試走の注意点・コースの状況について/",
+      "batch-3/access-observations.json"
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/ibigawa-long.json",
+      "elevationSource": "gsi",
+      "method": "OSM public-road reference out-and-back south of the observed closure; endpoints and river geography compared with the 2026 event map. This is not the official event course or an assurance of present road access."
+    }
+  },
+  "iwate-undou-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園より南の商業地・新幹線高架沿いにあり、公園の経路と一致しない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/iwate-undou-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "kagamigawa-riverside": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは国道33号・路面電車沿いを通り、説明していた鏡川沿いに位置していない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kagamigawa-riverside.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "kamogawa-sanjo-demachiyanagi": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは川端通の車道中央を通り、説明していた河川敷の園路と一致しない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kamogawa-sanjo-demachiyanagi.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
   }
 }

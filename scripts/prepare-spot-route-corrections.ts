@@ -49,7 +49,7 @@ async function main() {
       elevation_gain_m: raceElevationGain(profile),
       course_type: config.courseType ?? "loop",
       surface: config.surface,
-      signals_count: 0,
+      signals_count: config.signalsCount === undefined ? 0 : config.signalsCount,
     };
     const set = (row: Record<string, unknown>) =>
       Object.entries(row)
@@ -71,6 +71,14 @@ async function main() {
       `UPDATE spots SET ${set(oldSpot)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(previous.spot.id)} AND ${matches(spot)};`,
       `UPDATE courses SET ${set(oldCourse)} WHERE id = ${quote(previous.course.id)} AND ${matches(course)};`,
     );
+    for (const tagId of config.removeTagIds ?? []) {
+      updates.push(
+        `DELETE FROM spot_tags WHERE spot_id = ${quote(previous.spot.id)} AND tag_id = ${quote(tagId)} AND EXISTS (SELECT 1 FROM spots WHERE id = ${quote(previous.spot.id)} AND ${matches(spot)});`,
+      );
+      rollback.push(
+        `INSERT INTO spot_tags (spot_id, tag_id) SELECT ${quote(previous.spot.id)}, ${quote(tagId)} WHERE EXISTS (SELECT 1 FROM spots WHERE id = ${quote(previous.spot.id)} AND ${matches(oldSpot)}) AND NOT EXISTS (SELECT 1 FROM spot_tags WHERE spot_id = ${quote(previous.spot.id)} AND tag_id = ${quote(tagId)});`,
+      );
+    }
     console.log(`${slug}: ${course.distance_m}m, ${profile.points.length} height samples`);
   }
   const descriptionsPath = resolve("data/spot-experience/content-corrections.json");
@@ -80,6 +88,7 @@ async function main() {
       id: string;
       description: string;
       previousDescription: string;
+      removeTagIds?: string[];
     }[];
     for (const item of descriptions) {
       updates.push(
@@ -90,6 +99,14 @@ async function main() {
         `-- ${item.slug}: description only`,
         `UPDATE spots SET description = ${quote(item.previousDescription)}, updated_at = unixepoch() * 1000 WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.description)};`,
       );
+      for (const tagId of item.removeTagIds ?? []) {
+        updates.push(
+          `DELETE FROM spot_tags WHERE spot_id = ${quote(item.id)} AND tag_id = ${quote(tagId)} AND EXISTS (SELECT 1 FROM spots WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.description)});`,
+        );
+        rollback.push(
+          `INSERT INTO spot_tags (spot_id, tag_id) SELECT ${quote(item.id)}, ${quote(tagId)} WHERE EXISTS (SELECT 1 FROM spots WHERE id = ${quote(item.id)} AND slug = ${quote(item.slug)} AND description IS ${quote(item.previousDescription)}) AND NOT EXISTS (SELECT 1 FROM spot_tags WHERE spot_id = ${quote(item.id)} AND tag_id = ${quote(tagId)});`,
+        );
+      }
     }
   }
   writeFileSync(resolve(dir, "production-patch.sql"), updates.join("\n") + "\n");

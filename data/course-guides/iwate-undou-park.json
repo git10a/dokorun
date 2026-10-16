@@ -1,127 +1,80 @@
 {
   "slug": "iwate-undou-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "盛岡市北部の総合運動公園で、陸上競技場前を起点とするヘルスコースが公式に案内されています。現在の公式ページでは600m・1000m・1500mの3コース、県資料では600m・1000m・2000mの記載があり、代表距離は最新公式を優先しつつ要確認です。駐車台数が多く、ロッカーと有料シャワーも確認できるため、短い周回を反復したい日常利用向きです。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "岩手県営運動公園の陸上競技場外周を回る、約0.7kmの園路周回です。競技場の周囲の木立を眺めながら、短い周回を重ねられます。掲載するのは園路データから作成した参考ルートで、競技場のトラック内は通りません。散歩や施設利用の方を優先し、大会開催時や混雑時は現地の案内に従ってください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "園内ヘルスコースの案内と競技場外周の園路を照合した参考ルートです。掲載GPXは約688mで、公式案内の600mコースを測量したGPXではありません。現在の園内案内・大会利用・通行規制を優先してください。",
+      "url": "https://iwate-sposhin.jp/undou/01outline/",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: IGRいわて銀河鉄道青山駅から徒歩約24分／岩手県北バス「運動公園前」徒歩約2分／盛岡ICから車約15分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "盛岡市みたけ1丁目10-1。公園の案内図で陸上競技場を確認し、外周園路の南西側へ進みます。施設ごとに開場時間が異なるため、来園前に公式案内をご確認ください。",
+      "url": "https://www.pref.iwate.jp/shisetsu/suports/1002055.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "青山駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 39.725029,
-      "destinationLng": 141.118462,
-      "routeAnchorLat": 39.732088,
-      "routeAnchorLng": 141.118404,
+      "name": "陸上競技場外周・南西側",
+      "badge": "園路からスタート",
+      "destinationLat": 39.7382628,
+      "destinationLng": 141.1199572,
+      "routeAnchorLat": 39.7382628,
+      "routeAnchorLng": 141.1199572,
       "routeMode": "loop",
-      "accessText": "青山駅からコースまで約790m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "盛岡市みたけ1丁目10-1。公園の案内図で陸上競技場を確認し、外周園路の南西側へ進みます。施設ごとに開場時間が異なるため、来園前に公式案内をご確認ください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "競技場外周の園路を北へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 39.732088,
-      "anchorLng": 141.118404,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 岩手県盛岡市月が丘の公園",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "岩手県営運動公園のスタート周辺付近",
-        "caption": "岩手県営運動公園の走路近隣で撮影された風景",
-        "credit": "Hiroyuki Sato",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
+      "name": "競技場の南西側",
+      "anchorLat": 39.7382628,
+      "anchorLng": 141.1199572,
+      "description": "競技場外周の園路を北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 39.729693,
-      "anchorLng": 141.120306,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 岩手県盛岡市月が丘の公園",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "岩手県営運動公園の序盤区間付近",
-        "caption": "岩手県営運動公園の走路近隣で撮影された風景",
-        "credit": "Hiroyuki Sato",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
+      "name": "競技場の北側",
+      "anchorLat": 39.7399153,
+      "anchorLng": 141.1212425,
+      "description": "外周の曲線に沿って東側へ回ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 39.727371,
-      "anchorLng": 141.118652,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 岩手県盛岡市月が丘の公園",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "岩手県営運動公園の中盤区間付近",
-        "caption": "岩手県営運動公園の走路近隣で撮影された風景",
-        "credit": "Hiroyuki Sato",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
+      "name": "競技場の東側",
+      "anchorLat": 39.7386692,
+      "anchorLng": 141.1220869,
+      "description": "競技場の外側を南へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 39.729038,
-      "anchorLng": 141.116971,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 岩手県盛岡市月が丘の公園",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "岩手県営運動公園の後半区間付近",
-        "caption": "岩手県営運動公園の走路近隣で撮影された風景",
-        "credit": "Hiroyuki Sato",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 39.730591,
-      "anchorLng": 141.11697,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 岩手県盛岡市月が丘の公園",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg/960px-%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg",
-        "alt": "岩手県営運動公園の終盤区間付近",
-        "caption": "岩手県営運動公園の走路近隣で撮影された風景",
-        "credit": "Hiroyuki Sato",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B2%A9%E6%89%8B%E7%9C%8C%E7%9B%9B%E5%B2%A1%E5%B8%82%E6%9C%88%E3%81%8C%E4%B8%98%E3%81%AE%E5%85%AC%E5%9C%92_-_panoramio.jpg"
-      }
+      "name": "競技場の南側",
+      "anchorLat": 39.7378514,
+      "anchorLng": 141.1205431,
+      "description": "南側の曲線からスタート地点へ戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://iwate-sposhin.jp/undou/01outline/",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

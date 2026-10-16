@@ -1,362 +1,157 @@
 {
   "slug": "heijo-palace-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "奈良の都の広がりを実感できる大空間で、案内や実走紹介では約3.8km前後の周回が定番です。視界を遮るものが少なく、朱雀門や大極殿を眺めながらゆったり走れます。舗装路と締まった園路が混じり、脚当たりは比較的やさしめです。速さを競う場というより、地脚づくりのジョグやロング走、観光を兼ねた朝ランに向く奈良らしい練習地です。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "平城宮跡歴史公園の中央区朝堂院を囲む、約1.1kmの園路周回です。北側では大極門を眺めながら、広い草地の周りをゆっくり走れます。公園全体を回るコースではなく、短い周回を重ねたいときの参考ルートです。観光や散策の方を優先し、復原工事の立入禁止区域へは入らないでください。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式園内マップと園路データを照合した参考ルートです。工事の規制や歩行者を優先してください。朱雀門から北へ向かう踏切付近の通路は、公式図では17時〜翌8時に閉鎖と案内されています。来園時間に合わせて現地の通行案内を確認してください。",
+      "url": "https://www.heijo-park.jp/cms/wp-content/uploads/Guide_map_Ja_2603_hp.pdf",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 近鉄大和西大寺駅から徒歩約20分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "公園へは近鉄大和西大寺駅南口から玉手門経由、または近鉄新大宮駅から徒歩約20分。園内では中央区朝堂院の南側の園路へ進んでください。",
+      "url": "https://www.heijo-park.jp/information/access/",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "平城駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 34.701496,
-      "destinationLng": 135.784524,
-      "routeAnchorLat": 34.697709,
-      "routeAnchorLng": 135.784839,
+      "name": "中央区朝堂院の南側",
+      "badge": "園路からスタート",
+      "destinationLat": 34.6891667,
+      "destinationLng": 135.7937177,
+      "routeAnchorLat": 34.6891667,
+      "routeAnchorLng": 135.7937177,
       "routeMode": "loop",
-      "accessText": "平城駅からコースまで約420m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "公園へは近鉄大和西大寺駅南口から玉手門経由、または近鉄新大宮駅から徒歩約20分。園内では中央区朝堂院の南側の園路へ進んでください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "南側の園路から西へ進み、草地の外側を北へ回ります。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 34.697709,
-      "routeLng": 135.784839,
-      "elevationM": 75,
+      "routeLat": 34.6891667,
+      "routeLng": 135.7937177,
+      "elevationM": 66.8,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 784,
-        "section-3": 1527,
-        "section-4": 2168,
-        "section-5": 3044
+        "section-2": 530,
+        "section-3": 807
       },
       "gpxHref": "/gpx/heijo-palace-park-start-1.gpx"
-    },
-    {
-      "id": "start-2",
-      "name": "大和西大寺駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 34.69358,
-      "destinationLng": 135.783169,
-      "routeAnchorLat": 34.695275,
-      "routeAnchorLng": 135.789108,
-      "routeMode": "loop",
-      "accessText": "大和西大寺駅からコースまで約580m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
-      "routePointIndex": 42,
-      "routeDistanceM": 784,
-      "routeLat": 34.695275,
-      "routeLng": 135.789108,
-      "elevationM": 71.5,
-      "snapGapM": 0,
-      "checkpointDistances": {
-        "section-1": 3025,
-        "section-2": 0,
-        "section-3": 743,
-        "section-4": 1384,
-        "section-5": 2260
-      },
-      "gpxHref": "/gpx/heijo-palace-park-start-2.gpx"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 34.697709,
-      "anchorLng": 135.784839,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 奈良市西大寺東町2 磐船稲荷神社外観",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Iwafune_Inari_Nara_Outside.jpg/960px-Iwafune_Inari_Nara_Outside.jpg",
-        "alt": "平城宮跡歴史公園のスタート周辺付近",
-        "caption": "平城宮跡歴史公園の走路近隣で撮影された風景",
-        "credit": "Kochizufan",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwafune_Inari_Nara_Outside.jpg"
-      },
+      "name": "中央区朝堂院の南側",
+      "anchorLat": 34.6891667,
+      "anchorLng": 135.7937177,
+      "description": "南側の園路から西へ進み、草地の外側を北へ回ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 34.697709,
-      "routeLng": 135.784839,
-      "elevationM": 75,
+      "routeLat": 34.6891667,
+      "routeLng": 135.7937177,
+      "elevationM": 66.8,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 34.695275,
-      "anchorLng": 135.789108,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 奈良市二条町 歓喜寺地蔵尊プレート",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Kangiji_Jizo_Nara_Plate.jpg/960px-Kangiji_Jizo_Nara_Plate.jpg",
-        "alt": "平城宮跡歴史公園の序盤区間付近",
-        "caption": "平城宮跡歴史公園の走路近隣で撮影された風景",
-        "credit": "Kochizufan",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kangiji_Jizo_Nara_Plate.jpg"
-      },
+      "name": "大極門の南側",
+      "anchorLat": 34.6913429,
+      "anchorLng": 135.79417475714286,
+      "description": "大極門の南側を東へ。門や建物の見学者を優先し、広場を横切る人に注意してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 42,
-      "routeDistanceM": 784,
-      "routeLat": 34.695275,
-      "routeLng": 135.789108,
-      "elevationM": 71.5,
+      "routeDistanceM": 530,
+      "routeLat": 34.6913429,
+      "routeLng": 135.7941748,
+      "elevationM": 67.4,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 34.690791,
-      "anchorLng": 135.788394,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 奈良市二条町 歓喜寺地蔵尊プレート",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Kangiji_Jizo_Nara_Plate.jpg/960px-Kangiji_Jizo_Nara_Plate.jpg",
-        "alt": "平城宮跡歴史公園の中盤区間付近",
-        "caption": "平城宮跡歴史公園の走路近隣で撮影された風景",
-        "credit": "Kochizufan",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kangiji_Jizo_Nara_Plate.jpg"
-      },
-      "routePointIndex": 68,
-      "routeDistanceM": 1527,
-      "routeLat": 34.690791,
-      "routeLng": 135.788394,
-      "elevationM": 68.8,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 34.6902,
-      "anchorLng": 135.784647,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 奈良市西大寺国見町1 北向地蔵尊内部",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Kitamuki_Jizo_Nara_Inside.jpg/960px-Kitamuki_Jizo_Nara_Inside.jpg",
-        "alt": "平城宮跡歴史公園の後半区間付近",
-        "caption": "平城宮跡歴史公園の走路近隣で撮影された風景",
-        "credit": "Kochizufan",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitamuki_Jizo_Nara_Inside.jpg"
-      },
-      "routePointIndex": 93,
-      "routeDistanceM": 2168,
-      "routeLat": 34.6902,
-      "routeLng": 135.784647,
-      "elevationM": 70.8,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 34.69456,
-      "anchorLng": 135.781159,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 奈良市西大寺芝町1丁目 西大寺 Saidaiji",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E5%A5%88%E8%89%AF%E5%B8%82%E8%A5%BF%E5%A4%A7%E5%AF%BA%E8%8A%9D%E7%94%BA1%E4%B8%81%E7%9B%AE_%E8%A5%BF%E5%A4%A7%E5%AF%BA_Saidaiji_-_panoramio.jpg/960px-%E5%A5%88%E8%89%AF%E5%B8%82%E8%A5%BF%E5%A4%A7%E5%AF%BA%E8%8A%9D%E7%94%BA1%E4%B8%81%E7%9B%AE_%E8%A5%BF%E5%A4%A7%E5%AF%BA_Saidaiji_-_panoramio.jpg",
-        "alt": "平城宮跡歴史公園の終盤区間付近",
-        "caption": "平城宮跡歴史公園の走路近隣で撮影された風景",
-        "credit": "Nankou Oronain (as36…",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A5%88%E8%89%AF%E5%B8%82%E8%A5%BF%E5%A4%A7%E5%AF%BA%E8%8A%9D%E7%94%BA1%E4%B8%81%E7%9B%AE_%E8%A5%BF%E5%A4%A7%E5%AF%BA_Saidaiji_-_panoramio.jpg"
-      },
-      "routePointIndex": 129,
-      "routeDistanceM": 3044,
-      "routeLat": 34.69456,
-      "routeLng": 135.781159,
-      "elevationM": 77,
+      "name": "東側の園路",
+      "anchorLat": 34.690267750000004,
+      "anchorLng": 135.79558308,
+      "description": "みやと通りの西側にある園路を南へ進み、南側の園路へ戻ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 63,
+      "routeDistanceM": 807,
+      "routeLat": 34.6902678,
+      "routeLng": 135.7955831,
+      "elevationM": 66.7,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.heijo-park.jp/cms/wp-content/uploads/Guide_map_Ja_2603_hp.pdf",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 3809,
-  "elevationGainM": 23,
+  "distanceM": 1138,
+  "elevationGainM": 3,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 75
+      "elevationM": 66.8
     },
     {
-      "distanceM": 98,
-      "elevationM": 74.5
+      "distanceM": 95,
+      "elevationM": 67.2
     },
     {
-      "distanceM": 195,
-      "elevationM": 78.6
-    },
-    {
-      "distanceM": 293,
-      "elevationM": 74.6
-    },
-    {
-      "distanceM": 391,
-      "elevationM": 72.9
-    },
-    {
-      "distanceM": 488,
-      "elevationM": 73.3
-    },
-    {
-      "distanceM": 586,
-      "elevationM": 73.3
-    },
-    {
-      "distanceM": 684,
-      "elevationM": 73.8
-    },
-    {
-      "distanceM": 781,
-      "elevationM": 71.6
-    },
-    {
-      "distanceM": 879,
-      "elevationM": 70.8
-    },
-    {
-      "distanceM": 977,
-      "elevationM": 69.7
-    },
-    {
-      "distanceM": 1074,
-      "elevationM": 68.5
-    },
-    {
-      "distanceM": 1172,
+      "distanceM": 190,
       "elevationM": 67.6
     },
     {
-      "distanceM": 1270,
-      "elevationM": 69.5
+      "distanceM": 285,
+      "elevationM": 67.9
     },
     {
-      "distanceM": 1367,
-      "elevationM": 71.8
+      "distanceM": 379,
+      "elevationM": 68.1
     },
     {
-      "distanceM": 1465,
-      "elevationM": 70.5
+      "distanceM": 474,
+      "elevationM": 67.7
     },
     {
-      "distanceM": 1563,
-      "elevationM": 69.4
+      "distanceM": 569,
+      "elevationM": 67.5
     },
     {
-      "distanceM": 1660,
-      "elevationM": 70.5
+      "distanceM": 664,
+      "elevationM": 67.9
     },
     {
-      "distanceM": 1758,
-      "elevationM": 71.2
+      "distanceM": 759,
+      "elevationM": 67.1
     },
     {
-      "distanceM": 1856,
-      "elevationM": 73
+      "distanceM": 854,
+      "elevationM": 66.4
     },
     {
-      "distanceM": 1953,
-      "elevationM": 74.6
+      "distanceM": 948,
+      "elevationM": 65.8
     },
     {
-      "distanceM": 2051,
-      "elevationM": 72.8
+      "distanceM": 1043,
+      "elevationM": 66.1
     },
     {
-      "distanceM": 2149,
-      "elevationM": 71.1
-    },
-    {
-      "distanceM": 2246,
-      "elevationM": 70.5
-    },
-    {
-      "distanceM": 2344,
-      "elevationM": 71.1
-    },
-    {
-      "distanceM": 2442,
-      "elevationM": 71.8
-    },
-    {
-      "distanceM": 2539,
-      "elevationM": 71.9
-    },
-    {
-      "distanceM": 2637,
-      "elevationM": 70.3
-    },
-    {
-      "distanceM": 2735,
-      "elevationM": 70.6
-    },
-    {
-      "distanceM": 2832,
-      "elevationM": 72.6
-    },
-    {
-      "distanceM": 2930,
-      "elevationM": 75.1
-    },
-    {
-      "distanceM": 3028,
-      "elevationM": 77
-    },
-    {
-      "distanceM": 3125,
-      "elevationM": 76.6
-    },
-    {
-      "distanceM": 3223,
-      "elevationM": 75.9
-    },
-    {
-      "distanceM": 3321,
-      "elevationM": 76.5
-    },
-    {
-      "distanceM": 3418,
-      "elevationM": 76.3
-    },
-    {
-      "distanceM": 3516,
-      "elevationM": 74.3
-    },
-    {
-      "distanceM": 3614,
-      "elevationM": 74.2
-    },
-    {
-      "distanceM": 3711,
-      "elevationM": 74.9
-    },
-    {
-      "distanceM": 3809,
-      "elevationM": 75
+      "distanceM": 1138,
+      "elevationM": 66.8
     }
   ]
 }

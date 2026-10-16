@@ -36,5 +36,78 @@
       }
     ],
     "reviewedAt": "2026-10-16"
+  },
+  {
+    "slug": "hakusan-park-yasuragitei",
+    "status": "route-mismatch-needs-review",
+    "reason": "コース説明は信濃川やすらぎ堤だが、掲載GPXの1.16km点は市街地の細街路。全体が白山神社側〜古町/本町側往復に見えるため、河川敷主体との不一致の可能性。連絡道路のみか全体取り違えか親に監査依頼。未確定。画像生成保留。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 1159.57,
+          "lat": 37.918707,
+          "lng": 139.045749
+        },
+        "pano": {
+          "id": "872xBhT01Z-_7Vf6e3ghMg",
+          "lat": 37.9187043,
+          "lng": 139.0457565,
+          "heading": 220,
+          "captured": "2024-09"
+        },
+        "observed": "Google Street View実写。ブロック調の細い車道と歩道、両側に住宅と商店、電線。川や堤防は見えない。",
+        "sourceUrl": "https://www.google.com/maps/@37.9187043,139.0457565,3a,90y,220h,90t/data=!3m7!1e1!3m5!1s872xBhT01Z-_7Vf6e3ghMg!2e0!7i16384!8i8192"
+      }
+    ],
+    "reviewedAt": "2026-10-16"
+  },
+  {
+    "slug": "iwadono-kyuryo-cross",
+    "status": "nearby-panorama-not-course-confirmed",
+    "reason": "3.09km候補付近にスナップしたGoogle SVは高坂カントリークラブ内のフェアウェイ。公開GPXが廃線遊歩道を通るのかゴルフ場内なのか要地図照合。画像不採用。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 2428.12,
+          "lat": 36.004373,
+          "lng": 139.377407
+        },
+        "pano": {
+          "id": "2MUDHeM8-3_n3lrUML2yqA",
+          "lat": 36.004548,
+          "lng": 139.3776378,
+          "captured": "2012-08",
+          "heading": 90
+        },
+        "offsetM": 28.5,
+        "sourceUrl": "https://www.google.com/maps/@36.004548,139.3776378,61a,90y,90h,90t/data=!3m7!1e1!3m5!1s2MUDHeM8-3_n3lrUML2yqA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D2MUDHeM8-3_n3lrUML2yqA%26yaw%3D90!7i13312!8i6656",
+        "screenshot": "/tmp/dokorun-batch1-iwadono-golf-reference.png"
+      }
+    ]
+  },
+  {
+    "slug": "iwadono-kyuryo-cross",
+    "status": "awaiting-parent-route-review",
+    "reason": "後半候補は市民の森・見晴らし台に表示。経路確認まで生成保留。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 8978.37,
+          "lat": 36.003408,
+          "lng": 139.35355
+        },
+        "pano": {
+          "id": "CIHM0ogKEICAgID-t_GZXw",
+          "lat": 36.0031705,
+          "lng": 139.3531092,
+          "captured": "2022-12",
+          "heading": 0
+        },
+        "offsetM": 47.6,
+        "observed": "Summertime 0813の360度写真。落葉樹林の斜面越しに低い丘陵が見える。歩道自体は画面手前端。",
+        "sourceUrl": "https://www.google.com/maps/@36.0031705,139.3531092,3a,90y,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgID-t_GZXw!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9D9JS_xffQRQE0WT-nKy6_OgrxdJEG4luKYVGKs9vosuTcpmnYeQYP_Kj0QtSb5mZyYE24a2P7lVYFi3RA_BRlybJY_r6uO6jWjdltovivPNg3wjiWxs1WzhbtAM27NNYtGmNk%3Dw900-h600-k-no-pi0-ya77-ro0-fo100!7i11264!8i5632",
+        "screenshot": "/tmp/dokorun-batch1-iwadono-lookout-source.png"
+      }
+    ]
   }
 ]
