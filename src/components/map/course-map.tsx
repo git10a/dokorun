@@ -13,6 +13,7 @@ export function CourseMap({
   lng,
   geojson,
   highlightedPoint,
+  highlightedLabel,
   showEndpoints = false,
   raceSlug,
   className = "h-[340px]",
@@ -22,17 +23,18 @@ export function CourseMap({
   geojson: LineString | null;
   name?: string;
   highlightedPoint?: [number, number] | null;
+  highlightedLabel?: string | null;
   showEndpoints?: boolean;
   raceSlug?: string;
   className?: string;
 }) {
   const container = useRef<HTMLDivElement>(null);
-  const selectPoint = useRef<((point: [number, number] | null) => void) | null>(null);
-  const latestPoint = useRef(highlightedPoint);
+  const selectPoint = useRef<((point: [number, number] | null, label: string | null) => void) | null>(null);
+  const latestSelection = useRef({ point: highlightedPoint ?? null, label: highlightedLabel ?? null });
   useEffect(() => {
-    latestPoint.current = highlightedPoint;
-    selectPoint.current?.(highlightedPoint ?? null);
-  }, [highlightedPoint]);
+    latestSelection.current = { point: highlightedPoint ?? null, label: highlightedLabel ?? null };
+    selectPoint.current?.(latestSelection.current.point, latestSelection.current.label);
+  }, [highlightedPoint, highlightedLabel]);
   useEffect(() => {
     if (!container.current) return;
     let map: import("maplibre-gl").Map | undefined;
@@ -62,6 +64,7 @@ export function CourseMap({
           geojson.coordinates.forEach((coordinate) => bounds.extend(coordinate));
           map.fitBounds(bounds, { padding, maxZoom: 16, duration: 0 });
         }
+        let positionEndpointLabels: (() => void) | undefined;
         if (showEndpoints && geojson?.coordinates.length) {
           const start = geojson.coordinates[0];
           const finish = geojson.coordinates[geojson.coordinates.length - 1];
@@ -136,27 +139,52 @@ export function CourseMap({
             return text;
           });
           // 発着点が近くても読めるよう、画面上で上側の地点は上、下側は下にラベルを出す。
-          const positionLabels = () => {
+          positionEndpointLabels = () => {
             if (!map) return;
             const startAbove = map.project(start).y <= map.project(finish).y;
             labels[0].classList.toggle("course-endpoint__label--below", !startAbove);
             labels[1].classList.toggle("course-endpoint__label--below", startAbove);
+            // Keep nearby start/finish labels readable when a distance is selected.
+            const selected = container.current?.querySelector(".course-selected-point__label");
+            if (!selected) return;
+            const selectedRect = selected.getBoundingClientRect();
+            for (const label of labels) {
+              const rect = label.getBoundingClientRect();
+              if (
+                rect.left < selectedRect.right &&
+                rect.right > selectedRect.left &&
+                rect.top < selectedRect.bottom &&
+                rect.bottom > selectedRect.top
+              ) {
+                label.classList.toggle("course-endpoint__label--below");
+              }
+            }
           };
-          positionLabels();
-          map.on("move", positionLabels);
+          positionEndpointLabels();
+          map.on("move", positionEndpointLabels);
         } else {
           const marker = document.createElement("div");
           marker.className = "h-5 w-5 rounded-full border-[3px] border-white bg-[#2BA84A] shadow";
           new maplibregl.Marker({ element: marker }).setLngLat([lng, lat]).addTo(map);
         }
         let selectedMarker: import("maplibre-gl").Marker | undefined;
-        selectPoint.current = (point) => {
+        let selectedLabel: HTMLSpanElement | undefined;
+        selectPoint.current = (point, label) => {
           if (!map) return;
           if (point) {
             if (!selectedMarker) {
-              selectedMarker = new maplibregl.Marker({ color: "#FFD900" });
-              selectedMarker.getElement().setAttribute("aria-label", "選択したコース地点");
+              const element = document.createElement("div");
+              element.className = "course-selected-point";
+              selectedLabel = document.createElement("span");
+              selectedLabel.className = "course-selected-point__label";
+              element.appendChild(selectedLabel);
+              selectedMarker = new maplibregl.Marker({ element });
               selectedMarker.getElement().setAttribute("role", "img");
+            }
+            selectedMarker.getElement().setAttribute("aria-label", label ?? "選択したコース地点");
+            if (selectedLabel) {
+              selectedLabel.textContent = label ?? "";
+              selectedLabel.hidden = !label;
             }
             selectedMarker.setLngLat(point).addTo(map);
             // 拡大はせず印だけ動かす(戻す操作を不要にする)。手で拡大していて画面外に出たときだけ寄せる
@@ -165,8 +193,10 @@ export function CourseMap({
             selectedMarker?.remove();
             if (geojson) map.fitBounds(bounds, { padding, maxZoom: 16, duration: 0 });
           }
+          positionEndpointLabels?.();
         };
-        if (latestPoint.current) selectPoint.current(latestPoint.current);
+        if (latestSelection.current.point)
+          selectPoint.current(latestSelection.current.point, latestSelection.current.label);
       });
     });
     return () => {

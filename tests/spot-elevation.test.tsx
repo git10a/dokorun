@@ -122,7 +122,7 @@ describe("spot elevation and map share the selected start", () => {
       />,
     );
     expect(markup).toContain("Open-Meteo（CC BY 4.0）");
-    expect(markup).toContain("タップで地点を確認");
+    expect(markup).toContain("高低図をなぞると、地図で場所を確認できます");
     expect(markup).not.toContain("平均との比較");
   });
 });

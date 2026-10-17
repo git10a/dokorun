@@ -89,6 +89,7 @@ export function RaceCourseMap({
           showEndpoints
           raceSlug={slug}
           highlightedPoint={highlightedPoint}
+          highlightedLabel={selectedKm !== null ? `約${selectedKm.toFixed(1)}km地点` : null}
           className="h-[280px] sm:h-[340px]"
         />
         {overlay && <div className="absolute left-3 top-3 z-10">{overlay}</div>}
