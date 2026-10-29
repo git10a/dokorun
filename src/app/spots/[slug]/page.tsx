@@ -1,3 +1,4 @@
+import { getPageSeoOverride } from "@/lib/page-seo-overrides";
 import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -53,10 +54,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const feature = spot.tags.find((tag) => tag.slug === "no-signals")?.name ?? spot.tags[0]?.name;
   const publicSpotDescription = stripPrepublishSentences(spot.description);
   const editorial = spotEditorial[slug];
+  const seo = getPageSeoOverride(`/spots/${slug}`);
   const description =
+    seo?.description ??
     editorial?.intro ??
     `${spot.courseType === "loop" ? "1周" : "コース距離"}${(spot.distanceM / 1000).toFixed(1)}km${feature ? `・${feature}` : ""}${spot.nightLighting === "bright" ? "・夜も明るい" : ""}。${publicSpotDescription.slice(0, 90)}`;
-  const title = `${editorial?.title ?? `${spot.name}のランニングコース`} - どこラン`;
+  const title = `${seo?.title ?? editorial?.title ?? `${spot.name}のランニングコース`} - どこラン`;
   const canonical = `/spots/${spot.slug}`;
   // コース地図OGP(scripts/generate-og-images.tsで生成)を最優先。地図がなければ写真、それもなければ共通OGP
   const ogImage = spot.hasCourse

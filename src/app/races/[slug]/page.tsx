@@ -1,3 +1,4 @@
+import { RaceDayInfoBox } from "@/components/race-day-info";
 import { cache } from "react";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
@@ -94,6 +95,7 @@ export default async function RacePage({ params }: { params: Params }) {
         <span className="font-bold">{race.timing}</span>
         {dateKey && <RaceCountdown dateKey={dateKey} serverTodayKey={jstTodayKey()} />}
       </p>
+      <RaceDayInfoBox slug={slug} />
       {getPublishedStories(slug).map((story) => (
         <RaceStoryCard key={story.slug} story={story} />
       ))}
