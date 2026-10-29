@@ -1,3 +1,4 @@
+import { getPageSeoOverride } from "@/lib/page-seo-overrides";
 import { describe, expect, it, vi } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -32,7 +33,7 @@ describe("sourced course content", () => {
       const metadata = await generateMetadata({ params: Promise.resolve({ slug }) });
       const original = JSON.parse(readFileSync(`public/course-guides/${slug}.json`, "utf8")) as CourseGuide;
       const prepared = preparePublicCourseGuide(original);
-      expect(metadata.description).toBe(prepared.intro);
+      expect(metadata.description).toBe(getPageSeoOverride(`/spots/${slug}`)?.description ?? prepared.intro);
       expect(metadata.alternates?.canonical).toBe(`/spots/${slug}`);
       const html = renderToStaticMarkup(createElement(CourseEditorial, { entry }));
       for (const point of entry.points) {

@@ -1,3 +1,4 @@
+import { getPageSeoOverride } from "@/lib/page-seo-overrides";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
@@ -60,6 +61,13 @@ const rinkoPark: SpotSummary = {
 };
 
 describe("race page SEO preservation", () => {
+  it("places the official edition summary before the course map", async () => {
+    for (const slug of ["mito-komon-marathon", "suwako-marathon"]) {
+      const html = renderToStaticMarkup(await RacePage({ params: Promise.resolve({ slug }) }));
+      expect(html.indexOf('id="race-day-info-heading"')).toBeGreaterThan(0);
+      expect(html.indexOf('id="race-day-info-heading"')).toBeLessThan(html.indexOf('id="course-map"'));
+    }
+  });
   it("combines scenery and preparation on both Legacy and expanded race pages", async () => {
     const html = renderToStaticMarkup(
       await RacePage({ params: Promise.resolve({ slug: "tokyo-legacy-half-marathon" }) }),
@@ -117,9 +125,9 @@ describe("race page SEO preservation", () => {
       const meta = await generateMetadata({ params: Promise.resolve({ slug: race.slug }) });
       expect(meta.alternates?.canonical).toBe(`https://dokorun.com/races/${race.slug}`);
       expect(meta.title).toContain(race.name);
-      expect(meta.title).toBe(`${race.name}のコース`);
+      expect(meta.title).toBe(getPageSeoOverride(`/races/${race.slug}`)?.title ?? `${race.name}のコース`);
       expect(meta.description).not.toContain("周辺のランニングスポット");
-      expect(meta.description).toContain(race.startFinish);
+      if (!getPageSeoOverride(`/races/${race.slug}`)) expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();
       // 子ページの openGraph が layout の既定画像・サイト名を消さないこと
