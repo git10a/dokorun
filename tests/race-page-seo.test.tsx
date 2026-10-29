@@ -127,6 +127,7 @@ describe("race page SEO preservation", () => {
       expect(meta.title).toContain(race.name);
       expect(meta.title).toBe(getPageSeoOverride(`/races/${race.slug}`)?.title ?? `${race.name}のコース`);
       expect(meta.description).not.toContain("周辺のランニングスポット");
+      if (getPageSeoOverride(`/races/${race.slug}`)) expect(meta.title).toContain("コースマップ・高低図");
       if (!getPageSeoOverride(`/races/${race.slug}`)) expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();

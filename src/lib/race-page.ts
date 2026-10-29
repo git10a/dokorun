@@ -19,11 +19,11 @@ export type RaceCourseMeta = {
 };
 export const raceCourseMeta = manifest as Record<string, RaceCourseMeta | undefined>;
 // 非公開化されたスポットを除き、本文に実際に載る内容をタイトル・説明にも反映する。
-export const racePageTitle = (race: RaceDef, hasNearbySpots: boolean) =>
+export const racePageTitle = (race: RaceDef, hasNearbySpots = false) =>
   getPageSeoOverride(`/races/${race.slug}`)?.title ??
   `${race.name}のコース${hasNearbySpots ? "と周辺ランニングスポット" : ""}`;
 
-export const racePageDescription = (race: RaceDef, hasNearbySpots: boolean) =>
+export const racePageDescription = (race: RaceDef, hasNearbySpots = false) =>
   getPageSeoOverride(`/races/${race.slug}`)?.description ??
   `${race.name}のコースを地図で確認。${race.startFinish}。${raceEditorial[race.slug]?.intro ?? "コースの特徴を確認し、目標タイムに合わせたペース表を作れます。"}${hasNearbySpots ? "周辺のランニングスポットも紹介しています。" : ""}`;
 
