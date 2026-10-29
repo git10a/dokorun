@@ -377,8 +377,31 @@ async function main() {
     );
   }
 
+  // Preserve published station URLs when a corrected spot location leaves one
+  // reachable course. New pages still require the existing content threshold.
+  const previousStationsPath = path.join(OUTPUT_DIR, "stations.json");
+  const publishedSlugsPath = path.join(OUTPUT_DIR, "published-slugs.json");
+  const publishedStationSlugs = new Set([
+    ...((await fileExists(previousStationsPath))
+      ? JSON.parse(await readFile(previousStationsPath, "utf8")).map((station) => station.slug)
+      : []),
+    ...((await fileExists(publishedSlugsPath)) ? JSON.parse(await readFile(publishedSlugsPath, "utf8")) : []),
+  ]);
+  // A route correction can move the start beyond the normal 2 km catchment.
+  // Keep an existing page useful with its closest published course,
+  // recalculating the distance instead of preserving stale access information.
+  for (const group of groups.values()) {
+    if (!publishedStationSlugs.has(group.slug) || group.nearbySpots.length || group.oneStationSpots.length) continue;
+    const closest = spots
+      .map((spot) => ({ slug: spot.slug, distanceM: haversineM(group.lat, group.lng, Number(spot.lat), Number(spot.lng)) }))
+      .sort((a, b) => a.distanceM - b.distanceM)[0];
+    if (closest) group.nearbySpots.push({ ...closest, walkMinutes: Math.ceil(closest.distanceM / 80) });
+  }
   const pageGroups = [...groups.values()].filter(
-    (group) => group.nearbySpots.length >= 1 || group.oneStationSpots.length >= 2,
+    (group) =>
+      group.nearbySpots.length >= 1 ||
+      group.oneStationSpots.length >= 2 ||
+      (publishedStationSlugs.has(group.slug) && group.oneStationSpots.length >= 1),
   );
   const pageCodes = new Set(pageGroups.map((group) => group.groupCode));
   const stations = pageGroups

@@ -1,0 +1,75 @@
+{
+  "slug": "niigata-sports-park",
+  "status": "route-proposal-ready",
+  "reviewedAt": "2026-10-16",
+  "officialDistanceM": 5000,
+  "referenceDistanceM": 5120.193736816055,
+  "sourceUrls": [
+    "https://www.niigata-sportspark.jp/documents/guidemap/walk_jog_road_map.pdf",
+    "https://api.openstreetmap.org/api/0.6/map",
+    "https://maps.gsi.go.jp/"
+  ],
+  "sourceFiles": [
+    "/tmp/spot-route-repair/niigata-sports-map.pdf",
+    "/tmp/spot-route-repair/niigata-sports-map.png",
+    "/tmp/spot-route-repair/niigata-sports.osm",
+    "/tmp/spot-route-repair/niigata-sports-ortho.jpg"
+  ],
+  "proposalPath": "/tmp/spot-route-repair/niigata-sports-route.json",
+  "reviewOverlay": "/tmp/spot-route-repair/niigata-sports-route-review.png",
+  "startPoint": {
+    "lat": 37.880163168285286,
+    "lng": 139.0627098083496,
+    "name": "野球場北西側の広場"
+  },
+  "routeOrder": [
+    "野球場北西側の広場",
+    "野球場の東・南・西側を一周",
+    "西側芝生広場の南・西・北側",
+    "道路下の連絡通路",
+    "カナール西側（ビッグスワン東側）",
+    "橋の手前で左折し補助陸上競技場南側",
+    "西側の園路から鳥屋野潟沿い",
+    "潟沿いを北端まで進み、池の東側へ戻る",
+    "レストハウス西側",
+    "カナール東側",
+    "列柱廊の外側",
+    "連絡通路",
+    "野球場北側駐車場沿いの短い折返し",
+    "スタート広場"
+  ],
+  "osmWayCount": 18,
+  "sourcePointCount": 225,
+  "elevationPointCount": 454,
+  "bounds": {
+    "minLat": 37.87798679972397,
+    "maxLat": 37.8892352,
+    "minLng": 139.053706,
+    "maxLng": 139.06577825546265
+  },
+  "elevation": {
+    "source": "GSI",
+    "method": "DEM5A, DEM5B, DEM nearest pixel fallback; densified at <=15m",
+    "minM": -1.86,
+    "maxM": 4.47
+  },
+  "manualSections": [
+    "野球場周囲の広場：OSM pedestrian area の境界線ではなく航空写真の舗装面をたどった中心線",
+    "道路下連絡通路の中心線：OSM pedestrian area layer=-1を参照",
+    "ビッグスワン東側カナール西岸・列柱廊外側：公式図と航空写真の舗装面で補間",
+    "北端の約15mの園路接続",
+    "野球場北側駐車場沿いの折返し：公式図の赤いUターンを再現、折返点の位置は概算"
+  ],
+  "verification": [
+    "公式図を全体と南側拡大で目視。野球場、芝生広場、連絡通路、ビッグスワン東側、鳥屋野潟北端、レストハウス、列柱廊、駐車場北側折返しを照合した。",
+    "GSI航空写真に経路を重ね、建物・競技場内部・水面・駐車枠を横切らず、舗装園路と広場をたどることを目視。",
+    "同一辺の重複は道路下連絡通路と公式図に描かれた短い折返しの4辺のみ。競技場内部の反復や距離を増やす周回はない。",
+    "参考距離は5,120m。公式5,000mに合わせるための人工的な距離調整は行わず、2.4%の差を明記する。"
+  ],
+  "proposedIntro": "新潟県スポーツ公園の公式『WALK & JOG ROAD』5kmコース図をもとに、野球場、西側芝生広場、ビッグスワン東側、鳥屋野潟沿いをつないだ周回です。掲載の参考経路は約5.1kmで、道路下の連絡通路を通り、列柱廊やレストハウス付近も回ります。現地の0.5kmごとの距離標識と案内を優先し、歩行者や自転車に注意して走ってください。",
+  "proposedWarning": {
+    "title": "現地のコース標識を優先してください",
+    "body": "公式案内は1周5kmです。掲載経路は園内図・地図・航空写真から作成した約5.1kmの参考データで、広場内や折返しの位置に差があります。イベント時は通れない区間があるため、現地案内を確認してください。"
+  },
+  "handoff": "Parent integrates shared GPX, guides, profile and images. Do not overwrite niigata-route.json, which belongs to a different spot."
+}

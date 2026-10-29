@@ -1,0 +1,104 @@
+{
+  "slug": "okinawa-athletic-park",
+  "name": "沖縄県総合運動公園 園内・海側参考周回",
+  "distanceM": 3067.38,
+  "courseType": "loop",
+  "surface": "mixed",
+  "start": {
+    "name": "陸上競技場東側の園路分岐",
+    "lat": 26.3093481,
+    "lng": 127.8221967
+  },
+  "description": "沖縄県総合運動公園の競技施設周辺と海側、南側の池を回る約3.1kmの参考周回です。陸上競技場東側から蹴球場・テニスコートの外側を回り、園内の橋を渡って海側へ。南側の外周園路と池の西側を通り、みどりのかけ橋方面から起点へ戻ります。開けた海辺と木陰の園路を組み合わせたコースです。",
+  "access": "沖縄市比屋根5-3-1。陸上競技場東側の園路を参考起点にしています。公園内の開放駐車場とゲート利用時間は公式案内を確認してください。",
+  "warnings": [
+    "公式ウォーキング3km図を参考に、公開園路に沿って再構成した約3.1kmの経路です。競技場南西の短い折返し部分は含めておらず、公式測量GPXではありません。",
+    "散歩や遊ぶ人、自転車、園内の管理車両を優先し、駐車場の出入口は歩いて安全を確認してください。",
+    "県道を横切る部分は園内の橋を渡ります。道路へ降りず、現地の案内・通行規制を優先してください。",
+    "海側は日陰が少ない区間があります。暑い時間帯を避け、水分を用意してください。"
+  ],
+  "checkpoints": [
+    {
+      "name": "蹴球場北側",
+      "lat": 26.3116176,
+      "lng": 127.8221045
+    },
+    {
+      "name": "東側の園内橋",
+      "lat": 26.3093492,
+      "lng": 127.8272308
+    },
+    {
+      "name": "南東の海側園路",
+      "lat": 26.3044502,
+      "lng": 127.8285439
+    },
+    {
+      "name": "南側の池の西",
+      "lat": 26.3045579,
+      "lng": 127.8235151
+    },
+    {
+      "name": "みどりのかけ橋付近",
+      "lat": 26.3069719,
+      "lng": 127.8233048
+    }
+  ],
+  "evidence": {
+    "officialUrls": [
+      "https://okinawa-kenso.com/?page_id=10",
+      "https://okinawa-kenso.com/wp-content/uploads/2021/01/cd3f3cc4cd398dd11a149744ae61eb1f.pdf",
+      "https://okinawa-kenso.com/?page_id=12",
+      "https://okinawa-kenso.com/wp-content/uploads/2024/02/map20230206.jpg"
+    ],
+    "osmUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=127.812,26.300,127.835,26.320",
+    "review": "公式3/4/5kmコースPDFの3km図と公式公園案内図を目視照合。陸上競技場東→蹴球場北→テニスコート外側→東側の橋→海側南外周→南側池西→みどりのかけ橋→陸上競技場東を接続した。公式3km図の競技場南西にある短いU字部分は、正確な折返し園路形状を確定できないため含めない参考ルート。大通りは通らず、東側はbridge=yesのway207835105、南側は公式図みどりのかけ橋と重なるway207422816を採用。池西歩道way1509545124の端点2か所は公園サービス通路との隙間4.92m/2.48mを接続。現地起点の360は取得できず、南側パドルボート付近の2021-11画像では広場・駐車場・施設位置の整合を確認したが、端点を直接目視した証拠とはしていない。",
+    "manualConnections": [
+      {
+        "from": 13799039267,
+        "to": 2176792355,
+        "label": "pond-west-north",
+        "distanceM": 4.92
+      },
+      {
+        "from": 13799039238,
+        "to": 2176791942,
+        "label": "pond-west-south",
+        "distanceM": 2.48
+      }
+    ],
+    "localOfficialMap": "/tmp/spot-route-repair/okinawa-official-map.jpg",
+    "localWalkingMap": "/tmp/spot-route-repair/okinawa-course.pdf",
+    "routePlot": "/tmp/spot-route-repair/okinawa-route-b1.png",
+    "routePath": "/tmp/spot-route-repair/okinawa-route.json",
+    "elevation": {
+      "source": "gsi",
+      "zoom": 14,
+      "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/dem5b/14/14009/6950.txt"
+      ],
+      "fetchedAt": "2026-10-16"
+    },
+    "visualObservation": {
+      "sourceUrl": "https://google.com/maps/@26.3056444,127.8239566,3a,90y,180h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgICG247zRQ!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-qtD9K-dHznWCxyjBJWpoz875YDPS1BDZbQ2-E9LTvdqBLOhWUDWZkFzVYuJNvkoFGI0lDbM1UgzqCasWRvtgYTY9l2nw9qLZ37a_vs-8PM0LlWQ5mhFrqmqOA-QBhyZyIYE8%3Dw900-h600-k-no-pi0-ya89.53845977783203-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "screenshot": "/tmp/spot-route-repair/okinawa-pond-west.png",
+      "pano": "CIHM0ogKEICAgICG247zRQ",
+      "coordinates": [
+        26.3056444,
+        127.8239566
+      ],
+      "captured": "2021-11",
+      "limitation": "requested26.3052991,127.8236684から約48m離れた施設側へ移動。園路接続端点そのものの証拠には使わない。"
+    },
+    "checks": {
+      "closed": true,
+      "repeatedEdges": 0,
+      "pointCount": 285,
+      "elevationMin": 1.68,
+      "elevationMax": 11.06,
+      "allElevationsPresent": true,
+      "notOfficialSurvey": true
+    }
+  }
+}

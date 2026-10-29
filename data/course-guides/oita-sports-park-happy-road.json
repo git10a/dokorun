@@ -1,127 +1,80 @@
 {
   "slug": "oita-sports-park-happy-road",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "大分スポーツ公園は県内屈指の練習拠点で、公式に1周5kmの「ハッピーロード」が案内されています。青山学院大学陸上競技部のキャンプ練習でも使われたロードコースとして紹介され、距離走やマラソン期の巡航練習に相性が良いです。公園全体に余裕があり、日常のジョグでも窮屈さを感じにくいのが利点です。自分のペースで落ち着いて距離を踏みたい日に向きます。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "大分スポーツ公園の公式ハッピーロード5km図をもとに、ドーム外周と西側の園路をつないだ約5.1kmの参考コースです。ドーム北側から西へ進み、西側の直線園路と駐車場付近を回って戻ったあと、ドーム南側と投てき場外側を通って一周します。起伏のある舗装路で、木立とドーム周辺の開けた景色が交互に現れます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式案内は1周5kmです。掲載経路は公開地図と現地画像から再構成した約5.14kmの参考データで、公式測量GPXではありません。 公式案内のとおり、一部は車道・駐車場の通路を含みます。車両、出入口、曲がり角に注意し、歩行者を優先してください。 ドーム東側の大階段は通らず、投てき場沿いの園路へ進む経路です。現地の案内や通行規制を優先してください。 大会・試合開催時はコースや駐車場が使えない場合があります。",
+      "url": "https://www.oita-sportspark.jp/information/2166",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: JR大分駅からバス「クラサスドーム大分」下車。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "クラサスドーム大分の北側外周路を起点にしています。車利用の場合は公園の開放駐車場・イベント時の規制を公式案内で確認してください。",
+      "url": "https://www.oita-sportspark.jp/access",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "周回コース起点",
-      "badge": "コース起点",
-      "destinationLat": 33.213704,
-      "destinationLng": 131.707654,
-      "routeAnchorLat": 33.213704,
-      "routeAnchorLng": 131.707654,
+      "name": "クラサスドーム北側の外周路",
+      "badge": "園路からスタート",
+      "destinationLat": 33.2025858,
+      "destinationLng": 131.6572685,
+      "routeAnchorLat": 33.2025858,
+      "routeAnchorLng": 131.6572685,
       "routeMode": "loop",
-      "accessText": "登録されているコース起点へ移動",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "クラサスドーム大分の北側外周路を起点にしています。車利用の場合は公園の開放駐車場・イベント時の規制を公式案内で確認してください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "園路と現地案内に沿って進み、歩行者を優先してください。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 33.213704,
-      "anchorLng": 131.707654,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Ｗ杯時の増設可動席の様子",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg/960px-%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードのスタート周辺付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "セカンドベースマン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg"
-      }
+      "name": "西側園路入口",
+      "anchorLat": 33.2008203,
+      "anchorLng": 131.6497548,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 33.210802,
-      "anchorLng": 131.714224,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: ドーム",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg/960px-%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの序盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "流木",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg"
-      }
+      "name": "西側駐車場付近",
+      "anchorLat": 33.1954228,
+      "anchorLng": 131.6472476,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 33.205619,
-      "anchorLng": 131.711479,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Sportsclub, Natural grass court",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oita_Sportsclub_Natural_grass_court.jpg/960px-Oita_Sportsclub_Natural_grass_court.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの中盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "プーヤン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oita_Sportsclub_Natural_grass_court.jpg"
-      }
+      "name": "ドーム南側外周",
+      "anchorLat": 33.1989643,
+      "anchorLng": 131.6564793,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 33.206807,
-      "anchorLng": 131.704838,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Sports Club, Club House",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Oita_Sportsclub_Clubhouse.jpg/960px-Oita_Sportsclub_Clubhouse.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの後半区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "プーヤン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oita_Sportsclub_Clubhouse.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 33.211795,
-      "anchorLng": 131.702067,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Stadium, Oita City, Oita, Japan",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/OitaStadium2.JPG/960px-OitaStadium2.JPG",
-        "alt": "大分スポーツ公園 ハッピーロードの終盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "大分帰省中",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:OitaStadium2.JPG"
-      }
+      "name": "投てき場外側の園路",
+      "anchorLat": 33.2014438,
+      "anchorLng": 131.6592323,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.oita-sportspark.jp/information/2166",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

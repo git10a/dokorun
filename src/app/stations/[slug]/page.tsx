@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const title = `${data.station.name}駅から走れるランニングスポット`;
   const description =
     stationEditorial[slug]?.intro ??
-    `${data.station.name}駅チカのランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
+    `${data.station.name}駅から行けるランニングスポットは${data.station.nearbySpots.length}件。${representative ? `${representative}など、` : ""}同じ路線で3駅以内のひと駅ラン候補も探せます。`;
   return pageMetadata({ title, description, path: `/stations/${slug}` });
 }
 
@@ -51,6 +51,7 @@ export default async function StationPage({ params }: { params: Params }) {
   if (!data) notFound();
   const { station, spots } = data;
   const editorial = stationEditorial[slug];
+  const hasDistantStart = station.nearbySpots.some((spot) => spot.distanceM > 2_000);
   const recommendations = editorial?.spots.filter((item) => spots.has(item.slug)) ?? [];
   const oneStationGroups = groupByMap(
     station.oneStationSpots,
@@ -80,7 +81,7 @@ export default async function StationPage({ params }: { params: Params }) {
             </Link>
           ))}
         </div>
-        <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm text-sub">ジョグはキロ6分で計算しています。</p>
+        <p className="mt-5 rounded-lg bg-cream px-4 py-3 text-sm text-sub">徒歩・ジョグの時間は駅と起点の直線距離からの目安です。実際の道順では距離が長くなります。ジョグはキロ6分で計算しています。</p>
       </header>
 
       {editorial && recommendations.length > 0 && (
@@ -102,9 +103,13 @@ export default async function StationPage({ params }: { params: Params }) {
 
       {station.nearbySpots.length > 0 && (
         <section>
-          <SectionHeading className="mb-2">駅チカのランニングスポット</SectionHeading>
+          <SectionHeading className="mb-2">
+            {hasDistantStart ? "駅から行けるランニングスポット" : "駅チカのランニングスポット"}
+          </SectionHeading>
           <p className="mb-6 pl-4 text-sm leading-6 text-sub">
-            {station.name}駅から2km以内。徒歩の近い順に掲載しています。
+            {hasDistantStart
+              ? `${station.name}駅からコースのスタート地点までの距離をもとに掲載しています。`
+              : `${station.name}駅から2km以内。徒歩の近い順に掲載しています。`}
           </p>
           <div className="grid gap-6 lg:grid-cols-2">
             {station.nearbySpots.map((nearby) => {
@@ -112,8 +117,17 @@ export default async function StationPage({ params }: { params: Params }) {
               return spot ? (
                 <div key={nearby.slug} className="space-y-2">
                   <p className="text-sm font-bold text-accent">
-                    駅から徒歩{nearby.walkMinutes}分{" "}
-                    <span className="ml-2 text-sub">ジョグ{stationJogMinutes(nearby.distanceM)}分</span>
+                    {nearby.distanceM > 5_000 ? (
+                      <>
+                        駅から直線約{(nearby.distanceM / 1_000).toFixed(1)}km
+                        <span className="ml-2 text-sub">バスなどのアクセスをご確認ください</span>
+                      </>
+                    ) : (
+                      <>
+                        駅から徒歩{nearby.walkMinutes}分{" "}
+                        <span className="ml-2 text-sub">ジョグ{stationJogMinutes(nearby.distanceM)}分</span>
+                      </>
+                    )}
                   </p>
                   <SpotCard spot={spot} />
                 </div>

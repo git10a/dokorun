@@ -1,0 +1,589 @@
+[
+  {
+    "slug": "arakawa",
+    "status": "route-mismatch-needs-review",
+    "reason": "荒川河川敷（赤羽）の説明は信号なしの川沿いだが、掲載GPXの20%地点は団地内車道、65%地点も豊島五丁目の信号付き一般道。2地点を実写で確認。画像生成は保留。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 2308.18,
+          "lat": 35.768026,
+          "lng": 139.735378
+        },
+        "pano": {
+          "id": "9gTLqAmMAgHjKVZzsadJGA",
+          "lat": 35.7679529,
+          "lng": 139.7353665,
+          "heading": 110,
+          "captured": "2018-05"
+        },
+        "observed": "団地の高層集合住宅の間の道路。歩道、車道、工事仮囲い。河川敷ではない。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 7448.31,
+          "lat": 35.763976,
+          "lng": 139.751347
+        },
+        "pano": {
+          "id": "G6oVSEcxlMulVOYM1YM-NQ",
+          "lat": 35.7639369,
+          "lng": 139.7514143,
+          "heading": 90,
+          "captured": "2025-11"
+        },
+        "observed": "豊島五丁目団地付近の信号付き一般道。団地、レストラン、横断歩道と車線。河川敷ではない。"
+      }
+    ],
+    "reviewedAt": "2026-10-16"
+  },
+  {
+    "slug": "hakusan-park-yasuragitei",
+    "status": "route-mismatch-needs-review",
+    "reason": "コース説明は信濃川やすらぎ堤だが、掲載GPXの1.16km点は市街地の細街路。全体が白山神社側〜古町/本町側往復に見えるため、河川敷主体との不一致の可能性。連絡道路のみか全体取り違えか親に監査依頼。未確定。画像生成保留。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 1159.57,
+          "lat": 37.918707,
+          "lng": 139.045749
+        },
+        "pano": {
+          "id": "872xBhT01Z-_7Vf6e3ghMg",
+          "lat": 37.9187043,
+          "lng": 139.0457565,
+          "heading": 220,
+          "captured": "2024-09"
+        },
+        "observed": "Google Street View実写。ブロック調の細い車道と歩道、両側に住宅と商店、電線。川や堤防は見えない。",
+        "sourceUrl": "https://www.google.com/maps/@37.9187043,139.0457565,3a,90y,220h,90t/data=!3m7!1e1!3m5!1s872xBhT01Z-_7Vf6e3ghMg!2e0!7i16384!8i8192"
+      }
+    ],
+    "reviewedAt": "2026-10-16"
+  },
+  {
+    "slug": "iwadono-kyuryo-cross",
+    "status": "nearby-panorama-not-course-confirmed",
+    "reason": "3.09km候補付近にスナップしたGoogle SVは高坂カントリークラブ内のフェアウェイ。公開GPXが廃線遊歩道を通るのかゴルフ場内なのか要地図照合。画像不採用。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 2428.12,
+          "lat": 36.004373,
+          "lng": 139.377407
+        },
+        "pano": {
+          "id": "2MUDHeM8-3_n3lrUML2yqA",
+          "lat": 36.004548,
+          "lng": 139.3776378,
+          "captured": "2012-08",
+          "heading": 90
+        },
+        "offsetM": 28.5,
+        "sourceUrl": "https://www.google.com/maps/@36.004548,139.3776378,61a,90y,90h,90t/data=!3m7!1e1!3m5!1s2MUDHeM8-3_n3lrUML2yqA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D2MUDHeM8-3_n3lrUML2yqA%26yaw%3D90!7i13312!8i6656",
+        "screenshot": "/tmp/dokorun-batch1-iwadono-golf-reference.png"
+      }
+    ]
+  },
+  {
+    "slug": "iwadono-kyuryo-cross",
+    "status": "awaiting-parent-route-review",
+    "reason": "後半候補は市民の森・見晴らし台に表示。経路確認まで生成保留。",
+    "observations": [
+      {
+        "coursePoint": {
+          "distanceM": 8978.37,
+          "lat": 36.003408,
+          "lng": 139.35355
+        },
+        "pano": {
+          "id": "CIHM0ogKEICAgID-t_GZXw",
+          "lat": 36.0031705,
+          "lng": 139.3531092,
+          "captured": "2022-12",
+          "heading": 0
+        },
+        "offsetM": 47.6,
+        "observed": "Summertime 0813の360度写真。落葉樹林の斜面越しに低い丘陵が見える。歩道自体は画面手前端。",
+        "sourceUrl": "https://www.google.com/maps/@36.0031705,139.3531092,3a,90y,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgID-t_GZXw!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9D9JS_xffQRQE0WT-nKy6_OgrxdJEG4luKYVGKs9vosuTcpmnYeQYP_Kj0QtSb5mZyYE24a2P7lVYFi3RA_BRlybJY_r6uO6jWjdltovivPNg3wjiWxs1WzhbtAM27NNYtGmNk%3Dw900-h600-k-no-pi0-ya77-ro0-fo100!7i11264!8i5632",
+        "screenshot": "/tmp/dokorun-batch1-iwadono-lookout-source.png"
+      }
+    ]
+  },
+  {
+    "slug": "kaiseizan-park",
+    "status": "needs-post-2024-panorama",
+    "reason": "郡山市公式で2024-04-01公園西側改修を確認。園路・広場・親水デッキ等が変更。コース付近SV2016-11と施設360写真1:2015-04/2:2018-04/3:2018-04、初期表示2017-04は改修前なので未採用。",
+    "officialUrl": "https://www.city.koriyama.lg.jp/soshiki/132/3252.html",
+    "observations": [
+      {
+        "pano": {
+          "id": "CIHM0ogKEICAgID4rqTgIw",
+          "lat": 37.3977488,
+          "lng": 140.3579123,
+          "captured": "2016-11"
+        },
+        "sourceUrl": "https://www.google.com/maps/@37.3977488,140.3579123,3a,90y,90h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgID4rqTgIw!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_gFofb_89XHpsZ4VgrHb-6Cry9Cl-A5siCzUN0bY57DOmRYR6-jWUqkjSJC7WUuW8wo-11ezjyrc3jmaQcSApv0krdHopULoUsfDRVBBFe_3SQafamHThLda5soVUISEzzUjCx%3Dw900-h600-k-no-pi0-ya92.239990234375-ro0-fo100!7i5376!8i2688"
+      }
+    ]
+  },
+  {
+    "slug": "keihin-unga-ryokudo",
+    "status": "route-review-needed",
+    "observedAt": "2026-10-16",
+    "finding": "公開GPXは駅付近35.598506,139.745366から勝島橋を渡って南の八潮通りへ往復する2,978.89m。京浜運河緑道公園の水辺園路を北上するコースではなく、紹介文の2.9kmクロカン周回と一致しない。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 610.65,
+          "lat": 35.595704,
+          "lng": 139.748697
+        },
+        "pano": {
+          "lat": 35.595744,
+          "lng": 139.748717,
+          "id": "fR9DKSR22dZ8YoJPt1MrVw",
+          "captured": "2023-10"
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.595744,139.748717,3a,90y,90h,90t/data=!3m4!1e1!3m2!1sfR9DKSR22dZ8YoJPt1MrVw!2e0",
+        "observation": "勝島橋の車道と両側歩道、橋東側の樹林が見える。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 1041.89,
+          "lat": 35.593513,
+          "lng": 139.750862
+        },
+        "pano": {
+          "lat": 35.5935644,
+          "lng": 139.7509005,
+          "id": "Ev028UW5gMCvyTGgImqLzA",
+          "captured": "2023-10"
+        },
+        "sourceUrl": "https://www.google.com/maps/@35.5935644,139.7509005,3a,90y,180h,90t/data=!3m4!1e1!3m2!1sEv028UW5gMCvyTGgImqLzA!2e0",
+        "observation": "中央分離帯のある八潮通りと交差点。運河緑道の中ではない。"
+      }
+    ],
+    "officialContext": [
+      "https://www.gotokyo.org/jp/spot/1164/index.html",
+      "https://shinagawa-kanko.or.jp/featured/cityrun/"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "makomanai-park",
+    "status": "route-location-mismatch",
+    "reviewedAt": "2026-10-16",
+    "profileBounds": {
+      "latMin": 43.005222,
+      "latMax": 43.011678,
+      "lngMin": 141.341269,
+      "lngMax": 141.349255
+    },
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 402.8,
+          "lat": 43.011172,
+          "lng": 141.3485
+        },
+        "pano": {
+          "lat": 43.0111659,
+          "lng": 141.3484519,
+          "id": "lVd6YB9H5Kzl-jHIJK-W2A",
+          "captured": "2024-07"
+        },
+        "sourceUrl": "https://google.com/maps/@43.0111659,141.3484519,60a,90y,180h,90t/data=!3m7!1e1!3m5!1slVd6YB9H5Kzl-jHIJK-W2A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DlVd6YB9H5Kzl-jHIJK-W2A%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observation": "実際に表示されたのは南34条西付近の住宅街の戸建住宅。真駒内公園内ではない。"
+      },
+      {
+        "placePoint": {
+          "lat": 42.9960957,
+          "lng": 141.3447364
+        },
+        "sourceUrl": "https://www.google.com/maps/place/北海道立真駒内公園/data=!4m2!3m1!1s0x5f0ad57424ff1c5f:0x9b47aa77a2a3fc83",
+        "observation": "Google Maps公園ページを開き、公式サイトリンクと住所一致、スタジアム・緑橋・きのこ広場を地図で確認。現GPX全体は公園の北に外れる。"
+      }
+    ],
+    "officialContext": [
+      "https://makomanai-park.jp/about/",
+      "https://makomanai-park.jp/access/",
+      "https://makomanai-park.jp/assets/pamphlet/guidemap.jpg"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "oita-sports-park-happy-road",
+    "status": "route-location-mismatch",
+    "reviewedAt": "2026-10-16",
+    "profileBounds": {
+      "latMin": 33.204104,
+      "latMax": 33.215412,
+      "lngMin": 131.702067,
+      "lngMax": 131.714672
+    },
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 0,
+          "lat": 33.213704,
+          "lng": 131.707654,
+          "elevationM": 50.75
+        },
+        "pano": {
+          "lat": 33.213692,
+          "lng": 131.7076797,
+          "id": "Fupkh3CCy6dIjQj8OWK7KA",
+          "captured": "2026-03"
+        },
+        "sourceUrl": "https://google.com/maps/@33.213692,131.7076797,48a,90y,140h,90t/data=!3m7!1e1!3m5!1sFupkh3CCy6dIjQj8OWK7KA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DFupkh3CCy6dIjQj8OWK7KA%26yaw%3D140!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "observation": "畑と竹林に挟まれた細い農道を目視。公式アクセス地図の公園中心33.20072058,131.65588052より約5km東で、全GPXが公園の東へ外れている。"
+      },
+      {
+        "placePoint": {
+          "lat": 33.20072058084624,
+          "lng": 131.65588051519305
+        },
+        "sourceUrl": "https://www.oita-sportspark.jp/access",
+        "observation": "公式公園マップのGoogle埋込座標。ハッピーロード公式お知らせは一周5kmだが、掲載中GPXの東側農道とは位置が合わない。"
+      }
+    ],
+    "officialContext": [
+      "https://www.oita-sportspark.jp/information/2166",
+      "https://www.oita-sportspark.jp/access",
+      "https://www.oita-sportspark.jp/pdf/access_parking.pdf"
+    ],
+    "action": "公園内の経路確定まで画像生成保留"
+  },
+  {
+    "slug": "okinawa-athletic-park",
+    "status": "route-mismatch-image-hold",
+    "checkedAt": "2026-10-16",
+    "point": {
+      "lat": 26.315795,
+      "lng": 127.817107,
+      "distanceM": 0
+    },
+    "pano": {
+      "id": "LtQABwwchcSpoFsW3dmzrA",
+      "lat": 26.3157731,
+      "lng": 127.8171192,
+      "captured": "2024-06"
+    },
+    "sourceUrl": "https://google.com/maps/@26.3157731,127.8171192,16a,90y,160h,90t/data=!3m7!1e1!3m5!1sLtQABwwchcSpoFsW3dmzrA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DLtQABwwchcSpoFsW3dmzrA%26yaw%3D160!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-okinawa-mismatch-source.png",
+    "observed": "掲載開始点は比屋根の住宅街。ピンクの集合住宅、駐車車両、電柱、白いガードレールが続き、公式の園内3kmコースではない。既存経路は公園北西の市街地へ広がる。",
+    "officialUrls": [
+      "https://okinawa-kenso.com/?page_id=10",
+      "https://okinawa-kenso.com/?page_id=12",
+      "https://okinawa-kenso.com/wp-content/uploads/2021/01/cd3f3cc4cd398dd11a149744ae61eb1f.pdf"
+    ],
+    "officialEvidence": "公式アクセスの埋込地図中心は26.30979307873134,127.82502621281992。公式住所は比屋根5-3-1。OSM公園relation6213951外周範囲26.3027741..26.3131202,127.8177702..127.8289752と一致する南東側。開始点は外周北端より約300m北で、既存経路は比屋根小学校周辺市街地に展開。",
+    "osmSource": "https://api.openstreetmap.org/api/0.6/map?bbox=127.812,26.300,127.835,26.320",
+    "action": "画像未生成。公式3kmコース図に沿う経路修正を依頼。"
+  },
+  {
+    "slug": "okushizu-long",
+    "issue": "紹介文の温泉終点と公開経路終点に不一致の疑い",
+    "profilePoint": {
+      "distanceM": 48543.41,
+      "lat": 35.283009,
+      "lng": 138.327003
+    },
+    "sourceUrl": "https://google.com/maps/@35.2829369,138.3270294,757a,90y,90t/data=!3m7!1e1!3m5!1sVOlYS4f5tYhIQxX8VCuMyA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DVOlYS4f5tYhIQxX8VCuMyA%26yaw%3D0!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-okushizu-end-source.png",
+    "observed": "Google2012年6月 VOlYS4f5tYhIQxX8VCuMyA。梅ヶ島新田稲荷神社近くの山林道路で温泉施設がない。紹介45.5kmに対し公開距離48.543km。39.614km35.228143,138.330677は直接SV参照なし。30.772km山間道路の画像1枚は実コース約4mで確認済み。",
+    "action": "終点の説明/経路の確認を親へ依頼、終点温泉としての画像は保留。"
+  },
+  {
+    "slug": "otsu-kogan-nagisa-park",
+    "issue": "開始点が紹介文の膳所城跡公園ではなく近江大橋の中央",
+    "profilePoint": {
+      "distanceM": 0,
+      "lat": 34.997203,
+      "lng": 135.902266
+    },
+    "sourceUrl": "https://google.com/maps/@34.9972355,135.9022722,94a,90y,270h,90t/data=!3m7!1e1!3m5!1sdQgdtHocUrxPSZucXuyceA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DdQgdtHocUrxPSZucXuyceA%26yaw%3D270!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "screenshot": "/tmp/dokorun-batch1-otsu-start-source.png",
+    "pano": {
+      "id": "dQgdtHocUrxPSZucXuyceA",
+      "captured": "2024-11",
+      "lat": 34.9972355,
+      "lng": 135.9022722
+    },
+    "observed": "近江大橋の車道から西を向く写真。橋に歩道はあるが開始点は公園ではなく湖上。全長4409.82mに対し紹介は公園から約5km。",
+    "action": "開始点/紹介文の整合を親へ依頼。後続の湖岸画像は確認の上進める。"
+  },
+  {
+    "slug": "sanaruko-park",
+    "status": "northern-route-detour-needs-review",
+    "observedAt": "2026-10-16",
+    "reason": "3938.38m点は湖岸公園園路でなく住宅街。公式現行図では北岸のであい橋・ふれあい橋をつなぐ湖岸園路を示す。南西392mは公園と一致。北側住宅街を画像化しない。",
+    "coursePoint": {
+      "distanceM": 3938.38,
+      "lat": 34.721224,
+      "lng": 137.696045
+    },
+    "pano": {
+      "id": "YPiKBFi49NFAdeJYKkwfuQ",
+      "lat": 34.7212017,
+      "lng": 137.6960715,
+      "captured": "2025-11"
+    },
+    "sourceUrl": "https://google.com/maps/@34.7212017,137.6960715,3a,90y,240h,90t/data=!3m7!1e1!3m5!1sYPiKBFi49NFAdeJYKkwfuQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DYPiKBFi49NFAdeJYKkwfuQ%26yaw%3D240!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "officialUrl": "https://sanaruko.hama-park.jp/facilities",
+    "sourceImage": "/tmp/dokorun-batch1-sanaruko-north-residential-source.png"
+  },
+  {
+    "slug": "azuma-sports-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 3080.29,
+    "startPoint": {
+      "lat": 37.723253,
+      "lng": 140.359943
+    },
+    "introProposal": "福島市西部にある、広い芝生と並木に囲まれた総合運動公園です。掲載コースは約3.08kmの参考周回ルート。木立や園路沿いの景色を楽しみながら走れ、周回を重ねて距離を調整できます。道路沿いの区間では歩道を利用し、散歩をする人や施設利用者を優先してください。",
+    "basis": "現行profileの3080.29mと閉じた起終点、受理済み2画像の並木/道路沿い歩道を反映。公式3/5kmコースとの同一性を追加断定しない。"
+  },
+  {
+    "slug": "kashiwanoha-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 2033.72,
+    "startPoint": {
+      "lat": 35.897462,
+      "lng": 139.939283
+    },
+    "introProposal": "柏市にある、並木や芝生、池の景色を楽しめる公園です。掲載コースは園路をつなぐ約2.03kmの参考周回ルート。短いジョギングから周回を重ねる練習まで、走る距離を調整できます。園路から少し入るとボート池もあり、休憩や散歩を合わせて楽しめます。",
+    "basis": "現行profileの2033.72mと閉じた起終点、東側入口とコース内側のボート池の確認済み画像を反映。"
+  },
+  {
+    "slug": "shiroyama-park-horinouchi",
+    "status": "route-replacement-proposed",
+    "reviewedAt": "2026-10-16",
+    "issue": "旧5688.38mは清水町、東雲神社東側道路、松山市駅南西、味酒町の市街地を回り、堀之内や城山へ入らない。紹介の堀之内平地から松山城山腹、後半の城へ向かう上りと不一致。",
+    "evidence": [
+      {
+        "courseDistanceM": 1307.42,
+        "courseLat": 33.845336,
+        "courseLng": 132.772617,
+        "sourceUrl": "https://google.com/maps/@33.8453475,132.7725945,34a,80y,180h,90t/data=!3m7!1e1!3m5!1slk2bq1w0zOqxoDdPKhsasA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dlk2bq1w0zOqxoDdPKhsasA%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "captured": "2025-02",
+        "observed": "東雲神社東側の石垣沿いの一般道。"
+      },
+      {
+        "courseDistanceM": 3478.44,
+        "courseLat": 33.835288,
+        "courseLng": 132.759022,
+        "sourceUrl": "https://google.com/maps/@33.8352324,132.7590501,21a,80y,90t/data=!3m7!1e1!3m5!1sUSBgwYBxrp3YVnNFNdtaFA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DUSBgwYBxrp3YVnNFNdtaFA%26yaw%3D0!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+        "captured": "2025-06",
+        "observed": "四電事業所前の市街地歩道。"
+      }
+    ]
+  },
+  {
+    "slug": "shimanto-sada-chinkabashi",
+    "status": "bridge-elevation-and-turnaround-correction",
+    "reviewedAt": "2026-10-16",
+    "bridgeWay": 134616300,
+    "bridgeEnds": [
+      {
+        "lat": 33.0151792,
+        "lng": 132.8839528
+      },
+      {
+        "lat": 33.0155319,
+        "lng": 132.8866285
+      }
+    ],
+    "oldPointIndexRangeInclusive": [
+      251,
+      254
+    ],
+    "oldDistanceRangeM": [
+      8335.06,
+      8712.76
+    ],
+    "issue": "橋上標高は地形DEMが橋面の高さを保証しない。旧経路は西端→橋長約75%→中央→西端で、対岸へ渡り切らない。東端まで渡って同じ道を戻す修正案を後続で作成。",
+    "sourceUrl": "https://www.openstreetmap.org/way/134616300"
+  },
+  {
+    "slug": "showa-kinen-park",
+    "status": "superseded-by-route-proposal",
+    "reviewedAt": "2026-10-16",
+    "distanceM": 5053.72,
+    "introProposal": "広い園内の木立や広場、水辺を巡って走れる国営公園です。掲載データは約5.05kmの参考周回ルート。歩行者や散策中の方を優先し、園内の案内に従って利用してください。開園時間や入園料、イベントによる通行制限は出発前に確認しましょう。",
+    "basis": "現行掲載profileは5053.72m。公式2026年ウォーキング図は水2.9km・広場3.9km・森5.6km。一般向けの掲載経路を陸連公認と裏付ける一次資料は未確認。2026年1月24日大会の主催者は5km特設コースを日本陸連公認ではないと明記。",
+    "sources": [
+      "https://www.showakinen-koen.jp/wp-content/uploads/2026/02/walking.pdf",
+      "https://www.goodsports.jp/gs-marathon/ichiran/0124showakinen/2026/"
+    ],
+    "proposalPath": "/Users/hirachan/.codex/worktrees/seo-release/hashiriniikitai/data/spot-experience/batch-1/showa-route-proposal.json"
+  },
+  {
+    "slug": "suizenji-ezuko-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "広木地区のサービスセンター付近から下江津湖を一周する、約3.89kmの参考ルートです。湖畔の園路や西岸の小道をつなぎ、水面や季節の草木を眺めながら走れます。公式には下江津湖3.8kmと上下江津湖7.3kmの周遊コースが案内されており、掲載ルートは下江津湖を回ります。",
+    "warningsProposal": [
+      {
+        "title": "歩行者用の園路をご利用ください",
+        "body": "歩行者用と自転車用に分かれている区間では歩行者用の園路を通ってください。公園外の道路や横断箇所では車両に注意し、イベント・管理作業時の通行規制に従ってください。"
+      }
+    ],
+    "sources": [
+      "https://www.ezuko-park.com/walking-park",
+      "https://www.ezuko-park.com/wp-content/uploads/2018/11/3.8MAP.jpg"
+    ],
+    "review": "公式下江津湖3.8km周回図と掲載約3887.65mの湖畔周回、東岸と西岸の実景を照合。内部評価の掲載優先度/候補は削除。公認は日本ノルディックフィットネス協会のコースのため、陸連公認と誤読させないよう紹介では公認を省略。",
+    "elevationObservation": "現profileのsourceはgpxで、平坦な湖畔に負値を含む-3.8m〜17.8m等が点ごとに変動。画像確認で大きな坂は見られず、実測保証のない元GPX標高なのでGSI再取得または未レビューの扱いが適切。経路全体の位置ずれはこの時点で認めない。"
+  },
+  {
+    "slug": "takada-castle-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "高田城址公園と本町通り周辺の市街地をつなぐ、約4.28kmの参考周回ルートです。公園では西堀沿いの松並木や三重櫓付近を通り、後半は街なかの道を走ります。園内だけを一周するコースではなく、交差点や一般道も含みます。観桜会の時期は混雑状況に合わせて歩行者を優先してください。",
+    "review": "現GPX121点4,276.41mには公園南側から本町通り・市街地への区間がある。公園外周のみとの旧紹介は一致しないため、経路を保持する説明修正案。西堀の実景は2026-04、南側一般道は2026-04、西城町の一般道は2026-05をCUAで確認。",
+    "sources": [
+      "https://www.city.joetsu.niigata.jp/soshiki/toshiseibi/takada-castle-site-park.html"
+    ]
+  },
+  {
+    "slug": "tamagawa-josui-ryokudo",
+    "status": "route-title-mismatch-observed",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "新宿駅付近から明大前・久我山・三鷹台を経て吉祥寺駅付近へ向かう、約14.69kmの参考片道ルートです。玉川上水ゆかりの緑地の近くも通りますが、甲州街道沿いの歩道や人見街道、住宅街など一般道の区間が多い街ランです。玉川上水緑道だけをつないだコースではありません。交差点では信号を守り、歩行者と自転車を優先してください。",
+    "review": "現profile541点14694.67m。2.80km35.676365,139.674360は甲州街道の歩道で旧玉川上水緑道は南の別道（Google2023-08 OzkiCvg69uW74fXTYkD6DQ）。10.69km35.688109,139.605047は人見街道（Google2023-09 g-2Q9swX9bBKWVDwiY_UDQ）。12.46km35.692102,139.588365は三鷹台駅南オダキューOX前（Google2024-11 UogIVrs4o6RaO7tlyRESjA）。いずれも実景目視。候補写真は未生成。",
+    "sources": [
+      "https://musashinoparks.com/kouen/about-tamagawa/",
+      "https://www.city.suginami.tokyo.jp/s100/shisetsu/14603.html"
+    ]
+  },
+  {
+    "slug": "tamagawa-josui-ryokudo",
+    "status": "public-copy-final-proposal",
+    "reviewedAt": "2026-10-16",
+    "spotNameProposal": "新宿〜吉祥寺の街ラン",
+    "courseNameProposal": "新宿〜吉祥寺 約14.7km 参考片道ルート",
+    "introProposal": "新宿駅付近から明大前・久我山・三鷹台を経て、吉祥寺駅付近へ向かう約14.7kmの参考片道ルートです。甲州街道沿いの歩道や住宅街をつなぎ、終盤は井の頭公園沿いの木々を眺めながら進みます。一般道を多く含むため、交差点では信号を守り、歩行者を優先してください。玉川上水緑道を連続して走るコースとは異なります。",
+    "warningsProposal": [
+      {
+        "title": "一般道と交差点を含みます",
+        "body": "甲州街道沿いの歩道、人見街道、住宅街を含みます。車や自転車に注意し、狭い場所や交差点では減速・歩行してください。全線が公園の専用走路ではありません。"
+      },
+      {
+        "title": "片道コースです",
+        "body": "掲載距離は約14.7kmです。新宿側・吉祥寺側からのアクセスと帰りの交通手段を出発前に確認してください。"
+      }
+    ],
+    "review": "親より名称を街ランへ変更して現GPX維持の方針を受領。公園・旧水路を通ると未確定な部分は文章に足さない。2画像は実際の幡ヶ谷甲州街道歩道と井の頭公園沿いの一般道。",
+    "sources": [
+      "https://musashinoparks.com/kouen/about-tamagawa/",
+      "https://www.city.suginami.tokyo.jp/s100/shisetsu/14603.html"
+    ]
+  },
+  {
+    "slug": "tochigi-prefectural-sports-park",
+    "status": "route-mismatch-images-held",
+    "reviewedAt": "2026-10-16",
+    "review": "現profile77点2687.12m起点36.531894,139.863184、北端36.5319。577.81m36.530506,139.867154は江曽島本町住宅街。Google2024-06 pano77ebs_NumtSVaH_zYSl17Q（36.5304694,139.8671163）の戸建住宅間の道をCUA目視。栃木県総合運動公園の公式配置図（西川田）とは別地点。候補は画像生成しない。",
+    "sourceUrl": "https://google.com/maps/@36.5304694,139.8671163,105a,80y,210h,90t/data=!3m7!1e1!3m5!1s77ebs_NumtSVaH_zYSl17Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D77ebs_NumtSVaH_zYSl17Q%26yaw%3D210!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "sources": [
+      "https://www.park-tochigi.com/sougou/",
+      "https://www.park-tochigi.com/tochinoki/wp/wp-content/uploads/2023/04/TFL-P2023.pdf"
+    ]
+  },
+  {
+    "slug": "tokushima-central-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "徳島城跡の城山を囲む、約1.95kmの参考周回ルートです。南側の石垣沿いから北側の川沿いまで、園路で公園の景色を楽しめます。JR徳島駅からアクセスしやすく、短いジョグにも周回を重ねる練習にも使えます。掲載ルートは城山の山頂には登りません。園内は歩行者を優先し、混雑時は減速してください。",
+    "review": "掲載profileは1952.34m、旧紹介の城山外周1.7kmと区別。南東石垣と北側園路を現地画像で確認。",
+    "sources": [
+      "https://www.city.tokushima.tokushima.jp/shisetsu/park/chuo.html"
+    ]
+  },
+  {
+    "slug": "tamako-cycling-road",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "多摩湖（村山貯水池）周辺の自転車歩行者道をつなぐ、約11.8kmの参考周回ルートです。堤防からの開けた眺めと、狭山丘陵の木々に囲まれた道の変化を楽しめます。湖畔の道には緩い上り下りがあり、自転車や歩行者とすれ違う場所ではペースを落としてください。出発前にトイレや補給場所を確認しておくと安心です。",
+    "review": "起伏はわずか・安定したペース走との旧断定を避け、森の上り下り・共有路を明示。",
+    "sources": [
+      "https://www.city.higashiyamato.lg.jp/kurashi/midokoro/1003873/1007191/1007192.html"
+    ]
+  },
+  {
+    "slug": "tsuzuki-central-park",
+    "status": "route-mismatch-and-replacement-proposed",
+    "oldDistanceM": 1940.9,
+    "oldPoint": {
+      "distanceM": 510.1,
+      "lat": 35.544774,
+      "lng": 139.573516
+    },
+    "sourceUrl": "https://google.com/maps/@35.5447035,139.5734871,39a,80y,230h,90t/data=!3m7!1e1!3m5!1sw3LYdct5dAdxqA03ARQseQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dw3LYdct5dAdxqA03ARQseQ%26yaw%3D230!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "Google2016-12のpano w3LYdct5dAdxqA03ARQseQ はセンター南駅前広場。既存経路の全点が公園南の商業・住宅地で、池と里山園路を通らない。",
+    "proposalFile": "tsuzuki-route-proposal.json"
+  },
+  {
+    "slug": "wangan-ariake-kasai",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-16",
+    "introProposal": "東京ビッグサイト付近を起点に、新木場・若洲・葛西臨海公園をつなぐ約31.8kmの参考ロングルートです。若洲では東京ゲートブリッジのたもとの園路へ立ち寄り、荒川河口橋を渡って葛西臨海公園の園路を巡ります。水辺や広い公園の眺めを楽しみながら、歩道・橋の歩道・園路をつないで戻ります。",
+    "reason": "現起点35.631737,139.792364はビッグサイト側であり旧intro有明北の水辺と区別。信号数/ほぼノンストップ/コンビニの限定数は確認できず断定を削除。",
+    "warningsProposal": [
+      "長距離のため、水分や補給、途中で切り上げる駅を事前に確認してください。",
+      "交差点・橋の歩道・公園では歩行者と交通ルールを優先し、混雑時は歩いてください。",
+      "若洲の橋たもとや園内で工事・規制がある場合は、現地案内に従ってください。"
+    ],
+    "sources": [
+      "https://www.tptc.co.jp/park/03_07",
+      "https://www.tokyo-park.or.jp/park/kasairinkai/"
+    ]
+  },
+  {
+    "slug": "yamazaki-river-kawanabashi-ishikawabashi",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-17",
+    "nameProposal": "山崎川（瑞穂公園周辺）",
+    "introProposal": "瑞穂公園周辺で、山崎川の両岸をつなぐ約2.6kmの参考周回です。川沿いの桜並木や植え込み、ベンチのある散策路をたどります。道幅の細い場所や一般道との接続もあるため、歩行者を優先しながら無理のないペースで楽しむコースです。",
+    "reason": "公開profileは2631.36m、北端35.132691・南端35.122366。可和名橋〜石川橋という四季の道全区間を巡る経路ではない。元の区間名をコース全体の説明にしない。GPX変更は不要。撮影2点と両岸の実景が整合。",
+    "warningsProposal": [
+      "桜の季節は花見客が多いため、混雑時は歩いて通過してください。",
+      "交差点と一般道では交通ルールを守り、歩道・散策路では歩行者を優先してください。"
+    ],
+    "sources": [
+      "https://www.city.nagoya.jp/mizuho/miryoku/1021905.html"
+    ],
+    "routeChangeRequired": false
+  },
+  {
+    "slug": "yokote-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-17",
+    "introProposal": "横手駅前から街なかを抜け、横手川を渡って横手公園の牛沼や城山の道を巡る約5.1kmの参考周回です。水辺の園路と木陰の坂道で景色が変わり、上り下りを含む街ランを楽しめます。横手城の展望台へ立ち寄る場合は、現地の案内で入口と開館時間を確認してください。",
+    "reason": "297点5055.89m。牛沼付近2169.22mと展望台北側の舗装路3038.21mを実景で照合。掲載経路は展望台建物への入場経路ではない。未確認の駅温浴施設ランステ利用断定を削除。GPX変更は不要。",
+    "warningsProposal": [
+      "園路の狭い場所や坂道では、散策者と車の通行に気を配ってください。",
+      "冬季の積雪・凍結や公園の規制は、出発前と現地で確認してください。"
+    ],
+    "sources": [
+      "https://www.city.yokote.lg.jp/shisetsu/1005520/1004547.html",
+      "https://www.city.yokote.lg.jp/kanko/1004048/1004531.html"
+    ],
+    "routeChangeRequired": false
+  },
+  {
+    "slug": "kaiseizan-park",
+    "status": "public-intro-proposal",
+    "reviewedAt": "2026-10-17",
+    "introProposal": "五十鈴湖や木々に囲まれた園路を巡る約1.95kmの参考周回です。春の桜や水辺の景色を楽しめ、園内には2024年の改修で整えられた広場や休憩テラスもあります。散策や遊びに訪れる人を優先し、混雑に合わせてゆっくり走るコースです。",
+    "reason": "公開profile1949.78m。郡山市2024年改修案内写真を確認。競技施設の利用条件未確認のままスピード練習を推奨する文言を削除し、一般園路として説明。",
+    "sources": [
+      "https://www.city.koriyama.lg.jp/soshiki/132/3252.html"
+    ],
+    "routeChangeRequired": false
+  }
+]

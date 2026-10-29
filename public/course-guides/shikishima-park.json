@@ -1,47 +1,46 @@
 {
   "slug": "shikishima-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "前橋市の敷島公園は、競技施設が集まる一帯にジョギング・ウォーキングコースマップがあり、PDFではスタジアム外周ジョギングコース700mを確認できます。短い周回なので流しやペース把握、補助練習の拠点として扱いやすく、公園としての使いやすさも高い部類です。一方で通常時の照度範囲や長い外周距離は追加確認が必要です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "敷島公園の正田醤油スタジアム群馬の外周を巡る、約0.7kmの参考周回です。スタジアムの外壁や木立を眺めながら舗装路を進みます。公式園内図には外周ジョギングコース700mが案内されています。東側は一般道に接するためスタジアム側の歩道を利用し、車両の出入口では安全を確認してください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "地図は公式外周コース図と地図データ・現地画像を照合して再構成した参考経路で、公式コースの正確な測量線ではありません。競技場のトラックには入りません。イベント時の制限や工事の案内を優先し、混雑する場所・車両出入口では歩いてください。駐車場は21時30分〜翌6時30分に施錠されます。",
+      "url": "https://shikishima-park.org/map/map03.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 前橋市敷島町66。公園公式のアクセス・駐車場案内あり。駐車場は21:30〜6:30閉鎖。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "正田醤油スタジアム群馬の南側入口から外周園路へ入ります。競技場内ではなく、外壁沿いの園路を利用してください。",
+      "url": "https://shikishima-park.org/map/map03.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "群馬総社駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 36.415574,
-      "destinationLng": 139.032221,
-      "routeAnchorLat": 36.410954,
-      "routeAnchorLng": 139.052835,
+      "name": "スタジアム南側の園路",
+      "badge": "園路からスタート",
+      "destinationLat": 36.4104299,
+      "destinationLng": 139.0535052,
+      "routeAnchorLat": 36.4104299,
+      "routeAnchorLng": 139.0535052,
       "routeMode": "loop",
-      "accessText": "群馬総社駅からコースまで約1920m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "正田醤油スタジアム群馬の南側入口から外周園路へ入ります。競技場内ではなく、外壁沿いの園路を利用してください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "スタジアムの外壁に沿って西へ進みます。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 36.410954,
-      "routeLng": 139.052835,
-      "elevationM": 108.3,
+      "routeLat": 36.4104299,
+      "routeLng": 139.0535052,
+      "elevationM": 111.7,
       "snapGapM": 0,
       "checkpointDistances": {
         "section-1": 0,
-        "section-2": 165,
-        "section-3": 735,
-        "section-4": 487,
-        "section-5": 235
+        "section-2": 207,
+        "section-3": 386,
+        "section-4": 575
       },
       "gpxHref": "/gpx/shikishima-park-start-1.gpx"
     }
@@ -49,167 +48,110 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 36.410954,
-      "anchorLng": 139.052835,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 上毛新聞敷島球場（群馬県前橋市）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg/960px-%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg",
-        "alt": "敷島公園のスタート周辺付近",
-        "caption": "敷島公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg"
-      },
+      "name": "南側の園路",
+      "anchorLat": 36.4104299,
+      "anchorLng": 139.0535052,
+      "description": "スタジアムの外壁に沿って西へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 36.410954,
-      "routeLng": 139.052835,
-      "elevationM": 108.3,
+      "routeLat": 36.4104299,
+      "routeLng": 139.0535052,
+      "elevationM": 111.7,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 36.411662,
-      "anchorLng": 139.053695,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 上毛新聞敷島球場（群馬県前橋市）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg/960px-%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg",
-        "alt": "敷島公園の序盤区間付近",
-        "caption": "敷島公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg"
-      },
-      "routePointIndex": 10,
-      "routeDistanceM": 165,
-      "routeLat": 36.411662,
-      "routeLng": 139.053695,
-      "elevationM": 103.7,
+      "name": "西側の園路",
+      "anchorLat": 36.4115731,
+      "anchorLng": 139.0522064,
+      "description": "主スタンドの外側を北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 26,
+      "routeDistanceM": 207,
+      "routeLat": 36.4115731,
+      "routeLng": 139.0522064,
+      "elevationM": 111.4,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 36.4119,
-      "anchorLng": 139.052775,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 上毛新聞敷島球場（群馬県前橋市）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg/960px-%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg",
-        "alt": "敷島公園の中盤区間付近",
-        "caption": "敷島公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg"
-      },
+      "name": "北側の園路",
+      "anchorLat": 36.4127403,
+      "anchorLng": 139.0531245,
+      "description": "外周を東へ回ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
       "routePointIndex": 48,
-      "routeDistanceM": 735,
-      "routeLat": 36.4119,
-      "routeLng": 139.052775,
-      "elevationM": 112.6,
+      "routeDistanceM": 386,
+      "routeLat": 36.4127403,
+      "routeLng": 139.0531245,
+      "elevationM": 112.7,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 36.410874,
-      "anchorLng": 139.053477,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 上毛新聞敷島球場（群馬県前橋市）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg/960px-%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg",
-        "alt": "敷島公園の後半区間付近",
-        "caption": "敷島公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg"
-      },
-      "routePointIndex": 30,
-      "routeDistanceM": 487,
-      "routeLat": 36.410874,
-      "routeLng": 139.053477,
-      "elevationM": 109.5,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 36.412248,
-      "anchorLng": 139.053457,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 上毛新聞敷島球場（群馬県前橋市）",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg/960px-%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg",
-        "alt": "敷島公園の終盤区間付近",
-        "caption": "敷島公園の走路近隣で撮影された風景",
-        "credit": "クハ４１９－５",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%AF%9B%E6%96%B0%E8%81%9E%E6%95%B7%E5%B3%B6%E7%90%83%E5%A0%B4_-_Panoramio_58146580.jpg"
-      },
-      "routePointIndex": 14,
-      "routeDistanceM": 235,
-      "routeLat": 36.412248,
-      "routeLng": 139.053457,
-      "elevationM": 110.5,
+      "name": "東側の歩道",
+      "anchorLat": 36.4115274871821,
+      "anchorLng": 139.0541849453637,
+      "description": "道路側へ出ず、歩道を南へ進みます。車両出入口に注意してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 70,
+      "routeDistanceM": 575,
+      "routeLat": 36.4115275,
+      "routeLng": 139.0541849,
+      "elevationM": 113.6,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://shikishima-park.org/map/map03.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 841,
-  "elevationGainM": 15,
+  "distanceM": 726,
+  "elevationGainM": 3,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 108.3
+      "elevationM": 111.7
     },
     {
-      "distanceM": 93,
-      "elevationM": 111.1
+      "distanceM": 91,
+      "elevationM": 111.3
     },
     {
-      "distanceM": 187,
-      "elevationM": 105
+      "distanceM": 182,
+      "elevationM": 111.3
     },
     {
-      "distanceM": 280,
-      "elevationM": 111
+      "distanceM": 272,
+      "elevationM": 111.6
     },
     {
-      "distanceM": 374,
-      "elevationM": 112.9
+      "distanceM": 363,
+      "elevationM": 112.5
     },
     {
-      "distanceM": 467,
-      "elevationM": 108.9
+      "distanceM": 454,
+      "elevationM": 113.1
     },
     {
-      "distanceM": 561,
-      "elevationM": 106.6
+      "distanceM": 545,
+      "elevationM": 113.7
     },
     {
-      "distanceM": 654,
-      "elevationM": 110.9
+      "distanceM": 635,
+      "elevationM": 113.4
     },
     {
-      "distanceM": 747,
-      "elevationM": 112.2
-    },
-    {
-      "distanceM": 841,
-      "elevationM": 108.3
+      "distanceM": 726,
+      "elevationM": 111.7
     }
   ]
 }

@@ -21,6 +21,7 @@ export function raceSearchOptions(todayKey = jstTodayKey()) {
     slug: race.slug,
     name: race.name,
     prefecture: race.prefecture,
+    city: race.city,
     date: raceShortDate(race),
   }));
 }

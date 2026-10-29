@@ -1,20 +1,18 @@
 {
   "slug": "shinshu-sky-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "松本平広域公園を1周する『信州スカイロード10』が公式に案内された、全国でも掲載価値の高いスポットです。1周10kmの分かりやすい周回で、比較的アップダウンが少なく景観が良いこと、さらにランニングステーションにシャワー室があることまで公式確認できます。長距離ジョグの基準周回として優秀で、空港隣接の開放感と大規模公園ならではの安全性を両立しています。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "松本空港を囲む信州スカイパークを巡る、約10.2kmの参考周回コースです。開けた芝生広場や空港沿いの園路をつなぎ、長めのジョギングに使えます。2026年の競技場工事に伴い、北西側はP1駐車場と公園外の歩道を経由する迂回を含みます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "競技場工事による迂回があります",
+      "body": "2026年6月1日〜12月末予定の公式迂回図を参考経路へ反映しています。P1駐車場・備蓄倉庫付近は工事期間の案内に沿い、公園外の歩道から体育館北側の駐車場出入口へ戻ります。工事車両の出入りでは誘導員に従い、現地表示が変わった場合はそちらを優先してください。",
+      "url": "https://shinshu-skypark.net/news/2026/05/10-17.php",
+      "linkLabel": "公園公式の迂回案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 松本市神林5300。公園公式アクセスマップあり。各ゾーンに駐車場を設置。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "公園利用者と車両を優先してください",
+      "body": "園路は歩行者や自転車も利用します。駐車場と一般道側の区間では速度を落とし、車両の出入口に注意してください。"
     }
   ],
   "startPoints": [
@@ -35,93 +33,58 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
+      "name": "南側の園路",
       "anchorLat": 36.158114,
       "anchorLng": 137.922274,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 鎖川。長野県松本市大字今井、赤坂橋付近より下流方向。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kusari_River_Nagano_Japan.jpg/960px-Kusari_River_Nagano_Japan.jpg",
-        "alt": "信州スカイパークのスタート周辺付近",
-        "caption": "信州スカイパークの走路近隣で撮影された風景",
-        "credit": "Triglav",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kusari_River_Nagano_Japan.jpg"
-      }
+      "description": "現地のコース表示を確認して進みます。",
+      "surfaceLabel": "園路・歩道",
+      "caution": "歩行者と現地誘導を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 36.157941,
-      "anchorLng": 137.925835,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 鎖川。長野県松本市大字今井、赤坂橋付近より下流方向。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kusari_River_Nagano_Japan.jpg/960px-Kusari_River_Nagano_Japan.jpg",
-        "alt": "信州スカイパークの序盤区間付近",
-        "caption": "信州スカイパークの走路近隣で撮影された風景",
-        "credit": "Triglav",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kusari_River_Nagano_Japan.jpg"
-      }
+      "name": "東側の広場",
+      "anchorLat": 36.161984,
+      "anchorLng": 137.926216,
+      "description": "園路と広場の利用者を優先します。",
+      "surfaceLabel": "園路・歩道",
+      "caution": "歩行者と現地誘導を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 36.167472,
-      "anchorLng": 137.925171,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 鎖川。長野県松本市大字今井、赤坂橋付近より下流方向。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kusari_River_Nagano_Japan.jpg/960px-Kusari_River_Nagano_Japan.jpg",
-        "alt": "信州スカイパークの中盤区間付近",
-        "caption": "信州スカイパークの走路近隣で撮影された風景",
-        "credit": "Triglav",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kusari_River_Nagano_Japan.jpg"
-      }
+      "name": "北側の園路",
+      "anchorLat": 36.180966,
+      "anchorLng": 137.918712,
+      "description": "空港側の園路を進みます。",
+      "surfaceLabel": "園路・歩道",
+      "caution": "歩行者と現地誘導を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 36.180966,
-      "anchorLng": 137.918712,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 長野県松本市の松本ハイランド農協が出荷する松本ハイランドすいかのラベル",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Matsumoto_JA3.JPG/960px-Matsumoto_JA3.JPG",
-        "alt": "信州スカイパークの後半区間付近",
-        "caption": "信州スカイパークの走路近隣で撮影された風景",
-        "credit": "Mountainlife",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matsumoto_JA3.JPG"
-      }
+      "name": "P1駐車場の迂回",
+      "anchorLat": 36.1690189,
+      "anchorLng": 137.9203304,
+      "description": "工事車両に注意し、現地の誘導に従ってください。",
+      "surfaceLabel": "園路・歩道",
+      "caution": "歩行者と現地誘導を優先"
     },
     {
       "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 36.167046,
-      "anchorLng": 137.921134,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 鎖川。長野県松本市大字今井、赤坂橋付近より下流方向。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kusari_River_Nagano_Japan.jpg/960px-Kusari_River_Nagano_Japan.jpg",
-        "alt": "信州スカイパークの終盤区間付近",
-        "caption": "信州スカイパークの走路近隣で撮影された風景",
-        "credit": "Triglav",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kusari_River_Nagano_Japan.jpg"
-      }
+      "name": "体育館北側の出入口",
+      "anchorLat": 36.1663952,
+      "anchorLng": 137.9176956,
+      "description": "一般道沿いの歩道から公園側へ戻ります。",
+      "surfaceLabel": "園路・歩道",
+      "caution": "歩行者と現地誘導を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "2026年の公式工事迂回図とOSM経路を照合。© OpenStreetMap contributors (ODbL)",
+    "routeSources": [
+      "https://shinshu-skypark.net/news/2026/05/10-17.php",
+      "https://shinshu-skypark.net/news/260601_detour_map.jpg"
+    ],
+    "elevation": "国土地理院の地形標高を加工",
+    "reviewedAt": "2026-10-16"
   }
 }

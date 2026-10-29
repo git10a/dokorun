@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { CourseMap } from "./course-map";
 import { RaceElevationChart } from "../race-elevation-chart";
 import type { LineString } from "@/lib/types";
-import { pointAlongCourse } from "@/lib/gpx";
+import { pointAlongCourse } from "@/lib/race-page";
 import { elevationPointAtDistance, type RaceElevation } from "@/lib/race-elevation";
 
 // Keep course data in static assets rather than the Worker bundle.
@@ -89,6 +89,7 @@ export function RaceCourseMap({
           showEndpoints
           raceSlug={slug}
           highlightedPoint={highlightedPoint}
+          highlightedLabel={selectedKm !== null ? `約${selectedKm.toFixed(1)}km地点` : null}
           className="h-[280px] sm:h-[340px]"
         />
         {overlay && <div className="absolute left-3 top-3 z-10">{overlay}</div>}

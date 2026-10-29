@@ -17,10 +17,12 @@ import {
 } from "lucide-react";
 import { CourseGuideMap } from "@/components/map/course-guide-map";
 import { MemberGpxLink } from "@/components/member-gpx-link";
-import { ElevationProfile } from "@/components/elevation-profile";
+import { RaceElevationChart } from "@/components/race-elevation-chart";
+import { useSpotElevation } from "@/lib/use-spot-elevation";
+import { elevationPointAtDistance, raceElevationGain } from "@/lib/race-elevation";
+import { spotDistanceFromStart, spotElevationFromStart } from "@/lib/spot-elevation";
 import { SpotImage } from "@/components/spot-image";
 import { courseTypeLabels, surfaceLabels, type CourseType, type LineString, type Surface } from "@/lib/types";
-import { reverseElevationProfile, rotateElevationProfile } from "@/lib/course-guide-profile";
 import { haversine } from "@/lib/gpx";
 import type { CourseGuide } from "@/lib/course-guides";
 import { track } from "@/lib/track";
@@ -54,15 +56,19 @@ export function LongCourseGuide({
   const recommendedStart = recommendation
     ? guide.startPoints.find((start) => start.id === recommendation.startId)
     : null;
+  const baseProfile = useSpotElevation(guide.slug);
+  const [selectedDistanceM, setSelectedDistanceM] = useState<number | null>(null);
   const profile = useMemo(
     () =>
-      selectedStart.routeMode === "loop"
-        ? rotateElevationProfile(guide.elevationProfile, selectedStart.routeDistanceM, guide.distanceM)
-        : selectedStart.routeMode === "reverse"
-          ? reverseElevationProfile(guide.elevationProfile, guide.distanceM)
-          : guide.elevationProfile,
-    [guide.distanceM, guide.elevationProfile, selectedStart.routeDistanceM, selectedStart.routeMode],
+      baseProfile
+        ? spotElevationFromStart(baseProfile, selectedStart.routeDistanceM, selectedStart.routeMode)
+        : baseProfile,
+    [baseProfile, selectedStart.routeDistanceM, selectedStart.routeMode],
   );
+  const selectedPoint =
+    profile && selectedDistanceM !== null ? elevationPointAtDistance(profile.points, selectedDistanceM) : null;
+  const highlightedPoint: [number, number] | null = selectedPoint ? [selectedPoint.lng, selectedPoint.lat] : null;
+  const elevationGainM = profile ? raceElevationGain(profile) : null;
   const checkpoints = useMemo(
     () =>
       guide.checkpoints
@@ -96,6 +102,7 @@ export function LongCourseGuide({
 
   const chooseStart = (id: string, source = "manual") => {
     setSelectedStartId(id);
+    setSelectedDistanceM(null);
     track("start_point_select", { slug: guide.slug, startId: id, source });
   };
 
@@ -140,11 +147,28 @@ export function LongCourseGuide({
 
   return (
     <div className="space-y-10">
+      {guide.routeUnavailable && (
+        <aside role="status" className="rounded-xl border border-danger/30 bg-cream p-4">
+          <p className="flex items-center gap-2 font-bold">
+            <AlertTriangle size={18} />
+            {guide.routeUnavailable.title}
+          </p>
+          <p className="mt-2 text-sm leading-6">{guide.routeUnavailable.body}</p>
+          <a
+            href={guide.routeUnavailable.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-sm font-bold text-accent underline"
+          >
+            {guide.routeUnavailable.linkLabel}
+          </a>
+        </aside>
+      )}
       <section id="overview" className="space-y-4 scroll-mt-28">
         <div className="grid grid-cols-2 border-y border-line sm:grid-cols-4">
           {[
             ["距離", `${(guide.distanceM / 1000).toFixed(1)}km`],
-            ["獲得標高", `${guide.elevationGainM ?? "—"}m`],
+            ["獲得標高（推定）", elevationGainM === null ? "—" : `${elevationGainM}m`],
             ["形状", courseTypeLabels[courseType]],
             ["路面", surfaceLabels[surface]],
           ].map(([label, value], index) => (
@@ -163,9 +187,31 @@ export function LongCourseGuide({
       <section id="route" className="scroll-mt-32 space-y-4">
         <SectionHeading>ルート確認</SectionHeading>
         <div className="overflow-hidden rounded-2xl border border-line">
-          <CourseGuideMap geojson={geojson} startPoints={guide.startPoints} selectedStartId={selectedStart.id} />
+          <CourseGuideMap
+            geojson={geojson}
+            startPoints={guide.startPoints}
+            selectedStartId={selectedStart.id}
+            highlightedPoint={highlightedPoint}
+          />
           <div className="border-t border-line p-3 sm:p-5">
-            <ElevationProfile profile={profile} totalDistanceM={guide.distanceM} startName={selectedStart.name} />
+            <p className="mb-3 text-xs text-sub">{selectedStart.name}からの距離</p>
+            {profile?.routeReviewRequired ? (
+              <p className="py-4 text-sm text-sub" role="status">
+                掲載コースの経路・標高を確認中です。現地の案内図をご確認ください。
+              </p>
+            ) : profile ? (
+              <RaceElevationChart
+                profile={profile}
+                selectedDistanceM={selectedDistanceM}
+                onSelect={setSelectedDistanceM}
+              />
+            ) : (
+              <p className="flex min-h-[391px] items-center py-4 text-sm text-sub" role="status">
+                {profile === undefined
+                  ? "標高データを読み込み中…"
+                  : "標高データを読み込めませんでした。時間をおいて再度お試しください。"}
+              </p>
+            )}
           </div>
         </div>
         <div className="rounded-xl bg-cream px-4 py-3">
@@ -194,7 +240,32 @@ export function LongCourseGuide({
       {editorial}
 
       {guide.atmosphere ? (
-        <CourseAtmosphere atmosphere={guide.atmosphere} />
+        <CourseAtmosphere
+          atmosphere={{
+            ...guide.atmosphere,
+            scenes: guide.atmosphere.scenes
+              .map((scene) => ({
+                ...scene,
+                coursePoint:
+                  scene.coursePoint && baseProfile
+                    ? {
+                        ...scene.coursePoint,
+                        distanceM: spotDistanceFromStart(
+                          scene.coursePoint.distanceM,
+                          baseProfile.points.at(-1)!.distanceM,
+                          selectedStart.routeDistanceM,
+                          selectedStart.routeMode,
+                        ),
+                      }
+                    : scene.coursePoint,
+              }))
+              .sort((a, b) => (a.coursePoint?.distanceM ?? Infinity) - (b.coursePoint?.distanceM ?? Infinity)),
+          }}
+          onSelectPoint={(distanceM) => {
+            setSelectedDistanceM(distanceM);
+            document.getElementById("route")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        />
       ) : highlights.length > 0 ? (
         <section id="highlights" className="scroll-mt-32 space-y-4">
           <div>
@@ -273,13 +344,25 @@ export function LongCourseGuide({
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-paper/95 p-3 backdrop-blur">
         <div className="mx-auto flex w-full max-w-2xl gap-2">
-          <button
-            onClick={() => setSheetOpen(true)}
-            className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
-          >
-            <MapPin size={20} className="shrink-0" />
-            <span>{hasStartChoice ? "スタート地点を決める" : "アクセスを確認"}</span>
-          </button>
+          {guide.routeUnavailable ? (
+            <a
+              href={guide.routeUnavailable.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
+            >
+              <AlertTriangle size={20} className="shrink-0" />
+              <span>通行止め情報を確認</span>
+            </a>
+          ) : (
+            <button
+              onClick={() => setSheetOpen(true)}
+              className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 font-black text-paper shadow-lg"
+            >
+              <MapPin size={20} className="shrink-0" />
+              <span>{hasStartChoice ? "スタート地点を決める" : "アクセスを確認"}</span>
+            </button>
+          )}
           <Link
             href={`/spots/${guide.slug}?tab=logs#dokolog`}
             onClick={() => track("footer_checkin_cta", { slug: guide.slug })}
@@ -290,7 +373,7 @@ export function LongCourseGuide({
         </div>
       </div>
 
-      {sheetOpen && (
+      {sheetOpen && !guide.routeUnavailable && (
         <div className="fixed inset-0 z-[60] bg-ink/45" role="presentation" onMouseDown={() => setSheetOpen(false)}>
           <section
             role="dialog"

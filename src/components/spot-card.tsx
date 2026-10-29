@@ -5,10 +5,13 @@ import { FacilityIcons } from "./facility-icons";
 import { SpotImage } from "./spot-image";
 import { SpotThumbnail } from "./spot-thumbnail";
 import { formatDistanceKm } from "@/lib/format";
+import spotElevationSummaries from "@/lib/spot-elevation-summaries.json";
 import { courseTypeLabels, surfaceLabels, type SpotSummary } from "@/lib/types";
 
 export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact?: boolean }) {
   const distanceKm = formatDistanceKm(spot.distanceM);
+  const summary = (spotElevationSummaries as Record<string, { elevationGainM: number | null }>)[spot.slug];
+  const elevationGainM = summary ? summary.elevationGainM : spot.elevationGainM;
 
   if (compact) {
     return (
@@ -42,7 +45,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
         </div>
         <div className="min-w-0">
           <h3 className="text-sm font-bold leading-6 group-hover:underline">{spot.name}</h3>
-          <p className="mt-1 text-xs text-sub">{spot.city}</p>
+          <p className="mt-1 text-xs leading-relaxed text-sub">{spot.prefecture} {spot.city}</p>
           <p className="mt-3 flex items-center gap-3">
             <span className="text-sm font-bold">
               {distanceKm}
@@ -59,7 +62,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
   const details = [
     ...new Set(
       [
-        spot.elevationGainM !== null ? `高低差${spot.elevationGainM}m` : null,
+        elevationGainM !== null ? `獲得標高${elevationGainM}m` : null,
         spot.signalsCount !== null ? `信号${spot.signalsCount}` : null,
         courseTypeLabels[spot.courseType],
         surfaceLabels[spot.surface],
@@ -76,7 +79,7 @@ export function SpotCard({ spot, compact = false }: { spot: SpotSummary; compact
         <SpotThumbnail spot={spot} sizes="(min-width: 640px) 176px, 112px" photoHeight={360} />
       </div>
       <div className="min-w-0 flex-1 p-3 sm:p-4">
-        <p className="truncate text-xs text-sub">
+        <p className="text-xs leading-relaxed text-sub">
           {spot.prefecture} {spot.city}
         </p>
         <h3 className="mt-0.5 text-base font-bold leading-snug sm:text-lg">{spot.name}</h3>

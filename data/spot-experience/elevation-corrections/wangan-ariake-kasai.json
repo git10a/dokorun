@@ -1,0 +1,206 @@
+{
+  "slug": "wangan-ariake-kasai",
+  "source": "preserve-existing",
+  "reviewedAt": "2026-10-16",
+  "reason": "橋面の高さを示さない既存標高を欠損にし、橋の疎な点間を直線補間しない。その他の標高と全座標は保持。",
+  "evidence": "data/spot-experience/batch-1/wangan-bridge-elevation-proposal.json",
+  "elevationGapNotice": "荒川河口橋と東側の取り付け部は、橋上の路面の高さを確認できないため標高を空白にしています。コース全体の獲得標高は表示していません。",
+  "samples": [
+    {
+      "distanceM": 14746.48,
+      "lat": 35.647926,
+      "lng": 139.839775,
+      "elevationM": null,
+      "previousElevationM": 9
+    },
+    {
+      "distanceM": 14839.74,
+      "lat": 35.647835,
+      "lng": 139.840801,
+      "elevationM": null,
+      "previousElevationM": 9
+    },
+    {
+      "distanceM": 15030.77,
+      "lat": 35.647667,
+      "lng": 139.842905,
+      "elevationM": null,
+      "previousElevationM": 9.25
+    },
+    {
+      "distanceM": 15828.29,
+      "lat": 35.647137,
+      "lng": 139.851707,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15838.42,
+      "lat": 35.647228,
+      "lng": 139.85171,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15842.91,
+      "lat": 35.647259,
+      "lng": 139.851742,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15882.5,
+      "lat": 35.647234,
+      "lng": 139.852179,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15886.62,
+      "lat": 35.647198,
+      "lng": 139.85219,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15888.82,
+      "lat": 35.64718,
+      "lng": 139.85218,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15929.42,
+      "lat": 35.647208,
+      "lng": 139.851732,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15931.31,
+      "lat": 35.647225,
+      "lng": 139.851733,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15933.01,
+      "lat": 35.647236,
+      "lng": 139.851746,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15979.8,
+      "lat": 35.647212,
+      "lng": 139.852263,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 15985.11,
+      "lat": 35.64717,
+      "lng": 139.852291,
+      "elevationM": null,
+      "previousElevationM": 10.75
+    },
+    {
+      "distanceM": 24740.68,
+      "lat": 35.64717,
+      "lng": 139.852291,
+      "elevationM": null,
+      "previousElevationM": 10.75
+    },
+    {
+      "distanceM": 24745.99,
+      "lat": 35.647212,
+      "lng": 139.852263,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24792.79,
+      "lat": 35.647236,
+      "lng": 139.851746,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24794.48,
+      "lat": 35.647225,
+      "lng": 139.851733,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24796.37,
+      "lat": 35.647208,
+      "lng": 139.851732,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24836.97,
+      "lat": 35.64718,
+      "lng": 139.85218,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24839.17,
+      "lat": 35.647198,
+      "lng": 139.85219,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24843.29,
+      "lat": 35.647234,
+      "lng": 139.852179,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24882.88,
+      "lat": 35.647259,
+      "lng": 139.851742,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24887.38,
+      "lat": 35.647228,
+      "lng": 139.85171,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 24897.5,
+      "lat": 35.647137,
+      "lng": 139.851707,
+      "elevationM": null,
+      "previousElevationM": 10.5
+    },
+    {
+      "distanceM": 25695.02,
+      "lat": 35.647667,
+      "lng": 139.842905,
+      "elevationM": null,
+      "previousElevationM": 9.25
+    },
+    {
+      "distanceM": 25886.05,
+      "lat": 35.647835,
+      "lng": 139.840801,
+      "elevationM": null,
+      "previousElevationM": 9
+    },
+    {
+      "distanceM": 25979.31,
+      "lat": 35.647926,
+      "lng": 139.839775,
+      "elevationM": null,
+      "previousElevationM": 9
+    }
+  ]
+}

@@ -1,0 +1,700 @@
+{
+  "21st-century-forest-park": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "登録GPXの2地点は住宅街の舗装路。園内の土路面という掲載説明と一致せず、21世紀の森と広場の正しいコースに照合する必要がある。",
+    "officialSource": "https://www.city.matsudo.chiba.jp/shisetsu-guide/kouen_ryokuka/top/shisetuannnai/index.html",
+    "evidence": [
+      {
+        "routePoint": [
+          35.79484407726597,
+          139.9274307771174
+        ],
+        "panoId": "oSZJgJs2vnsZjxLE6o1t7g",
+        "captured": "2022-11",
+        "observed": "車道両側に住宅・電柱。掲載説明の土の園路ではない。"
+      },
+      {
+        "routePoint": [
+          35.794785033765216,
+          139.92212331095408
+        ],
+        "panoId": "rZgq1HKQwRBSki0ds1PoJg",
+        "captured": "2025-08",
+        "observed": "住宅街の舗装路、コンクリート擁壁、白線、電柱。"
+      }
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/21st-century-forest-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "aoba-no-mori-park": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "登録GPXの北側地点は青葉の森公園内ではなく、千葉テレビ周辺の公道を通る。施設の取り違えを公式地図と照合する必要がある。",
+    "officialSource": "https://www.cue-net.or.jp/kouen/aoba/access/index.html",
+    "evidence": [
+      {
+        "routePoint": [
+          35.61400248277668,
+          140.13464879373888
+        ],
+        "panoId": "EjpzO7aHnQtnTrAqAx_FWg",
+        "captured": "2025-08",
+        "observed": "公道の向かいに低層の事業所、駐車場、電柱。園内走路の景色ではない。"
+      }
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/aoba-no-mori-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "arakawa": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "荒川河川敷（赤羽）の説明は信号なしの川沿いだが、掲載GPXの20%地点は団地内車道、65%地点も豊島五丁目の信号付き一般道。2地点を実写で確認。画像生成は保留。",
+    "evidence": [
+      {
+        "coursePoint": {
+          "distanceM": 2308.18,
+          "lat": 35.768026,
+          "lng": 139.735378
+        },
+        "pano": {
+          "id": "9gTLqAmMAgHjKVZzsadJGA",
+          "lat": 35.7679529,
+          "lng": 139.7353665,
+          "heading": 110,
+          "captured": "2018-05"
+        },
+        "observed": "団地の高層集合住宅の間の道路。歩道、車道、工事仮囲い。河川敷ではない。"
+      },
+      {
+        "coursePoint": {
+          "distanceM": 7448.31,
+          "lat": 35.763976,
+          "lng": 139.751347
+        },
+        "pano": {
+          "id": "G6oVSEcxlMulVOYM1YM-NQ",
+          "lat": 35.7639369,
+          "lng": 139.7514143,
+          "heading": 90,
+          "captured": "2025-11"
+        },
+        "observed": "豊島五丁目団地付近の信号付き一般道。団地、レストラン、横断歩道と車線。河川敷ではない。"
+      }
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/arakawa.json",
+      "elevationSource": "gsi",
+      "method": "First 5 km of the mapped upstream riverbank route, reversed at a reference turning point; not a certified race course. Existing GSI terrain profile interpolated at original route nodes; not an official surveyed GPX."
+    }
+  },
+  "heijo-palace-park": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "園内周回の説明に対し、登録経路は平城宮跡の西側の住宅街を通っている。877m地点の民家間の路地と公園公式図を照合。",
+    "officialSource": "https://www.heijo-park.jp/course/",
+    "evidenceRecord": "data/spot-experience/batch-3/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/heijo-palace-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "hakusan-park-yasuragitei": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "やすらぎ堤の説明に対し、登録経路は白山神社から古町方面の市街地を通る。1.16km地点の細街路と地図範囲を照合。",
+    "officialSource": "https://www.hrr.mlit.go.jp/shinage/shinanogawa/sansakumap.html",
+    "evidenceRecord": "data/spot-experience/batch-1/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/hakusan-park-yasuragitei.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "hattori-ryokuchi": {
+    "status": "corrected-reference-route",
+    "observedAt": "2026-10-16",
+    "reason": "園内周回の説明に対し、登録経路は公園の北側の国道423号高架横や西泉丘の住宅街を通る。",
+    "officialSource": "https://www.pref.osaka.lg.jp/documents/19726/kantou20.pdf",
+    "evidenceRecord": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/hattori-ryokuchi.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "ibigawa-long": {
+    "status": "corrected-reference-route",
+    "reviewedAt": "2026-10-16",
+    "reason": "旧47.3km GPXは県道254号の現行全面通行止区間に重なり、国道303号の歩道のない部分や山側の迂回を含む。",
+    "evidence": [
+      "https://douro.pref.gifu.lg.jp/",
+      "https://ibigawa-marathon.jp/info/試走の注意点・コースの状況について/",
+      "batch-3/access-observations.json"
+    ],
+    "previousStatus": "route-mismatch",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/ibigawa-long.json",
+      "elevationSource": "gsi",
+      "method": "OSM public-road reference out-and-back south of the observed closure; endpoints and river geography compared with the 2026 event map. This is not the official event course or an assurance of present road access."
+    }
+  },
+  "iwate-undou-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園より南の商業地・新幹線高架沿いにあり、公園の経路と一致しない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/iwate-undou-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "kagamigawa-riverside": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは国道33号・路面電車沿いを通り、説明していた鏡川沿いに位置していない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kagamigawa-riverside.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "kamogawa-sanjo-demachiyanagi": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは川端通の車道中央を通り、説明していた河川敷の園路と一致しない。",
+    "evidence": "data/spot-experience/batch-2/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kamogawa-sanjo-demachiyanagi.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "kitakami-river-morioka": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは北上川から離れた住宅地・線路沿いを通り、河川敷の説明と一致しない。",
+    "evidence": "data/spot-experience/batch-3/route-observations.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kitakami-river-morioka.json",
+      "elevationSource": "gsi",
+      "method": "City riverside walking-route description compared against the OSM bicycle-and-foot designated riverbank path; out-and-back reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "king-skyfront-tamagawa": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは研究施設間と国道409号沿いの街路を含み、川沿い往復の紹介文と一致しない。",
+    "evidence": "data/spot-experience/batch-2/king-skyfront-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/king-skyfront-tamagawa.json",
+      "elevationSource": "gsi",
+      "method": "Official Kawasaki riverside use guide and walking map compared against connected bicycle-and-foot designated OSM riverbank ways; reconstructed out-and-back reference, not a surveyed official GPX."
+    }
+  },
+  "iwadono-kyuryo-cross": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路にゴルフ場のカート道を含むため、公式の散策案内をもとに公道・園路へ修正。",
+    "evidence": "data/spot-experience/batch-1/iwadono-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/iwadono-kyuryo-cross.json",
+      "elevationSource": "gsi",
+      "method": "公式の廃線敷→北側階段と道路下トンネル→西側一般道→市民の森→物見山付近→動物園前→彫刻プロムナードという順序を照合。ゴルフ場内の旧経路を除去。道路交差点の歩道を優先。"
+    }
+  },
+  "misato-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXはみさと公園から東へ約1km離れた水元公園東側を通っていたため、公式1,550mコースと園路を照合して修正。",
+    "evidence": "https://www.seibu-la.co.jp/misato-yoshikawa/facility/misato.html",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/misato-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "keihin-unga-ryokudo": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXが勝島橋の南側の一般道往復で、運河沿いの園路という説明と一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/keihin-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/keihin-unga-ryokudo.json",
+      "elevationSource": "gsi",
+      "method": "東京都港湾局のウォーキング案内およびGO TOKYOの運河沿い緑道案内とOSMの歩行可能な園路を照合。道路を南下していた旧ルートを除去し、運河の東岸にある園路を北上する往復へ変更。Google Street View 2019-12の35.6005394,139.7491096で園路・護岸・柵を実景確認。"
+    }
+  },
+  "koyamaike-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は湖から東側の市街地・丘陵へ離れ、湖を一周するという説明と不一致。",
+    "evidence": "data/spot-experience/batch-2/koyamaike-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/koyamaike-park.json",
+      "elevationSource": "gsi",
+      "method": "2026春の湖山池シーズンウォークの主催者チラシ裏を目視。情報プラザ→東岸ナチュラルガーデン→鳥取大学東側→北岸グリーンフィールド→B&G海洋センター→西岸福井→つづらお城跡下→南岸→情報プラザの一周約15km。県も既存の道路を使った一周ウォーク案内整備、歩道のない区間のカラー舗装を案内。 公式概略図とOSMの接続道路を照合。49way、重複辺なしの閉ループ。foot/access=no/private、motorroad=yes、motorway/trunkを除外。relation16467838は一周の一部7wayしか登録がなかったため補助に使用し、他の接続道を組み合わせた。公式イベントの配布GPXではなく約13.9km参考経路。"
+    }
+  },
+  "kyoto-gyoen": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは京都御苑北半分を通らず、西側の市街地を回っており、御苑外周の説明と不一致。",
+    "evidence": "data/spot-experience/batch-2/kyoto-gyoen-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/kyoto-gyoen.json",
+      "elevationSource": "gsi",
+      "method": "公式散策図の苑境界と外周の4道路を確認し、御苑側のOSM highway=footway,footway=sidewalk の7wayを連続周回として選択。車道・御所内部は通さず、重複edgeゼロ。"
+    }
+  },
+  "makomanai-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは真駒内公園より北の住宅街を回り、公園の説明と不一致。",
+    "evidence": "data/spot-experience/batch-1/makomanai-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/makomanai-park.json",
+      "elevationSource": "gsi",
+      "method": "公式案内図の青い3km線を目視し、中央橋→太陽の広場外側→緑橋→きのこ広場南側→南端森林→豊平川寄りの西園路→スタジアム北側→中央橋の順でOSM園路を照合。全区間footway、公園内の閉じた周回で同じ辺の重複なし。中央橋西詰をGoogle Street View 2015-05の42.9974212,141.3445298で実景確認し、橋名表示・位置・向きが一致。"
+    }
+  },
+  "shinjuku-central-park": {
+    "status": "corrected-reference-route",
+    "reason": "親がStreet View目視：旧383m点35.688929,139.688804は西側道路（2025-12 pano5-65ti9mQCF06YWPK7PoCw）、766m点35.688931,139.685936は公園西の住宅街（2022-10 panoNpCv9XnwFrQ02ph-Ni2Ufg）。旧経路bbox lng139.685578..139.689083は公式園内図の周回と一致しない。",
+    "evidence": "data/spot-experience/batch-parent/shinjuku-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shinjuku-central-park.json",
+      "elevationSource": "gsi",
+      "method": "CUA Chromeで2048x1016版の園内図を目視。北が画面右。Aコース赤点線1,100mは北エリア外周、B青点線900mは園内、C緑180mは西エリア。再構成はAだけ。 OSM footwayとsidewalkをつないだ閉ループ。公開地図を照合した参考GPX、公式測量線そのものではない。公園側外周歩道を通り、道路横断なし、地下道・階段なし。"
+    }
+  },
+  "nanakita-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園の北側の市街地周回で、公式冊子の別公園の3.2km表記を誤って七北田へ当てはめていた。",
+    "evidence": "data/spot-experience/batch-1/nanakita-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/nanakita-park.json",
+      "elevationSource": "gsi",
+      "method": "2014年の公式ウォーキング冊子の両面と2026年公式ガイドを目視照合。七北田はA2.5km・B1.3kmで、3.2kmは別の水の森公園。西側の園路、四阿周辺、河川沿い、池周辺の繋がりをOSM14waysに沿って確認した。A全周の東側はOSM接続が途切れて駅方面へ迂回するため採用せず、西側を単独周回。温室内のbuilding_passageを除外し、建物西側の屋外園路へ修正済み。旧起点38.328015,140.882793は公園から北へ約1km離れた市街地で不採用。"
+    }
+  },
+  "niigata-sports-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXはビッグスワン周辺の狭い区域を何度も反復し、公式の公園全体5kmコースを示していなかった。",
+    "evidence": "data/spot-experience/batch-2/niigata-sports-route-review.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/niigata-sports-park.json",
+      "elevationSource": "gsi",
+      "method": "公式図を全体と南側拡大で目視。野球場、芝生広場、連絡通路、ビッグスワン東側、鳥屋野潟北端、レストハウス、列柱廊、駐車場北側折返しを照合した。 GSI航空写真に経路を重ね、建物・競技場内部・水面・駐車枠を横切らず、舗装園路と広場をたどることを目視。 同一辺の重複は道路下連絡通路と公式図に描かれた短い折返しの4辺のみ。競技場内部の反復や距離を増やす周回はない。 参考距離は5,120m。公式5,000mに合わせるための人工的な距離調整は行わず、2.4%の差を明記する。"
+    }
+  },
+  "okumusashi-izugatake": {
+    "status": "corrected-reference-route",
+    "reason": "現GPXは危険な男坂の5点と一致。県公式2024/09図は男坂と閉道女坂の間の道を正式ルートとしており、現OSM登山道の西側迂回と対応する。分岐点と合流点は既存GPXと一致。",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/okumusashi-izugatake.json",
+      "method": "Only the 197m Otokozaka section replaced with the official detour; remainder preserved.",
+      "elevationSource": "gsi"
+    }
+  },
+  "oita-sports-park-happy-road": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園の約5km東側の農道にあり、ハッピーロードの場所と一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/oita-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/oita-sports-park-happy-road.json",
+      "elevationSource": "gsi",
+      "method": "公式ハッピーロード5km図の西側往復・南西駐車場一周・ドーム南半周・北東の投てき場外周の順番を照合。1kmは西側園路入口、2kmは西側駐車場付近、3kmは西側復路、4kmはドーム南側となり、案内図の位置関係と一致。OSMネットワークの欠けた4接続を補間し、北西の約97mは開けた舗装広場、東側約7mは投てき場入口、西側約15mは車道沿い園路入口であることを360画像で目視。北側駐車場縁の約3mは公開地図上の園路・駐車場通路間の接続。旧GPXは公園の約5km東側の農道で全体不採用。"
+    }
+  },
+  "okinawa-athletic-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園北側の住宅街を通り、公式の園内コースと一致しなかった。",
+    "evidence": "data/spot-experience/batch-1/okinawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/okinawa-athletic-park.json",
+      "elevationSource": "gsi",
+      "method": "公式3/4/5kmコースPDFの3km図と公式公園案内図を目視照合。陸上競技場東→蹴球場北→テニスコート外側→東側の橋→海側南外周→南側池西→みどりのかけ橋→陸上競技場東を接続した。公式3km図の競技場南西にある短いU字部分は、正確な折返し園路形状を確定できないため含めない参考ルート。大通りは通らず、東側はbridge=yesのway207835105、南側は公式図みどりのかけ橋と重なるway207422816を採用。池西歩道way1509545124の端点2か所は公園サービス通路との隙間4.92m/2.48mを接続。現地起点の360は取得できず、南側パドルボート付近の2021-11画像では広場・駐車場・施設位置の整合を確認したが、端点を直接目視した証拠とはしていない。"
+    }
+  },
+  "rinshi-no-mori-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPXは公園南東の住宅街に外れており、園内周回の説明と一致しなかった。",
+    "evidence": "data/spot-experience/batch-2/rinshi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/rinshi-no-mori-park.json",
+      "elevationSource": "gsi",
+      "method": "公式2025/12園内図の園路・ランドマーク配置を、OSM footway/path/pedestrian/stepsの接続済み中心線18wayと照合。公園外の住宅街・羅漢寺川プロムナードは通さず、園内だけを一周。area境界や距離合わせの重複なし。 公式園内図とルート描画を目視照合。大きな広場を西から回り、中央せせらぎ橋を越えて芝生広場の北と南を回る形状が一致。南東住宅街へは出ない。"
+    }
+  },
+  "odaka-ryokuchi": {
+    "status": "corrected-reference-route",
+    "reason": "旧GPX bbox35.045〜35.049,136.944〜136.951は共知IC付近の一般道。親がGoogle2025-02 pano R74dA0FgrnFklSEZjqnaSA (35.0456648,136.9512315)で高速道路下と確認。",
+    "evidence": "data/spot-experience/batch-3/odaka-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/odaka-ryokuchi.json",
+      "elevationSource": "gsi",
+      "method": "大高緑地の公式エンジョイコース約2.5kmの西側周回を参考に、つつじの道(OSM495379573)と中央園路を一周。OSM495457886/495457877は通路が面として登録されるため、対向する境界の中点を使い通路中央を推定。駐車枠・ゴーカートコース・施設内部・階段は通らない。公開図を参照した参考線で、公式GPXや測量線ではない。距離合わせの追加周回は行っていない。 現行公式サイトのリンク先2023年施設図・公式ウォーキング図・2017年バリアマップをCUAで目視。エンジョイコースは園内西側を巡る約2.5km、クロスカントリーは別の約1.3km。今回の参考線は西側大周回約2.4km。つつじの道と中央の園路を一周し、公式距離に合わせるための折返しや重複は付加しない。"
+    }
+  },
+  "rainbow-bridge-odaiba": {
+    "status": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "reason": "旧経路が車道ループを通るため歩道へ修正",
+    "evidence": "data/spot-experience/batch-3/rainbow-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/rainbow-bridge-odaiba.json",
+      "elevationSource": "gsi",
+      "elevationGapNotice": "橋・高架歩道・階段の高さは未確認のため、その区間を空白で表示しています。地上部分の標高だけではコース全体の上り下りを表せないため、獲得標高は表示していません。",
+      "method": "公式パンフレットの北南遊歩道と芝浦入口を確認し、公開OSM歩道グラフのみで品川側街路と台場側公園・プロムナードを接続。車道を経路として不使用。エレベーター前の建物内接続線はOSMによる概略。"
+    }
+  },
+  "seaside-momochi": {
+    "status": "corrected-reference-route",
+    "reason": "旧3.8km経路は百道浜西端から南のマリナ通り・室見川西岸へ往復し、百道浜の海浜遊歩道と不一致。",
+    "evidence": "data/spot-experience/batch-2/momochi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/seaside-momochi.json",
+      "elevationSource": "gsi",
+      "method": "Official beach map and OSM promenade compared with visually inspected Street View at west end, Central Plaza ground level, and eastern bridge approach. Route excludes all upper decks and bridges."
+    }
+  },
+  "otsu-kogan-nagisa-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧起点は近江大橋中央。旧1,418m点は湖岸から離れた住宅街。旧GPXは中盤で国道/市街地を通り北側でも湖岸歩行者園路より道路寄り。単純な起点移動では公園コースの説明と一致しない。",
+    "evidence": "data/spot-experience/batch-1/otsu-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/otsu-kogan-nagisa-park.json",
+      "elevationSource": "gsi",
+      "method": "滋賀県観光公式は浜大津〜近江大橋の湖岸一帯を公園と説明。公園管理者の主な公園一覧と大津市2026-03-24の湖岸施設/交通案内図でびわ湖ホールと湖岸範囲を照合。旧2024091246.pdfと県5560197.pdfは404で根拠に採用しない。 びわ湖ホール西側の陸上湖岸園路35.0077767,135.8751448から大津港東側の湖岸園路35.0136121,135.865051へ進む片道1,247.99m。OSMのfoot designated cycleway/pathと小水路の歩道橋を接続。建物通路/私有地/階段を除外。手動接続なし、重複辺なし。"
+    }
+  },
+  "sanno-park-fukuoka": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は園外の交差点と一般道を通り、園内ジョギングコースの説明と不一致。",
+    "evidence": "data/spot-experience/batch-3/sanno-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/sanno-park-fukuoka.json",
+      "elevationSource": "gsi",
+      "method": "博多区役所名義 山王公園さくら案内、Sammy Imma写真2022年6月。球場、芝生広場、さくらの丘、北側森と自由広場の相対配置を確認。 南芝生沿いの短いループから東側主園路を北へ往復、復路に中央の小周回を使用。神社境内・車道・野球場内は通らない。北西の園内出口で折り返し。 公式500m/1kmルートの完全再現ではなく確認できる園内歩行者道をつないだ899m参考往復。"
+    }
+  },
+  "sanaruko-park": {
+    "status": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "reason": "旧2,629.42m〜4,383.35m（indices181〜305）に東岸の並行道路と北側住宅街を回る線。3938.38m地点はGoogle2025-11住宅街で確認。",
+    "evidence": "data/spot-experience/batch-1/sanaruko-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/sanaruko-park.json",
+      "elevationSource": "gsi",
+      "elevationGapNotice": "水面上の木道・橋と接続する段差の高さは未確認のため、その区間を空白で表示しています。コース全体の獲得標高は表示していません。",
+      "method": "旧181点からOSM園路へ5.66m接続、佐鳴湖公園遊歩道と木道、ふれあい橋(way1372600502)、であい橋(way934989857)、北西湖岸を進み旧305点へ1.01mで接続。両端は園路接続部の短い差分。その他の区間は既存GPX維持。公式5.941kmとの完全一致でなく約5.90km参考周回。"
+    }
+  },
+  "shikishima-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧840.85mはスタジアム内のトラックを約2周する座標で、公式外周700mコースと不一致。",
+    "evidence": "data/spot-experience/batch-3/shikishima-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shikishima-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against OSM paths and visually reviewed panorama evidence; locally supplemented sidewalk coordinates where explicitly documented. Reference, not surveyed official GPX."
+    }
+  },
+  "sendai-nishi-park-running-course": {
+    "status": "corrected-reference-route",
+    "reason": "旧17点GPXは起点がこけし塔より約81m南、中央園路を折り返して最後の327mを園内直線横断。旧標高は31〜52mで平坦という公式説明に合わない。",
+    "evidence": "data/spot-experience/batch-1/sendai-nishi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/sendai-nishi-park-running-course.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against OSM paths and visually reviewed panorama evidence; locally supplemented sidewalk coordinates where explicitly documented. Reference, not surveyed official GPX."
+    }
+  },
+  "shinji-lake-north-shore": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は工事中の公園内部を通り、名称は実際に通らない県立美術館を含んでいた。",
+    "evidence": "data/spot-experience/batch-3/shinji-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shinji-lake-north-shore.json",
+      "elevationSource": "gsi",
+      "method": "OSM mapped sidewalk compared against 2026 Google panorama and Matsue construction information. Reconstructed reference out-and-back route; on-site restrictions take precedence."
+    }
+  },
+  "shiroyama-park-horinouchi": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は堀之内南側の園路から外れ、北側の未開園整備区画を含んでいた。",
+    "evidence": "data/spot-experience/batch-1/shiroyama-route-proposal.json",
+    "previousStatus": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shiroyama-park-horinouchi.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "shimanto-sada-chinkabashi": {
+    "status": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "reason": "旧経路は橋を渡り切る前に折り返していた。",
+    "evidence": "data/spot-experience/batch-1/shimanto-sada-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shimanto-sada-chinkabashi.json",
+      "elevationSource": "gsi",
+      "elevationGapNotice": "佐田沈下橋と東岸取り付きの路面の高さを地形データから確認できないため、その区間の標高は空白にしています。コース全体の獲得標高は表示していません。",
+      "method": "橋区間だけを西岸から東岸接続道まで渡り同じ道を戻る形へ置換。他区間は既存profileの座標とGSI標高を保持。"
+    }
+  },
+  "shinshu-sky-park": {
+    "status": "corrected-reference-route",
+    "correctedAt": "2026-10-16",
+    "reason": "旧経路が新競技場の工事区画を通っていたため、公式迂回を反映。",
+    "evidence": [
+      "https://shinshu-skypark.net/news/2026/05/10-17.php",
+      "https://shinshu-skypark.net/news/260601_detour_map.jpg"
+    ],
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shinshu-sky-park.json",
+      "elevationSource": "gsi",
+      "method": "Official June–December 2026 detour mapped to P1 service aisles, warehouse southeast temporary access, west roadside sidewalk and gym north parking entry. OSM private warehouse way treated only as a temporary officially designated detour. 7.77m P1 exit connection supplemented from mapped lane endpoints and visual evidence. Old points outside indices590–656 preserved."
+    }
+  },
+  "shiroishi-kokoro-road": {
+    "status": "corrected-reference-route",
+    "reason": "旧19.6km線は南郷通と道道3号の車道中心線。北広島駅終点も駅から約700m北。専用道として画像化不可。",
+    "evidence": "data/spot-experience/batch-3/shiroishi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shiroishi-kokoro-road.json",
+      "elevationSource": "gsi",
+      "method": "Official cycling maps matched against OSM relation11267074 and connected public cycleways; separate bridge/tunnel elevation gaps. Reference route, not surveyed official GPX.",
+      "elevationGapNotice": "橋・トンネルの路面の高さが未確認の区間は、地形標高で補わず空白にしています。全区間の獲得標高は表示していません。"
+    }
+  },
+  "shonan-kaigan-cycling-road": {
+    "status": "corrected-reference-route",
+    "reason": "旧1789m・5677m点は国道134号車道。海辺の共用道という紹介と不一致。",
+    "evidence": "data/spot-experience/batch-3/shonan-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/shonan-kaigan-cycling-road.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX.",
+      "elevationGapNotice": "橋・トンネルの路面の高さが未確認の区間は、地形標高で補わず空白にしています。全区間の獲得標高は表示していません。"
+    }
+  },
+  "showa-kinen-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は管理用園路と重なり、陸連公認5kmとの記載も裏付けがなかった。",
+    "evidence": "data/spot-experience/batch-1/showa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/showa-kinen-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX.",
+      "elevationGapNotice": "橋・トンネルの路面の高さが未確認の区間は、地形標高で補わず空白にしています。全区間の獲得標高は表示していません。"
+    }
+  },
+  "tsutsujigaoka-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は公園南側の街路と建物を通り、中央芝生周回の説明と一致しない。公式約550mコースとOSM園路を照合。",
+    "evidence": "https://sendai-green-association.jp/assets/images/download/walkingmap_tsutsujigaoka.pdf",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tsutsujigaoka-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "sports-garden-suzuka": {
+    "status": "corrected-reference-route",
+    "reason": "旧約2.9kmは施設から約9km離れた国道23号沿いの田園一般道だった。",
+    "evidence": "data/spot-experience/batch-3/suzuka-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/sports-garden-suzuka.json",
+      "elevationSource": "gsi",
+      "method": "Official walking map A course compared with georeferenced GSI aerial photography and selected Street View points; manually reconstructed reference with position uncertainty, not surveyed official GPX."
+    }
+  },
+  "yoyogi-park-trail": {
+    "status": "corrected-reference-route",
+    "reason": "旧約3.1km経路は北側の幼児用サイクリング広場（終日自転車専用）と工事区域付近を含む。2026年公式制限図とOSM園路を照合し、西側の園路と林間の小道に変更。",
+    "evidence": "https://www.tokyo-park.or.jp/park/yoyogi/news/2026/park_info_73.html",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yoyogi-park-trail.json",
+      "elevationSource": "gsi",
+      "method": "Official current construction and cycle-only restriction diagrams compared with the western OSM footpath loop and two visually inspected Street View locations. Reconstructed reference, not surveyed official GPX."
+    }
+  },
+  "tamagawa-marukobashi-furuichiba": {
+    "status": "corrected-reference-route",
+    "reason": "既存経路は堤内側一般道などを含み、土手下の砂利走路という説明と不一致。公式多目的散策路図とOSM走路・接続部航空写真を照合。",
+    "evidence": "data/spot-experience/batch-2/tamagawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tamagawa-marukobashi-furuichiba.json",
+      "elevationSource": "gsi",
+      "method": "Official Kawasaki riverside multipurpose walking route diagram compared against OSM paths and a visually reviewed short aerial-photo connector. Reconstructed reference, not surveyed official GPX."
+    }
+  },
+  "tochigi-prefectural-sports-park": {
+    "status": "corrected-reference-route",
+    "reason": "旧経路は公園の北に離れた江曽島本町の住宅街。公式中央エリア3kmモデル図と公園内園路・広場を照合した参考経路へ全置換。",
+    "evidence": "data/spot-experience/batch-1/tochigi-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tochigi-prefectural-sports-park.json",
+      "elevationSource": "gsi",
+      "method": "Official central-area 3 km model course compared with OSM paths and pedestrian-area interiors; one 44 m plaza connector visually confirmed using a 2022-09 panorama. Reconstructed 3.2 km reference, not surveyed official GPX."
+    }
+  },
+  "tsuzuki-central-park": {
+    "status": "corrected-reference-route",
+    "reason": "公式図の白い園路と3か所の階段、宮谷戸大池北岸、谷戸周辺・南側園路を目視照合。既存経路は公園南のセンター南駅・商業施設周辺であり不一致。新経路はOSM上の既存歩道/階段の接続のみを利用し架空の接続なし。同じ辺の往復なし。池横断と東の高架歩道は除外。",
+    "evidence": "data/spot-experience/batch-1/tsuzuki-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/tsuzuki-central-park.json",
+      "elevationSource": "gsi",
+      "method": "Official park diagram compared against the complete OSM footpath loop; route is a reconstructed reference, not a surveyed official GPX."
+    }
+  },
+  "takamatsu-kaigan-yashima": {
+    "status": "corrected-reference-route",
+    "reason": "入園料と開園時間のある玉藻公園内の園路を除外し、foot=yes bicycle=yes sidewalk の外周歩道へ変更。既存の信号横断歩道で接続。",
+    "evidence": "data/spot-experience/batch-2/takamatsu-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/takamatsu-kaigan-yashima.json",
+      "elevationSource": "gsi",
+      "method": "Existing route retained except paid Tamamo Park section replaced with public sidewalk verified against OSM and street-level imagery. Bridge terrain elevations omitted; reference route, not surveyed GPX."
+    }
+  },
+  "yamagata-city-loop": {
+    "status": "corrected-reference-route",
+    "reason": "2026年7月21日からの公式通年通行変更では本丸西側道路および北側道路が閉鎖/撤去対象。旧経路index71–77はその通行禁止区間へ入るため、北門内分岐→北側駐車場前→県体育館西側→東大手門側の現行案内に沿う道路へ迂回。",
+    "evidence": "data/spot-experience/batch-1/yamagata-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yamagata-city-loop.json",
+      "elevationSource": "mixed",
+      "method": "Existing city loop retained, with the closed Kajo Park section replaced by the north/east public route from the 2026-07-21 official traffic diagram. Existing heights retained; only the detour uses GSI terrain.",
+      "elevationAttribution": {
+        "label": "コースデータの標高・迂回区間は国土地理院の標高タイルを加工",
+        "url": "https://maps.gsi.go.jp/development/ichiran.html#dem"
+      }
+    }
+  },
+  "yodogawa-nishinakajima": {
+    "status": "corrected-reference-route",
+    "reason": "旧約9.35km経路の2124m(34.715523,135.473105)は塚本付近の市街地道路。Google2025-07 BNIXx9yP3sRgwws4ihfOjAをCUA目視し、歩道橋・住宅・車道を確認。河川敷コース説明と不一致。",
+    "evidence": "data/spot-experience/batch-3/yodogawa-route-proposal.json",
+    "previousStatus": "needs-correction",
+    "correctedAt": "2026-10-16",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yodogawa-nishinakajima.json",
+      "elevationSource": "gsi",
+      "method": "公式西中島・十三地区園内図を目視。OSM464683149の堤防上舗装路を採用。東端2020-12 Google mAWIqAxd26fkN1RRTXvYygと中間2023-05 cafebombers CIHM0ogKEICAgICxvPnn3wEをCUAで目視。いずれも堤防の上と下段園路の高低が合致。"
+    }
+  },
+  "zushi-hayama-trail": {
+    "status": "corrected-reference-route",
+    "reason": "公園から下二子山へ直接つながる道に崩落案内があり、旧経路と重なる。",
+    "correctedAt": "2026-10-17",
+    "evidence": "data/spot-experience/batch-3/zushi-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/zushi-hayama-trail.json",
+      "elevationSource": "mixed",
+      "elevationGapNotice": "道路橋の高さが未確認の区間は空白にしています。地形の標高で橋上の高さを補間せず、全体の獲得標高も表示していません。",
+      "elevationAttribution": {
+        "label": "コースデータの標高・迂回区間は国土地理院の標高タイルを加工",
+        "url": "https://maps.gsi.go.jp/development/ichiran.html#dem"
+      },
+      "method": "逗子市公式PDF二子山回廊p2の南郷公園園路→北東の階段→メインルート→上二子山の形状とOSM226033329/363245004/363245000/370293822を照合。旧経路は下二子山4747mを経由し、公園南側の直接道363407882を往復していたため、既知崩落区間の範囲を広めに避けるため旧2666〜5693mを置換。山頂は同じ道を往復。"
+    }
+  },
+  "yutoku-inari-ariake": {
+    "status": "corrected-reference-route",
+    "reason": "The spur from the shore to the sea and back is a fisheries road exposed only at low tide. Remove it from the ordinary running route. Index 470 duplicates the retained shore index 466.",
+    "correctedAt": "2026-10-17",
+    "evidence": "data/spot-experience/batch-2/yutoku-route-proposal.json",
+    "correction": {
+      "sourceRecord": "data/spot-experience/route-corrections/yutoku-inari-ariake.json",
+      "elevationSource": "preserve-existing",
+      "method": "Existing 498-point GPX retained except for the low-tide-only offshore causeway out-and-back; visual Google 360 review plus official Tara and Saga guidance."
+    }
+  }
+}

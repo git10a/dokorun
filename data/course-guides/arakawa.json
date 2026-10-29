@@ -1,127 +1,65 @@
 {
   "slug": "arakawa",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "広い空と川沿いの景色を楽しみながら、信号なしで長く走れる河川敷コースです。ほぼフラットな舗装路が続き、折り返し位置を変えるだけで距離を自在に設定できます。ロング走や一定ペースの練習に好相性。風の影響を受けやすく、夜は暗い区間が多いため、天候と時間帯を確認して明るいうちに走るのがおすすめです。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "新荒川大橋付近から上流側へ向かう、片道約5kmの往復ルートです。河川敷の舗装路を、川や土手の景色を見ながら走れます。往復で約10kmですが、体力や天候に合わせて早めに折り返しても構いません。自転車や散歩の利用者と道を共有し、工事や増水時の通行案内を優先してください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "河川敷の利用と参考ルートについて",
+      "body": "自転車や歩行者と共用する道です。工事・増水時の立入規制を守り、歩行者を優先してください。約5km地点で折り返す参考ルートで、大会の公認距離を再現したものではありません。",
+      "url": "https://www.ktr.mlit.go.jp/arage/arage00138.html",
+      "linkLabel": "荒川下流河川敷利用ルール"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: JR赤羽駅から徒歩約20分、または東京メトロ赤羽岩淵駅から徒歩約15分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "河川敷へのアクセス",
+      "body": "新荒川大橋の河川敷側から走り始めます。駅からの一般道はランニングコースに含めていません。",
+      "url": "https://akabane-hm.tokyo/course/",
+      "linkLabel": "周辺のアクセス案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "赤羽駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.778026,
-      "destinationLng": 139.720928,
-      "routeAnchorLat": 35.779476,
-      "routeAnchorLng": 139.719771,
+      "name": "新荒川大橋・河川敷側",
+      "badge": "河川敷からスタート",
+      "destinationLat": 35.788647,
+      "destinationLng": 139.719572,
+      "routeAnchorLat": 35.788647,
+      "routeAnchorLng": 139.719572,
       "routeMode": "forward",
-      "accessText": "赤羽駅からコースまで約190m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "JR赤羽駅から新荒川大橋の河川敷へ徒歩約15分。東京メトロ赤羽岩淵駅3番出口から徒歩約7分。",
+      "facilitiesText": "河川敷の設備・通行状況は現地案内をご確認ください",
+      "firstSection": "川沿いの舗装路を上流側へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.779476,
-      "anchorLng": 139.719771,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 赤羽",
+      "name": "新荒川大橋付近",
+      "anchorLat": 35.788647,
+      "anchorLng": 139.719572,
+      "description": "河川敷の舗装路から上流側へ向かいます。",
       "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/%E8%B5%A4%E7%BE%BD_-_panoramio.jpg/960px-%E8%B5%A4%E7%BE%BD_-_panoramio.jpg",
-        "alt": "荒川河川敷（赤羽）のスタート周辺付近",
-        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
-        "credit": "kcomiida",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%B5%A4%E7%BE%BD_-_panoramio.jpg"
-      }
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.768026,
-      "anchorLng": 139.735378,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: The headquarters of the Educational Foundation Tokyo Seitoku Gakuen located in Kita, Tokyo, Japan.",
+      "name": "約5kmの折り返し地点",
+      "anchorLat": 35.798003329483016,
+      "anchorLng": 139.66706773696438,
+      "description": "参考ルートの折り返し地点です。同じ河川敷の道を戻ります。",
       "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg",
-        "alt": "荒川河川敷（赤羽）の序盤区間付近",
-        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
-        "credit": "Hasec",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg"
-      }
-    },
-    {
-      "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.762195,
-      "anchorLng": 139.757462,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: The Sumida-gawa . View from Miyagi in Adachi , Tokyo , Japan .",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sumidagawa_-04.jpg/960px-Sumidagawa_-04.jpg",
-        "alt": "荒川河川敷（赤羽）の中盤区間付近",
-        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
-        "credit": "Aimaimyi",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sumidagawa_-04.jpg"
-      }
-    },
-    {
-      "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.762195,
-      "anchorLng": 139.757462,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: The Sumida-gawa . View from Miyagi in Adachi , Tokyo , Japan .",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sumidagawa_-04.jpg/960px-Sumidagawa_-04.jpg",
-        "alt": "荒川河川敷（赤羽）の後半区間付近",
-        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
-        "credit": "Aimaimyi",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sumidagawa_-04.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.768026,
-      "anchorLng": 139.735378,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: The headquarters of the Educational Foundation Tokyo Seitoku Gakuen located in Kita, Tokyo, Japan.",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg",
-        "alt": "荒川河川敷（赤羽）の終盤区間付近",
-        "caption": "荒川河川敷（赤羽）の走路近隣で撮影された風景",
-        "credit": "Hasec",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Seitoku-Gakuen-Foundation-HQ-2012112401.jpg"
-      }
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_riverbank_reviewed",
+    "routeSources": [
+      "https://akabane-hm.tokyo/course/",
+      "https://www.ktr.mlit.go.jp/arage/arage00138.html",
+      "https://www.city.kita.lg.jp/parks/list/1009539/1009544.html"
+    ],
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

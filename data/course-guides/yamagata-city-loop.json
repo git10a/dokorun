@@ -1,140 +1,80 @@
 {
   "slug": "yamagata-city-loop",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "山形駅西口を起点に市内の名所をつなぐ周回コース。山形城跡の霞城公園を園路でめぐり、東大手門から里之宮湯殿山神社、レンガ造りの旧県庁舎・文翔館へ。馬見ヶ崎橋で川を眺めて折り返し、七日町大通りを南下して駅へ戻る。信号は多めだが道はフラットで、公園の桜(春)や歴史的建築を楽しみながら走れる街ラン向きの一周。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "山形駅西口側から霞城公園・文翔館・馬見ヶ崎川付近をつなぐ約8.7kmの参考周回ルートです。霞城公園の堀沿いと北側・東側の園路を通り、東大手門から市街地へ。歴史的な建物や街並みを眺めながら走れます。信号や交差点があるので、歩道では周囲を優先して進みましょう。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "霞城公園の工事と市街地の通行について",
+      "body": "霞城公園では本丸の発掘調査・整備に伴う通行変更があります。掲載経路は2026年7月21日からの案内に合わせて北側・東側へ迂回しています。新たな規制は現地案内を優先してください。 城門内や歩道が混み合うときは歩いてください。 公園の開門時間と施設の営業日時を出発前に確認してください。",
+      "url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/koen/1006541/1006542/1017209.html",
+      "linkLabel": "山形市の通行変更案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: JR山形駅西口からすぐ 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "JR山形駅の西口側から開始します。駅前の歩行者に注意し、霞城公園方面へ進んでください。",
+      "url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/koen/1006541/1006542/1017209.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "山形駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 38.248098,
-      "destinationLng": 140.327253,
+      "name": "山形駅西口側",
+      "badge": "駅西口からスタート",
+      "destinationLat": 38.247744,
+      "destinationLng": 140.324193,
       "routeAnchorLat": 38.247744,
       "routeAnchorLng": 140.324193,
       "routeMode": "loop",
-      "accessText": "山形駅からコースまで約270m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
-    },
-    {
-      "id": "start-2",
-      "name": "北山形駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 38.265902,
-      "destinationLng": 140.332658,
-      "routeAnchorLat": 38.25877,
-      "routeAnchorLng": 140.325839,
-      "routeMode": "loop",
-      "accessText": "北山形駅からコースまで約980m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "JR山形駅の西口側から開始します。駅前の歩行者に注意し、霞城公園方面へ進んでください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "駅前の歩道から霞城公園方面へ向かいます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
+      "name": "山形駅西口側",
       "anchorLat": 38.247744,
       "anchorLng": 140.324193,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 左沢線のキハ101を山形駅にて。",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/JR_east_Aterazawa_line_train_%40Yamagata_%284026695438%29.jpg/960px-JR_east_Aterazawa_line_train_%40Yamagata_%284026695438%29.jpg",
-        "alt": "山形市中心部(霞城公園・文翔館)のスタート周辺付近",
-        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
-        "credit": "Yamaguchi Yoshiaki from Japan",
-        "license": "CC BY-SA 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_east_Aterazawa_line_train_@Yamagata_(4026695438).jpg"
-      }
+      "description": "駅前の歩道から霞城公園方面へ向かいます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 38.25877,
-      "anchorLng": 140.325839,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: Yamagata Castle in Yamagata , Yamagata prefecture , Japan",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg/960px-220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg",
-        "alt": "山形市中心部(霞城公園・文翔館)の序盤区間付近",
-        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
-        "credit": "663highland",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:220430_Yamagata_Castle_Yamagata_Yamagata_pref_Japan01s3.jpg"
-      }
+      "name": "霞城公園の北側",
+      "anchorLat": 38.2575481,
+      "anchorLng": 140.3274367,
+      "description": "本丸側の規制区間には入らず、北側駐車場前から東へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 38.256937,
-      "anchorLng": 140.338631,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 文翔館（旧山形県庁） Yamagata Old City Hall",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/%E6%96%87%E7%BF%94%E9%A4%A8%EF%BC%88%E6%97%A7%E5%B1%B1%E5%BD%A2%E7%9C%8C%E5%BA%81%EF%BC%89_Yamagata_Old_City_Hall_-_panoramio.jpg",
-        "alt": "山形市中心部(霞城公園・文翔館)の中盤区間付近",
-        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
-        "credit": "佐藤智史",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%87%E7%BF%94%E9%A4%A8%EF%BC%88%E6%97%A7%E5%B1%B1%E5%BD%A2%E7%9C%8C%E5%BA%81%EF%BC%89_Yamagata_Old_City_Hall_-_panoramio.jpg"
-      }
+      "name": "東大手門付近",
+      "anchorLat": 38.255098,
+      "anchorLng": 140.331388,
+      "description": "城門周辺では歩行者を優先し、市街地側へ出ます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 38.260002,
-      "anchorLng": 140.347886,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 山形県護国神社 遠景",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Yamagata_Pref._Gokoku-jinja_longshot.jpg/960px-Yamagata_Pref._Gokoku-jinja_longshot.jpg",
-        "alt": "山形市中心部(霞城公園・文翔館)の後半区間付近",
-        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
-        "credit": "Suz-b",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamagata_Pref._Gokoku-jinja_longshot.jpg"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 38.248948,
-      "anchorLng": 140.338412,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 山形市の大通り",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yamagata_main_street_%2839904896492%29.jpg/960px-Yamagata_main_street_%2839904896492%29.jpg",
-        "alt": "山形市中心部(霞城公園・文翔館)の終盤区間付近",
-        "caption": "山形市中心部(霞城公園・文翔館)の走路近隣で撮影された風景",
-        "credit": "Raita Futo from Tokyo, Japan",
-        "license": "CC BY 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yamagata_main_street_(39904896492).jpg"
-      }
+      "name": "文翔館付近",
+      "anchorLat": 38.256676,
+      "anchorLng": 140.339346,
+      "description": "市街地の信号と横断歩道に従ってください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.city.yamagata-yamagata.lg.jp/kurashi/koen/1006541/1006542/1017209.html",
+    "elevation": "既存コースの標高を保持し、迂回した32点のみ国土地理院標高を使用",
+    "reviewedAt": "2026-10-16"
   }
 }

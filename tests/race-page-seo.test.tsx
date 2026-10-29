@@ -3,16 +3,20 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 import { races } from "@/lib/races";
 import { RaceReviews } from "@/components/race-reviews";
-import { pointAlongCourse } from "@/lib/gpx";
+import { pointAlongCourse } from "@/lib/race-page";
 import { raceEditorial } from "@/lib/course-editorial";
 import { RaceCoursePoints } from "@/components/race-course-points";
 
+import type { SpotSummary } from "@/lib/types";
+
 const mocks = vi.hoisted(() => ({
-  getSpots: vi.fn(async () => []),
+  getSpots: vi.fn(async (): Promise<SpotSummary[]> => []),
+  getAreaSpots: vi.fn(async (): Promise<SpotSummary[]> => []),
   getReviews: vi.fn(async () => ({ available: true, reviews: [], nextOffset: null })),
 }));
 vi.mock("@/db/data", () => ({
   getSpotSummariesBySlugs: mocks.getSpots,
+  getSpotsByPrefecture: mocks.getAreaSpots,
   getSitemapSpots: async () => [],
   getPrefectureCounts: async () => [],
 }));
@@ -21,8 +25,39 @@ vi.mock("@/lib/auth-client", () => ({ authClient: { useSession: () => ({ data: n
 vi.mock("@/lib/stations", () => ({ getStations: () => [], getStationLines: () => [] }));
 import RacePage, { generateMetadata, generateStaticParams } from "@/app/races/[slug]/page";
 import sitemap from "@/app/sitemap";
+import AreaPage, { generateMetadata as generateAreaMetadata } from "@/app/areas/[pref]/page";
 
-afterEach(() => vi.unstubAllEnvs());
+afterEach(() => {
+  vi.unstubAllEnvs();
+  mocks.getSpots.mockReset().mockResolvedValue([]);
+  mocks.getAreaSpots.mockReset().mockResolvedValue([]);
+});
+
+const rinkoPark: SpotSummary = {
+  id: "rinko-park",
+  slug: "rinko-park",
+  name: "臨港パーク",
+  prefecture: "神奈川県",
+  city: "横浜市",
+  lat: 35.458,
+  lng: 139.638,
+  distanceM: 1000,
+  elevationGainM: null,
+  signalsCount: 0,
+  courseType: "loop",
+  surface: "asphalt",
+  hasCourse: true,
+  photoUrl: null,
+  tags: [],
+  hasToilet: true,
+  hasWaterFountain: true,
+  hasVendingMachine: false,
+  hasLocker: false,
+  hasShower: false,
+  hasSentoNearby: false,
+  hasParking: false,
+  hasConvenienceStore: false,
+};
 
 describe("race page SEO preservation", () => {
   it("combines scenery and preparation on both Legacy and expanded race pages", async () => {
@@ -82,7 +117,8 @@ describe("race page SEO preservation", () => {
       const meta = await generateMetadata({ params: Promise.resolve({ slug: race.slug }) });
       expect(meta.alternates?.canonical).toBe(`https://dokorun.com/races/${race.slug}`);
       expect(meta.title).toContain(race.name);
-      expect(meta.title).toContain("コースマップ・高低図");
+      expect(meta.title).toBe(`${race.name}のコース`);
+      expect(meta.description).not.toContain("周辺のランニングスポット");
       expect(meta.description).toContain(race.startFinish);
       expect(sitemapUrls.has(`https://dokorun.com/races/${race.slug}`)).toBe(true);
       expect(meta.robots).toBeUndefined();
@@ -92,6 +128,40 @@ describe("race page SEO preservation", () => {
         images: [expect.objectContaining({ url: "/og.png" })],
       });
     }
+  });
+  it("includes nearby spots alongside editorial text only when the spots are actually published", async () => {
+    mocks.getSpots.mockResolvedValue([rinkoPark]);
+    const params = Promise.resolve({ slug: "yokohama-marathon" });
+    const meta = await generateMetadata({ params });
+    expect(meta.title).toBe("横浜マラソンのコースと周辺ランニングスポット");
+    expect(meta.description).toContain(raceEditorial["yokohama-marathon"]!.intro);
+    expect(meta.description).toContain("周辺のランニングスポット");
+    const html = renderToStaticMarkup(await RacePage({ params }));
+    expect(html).toContain('href="/spots/rinko-park"');
+    expect(html).toContain('href="/areas/kanagawa"');
+    expect(html).toContain("神奈川県のランニングコース一覧");
+    expect(html).not.toContain('href="/spots/negishi-forest-park"');
+
+    // 大会の定義にリンクが残っていても、公開スポットがなければ宣伝しない。
+    mocks.getSpots.mockResolvedValue([]);
+    const hiddenMeta = await generateMetadata({ params });
+    const hiddenHtml = renderToStaticMarkup(await RacePage({ params }));
+    expect(hiddenMeta.title).toBe("横浜マラソンのコース");
+    expect(hiddenMeta.description).not.toContain("周辺のランニングスポット");
+    expect(hiddenHtml).not.toContain('id="nearby"');
+    expect(hiddenHtml).not.toContain('href="/areas/kanagawa"');
+  });
+  it("preserves local running search intent while linking only races in that prefecture", async () => {
+    mocks.getAreaSpots.mockResolvedValue([rinkoPark]);
+    const params = Promise.resolve({ pref: "kanagawa" });
+    const meta = await generateAreaMetadata({ params });
+    expect(meta.title).toContain("神奈川県のランニングコース");
+    expect(meta.title).not.toContain("マラソン大会");
+    const html = renderToStaticMarkup(await AreaPage({ params }));
+    expect(html).toContain('href="/spots/rinko-park"');
+    expect(html).toContain('href="/races/yokohama-marathon"');
+    expect(html).not.toContain('href="/races/fukuoka-marathon"');
+    expect(html).not.toContain('href="/races/tokyo-marathon"');
   });
   it("renders a race with no nearby spots, while unknown races remain 404", async () => {
     const page = await RacePage({ params: Promise.resolve({ slug: "itabashi-city-marathon" }) });

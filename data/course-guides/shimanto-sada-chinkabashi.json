@@ -2,19 +2,17 @@
   "slug": "shimanto-sada-chinkabashi",
   "heroCheckpointId": "section-1",
   "checkpointsTitle": "コースの雰囲気",
-  "intro": "中村市街の東側から四万十川左岸の堤防道を上流へたどり、最下流の沈下橋である佐田沈下橋(全長約290m)を渡って対岸へ。右岸は入田の集落と田園を縫って下り、赤鉄橋の愛称で知られる四万十川橋で再び左岸へ戻る約18.8kmの周回。右岸側は小刻みなアップダウンが続き獲得標高は約300m。市街を離れると補給ポイントが少ないので飲料持参が安心。佐田沈下橋のたもとにトイレと駐車場がある。",
+  "intro": "四万十市街から川沿いの堤防や田園を巡り、佐田沈下橋まで足を延ばす約19.0kmの参考ルートです。佐田沈下橋は東岸まで渡り、同じ橋を戻ります。市街地や車両と共用する道もあるため、交差点と車の往来に気を配りながら走ってください。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "沈下橋と堤防道では車両に注意",
+      "body": "佐田沈下橋には欄干がなく、車や観光客も通行します。橋の上で立ち止まらず、混雑時は歩いて通行してください。増水時や規制中は橋へ入らず引き返してください。",
+      "url": "https://www.shimanto-kankou.com/kanko/shimanto-river/shimantoriver-2.html",
+      "linkLabel": "観光協会の佐田沈下橋案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 土佐くろしお鉄道中村駅から約2km 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "橋上の標高は表示していません",
+      "body": "地形の標高から橋の路面の高さを確認できない区間は、標高グラフを空白にしています。"
     }
   ],
   "startPoints": [
@@ -133,8 +131,15 @@
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
-  }
+    "status": "official_map_and_osm_reviewed",
+    "route": "既存経路の佐田沈下橋区間を東岸接続道までの往復に修正。© OpenStreetMap contributors (ODbL)",
+    "routeSources": [
+      "https://www.openstreetmap.org/way/134616300",
+      "https://www.openstreetmap.org/way/134616659",
+      "https://www.shimanto-kankou.com/kanko/shimanto-river/shimantoriver-2.html"
+    ],
+    "elevation": "国土地理院地形標高。橋と接続部は高さ未確認のため除外。",
+    "reviewedAt": "2026-10-16"
+  },
+  "elevationGapNotice": "佐田沈下橋と東岸取り付きの路面の高さを地形データから確認できないため、その区間の標高は空白にしています。コース全体の獲得標高は表示していません。"
 }

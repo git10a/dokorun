@@ -20,9 +20,8 @@ export function RaceSpotCard({ spot, raceName, raceDate }: { spot: SpotSummary; 
           <span className="shrink-0">{raceDate}</span>
         </p>
         <h3 className="mt-0.5 truncate font-bold">{spot.name}</h3>
-        <p className="mt-0.5 truncate text-xs text-sub">
-          {spot.city}・{distanceKm}km
-        </p>
+        <p className="mt-1 text-xs leading-relaxed text-sub">{spot.prefecture} {spot.city}</p>
+        <p className="mt-0.5 text-xs text-sub">{distanceKm}km</p>
       </div>
     </Link>
   );

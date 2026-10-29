@@ -1,0 +1,42 @@
+{
+  "slug": "okushizu-long",
+  "scope": "終点・距離表現のみの提案。経路全区間の通行可否再審査ではない。",
+  "currentEnd": {
+    "lat": 35.283009,
+    "lng": 138.327003,
+    "distanceM": 48543.41,
+    "observed": "梅ヶ島新田地区の山道。SV2012-06で温泉建物・バス停なし。"
+  },
+  "officialLocations": [
+    {
+      "name": "梅ケ島温泉",
+      "lat": 35.306201604762,
+      "lng": 138.33721518200073,
+      "straightLineDistanceM": 2740,
+      "sourceUrl": "https://www.visit-shizuoka.com/spot/detail_321.html",
+      "mapLink": "https://www.google.co.jp/maps/place/35.306201604762,138.33721518200073?gl=JP&hl=ja"
+    },
+    {
+      "name": "梅ケ島新田温泉 黄金の湯",
+      "lat": 35.28533578,
+      "lng": 138.3399679,
+      "straightLineDistanceM": 1205,
+      "sourceUrl": "https://www.visit-shizuoka.com/spot/detail_322.html",
+      "mapLink": "https://www.google.co.jp/maps/place/35.28533578,138.3399679?gl=JP&hl=ja"
+    }
+  ],
+  "conclusion": "既存GPXを参考ロング走として維持するなら、距離を約48.5km、終点を梅ヶ島新田地区の山道とし、温泉到着/ゴール直後の入浴/温泉バス停から帰れるという説明を削除すれば、確認した終点・紹介文の誤認は解消できる。温泉をゴールとして訴求し続けるには経路延長と帰路確認が必要で、文章だけでは足りない。",
+  "introProposal": "静岡駅周辺から安倍川上流域へ進み、梅ヶ島新田地区の山道までたどる片道約48.5kmの参考ロング走コースです。距離が長く山間部の登りもあるため、経験のあるランナー向け。補給や日没、通行情報と帰りの移動手段を事前に確認してください。",
+  "endNameProposal": "梅ヶ島新田地区・掲載コース終点",
+  "warningProposal": {
+    "title": "終点は温泉施設ではありません",
+    "body": "掲載経路は梅ヶ島新田地区の山道で終わります。梅ケ島温泉や黄金の湯までの経路、帰りのバス停への移動は含めていません。終点からの移動は事前に別途計画してください。"
+  },
+  "removeClaims": [
+    "片道約45.5km",
+    "秘湯・梅ヶ島温泉に至る",
+    "ゴールの温泉で疲れた体を癒やす",
+    "ゴールの梅ヶ島温泉から静岡駅行きバス"
+  ],
+  "retrievedAt": "2026-10-16"
+}

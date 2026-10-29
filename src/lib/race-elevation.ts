@@ -9,6 +9,8 @@ export type RaceElevationBenchmark = {
 export type RaceElevation = {
   version: 1;
   source: "gpx" | "gsi";
+  attribution?: { label: string; url: string };
+  elevationGapNotice?: string;
   routeReviewRequired?: boolean;
   // A known major climb/descent may be missing even when overall coverage is high.
   hillAdjustmentUnavailable?: boolean;

@@ -1,0 +1,62 @@
+{
+  "slug": "rinshi-no-mori-park",
+  "status": "proposal-ready",
+  "retrievedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/rinshi-route.json",
+  "distanceM": 1550.6360029180023,
+  "samples": 148,
+  "start": {
+    "lat": 35.6246197,
+    "lng": 139.7025204,
+    "ele": 26.15
+  },
+  "closed": true,
+  "source": [
+    "https://www.tokyo-park.or.jp/park/rinshinomori/rinshinomori_map_jpn_2512.pdf",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=139.695,35.624,139.702,35.631",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=139.702,35.623,139.709,35.630"
+  ],
+  "method": "公式2025/12園内図の園路・ランドマーク配置を、OSM footway/path/pedestrian/stepsの接続済み中心線18wayと照合。公園外の住宅街・羅漢寺川プロムナードは通さず、園内だけを一周。area境界や距離合わせの重複なし。",
+  "routeOrder": [
+    "南門北約70m・しらかしのトイレ南側園路分岐",
+    "大きな広場の南側・西側",
+    "プラタナスの広場北西階段",
+    "サービスセンター北側",
+    "出会いの広場南側",
+    "せせらぎ橋",
+    "芝生広場北側",
+    "東門西側の園内分岐",
+    "芝生広場南側",
+    "六角堂付近へ下る階段",
+    "幼児コーナー南側",
+    "起点へ戻る"
+  ],
+  "steps": [
+    {
+      "way": 113981156,
+      "description": "プラタナスの広場北西にある短い階段"
+    },
+    {
+      "way": 991941613,
+      "description": "東側から六角堂付近へ下る階段"
+    }
+  ],
+  "proposedIntro": "林試の森公園の園内をめぐる約1.6kmの参考周回。南門の北約70mにある園路分岐から、大きな広場、プラタナスの広場、せせらぎ橋、東側の芝生広場をめぐって戻ります。林業試験場時代からの木立を楽しめる道で、一部に短い階段があります。",
+  "proposedWarning": "公認のランニングコースではなく、園内図と公開地図に基づく参考ルートです。散策や遊びで利用する人を優先し、階段や混雑箇所は歩いて通過してください。行事・整備による通行規制は現地案内に従ってください。",
+  "visualReview": "公式園内図とルート描画を目視照合。大きな広場を西から回り、中央せせらぎ橋を越えて芝生広場の北と南を回る形状が一致。南東住宅街へは出ない。",
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14549/6454.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14550/6454.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "evidenceFiles": [
+    "/tmp/spot-route-repair/rinshi-official.png",
+    "/tmp/spot-route-repair/rinshi-route-review.png",
+    "/tmp/spot-route-repair/rinshi-paths.json"
+  ]
+}

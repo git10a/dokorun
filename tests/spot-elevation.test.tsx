@@ -1,0 +1,128 @@
+import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+import { renderToStaticMarkup } from "react-dom/server";
+import { spotElevationFromStart, spotDistanceFromStart } from "../src/lib/spot-elevation";
+import { elevationPointAtDistance, raceElevationGain, type RaceElevation } from "../src/lib/race-elevation";
+import { RaceElevationChart } from "../src/components/race-elevation-chart";
+import spots from "../data/spot-experience/published-spots.json";
+
+const profile: RaceElevation = {
+  version: 1,
+  source: "gpx",
+  points: [
+    { distanceM: 0, lat: 35, lng: 139, elevationM: 10 },
+    { distanceM: 100, lat: 35.01, lng: 139, elevationM: 50 },
+    { distanceM: 200, lat: 35.01, lng: 139.01, elevationM: 30 },
+    { distanceM: 300, lat: 35, lng: 139, elevationM: 10 },
+  ],
+};
+
+describe("spot elevation and map share the selected start", () => {
+  it("wraps a loop from an interpolated start without losing coordinates or heights", () => {
+    const rotated = spotElevationFromStart(profile, 150, "loop");
+    expect(rotated.points.map((p) => p.distanceM)).toEqual([0, 50, 150, 250, 300]);
+    expect(rotated.points[0]).toEqual({ distanceM: 0, lat: 35.01, lng: 139.005, elevationM: 40 });
+    expect(rotated.points.at(-1)).toEqual({ ...rotated.points[0], distanceM: 300 });
+    expect(elevationPointAtDistance(rotated.points, 50)).toEqual({ ...profile.points[2], distanceM: 50 });
+    expect(spotDistanceFromStart(100, 300, 150, "loop")).toBe(250);
+  });
+  it("reverses heights and map positions together", () => {
+    const reversed = spotElevationFromStart(profile, 300, "reverse");
+    expect(reversed.points[1]).toEqual({ ...profile.points[2], distanceM: 100 });
+    expect(spotDistanceFromStart(200, 300, 300, "reverse")).toBe(100);
+    expect(spotElevationFromStart(profile, 0, "forward")).toBe(profile);
+  });
+  it("preserves missing elevations through rotation", () => {
+    const missing = {
+      ...profile,
+      points: profile.points.map((p, i) => ({ ...p, elevationM: i === 1 ? null : p.elevationM })),
+    };
+    expect(spotElevationFromStart(missing, 150, "loop").points[0].elevationM).toBeNull();
+  });
+  it("has complete positions and explicitly documents missing structure heights", () => {
+    expect(spots).toHaveLength(251);
+    for (const spot of spots) {
+      const value = JSON.parse(readFileSync(`public/spot-elevation/${spot.slug}.json`, "utf8")) as RaceElevation;
+      expect(value.points.length, spot.slug).toBeGreaterThan(1);
+      expect(value.points[0].distanceM, spot.slug).toBe(0);
+      expect(
+        value.points.every(
+          (p, i) =>
+            Number.isFinite(p.lat) &&
+            Number.isFinite(p.lng) &&
+            (Number.isFinite(p.elevationM) || (p.elevationM === null && Boolean(value.elevationGapNotice))) &&
+            (i === 0 || p.distanceM >= value.points[i - 1].distanceM),
+        ),
+        spot.slug,
+      ).toBe(true);
+    }
+  });
+  it("never fabricates Rainbow Bridge deck heights or total ascent", () => {
+    const value = JSON.parse(readFileSync("public/spot-elevation/rainbow-bridge-odaiba.json", "utf8")) as RaceElevation;
+    const correction = JSON.parse(readFileSync("data/spot-experience/route-corrections/rainbow-bridge-odaiba.json", "utf8"));
+    const expected = new Set<number>();
+    for (const gap of correction.elevation.unknownIntervals) {
+      for (let i = gap.startIndex; i <= gap.endIndex; i++) expected.add(i);
+    }
+    expect(expected.size).toBe(393);
+    value.points.forEach((p, i) => expect(p.elevationM === null, `point ${i}`).toBe(expected.has(i)));
+    expect(raceElevationGain(value)).toBeNull();
+    expect(elevationPointAtDistance(value.points, 3400)?.elevationM).toBeNull();
+    const markup = renderToStaticMarkup(<RaceElevationChart profile={value} selectedDistanceM={3400} onSelect={() => {}} />);
+    expect(markup).toContain("標高データなし");
+    expect(markup).toContain("橋・高架歩道・階段の高さは未確認");
+    expect(markup).not.toContain("獲得標高<span");
+    expect(markup).toContain("確認区間の最高");
+  });
+  it("keeps every guide start aligned with the mapped route and the shared chart", () => {
+    for (const spot of spots.filter((s) => s.slug !== "midoriko")) {
+      const value = JSON.parse(readFileSync(`public/spot-elevation/${spot.slug}.json`, "utf8")) as RaceElevation;
+      const guide = JSON.parse(readFileSync(`public/course-guides/${spot.slug}.json`, "utf8"));
+      expect(Math.abs(value.points.at(-1)!.distanceM - guide.distanceM), spot.slug).toBeLessThan(1);
+      for (const start of guide.startPoints) {
+        const transformed = spotElevationFromStart(value, start.routeDistanceM, start.routeMode);
+        const origin = transformed.points[0];
+        expect(Math.abs(origin.lat - start.routeLat), spot.slug).toBeLessThan(0.002);
+        expect(Math.abs(origin.lng - start.routeLng), spot.slug).toBeLessThan(0.002);
+        expect(
+          transformed.points.every((p, i) => i === 0 || p.distanceM >= transformed.points[i - 1].distanceM),
+          spot.slug,
+        ).toBe(true);
+      }
+    }
+  });
+  it("marks unresolved route mismatches and keeps corrected park routes in the right location", () => {
+    const reviews = JSON.parse(readFileSync("data/spot-experience/route-reviews.json", "utf8"));
+    for (const [slug, review] of Object.entries(reviews) as [string, { status: string }][]) {
+      const value = JSON.parse(readFileSync(`public/spot-elevation/${slug}.json`, "utf8")) as RaceElevation;
+      expect(Boolean(value.routeReviewRequired), slug).toBe(review.status === "route-mismatch");
+    }
+    const aoba = JSON.parse(readFileSync("public/spot-elevation/aoba-no-mori-park.json", "utf8")) as RaceElevation;
+    expect(aoba.source).toBe("gsi");
+    expect(aoba.points.every((p) => p.lat > 35.592 && p.lat < 35.6 && p.lng > 140.135 && p.lng < 140.145)).toBe(true);
+    expect(aoba.points.at(-1)!.distanceM).toBeGreaterThan(1900);
+    expect(aoba.points.at(-1)!.distanceM).toBeLessThan(2100);
+    const forest = JSON.parse(
+      readFileSync("public/spot-elevation/21st-century-forest-park.json", "utf8"),
+    ) as RaceElevation;
+    expect(forest.source).toBe("gsi");
+    expect(forest.points.every((p) => p.lat > 35.801 && p.lat < 35.805 && p.lng > 139.94 && p.lng < 139.945)).toBe(
+      true,
+    );
+  });
+  it("credits terrain data and does not show race comparisons on spots", () => {
+    const markup = renderToStaticMarkup(
+      <RaceElevationChart
+        profile={{
+          ...profile,
+          attribution: { label: "Open-Meteo（CC BY 4.0）", url: "https://open-meteo.com/en/docs/elevation-api" },
+        }}
+        selectedDistanceM={150}
+        onSelect={() => {}}
+      />,
+    );
+    expect(markup).toContain("Open-Meteo（CC BY 4.0）");
+    expect(markup).toContain("高低図をなぞると、地図で場所を確認できます");
+    expect(markup).not.toContain("平均との比較");
+  });
+});

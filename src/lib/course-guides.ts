@@ -42,6 +42,8 @@ export type CourseGuide = {
   distanceM: number;
   elevationGainM: number | null;
   elevationProfile: ElevationSample[];
+  elevationGapNotice?: string;
+  routeUnavailable?: CourseGuideWarning;
   warnings: CourseGuideWarning[];
   startPoints: CourseGuideStartPoint[];
   checkpoints: CourseGuideCheckpoint[];
@@ -97,26 +99,34 @@ export function preparePublicCourseGuide(guide: CourseGuide): CourseGuide {
   };
 }
 
+function loadLocalCourseGuide(slug: string): CourseGuide | null {
+  // Build and dev must read this checkout, not an ASSETS binding from an older build.
+  // Keep Node-only file loading opaque to the server bundler.
+  const nodeRequire = process.getBuiltinModule("module").createRequire(process.cwd() + "/");
+  const fs = nodeRequire("node:fs") as typeof import("node:fs");
+  const path = nodeRequire("node:path") as typeof import("node:path");
+  const file = path.resolve("public/course-guides", `${slug}.json`);
+  if (!fs.existsSync(file)) return null;
+  return preparePublicCourseGuide(JSON.parse(fs.readFileSync(file, "utf8")) as CourseGuide);
+}
+
 export async function getCourseGuide(slug: string): Promise<CourseGuide | null> {
   if (!/^[a-z0-9-]+$/.test(slug)) return null;
+  if (globalThis.navigator?.userAgent !== "Cloudflare-Workers") {
+    try {
+      return loadLocalCourseGuide(slug);
+    } catch {
+      return null;
+    }
+  }
   try {
     const { env } = getCloudflareContext();
     const assets = (env as CloudflareEnv).ASSETS;
-    if (!assets) throw new Error("ASSETS binding is unavailable");
+    if (!assets) return null;
     const response = await assets.fetch(new Request(`https://assets.local/course-guides/${slug}.json`));
     if (!response.ok) return null;
     return preparePublicCourseGuide((await response.json()) as CourseGuide);
   } catch {
-    try {
-      // Keep Node-only file loading opaque to the server bundler.
-      const nodeRequire = process.getBuiltinModule("module").createRequire(process.cwd() + "/");
-      const fs = nodeRequire("node:fs") as typeof import("node:fs");
-      const path = nodeRequire("node:path") as typeof import("node:path");
-      const file = path.resolve("public/course-guides", `${slug}.json`);
-      if (!fs.existsSync(file)) return null;
-      return preparePublicCourseGuide(JSON.parse(fs.readFileSync(file, "utf8")) as CourseGuide);
-    } catch {
-      return null;
-    }
+    return null;
   }
 }

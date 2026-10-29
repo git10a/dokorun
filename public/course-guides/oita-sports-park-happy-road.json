@@ -1,47 +1,46 @@
 {
   "slug": "oita-sports-park-happy-road",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "大分スポーツ公園は県内屈指の練習拠点で、公式に1周5kmの「ハッピーロード」が案内されています。青山学院大学陸上競技部のキャンプ練習でも使われたロードコースとして紹介され、距離走やマラソン期の巡航練習に相性が良いです。公園全体に余裕があり、日常のジョグでも窮屈さを感じにくいのが利点です。自分のペースで落ち着いて距離を踏みたい日に向きます。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "大分スポーツ公園の公式ハッピーロード5km図をもとに、ドーム外周と西側の園路をつないだ約5.1kmの参考コースです。ドーム北側から西へ進み、西側の直線園路と駐車場付近を回って戻ったあと、ドーム南側と投てき場外側を通って一周します。起伏のある舗装路で、木立とドーム周辺の開けた景色が交互に現れます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式案内は1周5kmです。掲載経路は公開地図と現地画像から再構成した約5.14kmの参考データで、公式測量GPXではありません。 公式案内のとおり、一部は車道・駐車場の通路を含みます。車両、出入口、曲がり角に注意し、歩行者を優先してください。 ドーム東側の大階段は通らず、投てき場沿いの園路へ進む経路です。現地の案内や通行規制を優先してください。 大会・試合開催時はコースや駐車場が使えない場合があります。",
+      "url": "https://www.oita-sportspark.jp/information/2166",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: JR大分駅からバス「クラサスドーム大分」下車。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "クラサスドーム大分の北側外周路を起点にしています。車利用の場合は公園の開放駐車場・イベント時の規制を公式案内で確認してください。",
+      "url": "https://www.oita-sportspark.jp/access",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "周回コース起点",
-      "badge": "コース起点",
-      "destinationLat": 33.213704,
-      "destinationLng": 131.707654,
-      "routeAnchorLat": 33.213704,
-      "routeAnchorLng": 131.707654,
+      "name": "クラサスドーム北側の外周路",
+      "badge": "園路からスタート",
+      "destinationLat": 33.2025858,
+      "destinationLng": 131.6572685,
+      "routeAnchorLat": 33.2025858,
+      "routeAnchorLng": 131.6572685,
       "routeMode": "loop",
-      "accessText": "登録されているコース起点へ移動",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。",
+      "accessText": "クラサスドーム大分の北側外周路を起点にしています。車利用の場合は公園の開放駐車場・イベント時の規制を公式案内で確認してください。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "園路と現地案内に沿って進み、歩行者を優先してください。",
       "routePointIndex": 0,
       "routeDistanceM": 0,
-      "routeLat": 33.213704,
-      "routeLng": 131.707654,
-      "elevationM": 50.8,
+      "routeLat": 33.2025858,
+      "routeLng": 131.6572685,
+      "elevationM": 85.5,
       "snapGapM": 0,
       "checkpointDistances": {
-        "section-1": 0,
-        "section-2": 1028,
-        "section-3": 2089,
-        "section-4": 3140,
-        "section-5": 4192
+        "section-1": 1063,
+        "section-2": 2048,
+        "section-3": 4047,
+        "section-4": 4504
       },
       "gpxHref": "/gpx/oita-sports-park-happy-road-start-1.gpx"
     }
@@ -49,343 +48,286 @@
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 33.213704,
-      "anchorLng": 131.707654,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Ｗ杯時の増設可動席の様子",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg/960px-%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードのスタート周辺付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "セカンドベースマン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%8Cita_Stadium_at_the_2002_FIFA_World_Cup_2.jpg"
-      },
-      "routePointIndex": 0,
-      "routeDistanceM": 0,
-      "routeLat": 33.213704,
-      "routeLng": 131.707654,
-      "elevationM": 50.8,
+      "name": "西側園路入口",
+      "anchorLat": 33.2008203,
+      "anchorLng": 131.6497548,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 110,
+      "routeDistanceM": 1063,
+      "routeLat": 33.2008203,
+      "routeLng": 131.6497548,
+      "elevationM": 110.3,
       "snapGapM": 0
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 33.210802,
-      "anchorLng": 131.714224,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: ドーム",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg/960px-%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの序盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "流木",
-        "license": "CC BY 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%83%89%E3%83%BC%E3%83%A0_-_panoramio.jpg"
-      },
-      "routePointIndex": 36,
-      "routeDistanceM": 1028,
-      "routeLat": 33.210802,
-      "routeLng": 131.714224,
-      "elevationM": 20.3,
+      "name": "西側駐車場付近",
+      "anchorLat": 33.1954228,
+      "anchorLng": 131.6472476,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 189,
+      "routeDistanceM": 2048,
+      "routeLat": 33.1954228,
+      "routeLng": 131.6472476,
+      "elevationM": 105,
       "snapGapM": 0
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 33.205619,
-      "anchorLng": 131.711479,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Sportsclub, Natural grass court",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oita_Sportsclub_Natural_grass_court.jpg/960px-Oita_Sportsclub_Natural_grass_court.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの中盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "プーヤン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oita_Sportsclub_Natural_grass_court.jpg"
-      },
-      "routePointIndex": 79,
-      "routeDistanceM": 2089,
-      "routeLat": 33.205619,
-      "routeLng": 131.711479,
-      "elevationM": 18.8,
+      "name": "ドーム南側外周",
+      "anchorLat": 33.1989643,
+      "anchorLng": 131.6564793,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 377,
+      "routeDistanceM": 4047,
+      "routeLat": 33.1989643,
+      "routeLng": 131.6564793,
+      "elevationM": 85.6,
       "snapGapM": 0
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 33.206807,
-      "anchorLng": 131.704838,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Sports Club, Club House",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Oita_Sportsclub_Clubhouse.jpg/960px-Oita_Sportsclub_Clubhouse.jpg",
-        "alt": "大分スポーツ公園 ハッピーロードの後半区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "プーヤン",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oita_Sportsclub_Clubhouse.jpg"
-      },
-      "routePointIndex": 140,
-      "routeDistanceM": 3140,
-      "routeLat": 33.206807,
-      "routeLng": 131.704838,
-      "elevationM": 44.3,
-      "snapGapM": 0
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 33.211795,
-      "anchorLng": 131.702067,
-      "description": "大分スポーツ公園 ハッピーロードを示す出典付きの参考写真です。区間の正確な位置写真ではありません。写真の説明: Oita Stadium, Oita City, Oita, Japan",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/OitaStadium2.JPG/960px-OitaStadium2.JPG",
-        "alt": "大分スポーツ公園 ハッピーロードの終盤区間付近",
-        "caption": "大分スポーツ公園 ハッピーロードの参考写真（区間位置とは一致しない場合があります）",
-        "credit": "大分帰省中",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:OitaStadium2.JPG"
-      },
-      "routePointIndex": 188,
-      "routeDistanceM": 4192,
-      "routeLat": 33.211795,
-      "routeLng": 131.702067,
-      "elevationM": 71.8,
+      "name": "投てき場外側の園路",
+      "anchorLat": 33.2014438,
+      "anchorLng": 131.6592323,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先",
+      "routePointIndex": 422,
+      "routeDistanceM": 4504,
+      "routeLat": 33.2014438,
+      "routeLng": 131.6592323,
+      "elevationM": 85,
       "snapGapM": 0
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.oita-sportspark.jp/information/2166",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   },
-  "distanceM": 5237,
-  "elevationGainM": 79,
+  "distanceM": 5140,
+  "elevationGainM": 44,
   "elevationProfile": [
     {
       "distanceM": 0,
-      "elevationM": 50.8
+      "elevationM": 85.5
     },
     {
       "distanceM": 99,
-      "elevationM": 43.7
+      "elevationM": 96.4
     },
     {
       "distanceM": 198,
-      "elevationM": 33.7
+      "elevationM": 96.6
     },
     {
-      "distanceM": 296,
-      "elevationM": 30.7
+      "distanceM": 297,
+      "elevationM": 98.4
     },
     {
       "distanceM": 395,
-      "elevationM": 23.7
+      "elevationM": 102.4
     },
     {
       "distanceM": 494,
-      "elevationM": 18.7
+      "elevationM": 104.9
     },
     {
       "distanceM": 593,
-      "elevationM": 15.1
+      "elevationM": 105.3
     },
     {
       "distanceM": 692,
-      "elevationM": 15.4
+      "elevationM": 105
     },
     {
       "distanceM": 791,
-      "elevationM": 14.9
+      "elevationM": 103.1
     },
     {
-      "distanceM": 889,
-      "elevationM": 18.4
+      "distanceM": 890,
+      "elevationM": 106.8
     },
     {
       "distanceM": 988,
-      "elevationM": 21.1
+      "elevationM": 110.1
     },
     {
       "distanceM": 1087,
-      "elevationM": 18.8
+      "elevationM": 110
     },
     {
       "distanceM": 1186,
-      "elevationM": 16.8
+      "elevationM": 108.9
     },
     {
       "distanceM": 1285,
-      "elevationM": 20.2
+      "elevationM": 108.4
     },
     {
-      "distanceM": 1383,
-      "elevationM": 20.6
+      "distanceM": 1384,
+      "elevationM": 107.7
     },
     {
-      "distanceM": 1482,
-      "elevationM": 18.7
+      "distanceM": 1483,
+      "elevationM": 105.7
     },
     {
       "distanceM": 1581,
-      "elevationM": 23.3
+      "elevationM": 105.4
     },
     {
       "distanceM": 1680,
-      "elevationM": 22
+      "elevationM": 105.9
     },
     {
       "distanceM": 1779,
-      "elevationM": 22.7
+      "elevationM": 106.3
     },
     {
       "distanceM": 1878,
-      "elevationM": 19.8
+      "elevationM": 104.5
     },
     {
-      "distanceM": 1976,
-      "elevationM": 19.8
+      "distanceM": 1977,
+      "elevationM": 105
     },
     {
-      "distanceM": 2075,
-      "elevationM": 18.8
+      "distanceM": 2076,
+      "elevationM": 104.5
     },
     {
-      "distanceM": 2174,
-      "elevationM": 18.8
+      "distanceM": 2175,
+      "elevationM": 104.6
     },
     {
       "distanceM": 2273,
-      "elevationM": 18.5
+      "elevationM": 106
     },
     {
       "distanceM": 2372,
-      "elevationM": 18.9
+      "elevationM": 105.9
     },
     {
-      "distanceM": 2470,
-      "elevationM": 24
+      "distanceM": 2471,
+      "elevationM": 106.6
     },
     {
-      "distanceM": 2569,
-      "elevationM": 28.7
+      "distanceM": 2570,
+      "elevationM": 105.1
     },
     {
-      "distanceM": 2668,
-      "elevationM": 30.2
+      "distanceM": 2669,
+      "elevationM": 107.1
     },
     {
-      "distanceM": 2767,
-      "elevationM": 30.3
+      "distanceM": 2768,
+      "elevationM": 108.1
     },
     {
       "distanceM": 2866,
-      "elevationM": 38.5
+      "elevationM": 108.5
     },
     {
-      "distanceM": 2964,
-      "elevationM": 47.3
+      "distanceM": 2965,
+      "elevationM": 109.4
     },
     {
-      "distanceM": 3063,
-      "elevationM": 48.7
+      "distanceM": 3064,
+      "elevationM": 110.3
     },
     {
-      "distanceM": 3162,
-      "elevationM": 43.1
+      "distanceM": 3163,
+      "elevationM": 109
     },
     {
-      "distanceM": 3261,
-      "elevationM": 45.8
+      "distanceM": 3262,
+      "elevationM": 104.5
     },
     {
-      "distanceM": 3360,
-      "elevationM": 50.2
+      "distanceM": 3361,
+      "elevationM": 103.9
     },
     {
-      "distanceM": 3459,
-      "elevationM": 52.1
+      "distanceM": 3460,
+      "elevationM": 106.5
     },
     {
-      "distanceM": 3557,
-      "elevationM": 52.7
+      "distanceM": 3558,
+      "elevationM": 105.2
     },
     {
-      "distanceM": 3656,
-      "elevationM": 52.8
+      "distanceM": 3657,
+      "elevationM": 103.7
     },
     {
-      "distanceM": 3755,
-      "elevationM": 59.2
+      "distanceM": 3756,
+      "elevationM": 100.7
     },
     {
-      "distanceM": 3854,
-      "elevationM": 60
+      "distanceM": 3855,
+      "elevationM": 97.5
     },
     {
-      "distanceM": 3953,
-      "elevationM": 64.1
+      "distanceM": 3954,
+      "elevationM": 89.4
     },
     {
-      "distanceM": 4051,
-      "elevationM": 70.2
+      "distanceM": 4053,
+      "elevationM": 85.7
     },
     {
-      "distanceM": 4150,
-      "elevationM": 72.9
+      "distanceM": 4151,
+      "elevationM": 85.7
     },
     {
-      "distanceM": 4249,
-      "elevationM": 71.8
+      "distanceM": 4250,
+      "elevationM": 85.5
     },
     {
-      "distanceM": 4348,
-      "elevationM": 74.4
+      "distanceM": 4349,
+      "elevationM": 85.2
     },
     {
-      "distanceM": 4447,
-      "elevationM": 75.2
+      "distanceM": 4448,
+      "elevationM": 85.3
     },
     {
-      "distanceM": 4546,
-      "elevationM": 75.9
+      "distanceM": 4547,
+      "elevationM": 85.4
     },
     {
-      "distanceM": 4644,
-      "elevationM": 77.3
+      "distanceM": 4646,
+      "elevationM": 85.3
     },
     {
-      "distanceM": 4743,
-      "elevationM": 76
+      "distanceM": 4744,
+      "elevationM": 85.4
     },
     {
-      "distanceM": 4842,
-      "elevationM": 75.5
+      "distanceM": 4843,
+      "elevationM": 85.4
     },
     {
-      "distanceM": 4941,
-      "elevationM": 70.2
+      "distanceM": 4942,
+      "elevationM": 85.2
     },
     {
-      "distanceM": 5040,
-      "elevationM": 62.7
+      "distanceM": 5041,
+      "elevationM": 84.7
     },
     {
-      "distanceM": 5138,
-      "elevationM": 58.1
-    },
-    {
-      "distanceM": 5237,
-      "elevationM": 50.3
+      "distanceM": 5140,
+      "elevationM": 85.5
     }
   ]
 }

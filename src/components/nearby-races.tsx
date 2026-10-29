@@ -32,6 +32,7 @@ export function NearbyRaces({ items, spotSlug }: { items: NearbyRace[]; spotSlug
                     dateLabel={finished ? "今年は開催済み" : raceShortDate(race)}
                   />
                   <h3 className="mt-0.5 font-bold leading-snug group-hover:text-accent">{race.name}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-sub">{race.prefecture} {race.city}</p>
                   <p className="mt-0.5 text-xs text-sub">
                     {race.distanceLabel}
                     {startDistanceKm !== null &&

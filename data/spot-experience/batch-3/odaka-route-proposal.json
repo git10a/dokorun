@@ -1,0 +1,54 @@
+{
+  "slug": "odaka-ryokuchi",
+  "reviewedAt": "2026-10-16",
+  "status": "route-proposal-ready",
+  "oldMismatch": "旧GPX bbox35.045〜35.049,136.944〜136.951は共知IC付近の一般道。親がGoogle2025-02 pano R74dA0FgrnFklSEZjqnaSA (35.0456648,136.9512315)で高速道路下と確認。",
+  "routeFile": "/tmp/spot-route-repair/odaka-route.json",
+  "previewFile": "/tmp/spot-route-repair/odaka-route.png",
+  "distanceM": 2417.4128058525225,
+  "points": 218,
+  "start": [
+    35.0610655,
+    136.9544992
+  ],
+  "elevationRangeM": [
+    9.09,
+    44.6
+  ],
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14424/6486.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "sources": [
+    "https://www.aichi-koen.com/oodaka_walking/",
+    "https://www.aichi-koen.com/wp-content/uploads/2016/01/1ad19bef3355f79634fe77db38c7e16a1-690x487.jpg",
+    "https://www.aichi-koen.com/odaka/odaka-annai/park-map/",
+    "https://www.aichi-koen.com/wp-content/uploads/2023/04/R5年版-大高緑地MAP.jpg",
+    "https://www.aichi-koen.com/wp-content/uploads/2017/07/mapA.jpg"
+  ],
+  "method": "大高緑地の公式エンジョイコース約2.5kmの西側周回を参考に、つつじの道(OSM495379573)と中央園路を一周。OSM495457886/495457877は通路が面として登録されるため、対向する境界の中点を使い通路中央を推定。駐車枠・ゴーカートコース・施設内部・階段は通らない。公開図を参照した参考線で、公式GPXや測量線ではない。距離合わせの追加周回は行っていない。",
+  "officialMapReview": "現行公式サイトのリンク先2023年施設図・公式ウォーキング図・2017年バリアマップをCUAで目視。エンジョイコースは園内西側を巡る約2.5km、クロスカントリーは別の約1.3km。今回の参考線は西側大周回約2.4km。つつじの道と中央の園路を一周し、公式距離に合わせるための折返しや重複は付加しない。",
+  "geometryReview": "OSM495379573の公開遊歩道を軸に、495457886/495457877の通路ポリゴンは左右境界の中点で参考中心線を作り、495457875で北側へつなぐ。ゴーカート専用路184745804/184745805/1282025098、駐車場通路、階段を使わない。",
+  "verifiedPanorama": {
+    "panoId": "E7yv_l04VTh8fJoreAPzkQ",
+    "lat": 35.0610792,
+    "lng": 136.9545091,
+    "heading": 225,
+    "captured": "2018-03",
+    "sourceUrl": "https://www.google.com/maps/@35.0610792,136.9545091,41a,80y,225h,90t/data=!3m7!1e1!3m5!1sE7yv_l04VTh8fJoreAPzkQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DE7yv_l04VTh8fJoreAPzkQ%26yaw%3D225!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "observed": "開始点近くをGoogle2018-03の地上パノラマで確認。南西側へ続く幅のある土・細砂利の遊歩道、黄色の小さな目印、左右の草地と木立が見え、コースの接続を確認。舗装路だけとせずmixedとする。管理事務所・交通公園の北西側。"
+  },
+  "surface": "mixed",
+  "suggestedIntro": "大高緑地の西側を回る約2.4kmの参考周回です。管理事務所・交通公園の北西側から中央の園路を北へ進み、舗装区間と土・砂利の区間をつなぎ、西側の木立を抜けて、つつじの道の起伏をたどって戻ります。公式ウォーキング図のエンジョイコースを参考に園路をつないでいます。歩行者や子どもを優先し、下り坂や見通しの悪いカーブでは速度を落としてください。",
+  "warnings": [
+    "砂利・土の区間を含みます。雨の後のぬかるみと滑りやすい路面に注意してください。",
+    "公園を散策する人や子どもを優先してください。見通しの悪いカーブや下り坂では速度を落とし、管理車両・イベント規制・現地案内に従ってください。",
+    "管理事務所案内は参考経路の起点です。駐車場は公式ウォーキング案内で19時閉門とされています。"
+  ],
+  "integration": "親がGPX/標高profile/guide/DBへ統合し、新profileから画像2地点を確認する。旧経路画像は再利用しない。"
+}

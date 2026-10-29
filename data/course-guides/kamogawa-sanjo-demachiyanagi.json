@@ -1,127 +1,80 @@
 {
   "slug": "kamogawa-sanjo-demachiyanagi",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "京都の街なかランの王道区間で、三条大橋から出町柳までは片道およそ2.3kmです。河川敷に下りれば信号に止められにくく、川の流れや比叡山方面の眺めを感じながら一定ペースで走れます。周辺に橋が多いため距離調整もしやすく、観光や仕事の合間の朝ランにも好相性です。ジョグからテンポ走まで幅広く対応でき、京都でまず名前が挙がる代表的なリバーサイドです。目的に応じて本数や往復回数を調整しやすい点も実用的です。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "三条大橋の北側から鴨川の東岸河川敷を上流へ進み、出町柳の賀茂大橋北側で折り返す約4.4kmの参考ルートです。橋の下を通りながら、川沿いの舗装路や土の道をつなぎます。道路沿いの歩道ではなく、河川敷へ下りて走るコースです。散歩や自転車の利用者が多いので、混雑時は速度を落とし、増水や工事の通行案内を優先してください。",
   "warnings": [
     {
-      "title": "天候と現地の通行情報を確認してください",
-      "body": "自然路は天候や季節で路面・通行状況が変わります。最新の警報、現地の規制、日没時刻を確認し、無理のない装備と計画で利用してください。",
-      "url": "https://www.env.go.jp/nature/nationalparks/pick-up/long-trail/beginner/",
-      "linkLabel": "環境省の自然歩道初心者ガイド"
+      "title": "河川敷の走行と参考ルートについて",
+      "body": "京都府の公園案内と東岸河川敷の園路データを照合して作成した参考ルートです。公式に測量されたランニングコースではありません。飛び石は渡らず、同じ岸を往復します。増水や工事による通行規制がある場合は、現地の案内を優先してください。",
+      "url": "https://www.pref.kyoto.jp/koen-annai/kamo.html",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 京阪本線 三条駅から徒歩約3分。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと公園案内",
+      "body": "京阪三条駅・地下鉄三条京阪駅から三条大橋へ。橋の東側から河川敷へ下り、橋の北側の園路でスタートします。",
+      "url": "https://www.pref.kyoto.jp/koen-annai/kamo.html",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "三条京阪駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 35.009278,
-      "destinationLng": 135.773773,
-      "routeAnchorLat": 35.009499,
-      "routeAnchorLng": 135.773946,
+      "name": "三条大橋の北側・東岸河川敷",
+      "badge": "河川敷からスタート",
+      "destinationLat": 35.0097382,
+      "destinationLng": 135.7720617,
+      "routeAnchorLat": 35.0097382,
+      "routeAnchorLng": 135.7720617,
       "routeMode": "forward",
-      "accessText": "三条京阪駅からコースまで約30m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "京阪三条駅・地下鉄三条京阪駅から三条大橋へ。橋の東側から河川敷へ下り、橋の北側の園路でスタートします。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "東岸の河川敷を北へ進みます。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 35.009499,
-      "anchorLng": 135.773946,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 三条京阪駅の駅名標",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sanjo-Keihan_Station_Sign.jpg/960px-Sanjo-Keihan_Station_Sign.jpg",
-        "alt": "鴨川河川敷(三条大橋〜出町柳)のスタート周辺付近",
-        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
-        "credit": "そらみみ",
-        "license": "CC BY-SA 3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanjo-Keihan_Station_Sign.jpg"
-      }
+      "name": "三条大橋の北側",
+      "anchorLat": 35.0097382,
+      "anchorLng": 135.7720617,
+      "description": "東岸の河川敷を北へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 35.017365,
-      "anchorLng": 135.772329,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: View of Kamo River from Marutamachi bridge.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamogawa_from_Marutamachi.jpg/960px-Kamogawa_from_Marutamachi.jpg",
-        "alt": "鴨川河川敷(三条大橋〜出町柳)の序盤区間付近",
-        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
-        "credit": "Myself",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamogawa_from_Marutamachi.jpg"
-      }
+      "name": "丸太町橋付近",
+      "anchorLat": 35.0177441,
+      "anchorLng": 135.7719343,
+      "description": "河川敷の道で橋の下を通ります。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 35.026,
-      "anchorLng": 135.772388,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: Inside Keihan 5000 carriage",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Keihan_5000_inside.JPG/960px-Keihan_5000_inside.JPG",
-        "alt": "鴨川河川敷(三条大橋〜出町柳)の中盤区間付近",
-        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
-        "credit": "Hahifuheho",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keihan_5000_inside.JPG"
-      }
+      "name": "荒神橋付近",
+      "anchorLat": 35.0217596,
+      "anchorLng": 135.7718805,
+      "description": "川沿いを出町柳方面へ進みます。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 35.026,
-      "anchorLng": 135.772388,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: Inside Keihan 5000 carriage",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Keihan_5000_inside.JPG/960px-Keihan_5000_inside.JPG",
-        "alt": "鴨川河川敷(三条大橋〜出町柳)の後半区間付近",
-        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
-        "credit": "Hahifuheho",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keihan_5000_inside.JPG"
-      }
-    },
-    {
-      "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 35.017365,
-      "anchorLng": 135.772329,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: View of Kamo River from Marutamachi bridge.",
-      "surfaceLabel": "舗装・未舗装",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamogawa_from_Marutamachi.jpg/960px-Kamogawa_from_Marutamachi.jpg",
-        "alt": "鴨川河川敷(三条大橋〜出町柳)の終盤区間付近",
-        "caption": "鴨川河川敷(三条大橋〜出町柳)の走路近隣で撮影された風景",
-        "credit": "Myself",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamogawa_from_Marutamachi.jpg"
-      }
+      "name": "賀茂大橋の北側・折り返し",
+      "anchorLat": 35.0293982,
+      "anchorLng": 135.7722447,
+      "description": "合流部を眺められる北側で折り返します。飛び石や橋は渡りません。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://www.pref.kyoto.jp/koen-annai/kamo.html",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

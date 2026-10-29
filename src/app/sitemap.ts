@@ -12,18 +12,19 @@ import { editorialLastModified, raceEditorial, spotEditorial, stationEditorial }
 export const revalidate = false;
 
 const rebrandingUpdatedAt = new Date("2026-10-12T00:00:00+09:00");
+const searchContentUpdatedAt = new Date("2026-10-16T00:00:00+09:00");
 const contentUpdatedAt = new Date("2026-07-12T00:00:00+09:00");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = getSiteUrl();
   const fixedPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: rebrandingUpdatedAt, changeFrequency: "weekly", priority: 1 },
+    { url: baseUrl, lastModified: searchContentUpdatedAt, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/spots`, lastModified: contentUpdatedAt, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/areas`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/stations`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/stations/lines`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/features`, lastModified: contentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/races`, lastModified: rebrandingUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/races`, lastModified: searchContentUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/guide/gpx`, lastModified: rebrandingUpdatedAt, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/about`, lastModified: rebrandingUpdatedAt, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified: rebrandingUpdatedAt, changeFrequency: "monthly", priority: 0.4 },
@@ -40,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // スポットが存在する都道府県のみ載せる(0件エリアは404になるため)
   const areaPages: MetadataRoute.Sitemap = prefectureCounts.map(({ prefecture }) => ({
     url: `${baseUrl}/areas/${prefectureSlug(prefecture)}`,
+    lastModified: searchContentUpdatedAt,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
@@ -50,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
   const racePages: MetadataRoute.Sitemap = races.map((race) => ({
     url: `${baseUrl}/races/${race.slug}`,
-    lastModified: editorialLastModified(raceEditorial[race.slug]),
+    lastModified: editorialLastModified(raceEditorial[race.slug], searchContentUpdatedAt),
     changeFrequency: "weekly",
     priority: 0.8,
   }));

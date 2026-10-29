@@ -120,7 +120,10 @@ export default async function HomePage() {
         </section>
       </div>
       <section id="spot-search" className="mx-auto mt-12 max-w-7xl scroll-mt-20 px-4 pb-4 sm:mt-16 md:px-6">
-        <SectionHeading className="mb-4 sm:mb-6">大会の街の有名ランニングスポット</SectionHeading>
+        <SectionHeading className="mb-4">各地の有名ランニングスポット</SectionHeading>
+        <p className="mb-5 text-sm leading-7 text-sub">
+          地元の定番コースや、旅先で走ってみたい場所を。地域や距離、設備からランニングコースを探せます。
+        </p>
         {raceSpots.length > 0 && (
           <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] md:-mx-6 md:px-6 [&::-webkit-scrollbar]:hidden">
             {raceSpots.map((item) => (
@@ -128,13 +131,18 @@ export default async function HomePage() {
             ))}
           </div>
         )}
-        <Link
-          prefetch={false}
-          href="/spots"
-          className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
-        >
-          全国{totalSpots}スポットからさがす <ArrowRight size={16} />
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+          <Link
+            prefetch={false}
+            href="/spots"
+            className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
+          >
+            全国{totalSpots}スポットからさがす <ArrowRight size={16} />
+          </Link>
+          <Link href="/areas" className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline">
+            地域からランニングコースをさがす <ArrowRight size={16} />
+          </Link>
+        </div>
       </section>
     </>
   );

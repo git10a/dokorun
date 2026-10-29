@@ -1,0 +1,63 @@
+{
+  "slug": "seaside-momochi",
+  "reviewedAt": "2026-10-16",
+  "proposalPath": "/tmp/spot-route-repair/momochi-route.json",
+  "distanceM": 1819.987964356972,
+  "points": 151,
+  "replaces": "旧3.8km経路は百道浜西端から南のマリナ通り・室見川西岸へ往復し、百道浜の海浜遊歩道と不一致。",
+  "route": "百道浜地区の海浜遊歩道を西端から東へ進み、なぎさ橋西側約54m手前で折り返す約1.8km往復。",
+  "officialSources": [
+    "https://www.marizon-kankyo.jp/park/",
+    "https://www.marizon-kankyo.jp/wp/wp-content/themes/wp.marizon-kankyo/common/images/park_map_momochi.jpg"
+  ],
+  "osmWays": [
+    201674707
+  ],
+  "start": {
+    "lat": 33.5943668,
+    "lng": 130.3460776,
+    "ele": 2.4
+  },
+  "turnaround": {
+    "lat": 33.5952945,
+    "lng": 130.3557815
+  },
+  "proposedTitle": "百道浜・海浜遊歩道往復",
+  "proposedIntro": "シーサイドももち海浜公園の百道浜地区で、砂浜沿いの遊歩道を往復する約1.8kmの参考ルート。西端からマリゾン前を通り、なぎさ橋手前で折り返します。博多湾と砂浜を眺めながら走れる区間ですが、散歩や海浜利用の人が多い場所では速度を落として通りましょう。",
+  "proposedWarnings": [
+    "地図・標高は公開地図と地形データから作成した参考情報です。現地の案内・規制を優先してください。",
+    "中央部では管理・搬入車両が通る場合があります。歩行者や自転車にも注意してください。",
+    "中央プラザの上階、マリゾンの桟橋・私有部、なぎさ橋はこの経路に含みません。",
+    "強風、飛砂、混雑、イベントの設営・規制時は無理に走らず現地の誘導に従ってください。"
+  ],
+  "elevationAssessment": {
+    "allGroundLevel": true,
+    "nullSections": [],
+    "excludedElevated": "中央プラザ上階・西側駐車場連絡橋・なぎさ橋を除外。中央プラザ北側の地上園路は2017-05 Street Viewで上階への階段横に連続することを確認。",
+    "terrainCaveat": "GSI地形DEMであり歩道面の実測値ではない。"
+  },
+  "visualEvidence": [
+    {
+      "pano": "_m2Tz6iLSToqhHiDQoU0HA",
+      "lat": 33.5944929,
+      "lng": 130.3512757,
+      "captured": "2017-05",
+      "observed": "地上の園路が中央プラザ上階への階段北側を東西へ連続。搬入車あり。上階を通らず進める。"
+    },
+    {
+      "pano": "CIHM0ogKEICAgID4rOCaNg",
+      "lat": 33.5952621,
+      "lng": 130.3561579,
+      "captured": "2017-07",
+      "observed": "なぎさ橋へ登る灰色舗装園路と高速道路高架。今回折返しは撮影地点より西側、橋への登りへ入らない。"
+    },
+    {
+      "pano": "CIHM0ogKEICAgIC5iaH4-QE",
+      "lat": 33.5943733,
+      "lng": 130.3460659,
+      "captured": "2023-10",
+      "observed": "西端から東へ砂浜沿いの灰色タイル園路が連続。左砂浜・湾、右芝生・植栽・街灯。実景と公式遊歩道を照合。"
+    }
+  ],
+  "status": "ready-for-parent-integration"
+}

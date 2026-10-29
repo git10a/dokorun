@@ -1,0 +1,82 @@
+{
+  "slug": "nanakita-park",
+  "name": "七北田公園 西側・七北田川沿い参考周回",
+  "distanceM": 1502.08,
+  "courseType": "loop",
+  "surface": "asphalt",
+  "start": {
+    "name": "都市緑化ホール西側の園路",
+    "lat": 38.3194925,
+    "lng": 140.8793209
+  },
+  "description": "泉中央駅の南にある七北田公園の、西側園路と七北田川沿いを回る約1.5kmの参考周回です。都市緑化ホール西側の園路から体育館付近を通って西へ進み、洋風四阿の外側の園路、川沿い、カムリの池・泉ヶ池付近を巡って戻ります。芝生や池、木立の景色を楽しみながら、歩行者に配慮してゆっくり走れます。",
+  "access": "地下鉄南北線・泉中央駅から公園方面へ徒歩約5分。都市緑化ホール西側の園路を起点にしています。",
+  "warnings": [
+    "公式ウォーキングMAPのA約2.5km・B約1.3kmとは異なる、公開園路に沿って再構成した約1.5kmの参考経路です。公式の測量GPXではありません。",
+    "遊具・芝生広場や池の周辺は散歩や遊ぶ人を優先し、混雑時は歩いてください。",
+    "園路には曲がり角や舗装の継ぎ目があります。現地の規制や案内を優先してください。",
+    "夜間の照明が連続することは確認していません。明るい時間帯の利用を想定しています。"
+  ],
+  "checkpoints": [
+    {
+      "name": "都市緑化ホール西側の園路",
+      "lat": 38.3194925,
+      "lng": 140.8793209
+    },
+    {
+      "name": "体育館北側の園路",
+      "lat": 38.3205534,
+      "lng": 140.8785011
+    },
+    {
+      "name": "洋風四阿の外側",
+      "lat": 38.3209691,
+      "lng": 140.8751689
+    },
+    {
+      "name": "七北田川沿い",
+      "lat": 38.3184308,
+      "lng": 140.8764852
+    },
+    {
+      "name": "カムリの池・泉ヶ池付近",
+      "lat": 38.3178839,
+      "lng": 140.8793979
+    }
+  ],
+  "evidence": {
+    "officialUrls": [
+      "https://nanakita-park.jp/",
+      "https://nanakita-park.jp/wp/wp-content/uploads/2026/04/parkmap_w.pdf",
+      "https://sendai-green-association.jp/assets/images/download/walkingmap_nanakita.pdf"
+    ],
+    "osmUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=140.873,38.310,140.890,38.327",
+    "review": "2014年の公式ウォーキング冊子の両面と2026年公式ガイドを目視照合。七北田はA2.5km・B1.3kmで、3.2kmは別の水の森公園。西側の園路、四阿周辺、河川沿い、池周辺の繋がりをOSM14waysに沿って確認した。A全周の東側はOSM接続が途切れて駅方面へ迂回するため採用せず、西側を単独周回。温室内のbuilding_passageを除外し、建物西側の屋外園路へ修正済み。旧起点38.328015,140.882793は公園から北へ約1km離れた市街地で不採用。",
+    "localOfficialMap": "/tmp/spot-route-repair/nanakita-current.pdf",
+    "localWalkingMap": "/tmp/spot-route-repair/nanakita-walking.pdf",
+    "routePlot": "/tmp/spot-route-repair/nanakita-route-b1.png",
+    "routePath": "/tmp/spot-route-repair/nanakita-route.json",
+    "elevation": {
+      "source": "gsi",
+      "zoom": 14,
+      "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14603/6301.txt"
+      ],
+      "fetchedAt": "2026-10-16"
+    },
+    "checks": {
+      "closed": true,
+      "repeatedEdges": 0,
+      "allWaysPedestrian": true,
+      "stairs": 0,
+      "roadSegments": 0,
+      "buildingPassages": 0,
+      "points": 180,
+      "elevationRangeM": [
+        17.62,
+        23.41
+      ]
+    }
+  }
+}

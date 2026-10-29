@@ -1,127 +1,89 @@
 {
   "slug": "nanakita-park",
   "heroCheckpointId": "section-1",
-  "checkpointsTitle": "コースの雰囲気",
-  "intro": "泉中央駅近く、七北田川沿いに広がる総合公園です。公式ウォーキングマップでは一周3.2kmの周回が案内され、園内の広い遊歩道はジョギング利用が盛んと明記されています。トイレ、水飲み場、駐車場に加え、七北田公園体育館でロッカー・シャワーが利用でき、駅近と設備の両立が強みです。芝生や池、スタジアム周辺の開放感があり、日常の周回走に向きます。",
+  "checkpointsTitle": "区間ごとの確認ポイント",
+  "intro": "泉中央駅の南にある七北田公園の、西側園路と七北田川沿いを回る約1.5kmの参考周回です。都市緑化ホール西側の園路から体育館付近を通って西へ進み、洋風四阿の外側の園路、川沿い、カムリの池・泉ヶ池付近を巡って戻ります。芝生や池、木立の景色を楽しみながら、歩行者に配慮してゆっくり走れます。",
   "warnings": [
     {
-      "title": "一般利用者と交通ルールを優先してください",
-      "body": "ランニング専用路ではない区間を含む場合があります。信号を守り、歩道・公園・河川敷では歩行者を優先し、混雑時は歩いて通過してください。",
-      "url": "https://www.npa.go.jp/bureau/traffic/koutsuuannzennjyouhou.html",
-      "linkLabel": "警察庁の交通安全情報"
+      "title": "園内の走行と参考ルートについて",
+      "body": "公式ウォーキングMAPのA約2.5km・B約1.3kmとは異なる、公開園路に沿って再構成した約1.5kmの参考経路です。公式の測量GPXではありません。 遊具・芝生広場や池の周辺は散歩や遊ぶ人を優先し、混雑時は歩いてください。 園路には曲がり角や舗装の継ぎ目があります。現地の規制や案内を優先してください。 夜間の照明が連続することは確認していません。明るい時間帯の利用を想定しています。",
+      "url": "https://sendai-green-association.jp/assets/images/download/walkingmap_nanakita.pdf",
+      "linkLabel": "公式コース案内"
     },
     {
-      "title": "コースデータは出発前にも確認してください",
-      "body": "アクセス情報: 仙台市地下鉄南北線泉中央駅から徒歩約5分。駐車場あり。 工事や災害、施設の営業時間などは変わるため、現地案内を優先してください。",
-      "url": "https://dokorun.com/guide/gpx",
-      "linkLabel": "ウォッチ・アプリへの取り込みガイド"
+      "title": "アクセスと園内案内",
+      "body": "地下鉄南北線・泉中央駅から公園方面へ徒歩約5分。都市緑化ホール西側の園路を起点にしています。",
+      "url": "https://nanakita-park.jp/",
+      "linkLabel": "公式案内"
     }
   ],
   "startPoints": [
     {
       "id": "start-1",
-      "name": "泉中央駅側",
-      "badge": "電車でアクセス",
-      "destinationLat": 38.323167,
-      "destinationLng": 140.880796,
-      "routeAnchorLat": 38.328015,
-      "routeAnchorLng": 140.882793,
+      "name": "都市緑化ホール西側の園路",
+      "badge": "園路からスタート",
+      "destinationLat": 38.3194925,
+      "destinationLng": 140.8793209,
+      "routeAnchorLat": 38.3194925,
+      "routeAnchorLng": 140.8793209,
       "routeMode": "loop",
-      "accessText": "泉中央駅からコースまで約570m",
-      "facilitiesText": "設備欄と現地案内を出発前に確認してください",
-      "firstSection": "コースマップで最初の分岐を確認してから走り始めます。"
+      "accessText": "地下鉄南北線・泉中央駅から公園方面へ徒歩約5分。都市緑化ホール西側の園路を起点にしています。",
+      "facilitiesText": "トイレなどの位置は公式の園内案内図をご確認ください",
+      "firstSection": "園路と現地案内に沿って進み、歩行者を優先してください。"
     }
   ],
   "checkpoints": [
     {
       "id": "section-1",
-      "name": "スタート周辺",
-      "anchorLat": 38.328015,
-      "anchorLng": 140.882793,
-      "description": "スタート周辺の走路近隣で撮影された写真です。写真の説明: 仙台市泉区にある商業施設「セルバテラス」",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
-        "alt": "七北田公園のスタート周辺付近",
-        "caption": "七北田公園の走路近隣で撮影された風景",
-        "credit": "広瀬川",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg"
-      }
+      "name": "都市緑化ホール西側の園路",
+      "anchorLat": 38.3194925,
+      "anchorLng": 140.8793209,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-2",
-      "name": "序盤区間",
-      "anchorLat": 38.325834,
-      "anchorLng": 140.886762,
-      "description": "序盤区間の走路近隣で撮影された写真です。写真の説明: 仙台市泉区にある商業施設「セルバテラス」",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
-        "alt": "七北田公園の序盤区間付近",
-        "caption": "七北田公園の走路近隣で撮影された風景",
-        "credit": "広瀬川",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg"
-      }
+      "name": "体育館北側の園路",
+      "anchorLat": 38.3205534,
+      "anchorLng": 140.8785011,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-3",
-      "name": "中盤区間",
-      "anchorLat": 38.32173,
-      "anchorLng": 140.8854,
-      "description": "中盤区間の走路近隣で撮影された写真です。写真の説明: 仙台市泉区にある商業施設「セルバテラス」",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
-        "alt": "七北田公園の中盤区間付近",
-        "caption": "七北田公園の走路近隣で撮影された風景",
-        "credit": "広瀬川",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg"
-      }
+      "name": "洋風四阿の外側",
+      "anchorLat": 38.3209691,
+      "anchorLng": 140.8751689,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-4",
-      "name": "後半区間",
-      "anchorLat": 38.322305,
-      "anchorLng": 140.881521,
-      "description": "後半区間の走路近隣で撮影された写真です。写真の説明: 仙台市泉区にある商業施設「セルバテラス」",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
-        "alt": "七北田公園の後半区間付近",
-        "caption": "七北田公園の走路近隣で撮影された風景",
-        "credit": "広瀬川",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg"
-      }
+      "name": "七北田川沿い",
+      "anchorLat": 38.3184308,
+      "anchorLng": 140.8764852,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     },
     {
       "id": "section-5",
-      "name": "終盤区間",
-      "anchorLat": 38.325246,
-      "anchorLng": 140.879211,
-      "description": "終盤区間の走路近隣で撮影された写真です。写真の説明: 仙台市泉区にある商業施設「セルバテラス」",
-      "surfaceLabel": "舗装路",
-      "caution": "歩行者と交差点を優先",
-      "photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SELVA_Terrace.jpg/960px-SELVA_Terrace.jpg",
-        "alt": "七北田公園の終盤区間付近",
-        "caption": "七北田公園の走路近隣で撮影された風景",
-        "credit": "広瀬川",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SELVA_Terrace.jpg"
-      }
+      "name": "カムリの池・泉ヶ池付近",
+      "anchorLat": 38.3178839,
+      "anchorLng": 140.8793979,
+      "description": "園路と現地案内に沿って進み、歩行者を優先してください。",
+      "surfaceLabel": "園路",
+      "caution": "歩行者と現地案内を優先"
     }
   ],
   "dataProvenance": {
-    "stations": "HeartRails Express",
-    "photos": "Wikimedia Commons geotagged media",
-    "status": "automated_review_passed"
+    "status": "official_map_and_osm_reviewed",
+    "route": "© OpenStreetMap contributors (ODbL)",
+    "routeSources": "https://sendai-green-association.jp/assets/images/download/walkingmap_nanakita.pdf",
+    "elevation": "国土地理院の標高タイルを加工",
+    "reviewedAt": "2026-10-16"
   }
 }

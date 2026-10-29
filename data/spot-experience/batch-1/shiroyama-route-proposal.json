@@ -1,0 +1,39 @@
+{
+  "slug": "shiroyama-park-horinouchi",
+  "reviewedAt": "2026-10-16",
+  "status": "ready-for-parent-review",
+  "routePath": "/tmp/spot-route-repair/shiroyama-route.json",
+  "routePlot": "/tmp/spot-route-repair/shiroyama-route-b1.png",
+  "distanceM": 1381.54,
+  "pointCount": 128,
+  "elevationRangeM": [
+    18.85,
+    21.99
+  ],
+  "proposedName": "城山公園（堀之内）南側周回",
+  "introProposal": "松山城のふもとにある堀之内で、東口付近から南側の園路を回る約1.38kmの参考周回ルートです。お堀の内側や美術館周辺をつなぎ、短いジョギングや散歩と組み合わせて楽しめます。掲載ルートに松山城への登山道は含みません。",
+  "startPointProposal": {
+    "name": "堀之内東口の園内側",
+    "lat": 33.8410562,
+    "lng": 132.7643969,
+    "routeMode": "loop"
+  },
+  "warningsProposal": [
+    {
+      "title": "園路では歩行者を優先してください",
+      "body": "散歩や観光で利用する方がいます。幅の狭い区間や園内道路の横断では速度を落とし、イベントや工事時は現地の規制に従ってください。"
+    },
+    {
+      "title": "北側の第2期整備エリアはコースに含みません",
+      "body": "2026年10月16日の確認時点で、北側の第2期整備エリアは11月3日11時の開園予定です。掲載ルートは南側の既存園路を利用します。",
+      "url": "https://www.city.matsuyama.ehime.jp/hodo/202610/shiroyama2open.html"
+    }
+  ],
+  "sources": [
+    "https://www.city.matsuyama.ehime.jp/shisetsu/koen/syoukai/horinouchi.html",
+    "https://www.city.matsuyama.ehime.jp/shisetsu/koen/syoukai/horinouchi.files/pnf.pdf",
+    "https://www.city.matsuyama.ehime.jp/hodo/202610/shiroyama2open.html",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=132.755,33.838,132.771,33.849"
+  ],
+  "review": "公式既存園路図・第2期区域図とOSM図を目視照合。北側未開園区画と城山・二之丸有料庭園を避ける。全6wayはfootway/pedestrianでprivateやfoot=noなし。交点は同一OSMノード、手動線追加なし、重複辺なしの閉路。"
+}

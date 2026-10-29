@@ -1,0 +1,46 @@
+{
+  "slug": "yamagata-city-loop",
+  "status": "partial-route-replacement-proposal",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/yamagata-route.json",
+  "distanceM": 8733.134858975227,
+  "pointCount": 245,
+  "replacedOldProfileInteriorIndices": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+  ],
+  "oldProfileJoinIndices": [
+    70,
+    78
+  ],
+  "newReplacementPointRange": [
+    71,
+    102
+  ],
+  "preservationReview": "旧profileのindex0–70と78–219は座標・標高をそのまま保持。新接続は両端に約3cmの既存点/OSM点差があり、元点を保持して接続。新規迂回のみ15m以下に補間・GSI標高を取得。",
+  "reason": "2026年7月21日からの公式通年通行変更では本丸西側道路および北側道路が閉鎖/撤去対象。旧経路index71–77はその通行禁止区間へ入るため、北門内分岐→北側駐車場前→県体育館西側→東大手門側の現行案内に沿う道路へ迂回。",
+  "sources": [
+    "https://www.city.yamagata-yamagata.lg.jp/kurashi/koen/1006541/1006542/1017209.html",
+    "https://www.city.yamagata-yamagata.lg.jp/_res/projects/default_project/_page_/001/017/209/kazyoukouen.jpg",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=140.322,38.251,140.333,38.261"
+  ],
+  "introProposal": "山形駅西口側から霞城公園・文翔館・馬見ヶ崎川付近をつなぐ約8.7kmの参考周回ルートです。霞城公園の堀沿いと北側・東側の園路を通り、東大手門から市街地へ。歴史的な建物や街並みを眺めながら走れます。信号や交差点があるので、歩道では周囲を優先して進みましょう。",
+  "warningsProposal": [
+    "霞城公園では本丸の発掘調査・整備に伴う通行変更があります。掲載経路は2026年7月21日からの案内に合わせて北側・東側へ迂回しています。新たな規制は現地案内を優先してください。",
+    "城門内や歩道が混み合うときは歩いてください。",
+    "公園の開門時間と施設の営業日時を出発前に確認してください。"
+  ],
+  "elevation": {
+    "source": "mixed existing profile and GSI for replacement only",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14578/6304.txt"
+    ],
+    "method": "replacement densified to 15m; GSI nearest pixel dem5a/dem5b/dem",
+    "fetchedAt": "2026-10-16"
+  }
+}

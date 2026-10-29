@@ -1,0 +1,58 @@
+{
+  "slug": "rainbow-bridge-odaiba",
+  "reviewedAt": "2026-10-16",
+  "status": "route-repair-proposed",
+  "routeFile": "/tmp/spot-route-repair/rainbow-route.json",
+  "distanceM": 12597.256659097708,
+  "sourceUrls": [
+    "https://www.kouwan.metro.tokyo.lg.jp/kanko/road/rainbowbridge",
+    "https://www.kouwan.metro.tokyo.lg.jp/data/pamphlet/rainbow",
+    "https://www.kouwan.metro.tokyo.lg.jp/documents/d/kouwan/28825_rainbowbridge",
+    "https://www.kouwan.metro.tokyo.lg.jp/kanko/running2/odaiba"
+  ],
+  "observations": [
+    {
+      "type": "rejected-old-course",
+      "oldDistanceM": 3001.94,
+      "coursePoint": {
+        "lat": 35.636237,
+        "lng": 139.757219
+      },
+      "pano": {
+        "id": "c4BD7JAAzFrRNScZNhGCbQ",
+        "lat": 35.6362445,
+        "lng": 139.7572433,
+        "captured": "2026-08",
+        "heading": 90
+      },
+      "sourceUrl": "https://www.google.com/maps/@35.6362445,139.7572433,23a,90y,90h,90t/data=!3m7!1e1!3m5!1sc4BD7JAAzFrRNScZNhGCbQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dc4BD7JAAzFrRNScZNhGCbQ%26yaw%3D90!7i16384!8i8192",
+      "observed": "赤舗装の車道ループ上。黄中央線・車両・赤白バリケード・右金網と海。歩行者用の通路はない。旧GPXはループを一周し橋へ合流する形であり遊歩道の経路ではない。"
+    },
+    {
+      "type": "accepted-entrance",
+      "pano": {
+        "id": "iVXy0sJPiX_oJu32XD2DJw",
+        "lat": 35.6382582,
+        "lng": 139.7591273,
+        "captured": "2017-06",
+        "heading": 180
+      },
+      "sourceUrl": "https://www.google.com/maps/@35.6382582,139.7591273,8a,90y,180h,90t/data=!3m7!1e1!3m5!1siVXy0sJPiX_oJu32XD2DJw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DiVXy0sJPiX_oJu32XD2DJw%26yaw%3D180!7i13312!8i6656",
+      "observed": "北から芝浦アンカレイジ入口へ渡る屋根付き歩行通路・金属手すり・緑色床、入口係員・白い大建物。OSM319209548の入口位置と一致。車道ループは通らない。"
+    }
+  ],
+  "method": "公式パンフレットの北南遊歩道と芝浦入口を確認し、公開OSM歩道グラフのみで品川側街路と台場側公園・プロムナードを接続。車道を経路として不使用。エレベーター前の建物内接続線はOSMによる概略。",
+  "geometryNotes": [
+    "南508040811を芝浦→台場、北508040812を台場→芝浦。北南の進行方向は提案経路の選択であり、現地一方通行規制を断定しない。",
+    "台場側は出入口の階段508040814を使用。お台場海浜公園→ウエストプロムナード→ダイバーシティ前屋外広場→センタープロムナード→テレポートブリッジ→台場側入口。Zeppゲート・商業施設内通路は使わない。",
+    "橋以外にも高架歩道・階段を含む。1073点、地形DEM採用680点、構造物区間393点はele:null。獲得標高は非表示。"
+  ],
+  "operatingRules": {
+    "summer": "4月1日〜10月31日 9:00〜21:00",
+    "winter": "11月1日〜3月31日 10:00〜18:00",
+    "lastEntry": "閉館30分前",
+    "closed": "第3月曜日（祝日なら翌日）、天候・メンテナンスによる臨時閉鎖あり",
+    "walking": "橋遊歩道・階段・混雑する観光広場は歩行区間として案内。公式は他の歩行者に支障となる行為禁止。全面的なランニング禁止とは記載しない。"
+  },
+  "elevationNotes": "橋面標高・勾配の確かな数値がこの公式パンフレットにないため推測しない。橋/高架/階段はnullとし、前後を高さ補間しない。OSM長直線の15m分割はXY座標のみ。"
+}

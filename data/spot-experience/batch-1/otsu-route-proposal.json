@@ -1,0 +1,87 @@
+{
+  "slug": "otsu-kogan-nagisa-park",
+  "reviewedAt": "2026-10-16",
+  "routeFile": "/tmp/spot-route-repair/otsu-route.json",
+  "plotFile": "/tmp/spot-route-repair/otsu-route-b1.png",
+  "distanceM": 1247.99,
+  "pointCount": 117,
+  "sourceUrls": [
+    "https://www.biwako-visitors.jp/spot/detail/2975/",
+    "https://otsukoen.org/parks/parks_main/",
+    "https://www.city.otsu.lg.jp/soshiki/035/1809/o/68084.html",
+    "https://www.city.otsu.lg.jp/material/images/group/22/lagosuishou.jpg",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=135.876,34.997,135.897,35.008",
+    "https://api.openstreetmap.org/api/0.6/map?bbox=135.860,35.004,135.883,35.016"
+  ],
+  "officialEvidence": "滋賀県観光公式は浜大津〜近江大橋の湖岸一帯を公園と説明。公園管理者の主な公園一覧と大津市2026-03-24の湖岸施設/交通案内図でびわ湖ホールと湖岸範囲を照合。旧2024091246.pdfと県5560197.pdfは404で根拠に採用しない。",
+  "oldRouteEvidence": "旧起点は近江大橋中央。旧1,418m点は湖岸から離れた住宅街。旧GPXは中盤で国道/市街地を通り北側でも湖岸歩行者園路より道路寄り。単純な起点移動では公園コースの説明と一致しない。",
+  "newRouteEvidence": "びわ湖ホール西側の陸上湖岸園路35.0077767,135.8751448から大津港東側の湖岸園路35.0136121,135.865051へ進む片道1,247.99m。OSMのfoot designated cycleway/pathと小水路の歩道橋を接続。建物通路/私有地/階段を除外。手動接続なし、重複辺なし。",
+  "ways": [
+    442888665,
+    651607296,
+    442888677,
+    653763455,
+    471986847,
+    653763443,
+    653763433
+  ],
+  "startPointsProposal": [
+    {
+      "id": "start-1",
+      "name": "びわ湖ホール西側の湖岸園路",
+      "badge": "湖岸から出発",
+      "routeAnchorLat": 35.0077767,
+      "routeAnchorLng": 135.8751448,
+      "routeMode": "forward",
+      "accessText": "石場駅・島ノ関駅側から陸上の湖岸園路へ"
+    },
+    {
+      "id": "start-2",
+      "name": "大津港東側の湖岸園路",
+      "badge": "浜大津駅側",
+      "routeAnchorLat": 35.0136121,
+      "routeAnchorLng": 135.865051,
+      "routeMode": "reverse",
+      "accessText": "びわ湖浜大津駅から湖岸側へ"
+    }
+  ],
+  "introProposal": "琵琶湖の南西岸に広がる大津湖岸なぎさ公園。掲載しているのは、びわ湖ホール西側の湖岸園路から、大津港東側へつなぐ片道約1.25kmの参考コースです。水辺の眺めを楽しみながら短く走れ、同じ道を戻ると約2.5kmになります。公園全体の約5kmを網羅する経路ではありません。",
+  "warningsProposal": [
+    {
+      "title": "歩行者と自転車を優先してください",
+      "body": "園路は散歩や自転車でも利用されます。イベント開催時や混雑時は歩いて通過し、現地の規制に従ってください。"
+    },
+    {
+      "title": "湖岸では足元に注意してください",
+      "body": "水際には柵のない区間や段差があります。舗装された園路を利用し、強風時は無理をしないでください。"
+    }
+  ],
+  "startVisualEvidence": {
+    "sourceUrl": "https://google.com/maps/@35.0077709,135.8752521,3a,90y,310h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIC8wpG2IQ!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_WIF7BboRD09qjnV3BpkeWUcxXkr2KzSl1ocb_nD7c8rY30aYq-uuURQXbvsY0vnFTbdS_bRF__Izk9paCorRrLCy20udMbnWRtrnZuTRZ4wC3CZuZmAnKCDDaDQ78Le3nLZM0%3Dw900-h600-k-no-pi0-ya197-ro0-fo100!7i8704!8i4352?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "pano": "CIHM0ogKEICAgIC8wpG2IQ",
+    "captured": "2020-06",
+    "registeredLat": 35.0077709,
+    "registeredLng": 135.8752521,
+    "observed": "起点から約10m。舗装湖岸園路・石護岸・湖、遠景の山並み。陸上の園路と確認。"
+  },
+  "elevation": {
+    "source": "gsi",
+    "zoom": 14,
+    "method": "nearest pixel; DEM5A, DEM5B, DEM fallback",
+    "tiles": [
+      "https://cyberjapandata.gsi.go.jp/xyz/dem/14/14375/6489.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14375/6488.txt",
+      "https://cyberjapandata.gsi.go.jp/xyz/dem5a/14/14375/6489.txt"
+    ],
+    "fetchedAt": "2026-10-16"
+  },
+  "caution": "参考経路であり公式距離/実測高低差ではない。小橋付近のGSI地形標高は橋面の測量値ではない。",
+  "endVisualEvidence": {
+    "sourceUrl": "https://google.com/maps/@35.0136417,135.8650282,3a,90y,130h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgICy7ujRGA!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_M8U2U5zyjGkbCK5T-PJVuIPPuQaJKDiJplXFFyXTKzPE-D5a8jOGxHUiD76fQTWvlM7k1MfYZqSnFdtqwaqmL1dl9XlL-572QgtQdGvdqeVnDd4vzRTb7Gc5QnPj6-keSBlA%3Dw900-h600-k-no-pi0-ya123-ro0-fo100!7i8704!8i4352?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+    "pano": "CIHM0ogKEICAgICy7ujRGA",
+    "captured": "2020-06",
+    "registeredLat": 35.0136417,
+    "registeredLng": 135.8650282,
+    "observed": "終点から約4m。大津港東側の石舗装広場で湖と係留船、芝生、小規模円形建物を確認。湖岸遊歩道の終点として陸上に位置する。"
+  }
+}

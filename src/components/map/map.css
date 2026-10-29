@@ -121,3 +121,31 @@
   top: 24px;
   bottom: auto;
 }
+
+.course-selected-point {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-ink);
+  border-radius: 50%;
+  background: var(--color-brand);
+  box-shadow: 0 0 0 4px #ffffffb3;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.course-selected-point__label {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border: 2px solid white;
+  border-radius: 6px;
+  background: var(--color-brand);
+  color: var(--color-ink);
+  font:
+    700 12px/1.4 var(--font-noto-sans-jp),
+    sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px #0002;
+}
