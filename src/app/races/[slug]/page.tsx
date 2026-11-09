@@ -113,7 +113,6 @@ export default async function RacePage({ params }: { params: Params }) {
           </>
         )}
       </p>
-      <RaceDayInfoBox slug={slug} />
       {getPublishedStories(slug).map((story) => (
         <RaceStoryCard key={story.slug} story={story} />
       ))}
@@ -133,6 +132,7 @@ export default async function RacePage({ params }: { params: Params }) {
         mapOverlay={courseMeta && <RaceGpxActions slug={slug} courseMeta={courseMeta} />}
         courseNote={<RaceCourseNote race={race} courseMeta={courseMeta} />}
       />
+      <RaceDayInfoBox slug={slug} />
       {spotItems.length > 0 && (
         <section id="nearby" className="mt-12 scroll-mt-24">
           <SectionHeading>{race.name}周辺のランニングスポット</SectionHeading>

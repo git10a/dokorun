@@ -6,10 +6,10 @@ export function RaceDayInfoBox({ slug }: { slug: string }) {
   return (
     <section
       aria-labelledby="race-day-info-heading"
-      className="mt-6 max-w-3xl rounded-xl border border-line bg-cream p-4 sm:p-6"
+      className="mt-12 max-w-3xl rounded-xl border border-line bg-cream p-4 sm:p-6"
     >
       <h2 id="race-day-info-heading" className="text-lg font-bold">
-        大会当日の実務情報
+        アクセス・参加案内
       </h2>
       <p className="mt-2 text-sm font-bold">{info.edition}</p>
       <p className="mt-1 text-sm leading-7 text-sub">
