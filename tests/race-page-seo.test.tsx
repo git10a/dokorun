@@ -61,11 +61,11 @@ const rinkoPark: SpotSummary = {
 };
 
 describe("race page SEO preservation", () => {
-  it("places the official edition summary before the course map", async () => {
+  it("places the participation information after the course map", async () => {
     for (const slug of ["mito-komon-marathon", "suwako-marathon"]) {
       const html = renderToStaticMarkup(await RacePage({ params: Promise.resolve({ slug }) }));
       expect(html.indexOf('id="race-day-info-heading"')).toBeGreaterThan(0);
-      expect(html.indexOf('id="race-day-info-heading"')).toBeLessThan(html.indexOf('id="course-map"'));
+      expect(html.indexOf('id="race-day-info-heading"')).toBeGreaterThan(html.indexOf('id="course-map"'));
     }
   });
   it("combines scenery and preparation on both Legacy and expanded race pages", async () => {
