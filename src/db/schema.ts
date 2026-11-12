@@ -355,3 +355,38 @@ export const raceReviewReports = sqliteTable(
   },
   (t) => [uniqueIndex("race_review_reports_pk").on(t.reviewId, t.userId)],
 );
+
+// 大会記事(インタビューなどの読み物)。管理画面(/admin/stories)で編集し、/stories/{slug} で公開する。
+// 本文は1行=1ブロックの軽量記法(src/lib/article-body.ts)。HTMLは保存しない
+export const articleStatuses = ["draft", "published"] as const;
+
+export const articles = sqliteTable(
+  "articles",
+  {
+    id: uuidPk("id"),
+    slug: text("slug").notNull(),
+    raceSlug: text("race_slug"), // src/lib/race-list.ts の slug。大会ページからの導線に使う
+    title: text("title").notNull(),
+    subtitle: text("subtitle"),
+    body: text("body").notNull(),
+    speakers: text("speakers"), // 対談の話者ラベル(カンマ区切り)。先頭が聞き手
+    author: text("author").notNull().default("どこラン編集部"),
+    coverImageUrl: text("cover_image_url"),
+    seoTitle: text("seo_title"),
+    description: text("description").notNull(),
+    ogTitle: text("og_title"),
+    ogDescription: text("og_description"),
+    ogImageUrl: text("og_image_url"),
+    status: text("status", { enum: articleStatuses }).notNull().default("draft"),
+    publishedAt: timestampMs("published_at"),
+    // 未公開の記事を社外に見せるための共有プレビュー用トークン。再発行すると旧URLは無効になる
+    previewToken: text("preview_token").notNull(),
+    createdAt: createdNow("created_at"),
+    updatedAt: createdNow("updated_at"),
+  },
+  (t) => [
+    uniqueIndex("articles_slug").on(t.slug),
+    uniqueIndex("articles_preview_token").on(t.previewToken),
+    index("articles_race_status").on(t.raceSlug, t.status, t.publishedAt),
+  ],
+);

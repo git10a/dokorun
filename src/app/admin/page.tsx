@@ -28,6 +28,9 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           <form action={logout}>
             <button className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">ログアウト</button>
           </form>
+          <Link href="/admin/stories" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">
+            記事
+          </Link>
           <Link href="/admin/communities" className="rounded-lg border border-line px-4 py-2.5 text-sm font-bold">
             コミュニティ
           </Link>

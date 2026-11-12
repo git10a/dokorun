@@ -4,6 +4,13 @@ import { createElement } from "react";
 import { RaceStoryArticle } from "@/components/race-story";
 import { getPublishedStories, getPublishedStory, isPublishedStory, raceStories } from "@/lib/race-stories";
 
+// 記事本体はD1に保存する(tests/articles.test.tsx)。ここではコード内サンプルの境界だけを確かめる
+vi.mock("@/db/articles", () => ({
+  getPublishedArticle: async () => null,
+  getPublishedArticles: async () => [],
+  getArticleByPreviewToken: async () => null,
+}));
+
 import StoryPreview, { metadata as previewMetadata } from "@/app/preview/stories/[slug]/page";
 import StoryPage, { generateMetadata } from "@/app/stories/[slug]/page";
 

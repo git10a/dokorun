@@ -4,6 +4,8 @@ import { isAdmin } from "@/lib/auth";
 
 const allowedTypes: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 const maxSizeInBytes = 10 * 1024 * 1024;
+// R2のキーの接頭辞。フォームの folder で選ぶ(未指定は従来どおり spots)
+const allowedFolders = new Set(["spots", "articles"]);
 type ImageBucket = {
   put(key: string, value: ArrayBuffer, options: { httpMetadata: { contentType: string } }): Promise<unknown>;
 };
@@ -20,7 +22,8 @@ export async function POST(request: Request) {
   if (file.size > maxSizeInBytes)
     return NextResponse.json({ error: "10MB以下の画像を指定してください" }, { status: 400 });
   try {
-    const key = `spots/${crypto.randomUUID()}.${extension}`;
+    const folder = String(formData.get("folder") ?? "spots");
+    const key = `${allowedFolders.has(folder) ? folder : "spots"}/${crypto.randomUUID()}.${extension}`;
     const { env } = getCloudflareContext();
     // R2は現在wrangler.jsonc未バインディング(未有効化)。有効化時はIMAGE_BUCKETがCloudflareEnvに現れる
     const bucket = (env as CloudflareEnv & { IMAGE_BUCKET: ImageBucket }).IMAGE_BUCKET;

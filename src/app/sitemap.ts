@@ -6,6 +6,7 @@ import { features } from "@/lib/features";
 import { races } from "@/lib/races";
 import { getStationLines, getStations } from "@/lib/stations";
 import { getPublishedStories } from "@/lib/race-stories";
+import { getPublishedArticles } from "@/db/articles";
 import { editorialLastModified, raceEditorial, spotEditorial, stationEditorial } from "@/lib/course-editorial";
 
 // クローラーアクセスのたびにD1を引かないよう静的に生成する。新スポットは次の配信で反映する
@@ -31,7 +32,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/terms`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${baseUrl}/privacy`, lastModified: rebrandingUpdatedAt, changeFrequency: "yearly", priority: 0.2 },
   ];
-  const [spotRows, prefectureCounts] = await Promise.all([getSitemapSpots(), getPrefectureCounts()]);
+  const [spotRows, prefectureCounts, articles] = await Promise.all([
+    getSitemapSpots(),
+    getPrefectureCounts(),
+    getPublishedArticles(),
+  ]);
   const spotPages: MetadataRoute.Sitemap = spotRows.map((spot) => ({
     url: `${baseUrl}/spots/${spot.slug}`,
     lastModified: editorialLastModified(spotEditorial[spot.slug], spot.updatedAt),
@@ -73,6 +78,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "monthly",
     priority: 0.7,
   }));
+  // 管理画面(/admin/stories)で公開した記事。静的生成なので、公開後の次の配信で載る
+  const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${baseUrl}/stories/${article.slug}`,
+    lastModified: article.updatedAt,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
   return [
     ...fixedPages,
     ...areaPages,
@@ -82,5 +94,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...stationLinePages,
     ...spotPages,
     ...storyPages,
+    ...articlePages,
   ];
 }

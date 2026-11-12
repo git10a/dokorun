@@ -22,6 +22,8 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { breadcrumbJsonLd, JsonLd, spotItemListJsonLd } from "@/components/structured-data";
 import { getPublishedStories, raceStories } from "@/lib/race-stories";
 import { RaceStoryCard } from "@/components/race-story";
+import { getPublishedArticles } from "@/db/articles";
+import { ArticleCard } from "@/components/article-view";
 import { SectionHeading } from "@/components/section-heading";
 import { raceEditorial } from "@/lib/course-editorial";
 import { prefectureSlug } from "@/lib/areas";
@@ -63,7 +65,11 @@ export default async function RacePage({ params }: { params: Params }) {
   const { slug } = await params;
   const race = raceBySlug.get(slug);
   if (!race) notFound();
-  const [spotItems, initialReviews] = await Promise.all([getRaceSpotItems(race), getRaceReviews(slug)]);
+  const [spotItems, initialReviews, articles] = await Promise.all([
+    getRaceSpotItems(race),
+    getRaceReviews(slug),
+    getPublishedArticles(slug),
+  ]);
   const spotPrefectures = [...new Set(spotItems.map(({ spot }) => spot.prefecture))];
   const courseMeta = raceCourseMeta[slug];
   const schedule = splitRacesBySchedule();
@@ -113,6 +119,9 @@ export default async function RacePage({ params }: { params: Params }) {
           </>
         )}
       </p>
+      {articles.map((article) => (
+        <ArticleCard key={article.slug} article={article} />
+      ))}
       {getPublishedStories(slug).map((story) => (
         <RaceStoryCard key={story.slug} story={story} />
       ))}

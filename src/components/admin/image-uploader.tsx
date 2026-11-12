@@ -26,7 +26,24 @@ async function resizeImage(file: File): Promise<File> {
   return new File([blob], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg" });
 }
 
-export function ImageUploader({ onUploaded }: { onUploaded: (url: string) => void }) {
+/** 長辺2048pxのJPEGに縮小してR2へ送り、公開URLを返す */
+export async function uploadImage(file: File, folder: "spots" | "articles" = "spots"): Promise<string> {
+  const formData = new FormData();
+  formData.append("file", await resizeImage(file));
+  formData.append("folder", folder);
+  const response = await fetch("/api/upload", { method: "POST", body: formData });
+  const result = (await response.json()) as { url?: string; error?: string };
+  if (!response.ok || !result.url) throw new Error(result.error);
+  return result.url;
+}
+
+export function ImageUploader({
+  onUploaded,
+  folder = "spots",
+}: {
+  onUploaded: (url: string) => void;
+  folder?: "spots" | "articles";
+}) {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   return (
@@ -41,13 +58,7 @@ export function ImageUploader({ onUploaded }: { onUploaded: (url: string) => voi
           setLoading(true);
           setMessage("");
           try {
-            const resizedFile = await resizeImage(file);
-            const formData = new FormData();
-            formData.append("file", resizedFile);
-            const response = await fetch("/api/upload", { method: "POST", body: formData });
-            const result = (await response.json()) as { url?: string; error?: string };
-            if (!response.ok || !result.url) throw new Error(result.error);
-            onUploaded(result.url);
+            onUploaded(await uploadImage(file, folder));
             setMessage("画像をアップロードしました");
           } catch {
             setMessage("画像をアップロードできませんでした");
