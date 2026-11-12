@@ -75,7 +75,13 @@ function revalidateArticle(slug: string, raceSlug: string | null) {
 
 export async function saveArticle(_: FormState, formData: FormData): Promise<FormState> {
   await requireAdmin();
-  const parsed = articleSchema.safeParse(Object.fromEntries(formData.entries()));
+  // フォーム送信では入力欄の改行が CRLF になる。LF に揃えて保存する
+  // (揃えないと、編集画面で「未保存の変更」の判定が保存直後から食い違う)
+  const entries = [...formData.entries()].map(([key, value]) => [
+    key,
+    typeof value === "string" ? value.replace(/\r\n?/g, "\n") : value,
+  ]);
+  const parsed = articleSchema.safeParse(Object.fromEntries(entries));
   if (!parsed.success) return { message: "入力内容を確認してください", errors: parsed.error.flatten().fieldErrors };
   const { id, publishedOn, ...fields } = parsed.data;
   const db = getDb();

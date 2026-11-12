@@ -9,6 +9,13 @@ import { ArticleBody } from "@/components/article-body";
 import { ArticleSpeakersField } from "@/components/admin/article-speakers-field";
 import { ImageUploader, uploadImage } from "@/components/admin/image-uploader";
 import { parseArticleBody, parseYoutubeUrl, safeUrl } from "@/lib/article-body";
+import {
+  insertLineEdit,
+  pastedImageFiles,
+  toggleBoldEdit,
+  toggleLinePrefixEdit,
+  type TextEdit,
+} from "@/lib/article-editing";
 
 export type ArticleFormValues = {
   title: string;
@@ -89,6 +96,8 @@ export function ArticleForm({
   const [link, setLink] = useState({ text: "", url: "" });
   const [image, setImage] = useState({ url: "", caption: "", message: "", loading: false });
   const [youtube, setYoutube] = useState({ url: "", message: "" });
+  const [uploads, setUploads] = useState(0); // 貼り付けた画像のうち、アップロード中の件数
+  const [pasteMessage, setPasteMessage] = useState("");
   const bodyRef = useRef<HTMLTextAreaElement>(null);
   const caret = useRef({ start: initial.body.length, end: initial.body.length });
   const submitting = useRef(false);
@@ -120,50 +129,32 @@ export function ArticleForm({
     const element = bodyRef.current;
     if (element) caret.current = { start: element.selectionStart, end: element.selectionEnd };
   };
-  const applyBody = (body: string, position: number) => {
-    setValues((current) => ({ ...current, body }));
-    caret.current = { start: position, end: position };
+  const currentBody = () => bodyRef.current?.value ?? values.body;
+  /** 本文の一部を置き換える。入力欄の機能で書き換えるので、Cmd+Z で元に戻せる */
+  const edit = ({ from, to, text, select }: TextEdit) => {
+    const element = bodyRef.current;
     setPane("edit");
+    let done = false;
+    if (element) {
+      element.focus();
+      element.setSelectionRange(from, to);
+      done = text ? document.execCommand("insertText", false, text) : from === to || document.execCommand("delete");
+    }
+    // 入力欄が隠れているとき(スマホ幅でプレビュー表示中)などは、値を直接書き換える
+    if (!done)
+      setValues((current) => ({ ...current, body: current.body.slice(0, from) + text + current.body.slice(to) }));
+    caret.current = { start: select[0], end: select[1] };
     requestAnimationFrame(() => {
       bodyRef.current?.focus();
-      bodyRef.current?.setSelectionRange(position, position);
+      bodyRef.current?.setSelectionRange(select[0], select[1]);
     });
   };
-  const lineRange = (body: string, position: number) => {
-    const start = body.lastIndexOf("\n", position - 1) + 1;
-    const end = body.indexOf("\n", position);
-    return { start, end: end < 0 ? body.length : end };
-  };
-  /** カーソルのある行の次に、独立した1行として差し込む(空行にいるときはその行に入れる) */
-  const insertLine = (line: string) => {
-    const body = values.body;
-    const { start, end } = lineRange(body, caret.current.end);
-    const blank = body.slice(start, end).trim() === "";
-    const head = blank ? body.slice(0, start) : `${body.slice(0, end)}\n`;
-    const tail = body.slice(end);
-    applyBody(`${head}${line}${tail.startsWith("\n") ? "" : "\n"}${tail}`, head.length + line.length);
-  };
-  /** カーソルのある行の先頭に記号を付ける。同じ記号が付いていれば外す */
-  const toggleLinePrefix = (prefix: string) => {
-    const body = values.body;
-    const { start, end } = lineRange(body, caret.current.start);
-    const line = body.slice(start, end);
-    const stripped = line.replace(/^(#{2,3}|>|-)\s+/, "");
-    const next = line.startsWith(prefix) ? stripped : `${prefix}${stripped}`;
-    applyBody(`${body.slice(0, start)}${next}${body.slice(end)}`, start + next.length);
-  };
-  const wrapSelection = (before: string, after: string, placeholder: string) => {
-    const body = values.body;
-    const { start, end } = caret.current;
-    const selected = body.slice(start, end) || placeholder;
-    applyBody(
-      `${body.slice(0, start)}${before}${selected}${after}${body.slice(end)}`,
-      start + before.length + selected.length + after.length,
-    );
-  };
+  const insertLine = (line: string) => edit(insertLineEdit(currentBody(), caret.current.end, line));
+  const toggleLinePrefix = (prefix: string) => edit(toggleLinePrefixEdit(currentBody(), caret.current.start, prefix));
+  const toggleBold = () => edit(toggleBoldEdit(currentBody(), caret.current.start, caret.current.end));
   const openPanel = (next: Exclude<Panel, null>) => {
     rememberCaret();
-    if (next === "link") setLink({ text: values.body.slice(caret.current.start, caret.current.end), url: "" });
+    if (next === "link") setLink({ text: currentBody().slice(caret.current.start, caret.current.end), url: "" });
     if (next === "image") setImage({ url: "", caption: "", message: "", loading: false });
     if (next === "youtube") setYoutube({ url: "", message: "" });
     setPanel((current) => (current === next ? null : next));
@@ -172,10 +163,9 @@ export function ArticleForm({
   const insertLink = () => {
     const url = safeUrl(link.url);
     if (!url) return;
-    const body = values.body;
     const { start, end } = caret.current;
     const markup = `[${(link.text || url).replace(/[[\]\n]/g, "")}](${url})`;
-    applyBody(`${body.slice(0, start)}${markup}${body.slice(end)}`, start + markup.length);
+    edit({ from: start, to: end, text: markup, select: [start + markup.length, start + markup.length] });
     setPanel(null);
   };
   const insertImage = () => {
@@ -190,6 +180,37 @@ export function ArticleForm({
     }
     insertLine(youtube.url.trim());
     setPanel(null);
+  };
+
+  /**
+   * 貼り付けた画像をアップロードして、カーソルの行に入れる。
+   * 先に目印の行を入れておき、終わったらその行を画像の記法に置き換える(待つ間に書き進めても位置がずれない)
+   */
+  const pasteImage = async (file: File) => {
+    const marker = `（画像をアップロード中… ${Math.random().toString(36).slice(2, 8)}）`;
+    rememberCaret();
+    insertLine(marker);
+    setUploads((count) => count + 1);
+    setPasteMessage("");
+    let markup = "";
+    try {
+      markup = `![](${await uploadImage(file, "articles")})`;
+    } catch {
+      setPasteMessage("貼り付けた画像をアップロードできませんでした");
+    }
+    setUploads((count) => count - 1);
+    const element = bodyRef.current;
+    const body = currentBody();
+    const from = body.indexOf(marker);
+    if (from < 0) return; // 目印の行を消した = 取りやめ
+    const to = from + marker.length;
+    // 書き進めている場所は動かさない。目印より後ろにいるときだけ、長さの差の分ずらす
+    const shift = (position: number) =>
+      position >= to ? position + markup.length - marker.length : position > from ? from + markup.length : position;
+    const select: [number, number] = element
+      ? [shift(element.selectionStart), shift(element.selectionEnd)]
+      : [from + markup.length, from + markup.length];
+    edit({ from, to, text: markup, select });
   };
 
   const pageTitle = values.seoTitle || values.title || "記事タイトル";
@@ -339,7 +360,8 @@ export function ArticleForm({
           <p className="text-xs text-sub">{values.body.length.toLocaleString()}文字</p>
         </div>
         <p className="mb-4 text-sm leading-7 text-sub">
-          1行が1段落になります。画像や動画は、入れたい行にカーソルを置いてからボタンを押すと、その次の行に入ります。
+          1行が1段落になります。画像は、コピーして本文に貼り付けるとカーソルの行に入ります。太字は、文字を選んで
+          ⌘B（Windowsは Ctrl+B）です。
         </p>
 
         <div className="flex flex-wrap gap-2" role="toolbar" aria-label="本文の編集">
@@ -354,7 +376,8 @@ export function ArticleForm({
           <button
             type="button"
             className={toolButton}
-            onClick={() => (rememberCaret(), wrapSelection("**", "**", "太字"))}
+            title="文字を選んで ⌘B / Ctrl+B でも太字にできます"
+            onClick={() => (rememberCaret(), toggleBold())}
           >
             <Bold size={16} aria-hidden="true" />
             太字
@@ -528,10 +551,35 @@ export function ArticleForm({
               onChange={set("body")}
               onSelect={rememberCaret}
               onBlur={rememberCaret}
+              onKeyDown={(event) => {
+                // ⌘B / Ctrl+B で太字(日本語入力の変換中は何もしない)
+                const modifier = (event.metaKey || event.ctrlKey) && !event.shiftKey && !event.altKey;
+                if (!modifier || event.key.toLowerCase() !== "b" || event.nativeEvent.isComposing) return;
+                event.preventDefault();
+                rememberCaret();
+                toggleBold();
+              }}
+              onPaste={(event) => {
+                const images = pastedImageFiles({
+                  types: event.clipboardData.types,
+                  text: event.clipboardData.getData("text/plain"),
+                  files: [...event.clipboardData.files],
+                });
+                if (!images.length) return; // 文字の貼り付けはそのまま
+                event.preventDefault();
+                void (async () => {
+                  for (const file of images) await pasteImage(file);
+                })();
+              }}
               spellCheck={false}
               className="h-[70vh] min-h-96 w-full resize-y rounded-lg border border-line bg-paper p-4 text-sm leading-7 outline-none focus:border-ink"
             />
             {error("body") && <span className="mt-1 block text-xs text-danger">{error("body")}</span>}
+            {(uploads > 0 || pasteMessage) && (
+              <p role="status" className={`mt-1 text-xs font-bold ${pasteMessage ? "text-danger" : "text-sub"}`}>
+                {uploads > 0 ? "貼り付けた画像をアップロードしています…" : pasteMessage}
+              </p>
+            )}
             <details className="mt-2 text-xs leading-6 text-sub">
               <summary className="cursor-pointer font-bold">書き方の一覧</summary>
               <ul className="mt-2 space-y-1">
@@ -539,7 +587,8 @@ export function ArticleForm({
                   <code>## 見出し</code> ／ <code>### 小見出し</code>
                 </li>
                 <li>
-                  <code>![キャプション](画像のURL)</code> … 画像
+                  <code>![キャプション](画像のURL)</code> … 画像（貼り付けた画像は <code>![](…)</code> で入るので、[ ]
+                  の中に説明を書けます）
                 </li>
                 <li>YouTubeのURLだけを1行に書く … 動画の埋め込み（URLの t=90 で再生開始位置を指定）</li>
                 <li>
@@ -693,7 +742,7 @@ export function ArticleForm({
           <button
             name="status"
             value="draft"
-            disabled={pending}
+            disabled={pending || uploads > 0}
             onClick={(event) => {
               if (status === "published" && !window.confirm("公開を取り下げて下書きに戻しますか？"))
                 event.preventDefault();
@@ -705,7 +754,7 @@ export function ArticleForm({
           <button
             name="status"
             value="published"
-            disabled={pending}
+            disabled={pending || uploads > 0}
             onClick={(event) => {
               if (status !== "published" && !window.confirm("この記事を公開しますか？誰でも読める状態になります。"))
                 event.preventDefault();

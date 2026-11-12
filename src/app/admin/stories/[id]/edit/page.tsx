@@ -74,12 +74,13 @@ export default async function EditStoryPage({
           raceSlug: article.raceSlug ?? "",
           author: article.author,
           speakers: article.speakers ?? "",
-          body: article.body,
+          // 以前の保存分には CRLF の改行が残っている。入力欄の値(LF)と揃える
+          body: article.body.replace(/\r\n?/g, "\n"),
           coverImageUrl: article.coverImageUrl ?? "",
           seoTitle: article.seoTitle ?? "",
-          description: article.description,
+          description: article.description.replace(/\r\n?/g, "\n"),
           ogTitle: article.ogTitle ?? "",
-          ogDescription: article.ogDescription ?? "",
+          ogDescription: (article.ogDescription ?? "").replace(/\r\n?/g, "\n"),
           ogImageUrl: article.ogImageUrl ?? "",
           publishedOn: article.publishedAt ? dateInputValue(article.publishedAt) : "",
         }}

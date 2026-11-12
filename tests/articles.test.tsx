@@ -10,6 +10,7 @@ import {
   parseYoutubeUrl,
   serializeSpeakers,
 } from "@/lib/article-body";
+import { insertLineEdit, pastedImageFiles, toggleBoldEdit, type TextEdit } from "@/lib/article-editing";
 import type { Article } from "@/db/articles";
 
 const db = vi.hoisted(() => ({
@@ -167,6 +168,58 @@ describe("article body markup", () => {
     expect(renderToStaticMarkup(createElement(ArticleBody, { blocks }))).toContain(
       'href="https://mie-matsusaka-marathon.jp/omotenashi-shop/"',
     );
+  });
+});
+
+describe("article editor operations", () => {
+  const apply = (body: string, change: TextEdit) => body.slice(0, change.from) + change.text + body.slice(change.to);
+  const selection = (body: string, change: TextEdit) => apply(body, change).slice(...change.select);
+
+  it("makes the selection bold with one shortcut and plain again with the next", () => {
+    const body = "トンネルは32km地点です。";
+    const start = body.indexOf("32km地点");
+    const bold = toggleBoldEdit(body, start, start + "32km地点".length);
+    expect(apply(body, bold)).toBe("トンネルは**32km地点**です。");
+    expect(selection(body, bold)).toBe("32km地点");
+    // 太字にした直後の選択のまま、もう一度押すと外れる
+    const bolded = apply(body, bold);
+    expect(apply(bolded, toggleBoldEdit(bolded, ...bold.select))).toBe(body);
+    // 記号ごと選んでも外れる
+    expect(apply(bolded, toggleBoldEdit(bolded, start, start + "**32km地点**".length))).toBe(body);
+  });
+
+  it("keeps surrounding spaces outside the bold marks and handles each line separately", () => {
+    expect(apply("a bold b", toggleBoldEdit("a bold b", 1, 7))).toBe("a **bold** b");
+    const lines = "1行目\n\n2行目";
+    expect(apply(lines, toggleBoldEdit(lines, 0, lines.length))).toBe("**1行目**\n\n**2行目**");
+    const empty = toggleBoldEdit("前後", 1, 1);
+    expect(apply("前後", empty)).toBe("前****後");
+    expect(empty.select).toEqual([3, 3]);
+  });
+
+  it("puts an inserted line after the cursor's line, or into the line when it is blank", () => {
+    const body = "1行目\n2行目\n\n4行目";
+    expect(apply(body, insertLineEdit(body, 1, "![](x)"))).toBe("1行目\n![](x)\n2行目\n\n4行目");
+    expect(apply(body, insertLineEdit(body, 8, "![](x)"))).toBe("1行目\n2行目\n![](x)\n4行目");
+    expect(apply(body, insertLineEdit(body, body.length, "![](x)"))).toBe("1行目\n2行目\n\n4行目\n![](x)\n");
+    expect(apply("", insertLineEdit("", 0, "![](x)"))).toBe("![](x)\n");
+  });
+
+  it("treats a pasted screenshot or copied image as an image, but pasted text as text", () => {
+    const png = new File(["x"], "image.png", { type: "image/png" });
+    expect(pastedImageFiles({ types: ["Files"], text: "", files: [png] })).toEqual([png]);
+    // Finderでコピーした画像にはファイル名が、ブラウザでコピーした画像にはURLが文字として付く
+    expect(pastedImageFiles({ types: ["text/plain", "Files"], text: "image.png", files: [png] })).toEqual([png]);
+    expect(pastedImageFiles({ types: ["text/html", "Files"], text: "https://x.example/a.png", files: [png] })).toEqual([
+      png,
+    ]);
+    // WordやExcelの文字コピーには見た目の写しの画像が付くが、文字として貼り付ける
+    expect(pastedImageFiles({ types: ["text/plain", "text/rtf", "Files"], text: "本文", files: [png] })).toEqual([]);
+    expect(pastedImageFiles({ types: ["text/plain", "Files"], text: "文章 と 画像", files: [png] })).toEqual([]);
+    expect(pastedImageFiles({ types: ["text/plain"], text: "ただの文字", files: [] })).toEqual([]);
+    expect(
+      pastedImageFiles({ types: ["Files"], text: "", files: [new File(["x"], "a.pdf", { type: "application/pdf" })] }),
+    ).toEqual([]);
   });
 });
 
