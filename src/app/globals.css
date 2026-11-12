@@ -13,7 +13,7 @@
   --color-danger-soft: #fdecec;
   --color-success: #207235;
   --color-success-soft: #eaf7ed;
-  --font-sans: var(--font-noto-sans-jp), sans-serif;
+  --font-sans: var(--font-line-seed-jp), sans-serif;
 }
 
 /* レイヤー外に書くとTailwindのユーティリティ(text-accent等)より優先されてしまうため、baseレイヤーに置く */
@@ -30,7 +30,7 @@
     margin: 0;
     background: var(--color-paper);
     color: var(--color-ink);
-    font-family: var(--font-noto-sans-jp), sans-serif;
+    font-family: var(--font-line-seed-jp), sans-serif;
   }
 
   button,

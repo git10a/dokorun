@@ -45,17 +45,17 @@ const characterDataUri = (file: string) =>
 
 const PAGE_HTML = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@700;800&display=swap" rel="stylesheet">
 <style>
-  html,body{margin:0;width:${WIDTH}px;height:${HEIGHT}px;overflow:hidden;font-family:"Noto Sans JP","Hiragino Sans",sans-serif}
+  html,body{margin:0;width:${WIDTH}px;height:${HEIGHT}px;overflow:hidden;font-family:"LINE Seed JP","Hiragino Sans",sans-serif}
   #map{position:absolute;inset:0}
-  #logo{position:absolute;top:28px;left:32px;background:#ffd900;color:#1a1a1a;font-weight:900;font-size:30px;padding:10px 24px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  #logo{position:absolute;top:28px;left:32px;background:#ffd900;color:#1a1a1a;font-weight:800;font-size:30px;padding:10px 24px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
   #bar{position:absolute;left:0;right:0;bottom:0;background:#f7f5ef;border-top:4px solid #ffd900;padding:26px 40px 30px;display:flex;align-items:center;gap:32px}
   #text{flex:1;min-width:0}
-  #name{font-size:58px;font-weight:900;color:#1a1a1a;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #name{font-size:58px;font-weight:800;color:#1a1a1a;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   #meta{margin-top:10px;font-size:28px;font-weight:700;color:#6b7280}
   #dist{flex-shrink:0;background:#ffd900;border-radius:20px;padding:14px 28px;text-align:center}
-  #dist .v{font-size:56px;font-weight:900;color:#1a1a1a;line-height:1}
+  #dist .v{font-size:56px;font-weight:800;color:#1a1a1a;line-height:1}
   #dist .u{font-size:24px;font-weight:700;color:#1a1a1a;margin-left:4px}
   #chara{position:absolute;right:34px;bottom:172px;height:170px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.2))}
 </style></head><body>

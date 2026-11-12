@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { LINE_Seed_JP } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { defaultOgImage, getSiteUrl, openGraph, siteConfig } from "@/lib/site";
 import "./globals.css";
 import { JsonLd } from "@/components/structured-data";
 
-const notoSansJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp", display: "swap" });
+// LINE Seed JPは可変フォントではなく100/400/700/800の4ウェイトのみ。font-medium→400、font-semibold→700、font-black→800に寄る
+const lineSeedJp = LINE_Seed_JP({
+  weight: ["400", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-line-seed-jp",
+  display: "swap",
+  // Nextがこのフォントの代替フォント用メトリクスを持っておらず、ビルドのたびに警告が出るため無効化
+  adjustFontFallback: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -49,7 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   ];
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={`${notoSansJp.variable} min-h-screen antialiased`}>
+      <body className={`${lineSeedJp.variable} min-h-screen antialiased`}>
         <JsonLd data={structuredData} />
         <Header />
         <main>{children}</main>
