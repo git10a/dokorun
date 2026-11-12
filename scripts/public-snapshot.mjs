@@ -1,5 +1,7 @@
 // Only explicitly public catalog fields may leave production for a build.
 export const publicTables = {
+  articles:
+    "id slug race_slug title subtitle body speakers author cover_image_url seo_title description og_title og_description og_image_url status published_at created_at updated_at",
   spots:
     "id slug name name_kana prefecture city lat lng description access has_toilet has_water_fountain has_vending_machine has_locker has_shower has_sento_nearby has_parking has_convenience_store night_lighting track_usage is_published created_at updated_at",
   courses:
@@ -20,13 +22,15 @@ export function publicQuery(table, offset = 0) {
     .join(", ");
   const publishedSpot = "spot_id IN (SELECT id FROM spots WHERE is_published = 1)";
   const condition =
-    table === "spots" || table === "communities"
-      ? "is_published = 1"
-      : table === "tags"
-        ? "1 = 1"
-        : table === "spot_communities"
-          ? `${publishedSpot} AND community_id IN (SELECT id FROM communities WHERE is_published = 1)`
-          : publishedSpot;
+    table === "articles"
+      ? "status = 'published' AND published_at IS NOT NULL"
+      : table === "spots" || table === "communities"
+        ? "is_published = 1"
+        : table === "tags"
+          ? "1 = 1"
+          : table === "spot_communities"
+            ? `${publishedSpot} AND community_id IN (SELECT id FROM communities WHERE is_published = 1)`
+            : publishedSpot;
   return `SELECT ${fields} FROM ${table} WHERE ${condition} ORDER BY ${table === "spot_tags" ? "spot_id, tag_id" : table === "spot_communities" ? "spot_id, community_id" : "id"} LIMIT 200 OFFSET ${offset}`;
 }
 export async function fillPublicSnapshot(client, query) {
@@ -38,13 +42,17 @@ export async function fillPublicSnapshot(client, query) {
   for (const row of schema) await client.execute(row.sql);
   for (const [table, fieldList] of Object.entries(publicTables)) {
     const fields = fieldList.split(" ");
+    // The schema requires a unique token; never fetch the real preview credential.
+    const insertFields = table === "articles" ? [...fields, "preview_token"] : fields;
     for (let offset = 0; ; offset += 200) {
       const rows = await query(publicQuery(table, offset));
       if (rows.length)
         await client.batch(
           rows.map((row) => ({
-            sql: `INSERT INTO ${table} (${fields.join(",")}) VALUES (${fields.map(() => "?").join(",")})`,
-            args: fields.map((field) => row[field] ?? null),
+            sql: `INSERT INTO ${table} (${insertFields.join(",")}) VALUES (${insertFields.map(() => "?").join(",")})`,
+            args: insertFields.map((field) =>
+              field === "preview_token" ? `build-only:${row.id}` : (row[field] ?? null),
+            ),
           })),
           "write",
         );
