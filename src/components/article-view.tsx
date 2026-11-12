@@ -43,7 +43,7 @@ export function ArticleView({ article, preview = false }: { article: Article; pr
   const blocks = parseArticleBody(article.body, article.speakers);
   const headings = articleHeadings(blocks);
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-12 pt-6 md:px-6 md:pt-10">
+    <div className="mx-auto max-w-[760px] px-[22px] pb-12 pt-6 sm:px-[30px] sm:pt-10">
       {preview && (
         <div
           role="note"
@@ -68,17 +68,17 @@ export function ArticleView({ article, preview = false }: { article: Article; pr
       />
 
       <article>
-        <header className="mt-6 max-w-4xl">
+        <header className="mt-8 sm:mt-12">
           <p className="flex flex-wrap items-center gap-3 text-xs font-bold tracking-wider">
             <span className="h-0.5 w-8 bg-brand" aria-hidden="true" />
             大会記事
             {race && <span className="text-sub">{race.name}</span>}
           </p>
-          <h1 className="mt-5 text-balance text-[26px] font-black leading-[1.5] tracking-tight min-[375px]:text-[28px] sm:text-[40px]">
+          <h1 className="mt-5 text-pretty text-[25px] font-bold leading-[1.7] tracking-[0.01em] sm:text-[32px] sm:leading-[1.65] sm:tracking-[0.025em]">
             {article.title}
           </h1>
           {article.subtitle && (
-            <p className="mt-4 text-balance text-base font-bold leading-8 text-sub sm:text-lg">{article.subtitle}</p>
+            <p className="mt-6 text-pretty text-[13px] leading-[1.95] text-sub sm:text-sm">{article.subtitle}</p>
           )}
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-sub">
             <span>取材・編集：{article.author}</span>
@@ -92,17 +92,17 @@ export function ArticleView({ article, preview = false }: { article: Article; pr
           <img
             src={article.coverImageUrl}
             alt=""
-            className="mt-8 aspect-[16/9] w-full rounded-xl object-cover sm:mt-10"
+            className="mt-8 aspect-[16/9] w-full rounded-2xl object-cover sm:mt-10"
             fetchPriority="high"
           />
         )}
 
-        <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[minmax(0,680px)_minmax(0,1fr)] lg:gap-16">
+        <div className="mt-10">
           <div className="min-w-0">
             {headings.length > 1 && (
-              <details className="mb-10 rounded-xl border border-line px-5 lg:hidden">
+              <details className="mb-10 rounded-xl border border-line px-5">
                 <summary className={`cursor-pointer py-4 text-sm font-bold ${focus}`}>この記事の目次</summary>
-                <nav aria-label="記事の目次（モバイル）" className="pb-4">
+                <nav aria-label="記事の目次" className="pb-4">
                   <Contents headings={headings} />
                 </nav>
               </details>
@@ -145,15 +145,6 @@ export function ArticleView({ article, preview = false }: { article: Article; pr
               </section>
             )}
           </div>
-
-          {headings.length > 1 && (
-            <aside className="sticky top-24 hidden lg:block">
-              <p className="text-xs font-bold tracking-wider text-sub">CONTENTS</p>
-              <nav aria-label="記事の目次" className="mt-4">
-                <Contents headings={headings} />
-              </nav>
-            </aside>
-          )}
         </div>
       </article>
     </div>

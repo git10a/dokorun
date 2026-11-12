@@ -109,11 +109,11 @@ describe("article body markup", () => {
     expect(output).toContain('src="/characters/hashiro-smile.png"');
     expect(output).toContain('src="https://img.example/office.jpg"');
     expect(output).not.toContain("javascript:");
-    // 聞き手は色だけで区別し、太字にはしない。吹き出しにはアイコン側へ向くしっぽが付く
-    expect(output.match(/rounded-2xl[^"]*var\(--color-brand\)/g)).toHaveLength(1);
-    expect(output.match(/rounded-2xl[^"]*bg-cream/g)).toHaveLength(2);
-    expect(output).not.toMatch(/rounded-2xl[^"]*font-bold/);
-    expect(output.match(/rotate-45/g)).toHaveLength(3);
+    // 質問だけ吹き出しにし、回答はアイコン付きの通常本文として表示する。
+    expect(output.match(/rotate-45/g)).toHaveLength(1);
+    expect(output.match(/bg-\[#fff9d7\]/g)).toHaveLength(2);
+    expect(output).toContain("質問です。");
+    expect(output).toContain("答えです。");
   });
 
   it("inserts an image or a YouTube video on the line where it is written", () => {
