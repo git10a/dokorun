@@ -108,8 +108,11 @@ describe("article body markup", () => {
     expect(output).toContain('src="/characters/hashiro-smile.png"');
     expect(output).toContain('src="https://img.example/office.jpg"');
     expect(output).not.toContain("javascript:");
-    // 聞き手の吹き出しだけ色と太字を変える
-    expect(output.match(/bg-brand\/20 font-bold/g)).toHaveLength(1);
+    // 聞き手は色だけで区別し、太字にはしない。吹き出しにはアイコン側へ向くしっぽが付く
+    expect(output.match(/rounded-2xl[^"]*var\(--color-brand\)/g)).toHaveLength(1);
+    expect(output.match(/rounded-2xl[^"]*bg-cream/g)).toHaveLength(2);
+    expect(output).not.toMatch(/rounded-2xl[^"]*font-bold/);
+    expect(output.match(/rotate-45/g)).toHaveLength(3);
   });
 
   it("inserts an image or a YouTube video on the line where it is written", () => {

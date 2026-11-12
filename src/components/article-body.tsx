@@ -4,6 +4,12 @@ import type { ArticleBlock, Inline } from "@/lib/article-body";
 // 記事本文の表示。公開ページ(サーバー)と管理画面のライブプレビュー(クライアント)の両方で使うため、
 // サーバー専用・クライアント専用のAPIは使わない
 
+// 吹き出しとしっぽが重なる部分だけ濃くならないよう、聞き手の色は不透明で作る(ブランド色の20%を白に混ぜた色)
+const bubbleColor = {
+  host: "bg-[color-mix(in_srgb,var(--color-brand)_20%,white)]",
+  guest: "bg-cream",
+};
+
 function InlineText({ inline }: { inline: Inline[] }) {
   return (
     <>
@@ -72,15 +78,20 @@ function Block({ block }: { block: ArticleBlock }) {
             )}
             <span className="break-all text-center text-[11px] font-bold leading-4">{label}</span>
           </div>
-          {/* 聞き手の発言は色と太字で区別する */}
-          <div
-            className={`space-y-4 rounded-2xl px-4 py-3 text-base leading-8 ${role === "host" ? "bg-brand/20 font-bold" : "bg-cream"}`}
-          >
-            {block.paragraphs.map((paragraph, index) => (
-              <p key={index}>
-                <InlineText inline={paragraph} />
-              </p>
-            ))}
+          {/* 聞き手と話し手は吹き出しの色で区別する */}
+          <div className={`relative rounded-2xl px-4 py-3 text-base leading-8 ${bubbleColor[role]}`}>
+            {/* アイコンに向けた小さなしっぽ。角を丸めた四角を45度回して、先だけを外に出す */}
+            <span
+              aria-hidden="true"
+              className={`absolute -left-1.5 top-[1.125rem] size-3.5 rotate-45 rounded-[4px] ${bubbleColor[role]}`}
+            />
+            <div className="relative space-y-4">
+              {block.paragraphs.map((paragraph, index) => (
+                <p key={index}>
+                  <InlineText inline={paragraph} />
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       );
