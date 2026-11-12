@@ -151,53 +151,46 @@ export function ArticleView({ article, preview = false }: { article: Article; pr
   );
 }
 
+/** カバー未設定の記事には、選定済みの本文写真を使う。本文やOGP画像は変更しない。 */
+const articleCardPhotos: Record<string, { src: string; label: string }> = {
+  "mie-matsusaka-marathon": {
+    src: "https://pub-c598f7bd37324d98a1771a87633f82d0.r2.dev/articles/e5752087-5758-47c3-81fb-8dd33ba8cad9.jpg",
+    label: "運営事務局に聞きました",
+  },
+};
+
 /** 大会ページに置く、記事への導線 */
 export function ArticleCard({ article }: { article: ArticleSummary }) {
+  const selectedPhoto = articleCardPhotos[article.slug];
+  const imageUrl = article.coverImageUrl || selectedPhoto?.src;
   return (
     <article className="mt-6">
       <Link
         href={`/stories/${article.slug}`}
-        className={`group grid overflow-hidden rounded-xl border border-line bg-paper transition-shadow hover:shadow-md sm:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr] ${focus}`}
+        className={`group flex items-center gap-3 rounded-2xl border border-line bg-paper p-3 transition-colors hover:border-brand-dark sm:gap-6 sm:p-4 ${focus}`}
       >
-        {article.coverImageUrl ? (
+        {imageUrl && (
           <img
-            src={article.coverImageUrl}
+            src={imageUrl}
             alt=""
             loading="lazy"
-            className="h-40 w-full object-cover sm:h-full sm:min-h-44"
+            className="h-24 w-24 shrink-0 rounded-xl object-cover sm:h-32 sm:w-[220px] lg:w-[280px]"
           />
-        ) : (
-          <div
-            aria-hidden="true"
-            className="relative flex min-h-32 items-center overflow-hidden bg-cream px-6 py-5 sm:min-h-full sm:p-7"
-          >
-            <div className="absolute -right-10 -top-16 h-56 w-56 rounded-full border-[28px] border-brand/70 sm:-right-24 sm:top-12" />
-            <div className="relative border-l-2 border-ink pl-4">
-              <p className="text-[10px] font-bold tracking-[0.18em]">どこランの大会記事</p>
-              <p className="mt-3 text-xl font-black leading-relaxed sm:text-2xl">
-                <span>知って、</span>
-                <span className="sm:block">走る。</span>
-              </p>
-            </div>
-          </div>
         )}
-        <div className="min-w-0 p-5 sm:p-6 lg:px-8">
-          <p className="inline-flex items-center gap-1.5 text-xs font-bold">
-            <BookOpen size={15} aria-hidden="true" />
-            大会記事
+        <div className="min-w-0 flex-1 py-1">
+          <p className="flex items-center gap-2 text-[10px] leading-5 text-sub sm:text-xs">
+            <BookOpen size={15} className="hidden shrink-0 sm:block" aria-hidden="true" />
+            {selectedPhoto?.label ?? "大会記事"}
           </p>
-          <h2 className="mt-3 text-lg font-bold leading-relaxed tracking-tight group-hover:underline group-hover:underline-offset-4 sm:text-xl">
+          <h2 className="mt-1.5 text-pretty text-sm font-bold leading-[1.7] group-hover:underline group-hover:underline-offset-4 sm:mt-2 sm:text-lg lg:text-xl">
             {article.title}
           </h2>
-          <p className="mt-3 line-clamp-2 text-sm leading-7 text-sub">{article.subtitle ?? article.description}</p>
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
-            <p className="text-xs text-sub">{article.author}</p>
-            <span className="inline-flex items-center gap-2 text-sm font-bold">
-              記事を読む
-              <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </span>
-          </div>
         </div>
+        <ArrowRight
+          size={20}
+          className="hidden shrink-0 transition-transform group-hover:translate-x-1 motion-reduce:transform-none sm:block"
+          aria-hidden="true"
+        />
       </Link>
     </article>
   );
