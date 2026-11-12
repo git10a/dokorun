@@ -7,9 +7,10 @@ import { races } from "@/lib/races";
 
 import research from "../data/race-preparation-research/2026-10-14.json";
 import followupResearch from "../data/race-preparation-research/2026-10-15.json";
+import expandedResearch from "../data/race-preparation-research/2026-11-09.json";
 
 const reviewedRaces = [
-  ...new Map([...research.races, ...followupResearch.races].map((race) => [race.slug, race])).values(),
+  ...new Map([...research.races, ...followupResearch.races, ...expandedResearch.races].map((race) => [race.slug, race])).values(),
 ];
 
 describe("race preparation source boundaries", () => {
@@ -19,7 +20,6 @@ describe("race preparation source boundaries", () => {
     for (const slug of Object.keys(raceEditorial)) expect(catalogSlugs.has(slug)).toBe(true);
     for (const entry of Object.values(raceEditorial)) {
       expect(entry!.points.length).toBeGreaterThan(0);
-      expect(entry!.points.length).toBeLessThanOrEqual(3);
       expect(entry!.referenceLabel).toBeTruthy();
       expect(entry!.sourceNote).toBeTruthy();
       expect(entry!.sources.length).toBeGreaterThan(0);

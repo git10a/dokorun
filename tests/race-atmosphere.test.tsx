@@ -105,31 +105,28 @@ describe("race scenery references", () => {
     expect(html.match(/コース上で見る/g)).toHaveLength(5);
     expect(html.match(/>実際の景色を見る</g)).toHaveLength(6);
     expect(html).not.toContain("Googleマップで実景を見る");
-    expect(html).toContain("約6.3");
-    expect(html).toContain("約9.8");
-    expect(html).toContain("約20.6");
+    expect(html).toContain("6〜9");
+    expect(html).toContain("9〜12");
+    expect(html).toContain("18〜21.1");
     expect(html).toContain("北側から見た会場の外観");
-    expect(html).not.toContain("約21.1km");
     expect(html).toContain("公式の距離表示とは異なる");
-    expect(html).toContain("2025年大会の体験記を参考");
+    expect(html).toContain("2025年大会の実走記3件と公式コースを参考");
     expect(html).toContain("画像は2026年コースの景色");
     expect(html.match(/<h2\b/g)).toHaveLength(1);
     expect(html).not.toContain("コースの雰囲気");
     const items = html.split("<ol")[1].split("</ol>")[0].split("<li").slice(1);
-    expect(items).toHaveLength(6);
-    for (const item of items) expect(item).toContain("<img");
+    expect(items).toHaveLength(8);
+    expect(items.filter((item) => item.includes("<img"))).toHaveLength(6);
+    expect(items.at(-1)).not.toContain("km付近");
     for (const point of raceEditorial[slug]!.points) {
+      if (!point.sceneId) continue;
       const scene = getRaceAtmosphere(slug, 2026)!.scenes.find((scene) => scene.id === point.sceneId);
       expect(scene).toBeDefined();
       expect(readFileSync(`public${scene!.imageSrc}`).byteLength).toBeGreaterThan(0);
     }
     const headings = [...html.matchAll(/<h3[^>]*>(.*?)<\/h3>/g)].map((match) => match[1]);
     expect(headings).toEqual([
-      "東京ドームシティを左手に",
-      "日本橋を渡り、最初の折り返しへ",
-      "二つの折り返しを通って戻る",
-      "競技場へ戻る道は、長い上り",
-      "外苑西通りから競技場へ戻る",
+      ...raceEditorial[slug]!.points.map((point) => point.heading),
       "スタートとフィニッシュは国立競技場",
     ]);
   });

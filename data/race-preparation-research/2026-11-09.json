@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-11-09",
+  "scopeNote": "東京レガシーハーフのみ、2025年実走記の本文と現行公式の主要経路を確認。2026年の実走記は本文取得できず不採用。sourceIndexesはsourcesの0始まり。",
+  "races": [
+    {
+      "slug": "tokyo-legacy-half-marathon",
+      "name": "東京レガシーハーフマラソン",
+      "referenceLabel": "2025年大会の実走記3件と公式コースを参考",
+      "sourceNote": "2025年の参加者の体験を、約3kmごとにまとめています。区間の境目と距離は目安です。公式サイトで主要な経路を照合していますが、混雑・応援・給水の体験は2025年当日のもので、別の開催年にも同じとは限りません。走り方の提案はどこランによるものです。",
+      "sources": [
+        {
+          "label": "2025年大会の実走記",
+          "url": "https://ameblo.jp/sensuanaguma/entry-12940262223.html",
+          "kind": "experience",
+          "year": 2025
+        },
+        {
+          "label": "えだ旅・2025年大会の実走記",
+          "url": "https://www.edatabi.com/entry/tokyo_legacyhalf_2025",
+          "kind": "experience",
+          "year": 2025
+        },
+        {
+          "label": "伊豆高原日記・2025年大会の実走記",
+          "url": "https://ameblo.jp/miza/entry-12940542950.html",
+          "kind": "experience",
+          "year": 2025
+        },
+        {
+          "label": "公式コースの案内",
+          "url": "https://legacyhalf.tokyo/about/course-map/index.html",
+          "kind": "official"
+        }
+      ],
+      "distanceLabels": [
+        "0〜3km付近",
+        "3〜6km付近",
+        "6〜9km付近",
+        "9〜12km付近",
+        "12〜15km付近",
+        "15〜18km付近",
+        "18〜21.1km付近"
+      ],
+      "pointEvidence": [
+        {
+          "distance": "0〜3",
+          "sourceIndexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "distance": "3〜6",
+          "sourceIndexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "distance": "6〜9",
+          "sourceIndexes": [
+            1,
+            3
+          ]
+        },
+        {
+          "distance": "9〜12",
+          "sourceIndexes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "distance": "12〜15",
+          "sourceIndexes": [
+            1,
+            3
+          ]
+        },
+        {
+          "distance": "15〜18",
+          "sourceIndexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "distance": "18〜21.1",
+          "sourceIndexes": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}
