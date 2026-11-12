@@ -3,7 +3,13 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 import { ArticleBody } from "@/components/article-body";
-import { articleHeadings, parseArticleBody, parseYoutubeUrl } from "@/lib/article-body";
+import {
+  articleHeadings,
+  parseArticleBody,
+  parseSpeakers,
+  parseYoutubeUrl,
+  serializeSpeakers,
+} from "@/lib/article-body";
 import type { Article } from "@/db/articles";
 
 const db = vi.hoisted(() => ({
@@ -59,16 +65,51 @@ describe("article body markup", () => {
     ]);
   });
 
-  it("marks interview lines only for the configured speakers", () => {
+  it("groups each speaker's lines into one bubble, and only for the configured speakers", () => {
     const blocks = parseArticleBody(
-      "どこラン：質問です。\n運営事務局：答えです。\n詳細はこちら：https://example.com/shop/",
+      "リード文\nどこラン：質問です。\n運営事務局：答えです。\n名前のない行は続きです。\n詳細はこちら：https://example.com/shop/",
       "どこラン、運営事務局",
     );
-    expect(blocks[0]).toMatchObject({ speaker: { label: "どこラン", role: "host" } });
-    expect(blocks[1]).toMatchObject({ speaker: { label: "運営事務局", role: "guest" } });
-    expect(blocks[2]).toMatchObject({ type: "paragraph" });
-    expect(blocks[2]).not.toHaveProperty("speaker");
+    expect(blocks.map((block) => block.type)).toEqual(["paragraph", "dialogue", "dialogue"]);
+    expect(blocks[1]).toMatchObject({ speaker: { label: "どこラン", role: "host", icon: null } });
+    expect(blocks[2]).toMatchObject({ speaker: { label: "運営事務局", role: "guest" } });
+    // 「詳細はこちら：」は話者ではないので、直前の話者の続きになる
+    expect(blocks[2].type === "dialogue" && blocks[2].paragraphs).toHaveLength(3);
     expect(html("詳細はこちら：https://example.com/shop/")).toContain('href="https://example.com/shop/"');
+    // 話者を設定していない記事では、同じ本文がふつうの段落になる
+    expect(parseArticleBody("どこラン：質問です。").map((block) => block.type)).toEqual(["paragraph"]);
+  });
+
+  it("ends a speaker's turn at a heading, and resumes it in a new bubble after an image", () => {
+    const blocks = parseArticleBody(
+      "運営事務局：前半です。\n![写真](https://img.example/a.jpg)\n後半です。\n## 次の見出し\n地の文です。",
+      "どこラン、運営事務局",
+    );
+    expect(blocks.map((block) => block.type)).toEqual(["dialogue", "image", "dialogue", "heading", "paragraph"]);
+    expect(blocks[2]).toMatchObject({ speaker: { label: "運営事務局" } });
+  });
+
+  it("reads speaker icons from the saved settings and shows them beside the bubble", () => {
+    const speakers = JSON.stringify([
+      { label: "どこラン", icon: "/characters/hashiro-smile.png" },
+      { label: "運営事務局", icon: "https://img.example/office.jpg" },
+      { label: "悪い人", icon: "javascript:alert(1)" },
+    ]);
+    expect(parseSpeakers(speakers)).toEqual([
+      { label: "どこラン", icon: "/characters/hashiro-smile.png" },
+      { label: "運営事務局", icon: "https://img.example/office.jpg" },
+      { label: "悪い人", icon: null },
+    ]);
+    expect(parseSpeakers(serializeSpeakers(parseSpeakers("どこラン、運営事務局")))).toEqual([
+      { label: "どこラン", icon: null },
+      { label: "運営事務局", icon: null },
+    ]);
+    const output = html("どこラン：質問です。\n運営事務局：答えです。\n悪い人：こんにちは。", speakers);
+    expect(output).toContain('src="/characters/hashiro-smile.png"');
+    expect(output).toContain('src="https://img.example/office.jpg"');
+    expect(output).not.toContain("javascript:");
+    // 聞き手の吹き出しだけ色と太字を変える
+    expect(output.match(/bg-brand\/20 font-bold/g)).toHaveLength(1);
   });
 
   it("inserts an image or a YouTube video on the line where it is written", () => {
@@ -115,7 +156,9 @@ describe("article body markup", () => {
     const speakers = /^speakers: (.+)$/m.exec(header)![1];
     const blocks = parseArticleBody(body, speakers);
     expect(articleHeadings(blocks)).toHaveLength(9);
-    const roles = blocks.flatMap((block) => (block.type === "paragraph" && block.speaker ? [block.speaker.role] : []));
+    const roles = blocks.flatMap((block) => (block.type === "dialogue" ? [block.speaker.role] : []));
+    // リード文(見出しの前)は吹き出しにしない
+    expect(blocks.slice(0, 3).map((block) => block.type)).toEqual(["paragraph", "paragraph", "paragraph"]);
     expect(roles.filter((role) => role === "host").length).toBeGreaterThan(15);
     expect(roles.filter((role) => role === "guest").length).toBeGreaterThan(15);
     expect(renderToStaticMarkup(createElement(ArticleBody, { blocks }))).toContain(

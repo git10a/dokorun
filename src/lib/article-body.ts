@@ -4,7 +4,8 @@
 //   YouTubeのURLだけの行        … 動画の埋め込み
 //   > 引用 / - 箇条書き / ---   … 引用・リスト・区切り線
 //   行内: **太字** / [文字](URL) / URLそのまま(自動リンク)
-//   「話者：」で始まる行        … 対談の発言(話者ラベルは記事ごとに設定する)
+//   「話者：」で始まる行        … 対談の発言。話者(名前とアイコン)は記事ごとに設定する。
+//                                  続く行は、見出しか区切り線が来るまで同じ話者の発言として1つの吹き出しにまとめる
 // HTMLは解釈しない。表示側はReact要素として組み立てるので、本文に書かれたタグは文字として表示される
 
 export type Inline =
@@ -14,12 +15,17 @@ export type Inline =
 
 export type ArticleBlock =
   | { type: "heading"; level: 2 | 3; text: string; id: string }
-  | { type: "paragraph"; inline: Inline[]; speaker?: { label: string; role: "host" | "guest" } }
+  | { type: "paragraph"; inline: Inline[] }
+  | { type: "dialogue"; speaker: DialogueSpeaker; paragraphs: Inline[][] }
   | { type: "image"; src: string; caption: string }
   | { type: "youtube"; videoId: string; start?: number }
   | { type: "quote"; inline: Inline[] }
   | { type: "list"; items: Inline[][] }
   | { type: "divider" };
+
+/** 記事ごとに設定する対談の話者。先頭が聞き手 */
+export type ArticleSpeaker = { label: string; icon: string | null };
+export type DialogueSpeaker = ArticleSpeaker & { role: "host" | "guest" };
 
 /** リンク・画像に使えるURLだけを通す。javascript: などは文字として残す */
 export function safeUrl(value: string): string | null {
@@ -92,24 +98,51 @@ export function parseInline(text: string): Inline[] {
   return result;
 }
 
-/** 話者ラベルの設定値(カンマ・読点区切り)を配列にする。先頭が聞き手 */
-export function parseSpeakers(value: string | null | undefined): string[] {
-  return (value ?? "")
+/**
+ * 話者の設定値を配列にする。先頭が聞き手。
+ * 保存形式は [{"label":"どこラン","icon":"https://…"}] のJSON。
+ * アイコン設定を入れる前の「どこラン、運営事務局」形式(読点区切りの名前だけ)も読める
+ */
+export function parseSpeakers(value: string | null | undefined): ArticleSpeaker[] {
+  const text = (value ?? "").trim();
+  if (text.startsWith("[")) {
+    try {
+      const parsed: unknown = JSON.parse(text);
+      if (Array.isArray(parsed)) {
+        return parsed.flatMap((item) => {
+          const label = typeof item?.label === "string" ? item.label.trim() : "";
+          const icon = typeof item?.icon === "string" ? safeUrl(item.icon) : null;
+          return label ? [{ label, icon }] : [];
+        });
+      }
+    } catch {
+      // JSONとして読めなければ、名前だけの形式として扱う
+    }
+  }
+  return text
     .split(/[,、，\n]/)
     .map((label) => label.trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((label) => ({ label, icon: null }));
+}
+
+export function serializeSpeakers(speakers: ArticleSpeaker[]): string {
+  return JSON.stringify(speakers.map(({ label, icon }) => ({ label: label.trim(), icon })));
 }
 
 export function parseArticleBody(body: string, speakers?: string | null): ArticleBlock[] {
-  const speakerLabels = parseSpeakers(speakers);
+  const speakerList = parseSpeakers(speakers);
   const blocks: ArticleBlock[] = [];
   let headingCount = 0;
+  // いま話している人。見出し・区切り線・引用・箇条書きで発言は終わる(画像と動画は発言の途中に挟める)
+  let talking: DialogueSpeaker | null = null;
   for (const rawLine of body.replace(/\r\n?/g, "\n").split("\n")) {
     const line = rawLine.trim();
     if (!line) continue;
 
     const heading = /^(#{2,3})\s+(.+)$/.exec(line);
     if (heading) {
+      talking = null;
       headingCount += 1;
       blocks.push({
         type: "heading",
@@ -121,6 +154,7 @@ export function parseArticleBody(body: string, speakers?: string | null): Articl
     }
 
     if (/^(-{3,}|\*{3,})$/.test(line)) {
+      talking = null;
       blocks.push({ type: "divider" });
       continue;
     }
@@ -140,29 +174,36 @@ export function parseArticleBody(body: string, speakers?: string | null): Articl
 
     const quote = /^>\s*(.+)$/.exec(line);
     if (quote) {
+      talking = null;
       blocks.push({ type: "quote", inline: parseInline(quote[1]) });
       continue;
     }
 
     const listItem = /^[-*]\s+(.+)$/.exec(line);
     if (listItem) {
+      talking = null;
       const last = blocks.at(-1);
       if (last?.type === "list") last.items.push(parseInline(listItem[1]));
       else blocks.push({ type: "list", items: [parseInline(listItem[1])] });
       continue;
     }
 
-    const speakerIndex = speakerLabels.findIndex(
-      (label) => line.startsWith(label) && /^[：:]/.test(line.slice(label.length).trimStart()),
+    const speakerIndex = speakerList.findIndex(
+      ({ label }) => line.startsWith(label) && /^[：:]/.test(line.slice(label.length).trimStart()),
     );
     if (speakerIndex >= 0) {
-      const label = speakerLabels[speakerIndex];
+      const { label } = speakerList[speakerIndex];
       const text = line.slice(label.length).trimStart().slice(1).trimStart();
-      blocks.push({
-        type: "paragraph",
-        inline: parseInline(text),
-        speaker: { label, role: speakerIndex === 0 ? "host" : "guest" },
-      });
+      talking = { ...speakerList[speakerIndex], role: speakerIndex === 0 ? "host" : "guest" };
+      blocks.push({ type: "dialogue", speaker: talking, paragraphs: [parseInline(text)] });
+      continue;
+    }
+
+    if (talking) {
+      // 話者名のない行は、直前の話者の続き。画像や動画を挟んだ後は、同じ話者で吹き出しを改める
+      const last = blocks.at(-1);
+      if (last?.type === "dialogue") last.paragraphs.push(parseInline(line));
+      else blocks.push({ type: "dialogue", speaker: talking, paragraphs: [parseInline(line)] });
       continue;
     }
 

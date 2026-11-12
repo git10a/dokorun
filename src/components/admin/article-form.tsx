@@ -6,6 +6,7 @@ import { Bold, Heading2, Heading3, ImagePlus, Link2, List, Minus, Quote, SquareP
 import { saveArticle } from "@/app/admin/stories/actions";
 import type { FormState } from "@/app/admin/actions";
 import { ArticleBody } from "@/components/article-body";
+import { ArticleSpeakersField } from "@/components/admin/article-speakers-field";
 import { ImageUploader, uploadImage } from "@/components/admin/image-uploader";
 import { parseArticleBody, parseYoutubeUrl, safeUrl } from "@/lib/article-body";
 
@@ -287,19 +288,14 @@ export function ArticleForm({
             onChange={set("author")}
             error={error("author")}
           />
-          <label className="text-sm font-bold">
-            対談の話者（任意）
-            <input
-              name="speakers"
-              value={values.speakers}
-              onChange={set("speakers")}
-              placeholder="どこラン、運営事務局"
-              className={fieldClass}
-            />
-            <span className="mt-1 block text-xs font-normal text-sub">
-              読点で区切って入力します。本文で「どこラン：」のように始まる行を発言として整えます。先頭が聞き手です。
-            </span>
-          </label>
+        </div>
+        <div className="mt-5">
+          <input type="hidden" name="speakers" value={values.speakers} />
+          <ArticleSpeakersField
+            value={values.speakers}
+            onChange={(speakers) => setValues((current) => ({ ...current, speakers }))}
+          />
+          {error("speakers") && <span className="mt-1 block text-xs text-danger">{error("speakers")}</span>}
         </div>
         <div className="mt-5">
           <p className="text-sm font-bold">カバー画像（任意）</p>

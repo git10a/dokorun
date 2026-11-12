@@ -6,6 +6,7 @@ import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { getDb, isUniqueViolation } from "@/db";
 import { articles, articleStatuses } from "@/db/schema";
+import { parseSpeakers, serializeSpeakers } from "@/lib/article-body";
 import { requireAdmin } from "@/lib/auth";
 import { raceBySlug } from "@/lib/races";
 import type { FormState } from "../actions";
@@ -20,6 +21,20 @@ const optionalImageUrl = optionalText.refine(
   "画像はアップロードして設定してください",
 );
 
+// 話者は {名前, アイコン} の配列をJSONで保存する。アイコンはアップロード画像かサイトのキャラクターだけを通す
+const optionalSpeakers = optionalText.transform((value, ctx) => {
+  if (value === null) return null;
+  const speakers = parseSpeakers(value);
+  if (!speakers.length) return null;
+  if (speakers.length > 6) ctx.addIssue({ code: "custom", message: "話者は6人までにしてください" });
+  for (const { label, icon } of speakers) {
+    if (label.length > 20) ctx.addIssue({ code: "custom", message: "話者の名前は20文字以内にしてください" });
+    if (icon !== null && !/^https:\/\//.test(icon) && !/^\/characters\/[a-z0-9-]+\.png$/.test(icon))
+      ctx.addIssue({ code: "custom", message: "話者のアイコンはアップロードして設定してください" });
+  }
+  return serializeSpeakers(speakers);
+});
+
 const articleSchema = z.object({
   id: z.string().uuid().optional(),
   title: z.string().trim().min(1, "タイトルを入力してください").max(120, "タイトルは120文字以内にしてください"),
@@ -30,7 +45,7 @@ const articleSchema = z.object({
     .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "URLは半角英小文字・数字とハイフンで入力してください"),
   raceSlug: optionalText.refine((value) => value === null || raceBySlug.has(value), "大会を選び直してください"),
   body: z.string().trim().min(1, "本文を入力してください").max(100_000, "本文が長すぎます"),
-  speakers: optionalText,
+  speakers: optionalSpeakers,
   author: z.string().trim().min(1, "執筆者を入力してください"),
   coverImageUrl: optionalImageUrl,
   seoTitle: optionalText,

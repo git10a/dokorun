@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-async function resizeImage(file: File): Promise<File> {
+async function resizeImage(file: File, maxSize: number): Promise<File> {
   const bitmap = await createImageBitmap(file);
-  const scale = Math.min(1, 2048 / Math.max(bitmap.width, bitmap.height));
+  const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height));
   const width = Math.round(bitmap.width * scale);
   const height = Math.round(bitmap.height * scale);
   const canvas = document.createElement("canvas");
@@ -26,10 +26,10 @@ async function resizeImage(file: File): Promise<File> {
   return new File([blob], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg" });
 }
 
-/** 長辺2048pxのJPEGに縮小してR2へ送り、公開URLを返す */
-export async function uploadImage(file: File, folder: "spots" | "articles" = "spots"): Promise<string> {
+/** 長辺を maxSize(既定2048px)以下のJPEGに縮小してR2へ送り、公開URLを返す */
+export async function uploadImage(file: File, folder: "spots" | "articles" = "spots", maxSize = 2048): Promise<string> {
   const formData = new FormData();
-  formData.append("file", await resizeImage(file));
+  formData.append("file", await resizeImage(file, maxSize));
   formData.append("folder", folder);
   const response = await fetch("/api/upload", { method: "POST", body: formData });
   const result = (await response.json()) as { url?: string; error?: string };

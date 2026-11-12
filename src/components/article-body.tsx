@@ -44,20 +44,47 @@ function Block({ block }: { block: ArticleBlock }) {
         </h3>
       );
     case "paragraph":
-      if (!block.speaker) {
-        return (
-          <p className="mt-5 text-base leading-9">
-            <InlineText inline={block.inline} />
-          </p>
-        );
-      }
-      // 聞き手の発言は太字にして、やり取りの切れ目が分かるように上を広めに空ける
       return (
-        <p className={`text-base leading-9 ${block.speaker.role === "host" ? "mt-9 font-bold" : "mt-5"}`}>
-          <span className="font-bold">{block.speaker.label}：</span>
+        <p className="mt-5 text-base leading-9">
           <InlineText inline={block.inline} />
         </p>
       );
+    case "dialogue": {
+      const { label, icon, role } = block.speaker;
+      return (
+        <div className="mt-6 grid grid-cols-[3.5rem_minmax(0,1fr)] gap-3">
+          <div className="flex flex-col items-center gap-1.5 pt-0.5">
+            {icon ? (
+              <img
+                src={icon}
+                alt=""
+                loading="lazy"
+                // サイトのキャラクター画像は全身なので、顔が入るよう上に寄せる
+                className={`size-12 rounded-full bg-cream object-cover ${icon.startsWith("/characters/") ? "object-top" : ""}`}
+              />
+            ) : (
+              <span
+                aria-hidden="true"
+                className="flex size-12 items-center justify-center rounded-full bg-cream text-base font-bold text-sub"
+              >
+                {label.slice(0, 1)}
+              </span>
+            )}
+            <span className="break-all text-center text-[11px] font-bold leading-4">{label}</span>
+          </div>
+          {/* 聞き手の発言は色と太字で区別する */}
+          <div
+            className={`space-y-4 rounded-2xl px-4 py-3 text-base leading-8 ${role === "host" ? "bg-brand/20 font-bold" : "bg-cream"}`}
+          >
+            {block.paragraphs.map((paragraph, index) => (
+              <p key={index}>
+                <InlineText inline={paragraph} />
+              </p>
+            ))}
+          </div>
+        </div>
+      );
+    }
     case "image":
       return (
         <figure className="my-9">
